@@ -21,8 +21,10 @@ The second start is the one worth knowing about. 37 facts had been seeded into t
 plane from earlier measurement rows — and all of them were cleared. An independent review put it
 plainly: *"the base answers 20 of 26"* means *"the seeder's corpus agrees with the seeder's reading
 of the seeder's runs 20 of 26 times"*. No amount of analysis separates those; only a different
-writer does. The seeded corpus was tagged as a shadow corpus to compare against, and the plane began
-again with nothing in it.
+writer does. The seeded corpus was tagged as a shadow corpus to compare against, and the plane began again with
+nothing in it. **Those tags — `seed-w0.5` and `seed-w0.5-corrected` — did not survive the history
+rewrite and resolve to nothing here.** A pointer that reads like a reference and leads nowhere is
+the defect this corpus has a gate for; it is named rather than left to be discovered.
 
 What was recorded at the moment of clearing, because it is the baseline everything after is measured
 against: the base still declined nothing. Asked what residue a placed order leaves — a behavioural
