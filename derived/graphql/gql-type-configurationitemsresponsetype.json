@@ -1,0 +1,11 @@
+{
+  "name": "ConfigurationItemsResponseType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "configurationItems",
+      "type": "[CartConfigurationItemType]",
+      "description": "Configuration items for configurable product"
+    }
+  ]
+}

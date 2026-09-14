@@ -1,0 +1,286 @@
+{
+  "key": "/api/eventbus",
+  "modules": [
+    "VirtoCommerce.EventBus"
+  ],
+  "tags": [
+    "Event Bus module"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/eventbus/connections/{name}",
+      "verb": "DELETE",
+      "route": "/api/eventbus/connections/{name}",
+      "operationId": "Connections_DeleteConnection",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Delete existing connection by name (DB-registered only)",
+      "parameters": [
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "DELETE /api/eventbus/subscriptions/{name}",
+      "verb": "DELETE",
+      "route": "/api/eventbus/subscriptions/{name}",
+      "operationId": "Subscriptions_DeleteSubscription",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Delete existing subscription by name (DB-registered only)",
+      "parameters": [
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/eventbus/connections/{name}",
+      "verb": "GET",
+      "route": "/api/eventbus/connections/{name}",
+      "operationId": "Connections_GetConnectionByName",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Get existing connection",
+      "parameters": [
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "ProviderConnection"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/eventbus/events",
+      "verb": "GET",
+      "route": "/api/eventbus/events",
+      "operationId": "Subscriptions_Get",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Enlist all domain events page by page",
+      "parameters": [
+        {
+          "name": "skip",
+          "in": "query",
+          "required": false,
+          "type": "integer"
+        },
+        {
+          "name": "take",
+          "in": "query",
+          "required": false,
+          "type": "integer"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/eventbus/subscriptions/{name}",
+      "verb": "GET",
+      "route": "/api/eventbus/subscriptions/{name}",
+      "operationId": "Subscriptions_GetSubscriptionById",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Get specific subscription by name",
+      "parameters": [
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Subscription"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/eventbus/connections",
+      "verb": "POST",
+      "route": "/api/eventbus/connections",
+      "operationId": "Connections_CreateConnection",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Create new provider connection in the database",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/eventbus/connections/search",
+      "verb": "POST",
+      "route": "/api/eventbus/connections/search",
+      "operationId": "Connections_SearchConnections",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Search for existing connections",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ProviderConnectionSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/eventbus/logs/search",
+      "verb": "POST",
+      "route": "/api/eventbus/logs/search",
+      "operationId": "ConnectionsLog_SearchProviderConnectionLog",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Search for provider connection logs/fails",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ProviderConnectionLogSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/eventbus/subscriptions",
+      "verb": "POST",
+      "route": "/api/eventbus/subscriptions",
+      "operationId": "Subscriptions_CreateSubscription",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Register new subscription in the database",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "string"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/eventbus/subscriptions/search",
+      "verb": "POST",
+      "route": "/api/eventbus/subscriptions/search",
+      "operationId": "Subscriptions_SearchSubscriptions",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Search for existing subscriptions (DB registered + configuration registered)",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SubscriptionSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/eventbus/connections",
+      "verb": "PUT",
+      "route": "/api/eventbus/connections",
+      "operationId": "Connections_UpdateConnection",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Update existing connection (DB-registered only)",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/eventbus/subscriptions",
+      "verb": "PUT",
+      "route": "/api/eventbus/subscriptions",
+      "operationId": "Subscriptions_UpdateSubscription",
+      "module": "VirtoCommerce.EventBus",
+      "tag": "Event Bus module",
+      "summary": "Update existing subscription (DB-registered only)",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

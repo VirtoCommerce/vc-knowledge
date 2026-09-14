@@ -1,0 +1,16 @@
+{
+  "name": "ModuleSettingType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "name",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "value",
+      "type": "ModuleSettingValue",
+      "description": null
+    }
+  ]
+}

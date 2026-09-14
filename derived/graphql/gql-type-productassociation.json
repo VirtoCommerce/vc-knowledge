@@ -1,0 +1,41 @@
+{
+  "name": "ProductAssociation",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "associatedObjectId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "associatedObjectType",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "priority",
+      "type": "Int!",
+      "description": null
+    },
+    {
+      "name": "product",
+      "type": "Product",
+      "description": null
+    },
+    {
+      "name": "quantity",
+      "type": "Int",
+      "description": null
+    },
+    {
+      "name": "tags",
+      "type": "[String!]!",
+      "description": null
+    },
+    {
+      "name": "type",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

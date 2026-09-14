@@ -1,0 +1,11 @@
+{
+  "name": "BulkWishlistType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "wishlists",
+      "type": "[WishlistType]",
+      "description": "Wishlists"
+    }
+  ]
+}

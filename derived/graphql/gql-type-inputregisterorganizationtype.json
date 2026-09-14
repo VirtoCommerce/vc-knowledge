@@ -1,0 +1,36 @@
+{
+  "name": "InputRegisterOrganizationType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "address",
+      "type": "InputMemberAddressType",
+      "description": null
+    },
+    {
+      "name": "addresses",
+      "type": "[InputMemberAddressType]",
+      "description": null
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "dynamicProperties",
+      "type": "[InputDynamicPropertyValueType]",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "phoneNumber",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

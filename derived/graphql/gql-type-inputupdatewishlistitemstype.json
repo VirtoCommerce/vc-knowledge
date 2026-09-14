@@ -1,0 +1,16 @@
+{
+  "name": "InputUpdateWishlistItemsType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "items",
+      "type": "[InputUpdateWishlistLineItemType]!",
+      "description": "Bulk wishlist items"
+    },
+    {
+      "name": "listId",
+      "type": "String!",
+      "description": "Wish list id"
+    }
+  ]
+}

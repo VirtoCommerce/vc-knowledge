@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.updateContact",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "updateContact",
+  "signature": "updateContact(command: InputUpdateContactType!): ContactType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputUpdateContactType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "ContactType",
+  "referencedTypes": [
+    {
+      "name": "ContactType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputUpdateContactType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

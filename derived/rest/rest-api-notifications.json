@@ -1,0 +1,278 @@
+{
+  "key": "/api/notifications",
+  "modules": [
+    "VirtoCommerce.Notifications"
+  ],
+  "tags": [
+    "Notifications"
+  ],
+  "operations": [
+    {
+      "coordinate": "GET /api/notifications/{type}",
+      "verb": "GET",
+      "route": "/api/notifications/{type}",
+      "operationId": "Notifications_GetNotificationByTypeId",
+      "module": "VirtoCommerce.Notifications",
+      "tag": "Notifications",
+      "summary": "Get notification by type",
+      "parameters": [
+        {
+          "name": "tenantId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "tenantType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Notification"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/notifications/journal/{id}",
+      "verb": "GET",
+      "route": "/api/notifications/journal/{id}",
+      "operationId": "Notifications_GetObjectNotificationJournal",
+      "module": "VirtoCommerce.Notifications",
+      "tag": "Notifications",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "NotificationMessage"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/notifications",
+      "verb": "POST",
+      "route": "/api/notifications",
+      "operationId": "Notifications_GetNotifications",
+      "module": "VirtoCommerce.Notifications",
+      "tag": "Notifications",
+      "summary": "Get all registered notification types by criteria",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "NotificationSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/notifications/{type}/templates/{language}/rendercontent",
+      "verb": "POST",
+      "route": "/api/notifications/{type}/templates/{language}/rendercontent",
+      "operationId": "Notifications_RenderingTemplate",
+      "module": "VirtoCommerce.Notifications",
+      "tag": "Notifications",
+      "summary": "Render content",
+      "parameters": [
+        {
+          "name": "language",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/notifications/{type}/templates/{language}/sharepreview",
+      "verb": "POST",
+      "route": "/api/notifications/{type}/templates/{language}/sharepreview",
+      "operationId": "Notifications_SharePreview",
+      "module": "VirtoCommerce.Notifications",
+      "tag": "Notifications",
+      "summary": "Send notification preview",
+      "parameters": [
+        {
+          "name": "language",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "NotificationSendResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/notifications/journal",
+      "verb": "POST",
+      "route": "/api/notifications/journal",
+      "operationId": "Notifications_GetNotificationJournal",
+      "module": "VirtoCommerce.Notifications",
+      "tag": "Notifications",
+      "summary": "Get all notification journal",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "NotificationMessageSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/notifications/schedule",
+      "verb": "POST",
+      "route": "/api/notifications/schedule",
+      "operationId": "Notifications_ScheduleSendNotification",
+      "module": "VirtoCommerce.Notifications",
+      "tag": "Notifications",
+      "summary": "Schedule sending notification",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/notifications/scheduleresend",
+      "verb": "POST",
+      "route": "/api/notifications/scheduleresend",
+      "operationId": "Notifications_ResendNotifications",
+      "module": "VirtoCommerce.Notifications",
+      "tag": "Notifications",
+      "summary": "Schedule resending notification",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "string[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/notifications/send",
+      "verb": "POST",
+      "route": "/api/notifications/send",
+      "operationId": "Notifications_SendNotification",
+      "module": "VirtoCommerce.Notifications",
+      "tag": "Notifications",
+      "summary": "Sending notification",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "NotificationSendResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/notifications/{type}",
+      "verb": "PUT",
+      "route": "/api/notifications/{type}",
+      "operationId": "Notifications_UpdateNotification",
+      "module": "VirtoCommerce.Notifications",
+      "tag": "Notifications",
+      "summary": "Update notification with templates",
+      "parameters": [
+        {
+          "name": "type",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

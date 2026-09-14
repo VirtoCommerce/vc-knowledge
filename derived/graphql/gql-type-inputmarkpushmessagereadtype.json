@@ -1,0 +1,11 @@
+{
+  "name": "InputMarkPushMessageReadType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "messageId",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

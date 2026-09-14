@@ -1,0 +1,80 @@
+{"kind":"ask","key":"a0994dcb7738","question":"What does the storefront /company/members status column show for a member whose platform account is locked?","miss":false,"at":"2026-09-11T17:48:44.671Z"}
+{"kind":"use","id":"KB-4B889114","at":"2026-09-11T17:48:44.673Z"}
+{"kind":"use","id":"KB-B769C7B1","at":"2026-09-11T17:48:44.673Z"}
+{"kind":"settled","id":"KB-4B889114","at":"2026-09-11T17:52:26.109Z"}
+{"kind":"ask","key":"34c3c6401be9","question":"What fields does the GraphQL type UserType have?","miss":false,"at":"2026-09-11T17:52:52.898Z"}
+{"kind":"ask","key":"b5712d9e0141","question":"Is the Admin contacts keyword search index-backed, and can a contact exist but not appear in it?","miss":false,"at":"2026-09-11T18:04:21.847Z"}
+{"kind":"use","id":"KB-7040852E","at":"2026-09-11T18:04:21.849Z"}
+{"kind":"settled","id":"KB-7040852E","at":"2026-09-11T18:06:23.787Z"}
+{"kind":"dropped","key":"b5712d9e0141","question":"Is the Admin contacts keyword search index-backed, and can a contact exist but not appear in it?","reason":"The base answered it completely with KB-7040852E and the answer held under test: the contacts keyword box missed an existing unindexed contact and returned a clean 'No data'. Confirmed rather than captured; nothing to add.","at":"2026-09-11T18:06:46.030Z"}
+{"kind":"dropped","key":"34c3c6401be9","question":"What fields does the GraphQL type UserType have?","reason":"Answered by the derived plane (KB-4B09F8C3), which is the stronger source for a schema question. The part worth recording was not the field list but the consequence - that lockedState is reachable and unused by the members roster - and that is captured as KB-0B6067F8.","at":"2026-09-11T18:06:46.128Z"}
+{"kind":"dropped","key":"a0994dcb7738","question":"What does the storefront /company/members status column show for a member whose platform account is locked?","reason":"The base answered it with KB-4B889114 and the answer held; confirmed it. The mechanism behind it was not in the base and is captured as KB-27B4CD10 and KB-06409954.","at":"2026-09-11T18:06:46.248Z"}
+{"kind":"settled","id":"KB-B769C7B1","at":"2026-09-11T18:06:58.376Z"}
+{"kind":"ask","key":"bbf532f8eb7b","question":"What can a B2B organization maintainer do about a pending invitation on the storefront members roster?","miss":false,"at":"2026-09-12T08:05:09.142Z"}
+{"kind":"use","id":"KB-02238DE5","at":"2026-09-12T08:05:09.148Z"}
+{"kind":"use","id":"KB-4D082C89","at":"2026-09-12T08:05:09.148Z"}
+{"kind":"settled","id":"KB-4D082C89","at":"2026-09-12T08:13:03.348Z"}
+{"kind":"ask","key":"e4046e4dd7fd","question":"How does an invited person complete registration into a B2B organization, and can a maintainer resend or cancel the invitation?","miss":false,"at":"2026-09-12T08:16:02.567Z"}
+{"kind":"use","id":"KB-4D082C89","at":"2026-09-12T08:16:02.570Z"}
+{"kind":"use","id":"KB-02238DE5","at":"2026-09-12T08:16:02.570Z"}
+{"kind":"settled","id":"KB-4D082C89","at":"2026-09-12T08:16:29.174Z"}
+{"kind":"settled","id":"KB-27B4CD10","at":"2026-09-12T08:17:57.410Z"}
+{"kind":"settled","id":"KB-4B889114","at":"2026-09-12T08:17:57.549Z"}
+{"kind":"settled","id":"KB-06409954","at":"2026-09-12T08:17:57.688Z"}
+{"kind":"ask","key":"56929e299a10","question":"What does Delete on the storefront company members roster actually remove -- the contact, the security account, or only the link to the organization?","miss":false,"at":"2026-09-12T08:21:27.998Z"}
+{"kind":"use","id":"KB-FA724D31","at":"2026-09-12T08:21:28.000Z"}
+{"kind":"use","id":"KB-02238DE5","at":"2026-09-12T08:21:28.000Z"}
+{"kind":"settled","id":"KB-FA724D31","at":"2026-09-12T08:22:26.820Z"}
+{"kind":"closed","key":"e4046e4dd7fd","question":"How does an invited person complete registration into a B2B organization, and can a maintainer resend or cancel the invitation?","id":"KB-BAEBCDA7","at":"2026-09-12T08:23:37.455Z"}
+{"kind":"ask","key":"b30b4d8a7169","question":"How do I delete a security account and a contact over the platform REST API -- what are the parameters of DELETE /api/platform/security/users and DELETE /api/members?","miss":false,"at":"2026-09-12T08:29:56.113Z"}
+{"kind":"use","id":"KB-FA724D31","at":"2026-09-12T08:29:56.115Z"}
+{"kind":"settled","id":"KB-FA724D31","at":"2026-09-12T08:35:49.755Z"}
+{"kind":"dropped","key":"bbf532f8eb7b","question":"What can a B2B organization maintainer do about a pending invitation on the storefront members roster?","reason":"Found out and recorded, but under a different question's wording: the answer is the three-item Actions menu (Edit role / Block user / Delete, identical to a registered member's) and what those three do, which is KB-BAEBCDA7 and KB-DA14E8B7. Nothing is left over that deserves a fourth entry on the same coordinate.","at":"2026-09-12T08:37:04.502Z"}
+{"kind":"dropped","key":"56929e299a10","question":"What does Delete on the storefront company members roster actually remove -- the contact, the security account, or only the link to the organization?","reason":"The base answered this one outright and it held - KB-FA724D31, now confirmed a second time. The only thing I learned beyond it was that its closing remedy can fail, which is disputed on that entry and written up as KB-4A8606CA. No new entry belongs under this question.","at":"2026-09-12T08:37:04.602Z"}
+{"kind":"dropped","key":"b30b4d8a7169","question":"How do I delete a security account and a contact over the platform REST API -- what are the parameters of DELETE /api/platform/security/users and DELETE /api/members?","reason":"Answered by the derived plane as far as it goes: it named DELETE /api/platform/security/users and DELETE /api/members. The missing half - that both take a repeated query parameter (names=, ids=) which the operation table's 'required input' column does not list, because it only carries path parameters - is a gap in this base's own extractor, not a fact about the platform, so it does not belong in an entry.","at":"2026-09-12T08:37:04.700Z"}
+{"kind":"ask","key":"788e531dde6c","question":"does the order discount carry a percent or only an amount","miss":false,"at":"2026-09-12T11:41:56.554Z"}
+{"kind":"dropped","key":"788e531dde6c","question":"does the order discount carry a percent or only an amount","reason":"Asked as a probe, not as work: this is the hand-written question the retrieval README uses to illustrate the crowding defect, and it was put to the base to see whether the raised relevance floor moved its head. It did not - OrderShipmentType is still first. That is recorded in the README as a measurement, not as a fact about the platform, so no entry belongs under it.","at":"2026-09-12T11:42:40.674Z"}
+{"kind":"ask","key":"6a43abfff8ca","question":"How does a storefront user create a wishlist scoped to the organization, and what does the scope field accept?","miss":false,"at":"2026-09-13T07:24:31.106Z"}
+{"kind":"use","id":"KB-FA724D31","at":"2026-09-13T07:24:31.108Z"}
+{"kind":"ask","key":"596568a58246","question":"What fields does InputCreateWishlistType have?","miss":false,"at":"2026-09-13T07:24:43.197Z"}
+{"kind":"ask","key":"344a66df9d22","question":"What arguments does Query.wishlists take and what does its scope argument do?","miss":false,"at":"2026-09-13T07:24:50.753Z"}
+{"kind":"ask","key":"6fa712901db2","question":"Does Query.sharedWishlist require the caller to be signed in, and what can the holder of a sharingKey do with the list?","miss":false,"at":"2026-09-13T07:32:01.799Z"}
+{"kind":"ask","key":"6fa712901db2","question":"Does Query.sharedWishlist require the caller to be signed in, and what can the holder of a sharingKey do with the list?","miss":false,"at":"2026-09-13T07:32:13.141Z"}
+{"kind":"ask","key":"f1d558ca9155","question":"Does the Active column on the storefront company members page reflect the security account lock state?","miss":false,"at":"2026-09-13T07:43:08.910Z"}
+{"kind":"use","id":"KB-27B4CD10","at":"2026-09-13T07:43:08.911Z"}
+{"kind":"use","id":"KB-4B889114","at":"2026-09-13T07:43:08.911Z"}
+{"kind":"settled","id":"KB-27B4CD10","at":"2026-09-13T07:44:00.713Z"}
+{"kind":"dropped","key":"6a43abfff8ca","question":"How does a storefront user create a wishlist scoped to the organization, and what does the scope field accept?","reason":"Answered and recorded, but under different wording: the three scope values and the two-state roster badge are now KB-E367DA11, and the create path itself is the Create list dialog on /account/lists, which needs no entry.","at":"2026-09-13T07:47:10.878Z"}
+{"kind":"dropped","key":"596568a58246","question":"What fields does InputCreateWishlistType have?","reason":"The base answered this one correctly and completely - the eight-field list matched the deployment. The only thing wrong with it, the incomplete gloss on scope, is recorded as KB-E367DA11.","at":"2026-09-13T07:47:10.999Z"}
+{"kind":"dropped","key":"6fa712901db2","question":"Does Query.sharedWishlist require the caller to be signed in, and what can the holder of a sharingKey do with the list?","reason":"Answered by observation and recorded under different wording as KB-7A12CF52 (what a signed-out holder gets, per scope) and KB-032FBB96 (access and isOwner are per-caller).","at":"2026-09-13T07:47:19.720Z"}
+{"kind":"dropped","key":"f1d558ca9155","question":"Does the Active column on the storefront company members page reflect the security account lock state?","reason":"Nothing new to record: the base already held it, I verified it on this deployment and confirmed KB-27B4CD10 instead, which is now on three observations.","at":"2026-09-13T07:47:19.843Z"}
+{"kind":"dropped","key":"344a66df9d22","question":"What arguments does Query.wishlists take and what does its scope argument do?","reason":"Half answered, and the half that is left is deliberately left open elsewhere: the argument list held, but what scope DOES on Query.wishlists is untested because the storefront never sends it and I had no authenticated raw-GraphQL lane. That gap is stated inside KB-EAA7BA2F rather than left as a bare open row.","at":"2026-09-13T07:47:27.612Z"}
+{"kind":"ask","key":"2bbfcba31f62","question":"how does a configurable product become a line item on an order","miss":false,"at":"2026-09-13T11:40:37.858Z"}
+{"kind":"ask","key":"98b05a830a8c","question":"what fields does an order line item carry for a product variation","miss":false,"at":"2026-09-13T11:40:38.032Z"}
+{"kind":"ask","key":"87610b36a122","question":"does the admin order screen show the same totals the storefront charged","miss":false,"at":"2026-09-13T11:40:38.189Z"}
+{"kind":"use","id":"KB-4982C91F","at":"2026-09-13T11:40:38.191Z"}
+{"kind":"use","id":"KB-FA724D31","at":"2026-09-13T11:40:38.191Z"}
+{"kind":"ask","key":"4dd6bca5edfa","question":"how does a configurable product become a line item in the cart","miss":false,"at":"2026-09-13T13:27:27.245Z"}
+{"kind":"ask","key":"61c339988500","question":"which REST route searches catalog products by product type","miss":false,"at":"2026-09-13T13:38:39.091Z"}
+{"kind":"ask","key":"106859d32d72","question":"which money fields does an order line item carry with and without tax","miss":false,"at":"2026-09-13T13:56:56.517Z"}
+{"kind":"ask","key":"87610b36a122","question":"does the admin order screen show the same totals the storefront charged","miss":false,"at":"2026-09-13T13:57:09.229Z"}
+{"kind":"use","id":"KB-4982C91F","at":"2026-09-13T13:57:09.230Z"}
+{"kind":"use","id":"KB-FA724D31","at":"2026-09-13T13:57:09.230Z"}
+{"kind":"closed","key":"87610b36a122","question":"does the admin order screen show the same totals the storefront charged","id":"KB-0DD47BD1","at":"2026-09-13T14:04:26.564Z"}
+{"kind":"closed","key":"61c339988500","question":"which REST route searches catalog products by product type","id":"KB-C440D4E3","at":"2026-09-13T14:04:37.315Z"}
+{"kind":"dropped","key":"106859d32d72","question":"which money fields does an order line item carry with and without tax","reason":"Answered in full and correctly by the derived plane itself: KB-12CEF821 (gql-type-orderlineitemtype) lists every money field with its WithTax twin, and I verified the live order against it field by field with no disagreement. A captured entry restating a generated table would be a second, weaker copy of it.","at":"2026-09-13T14:04:48.011Z"}
+{"kind":"dropped","key":"98b05a830a8c","question":"what fields does an order line item carry for a product variation","reason":"Found out and recorded, under different wording: KB-CC195687, 'a variation on an order does not record its parent'. The line item carries the variation's own productId, sku, name, catalogId and categoryId, productType Physical like any other product, configurationItems empty -- and no parent field at all; the parent is only reachable through the live resolve OrderLineItemType.product.masterVariation.","at":"2026-09-13T14:04:48.124Z"}
+{"kind":"ask","key":"994ff363b84a","question":"how does a percentage reward land on the money fields of a customer order","miss":false,"at":"2026-09-13T14:05:11.289Z"}
+{"kind":"use","id":"KB-FF7E4D5B","at":"2026-09-13T14:05:11.290Z"}
+{"kind":"use","id":"KB-CC195687","at":"2026-09-13T14:05:11.290Z"}
+{"kind":"ask","key":"6790025ed1e4","question":"what shape does a chosen configuration take on an order line item","miss":false,"at":"2026-09-13T14:06:18.536Z"}
+{"kind":"use","id":"KB-AB35BCDC","at":"2026-09-13T14:06:18.537Z"}
+{"kind":"closed","key":"6790025ed1e4","question":"what shape does a chosen configuration take on an order line item","id":"KB-360127D0","at":"2026-09-13T14:07:00.455Z"}
+{"kind":"dropped","key":"994ff363b84a","question":"how does a percentage reward land on the money fields of a customer order","reason":"Already answered by KB-FF7E4D5B, which I asked it in order to read. I had nothing to add: my order carried no discount, so every field that entry is about was zero for the trivial reason, and I could neither confirm nor extend it.","at":"2026-09-13T14:07:17.000Z"}
+{"kind":"ask","key":"6790025ed1e4","question":"what shape does a chosen configuration take on an order line item","miss":false,"at":"2026-09-13T16:08:40.473Z"}
+{"kind":"use","id":"KB-360127D0","at":"2026-09-13T16:08:40.475Z"}
+{"kind":"use","id":"KB-AB35BCDC","at":"2026-09-13T16:08:40.475Z"}
+{"kind":"ask","key":"b20c4e3a588b","question":"how do I place an order on the storefront from an empty cart","miss":false,"at":"2026-09-14T06:25:53.302Z"}
+{"kind":"use","id":"KB-AB35BCDC","at":"2026-09-14T06:25:53.303Z"}
+{"kind":"use","id":"KB-996BDF08","at":"2026-09-14T06:25:53.303Z"}
+{"kind":"use","id":"KB-FF7E4D5B","at":"2026-09-14T06:25:53.303Z"}

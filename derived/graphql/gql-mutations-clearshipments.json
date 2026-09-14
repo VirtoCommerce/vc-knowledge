@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.clearShipments",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "clearShipments",
+  "signature": "clearShipments(command: InputClearShipmentsType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputClearShipmentsType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputClearShipmentsType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

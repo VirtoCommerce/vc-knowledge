@@ -1,0 +1,21 @@
+{
+  "name": "InputUpdateCartQuantityItem",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "itemCurrencyCode",
+      "type": "String",
+      "description": "Add the product in a different currency"
+    },
+    {
+      "name": "productId",
+      "type": "String!",
+      "description": "Product ID"
+    },
+    {
+      "name": "quantity",
+      "type": "Int!",
+      "description": "Quantity"
+    }
+  ]
+}

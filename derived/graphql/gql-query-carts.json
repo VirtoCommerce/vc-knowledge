@@ -1,0 +1,70 @@
+{
+  "coordinate": "Query.carts",
+  "role": "query",
+  "rootType": "Query",
+  "field": "carts",
+  "signature": "carts(after: String, cartType: String, cultureName: String, currencyCode: String, filter: String, first: Int, sort: String, storeId: String, userId: String): CartConnection",
+  "args": [
+    {
+      "name": "after",
+      "type": "String",
+      "required": false,
+      "description": "Only return edges after the specified cursor."
+    },
+    {
+      "name": "cartType",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "cultureName",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "currencyCode",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "filter",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "first",
+      "type": "Int",
+      "required": false,
+      "description": "Specifies the maximum number of edges to return, starting after the cursor specified by 'after', or the first number of edges if 'after' is not specified."
+    },
+    {
+      "name": "sort",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "required": false,
+      "description": null
+    }
+  ],
+  "returns": "CartConnection",
+  "referencedTypes": [
+    {
+      "name": "CartConnection",
+      "kind": "OBJECT"
+    }
+  ]
+}

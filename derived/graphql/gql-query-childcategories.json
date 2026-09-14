@@ -1,0 +1,70 @@
+{
+  "coordinate": "Query.childCategories",
+  "role": "query",
+  "rootType": "Query",
+  "field": "childCategories",
+  "signature": "childCategories(categoryId: String, cultureName: String, currencyCode: String, maxLevel: Int, onlyActive: Boolean, previousOutline: String, productFilter: String, storeId: String!, userId: String): ChildCategoriesQueryResponseType",
+  "args": [
+    {
+      "name": "categoryId",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "cultureName",
+      "type": "String",
+      "required": false,
+      "description": "Currency code (\"USD\")"
+    },
+    {
+      "name": "currencyCode",
+      "type": "String",
+      "required": false,
+      "description": "Culture name (\"en-US\")"
+    },
+    {
+      "name": "maxLevel",
+      "type": "Int",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "onlyActive",
+      "type": "Boolean",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "previousOutline",
+      "type": "String",
+      "required": false,
+      "description": "Previous outline"
+    },
+    {
+      "name": "productFilter",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "required": true,
+      "description": "Store Id"
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "required": false,
+      "description": "User Id"
+    }
+  ],
+  "returns": "ChildCategoriesQueryResponseType",
+  "referencedTypes": [
+    {
+      "name": "ChildCategoriesQueryResponseType",
+      "kind": "OBJECT"
+    }
+  ]
+}

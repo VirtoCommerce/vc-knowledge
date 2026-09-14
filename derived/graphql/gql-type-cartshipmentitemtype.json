@@ -1,0 +1,16 @@
+{
+  "name": "CartShipmentItemType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "lineItem",
+      "type": "LineItemType",
+      "description": null
+    },
+    {
+      "name": "quantity",
+      "type": "Int!",
+      "description": "Quantity"
+    }
+  ]
+}

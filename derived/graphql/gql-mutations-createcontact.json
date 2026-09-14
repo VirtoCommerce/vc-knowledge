@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.createContact",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "createContact",
+  "signature": "createContact(command: InputCreateContactType!): ContactType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputCreateContactType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "ContactType",
+  "referencedTypes": [
+    {
+      "name": "ContactType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputCreateContactType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "coordinate": "Query.organizationContracts",
+  "role": "query",
+  "rootType": "Query",
+  "field": "organizationContracts",
+  "signature": "organizationContracts(after: String, endDate: DateTime, first: Int, organizationId: String!, startDate: DateTime, statuses: [String], storeId: String, vendorId: String): ContractConnection",
+  "args": [
+    {
+      "name": "after",
+      "type": "String",
+      "required": false,
+      "description": "Only return edges after the specified cursor."
+    },
+    {
+      "name": "endDate",
+      "type": "DateTime",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "first",
+      "type": "Int",
+      "required": false,
+      "description": "Specifies the maximum number of edges to return, starting after the cursor specified by 'after', or the first number of edges if 'after' is not specified."
+    },
+    {
+      "name": "organizationId",
+      "type": "String!",
+      "required": true,
+      "description": null
+    },
+    {
+      "name": "startDate",
+      "type": "DateTime",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "statuses",
+      "type": "[String]",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "vendorId",
+      "type": "String",
+      "required": false,
+      "description": null
+    }
+  ],
+  "returns": "ContractConnection",
+  "referencedTypes": [
+    {
+      "name": "ContractConnection",
+      "kind": "OBJECT"
+    }
+  ]
+}

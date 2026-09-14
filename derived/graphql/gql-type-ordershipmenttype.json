@@ -1,0 +1,271 @@
+{
+  "name": "OrderShipmentType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "cancelledDate",
+      "type": "DateTime",
+      "description": null
+    },
+    {
+      "name": "cancelReason",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "comment",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "currency",
+      "type": "CurrencyType!",
+      "description": null
+    },
+    {
+      "name": "customerOrderId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "deliveryAddress",
+      "type": "OrderAddressType",
+      "description": null
+    },
+    {
+      "name": "deliveryDate",
+      "type": "DateTime",
+      "description": null
+    },
+    {
+      "name": "discountAmount",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "discountAmountWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "discounts",
+      "type": "[OrderDiscountType!]!",
+      "description": null
+    },
+    {
+      "name": "dynamicProperties",
+      "type": "[DynamicPropertyValueType!]!",
+      "description": "Customer order Shipment dynamic property values"
+    },
+    {
+      "name": "employeeId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "employeeName",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "fee",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "feeWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "fulfillmentCenterId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "fulfillmentCenterName",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "height",
+      "type": "Decimal",
+      "description": null
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "inPayments",
+      "type": "[PaymentInType!]!",
+      "description": null
+    },
+    {
+      "name": "isApproved",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "isCancelled",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "items",
+      "type": "[OrderShipmentItemType!]!",
+      "description": null
+    },
+    {
+      "name": "length",
+      "type": "Decimal",
+      "description": null
+    },
+    {
+      "name": "measureUnit",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "number",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "objectType",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "operationType",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "organizationId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "organizationName",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "outerId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "packages",
+      "type": "[OrderShipmentPackageType!]!",
+      "description": null
+    },
+    {
+      "name": "parentOperationId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "pickupLocation",
+      "type": "PickupLocationType",
+      "description": null
+    },
+    {
+      "name": "price",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "priceWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "shipmentMethodCode",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "shipmentMethodOption",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "shippingMethod",
+      "type": "OrderShippingMethodType",
+      "description": null
+    },
+    {
+      "name": "status",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "statusDisplayValue",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "taxDetails",
+      "type": "[OrderTaxDetailType!]!",
+      "description": null
+    },
+    {
+      "name": "taxPercentRate",
+      "type": "Decimal!",
+      "description": null
+    },
+    {
+      "name": "taxTotal",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "taxType",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "total",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "totalWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "trackingNumber",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "trackingUrl",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "vendor",
+      "type": "CommonVendor",
+      "description": null
+    },
+    {
+      "name": "weight",
+      "type": "Decimal",
+      "description": null
+    },
+    {
+      "name": "weightUnit",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "width",
+      "type": "Decimal",
+      "description": null
+    }
+  ]
+}

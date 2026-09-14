@@ -1,0 +1,11 @@
+{
+  "name": "ChildCategoriesQueryResponseType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "childCategories",
+      "type": "[Category]",
+      "description": null
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.addWishlistBulkItem",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "addWishlistBulkItem",
+  "signature": "addWishlistBulkItem(command: InputAddWishlistBulkItemType!): BulkWishlistType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputAddWishlistBulkItemType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "BulkWishlistType",
+  "referencedTypes": [
+    {
+      "name": "BulkWishlistType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputAddWishlistBulkItemType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

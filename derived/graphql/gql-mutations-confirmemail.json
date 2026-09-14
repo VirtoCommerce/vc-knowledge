@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.confirmEmail",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "confirmEmail",
+  "signature": "confirmEmail(command: InputConfirmEmailType!): CustomIdentityResultType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputConfirmEmailType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CustomIdentityResultType",
+  "referencedTypes": [
+    {
+      "name": "CustomIdentityResultType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputConfirmEmailType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

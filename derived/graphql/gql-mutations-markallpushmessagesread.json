@@ -1,0 +1,10 @@
+{
+  "coordinate": "Mutations.markAllPushMessagesRead",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "markAllPushMessagesRead",
+  "signature": "markAllPushMessagesRead(): Boolean",
+  "args": [],
+  "returns": "Boolean",
+  "referencedTypes": []
+}

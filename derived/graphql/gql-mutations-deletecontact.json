@@ -1,0 +1,22 @@
+{
+  "coordinate": "Mutations.deleteContact",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "deleteContact",
+  "signature": "deleteContact(command: InputDeleteContactType!): Boolean",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputDeleteContactType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": [
+    {
+      "name": "InputDeleteContactType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "key": "/api/platform/oauthapps",
+  "modules": [
+    "VirtoCommerce.Platform"
+  ],
+  "tags": [
+    "VirtoCommerce Platform"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/platform/oauthapps",
+      "verb": "DELETE",
+      "route": "/api/platform/oauthapps",
+      "operationId": "OAuthApps_DeleteAsync",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "clientIds",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/oauthapps/new",
+      "verb": "GET",
+      "route": "/api/platform/oauthapps/new",
+      "operationId": "OAuthApps_New",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "OpenIddictApplicationDescriptor"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/oauthapps",
+      "verb": "POST",
+      "route": "/api/platform/oauthapps",
+      "operationId": "OAuthApps_SaveAsync",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "OpenIddictApplicationDescriptor"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/oauthapps/search",
+      "verb": "POST",
+      "route": "/api/platform/oauthapps/search",
+      "operationId": "OAuthApps_SearchAsync",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "OAuthAppSearchResult"
+      },
+      "deprecated": false
+    }
+  ]
+}

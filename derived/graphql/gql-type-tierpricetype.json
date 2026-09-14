@@ -1,0 +1,21 @@
+{
+  "name": "TierPriceType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "price",
+      "type": "MoneyType!",
+      "description": "Price"
+    },
+    {
+      "name": "priceWithTax",
+      "type": "MoneyType!",
+      "description": "Price with tax"
+    },
+    {
+      "name": "quantity",
+      "type": "Long!",
+      "description": "Quantity"
+    }
+  ]
+}

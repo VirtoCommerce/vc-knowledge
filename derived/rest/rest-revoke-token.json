@@ -1,0 +1,27 @@
+{
+  "key": "/revoke/token",
+  "modules": [
+    "VirtoCommerce.Platform"
+  ],
+  "tags": [
+    "VirtoCommerce Platform"
+  ],
+  "operations": [
+    {
+      "coordinate": "POST /revoke/token",
+      "verb": "POST",
+      "route": "/revoke/token",
+      "operationId": "Authorization_RevokeCurrentUserToken",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

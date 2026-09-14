@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.removeWishlistItems",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "removeWishlistItems",
+  "signature": "removeWishlistItems(command: InputRemoveWishlistItemsType!): WishlistType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputRemoveWishlistItemsType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "WishlistType",
+  "referencedTypes": [
+    {
+      "name": "InputRemoveWishlistItemsType",
+      "kind": "INPUT_OBJECT"
+    },
+    {
+      "name": "WishlistType",
+      "kind": "OBJECT"
+    }
+  ]
+}

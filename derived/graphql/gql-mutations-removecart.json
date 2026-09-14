@@ -1,0 +1,22 @@
+{
+  "coordinate": "Mutations.removeCart",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "removeCart",
+  "signature": "removeCart(command: InputRemoveCartType!): Boolean",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputRemoveCartType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": [
+    {
+      "name": "InputRemoveCartType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

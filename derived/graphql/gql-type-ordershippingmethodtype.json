@@ -1,0 +1,56 @@
+{
+  "name": "OrderShippingMethodType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "code",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "isActive",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "logoUrl",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "priority",
+      "type": "Int!",
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "taxType",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "typeName",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

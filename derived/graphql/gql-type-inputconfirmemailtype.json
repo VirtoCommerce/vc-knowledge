@@ -1,0 +1,16 @@
+{
+  "name": "InputConfirmEmailType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "token",
+      "type": "String!",
+      "description": "Confirm email token"
+    },
+    {
+      "name": "userId",
+      "type": "String!",
+      "description": "User identifier"
+    }
+  ]
+}

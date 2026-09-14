@@ -1,0 +1,16 @@
+{
+  "name": "InputUpdateMemberDynamicPropertiesType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "dynamicProperties",
+      "type": "[InputDynamicPropertyValueType]!",
+      "description": null
+    },
+    {
+      "name": "memberId",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

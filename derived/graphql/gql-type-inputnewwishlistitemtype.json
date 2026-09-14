@@ -1,0 +1,16 @@
+{
+  "name": "InputNewWishlistItemType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "productId",
+      "type": "String!",
+      "description": "Product Id"
+    },
+    {
+      "name": "quantity",
+      "type": "Int",
+      "description": "Product quantity"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "key": "/api/marketing/promotions",
+  "modules": [
+    "VirtoCommerce.Marketing"
+  ],
+  "tags": [
+    "Marketing"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/marketing/promotions",
+      "verb": "DELETE",
+      "route": "/api/marketing/promotions",
+      "operationId": "MarketingModulePromotion_DeletePromotions",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": "Delete promotions objects",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "DELETE /api/marketing/promotions/coupons/delete",
+      "verb": "DELETE",
+      "route": "/api/marketing/promotions/coupons/delete",
+      "operationId": "MarketingModulePromotion_DeleteCoupons",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/marketing/promotions/{id}",
+      "verb": "GET",
+      "route": "/api/marketing/promotions/{id}",
+      "operationId": "MarketingModulePromotion_GetPromotionById",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": "Find promotion object by id",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Promotion"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/marketing/promotions/coupons/{id}",
+      "verb": "GET",
+      "route": "/api/marketing/promotions/coupons/{id}",
+      "operationId": "MarketingModulePromotion_GetCoupon",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Coupon"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/marketing/promotions/new",
+      "verb": "GET",
+      "route": "/api/marketing/promotions/new",
+      "operationId": "MarketingModulePromotion_GetNewDynamicPromotion",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": "Get new dynamic promotion object",
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Promotion"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/marketing/promotions",
+      "verb": "POST",
+      "route": "/api/marketing/promotions",
+      "operationId": "MarketingModulePromotion_CreatePromotion",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": "Add new dynamic promotion object to marketing system",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Promotion"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/marketing/promotions/coupons/add",
+      "verb": "POST",
+      "route": "/api/marketing/promotions/coupons/add",
+      "operationId": "MarketingModulePromotion_AddCoupons",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Coupon[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/marketing/promotions/coupons/import",
+      "verb": "POST",
+      "route": "/api/marketing/promotions/coupons/import",
+      "operationId": "MarketingModulePromotion_ImportCouponsAsync",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ImportNotification"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/marketing/promotions/coupons/search",
+      "verb": "POST",
+      "route": "/api/marketing/promotions/coupons/search",
+      "operationId": "MarketingModulePromotion_SearchCoupons",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "CouponSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/marketing/promotions/evaluate",
+      "verb": "POST",
+      "route": "/api/marketing/promotions/evaluate",
+      "operationId": "MarketingModulePromotion_EvaluatePromotions",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": "Evaluate promotions",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "PromotionReward[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/marketing/promotions/search",
+      "verb": "POST",
+      "route": "/api/marketing/promotions/search",
+      "operationId": "MarketingModulePromotion_PromotionsSearch",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": "Search dynamic content places by given criteria",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "PromotionSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/marketing/promotions",
+      "verb": "PUT",
+      "route": "/api/marketing/promotions",
+      "operationId": "MarketingModulePromotion_UpdatePromotions",
+      "module": "VirtoCommerce.Marketing",
+      "tag": "Marketing",
+      "summary": "Update an existing dynamic promotion object in marketing system",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

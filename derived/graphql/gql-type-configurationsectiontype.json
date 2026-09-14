@@ -1,0 +1,46 @@
+{
+  "name": "ConfigurationSectionType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "allowCustomText",
+      "type": "Boolean!",
+      "description": "Is custom text allowed for Text-type section"
+    },
+    {
+      "name": "allowTextOptions",
+      "type": "Boolean!",
+      "description": "Is predefined text options allowed for Text-type section"
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": "Configuration section description"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Configuration section id"
+    },
+    {
+      "name": "isRequired",
+      "type": "Boolean!",
+      "description": "Is configuration section required"
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "Configuration section name"
+    },
+    {
+      "name": "options",
+      "type": "[ConfigurationLineItemType]",
+      "description": null
+    },
+    {
+      "name": "type",
+      "type": "String!",
+      "description": "Configuration section type. Possible values: 'Product', 'Text', 'File'"
+    }
+  ]
+}

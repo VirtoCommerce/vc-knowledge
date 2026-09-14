@@ -1,0 +1,94 @@
+{
+  "key": "/api/packageTypes",
+  "modules": [
+    "VirtoCommerce.Core"
+  ],
+  "tags": [
+    "Commerce core module"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/packageTypes",
+      "verb": "DELETE",
+      "route": "/api/packageTypes",
+      "operationId": "Commerce_DeletePackageTypes",
+      "module": "VirtoCommerce.Core",
+      "tag": "Commerce core module",
+      "summary": "Delete package types",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/packageTypes",
+      "verb": "GET",
+      "route": "/api/packageTypes",
+      "operationId": "Commerce_GetAllPackageTypes",
+      "module": "VirtoCommerce.Core",
+      "tag": "Commerce core module",
+      "summary": "Return all package types registered in the system",
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "PackageType[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/packageTypes",
+      "verb": "POST",
+      "route": "/api/packageTypes",
+      "operationId": "Commerce_CreatePackageType",
+      "module": "VirtoCommerce.Core",
+      "tag": "Commerce core module",
+      "summary": "Create new package type",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/packageTypes",
+      "verb": "PUT",
+      "route": "/api/packageTypes",
+      "operationId": "Commerce_UpdatePackageType",
+      "module": "VirtoCommerce.Core",
+      "tag": "Commerce core module",
+      "summary": "Update a existing package type",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

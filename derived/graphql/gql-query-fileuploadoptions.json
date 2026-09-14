@@ -1,0 +1,22 @@
+{
+  "coordinate": "Query.fileUploadOptions",
+  "role": "query",
+  "rootType": "Query",
+  "field": "fileUploadOptions",
+  "signature": "fileUploadOptions(scope: String): FileUploadScopeOptionsType",
+  "args": [
+    {
+      "name": "scope",
+      "type": "String",
+      "required": false,
+      "description": null
+    }
+  ],
+  "returns": "FileUploadScopeOptionsType",
+  "referencedTypes": [
+    {
+      "name": "FileUploadScopeOptionsType",
+      "kind": "OBJECT"
+    }
+  ]
+}

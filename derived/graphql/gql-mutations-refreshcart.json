@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.refreshCart",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "refreshCart",
+  "signature": "refreshCart(command: RefreshCartType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "RefreshCartType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "RefreshCartType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

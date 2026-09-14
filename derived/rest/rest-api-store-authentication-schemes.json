@@ -1,0 +1,63 @@
+{
+  "key": "/api/store-authentication-schemes",
+  "modules": [
+    "VirtoCommerce.Store"
+  ],
+  "tags": [
+    "Store"
+  ],
+  "operations": [
+    {
+      "coordinate": "GET /api/store-authentication-schemes/{storeId}",
+      "verb": "GET",
+      "route": "/api/store-authentication-schemes/{storeId}",
+      "operationId": "StoreAuthenticationScheme_Get",
+      "module": "VirtoCommerce.Store",
+      "tag": "Store",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "StoreAuthenticationScheme[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/store-authentication-schemes/{storeId}",
+      "verb": "PUT",
+      "route": "/api/store-authentication-schemes/{storeId}",
+      "operationId": "StoreAuthenticationScheme_Update",
+      "module": "VirtoCommerce.Store",
+      "tag": "Store",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "StoreAuthenticationScheme[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

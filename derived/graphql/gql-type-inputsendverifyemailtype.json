@@ -1,0 +1,26 @@
+{
+  "name": "InputSendVerifyEmailType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "email",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "languageCode",
+      "type": "String",
+      "description": "Notification language code"
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "description": "Store ID"
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

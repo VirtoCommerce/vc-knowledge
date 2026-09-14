@@ -1,0 +1,22 @@
+{
+  "coordinate": "Mutations.removeWishlist",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "removeWishlist",
+  "signature": "removeWishlist(command: InputRemoveWishlistType!): Boolean",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputRemoveWishlistType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": [
+    {
+      "name": "InputRemoveWishlistType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

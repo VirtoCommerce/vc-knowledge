@@ -1,0 +1,11 @@
+{
+  "name": "InputUpdateRoleType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "role",
+      "type": "InputUpdateRoleInnerType!",
+      "description": "Role to update"
+    }
+  ]
+}

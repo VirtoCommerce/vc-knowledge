@@ -1,0 +1,22 @@
+{
+  "coordinate": "Mutations.addFcmToken",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "addFcmToken",
+  "signature": "addFcmToken(command: InputAddFcmTokenType!): Boolean",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputAddFcmTokenType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": [
+    {
+      "name": "InputAddFcmTokenType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

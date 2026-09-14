@@ -1,0 +1,162 @@
+{
+  "key": "/api/cms",
+  "modules": [
+    "VirtoCommerce.Content"
+  ],
+  "tags": [
+    "Content"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/cms/{storeId}/menu",
+      "verb": "DELETE",
+      "route": "/api/cms/{storeId}/menu",
+      "operationId": "Menu_DeleteMenuLinkLists",
+      "module": "VirtoCommerce.Content",
+      "tag": "Content",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "listIds",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        },
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/cms/{storeId}/menu",
+      "verb": "GET",
+      "route": "/api/cms/{storeId}/menu",
+      "operationId": "Menu_GetLists",
+      "module": "VirtoCommerce.Content",
+      "tag": "Content",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "MenuLinkList[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/cms/{storeId}/menu/{listId}",
+      "verb": "GET",
+      "route": "/api/cms/{storeId}/menu/{listId}",
+      "operationId": "Menu_GetList",
+      "module": "VirtoCommerce.Content",
+      "tag": "Content",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "listId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "MenuLinkList"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/cms/{storeId}/menu/checkname",
+      "verb": "GET",
+      "route": "/api/cms/{storeId}/menu/checkname",
+      "operationId": "Menu_CheckName",
+      "module": "VirtoCommerce.Content",
+      "tag": "Content",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "language",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "boolean"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/cms/{storeId}/menu",
+      "verb": "POST",
+      "route": "/api/cms/{storeId}/menu",
+      "operationId": "Menu_UpdateMenuLinkList",
+      "module": "VirtoCommerce.Content",
+      "tag": "Content",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

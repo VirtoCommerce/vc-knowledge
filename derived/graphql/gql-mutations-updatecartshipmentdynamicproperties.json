@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.updateCartShipmentDynamicProperties",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "updateCartShipmentDynamicProperties",
+  "signature": "updateCartShipmentDynamicProperties(command: InputUpdateCartShipmentDynamicPropertiesType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputUpdateCartShipmentDynamicPropertiesType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputUpdateCartShipmentDynamicPropertiesType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

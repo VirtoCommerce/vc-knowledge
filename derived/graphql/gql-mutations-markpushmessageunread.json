@@ -1,0 +1,22 @@
+{
+  "coordinate": "Mutations.markPushMessageUnread",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "markPushMessageUnread",
+  "signature": "markPushMessageUnread(command: InputMarkPushMessageUnreadType!): Boolean",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputMarkPushMessageUnreadType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": [
+    {
+      "name": "InputMarkPushMessageUnreadType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

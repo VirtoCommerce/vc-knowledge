@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.removeCartAddress",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "removeCartAddress",
+  "signature": "removeCartAddress(command: InputRemoveCartAddressType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputRemoveCartAddressType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputRemoveCartAddressType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

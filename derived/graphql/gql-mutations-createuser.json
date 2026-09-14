@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.createUser",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "createUser",
+  "signature": "createUser(command: InputCreateUserType!): IdentityResultType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputCreateUserType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "IdentityResultType",
+  "referencedTypes": [
+    {
+      "name": "IdentityResultType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputCreateUserType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

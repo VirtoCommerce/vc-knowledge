@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.moveFromSavedForLater",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "moveFromSavedForLater",
+  "signature": "moveFromSavedForLater(command: InputSaveForLaterType!): CartWithListType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputSaveForLaterType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartWithListType",
+  "referencedTypes": [
+    {
+      "name": "CartWithListType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputSaveForLaterType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

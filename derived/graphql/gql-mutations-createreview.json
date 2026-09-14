@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.createReview",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "createReview",
+  "signature": "createReview(command: CreateReviewCommandType!): CreateReviewResult",
+  "args": [
+    {
+      "name": "command",
+      "type": "CreateReviewCommandType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CreateReviewResult",
+  "referencedTypes": [
+    {
+      "name": "CreateReviewCommandType",
+      "kind": "INPUT_OBJECT"
+    },
+    {
+      "name": "CreateReviewResult",
+      "kind": "OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "name": "OrderLineItemType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "cancelledDate",
+      "type": "DateTime",
+      "description": null
+    },
+    {
+      "name": "cancelReason",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "catalogId",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "categoryId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "comment",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "configurationItems",
+      "type": "[OrderConfigurationItemType]",
+      "description": "Configuration items for configurable product"
+    },
+    {
+      "name": "currency",
+      "type": "CurrencyType!",
+      "description": null
+    },
+    {
+      "name": "discountAmount",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "discountAmountWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "discounts",
+      "type": "[OrderDiscountType!]!",
+      "description": null
+    },
+    {
+      "name": "discountTotal",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "discountTotalWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "dynamicProperties",
+      "type": "[DynamicPropertyValueType!]!",
+      "description": "Customer order Line item dynamic property values"
+    },
+    {
+      "name": "extendedPrice",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "extendedPriceWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "fulfillmentCenterId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "fulfillmentCenterName",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "fulfillmentLocationCode",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "height",
+      "type": "Decimal",
+      "description": null
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "imageUrl",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "isCancelled",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "isGift",
+      "type": "Boolean",
+      "description": null
+    },
+    {
+      "name": "length",
+      "type": "Decimal",
+      "description": null
+    },
+    {
+      "name": "listTotal",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "listTotalWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "measureUnit",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "objectType",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "outerId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "placedPrice",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "placedPriceWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "price",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "priceId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "priceWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "product",
+      "type": "Product",
+      "description": null
+    },
+    {
+      "name": "productId",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "productOuterId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "productType",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "quantity",
+      "type": "Int!",
+      "description": null
+    },
+    {
+      "name": "reserveQuantity",
+      "type": "Int!",
+      "description": null
+    },
+    {
+      "name": "shippingMethodCode",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "showPlacedPrice",
+      "type": "Boolean!",
+      "description": "Indicates whether the PlacedPrice should be visible to the customer"
+    },
+    {
+      "name": "sku",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "status",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "statusDisplayValue",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "taxDetails",
+      "type": "[OrderTaxDetailType!]!",
+      "description": null
+    },
+    {
+      "name": "taxPercentRate",
+      "type": "Decimal!",
+      "description": null
+    },
+    {
+      "name": "taxTotal",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "taxType",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "vendor",
+      "type": "CommonVendor",
+      "description": null
+    },
+    {
+      "name": "weight",
+      "type": "Decimal",
+      "description": null
+    },
+    {
+      "name": "weightUnit",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "width",
+      "type": "Decimal",
+      "description": null
+    }
+  ]
+}

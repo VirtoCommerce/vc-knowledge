@@ -1,0 +1,27 @@
+{
+  "key": "/api/application-insights",
+  "modules": [
+    "VirtoCommerce.ApplicationInsights"
+  ],
+  "tags": [
+    "Azure Application Insights"
+  ],
+  "operations": [
+    {
+      "coordinate": "GET /api/application-insights/redirect",
+      "verb": "GET",
+      "route": "/api/application-insights/redirect",
+      "operationId": "ApplicationInsights_Redirect",
+      "module": "VirtoCommerce.ApplicationInsights",
+      "tag": "Azure Application Insights",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

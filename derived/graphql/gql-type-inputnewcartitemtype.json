@@ -1,0 +1,26 @@
+{
+  "name": "InputNewCartItemType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "dynamicProperties",
+      "type": "[InputDynamicPropertyValueType]",
+      "description": null
+    },
+    {
+      "name": "itemCurrencyCode",
+      "type": "String",
+      "description": "Add the product in a different currency"
+    },
+    {
+      "name": "productId",
+      "type": "String!",
+      "description": "Product Id"
+    },
+    {
+      "name": "quantity",
+      "type": "Int",
+      "description": "Product quantity"
+    }
+  ]
+}

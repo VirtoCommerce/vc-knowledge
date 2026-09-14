@@ -1,0 +1,34 @@
+{
+  "coordinate": "Query.productSuggestions",
+  "role": "query",
+  "rootType": "Query",
+  "field": "productSuggestions",
+  "signature": "productSuggestions(query: String, size: Int, storeId: String!): ProductSuggestionsQueryResponseType",
+  "args": [
+    {
+      "name": "query",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "size",
+      "type": "Int",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "ProductSuggestionsQueryResponseType",
+  "referencedTypes": [
+    {
+      "name": "ProductSuggestionsQueryResponseType",
+      "kind": "OBJECT"
+    }
+  ]
+}

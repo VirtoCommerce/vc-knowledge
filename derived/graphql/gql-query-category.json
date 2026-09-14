@@ -1,0 +1,52 @@
+{
+  "coordinate": "Query.category",
+  "role": "query",
+  "rootType": "Query",
+  "field": "category",
+  "signature": "category(cultureName: String, currencyCode: String, id: String!, previousOutline: String, storeId: String!, userId: String): Category",
+  "args": [
+    {
+      "name": "cultureName",
+      "type": "String",
+      "required": false,
+      "description": "Culture name (\"en-US\")"
+    },
+    {
+      "name": "currencyCode",
+      "type": "String",
+      "required": false,
+      "description": "Currency code (\"USD\")"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "required": true,
+      "description": "id of the category"
+    },
+    {
+      "name": "previousOutline",
+      "type": "String",
+      "required": false,
+      "description": "Previous outline"
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "required": true,
+      "description": "Store Id"
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "required": false,
+      "description": "User Id"
+    }
+  ],
+  "returns": "Category",
+  "referencedTypes": [
+    {
+      "name": "Category",
+      "kind": "OBJECT"
+    }
+  ]
+}

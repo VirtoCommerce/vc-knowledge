@@ -1,0 +1,16 @@
+{
+  "name": "InputUpdateOrderDynamicPropertiesType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "dynamicProperties",
+      "type": "[InputDynamicPropertyValueType]!",
+      "description": null
+    },
+    {
+      "name": "orderId",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "CreateReviewResult",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "id",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "userName",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "validationErrors",
+      "type": "[ReviewValidationErrorType!]!",
+      "description": "A set of errors in case the review is invalid"
+    }
+  ]
+}

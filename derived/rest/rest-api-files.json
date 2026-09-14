@@ -1,0 +1,67 @@
+{
+  "key": "/api/files",
+  "modules": [
+    "VirtoCommerce.FileExperienceApi"
+  ],
+  "tags": [
+    "File Experience API"
+  ],
+  "operations": [
+    {
+      "coordinate": "GET /api/files/{id}",
+      "verb": "GET",
+      "route": "/api/files/{id}",
+      "operationId": "FileUpload_DownloadFile",
+      "module": "VirtoCommerce.FileExperienceApi",
+      "tag": "File Experience API",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/files/{scope}",
+      "verb": "POST",
+      "route": "/api/files/{scope}",
+      "operationId": "FileUpload_UploadFiles",
+      "module": "VirtoCommerce.FileExperienceApi",
+      "tag": "File Experience API",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "scope",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "multipart/form-data",
+        "schema": "object",
+        "required": true,
+        "requiredFields": [
+          "file"
+        ],
+        "fields": [
+          "file"
+        ]
+      },
+      "response": {
+        "code": "200",
+        "schema": "FileUploadResult[]"
+      },
+      "deprecated": false
+    }
+  ]
+}

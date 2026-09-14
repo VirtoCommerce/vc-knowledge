@@ -1,0 +1,234 @@
+{
+  "key": "/api/shipping",
+  "modules": [
+    "VirtoCommerce.Shipping"
+  ],
+  "tags": [
+    "Shipping"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/shipping/pickup-locations/{storeId}/{id}",
+      "verb": "DELETE",
+      "route": "/api/shipping/pickup-locations/{storeId}/{id}",
+      "operationId": "PickupLocations_DeletePickupLocation",
+      "module": "VirtoCommerce.Shipping",
+      "tag": "Shipping",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/shipping",
+      "verb": "GET",
+      "route": "/api/shipping",
+      "operationId": "ShippingModule_GetRegisteredShippingMethods",
+      "module": "VirtoCommerce.Shipping",
+      "tag": "Shipping",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "ShippingMethod[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/shipping/{id}",
+      "verb": "GET",
+      "route": "/api/shipping/{id}",
+      "operationId": "ShippingModule_GetShippingMethodById",
+      "module": "VirtoCommerce.Shipping",
+      "tag": "Shipping",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "ShippingMethod"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/shipping/pickup-locations/{storeId}/{id}",
+      "verb": "GET",
+      "route": "/api/shipping/pickup-locations/{storeId}/{id}",
+      "operationId": "PickupLocations_GetPickupLocationById",
+      "module": "VirtoCommerce.Shipping",
+      "tag": "Shipping",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "PickupLocation"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/shipping/pickup-locations/indexedSearchEnabled",
+      "verb": "GET",
+      "route": "/api/shipping/pickup-locations/indexedSearchEnabled",
+      "operationId": "PickupLocations_GetPickupLocationFullTextSearchEnabled",
+      "module": "VirtoCommerce.Shipping",
+      "tag": "Shipping",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/shipping/pickup-locations",
+      "verb": "POST",
+      "route": "/api/shipping/pickup-locations",
+      "operationId": "PickupLocations_CreatePickupLocation",
+      "module": "VirtoCommerce.Shipping",
+      "tag": "Shipping",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "PickupLocation"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/shipping/pickup-locations/search",
+      "verb": "POST",
+      "route": "/api/shipping/pickup-locations/search",
+      "operationId": "PickupLocations_Search",
+      "module": "VirtoCommerce.Shipping",
+      "tag": "Shipping",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "PickupLocation[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/shipping/search",
+      "verb": "POST",
+      "route": "/api/shipping/search",
+      "operationId": "ShippingModule_SearchShippingMethods",
+      "module": "VirtoCommerce.Shipping",
+      "tag": "Shipping",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ShippingMethodsSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/shipping",
+      "verb": "PUT",
+      "route": "/api/shipping",
+      "operationId": "ShippingModule_UpdateShippingMethod",
+      "module": "VirtoCommerce.Shipping",
+      "tag": "Shipping",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ShippingMethod"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/shipping/pickup-locations",
+      "verb": "PUT",
+      "route": "/api/shipping/pickup-locations",
+      "operationId": "PickupLocations_UpdatePickupLocation",
+      "module": "VirtoCommerce.Shipping",
+      "tag": "Shipping",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

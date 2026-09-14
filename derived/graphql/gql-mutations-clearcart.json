@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.clearCart",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "clearCart",
+  "signature": "clearCart(command: InputClearCartType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputClearCartType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputClearCartType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

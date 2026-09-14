@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.changeOrganizationContactRole",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "changeOrganizationContactRole",
+  "signature": "changeOrganizationContactRole(command: InputChangeOrganizationContactRoleType!): CustomIdentityResultType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputChangeOrganizationContactRoleType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CustomIdentityResultType",
+  "referencedTypes": [
+    {
+      "name": "CustomIdentityResultType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputChangeOrganizationContactRoleType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

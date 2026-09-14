@@ -1,0 +1,41 @@
+{
+  "name": "InputInviteUserType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "customerOrderId",
+      "type": "String",
+      "description": "Customer order Id to be associated with this user."
+    },
+    {
+      "name": "emails",
+      "type": "[String!]!",
+      "description": "Emails which will receive invites"
+    },
+    {
+      "name": "message",
+      "type": "String",
+      "description": "Optional message to include into email with instructions which invites persons will see"
+    },
+    {
+      "name": "organizationId",
+      "type": "String",
+      "description": "ID of organization where contact will be added for user"
+    },
+    {
+      "name": "roleIds",
+      "type": "[String!]",
+      "description": "Role IDs or names to be assigned to the invited user"
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "description": "ID of store which will send invites"
+    },
+    {
+      "name": "urlSuffix",
+      "type": "String",
+      "description": "Optional URL suffix: you may provide here relative URL to your page which handle registration by invite"
+    }
+  ]
+}

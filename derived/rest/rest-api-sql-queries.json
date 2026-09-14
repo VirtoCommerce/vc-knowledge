@@ -1,0 +1,263 @@
+{
+  "key": "/api/sql-queries",
+  "modules": [
+    "VirtoCommerce.SqlQueries"
+  ],
+  "tags": [
+    "Sql Queries"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/sql-queries",
+      "verb": "DELETE",
+      "route": "/api/sql-queries",
+      "operationId": "SqlQueries_Delete",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/sql-queries/{id}",
+      "verb": "GET",
+      "route": "/api/sql-queries/{id}",
+      "operationId": "SqlQueries_GetById",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "SqlQuery"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/sql-queries/database-information",
+      "verb": "GET",
+      "route": "/api/sql-queries/database-information",
+      "operationId": "SqlQueries_GetDatabaseInformation",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "DatabaseInformation"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/sql-queries/formats",
+      "verb": "GET",
+      "route": "/api/sql-queries/formats",
+      "operationId": "SqlQueries_GetReportFormats",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/sql-queries",
+      "verb": "POST",
+      "route": "/api/sql-queries",
+      "operationId": "SqlQueries_Create",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SqlQuery"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/sql-queries/execute-preview",
+      "verb": "POST",
+      "route": "/api/sql-queries/execute-preview",
+      "operationId": "SqlQueries_ExecuteQuery",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SqlQueryExecuteResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/sql-queries/execute-query/{id}",
+      "verb": "POST",
+      "route": "/api/sql-queries/execute-query/{id}",
+      "operationId": "SqlQueries_ExecuteQueryById",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SqlQueryExecuteResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/sql-queries/execute/{id}/{format}",
+      "verb": "POST",
+      "route": "/api/sql-queries/execute/{id}/{format}",
+      "operationId": "SqlQueries_ExecuteReport",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "format",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "SqlQueryParameter[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SqlQuerySearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/sql-queries/reports",
+      "verb": "POST",
+      "route": "/api/sql-queries/reports",
+      "operationId": "SqlQueries_OnlyReports",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SqlQuerySearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/sql-queries/search",
+      "verb": "POST",
+      "route": "/api/sql-queries/search",
+      "operationId": "SqlQueries_Search",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SqlQuerySearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/sql-queries",
+      "verb": "PUT",
+      "route": "/api/sql-queries",
+      "operationId": "SqlQueries_Update",
+      "module": "VirtoCommerce.SqlQueries",
+      "tag": "Sql Queries",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SqlQuery"
+      },
+      "deprecated": false
+    }
+  ]
+}

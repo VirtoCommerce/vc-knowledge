@@ -1,0 +1,26 @@
+{
+  "name": "OutlineItemType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "seoInfos",
+      "type": "[SeoInfo!]",
+      "description": "SEO info"
+    },
+    {
+      "name": "seoObjectType",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

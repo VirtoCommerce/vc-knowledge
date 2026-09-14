@@ -1,0 +1,21 @@
+{
+  "name": "InputUpdateOrderShipmentDynamicPropertiesType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "dynamicProperties",
+      "type": "[InputDynamicPropertyValueType]!",
+      "description": null
+    },
+    {
+      "name": "orderId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "shipmentId",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

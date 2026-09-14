@@ -1,0 +1,16 @@
+{
+  "name": "BuilderPageItemType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "content",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "permalink",
+      "type": "String",
+      "description": "Page permalink"
+    }
+  ]
+}

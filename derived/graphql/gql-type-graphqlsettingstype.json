@@ -1,0 +1,11 @@
+{
+  "name": "GraphQLSettingsType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "keepAliveInterval",
+      "type": "Seconds!",
+      "description": "Keep-alive message interval for GraphQL subscription"
+    }
+  ]
+}

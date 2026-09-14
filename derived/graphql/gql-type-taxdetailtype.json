@@ -1,0 +1,26 @@
+{
+  "name": "TaxDetailType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "amount",
+      "type": "MoneyType!",
+      "description": "Amount"
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "Name"
+    },
+    {
+      "name": "price",
+      "type": "MoneyType!",
+      "description": "Price"
+    },
+    {
+      "name": "rate",
+      "type": "MoneyType!",
+      "description": "Rate"
+    }
+  ]
+}

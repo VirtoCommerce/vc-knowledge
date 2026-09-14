@@ -1,0 +1,350 @@
+{
+  "key": "/api/catalog/categories",
+  "modules": [
+    "VirtoCommerce.Catalog"
+  ],
+  "tags": [
+    "Catalog"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/catalog/categories",
+      "verb": "DELETE",
+      "route": "/api/catalog/categories",
+      "operationId": "CatalogModuleCategories_DeleteCategory",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Deletes the specified categories by id.",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "DELETE /api/catalog/categories/{id}/automatic-links",
+      "verb": "DELETE",
+      "route": "/api/catalog/categories/{id}/automatic-links",
+      "operationId": "CatalogModuleCategories_DeleteAutomaticLinks",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalog/{catalogId}/categories/{categoryId}/products/getnew",
+      "verb": "GET",
+      "route": "/api/catalog/{catalogId}/categories/{categoryId}/products/getnew",
+      "operationId": "CatalogModuleProducts_GetNewProductByCatalogAndCategory",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Gets the template for a new product (inside category).",
+      "parameters": [
+        {
+          "name": "catalogId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "categoryId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "CatalogProduct"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalog/{catalogId}/categories/newcategory",
+      "verb": "GET",
+      "route": "/api/catalog/{catalogId}/categories/newcategory",
+      "operationId": "CatalogModuleCategories_GetNewCategory",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Gets the template for a new category.",
+      "parameters": [
+        {
+          "name": "catalogId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "parentCategoryId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Category"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalog/categories",
+      "verb": "GET",
+      "route": "/api/catalog/categories",
+      "operationId": "CatalogModuleCategories_GetCategoriesByIdsAsync",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Gets categories by ids",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        },
+        {
+          "name": "respGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Category[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalog/categories/{categoryId}/properties/getnew",
+      "verb": "GET",
+      "route": "/api/catalog/categories/{categoryId}/properties/getnew",
+      "operationId": "CatalogModuleProperties_GetNewCategoryProperty",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Gets the template for a new category property.",
+      "parameters": [
+        {
+          "name": "categoryId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Property"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalog/categories/{id}",
+      "verb": "GET",
+      "route": "/api/catalog/categories/{id}",
+      "operationId": "CatalogModuleCategories_GetCategory",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Gets category by id.",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "responseGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Category"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalog/categories/outer/{outerId}",
+      "verb": "GET",
+      "route": "/api/catalog/categories/outer/{outerId}",
+      "operationId": "CatalogModuleCategories_GetCategoryByOuterId",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Gets category by outer id.",
+      "parameters": [
+        {
+          "name": "outerId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "responseGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Catalog"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PATCH /api/catalog/categories/{id}",
+      "verb": "PATCH",
+      "route": "/api/catalog/categories/{id}",
+      "operationId": "CatalogModuleCategories_PatchCategory",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Partial update for the specified Category by id",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Operation[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/categories",
+      "verb": "POST",
+      "route": "/api/catalog/categories",
+      "operationId": "CatalogModuleCategories_CreateOrUpdateCategory",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Creates or updates the specified category.",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/categories/{id}/automatic-links",
+      "verb": "POST",
+      "route": "/api/catalog/categories/{id}/automatic-links",
+      "operationId": "CatalogModuleCategories_UpdateAutomaticLinks",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/categories/batch",
+      "verb": "POST",
+      "route": "/api/catalog/categories/batch",
+      "operationId": "CatalogModuleCategories_SaveCategories",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Create/Update the specified categories.",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Category[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Category[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/categories/plenty",
+      "verb": "POST",
+      "route": "/api/catalog/categories/plenty",
+      "operationId": "CatalogModuleCategories_GetCategoriesByPlentyIds",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Get categories by plenty ids",
+      "parameters": [
+        {
+          "name": "respGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "string[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Category[]"
+      },
+      "deprecated": false
+    }
+  ]
+}

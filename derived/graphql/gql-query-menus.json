@@ -1,0 +1,34 @@
+{
+  "coordinate": "Query.menus",
+  "role": "query",
+  "rootType": "Query",
+  "field": "menus",
+  "signature": "menus(cultureName: String, keyword: String, storeId: String!): [MenuLinkListType!]!",
+  "args": [
+    {
+      "name": "cultureName",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "keyword",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "[MenuLinkListType!]!",
+  "referencedTypes": [
+    {
+      "name": "MenuLinkListType",
+      "kind": "OBJECT"
+    }
+  ]
+}

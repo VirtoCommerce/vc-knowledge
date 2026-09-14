@@ -1,0 +1,26 @@
+{
+  "name": "Promotion",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "description",
+      "type": "String",
+      "description": "Promotion description"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "The unique ID of the promotion."
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "The name of the promotion"
+    },
+    {
+      "name": "type",
+      "type": "String",
+      "description": "Promotion type"
+    }
+  ]
+}

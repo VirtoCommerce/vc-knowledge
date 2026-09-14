@@ -1,0 +1,16 @@
+{
+  "name": "InputDeleteMemberAddressType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "addresses",
+      "type": "[InputMemberAddressType]!",
+      "description": null
+    },
+    {
+      "name": "memberId",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

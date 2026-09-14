@@ -1,0 +1,26 @@
+{
+  "name": "InputAddWishlistBulkItemType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "configurationSections",
+      "type": "[ConfigurationSectionInput]",
+      "description": "Configurable product support. List of configurable product sections"
+    },
+    {
+      "name": "listIds",
+      "type": "[String]!",
+      "description": "Wish list ids"
+    },
+    {
+      "name": "productId",
+      "type": "String!",
+      "description": "Product id to add"
+    },
+    {
+      "name": "quantity",
+      "type": "Int",
+      "description": "Product quantity to add"
+    }
+  ]
+}

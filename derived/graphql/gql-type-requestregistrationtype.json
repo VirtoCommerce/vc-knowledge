@@ -1,0 +1,26 @@
+{
+  "name": "RequestRegistrationType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "account",
+      "type": "RegisterAccountType",
+      "description": "Contact's account"
+    },
+    {
+      "name": "contact",
+      "type": "RegisterContactType",
+      "description": "Created contact"
+    },
+    {
+      "name": "organization",
+      "type": "RegisterOrganizationType",
+      "description": "Created company"
+    },
+    {
+      "name": "result",
+      "type": "AccountCreationResultType",
+      "description": "Account creation result"
+    }
+  ]
+}

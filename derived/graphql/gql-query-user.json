@@ -1,0 +1,46 @@
+{
+  "coordinate": "Query.user",
+  "role": "query",
+  "rootType": "Query",
+  "field": "user",
+  "signature": "user(email: String, id: String, loginProvider: String, providerKey: String, userName: String): UserType",
+  "args": [
+    {
+      "name": "email",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "id",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "loginProvider",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "providerKey",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "userName",
+      "type": "String",
+      "required": false,
+      "description": null
+    }
+  ],
+  "returns": "UserType",
+  "referencedTypes": [
+    {
+      "name": "UserType",
+      "kind": "OBJECT"
+    }
+  ]
+}

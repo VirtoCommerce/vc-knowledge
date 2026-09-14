@@ -1,0 +1,26 @@
+{
+  "name": "SearchProductFilterRangeValue",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "includeLowerBound",
+      "type": "Boolean!",
+      "description": "Indicates if the starting bound is included in the range"
+    },
+    {
+      "name": "includeUpperBound",
+      "type": "Boolean!",
+      "description": "Indicates if the ending bound is included in the range"
+    },
+    {
+      "name": "lower",
+      "type": "String",
+      "description": "The starting value of the range"
+    },
+    {
+      "name": "upper",
+      "type": "String",
+      "description": "The ending value of the range"
+    }
+  ]
+}

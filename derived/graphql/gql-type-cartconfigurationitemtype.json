@@ -1,0 +1,46 @@
+{
+  "name": "CartConfigurationItemType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "customText",
+      "type": "String",
+      "description": "Custom text for 'Text' configuration item section"
+    },
+    {
+      "name": "files",
+      "type": "[CartConfigurationItemFileType]",
+      "description": "List of files for 'File' configuration item section"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Configuration item ID"
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "Configuration item name"
+    },
+    {
+      "name": "productId",
+      "type": "String",
+      "description": "Configuration item product ID"
+    },
+    {
+      "name": "quantity",
+      "type": "Int",
+      "description": "Configuration item product quantity"
+    },
+    {
+      "name": "sectionId",
+      "type": "String!",
+      "description": "Configuration item section ID"
+    },
+    {
+      "name": "type",
+      "type": "String!",
+      "description": "Configuration item type. Possible values: 'Product', 'Text', 'File'"
+    }
+  ]
+}

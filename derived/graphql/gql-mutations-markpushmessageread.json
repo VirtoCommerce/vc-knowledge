@@ -1,0 +1,22 @@
+{
+  "coordinate": "Mutations.markPushMessageRead",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "markPushMessageRead",
+  "signature": "markPushMessageRead(command: InputMarkPushMessageReadType!): Boolean",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputMarkPushMessageReadType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": [
+    {
+      "name": "InputMarkPushMessageReadType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

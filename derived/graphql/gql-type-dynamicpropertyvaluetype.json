@@ -1,0 +1,36 @@
+{
+  "name": "DynamicPropertyValueType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "dictionaryItem",
+      "type": "DictionaryItemType",
+      "description": "Associated dictionary item"
+    },
+    {
+      "name": "dynamicProperty",
+      "type": "DynamicPropertyType",
+      "description": "Associated dynamic property"
+    },
+    {
+      "name": "dynamicPropertyValueType",
+      "type": "DynamicPropertyValueTypes!",
+      "description": "Value type"
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "Property name"
+    },
+    {
+      "name": "value",
+      "type": "DynamicPropertyValue",
+      "description": "Property value"
+    },
+    {
+      "name": "valueType",
+      "type": "String!",
+      "description": "Value type"
+    }
+  ]
+}

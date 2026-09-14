@@ -1,0 +1,56 @@
+{
+  "name": "Asset",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "cultureName",
+      "type": "String",
+      "description": "Culture name"
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": "The description of the asset."
+    },
+    {
+      "name": "group",
+      "type": "String",
+      "description": "The group of the asset."
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "The unique ID of the asset."
+    },
+    {
+      "name": "mimeType",
+      "type": "String",
+      "description": "The MIME type of the asset."
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "The name of the asset."
+    },
+    {
+      "name": "relativeUrl",
+      "type": "String",
+      "description": "The relative URL of the asset."
+    },
+    {
+      "name": "size",
+      "type": "Long!",
+      "description": "The size of the asset in bytes."
+    },
+    {
+      "name": "typeId",
+      "type": "String!",
+      "description": "The type ID of the asset."
+    },
+    {
+      "name": "url",
+      "type": "String!",
+      "description": "The URL of the asset."
+    }
+  ]
+}

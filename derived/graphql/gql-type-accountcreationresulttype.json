@@ -1,0 +1,21 @@
+{
+  "name": "AccountCreationResultType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "errors",
+      "type": "[RegistrationErrorType]",
+      "description": "The errors that occurred during the operation."
+    },
+    {
+      "name": "requireEmailVerification",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "succeeded",
+      "type": "Boolean!",
+      "description": null
+    }
+  ]
+}

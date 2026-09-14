@@ -1,0 +1,10 @@
+{
+  "coordinate": "Mutations.clearAllPushMessages",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "clearAllPushMessages",
+  "signature": "clearAllPushMessages(): Boolean",
+  "args": [],
+  "returns": "Boolean",
+  "referencedTypes": []
+}

@@ -1,0 +1,16 @@
+{
+  "name": "CartWithListType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "cart",
+      "type": "CartType",
+      "description": "Shopping cart"
+    },
+    {
+      "name": "list",
+      "type": "CartType",
+      "description": "Saved list"
+    }
+  ]
+}

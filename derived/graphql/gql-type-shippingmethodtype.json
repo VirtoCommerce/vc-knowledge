@@ -1,0 +1,81 @@
+{
+  "name": "ShippingMethodType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "code",
+      "type": "String!",
+      "description": "Value of shipping gateway code"
+    },
+    {
+      "name": "currency",
+      "type": "CurrencyType!",
+      "description": "Currency"
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": "Shipping method description"
+    },
+    {
+      "name": "discountAmount",
+      "type": "MoneyType!",
+      "description": "Discount amount"
+    },
+    {
+      "name": "discountAmountWithTax",
+      "type": "MoneyType!",
+      "description": "Discount amount with tax"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "logoUrl",
+      "type": "String",
+      "description": "Value of shipping method logo absolute URL"
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "Shipping method name"
+    },
+    {
+      "name": "optionDescription",
+      "type": "String",
+      "description": "Value of shipping method option description"
+    },
+    {
+      "name": "optionName",
+      "type": "String",
+      "description": "Value of shipping method option name"
+    },
+    {
+      "name": "price",
+      "type": "MoneyType!",
+      "description": "Price"
+    },
+    {
+      "name": "priceWithTax",
+      "type": "MoneyType!",
+      "description": "Price with tax"
+    },
+    {
+      "name": "priority",
+      "type": "Int!",
+      "description": "Value of shipping method priority"
+    },
+    {
+      "name": "total",
+      "type": "MoneyType!",
+      "description": "Total"
+    },
+    {
+      "name": "totalWithTax",
+      "type": "MoneyType!",
+      "description": "Total with tax"
+    }
+  ]
+}

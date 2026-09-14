@@ -1,0 +1,14 @@
+node_modules/
+*.log
+.DS_Store
+
+# Nothing env-shaped belongs in the corpus. There is none today and there is no reason there ever
+# should be -- the base holds facts about a platform, and every credential it could need lives in
+# the workbench. This is here so that stays true by rule rather than by nobody having done it yet.
+.env
+.env.*
+
+# Local overrides do not travel. Protected in this checkout only by one developer's personal global
+# ignore file, which a clone does not carry.
+.claude/settings.local.json
+*.local.json

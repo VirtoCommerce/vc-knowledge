@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.cloneWishlist",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "cloneWishlist",
+  "signature": "cloneWishlist(command: InputCloneWishlistType!): WishlistType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputCloneWishlistType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "WishlistType",
+  "referencedTypes": [
+    {
+      "name": "InputCloneWishlistType",
+      "kind": "INPUT_OBJECT"
+    },
+    {
+      "name": "WishlistType",
+      "kind": "OBJECT"
+    }
+  ]
+}

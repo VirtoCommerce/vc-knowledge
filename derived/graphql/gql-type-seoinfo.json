@@ -1,0 +1,71 @@
+{
+  "name": "SeoInfo",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "imageAltDescription",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "isActive",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "languageCode",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "metaDescription",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "metaKeywords",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "objectId",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "objectType",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "outline",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "pageTitle",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "semanticUrl",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

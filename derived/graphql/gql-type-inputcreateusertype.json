@@ -1,0 +1,11 @@
+{
+  "name": "InputCreateUserType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "applicationUser",
+      "type": "InputCreateApplicationUserType!",
+      "description": "Application user to create"
+    }
+  ]
+}

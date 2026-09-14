@@ -1,0 +1,16 @@
+{
+  "name": "ConfigurableProductOptionInput",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "productId",
+      "type": "String!",
+      "description": "Product ID"
+    },
+    {
+      "name": "quantity",
+      "type": "Int!",
+      "description": "Quantity of product"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "InputAddWishlistItemsType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "listId",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "listItems",
+      "type": "[InputNewWishlistItemType!]!",
+      "description": "List items"
+    }
+  ]
+}

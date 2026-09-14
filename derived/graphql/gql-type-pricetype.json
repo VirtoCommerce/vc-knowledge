@@ -1,0 +1,91 @@
+{
+  "name": "PriceType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "actual",
+      "type": "MoneyType!",
+      "description": "Actual price"
+    },
+    {
+      "name": "actualWithTax",
+      "type": "MoneyType!",
+      "description": "Actual price with tax"
+    },
+    {
+      "name": "currency",
+      "type": "String!",
+      "description": "Currency"
+    },
+    {
+      "name": "discountAmount",
+      "type": "MoneyType!",
+      "description": "Discount amount"
+    },
+    {
+      "name": "discountAmountWithTax",
+      "type": "MoneyType!",
+      "description": "Discount amount with tax"
+    },
+    {
+      "name": "discountPercent",
+      "type": "Decimal!",
+      "description": null
+    },
+    {
+      "name": "discounts",
+      "type": "[CatalogDiscountType!]!",
+      "description": "Discounts"
+    },
+    {
+      "name": "endDate",
+      "type": "DateTime",
+      "description": "End date"
+    },
+    {
+      "name": "list",
+      "type": "MoneyType!",
+      "description": "Price list"
+    },
+    {
+      "name": "listWithTax",
+      "type": "MoneyType!",
+      "description": "Price list with tax"
+    },
+    {
+      "name": "minQuantity",
+      "type": "Int",
+      "description": "The product min qty"
+    },
+    {
+      "name": "pricelistId",
+      "type": "String",
+      "description": "The product price list"
+    },
+    {
+      "name": "pricelistName",
+      "type": "String",
+      "description": "The product price list name"
+    },
+    {
+      "name": "sale",
+      "type": "MoneyType!",
+      "description": "Sale price"
+    },
+    {
+      "name": "saleWithTax",
+      "type": "MoneyType!",
+      "description": "Sale price with tax"
+    },
+    {
+      "name": "startDate",
+      "type": "DateTime",
+      "description": "Start date"
+    },
+    {
+      "name": "tierPrices",
+      "type": "[TierPriceType!]!",
+      "description": "Tier prices"
+    }
+  ]
+}

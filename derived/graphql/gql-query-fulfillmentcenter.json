@@ -1,0 +1,22 @@
+{
+  "coordinate": "Query.fulfillmentCenter",
+  "role": "query",
+  "rootType": "Query",
+  "field": "fulfillmentCenter",
+  "signature": "fulfillmentCenter(id: String!): FulfillmentCenterType",
+  "args": [
+    {
+      "name": "id",
+      "type": "String!",
+      "required": true,
+      "description": "ID of the Fulfillment Center"
+    }
+  ],
+  "returns": "FulfillmentCenterType",
+  "referencedTypes": [
+    {
+      "name": "FulfillmentCenterType",
+      "kind": "OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "PaymentInEdge",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "cursor",
+      "type": "String!",
+      "description": "A cursor for use in pagination"
+    },
+    {
+      "name": "node",
+      "type": "PaymentInType",
+      "description": "The item at the end of the edge"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "coordinate": "Query.vendor",
+  "role": "query",
+  "rootType": "Query",
+  "field": "vendor",
+  "signature": "vendor(id: String!, userId: String): Vendor",
+  "args": [
+    {
+      "name": "id",
+      "type": "String!",
+      "required": true,
+      "description": null
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "required": false,
+      "description": null
+    }
+  ],
+  "returns": "Vendor",
+  "referencedTypes": [
+    {
+      "name": "Vendor",
+      "kind": "OBJECT"
+    }
+  ]
+}

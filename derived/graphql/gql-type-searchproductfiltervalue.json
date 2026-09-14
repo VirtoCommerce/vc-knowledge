@@ -1,0 +1,16 @@
+{
+  "name": "SearchProductFilterValue",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "label",
+      "type": "String",
+      "description": "The label of the term in the filter, used for display purposes"
+    },
+    {
+      "name": "value",
+      "type": "String!",
+      "description": "The value of the term in the filter"
+    }
+  ]
+}

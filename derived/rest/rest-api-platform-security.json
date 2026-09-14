@@ -1,0 +1,1065 @@
+{
+  "key": "/api/platform/security",
+  "modules": [
+    "VirtoCommerce.Platform"
+  ],
+  "tags": [
+    "VirtoCommerce Platform"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/platform/security/roles",
+      "verb": "DELETE",
+      "route": "/api/platform/security/roles",
+      "operationId": "Security_DeleteRoles",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Delete roles by ID",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "DELETE /api/platform/security/users",
+      "verb": "DELETE",
+      "route": "/api/platform/security/users",
+      "operationId": "Security_Delete",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Delete users by name",
+      "parameters": [
+        {
+          "name": "names",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "DELETE /api/platform/security/users/{userId}/sessions",
+      "verb": "DELETE",
+      "route": "/api/platform/security/users/{userId}/sessions",
+      "operationId": "Security_TerminateAllUserSessions",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "DELETE /api/platform/security/users/{userId}/sessions/{id}",
+      "verb": "DELETE",
+      "route": "/api/platform/security/users/{userId}/sessions/{id}",
+      "operationId": "Security_TerminateUserSession",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "DELETE /api/platform/security/users/apikeys",
+      "verb": "DELETE",
+      "route": "/api/platform/security/users/apikeys",
+      "operationId": "Security_DeleteUserApiKeys",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "UserApiKey[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/currentuser",
+      "verb": "GET",
+      "route": "/api/platform/security/currentuser",
+      "operationId": "Security_GetCurrentUser",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Get current user details",
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "UserDetail"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/logintypes",
+      "verb": "GET",
+      "route": "/api/platform/security/logintypes",
+      "operationId": "Security_GetLoginTypes",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Get allowed login types",
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "LoginType[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/logout",
+      "verb": "GET",
+      "route": "/api/platform/security/logout",
+      "operationId": "Security_Logout",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Sign out",
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/passwordchangeenabled",
+      "verb": "GET",
+      "route": "/api/platform/security/passwordchangeenabled",
+      "operationId": "Security_PasswordChangeEnabled",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Checks if manual password change is enabled",
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "UserLockedResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/permissions",
+      "verb": "GET",
+      "route": "/api/platform/security/permissions",
+      "operationId": "Security_GetAllRegisteredPermissions",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Get all registered permissions",
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Permission[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/roles/{roleName}",
+      "verb": "GET",
+      "route": "/api/platform/security/roles/{roleName}",
+      "operationId": "Security_GetRole",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Get role by ID",
+      "parameters": [
+        {
+          "name": "roleName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Role"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/userinfo",
+      "verb": "GET",
+      "route": "/api/platform/security/userinfo",
+      "operationId": "Security_Userinfo",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Claim[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users",
+      "verb": "GET",
+      "route": "/api/platform/security/users",
+      "operationId": "Security_GetUsersByIds",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Get users by IDs",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "ApplicationUser[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users/{id}/apikeys",
+      "verb": "GET",
+      "route": "/api/platform/security/users/{id}/apikeys",
+      "operationId": "Security_GetUserApiKeys",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "UserApiKey[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users/{id}/locked",
+      "verb": "GET",
+      "route": "/api/platform/security/users/{id}/locked",
+      "operationId": "Security_IsUserLocked",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Checks if user locked",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "UserLockedResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users/{userId}/generateChangeEmailToken",
+      "verb": "GET",
+      "route": "/api/platform/security/users/{userId}/generateChangeEmailToken",
+      "operationId": "Security_GenerateChangeEmailToken",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "newEmail",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users/{userId}/generateEmailConfirmationToken",
+      "verb": "GET",
+      "route": "/api/platform/security/users/{userId}/generateEmailConfirmationToken",
+      "operationId": "Security_GenerateEmailConfirmationToken",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users/{userId}/generatePasswordResetToken",
+      "verb": "GET",
+      "route": "/api/platform/security/users/{userId}/generatePasswordResetToken",
+      "operationId": "Security_GeneratePasswordResetToken",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users/{userId}/generateToken",
+      "verb": "GET",
+      "route": "/api/platform/security/users/{userId}/generateToken",
+      "operationId": "Security_GenerateUserToken",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "purpose",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "tokenProvider",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users/{userName}",
+      "verb": "GET",
+      "route": "/api/platform/security/users/{userName}",
+      "operationId": "Security_GetUserByName",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Get user details by user name",
+      "parameters": [
+        {
+          "name": "userName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "ApplicationUser"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users/email/{email}",
+      "verb": "GET",
+      "route": "/api/platform/security/users/email/{email}",
+      "operationId": "Security_GetUserByEmail",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Get user details by user email",
+      "parameters": [
+        {
+          "name": "email",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "ApplicationUser"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users/id/{id}",
+      "verb": "GET",
+      "route": "/api/platform/security/users/id/{id}",
+      "operationId": "Security_GetUserById",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Get user details by user ID",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "ApplicationUser"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/security/users/login/external/{loginProvider}/{providerKey}",
+      "verb": "GET",
+      "route": "/api/platform/security/users/login/external/{loginProvider}/{providerKey}",
+      "operationId": "Security_GetUserByLogin",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Get user details by external login provider",
+      "parameters": [
+        {
+          "name": "loginProvider",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "providerKey",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "ApplicationUser"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/currentuser/changepassword",
+      "verb": "POST",
+      "route": "/api/platform/security/currentuser/changepassword",
+      "operationId": "Security_ChangeCurrentUserPassword",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Change password for current user.",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SecurityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/login",
+      "verb": "POST",
+      "route": "/api/platform/security/login",
+      "operationId": "Security_Login",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Sign in with user name and password",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SignInResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/roles/search",
+      "verb": "POST",
+      "route": "/api/platform/security/roles/search",
+      "operationId": "Security_SearchRoles",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "SearchAsync roles by keyword",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "RoleSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{id}/lock",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{id}/lock",
+      "operationId": "Security_LockUser",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Lock user",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "SecurityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{id}/unlock",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{id}/unlock",
+      "operationId": "Security_UnlockUser",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Unlock user",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "SecurityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{loginOrEmail}/requestpasswordreset",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{loginOrEmail}/requestpasswordreset",
+      "operationId": "Security_RequestPasswordReset",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Send email with instructions on how to reset user password.",
+      "parameters": [
+        {
+          "name": "loginOrEmail",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{userId}/confirmEmail",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{userId}/confirmEmail",
+      "operationId": "Security_ConfirmEmail",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SecurityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{userId}/resetpasswordconfirm",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{userId}/resetpasswordconfirm",
+      "operationId": "Security_ResetPasswordByToken",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Reset password confirmation",
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SecurityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{userId}/sendVerificationEmail",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{userId}/sendVerificationEmail",
+      "operationId": "Security_SendVerificationEmail",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Verify user email",
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{userId}/sessions/search",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{userId}/sessions/search",
+      "operationId": "Security_SearchUserSessions",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "UserSessionSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{userId}/validatepasswordresettoken",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{userId}/validatepasswordresettoken",
+      "operationId": "Security_ValidatePasswordResetToken",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Validate password reset token",
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "boolean"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{userId}/verifyToken",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{userId}/verifyToken",
+      "operationId": "Security_VerifyUserToken",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "boolean"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{userName}/changepassword",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{userName}/changepassword",
+      "operationId": "Security_ChangePassword",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Change password",
+      "parameters": [
+        {
+          "name": "userName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SecurityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/{userName}/resetpassword",
+      "verb": "POST",
+      "route": "/api/platform/security/users/{userName}/resetpassword",
+      "operationId": "Security_ResetPassword",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Reset password confirmation",
+      "parameters": [
+        {
+          "name": "userName",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SecurityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/apikeys",
+      "verb": "POST",
+      "route": "/api/platform/security/users/apikeys",
+      "operationId": "Security_SaveUserApiKey",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "UserApiKey[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/create",
+      "verb": "POST",
+      "route": "/api/platform/security/users/create",
+      "operationId": "Security_Create",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Create new user",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SecurityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/users/search",
+      "verb": "POST",
+      "route": "/api/platform/security/users/search",
+      "operationId": "Security_SearchUsers",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "SearchAsync users by keyword",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "UserSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/validatepassword",
+      "verb": "POST",
+      "route": "/api/platform/security/validatepassword",
+      "operationId": "Security_ValidatePassword",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "string",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "IdentityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/security/validateuserpassword",
+      "verb": "POST",
+      "route": "/api/platform/security/validateuserpassword",
+      "operationId": "Security_ValidateUserPassword",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "IdentityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/platform/security/roles",
+      "verb": "PUT",
+      "route": "/api/platform/security/roles",
+      "operationId": "Security_UpdateRole",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Update an existing role or create new",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SecurityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/platform/security/users",
+      "verb": "PUT",
+      "route": "/api/platform/security/users",
+      "operationId": "Security_Update",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": "Update user details by user ID",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SecurityResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/platform/security/users/apikeys",
+      "verb": "PUT",
+      "route": "/api/platform/security/users/apikeys",
+      "operationId": "Security_UpdateUserApiKey",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "UserApiKey[]"
+      },
+      "deprecated": false
+    }
+  ]
+}

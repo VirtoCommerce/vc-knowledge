@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.changeComment",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "changeComment",
+  "signature": "changeComment(command: InputChangeCommentType): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputChangeCommentType",
+      "required": false,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputChangeCommentType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "InputChangeOrderStatusType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "orderId",
+      "type": "String!",
+      "description": "Order ID"
+    },
+    {
+      "name": "status",
+      "type": "String!",
+      "description": "Order status"
+    }
+  ]
+}

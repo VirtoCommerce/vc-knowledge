@@ -1,0 +1,26 @@
+{
+  "name": "PageContextResponseType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "slugInfo",
+      "type": "SlugInfoResponseType",
+      "description": null
+    },
+    {
+      "name": "store",
+      "type": "StoreResponseType",
+      "description": null
+    },
+    {
+      "name": "user",
+      "type": "UserType",
+      "description": "User info"
+    },
+    {
+      "name": "whiteLabelingSettings",
+      "type": "WhiteLabelingSettingsType",
+      "description": null
+    }
+  ]
+}

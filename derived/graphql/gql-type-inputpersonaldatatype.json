@@ -1,0 +1,31 @@
+{
+  "name": "InputPersonalDataType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "email",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "firstName",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "fullName",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "lastName",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "middleName",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

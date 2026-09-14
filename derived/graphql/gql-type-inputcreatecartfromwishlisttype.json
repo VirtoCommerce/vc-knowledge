@@ -1,0 +1,11 @@
+{
+  "name": "InputCreateCartFromWishlistType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "listId",
+      "type": "String!",
+      "description": "Wishlist ID"
+    }
+  ]
+}

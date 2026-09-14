@@ -1,0 +1,31 @@
+{
+  "name": "PageType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "content",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "Page title"
+    },
+    {
+      "name": "permalink",
+      "type": "String",
+      "description": "Page permalink"
+    },
+    {
+      "name": "relativeUrl",
+      "type": "String!",
+      "description": "Page file relative url"
+    }
+  ]
+}

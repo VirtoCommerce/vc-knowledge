@@ -1,0 +1,22 @@
+{
+  "coordinate": "Mutations.deleteFcmToken",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "deleteFcmToken",
+  "signature": "deleteFcmToken(command: InputDeleteFcmTokenType!): Boolean",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputDeleteFcmTokenType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": [
+    {
+      "name": "InputDeleteFcmTokenType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

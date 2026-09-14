@@ -1,0 +1,56 @@
+{
+  "name": "ContractType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "code",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "dynamicProperties",
+      "type": "[DynamicPropertyValueType]",
+      "description": "Contract dynamic property values"
+    },
+    {
+      "name": "endDate",
+      "type": "DateTime",
+      "description": null
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "startDate",
+      "type": "DateTime",
+      "description": null
+    },
+    {
+      "name": "status",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "vendorId",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

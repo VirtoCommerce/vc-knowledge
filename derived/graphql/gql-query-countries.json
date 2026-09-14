@@ -1,0 +1,15 @@
+{
+  "coordinate": "Query.countries",
+  "role": "query",
+  "rootType": "Query",
+  "field": "countries",
+  "signature": "countries(): [CountryType!]!",
+  "args": [],
+  "returns": "[CountryType!]!",
+  "referencedTypes": [
+    {
+      "name": "CountryType",
+      "kind": "OBJECT"
+    }
+  ]
+}

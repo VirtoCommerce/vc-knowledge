@@ -1,0 +1,36 @@
+{
+  "name": "CurrencyType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "code",
+      "type": "String!",
+      "description": "Currency code may be used ISO 4217"
+    },
+    {
+      "name": "cultureName",
+      "type": "String!",
+      "description": "Currency English name"
+    },
+    {
+      "name": "customFormatting",
+      "type": "String",
+      "description": "Currency custom formatting"
+    },
+    {
+      "name": "englishName",
+      "type": "String!",
+      "description": "Currency English name"
+    },
+    {
+      "name": "exchangeRate",
+      "type": "Decimal!",
+      "description": "Exchange rate"
+    },
+    {
+      "name": "symbol",
+      "type": "String!",
+      "description": "Symbol"
+    }
+  ]
+}

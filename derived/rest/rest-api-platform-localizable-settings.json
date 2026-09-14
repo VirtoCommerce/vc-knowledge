@@ -1,0 +1,114 @@
+{
+  "key": "/api/platform/localizable-settings",
+  "modules": [
+    "VirtoCommerce.Platform"
+  ],
+  "tags": [
+    "VirtoCommerce Platform"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/platform/localizable-settings/{name}/dictionary-items",
+      "verb": "DELETE",
+      "route": "/api/platform/localizable-settings/{name}/dictionary-items",
+      "operationId": "LocalizableSettings_DeleteDictionaryItems",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "values",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/localizable-settings",
+      "verb": "GET",
+      "route": "/api/platform/localizable-settings",
+      "operationId": "LocalizableSettings_GetSettingsAndLanguages",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "LocalizableSettingsAndLanguages"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/platform/localizable-settings/{name}/dictionary-items/{language}/values",
+      "verb": "GET",
+      "route": "/api/platform/localizable-settings/{name}/dictionary-items/{language}/values",
+      "operationId": "LocalizableSettings_GetDictionaryValues",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "language",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "KeyValue[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/platform/localizable-settings/{name}/dictionary-items",
+      "verb": "POST",
+      "route": "/api/platform/localizable-settings/{name}/dictionary-items",
+      "operationId": "LocalizableSettings_SaveDictionaryItems",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "DictionaryItem[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

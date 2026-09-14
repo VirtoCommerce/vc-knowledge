@@ -1,0 +1,16 @@
+{
+  "name": "InputRemoveMemberFromOrganizationType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "contactId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "organizationId",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

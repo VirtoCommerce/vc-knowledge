@@ -1,0 +1,34 @@
+{
+  "key": "/externalsignin/callback",
+  "modules": [
+    "VirtoCommerce.Platform"
+  ],
+  "tags": [
+    "VirtoCommerce Platform"
+  ],
+  "operations": [
+    {
+      "coordinate": "GET /externalsignin/callback",
+      "verb": "GET",
+      "route": "/externalsignin/callback",
+      "operationId": "ExternalSignIn_SignInCallback",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "returnUrl",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

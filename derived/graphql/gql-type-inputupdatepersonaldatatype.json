@@ -1,0 +1,11 @@
+{
+  "name": "InputUpdatePersonalDataType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "personalData",
+      "type": "InputPersonalDataType!",
+      "description": null
+    }
+  ]
+}

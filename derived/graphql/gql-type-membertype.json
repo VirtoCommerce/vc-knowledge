@@ -1,0 +1,76 @@
+{
+  "name": "MemberType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "addresses",
+      "type": "MemberAddressConnection",
+      "description": null
+    },
+    {
+      "name": "defaultBillingAddress",
+      "type": "MemberAddressType",
+      "description": "Default billing address"
+    },
+    {
+      "name": "defaultShippingAddress",
+      "type": "MemberAddressType",
+      "description": "Default shipping address"
+    },
+    {
+      "name": "dynamicProperties",
+      "type": "[DynamicPropertyValueType]!",
+      "description": "Dynamic property values"
+    },
+    {
+      "name": "emails",
+      "type": "[String]!",
+      "description": "Emails"
+    },
+    {
+      "name": "groups",
+      "type": "[String]!",
+      "description": null
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "memberType",
+      "type": "String!",
+      "description": "Member type"
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "Name"
+    },
+    {
+      "name": "outerId",
+      "type": "String",
+      "description": "Outer ID"
+    },
+    {
+      "name": "phones",
+      "type": "[String]!",
+      "description": "Phones"
+    },
+    {
+      "name": "seoInfo",
+      "type": "SeoInfo",
+      "description": "Request related SEO info"
+    },
+    {
+      "name": "seoObjectType",
+      "type": "String!",
+      "description": "SEO object type"
+    },
+    {
+      "name": "status",
+      "type": "String",
+      "description": "Status"
+    }
+  ]
+}

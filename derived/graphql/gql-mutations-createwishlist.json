@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.createWishlist",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "createWishlist",
+  "signature": "createWishlist(command: InputCreateWishlistType!): WishlistType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputCreateWishlistType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "WishlistType",
+  "referencedTypes": [
+    {
+      "name": "InputCreateWishlistType",
+      "kind": "INPUT_OBJECT"
+    },
+    {
+      "name": "WishlistType",
+      "kind": "OBJECT"
+    }
+  ]
+}

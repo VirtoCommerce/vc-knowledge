@@ -1,0 +1,11 @@
+{
+  "name": "InputLockUnlockOrganizationContactType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "userId",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.createOrderFromCart",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "createOrderFromCart",
+  "signature": "createOrderFromCart(command: InputCreateOrderFromCartType!): CustomerOrderType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputCreateOrderFromCartType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CustomerOrderType",
+  "referencedTypes": [
+    {
+      "name": "CustomerOrderType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputCreateOrderFromCartType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

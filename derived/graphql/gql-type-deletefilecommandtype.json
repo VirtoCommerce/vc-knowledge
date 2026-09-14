@@ -1,0 +1,11 @@
+{
+  "name": "DeleteFileCommandType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

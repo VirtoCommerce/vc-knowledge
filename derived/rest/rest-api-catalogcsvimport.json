@@ -1,0 +1,107 @@
+{
+  "key": "/api/catalogcsvimport",
+  "modules": [
+    "VirtoCommerce.CatalogCsvImportModule"
+  ],
+  "tags": [
+    "CSV Catalog Export and Import Module"
+  ],
+  "operations": [
+    {
+      "coordinate": "GET /api/catalogcsvimport/export/mappingconfiguration",
+      "verb": "GET",
+      "route": "/api/catalogcsvimport/export/mappingconfiguration",
+      "operationId": "ExportImport_GetExportMappingConfiguration",
+      "module": "VirtoCommerce.CatalogCsvImportModule",
+      "tag": "CSV Catalog Export and Import Module",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "delimiter",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "CsvProductMappingConfiguration"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalogcsvimport/import/mappingconfiguration",
+      "verb": "GET",
+      "route": "/api/catalogcsvimport/import/mappingconfiguration",
+      "operationId": "ExportImport_GetImportMappingConfiguration",
+      "module": "VirtoCommerce.CatalogCsvImportModule",
+      "tag": "CSV Catalog Export and Import Module",
+      "summary": "Gets the CSV mapping configuration.",
+      "parameters": [
+        {
+          "name": "delimiter",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "fileUrl",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "CsvProductMappingConfiguration"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalogcsvimport/export",
+      "verb": "POST",
+      "route": "/api/catalogcsvimport/export",
+      "operationId": "ExportImport_DoExport",
+      "module": "VirtoCommerce.CatalogCsvImportModule",
+      "tag": "CSV Catalog Export and Import Module",
+      "summary": "Start catalog data export process.",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ExportNotification"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalogcsvimport/import",
+      "verb": "POST",
+      "route": "/api/catalogcsvimport/import",
+      "operationId": "ExportImport_DoImport",
+      "module": "VirtoCommerce.CatalogCsvImportModule",
+      "tag": "CSV Catalog Export and Import Module",
+      "summary": "Start catalog data import process.",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "CatalogCsvImportNotification"
+      },
+      "deprecated": false
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "coordinate": "Query.wishlist",
+  "role": "query",
+  "rootType": "Query",
+  "field": "wishlist",
+  "signature": "wishlist(cultureName: String, listId: String!): WishlistType",
+  "args": [
+    {
+      "name": "cultureName",
+      "type": "String",
+      "required": false,
+      "description": "Culture name (\"en-Us\")"
+    },
+    {
+      "name": "listId",
+      "type": "String!",
+      "required": true,
+      "description": "List Id"
+    }
+  ],
+  "returns": "WishlistType",
+  "referencedTypes": [
+    {
+      "name": "WishlistType",
+      "kind": "OBJECT"
+    }
+  ]
+}

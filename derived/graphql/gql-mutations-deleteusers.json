@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.deleteUsers",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "deleteUsers",
+  "signature": "deleteUsers(command: InputDeleteUserType!): IdentityResultType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputDeleteUserType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "IdentityResultType",
+  "referencedTypes": [
+    {
+      "name": "IdentityResultType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputDeleteUserType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "key": "/api/white-labeling",
+  "modules": [
+    "VirtoCommerce.WhiteLabeling"
+  ],
+  "tags": [
+    "White Labeling"
+  ],
+  "operations": [
+    {
+      "coordinate": "GET /api/white-labeling/{id}",
+      "verb": "GET",
+      "route": "/api/white-labeling/{id}",
+      "operationId": "WhiteLabeling_Get",
+      "module": "VirtoCommerce.WhiteLabeling",
+      "tag": "White Labeling",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "WhiteLabelingSetting"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/white-labeling/organization/{organizationId}",
+      "verb": "GET",
+      "route": "/api/white-labeling/organization/{organizationId}",
+      "operationId": "WhiteLabeling_GetByOrganizationId",
+      "module": "VirtoCommerce.WhiteLabeling",
+      "tag": "White Labeling",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "organizationId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "WhiteLabelingSetting"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/white-labeling/store/{storeId}",
+      "verb": "GET",
+      "route": "/api/white-labeling/store/{storeId}",
+      "operationId": "WhiteLabeling_GetByStoreId",
+      "module": "VirtoCommerce.WhiteLabeling",
+      "tag": "White Labeling",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "WhiteLabelingSetting"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/white-labeling",
+      "verb": "POST",
+      "route": "/api/white-labeling",
+      "operationId": "WhiteLabeling_Create",
+      "module": "VirtoCommerce.WhiteLabeling",
+      "tag": "White Labeling",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "WhiteLabelingSetting"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/white-labeling",
+      "verb": "PUT",
+      "route": "/api/white-labeling",
+      "operationId": "WhiteLabeling_Update",
+      "module": "VirtoCommerce.WhiteLabeling",
+      "tag": "White Labeling",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

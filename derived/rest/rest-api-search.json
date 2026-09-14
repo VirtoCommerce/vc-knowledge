@@ -1,0 +1,280 @@
+{
+  "key": "/api/search",
+  "modules": [
+    "VirtoCommerce.Search"
+  ],
+  "tags": [
+    "Search Core"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/search/index-field-settings",
+      "verb": "DELETE",
+      "route": "/api/search/index-field-settings",
+      "operationId": "IndexFieldSetting_Delete",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/search/field-values",
+      "verb": "GET",
+      "route": "/api/search/field-values",
+      "operationId": "IndexFieldSetting_GetFacetValues",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "documentType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "fieldName",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/search/index-field-settings/{id}",
+      "verb": "GET",
+      "route": "/api/search/index-field-settings/{id}",
+      "operationId": "IndexFieldSetting_Get",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "responseGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "IndexFieldSetting"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/search/indexes",
+      "verb": "GET",
+      "route": "/api/search/indexes",
+      "operationId": "SearchIndexationModule_GetIndicesAsync",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "IndexState[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/search/indexes/all",
+      "verb": "GET",
+      "route": "/api/search/indexes/all",
+      "operationId": "SearchIndexationModule_GetAllIndicesAsync",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "IndexState[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/search/indexes/index/{documentType}/{documentId}",
+      "verb": "GET",
+      "route": "/api/search/indexes/index/{documentType}/{documentId}",
+      "operationId": "SearchIndexationModule_GetDocumentIndexAsync",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": "Get search index for specified document type and document id.",
+      "parameters": [
+        {
+          "name": "documentId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "documentType",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "IndexDocument[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/search/indexes/swapIndexSupported",
+      "verb": "GET",
+      "route": "/api/search/indexes/swapIndexSupported",
+      "operationId": "SearchIndexationModule_GetSwapIndexSupported",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/search/indexes/tasks/{taskId}/cancel",
+      "verb": "GET",
+      "route": "/api/search/indexes/tasks/{taskId}/cancel",
+      "operationId": "SearchIndexationModule_CancelIndexationProcess",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "taskId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/search/index-field-settings",
+      "verb": "POST",
+      "route": "/api/search/index-field-settings",
+      "operationId": "IndexFieldSetting_Save",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "IndexFieldSetting"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/search/index-field-settings/search",
+      "verb": "POST",
+      "route": "/api/search/index-field-settings/search",
+      "operationId": "IndexFieldSetting_Search",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "IndexFieldSettingSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/search/indexes/index",
+      "verb": "POST",
+      "route": "/api/search/indexes/index",
+      "operationId": "SearchIndexationModule_IndexDocuments",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": "Run indexation process for specified options",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "IndexingOptions[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "IndexProgressPushNotification"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/search/indexes/swapIndex",
+      "verb": "POST",
+      "route": "/api/search/indexes/swapIndex",
+      "operationId": "SearchIndexationModule_SwapIndexAsync",
+      "module": "VirtoCommerce.Search",
+      "tag": "Search Core",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

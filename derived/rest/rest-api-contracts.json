@@ -1,0 +1,299 @@
+{
+  "key": "/api/contracts",
+  "modules": [
+    "VirtoCommerce.Contracts"
+  ],
+  "tags": [
+    "Contracts"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/contracts",
+      "verb": "DELETE",
+      "route": "/api/contracts",
+      "operationId": "Contract_DeleteContract",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/contracts/{id}",
+      "verb": "GET",
+      "route": "/api/contracts/{id}",
+      "operationId": "Contract_GetContractById",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Contract"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contracts",
+      "verb": "POST",
+      "route": "/api/contracts",
+      "operationId": "Contract_CreateContract",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Contract"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contracts/members/add",
+      "verb": "POST",
+      "route": "/api/contracts/members/add",
+      "operationId": "ContractMembers_AddContractMembers",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contracts/members/delete",
+      "verb": "POST",
+      "route": "/api/contracts/members/delete",
+      "operationId": "ContractMembers_DeleteContractMembers",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contracts/members/search",
+      "verb": "POST",
+      "route": "/api/contracts/members/search",
+      "operationId": "ContractMembers_SearchContractMembers",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ContractMembersSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contracts/prices/linkpricelist",
+      "verb": "POST",
+      "route": "/api/contracts/prices/linkpricelist",
+      "operationId": "ContractPrices_LinkPricelist",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Contract"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contracts/prices/products",
+      "verb": "POST",
+      "route": "/api/contracts/prices/products",
+      "operationId": "ContractPrices_SaveContractPrice",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contracts/prices/restore",
+      "verb": "POST",
+      "route": "/api/contracts/prices/restore",
+      "operationId": "ContractPrices_RestoreContractPrices",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contracts/prices/search",
+      "verb": "POST",
+      "route": "/api/contracts/prices/search",
+      "operationId": "ContractPrices_SearchContractGroupedPrices",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "MergedPriceGroupSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contracts/prices/search/products",
+      "verb": "POST",
+      "route": "/api/contracts/prices/search/products",
+      "operationId": "ContractPrices_SearchContractProductPrices",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "MergedPriceSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contracts/search",
+      "verb": "POST",
+      "route": "/api/contracts/search",
+      "operationId": "Contract_SearchContracts",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ContractSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/contracts",
+      "verb": "PUT",
+      "route": "/api/contracts",
+      "operationId": "Contract_UpdateContract",
+      "module": "VirtoCommerce.Contracts",
+      "tag": "Contracts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "coordinate": "Query.slugInfo",
+  "role": "query",
+  "rootType": "Query",
+  "field": "slugInfo",
+  "signature": "slugInfo(cultureName: String, permalink: String, slug: String, storeId: String, userId: String): SlugInfoResponseType",
+  "args": [
+    {
+      "name": "cultureName",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "permalink",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "slug",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "required": false,
+      "description": null
+    }
+  ],
+  "returns": "SlugInfoResponseType",
+  "referencedTypes": [
+    {
+      "name": "SlugInfoResponseType",
+      "kind": "OBJECT"
+    }
+  ]
+}

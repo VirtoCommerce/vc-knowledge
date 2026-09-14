@@ -1,0 +1,11 @@
+{
+  "name": "ProductSuggestionsQueryResponseType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "suggestions",
+      "type": "[String]",
+      "description": null
+    }
+  ]
+}

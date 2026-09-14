@@ -1,0 +1,26 @@
+{
+  "name": "PropertyDictionaryItem",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "colorCode",
+      "type": "String!",
+      "description": "Color code in CSS format."
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "The unique ID of the property dictionary item."
+    },
+    {
+      "name": "sortOrder",
+      "type": "Int!",
+      "description": "Value order."
+    },
+    {
+      "name": "value",
+      "type": "String",
+      "description": "Value alias."
+    }
+  ]
+}

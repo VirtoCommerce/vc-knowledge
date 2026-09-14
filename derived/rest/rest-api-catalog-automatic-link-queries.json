@@ -1,0 +1,129 @@
+{
+  "key": "/api/catalog/automatic-link-queries",
+  "modules": [
+    "VirtoCommerce.Catalog"
+  ],
+  "tags": [
+    "Catalog"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/catalog/automatic-link-queries",
+      "verb": "DELETE",
+      "route": "/api/catalog/automatic-link-queries",
+      "operationId": "AutomaticLinkQuery_Delete",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalog/automatic-link-queries/{id}",
+      "verb": "GET",
+      "route": "/api/catalog/automatic-link-queries/{id}",
+      "operationId": "AutomaticLinkQuery_Get",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "responseGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "AutomaticLinkQuery"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/automatic-link-queries",
+      "verb": "POST",
+      "route": "/api/catalog/automatic-link-queries",
+      "operationId": "AutomaticLinkQuery_Create",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "AutomaticLinkQuery"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/automatic-link-queries/search",
+      "verb": "POST",
+      "route": "/api/catalog/automatic-link-queries/search",
+      "operationId": "AutomaticLinkQuery_Search",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "AutomaticLinkQuerySearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/catalog/automatic-link-queries",
+      "verb": "PUT",
+      "route": "/api/catalog/automatic-link-queries",
+      "operationId": "AutomaticLinkQuery_Update",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "AutomaticLinkQuery"
+      },
+      "deprecated": false
+    }
+  ]
+}

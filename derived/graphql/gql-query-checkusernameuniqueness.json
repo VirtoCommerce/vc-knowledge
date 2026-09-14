@@ -1,0 +1,17 @@
+{
+  "coordinate": "Query.checkUsernameUniqueness",
+  "role": "query",
+  "rootType": "Query",
+  "field": "checkUsernameUniqueness",
+  "signature": "checkUsernameUniqueness(username: String!): Boolean",
+  "args": [
+    {
+      "name": "username",
+      "type": "String!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": []
+}

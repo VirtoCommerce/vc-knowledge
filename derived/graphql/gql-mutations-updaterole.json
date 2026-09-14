@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.updateRole",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "updateRole",
+  "signature": "updateRole(command: InputUpdateRoleType!): IdentityResultType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputUpdateRoleType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "IdentityResultType",
+  "referencedTypes": [
+    {
+      "name": "IdentityResultType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputUpdateRoleType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

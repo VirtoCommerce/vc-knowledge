@@ -1,0 +1,29 @@
+{
+  "coordinate": "Query.canLeaveFeedback",
+  "role": "query",
+  "rootType": "Query",
+  "field": "canLeaveFeedback",
+  "signature": "canLeaveFeedback(entityId: String!, entityType: String!, storeId: String!): Boolean",
+  "args": [
+    {
+      "name": "entityId",
+      "type": "String!",
+      "required": true,
+      "description": null
+    },
+    {
+      "name": "entityType",
+      "type": "String!",
+      "required": true,
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": []
+}

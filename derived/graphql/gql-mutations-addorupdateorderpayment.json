@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.addOrUpdateOrderPayment",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "addOrUpdateOrderPayment",
+  "signature": "addOrUpdateOrderPayment(command: InputAddOrUpdateOrderPaymentType!): CustomerOrderType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputAddOrUpdateOrderPaymentType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CustomerOrderType",
+  "referencedTypes": [
+    {
+      "name": "CustomerOrderType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputAddOrUpdateOrderPaymentType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

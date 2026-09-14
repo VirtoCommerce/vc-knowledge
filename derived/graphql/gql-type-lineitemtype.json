@@ -1,0 +1,301 @@
+{
+  "name": "LineItemType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "catalogId",
+      "type": "String!",
+      "description": "Catalog ID value"
+    },
+    {
+      "name": "categoryId",
+      "type": "String",
+      "description": "Category ID value"
+    },
+    {
+      "name": "configurationItems",
+      "type": "[CartConfigurationItemType]",
+      "description": "Configuration items for configurable product"
+    },
+    {
+      "name": "createdDate",
+      "type": "DateTime!",
+      "description": "Line item create date"
+    },
+    {
+      "name": "currencyCode",
+      "type": "String",
+      "description": "Line item currency code"
+    },
+    {
+      "name": "discountAmount",
+      "type": "MoneyType!",
+      "description": "Discount amount"
+    },
+    {
+      "name": "discountAmountWithTax",
+      "type": "MoneyType!",
+      "description": "Discount amount with tax"
+    },
+    {
+      "name": "discounts",
+      "type": "[DiscountType!]!",
+      "description": "Discounts"
+    },
+    {
+      "name": "discountTotal",
+      "type": "MoneyType!",
+      "description": "Total discount"
+    },
+    {
+      "name": "discountTotalWithTax",
+      "type": "MoneyType!",
+      "description": "Total discount with tax"
+    },
+    {
+      "name": "dynamicProperties",
+      "type": "[DynamicPropertyValueType]",
+      "description": "Cart line item dynamic property values"
+    },
+    {
+      "name": "extendedPrice",
+      "type": "MoneyType!",
+      "description": "Extended price"
+    },
+    {
+      "name": "extendedPriceWithTax",
+      "type": "MoneyType!",
+      "description": "Extended price with tax"
+    },
+    {
+      "name": "fulfillmentCenterId",
+      "type": "String",
+      "description": "Line item fulfillment center ID value"
+    },
+    {
+      "name": "fulfillmentCenterName",
+      "type": "String",
+      "description": "Line item fulfillment center name value"
+    },
+    {
+      "name": "height",
+      "type": "Decimal",
+      "description": "Height value"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Line item ID"
+    },
+    {
+      "name": "imageUrl",
+      "type": "String",
+      "description": "Value of line item image absolute URL"
+    },
+    {
+      "name": "inStockQuantity",
+      "type": "Int!",
+      "description": "In stock quantity"
+    },
+    {
+      "name": "isGift",
+      "type": "Boolean!",
+      "description": "flag of line item is a gift"
+    },
+    {
+      "name": "isReadOnly",
+      "type": "Boolean!",
+      "description": "Shows whether this is read-only"
+    },
+    {
+      "name": "isReccuring",
+      "type": "Boolean!",
+      "description": "Shows whether the line item is recurring"
+    },
+    {
+      "name": "isValid",
+      "type": "Boolean!",
+      "description": "Shows whether this is valid"
+    },
+    {
+      "name": "languageCode",
+      "type": "String",
+      "description": "Culture name in the ISO 3166-1 alpha-3 format"
+    },
+    {
+      "name": "length",
+      "type": "Decimal",
+      "description": "Length value"
+    },
+    {
+      "name": "listPrice",
+      "type": "MoneyType!",
+      "description": "List price"
+    },
+    {
+      "name": "listPriceWithTax",
+      "type": "MoneyType!",
+      "description": "List price with tax"
+    },
+    {
+      "name": "listTotal",
+      "type": "MoneyType!",
+      "description": "List total"
+    },
+    {
+      "name": "listTotalWithTax",
+      "type": "MoneyType!",
+      "description": "List total with tax"
+    },
+    {
+      "name": "measureUnit",
+      "type": "String",
+      "description": "Measurement unit value"
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "Line item name value"
+    },
+    {
+      "name": "note",
+      "type": "String",
+      "description": "Line item comment"
+    },
+    {
+      "name": "objectType",
+      "type": "String!",
+      "description": "Line item quantity value"
+    },
+    {
+      "name": "placedPrice",
+      "type": "MoneyType!",
+      "description": "Placed price"
+    },
+    {
+      "name": "placedPriceWithTax",
+      "type": "MoneyType!",
+      "description": "Placed price with tax"
+    },
+    {
+      "name": "product",
+      "type": "Product",
+      "description": null
+    },
+    {
+      "name": "productId",
+      "type": "String!",
+      "description": "Product ID value"
+    },
+    {
+      "name": "productOuterId",
+      "type": "String",
+      "description": "Product outer Id"
+    },
+    {
+      "name": "productType",
+      "type": "String",
+      "description": "Product type: Physical, Digital, or Subscription"
+    },
+    {
+      "name": "quantity",
+      "type": "Int!",
+      "description": "Line item quantity value"
+    },
+    {
+      "name": "requiredShipping",
+      "type": "Boolean!",
+      "description": "Requirement for line item shipping"
+    },
+    {
+      "name": "salePrice",
+      "type": "MoneyType!",
+      "description": "Sale price"
+    },
+    {
+      "name": "salePriceWithTax",
+      "type": "MoneyType!",
+      "description": "Sale price with tax"
+    },
+    {
+      "name": "selectedForCheckout",
+      "type": "Boolean!",
+      "description": "Shows whether the line item is selected for buying"
+    },
+    {
+      "name": "shipmentMethodCode",
+      "type": "String",
+      "description": "Line item shipping method code value"
+    },
+    {
+      "name": "showPlacedPrice",
+      "type": "Boolean!",
+      "description": "Indicates whether the PlacedPrice should be visible to the customer"
+    },
+    {
+      "name": "sku",
+      "type": "String!",
+      "description": "Product SKU value"
+    },
+    {
+      "name": "taxDetails",
+      "type": "[TaxDetailType!]!",
+      "description": "Tax details"
+    },
+    {
+      "name": "taxPercentRate",
+      "type": "Decimal!",
+      "description": "Total shipping tax amount value"
+    },
+    {
+      "name": "taxTotal",
+      "type": "MoneyType!",
+      "description": "Tax total"
+    },
+    {
+      "name": "taxType",
+      "type": "String",
+      "description": "Shipping tax type value"
+    },
+    {
+      "name": "thumbnailImageUrl",
+      "type": "String",
+      "description": "Value of line item thumbnail image absolute URL"
+    },
+    {
+      "name": "validationErrors",
+      "type": "[ValidationErrorType!]!",
+      "description": "Validation errors"
+    },
+    {
+      "name": "vendor",
+      "type": "CommonVendor",
+      "description": null
+    },
+    {
+      "name": "volumetricWeight",
+      "type": "Decimal",
+      "description": "Volumetric weight value"
+    },
+    {
+      "name": "warehouseLocation",
+      "type": "String",
+      "description": "Warehouse location"
+    },
+    {
+      "name": "weight",
+      "type": "Decimal",
+      "description": "Shopping cart weight value"
+    },
+    {
+      "name": "weightUnit",
+      "type": "String",
+      "description": "Weight unit value"
+    },
+    {
+      "name": "width",
+      "type": "Decimal",
+      "description": "Width value"
+    }
+  ]
+}

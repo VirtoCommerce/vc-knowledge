@@ -1,0 +1,61 @@
+{
+  "name": "DynamicPropertyType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "dictionaryItems",
+      "type": "DictionaryItemConnection",
+      "description": null
+    },
+    {
+      "name": "displayOrder",
+      "type": "Int",
+      "description": "The order for the dynamic property to display"
+    },
+    {
+      "name": "dynamicPropertyValueType",
+      "type": "DynamicPropertyValueTypes!",
+      "description": "Value type"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Id"
+    },
+    {
+      "name": "isArray",
+      "type": "Boolean!",
+      "description": "Is dynamic property value an array"
+    },
+    {
+      "name": "isDictionary",
+      "type": "Boolean!",
+      "description": "Is dynamic property value a dictionary"
+    },
+    {
+      "name": "isMultilingual",
+      "type": "Boolean!",
+      "description": "Is dynamic property value multilingual"
+    },
+    {
+      "name": "isRequired",
+      "type": "Boolean!",
+      "description": "Is dynamic property value required"
+    },
+    {
+      "name": "label",
+      "type": "String",
+      "description": "Localized property name"
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "objectType",
+      "type": "String!",
+      "description": "Object type"
+    }
+  ]
+}

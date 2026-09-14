@@ -1,0 +1,11 @@
+{
+  "name": "ConfigurationQueryResponseType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "configurationSections",
+      "type": "[ConfigurationSectionType]",
+      "description": null
+    }
+  ]
+}

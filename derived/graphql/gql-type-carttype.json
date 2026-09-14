@@ -1,0 +1,321 @@
+{
+  "name": "CartType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "addresses",
+      "type": "[CartAddressType!]!",
+      "description": "Addresses"
+    },
+    {
+      "name": "availableGifts",
+      "type": "[GiftItemType!]!",
+      "description": "Available Gifts"
+    },
+    {
+      "name": "availablePaymentMethods",
+      "type": "[PaymentMethodType!]!",
+      "description": "Available payment methods"
+    },
+    {
+      "name": "availableShippingMethods",
+      "type": "[ShippingMethodType!]!",
+      "description": null
+    },
+    {
+      "name": "cartTotals",
+      "type": "[CartTotalType]",
+      "description": "Cart totals"
+    },
+    {
+      "name": "channelId",
+      "type": "String",
+      "description": "Shopping cart channel ID"
+    },
+    {
+      "name": "checkoutId",
+      "type": "String!",
+      "description": "Cart checkout ID"
+    },
+    {
+      "name": "comment",
+      "type": "String",
+      "description": "Shopping cart text comment"
+    },
+    {
+      "name": "coupons",
+      "type": "[CouponType!]!",
+      "description": "Coupons"
+    },
+    {
+      "name": "currency",
+      "type": "CurrencyType!",
+      "description": "Currency"
+    },
+    {
+      "name": "customerId",
+      "type": "String!",
+      "description": "Shopping cart user ID"
+    },
+    {
+      "name": "customerName",
+      "type": "String",
+      "description": "Shopping cart user name"
+    },
+    {
+      "name": "discounts",
+      "type": "[DiscountType!]!",
+      "description": "Discounts"
+    },
+    {
+      "name": "discountTotal",
+      "type": "MoneyType!",
+      "description": "Total discount"
+    },
+    {
+      "name": "discountTotalWithTax",
+      "type": "MoneyType!",
+      "description": "Total discount with tax"
+    },
+    {
+      "name": "dynamicProperties",
+      "type": "[DynamicPropertyValueType!]!",
+      "description": "Cart dynamic property values"
+    },
+    {
+      "name": "extendedPriceTotal",
+      "type": "MoneyType!",
+      "description": "Total extended price"
+    },
+    {
+      "name": "extendedPriceTotalWithTax",
+      "type": "MoneyType!",
+      "description": "Total extended price with tax"
+    },
+    {
+      "name": "fee",
+      "type": "MoneyType!",
+      "description": "Shopping cart fee"
+    },
+    {
+      "name": "feeTotal",
+      "type": "MoneyType!",
+      "description": "Total fee"
+    },
+    {
+      "name": "feeTotalWithTax",
+      "type": "MoneyType!",
+      "description": "Total fee with tax"
+    },
+    {
+      "name": "feeWithTax",
+      "type": "MoneyType!",
+      "description": "Shopping cart fee with tax"
+    },
+    {
+      "name": "gifts",
+      "type": "[GiftItemType!]!",
+      "description": "Gifts"
+    },
+    {
+      "name": "handlingTotal",
+      "type": "MoneyType!",
+      "description": "Total handling"
+    },
+    {
+      "name": "handlingTotalWithTax",
+      "type": "MoneyType!",
+      "description": "Total handling with tax"
+    },
+    {
+      "name": "hasPhysicalProducts",
+      "type": "Boolean",
+      "description": "Has physical products"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Shopping cart ID"
+    },
+    {
+      "name": "isAnonymous",
+      "type": "Boolean!",
+      "description": "Displays whether the shopping cart is anonymous"
+    },
+    {
+      "name": "isRecuring",
+      "type": "Boolean",
+      "description": "Displays whether the shopping cart is recurring"
+    },
+    {
+      "name": "items",
+      "type": "[LineItemType!]!",
+      "description": "Items"
+    },
+    {
+      "name": "itemsCount",
+      "type": "Int!",
+      "description": "Item count"
+    },
+    {
+      "name": "itemsQuantity",
+      "type": "Int!",
+      "description": "Quantity of items"
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "Shopping cart name"
+    },
+    {
+      "name": "organizationId",
+      "type": "String",
+      "description": "Shopping cart organization ID"
+    },
+    {
+      "name": "organizationName",
+      "type": "String",
+      "description": "Shopping cart organization name"
+    },
+    {
+      "name": "paymentPrice",
+      "type": "MoneyType!",
+      "description": "Payment price"
+    },
+    {
+      "name": "paymentPriceWithTax",
+      "type": "MoneyType!",
+      "description": "Payment price with tax"
+    },
+    {
+      "name": "payments",
+      "type": "[PaymentType!]!",
+      "description": "Payments"
+    },
+    {
+      "name": "paymentTotal",
+      "type": "MoneyType!",
+      "description": "Total payment"
+    },
+    {
+      "name": "paymentTotalWithTax",
+      "type": "MoneyType!",
+      "description": "Total payment with tax"
+    },
+    {
+      "name": "purchaseOrderNumber",
+      "type": "String",
+      "description": "Purchase order number"
+    },
+    {
+      "name": "shipments",
+      "type": "[ShipmentType!]!",
+      "description": "Shipments"
+    },
+    {
+      "name": "shippingPrice",
+      "type": "MoneyType!",
+      "description": "Shipping price"
+    },
+    {
+      "name": "shippingPriceWithTax",
+      "type": "MoneyType!",
+      "description": "Shipping price with tax"
+    },
+    {
+      "name": "shippingTotal",
+      "type": "MoneyType!",
+      "description": "Total shipping"
+    },
+    {
+      "name": "shippingTotalWithTax",
+      "type": "MoneyType!",
+      "description": "Total shipping with tax"
+    },
+    {
+      "name": "status",
+      "type": "String",
+      "description": "Shopping cart status"
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "description": "Shopping cart store ID"
+    },
+    {
+      "name": "subTotal",
+      "type": "MoneyType!",
+      "description": "Shopping cart subtotal"
+    },
+    {
+      "name": "subTotalDiscount",
+      "type": "MoneyType!",
+      "description": "Subtotal discount"
+    },
+    {
+      "name": "subTotalDiscountWithTax",
+      "type": "MoneyType!",
+      "description": "Subtotal discount with tax"
+    },
+    {
+      "name": "subTotalWithTax",
+      "type": "MoneyType!",
+      "description": "Subtotal with tax"
+    },
+    {
+      "name": "taxDetails",
+      "type": "[TaxDetailType!]!",
+      "description": "Tax details"
+    },
+    {
+      "name": "taxPercentRate",
+      "type": "Decimal!",
+      "description": "Tax percentage"
+    },
+    {
+      "name": "taxTotal",
+      "type": "MoneyType!",
+      "description": "Total tax"
+    },
+    {
+      "name": "taxType",
+      "type": "String!",
+      "description": "Shipping tax type"
+    },
+    {
+      "name": "total",
+      "type": "MoneyType!",
+      "description": "Shopping cart total"
+    },
+    {
+      "name": "type",
+      "type": "String",
+      "description": "Shopping cart type"
+    },
+    {
+      "name": "validationErrors",
+      "type": "[ValidationErrorType!]!",
+      "description": "A set of errors in case the cart is invalid"
+    },
+    {
+      "name": "volumetricWeight",
+      "type": "Decimal",
+      "description": "Shopping cart volumetric weight value"
+    },
+    {
+      "name": "warnings",
+      "type": "[ValidationErrorType!]!",
+      "description": "A set of temporary warnings for a cart user"
+    },
+    {
+      "name": "weight",
+      "type": "Decimal",
+      "description": "Shopping cart weight value"
+    },
+    {
+      "name": "weightUnit",
+      "type": "String",
+      "description": "Shopping cart weight unit value"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "key": "/api/dynamicassociations",
+  "modules": [
+    "VirtoCommerce.DynamicAssociationsModule"
+  ],
+  "tags": [
+    "Dynamic Associations"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/dynamicassociations",
+      "verb": "DELETE",
+      "route": "/api/dynamicassociations",
+      "operationId": "Associations_DeleteAssociation",
+      "module": "VirtoCommerce.DynamicAssociationsModule",
+      "tag": "Dynamic Associations",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/dynamicassociations/{id}",
+      "verb": "GET",
+      "route": "/api/dynamicassociations/{id}",
+      "operationId": "Associations_GetAssociationById",
+      "module": "VirtoCommerce.DynamicAssociationsModule",
+      "tag": "Dynamic Associations",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Association"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/dynamicassociations/new",
+      "verb": "GET",
+      "route": "/api/dynamicassociations/new",
+      "operationId": "Associations_GetNewAssociation",
+      "module": "VirtoCommerce.DynamicAssociationsModule",
+      "tag": "Dynamic Associations",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Association"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/dynamicassociations",
+      "verb": "POST",
+      "route": "/api/dynamicassociations",
+      "operationId": "Associations_SaveAssociations",
+      "module": "VirtoCommerce.DynamicAssociationsModule",
+      "tag": "Dynamic Associations",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Association[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Association[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/dynamicassociations/evaluate",
+      "verb": "POST",
+      "route": "/api/dynamicassociations/evaluate",
+      "operationId": "Associations_EvaluateDynamicAssociations",
+      "module": "VirtoCommerce.DynamicAssociationsModule",
+      "tag": "Dynamic Associations",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "string[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/dynamicassociations/preview",
+      "verb": "POST",
+      "route": "/api/dynamicassociations/preview",
+      "operationId": "Associations_PreviewDynamicAssociations",
+      "module": "VirtoCommerce.DynamicAssociationsModule",
+      "tag": "Dynamic Associations",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "string[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/dynamicassociations/search",
+      "verb": "POST",
+      "route": "/api/dynamicassociations/search",
+      "operationId": "Associations_SearchAssociation",
+      "module": "VirtoCommerce.DynamicAssociationsModule",
+      "tag": "Dynamic Associations",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "AssociationSearchResult"
+      },
+      "deprecated": false
+    }
+  ]
+}

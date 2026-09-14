@@ -1,0 +1,58 @@
+{
+  "coordinate": "Query.cart",
+  "role": "query",
+  "rootType": "Query",
+  "field": "cart",
+  "signature": "cart(cartId: String, cartName: String, cartType: String, cultureName: String, currencyCode: String!, storeId: String!, userId: String): CartType",
+  "args": [
+    {
+      "name": "cartId",
+      "type": "String",
+      "required": false,
+      "description": null
+    },
+    {
+      "name": "cartName",
+      "type": "String",
+      "required": false,
+      "description": "Cart name"
+    },
+    {
+      "name": "cartType",
+      "type": "String",
+      "required": false,
+      "description": "Cart type"
+    },
+    {
+      "name": "cultureName",
+      "type": "String",
+      "required": false,
+      "description": "Culture name (\"en-Us\")"
+    },
+    {
+      "name": "currencyCode",
+      "type": "String!",
+      "required": true,
+      "description": "Currency code (\"USD\")"
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "required": true,
+      "description": "Store Id"
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "required": false,
+      "description": "User Id"
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Rating",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "reviewCount",
+      "type": "Int!",
+      "description": "Total count of customer reviews"
+    },
+    {
+      "name": "value",
+      "type": "Decimal!",
+      "description": "Average rating"
+    }
+  ]
+}

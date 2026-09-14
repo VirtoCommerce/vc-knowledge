@@ -1,0 +1,31 @@
+{
+  "name": "CartTotalType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "discountTotal",
+      "type": "MoneyType!",
+      "description": "Total discount"
+    },
+    {
+      "name": "isDefaultTotalCurrency",
+      "type": "Boolean!",
+      "description": "Is current total in default total currency"
+    },
+    {
+      "name": "subTotal",
+      "type": "MoneyType!",
+      "description": "Cart subtotal"
+    },
+    {
+      "name": "taxTotal",
+      "type": "MoneyType!",
+      "description": "Total tax"
+    },
+    {
+      "name": "total",
+      "type": "MoneyType!",
+      "description": "Cart total"
+    }
+  ]
+}

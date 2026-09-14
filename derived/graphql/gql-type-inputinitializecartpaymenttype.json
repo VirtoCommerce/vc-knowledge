@@ -1,0 +1,16 @@
+{
+  "name": "InputInitializeCartPaymentType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "cartId",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "paymentId",
+      "type": "String!",
+      "description": "Payment Id"
+    }
+  ]
+}

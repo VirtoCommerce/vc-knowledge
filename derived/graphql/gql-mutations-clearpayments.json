@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.clearPayments",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "clearPayments",
+  "signature": "clearPayments(command: InputClearPaymentsType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputClearPaymentsType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputClearPaymentsType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

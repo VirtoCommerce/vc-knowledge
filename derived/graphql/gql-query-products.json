@@ -1,0 +1,124 @@
+{
+  "coordinate": "Query.products",
+  "role": "query",
+  "rootType": "Query",
+  "field": "products",
+  "signature": "products(after: String, cultureName: String, currencyCode: String, custom: String, facet: String, filter: String, first: Int, fuzzy: Boolean, fuzzyLevel: Int, preserveUserQuery: Boolean, previousOutline: String, productIds: [String], query: String, selectedAddress: String, selectedAddressId: String, sort: String, storeId: String!, userId: String): ProductConnection",
+  "args": [
+    {
+      "name": "after",
+      "type": "String",
+      "required": false,
+      "description": "Only return edges after the specified cursor."
+    },
+    {
+      "name": "cultureName",
+      "type": "String",
+      "required": false,
+      "description": "The culture name for cart context product"
+    },
+    {
+      "name": "currencyCode",
+      "type": "String",
+      "required": false,
+      "description": "The currency for which all prices data will be returned"
+    },
+    {
+      "name": "custom",
+      "type": "String",
+      "required": false,
+      "description": "Can be used for custom query parameters"
+    },
+    {
+      "name": "facet",
+      "type": "String",
+      "required": false,
+      "description": "Facets calculate statistical counts to aid in faceted navigation."
+    },
+    {
+      "name": "filter",
+      "type": "String",
+      "required": false,
+      "description": "This parameter applies a filter to the query results"
+    },
+    {
+      "name": "first",
+      "type": "Int",
+      "required": false,
+      "description": "Specifies the maximum number of edges to return, starting after the cursor specified by 'after', or the first number of edges if 'after' is not specified."
+    },
+    {
+      "name": "fuzzy",
+      "type": "Boolean",
+      "required": false,
+      "description": "When the fuzzy query parameter is set to true the search endpoint will also return products that contain slight differences to the search text."
+    },
+    {
+      "name": "fuzzyLevel",
+      "type": "Int",
+      "required": false,
+      "description": "The fuzziness level is quantified in terms of the Damerau-Levenshtein distance, this distance being the number of operations needed to transform one word into another."
+    },
+    {
+      "name": "preserveUserQuery",
+      "type": "Boolean",
+      "required": false,
+      "description": "When true, the search query and filters will not be modified by the application"
+    },
+    {
+      "name": "previousOutline",
+      "type": "String",
+      "required": false,
+      "description": "Previous outline"
+    },
+    {
+      "name": "productIds",
+      "type": "[String]",
+      "required": false,
+      "description": "Product Ids"
+    },
+    {
+      "name": "query",
+      "type": "String",
+      "required": false,
+      "description": "The query parameter performs the full-text search"
+    },
+    {
+      "name": "selectedAddress",
+      "type": "String",
+      "required": false,
+      "description": "The shipping address to which the products are to be delivered"
+    },
+    {
+      "name": "selectedAddressId",
+      "type": "String",
+      "required": false,
+      "description": "Id of selected shipping address"
+    },
+    {
+      "name": "sort",
+      "type": "String",
+      "required": false,
+      "description": "The sort expression"
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "required": true,
+      "description": "The store id where products are searched"
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "required": false,
+      "description": "The customer id for search result impersonation"
+    }
+  ],
+  "returns": "ProductConnection",
+  "referencedTypes": [
+    {
+      "name": "ProductConnection",
+      "kind": "OBJECT"
+    }
+  ]
+}

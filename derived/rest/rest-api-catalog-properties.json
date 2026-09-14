@@ -1,0 +1,181 @@
+{
+  "key": "/api/catalog/properties",
+  "modules": [
+    "VirtoCommerce.Catalog"
+  ],
+  "tags": [
+    "Catalog"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/catalog/properties",
+      "verb": "DELETE",
+      "route": "/api/catalog/properties",
+      "operationId": "CatalogModuleProperties_DeleteProperty",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Deletes property by id.",
+      "parameters": [
+        {
+          "name": "doDeleteValues",
+          "in": "query",
+          "required": false,
+          "type": "boolean"
+        },
+        {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalog/{catalogId}/properties/getnew",
+      "verb": "GET",
+      "route": "/api/catalog/{catalogId}/properties/getnew",
+      "operationId": "CatalogModuleProperties_GetNewCatalogProperty",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Gets the template for a new catalog property.",
+      "parameters": [
+        {
+          "name": "catalogId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Property"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalog/properties/{propertyId}",
+      "verb": "GET",
+      "route": "/api/catalog/properties/{propertyId}",
+      "operationId": "CatalogModuleProperties_GetProperty",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Gets property metainformation by id.",
+      "parameters": [
+        {
+          "name": "propertyId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Property"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PATCH /api/catalog/properties/{id}",
+      "verb": "PATCH",
+      "route": "/api/catalog/properties/{id}",
+      "operationId": "CatalogModuleProperties_PatchProperty",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Partial update for the specified Property by id",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Operation[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/properties",
+      "verb": "POST",
+      "route": "/api/catalog/properties",
+      "operationId": "CatalogModuleProperties_SaveProperty",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Creates or updates the specified property.",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/properties/validate-name",
+      "verb": "POST",
+      "route": "/api/catalog/properties/validate-name",
+      "operationId": "CatalogModuleProperties_ValidateName",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": "Validate name for Product-level (unmanaged) property",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ValidationResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/properties/validate-property-name",
+      "verb": "POST",
+      "route": "/api/catalog/properties/validate-property-name",
+      "operationId": "CatalogModuleProperties_ValidatePropertyName",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ValidationResult"
+      },
+      "deprecated": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ErrorParameterType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "key",
+      "type": "String!",
+      "description": "key"
+    },
+    {
+      "name": "value",
+      "type": "String!",
+      "description": "Value"
+    }
+  ]
+}

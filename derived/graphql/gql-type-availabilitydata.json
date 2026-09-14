@@ -1,0 +1,46 @@
+{
+  "name": "AvailabilityData",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "availableQuantity",
+      "type": "Long!",
+      "description": "Available quantity"
+    },
+    {
+      "name": "inventories",
+      "type": "[InventoryInfo!]!",
+      "description": "Inventories"
+    },
+    {
+      "name": "isActive",
+      "type": "Boolean!",
+      "description": "Is active"
+    },
+    {
+      "name": "isAvailable",
+      "type": "Boolean!",
+      "description": "Is available"
+    },
+    {
+      "name": "isBuyable",
+      "type": "Boolean!",
+      "description": "Is buyable"
+    },
+    {
+      "name": "isEstimated",
+      "type": "Boolean!",
+      "description": "Is estimated"
+    },
+    {
+      "name": "isInStock",
+      "type": "Boolean!",
+      "description": "Is in stock"
+    },
+    {
+      "name": "isTrackInventory",
+      "type": "Boolean!",
+      "description": "Is track inventory"
+    }
+  ]
+}

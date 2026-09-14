@@ -1,0 +1,21 @@
+{
+  "name": "InputRegisterAccountType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "email",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "password",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "username",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

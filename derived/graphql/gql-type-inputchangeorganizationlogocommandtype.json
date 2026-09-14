@@ -1,0 +1,16 @@
+{
+  "name": "InputChangeOrganizationLogoCommandType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "logoUrl",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "organizationId",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

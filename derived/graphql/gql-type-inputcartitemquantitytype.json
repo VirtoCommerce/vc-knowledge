@@ -1,0 +1,16 @@
+{
+  "name": "InputCartItemQuantityType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "lineItemId",
+      "type": "String!",
+      "description": "Line item Id"
+    },
+    {
+      "name": "quantity",
+      "type": "Int!",
+      "description": "New quantity"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "coordinate": "Query.sharedWishlist",
+  "role": "query",
+  "rootType": "Query",
+  "field": "sharedWishlist",
+  "signature": "sharedWishlist(sharingKey: String!): WishlistType",
+  "args": [
+    {
+      "name": "sharingKey",
+      "type": "String!",
+      "required": true,
+      "description": "Sharing key"
+    }
+  ],
+  "returns": "WishlistType",
+  "referencedTypes": [
+    {
+      "name": "WishlistType",
+      "kind": "OBJECT"
+    }
+  ]
+}

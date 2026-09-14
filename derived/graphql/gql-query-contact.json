@@ -1,0 +1,28 @@
+{
+  "coordinate": "Query.contact",
+  "role": "query",
+  "rootType": "Query",
+  "field": "contact",
+  "signature": "contact(id: String!, userId: String): ContactType",
+  "args": [
+    {
+      "name": "id",
+      "type": "String!",
+      "required": true,
+      "description": null
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "required": false,
+      "description": null
+    }
+  ],
+  "returns": "ContactType",
+  "referencedTypes": [
+    {
+      "name": "ContactType",
+      "kind": "OBJECT"
+    }
+  ]
+}

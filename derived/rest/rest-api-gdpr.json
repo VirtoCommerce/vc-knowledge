@@ -1,0 +1,79 @@
+{
+  "key": "/api/gdpr",
+  "modules": [
+    "VirtoCommerce.GDPR"
+  ],
+  "tags": [
+    "GDPR"
+  ],
+  "operations": [
+    {
+      "coordinate": "GET /api/gdpr/contacts/anonymize/{id}",
+      "verb": "GET",
+      "route": "/api/gdpr/contacts/anonymize/{id}",
+      "operationId": "Gdpr_AnonymizeContact",
+      "module": "VirtoCommerce.GDPR",
+      "tag": "GDPR",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/gdpr/contacts/download/{id}",
+      "verb": "GET",
+      "route": "/api/gdpr/contacts/download/{id}",
+      "operationId": "Gdpr_DownloadContactInfo",
+      "module": "VirtoCommerce.GDPR",
+      "tag": "GDPR",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Customer"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/gdpr/contacts/search",
+      "verb": "POST",
+      "route": "/api/gdpr/contacts/search",
+      "operationId": "Gdpr_GetContactList",
+      "module": "VirtoCommerce.GDPR",
+      "tag": "GDPR",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Contact[]"
+      },
+      "deprecated": false
+    }
+  ]
+}

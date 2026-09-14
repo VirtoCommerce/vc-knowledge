@@ -1,0 +1,21 @@
+{
+  "name": "MenuLinkListType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "items",
+      "type": "[MenuLinkType!]!",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "Menu name"
+    },
+    {
+      "name": "outerId",
+      "type": "String",
+      "description": "Menu outer ID"
+    }
+  ]
+}

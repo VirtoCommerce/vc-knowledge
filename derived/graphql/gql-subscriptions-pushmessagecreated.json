@@ -1,0 +1,15 @@
+{
+  "coordinate": "Subscriptions.pushMessageCreated",
+  "role": "subscription",
+  "rootType": "Subscriptions",
+  "field": "pushMessageCreated",
+  "signature": "pushMessageCreated(): PushMessageType!",
+  "args": [],
+  "returns": "PushMessageType!",
+  "referencedTypes": [
+    {
+      "name": "PushMessageType",
+      "kind": "OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "key": "/api/page-builder-pages",
+  "modules": [
+    "VirtoCommerce.PageBuilderModule"
+  ],
+  "tags": [
+    "CMS Page Builder"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/page-builder-pages/grouped/{groupId}",
+      "verb": "DELETE",
+      "route": "/api/page-builder-pages/grouped/{groupId}",
+      "operationId": "PageBuilderPage_DeleteGroup",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/page-builder-pages/grouped/{groupId}",
+      "verb": "GET",
+      "route": "/api/page-builder-pages/grouped/{groupId}",
+      "operationId": "PageBuilderPage_GetGroup",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "responseGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "GroupedPageBuilderPage"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/page-builder-pages/grouped/{groupId}/content",
+      "verb": "GET",
+      "route": "/api/page-builder-pages/grouped/{groupId}/content",
+      "operationId": "PageBuilderPage_GetPageContent",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "draft",
+          "in": "query",
+          "required": false,
+          "type": "boolean"
+        },
+        {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/page-builder-pages/grouped/publish-status/{groupId}",
+      "verb": "GET",
+      "route": "/api/page-builder-pages/grouped/publish-status/{groupId}",
+      "operationId": "PageBuilderPage_PublishStatus",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "FilePublishStatus"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/page-builder-pages/languages",
+      "verb": "GET",
+      "route": "/api/page-builder-pages/languages",
+      "operationId": "PageBuilderPage_GetAvailableLanguages",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "storeId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/page-builder-pages/organizations/{id}",
+      "verb": "GET",
+      "route": "/api/page-builder-pages/organizations/{id}",
+      "operationId": "PageBuilderPage_GetOrganization",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Member"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/page-builder-pages/user-groups",
+      "verb": "GET",
+      "route": "/api/page-builder-pages/user-groups",
+      "operationId": "PageBuilderPage_GetUserGroups",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/page-builder-pages/grouped",
+      "verb": "POST",
+      "route": "/api/page-builder-pages/grouped",
+      "operationId": "PageBuilderPage_CreateGroup",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "GroupedPageBuilderPage"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/page-builder-pages/grouped/{groupId}/content",
+      "verb": "POST",
+      "route": "/api/page-builder-pages/grouped/{groupId}/content",
+      "operationId": "PageBuilderPage_SavePageContent",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/page-builder-pages/grouped/archive",
+      "verb": "POST",
+      "route": "/api/page-builder-pages/grouped/archive",
+      "operationId": "PageBuilderPage_ArchiveGroups",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/page-builder-pages/grouped/publishing/{groupId}",
+      "verb": "POST",
+      "route": "/api/page-builder-pages/grouped/publishing/{groupId}",
+      "operationId": "PageBuilderPage_PublishGroup",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "groupId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "publish",
+          "in": "query",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/page-builder-pages/organizations",
+      "verb": "POST",
+      "route": "/api/page-builder-pages/organizations",
+      "operationId": "PageBuilderPage_GetOrganizations",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "MemberSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/page-builder-pages/search",
+      "verb": "POST",
+      "route": "/api/page-builder-pages/search",
+      "operationId": "PageBuilderPage_SearchGroups",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "GroupedPageBuilderPageSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/page-builder-pages/grouped",
+      "verb": "PUT",
+      "route": "/api/page-builder-pages/grouped",
+      "operationId": "PageBuilderPage_UpdateGroup",
+      "module": "VirtoCommerce.PageBuilderModule",
+      "tag": "CMS Page Builder",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "GroupedPageBuilderPage"
+      },
+      "deprecated": false
+    }
+  ]
+}

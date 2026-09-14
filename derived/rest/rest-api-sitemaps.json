@@ -1,0 +1,325 @@
+{
+  "key": "/api/sitemaps",
+  "modules": [
+    "VirtoCommerce.Sitemaps"
+  ],
+  "tags": [
+    "Sitemap Generator"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/sitemaps",
+      "verb": "DELETE",
+      "route": "/api/sitemaps",
+      "operationId": "SitemapsModuleApi_DeleteSitemap",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "DELETE /api/sitemaps/items",
+      "verb": "DELETE",
+      "route": "/api/sitemaps/items",
+      "operationId": "SitemapsModuleApi_RemoveSitemapItems",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "itemIds",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/sitemaps/{id}",
+      "verb": "GET",
+      "route": "/api/sitemaps/{id}",
+      "operationId": "SitemapsModuleApi_GetSitemapById",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Sitemap"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/sitemaps/download",
+      "verb": "GET",
+      "route": "/api/sitemaps/download",
+      "operationId": "SitemapsModuleApi_DownloadSitemap",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "baseUrl",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "sitemapIds",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        },
+        {
+          "name": "storeId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "SitemapDownloadNotification"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/sitemaps/exportToStoreAssets",
+      "verb": "GET",
+      "route": "/api/sitemaps/exportToStoreAssets",
+      "operationId": "SitemapsModuleApi_ExportToStoreAssets",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "baseUrl",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "sitemapIds",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        },
+        {
+          "name": "storeId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "SitemapDownloadNotification"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/sitemaps/generate",
+      "verb": "GET",
+      "route": "/api/sitemaps/generate",
+      "operationId": "SitemapsModuleApi_GenerateSitemap",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "baseUrl",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "sitemapUrl",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "storeId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/sitemaps/schema",
+      "verb": "GET",
+      "route": "/api/sitemaps/schema",
+      "operationId": "SitemapsModuleApi_GetSitemapsSchema",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "storeId",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "string[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/sitemaps",
+      "verb": "POST",
+      "route": "/api/sitemaps",
+      "operationId": "SitemapsModuleApi_AddSitemap",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/sitemaps/{sitemapId}/items",
+      "verb": "POST",
+      "route": "/api/sitemaps/{sitemapId}/items",
+      "operationId": "SitemapsModuleApi_AddSitemapItems",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "sitemapId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "SitemapItem[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/sitemaps/items/search",
+      "verb": "POST",
+      "route": "/api/sitemaps/items/search",
+      "operationId": "SitemapsModuleApi_SearchSitemapItems",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SitemapItemsSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/sitemaps/search",
+      "verb": "POST",
+      "route": "/api/sitemaps/search",
+      "operationId": "SitemapsModuleApi_SearchSitemaps",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "SitemapSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/sitemaps",
+      "verb": "PUT",
+      "route": "/api/sitemaps",
+      "operationId": "SitemapsModuleApi_UpdateSitemap",
+      "module": "VirtoCommerce.Sitemaps",
+      "tag": "Sitemap Generator",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

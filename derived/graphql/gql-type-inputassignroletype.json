@@ -1,0 +1,26 @@
+{
+  "name": "InputAssignRoleType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "concurrencyStamp",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "permissions",
+      "type": "[InputAssignPermissionType]!",
+      "description": null
+    }
+  ]
+}

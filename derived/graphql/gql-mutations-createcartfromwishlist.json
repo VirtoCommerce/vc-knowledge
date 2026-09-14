@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.createCartFromWishlist",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "createCartFromWishlist",
+  "signature": "createCartFromWishlist(command: InputCreateCartFromWishlistType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputCreateCartFromWishlistType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputCreateCartFromWishlistType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

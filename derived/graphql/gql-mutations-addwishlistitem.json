@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.addWishlistItem",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "addWishlistItem",
+  "signature": "addWishlistItem(command: InputAddWishlistItemType!): WishlistType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputAddWishlistItemType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "WishlistType",
+  "referencedTypes": [
+    {
+      "name": "InputAddWishlistItemType",
+      "kind": "INPUT_OBJECT"
+    },
+    {
+      "name": "WishlistType",
+      "kind": "OBJECT"
+    }
+  ]
+}

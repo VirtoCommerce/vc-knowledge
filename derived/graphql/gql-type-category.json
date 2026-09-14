@@ -1,0 +1,106 @@
+{
+  "name": "Category",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "breadcrumbs",
+      "type": "[Breadcrumb!]!",
+      "description": "Breadcrumbs"
+    },
+    {
+      "name": "childCategories",
+      "type": "[Category!]!",
+      "description": null
+    },
+    {
+      "name": "code",
+      "type": "String!",
+      "description": "SKU of category."
+    },
+    {
+      "name": "description",
+      "type": "CategoryDescriptionType",
+      "description": null
+    },
+    {
+      "name": "descriptions",
+      "type": "[CategoryDescriptionType!]!",
+      "description": null
+    },
+    {
+      "name": "hasParent",
+      "type": "Boolean!",
+      "description": "Have a parent"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Id of category."
+    },
+    {
+      "name": "images",
+      "type": "[ImageType!]!",
+      "description": "Images"
+    },
+    {
+      "name": "imgSrc",
+      "type": "String",
+      "description": "The category image."
+    },
+    {
+      "name": "level",
+      "type": "Int!",
+      "description": "Level in hierarchy"
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "The name of the category."
+    },
+    {
+      "name": "outline",
+      "type": "String",
+      "description": "All parent categories ids relative to the requested catalog and concatenated with \\ . E.g. (1/21/344)"
+    },
+    {
+      "name": "outlines",
+      "type": "[OutlineType!]!",
+      "description": "Outlines"
+    },
+    {
+      "name": "parent",
+      "type": "Category",
+      "description": null
+    },
+    {
+      "name": "path",
+      "type": "String",
+      "description": "Category path in to the requested catalog  (all parent categories names concatenated. E.g. (parent1/parent2))"
+    },
+    {
+      "name": "priority",
+      "type": "Int!",
+      "description": "The category priority."
+    },
+    {
+      "name": "properties",
+      "type": "[Property!]!",
+      "description": null
+    },
+    {
+      "name": "relevanceScore",
+      "type": "Float",
+      "description": "Category relevance score"
+    },
+    {
+      "name": "seoInfo",
+      "type": "SeoInfo!",
+      "description": "Request related SEO info"
+    },
+    {
+      "name": "slug",
+      "type": "String",
+      "description": "Request related slug for category"
+    }
+  ]
+}

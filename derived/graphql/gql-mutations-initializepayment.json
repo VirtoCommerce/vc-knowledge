@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.initializePayment",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "initializePayment",
+  "signature": "initializePayment(command: InputInitializePaymentType!): InitializePaymentResultType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputInitializePaymentType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "InitializePaymentResultType",
+  "referencedTypes": [
+    {
+      "name": "InitializePaymentResultType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputInitializePaymentType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

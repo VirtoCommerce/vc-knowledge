@@ -1,0 +1,21 @@
+{
+  "name": "CommonVendor",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Vendor ID"
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "Vendor name"
+    },
+    {
+      "name": "rating",
+      "type": "Rating",
+      "description": "Vendor rating"
+    }
+  ]
+}

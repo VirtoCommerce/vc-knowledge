@@ -1,0 +1,22 @@
+{
+  "coordinate": "Query.pageDocument",
+  "role": "query",
+  "rootType": "Query",
+  "field": "pageDocument",
+  "signature": "pageDocument(id: String!): PageDocumentType",
+  "args": [
+    {
+      "name": "id",
+      "type": "String!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "PageDocumentType",
+  "referencedTypes": [
+    {
+      "name": "PageDocumentType",
+      "kind": "OBJECT"
+    }
+  ]
+}

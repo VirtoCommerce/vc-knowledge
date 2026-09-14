@@ -1,0 +1,56 @@
+{
+  "name": "InputOrderPaymentType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "amount",
+      "type": "OptionalDecimal",
+      "description": null
+    },
+    {
+      "name": "billingAddress",
+      "type": "InputOrderAddressType",
+      "description": null
+    },
+    {
+      "name": "comment",
+      "type": "OptionalString",
+      "description": "Text comment"
+    },
+    {
+      "name": "currency",
+      "type": "OptionalString",
+      "description": null
+    },
+    {
+      "name": "dynamicProperties",
+      "type": "[InputDynamicPropertyValueType]",
+      "description": "Dynamic properties"
+    },
+    {
+      "name": "id",
+      "type": "OptionalString",
+      "description": "Payment ID"
+    },
+    {
+      "name": "outerId",
+      "type": "OptionalString",
+      "description": "Payment outer ID value"
+    },
+    {
+      "name": "paymentGatewayCode",
+      "type": "OptionalString",
+      "description": "Payment gateway code value"
+    },
+    {
+      "name": "price",
+      "type": "OptionalDecimal",
+      "description": null
+    },
+    {
+      "name": "vendorId",
+      "type": "OptionalString",
+      "description": "Payment vendor ID value"
+    }
+  ]
+}

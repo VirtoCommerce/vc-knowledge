@@ -1,0 +1,16 @@
+{
+  "name": "InputUpdateWishlistLineItemType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "lineItemId",
+      "type": "String!",
+      "description": "Line Item Id to update"
+    },
+    {
+      "name": "quantity",
+      "type": "Int!",
+      "description": "Product quantity to add"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "InputDeleteContactType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "contactId",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

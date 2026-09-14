@@ -1,0 +1,46 @@
+{
+  "name": "MenuLinkType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "associatedObjectId",
+      "type": "String",
+      "description": "Menu item object ID"
+    },
+    {
+      "name": "associatedObjectName",
+      "type": "String",
+      "description": "Menu item object name"
+    },
+    {
+      "name": "associatedObjectType",
+      "type": "String",
+      "description": "Menu item type name"
+    },
+    {
+      "name": "childItems",
+      "type": "[MenuLinkType!]!",
+      "description": null
+    },
+    {
+      "name": "outerId",
+      "type": "String",
+      "description": "Menu item outerID"
+    },
+    {
+      "name": "priority",
+      "type": "Int!",
+      "description": "Menu item priority"
+    },
+    {
+      "name": "title",
+      "type": "String!",
+      "description": "Menu item title"
+    },
+    {
+      "name": "url",
+      "type": "String!",
+      "description": "Menu item url"
+    }
+  ]
+}

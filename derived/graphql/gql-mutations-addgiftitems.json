@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.addGiftItems",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "addGiftItems",
+  "signature": "addGiftItems(command: InputAddGiftItemsType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputAddGiftItemsType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputAddGiftItemsType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

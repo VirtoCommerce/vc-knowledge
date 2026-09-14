@@ -1,0 +1,28 @@
+{
+  "coordinate": "Query.builderPage",
+  "role": "query",
+  "rootType": "Query",
+  "field": "builderPage",
+  "signature": "builderPage(pageId: String!, storeId: String!): BuilderPageItemType",
+  "args": [
+    {
+      "name": "pageId",
+      "type": "String!",
+      "required": true,
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "BuilderPageItemType",
+  "referencedTypes": [
+    {
+      "name": "BuilderPageItemType",
+      "kind": "OBJECT"
+    }
+  ]
+}

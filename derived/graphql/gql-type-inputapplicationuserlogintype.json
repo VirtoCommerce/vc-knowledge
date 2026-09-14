@@ -1,0 +1,16 @@
+{
+  "name": "InputApplicationUserLoginType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "loginProvider",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "providerKey",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

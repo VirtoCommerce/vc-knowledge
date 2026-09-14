@@ -1,0 +1,22 @@
+{
+  "coordinate": "Query.me",
+  "role": "query",
+  "rootType": "Query",
+  "field": "me",
+  "signature": "me(userId: String): UserType",
+  "args": [
+    {
+      "name": "userId",
+      "type": "String",
+      "required": false,
+      "description": null
+    }
+  ],
+  "returns": "UserType",
+  "referencedTypes": [
+    {
+      "name": "UserType",
+      "kind": "OBJECT"
+    }
+  ]
+}

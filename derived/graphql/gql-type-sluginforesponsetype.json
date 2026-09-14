@@ -1,0 +1,16 @@
+{
+  "name": "SlugInfoResponseType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "entityInfo",
+      "type": "SeoInfo",
+      "description": "SEO info"
+    },
+    {
+      "name": "redirectUrl",
+      "type": "String",
+      "description": "Target URL when SEO is null"
+    }
+  ]
+}

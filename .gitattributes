@@ -1,0 +1,5 @@
+# The corpus is generated and gated by a BYTE comparison (`kb check`). Any line-ending
+# conversion would make the committed bytes differ from the regenerated ones on Windows,
+# and the gate would fail for a reason that has nothing to do with the contract.
+# So git performs no conversion here at all.
+* -text

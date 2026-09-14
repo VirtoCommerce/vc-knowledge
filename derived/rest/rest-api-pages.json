@@ -1,0 +1,33 @@
+{
+  "key": "/api/pages",
+  "modules": [
+    "VirtoCommerce.Pages"
+  ],
+  "tags": [
+    "Virto Pages"
+  ],
+  "operations": [
+    {
+      "coordinate": "POST /api/pages/search",
+      "verb": "POST",
+      "route": "/api/pages/search",
+      "operationId": "Pages_Search",
+      "module": "VirtoCommerce.Pages",
+      "tag": "Virto Pages",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "PageDocumentSearchResult"
+      },
+      "deprecated": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "coordinate": "Query.pages",
+  "role": "query",
+  "rootType": "Query",
+  "field": "pages",
+  "signature": "pages(after: String, cultureName: String, first: Int, keyword: String!, storeId: String!): PageConnection",
+  "args": [
+    {
+      "name": "after",
+      "type": "String",
+      "required": false,
+      "description": "Only return edges after the specified cursor."
+    },
+    {
+      "name": "cultureName",
+      "type": "String",
+      "required": false,
+      "description": "The language for which all localized category data will be returned"
+    },
+    {
+      "name": "first",
+      "type": "Int",
+      "required": false,
+      "description": "Specifies the maximum number of edges to return, starting after the cursor specified by 'after', or the first number of edges if 'after' is not specified."
+    },
+    {
+      "name": "keyword",
+      "type": "String!",
+      "required": true,
+      "description": "The keyword parameter performs the full-text search"
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "required": true,
+      "description": "The store id where pages are searched"
+    }
+  ],
+  "returns": "PageConnection",
+  "referencedTypes": [
+    {
+      "name": "PageConnection",
+      "kind": "OBJECT"
+    }
+  ]
+}

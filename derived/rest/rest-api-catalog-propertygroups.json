@@ -1,0 +1,107 @@
+{
+  "key": "/api/catalog/propertygroups",
+  "modules": [
+    "VirtoCommerce.Catalog"
+  ],
+  "tags": [
+    "Catalog"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/catalog/propertygroups",
+      "verb": "DELETE",
+      "route": "/api/catalog/propertygroups",
+      "operationId": "CatalogModulePropertyGroups_Delete",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/catalog/propertygroups/{id}",
+      "verb": "GET",
+      "route": "/api/catalog/propertygroups/{id}",
+      "operationId": "CatalogModulePropertyGroups_Get",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "responseGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "PropertyGroup"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/propertygroups",
+      "verb": "POST",
+      "route": "/api/catalog/propertygroups",
+      "operationId": "CatalogModulePropertyGroups_Update",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "PropertyGroup"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/catalog/propertygroups/search",
+      "verb": "POST",
+      "route": "/api/catalog/propertygroups/search",
+      "operationId": "CatalogModulePropertyGroups_Search",
+      "module": "VirtoCommerce.Catalog",
+      "tag": "Catalog",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "PropertyGroupSearchResult"
+      },
+      "deprecated": false
+    }
+  ]
+}

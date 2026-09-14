@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.mergeCart",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "mergeCart",
+  "signature": "mergeCart(command: InputMergeCartType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputMergeCartType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputMergeCartType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

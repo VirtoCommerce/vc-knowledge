@@ -1,0 +1,219 @@
+{
+  "key": "/api/organizations",
+  "modules": [
+    "VirtoCommerce.Customer"
+  ],
+  "tags": [
+    "Companies and Contacts"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/organizations",
+      "verb": "DELETE",
+      "route": "/api/organizations",
+      "operationId": "CustomerModule_DeleteOrganizations",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Delete organizations",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/organizations",
+      "verb": "GET",
+      "route": "/api/organizations",
+      "operationId": "CustomerModule_GetOrganizationsByIds",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Get plenty organizations",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Organization[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/organizations/{id}",
+      "verb": "GET",
+      "route": "/api/organizations/{id}",
+      "operationId": "CustomerModule_GetOrganizationById",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Get organization",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Organization"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PATCH /api/organizations/{id}",
+      "verb": "PATCH",
+      "route": "/api/organizations/{id}",
+      "operationId": "CustomerModule_PatchOrganization",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Partial update for Organization",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Operation[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/organizations",
+      "verb": "POST",
+      "route": "/api/organizations",
+      "operationId": "CustomerModule_CreateOrganization",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Create organization",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Organization"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/organizations/bulk",
+      "verb": "POST",
+      "route": "/api/organizations/bulk",
+      "operationId": "CustomerModule_BulkCreateOrganizations",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Bulk create organizations",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Organization[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/organizations/search",
+      "verb": "POST",
+      "route": "/api/organizations/search",
+      "operationId": "CustomerModule_SearchOrganizations",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Search organizations",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "OrganizationSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/organizations",
+      "verb": "PUT",
+      "route": "/api/organizations",
+      "operationId": "CustomerModule_UpdateOrganization",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Update organization",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/organizations/bulk",
+      "verb": "PUT",
+      "route": "/api/organizations/bulk",
+      "operationId": "CustomerModule_BulkUpdateOrganizations",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Bulk update organization",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Organization[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

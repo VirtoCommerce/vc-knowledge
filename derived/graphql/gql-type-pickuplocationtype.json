@@ -1,0 +1,61 @@
+{
+  "name": "PickupLocationType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "address",
+      "type": "PickupAddressType",
+      "description": "Address"
+    },
+    {
+      "name": "contactEmail",
+      "type": "String",
+      "description": "ContactEmail"
+    },
+    {
+      "name": "contactPhone",
+      "type": "String",
+      "description": "ContactPhone"
+    },
+    {
+      "name": "deliveryDays",
+      "type": "Int",
+      "description": "Days until ready for pickup"
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": "Description"
+    },
+    {
+      "name": "geoLocation",
+      "type": "String",
+      "description": "GeoLocation"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Id"
+    },
+    {
+      "name": "isActive",
+      "type": "Boolean!",
+      "description": "IsActive"
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "Name"
+    },
+    {
+      "name": "storageDays",
+      "type": "Int",
+      "description": "How long an order will be stored at a pickup point"
+    },
+    {
+      "name": "workingHours",
+      "type": "String",
+      "description": "WorkingHours"
+    }
+  ]
+}

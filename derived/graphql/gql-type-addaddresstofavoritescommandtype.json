@@ -1,0 +1,11 @@
+{
+  "name": "AddAddressToFavoritesCommandType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "addressId",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "BulkCartType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "cart",
+      "type": "CartType",
+      "description": "Cart"
+    },
+    {
+      "name": "errors",
+      "type": "[ValidationErrorType]",
+      "description": "A set of errors in case the SKUs are invalid"
+    }
+  ]
+}

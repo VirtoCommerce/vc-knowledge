@@ -1,0 +1,16 @@
+{
+  "name": "ChangeOrganizationLogoResultType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "errorMessage",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "isSuccess",
+      "type": "Boolean!",
+      "description": null
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "OrderDiscountType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "amount",
+      "type": "MoneyType!",
+      "description": "Order discount amount"
+    },
+    {
+      "name": "coupon",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "promotionDescription",
+      "type": "String",
+      "description": "Description of the promotion"
+    },
+    {
+      "name": "promotionId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "promotionName",
+      "type": "String",
+      "description": "Name of the promotion"
+    }
+  ]
+}

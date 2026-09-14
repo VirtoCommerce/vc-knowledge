@@ -1,0 +1,94 @@
+{
+  "key": "/api/currencies",
+  "modules": [
+    "VirtoCommerce.Core"
+  ],
+  "tags": [
+    "Commerce core module"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/currencies",
+      "verb": "DELETE",
+      "route": "/api/currencies",
+      "operationId": "Commerce_DeleteCurrencies",
+      "module": "VirtoCommerce.Core",
+      "tag": "Commerce core module",
+      "summary": "Delete currencies",
+      "parameters": [
+        {
+          "name": "codes",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/currencies",
+      "verb": "GET",
+      "route": "/api/currencies",
+      "operationId": "Commerce_GetAllCurrencies",
+      "module": "VirtoCommerce.Core",
+      "tag": "Commerce core module",
+      "summary": "Return all currencies registered in the system",
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Currency[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/currencies",
+      "verb": "POST",
+      "route": "/api/currencies",
+      "operationId": "Commerce_CreateCurrency",
+      "module": "VirtoCommerce.Core",
+      "tag": "Commerce core module",
+      "summary": "Create a existing currency",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/currencies",
+      "verb": "PUT",
+      "route": "/api/currencies",
+      "operationId": "Commerce_UpdateCurrency",
+      "module": "VirtoCommerce.Core",
+      "tag": "Commerce core module",
+      "summary": "Update a existing currency",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

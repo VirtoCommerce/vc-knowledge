@@ -1,0 +1,31 @@
+{
+  "name": "OrderConfigurationItemType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "customText",
+      "type": "String",
+      "description": "Configuration item custom text"
+    },
+    {
+      "name": "files",
+      "type": "[OrderConfigurationItemFileType]",
+      "description": "List of files for 'File' configuration item section"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Configuration item ID"
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "Configuration item name"
+    },
+    {
+      "name": "type",
+      "type": "String!",
+      "description": "Configuration item type. Possible values: 'Product', 'Text', 'File'"
+    }
+  ]
+}

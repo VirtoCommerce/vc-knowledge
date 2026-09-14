@@ -1,0 +1,280 @@
+{
+  "key": "/api/image",
+  "modules": [
+    "VirtoCommerce.ImageTools"
+  ],
+  "tags": [
+    "Image Tools"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/image/thumbnails/options",
+      "verb": "DELETE",
+      "route": "/api/image/thumbnails/options",
+      "operationId": "ThumbnailsOptions_DeleteThumbnailOption",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "DELETE /api/image/thumbnails/tasks",
+      "verb": "DELETE",
+      "route": "/api/image/thumbnails/tasks",
+      "operationId": "ThumbnailsTasks_DeleteThumbnailTask",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/image/thumbnails/options/{id}",
+      "verb": "GET",
+      "route": "/api/image/thumbnails/options/{id}",
+      "operationId": "ThumbnailsOptions_GetThumbnailOption",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "ThumbnailOption"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/image/thumbnails/tasks/{id}",
+      "verb": "GET",
+      "route": "/api/image/thumbnails/tasks/{id}",
+      "operationId": "ThumbnailsTasks_GetThumbnailTask",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "ThumbnailTask"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/image/thumbnails/options",
+      "verb": "POST",
+      "route": "/api/image/thumbnails/options",
+      "operationId": "ThumbnailsOptions_CreateThumbnailOption",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ThumbnailOption"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/image/thumbnails/options/search",
+      "verb": "POST",
+      "route": "/api/image/thumbnails/options/search",
+      "operationId": "ThumbnailsOptions_SearchThumbnailOption",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ThumbnailOptionSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/image/thumbnails/tasks",
+      "verb": "POST",
+      "route": "/api/image/thumbnails/tasks",
+      "operationId": "ThumbnailsTasks_CreateThumbnailTask",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ThumbnailTask"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/image/thumbnails/tasks/{jobId}/cancel",
+      "verb": "POST",
+      "route": "/api/image/thumbnails/tasks/{jobId}/cancel",
+      "operationId": "ThumbnailsTasks_Cancel",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "jobId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/image/thumbnails/tasks/run",
+      "verb": "POST",
+      "route": "/api/image/thumbnails/tasks/run",
+      "operationId": "ThumbnailsTasks_Run",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ThumbnailProcessNotification"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/image/thumbnails/tasks/search",
+      "verb": "POST",
+      "route": "/api/image/thumbnails/tasks/search",
+      "operationId": "ThumbnailsTasks_SearchThumbnailTask",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ThumbnailTaskSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/image/thumbnails/options",
+      "verb": "PUT",
+      "route": "/api/image/thumbnails/options",
+      "operationId": "ThumbnailsOptions_UpdateThumbnailOption",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/image/thumbnails/tasks",
+      "verb": "PUT",
+      "route": "/api/image/thumbnails/tasks",
+      "operationId": "ThumbnailsTasks_UpdateThumbnailTask",
+      "module": "VirtoCommerce.ImageTools",
+      "tag": "Image Tools",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

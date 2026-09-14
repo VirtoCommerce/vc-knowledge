@@ -1,0 +1,23 @@
+{
+  "name": "vc-knowledge",
+  "namespace": "KB",
+  "idWidth": 8,
+  "planes": [
+    "derived-first",
+    "experiential"
+  ],
+  "schemaFields": [
+    "id",
+    "subject",
+    "plane",
+    "question",
+    "appliesTo",
+    "anchors",
+    "evidence",
+    "refutableBy",
+    "status"
+  ],
+  "note": "W0.5 steps 1 and 2. Step 2 added a second plane and NO new field: the confirmation count, the disputed flag and the versions a fact has been seen on are all computed from evidence[], because a declared count is a second copy of something that already has a home. costIfMissing is OMITTED, never defaulted (ADR M3). kind is decided OUT — see README, 'Does an entry carry kind?'. tags, scope, relation, base, domain, aliases, confirmations, disputed, pinned, provenance, leads, title remain deferred per SCHEMA-COMPARISON.md.",
+  "idRule": "the id is sha256(subject) truncated to 8 uppercase hex digits. On the derived plane the subject is itself derived, so the id is re-derivable and kb validate checks it. On the experiential plane the id is minted once at capture and then lives in the file: ids are eternal (ADR §4.3) and a normalized subject can be changed.",
+  "identityRule": "two records are the same fact when their normalized anchors and their scope axes agree. The claim's wording is deliberately not part of that test — measured in docs/adr/measurements/kb-dedup-2026-09 (vc-mcp-testing-module): the wording-similarity range of pairs that must collapse contains the range of pairs that must not, and one pair stating one fact scored 0.00."
+}

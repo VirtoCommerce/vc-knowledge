@@ -1,0 +1,11 @@
+{
+  "name": "LocalizedSettingResponseType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "items",
+      "type": "[KeyValueType]",
+      "description": null
+    }
+  ]
+}

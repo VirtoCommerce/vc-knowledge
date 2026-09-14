@@ -1,0 +1,51 @@
+{
+  "name": "InitializeCartPaymentResultType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "actionHtmlForm",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "actionRedirectUrl",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "errorMessage",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "isSuccess",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "paymentActionType",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "paymentId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "paymentMethodCode",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "publicParameters",
+      "type": "[KeyValueType]",
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

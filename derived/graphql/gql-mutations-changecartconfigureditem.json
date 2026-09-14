@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.changeCartConfiguredItem",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "changeCartConfiguredItem",
+  "signature": "changeCartConfiguredItem(command: InputChangeCartConfiguredItemType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputChangeCartConfiguredItemType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputChangeCartConfiguredItemType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "coordinate": "Query.contract",
+  "role": "query",
+  "rootType": "Query",
+  "field": "contract",
+  "signature": "contract(id: String): ContractType",
+  "args": [
+    {
+      "name": "id",
+      "type": "String",
+      "required": false,
+      "description": null
+    }
+  ],
+  "returns": "ContractType",
+  "referencedTypes": [
+    {
+      "name": "ContractType",
+      "kind": "OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.rejectGiftItems",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "rejectGiftItems",
+  "signature": "rejectGiftItems(command: InputRejectGiftItemsType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputRejectGiftItemsType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputRejectGiftItemsType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

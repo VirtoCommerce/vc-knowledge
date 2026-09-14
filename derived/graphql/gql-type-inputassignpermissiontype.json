@@ -1,0 +1,16 @@
+{
+  "name": "InputAssignPermissionType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "assignedScopes",
+      "type": "[InputAssignPermissionScopeType]",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "WhiteLabelingSettingsType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "favicons",
+      "type": "[FaviconType]",
+      "description": null
+    },
+    {
+      "name": "faviconUrl",
+      "type": "String",
+      "description": "Master favicon URL"
+    },
+    {
+      "name": "footerLinks",
+      "type": "[MenuLinkType]",
+      "description": null
+    },
+    {
+      "name": "isOrganizationFaviconUploaded",
+      "type": "Boolean",
+      "description": "If true then FaviconUrl contains Organization favicon"
+    },
+    {
+      "name": "isOrganizationLogoUploaded",
+      "type": "Boolean",
+      "description": "If true then LogoUrl contains Organization logo"
+    },
+    {
+      "name": "isOrganizationSecondaryLogoUploaded",
+      "type": "Boolean",
+      "description": "If true then SecondaryLogoUrl contains Organization logo"
+    },
+    {
+      "name": "logoUrl",
+      "type": "String",
+      "description": "Logo URL"
+    },
+    {
+      "name": "mainMenuLinks",
+      "type": "[MenuLinkType]",
+      "description": null
+    },
+    {
+      "name": "organizationId",
+      "type": "String",
+      "description": "Organization ID"
+    },
+    {
+      "name": "secondaryLogoUrl",
+      "type": "String",
+      "description": "Logo URL for footer"
+    },
+    {
+      "name": "storeId",
+      "type": "String",
+      "description": "Store ID"
+    },
+    {
+      "name": "themePresetName",
+      "type": "String",
+      "description": "Theme preset name"
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "description": "User ID"
+    }
+  ]
+}

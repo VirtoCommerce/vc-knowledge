@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.updateOrderShipmentDynamicProperties",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "updateOrderShipmentDynamicProperties",
+  "signature": "updateOrderShipmentDynamicProperties(command: InputUpdateOrderShipmentDynamicPropertiesType!): CustomerOrderType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputUpdateOrderShipmentDynamicPropertiesType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CustomerOrderType",
+  "referencedTypes": [
+    {
+      "name": "CustomerOrderType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputUpdateOrderShipmentDynamicPropertiesType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

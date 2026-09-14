@@ -1,0 +1,16 @@
+{
+  "name": "PricesSumType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "discountTotal",
+      "type": "MoneyType!",
+      "description": "Total discount amount"
+    },
+    {
+      "name": "total",
+      "type": "MoneyType!",
+      "description": "Total price"
+    }
+  ]
+}

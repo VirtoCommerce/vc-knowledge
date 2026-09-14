@@ -1,0 +1,107 @@
+{
+  "key": "/api/taxes",
+  "modules": [
+    "VirtoCommerce.Tax"
+  ],
+  "tags": [
+    "Tax Core"
+  ],
+  "operations": [
+    {
+      "coordinate": "GET /api/taxes/{id}",
+      "verb": "GET",
+      "route": "/api/taxes/{id}",
+      "operationId": "TaxModule_GetTaxProviderById",
+      "module": "VirtoCommerce.Tax",
+      "tag": "Tax Core",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "TaxProviderSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/taxes/{storeId}/evaluate",
+      "verb": "POST",
+      "route": "/api/taxes/{storeId}/evaluate",
+      "operationId": "TaxModule_EvaluateTaxes",
+      "module": "VirtoCommerce.Tax",
+      "tag": "Tax Core",
+      "summary": "Evaluate and return all tax rates for specified store and evaluation context",
+      "parameters": [
+        {
+          "name": "storeId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "TaxRate[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/taxes/search",
+      "verb": "POST",
+      "route": "/api/taxes/search",
+      "operationId": "TaxModule_SearchTaxProviders",
+      "module": "VirtoCommerce.Tax",
+      "tag": "Tax Core",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "TaxProviderSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/taxes",
+      "verb": "PUT",
+      "route": "/api/taxes",
+      "operationId": "TaxModule_UpdateTaxProvider",
+      "module": "VirtoCommerce.Tax",
+      "tag": "Tax Core",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "TaxProvider"
+      },
+      "deprecated": false
+    }
+  ]
+}

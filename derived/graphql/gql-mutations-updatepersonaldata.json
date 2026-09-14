@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.updatePersonalData",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "updatePersonalData",
+  "signature": "updatePersonalData(command: InputUpdatePersonalDataType!): IdentityResultType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputUpdatePersonalDataType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "IdentityResultType",
+  "referencedTypes": [
+    {
+      "name": "IdentityResultType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputUpdatePersonalDataType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

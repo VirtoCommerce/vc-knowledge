@@ -1,0 +1,22 @@
+{
+  "coordinate": "Mutations.changeOrderStatus",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "changeOrderStatus",
+  "signature": "changeOrderStatus(command: InputChangeOrderStatusType!): Boolean",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputChangeOrderStatusType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": [
+    {
+      "name": "InputChangeOrderStatusType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

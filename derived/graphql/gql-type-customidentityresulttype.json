@@ -1,0 +1,16 @@
+{
+  "name": "CustomIdentityResultType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "errors",
+      "type": "[IdentityErrorInfoType]",
+      "description": "The errors that occurred during the identity operation."
+    },
+    {
+      "name": "succeeded",
+      "type": "Boolean!",
+      "description": null
+    }
+  ]
+}

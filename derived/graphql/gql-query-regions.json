@@ -1,0 +1,22 @@
+{
+  "coordinate": "Query.regions",
+  "role": "query",
+  "rootType": "Query",
+  "field": "regions",
+  "signature": "regions(countryId: String!): [CountryRegionType!]!",
+  "args": [
+    {
+      "name": "countryId",
+      "type": "String!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "[CountryRegionType!]!",
+  "referencedTypes": [
+    {
+      "name": "CountryRegionType",
+      "kind": "OBJECT"
+    }
+  ]
+}

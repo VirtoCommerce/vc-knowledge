@@ -1,0 +1,166 @@
+{
+  "name": "ShipmentType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "comment",
+      "type": "String",
+      "description": "Text comment"
+    },
+    {
+      "name": "currency",
+      "type": "CurrencyType!",
+      "description": "Currency"
+    },
+    {
+      "name": "deliveryAddress",
+      "type": "CartAddressType",
+      "description": "Delivery address"
+    },
+    {
+      "name": "discountAmount",
+      "type": "MoneyType!",
+      "description": "Discount amount"
+    },
+    {
+      "name": "discountAmountWithTax",
+      "type": "MoneyType!",
+      "description": "Discount amount with tax"
+    },
+    {
+      "name": "discounts",
+      "type": "[DiscountType!]!",
+      "description": "Discounts"
+    },
+    {
+      "name": "dynamicProperties",
+      "type": "[DynamicPropertyValueType!]!",
+      "description": "Cart shipment dynamic property values"
+    },
+    {
+      "name": "fee",
+      "type": "MoneyType!",
+      "description": "Fee"
+    },
+    {
+      "name": "feeWithTax",
+      "type": "MoneyType!",
+      "description": "Fee with tax"
+    },
+    {
+      "name": "fulfillmentCenterId",
+      "type": "String",
+      "description": "Fulfillment center id"
+    },
+    {
+      "name": "height",
+      "type": "Decimal",
+      "description": "Value of height"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Shipment Id"
+    },
+    {
+      "name": "items",
+      "type": "[CartShipmentItemType!]!",
+      "description": "Items"
+    },
+    {
+      "name": "length",
+      "type": "Decimal",
+      "description": "Value of length"
+    },
+    {
+      "name": "measureUnit",
+      "type": "String",
+      "description": "Value of measurement units"
+    },
+    {
+      "name": "pickupLocation",
+      "type": "PickupLocationType",
+      "description": null
+    },
+    {
+      "name": "price",
+      "type": "MoneyType!",
+      "description": "Price"
+    },
+    {
+      "name": "priceWithTax",
+      "type": "MoneyType!",
+      "description": "Price with tax"
+    },
+    {
+      "name": "shipmentMethodCode",
+      "type": "String",
+      "description": "Shipment method code"
+    },
+    {
+      "name": "shipmentMethodOption",
+      "type": "String",
+      "description": "Shipment method option"
+    },
+    {
+      "name": "shippingMethod",
+      "type": "ShippingMethodType",
+      "description": null
+    },
+    {
+      "name": "taxDetails",
+      "type": "[TaxDetailType!]!",
+      "description": "Tax details"
+    },
+    {
+      "name": "taxPercentRate",
+      "type": "Decimal!",
+      "description": "Tax percent rate"
+    },
+    {
+      "name": "taxTotal",
+      "type": "MoneyType!",
+      "description": "Tax total"
+    },
+    {
+      "name": "taxType",
+      "type": "String",
+      "description": "Tax type"
+    },
+    {
+      "name": "total",
+      "type": "MoneyType!",
+      "description": "Total"
+    },
+    {
+      "name": "totalWithTax",
+      "type": "MoneyType!",
+      "description": "Total with tax"
+    },
+    {
+      "name": "vendor",
+      "type": "CommonVendor",
+      "description": null
+    },
+    {
+      "name": "volumetricWeight",
+      "type": "Decimal",
+      "description": "Value of volumetric weight"
+    },
+    {
+      "name": "weight",
+      "type": "Decimal",
+      "description": "Value of weight"
+    },
+    {
+      "name": "weightUnit",
+      "type": "String",
+      "description": "Value of weight unit"
+    },
+    {
+      "name": "width",
+      "type": "Decimal",
+      "description": "Value of width"
+    }
+  ]
+}

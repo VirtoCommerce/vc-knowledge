@@ -1,0 +1,46 @@
+{
+  "name": "FulfillmentCenterType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "address",
+      "type": "FulfillmentCenterAddressType",
+      "description": "Fulfillment Center address."
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": "Fulfillment Center description."
+    },
+    {
+      "name": "geoLocation",
+      "type": "String",
+      "description": "Fulfillment Center GEO location."
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "Fulfillment Center ID."
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "Fulfillment Center name."
+    },
+    {
+      "name": "nearest",
+      "type": "[FulfillmentCenterType]",
+      "description": "Nearest Fulfillment Centers"
+    },
+    {
+      "name": "outerId",
+      "type": "String",
+      "description": "Fulfillment Center outerId."
+    },
+    {
+      "name": "shortDescription",
+      "type": "String",
+      "description": "Fulfillment Center short description."
+    }
+  ]
+}

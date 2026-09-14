@@ -1,0 +1,76 @@
+{
+  "name": "Property",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "colorCode",
+      "type": "String",
+      "description": "Color code in CSS format."
+    },
+    {
+      "name": "displayOrder",
+      "type": "Int",
+      "description": "The display order of the property."
+    },
+    {
+      "name": "group",
+      "type": "PropertyGroup",
+      "description": null
+    },
+    {
+      "name": "hidden",
+      "type": "Boolean!",
+      "description": "Is property hidden."
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": "The unique ID of the property."
+    },
+    {
+      "name": "label",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "multivalue",
+      "type": "Boolean!",
+      "description": "Is property has multiple values."
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "The name of the property."
+    },
+    {
+      "name": "propertyDictionaryItems",
+      "type": "PropertyDictionaryItemConnection",
+      "description": null
+    },
+    {
+      "name": "propertyType",
+      "type": "PropertyType!",
+      "description": null
+    },
+    {
+      "name": "propertyValueType",
+      "type": "PropertyValueTypes!",
+      "description": "ValueType of the property."
+    },
+    {
+      "name": "value",
+      "type": "PropertyValue",
+      "description": null
+    },
+    {
+      "name": "valueDisplayOrder",
+      "type": "Int",
+      "description": "The display order of the value."
+    },
+    {
+      "name": "valueId",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

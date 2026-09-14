@@ -1,0 +1,26 @@
+{
+  "name": "CartConfigurationItemFileType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "contentType",
+      "type": "String",
+      "description": "MIME type of the file"
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "Name of the file"
+    },
+    {
+      "name": "size",
+      "type": "Long!",
+      "description": "Size of the file"
+    },
+    {
+      "name": "url",
+      "type": "String!",
+      "description": "URL of the file"
+    }
+  ]
+}

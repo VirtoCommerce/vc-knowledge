@@ -1,0 +1,16 @@
+{
+  "name": "IdentityResultType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "errors",
+      "type": "[IdentityErrorType]",
+      "description": "The errors that occurred during the identity operation."
+    },
+    {
+      "name": "succeeded",
+      "type": "Boolean!",
+      "description": null
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.addCartAddress",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "addCartAddress",
+  "signature": "addCartAddress(command: InputAddOrUpdateCartAddressType!): CartType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputAddOrUpdateCartAddressType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CartType",
+  "referencedTypes": [
+    {
+      "name": "CartType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputAddOrUpdateCartAddressType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

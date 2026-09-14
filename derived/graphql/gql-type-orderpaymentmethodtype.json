@@ -1,0 +1,116 @@
+{
+  "name": "OrderPaymentMethodType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "code",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "currency",
+      "type": "CurrencyType!",
+      "description": null
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "discountAmount",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "discountAmountWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "isActive",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "isAvailableForPartial",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "logoUrl",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "name",
+      "type": "String",
+      "description": "Localized name of payment method."
+    },
+    {
+      "name": "paymentMethodGroupType",
+      "type": "Int!",
+      "description": null
+    },
+    {
+      "name": "paymentMethodType",
+      "type": "Int!",
+      "description": null
+    },
+    {
+      "name": "price",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "priceWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "priority",
+      "type": "Int!",
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "taxDetails",
+      "type": "[OrderTaxDetailType!]",
+      "description": null
+    },
+    {
+      "name": "taxPercentRate",
+      "type": "Decimal!",
+      "description": null
+    },
+    {
+      "name": "taxTotal",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "taxType",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "total",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "totalWithTax",
+      "type": "MoneyType!",
+      "description": null
+    },
+    {
+      "name": "typeName",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

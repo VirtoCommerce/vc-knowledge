@@ -1,0 +1,156 @@
+{
+  "name": "UserType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "accessFailedCount",
+      "type": "Int!",
+      "description": null
+    },
+    {
+      "name": "contact",
+      "type": "ContactType",
+      "description": "The associated contact info"
+    },
+    {
+      "name": "createdBy",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "createdDate",
+      "type": "DateTime",
+      "description": null
+    },
+    {
+      "name": "email",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "emailConfirmed",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "forcePasswordChange",
+      "type": "Boolean",
+      "description": "Make this user change their password when they sign in next time"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "isAdministrator",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "lockedState",
+      "type": "Boolean",
+      "description": "Account locked state"
+    },
+    {
+      "name": "lockoutEnabled",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "lockoutEnd",
+      "type": "DateTime",
+      "description": null
+    },
+    {
+      "name": "memberId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "modifiedBy",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "modifiedDate",
+      "type": "DateTime",
+      "description": null
+    },
+    {
+      "name": "normalizedEmail",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "normalizedUserName",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "operator",
+      "type": "UserType",
+      "description": null
+    },
+    {
+      "name": "passwordExpired",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "passwordExpiryInDays",
+      "type": "Int",
+      "description": "Password expiry in days"
+    },
+    {
+      "name": "permissions",
+      "type": "[String]",
+      "description": "Account permissions"
+    },
+    {
+      "name": "phoneNumber",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "phoneNumberConfirmed",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "photoUrl",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "roles",
+      "type": "[RoleType]",
+      "description": null
+    },
+    {
+      "name": "securityStamp",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "storeId",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "twoFactorEnabled",
+      "type": "Boolean!",
+      "description": null
+    },
+    {
+      "name": "userName",
+      "type": "String!",
+      "description": null
+    },
+    {
+      "name": "userType",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

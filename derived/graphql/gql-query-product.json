@@ -1,0 +1,58 @@
+{
+  "coordinate": "Query.product",
+  "role": "query",
+  "rootType": "Query",
+  "field": "product",
+  "signature": "product(cultureName: String, currencyCode: String, custom: String, id: String!, previousOutline: String, storeId: String!, userId: String): Product",
+  "args": [
+    {
+      "name": "cultureName",
+      "type": "String",
+      "required": false,
+      "description": "Culture name (\"en-US\")"
+    },
+    {
+      "name": "currencyCode",
+      "type": "String",
+      "required": false,
+      "description": "Currency code (\"USD\")"
+    },
+    {
+      "name": "custom",
+      "type": "String",
+      "required": false,
+      "description": "Can be used for custom query parameters"
+    },
+    {
+      "name": "id",
+      "type": "String!",
+      "required": true,
+      "description": "id of the product"
+    },
+    {
+      "name": "previousOutline",
+      "type": "String",
+      "required": false,
+      "description": "Previous outline"
+    },
+    {
+      "name": "storeId",
+      "type": "String!",
+      "required": true,
+      "description": "Store Id"
+    },
+    {
+      "name": "userId",
+      "type": "String",
+      "required": false,
+      "description": "User Id"
+    }
+  ],
+  "returns": "Product",
+  "referencedTypes": [
+    {
+      "name": "Product",
+      "kind": "OBJECT"
+    }
+  ]
+}

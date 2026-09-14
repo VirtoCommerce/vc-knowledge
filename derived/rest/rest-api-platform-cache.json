@@ -1,0 +1,27 @@
+{
+  "key": "/api/platform-cache",
+  "modules": [
+    "VirtoCommerce.Platform"
+  ],
+  "tags": [
+    "VirtoCommerce Platform"
+  ],
+  "operations": [
+    {
+      "coordinate": "POST /api/platform-cache/reset",
+      "verb": "POST",
+      "route": "/api/platform-cache/reset",
+      "operationId": "ChangeLog_ResetPlatformCache",
+      "module": "VirtoCommerce.Platform",
+      "tag": "VirtoCommerce Platform",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

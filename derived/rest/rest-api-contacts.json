@@ -1,0 +1,219 @@
+{
+  "key": "/api/contacts",
+  "modules": [
+    "VirtoCommerce.Customer"
+  ],
+  "tags": [
+    "Companies and Contacts"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/contacts",
+      "verb": "DELETE",
+      "route": "/api/contacts",
+      "operationId": "CustomerModule_DeleteContacts",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Delete contacts",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/contacts",
+      "verb": "GET",
+      "route": "/api/contacts",
+      "operationId": "CustomerModule_GetContactsByIds",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Get plenty contacts",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Contact[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/contacts/{id}",
+      "verb": "GET",
+      "route": "/api/contacts/{id}",
+      "operationId": "CustomerModule_GetContactById",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Get contact",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Contact"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PATCH /api/contacts/{id}",
+      "verb": "PATCH",
+      "route": "/api/contacts/{id}",
+      "operationId": "CustomerModule_PatchContact",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Partial update for Contact",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Operation[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contacts",
+      "verb": "POST",
+      "route": "/api/contacts",
+      "operationId": "CustomerModule_CreateContact",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Create contact",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Contact"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contacts/bulk",
+      "verb": "POST",
+      "route": "/api/contacts/bulk",
+      "operationId": "CustomerModule_BulkCreateContacts",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Bulk create contacts",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Contact[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Contact[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/contacts/search",
+      "verb": "POST",
+      "route": "/api/contacts/search",
+      "operationId": "CustomerModule_SearchContacts",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Search contacts",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "ContactSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/contacts",
+      "verb": "PUT",
+      "route": "/api/contacts",
+      "operationId": "CustomerModule_UpdateContact",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Update contact",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/contacts/bulk",
+      "verb": "PUT",
+      "route": "/api/contacts/bulk",
+      "operationId": "CustomerModule_BulkUpdateContacts",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Bulk update contact",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Contact[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "TermFacet",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "facetType",
+      "type": "FacetTypes!",
+      "description": "Three facet types: Terms, Range, and Filter"
+    },
+    {
+      "name": "label",
+      "type": "String!",
+      "description": "Localized name of the facet."
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "The key/name  of the facet."
+    },
+    {
+      "name": "order",
+      "type": "Int",
+      "description": "Display order of the facet."
+    },
+    {
+      "name": "terms",
+      "type": "[FacetTermType!]!",
+      "description": "Terms"
+    }
+  ]
+}

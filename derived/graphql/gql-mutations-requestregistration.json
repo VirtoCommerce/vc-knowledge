@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.requestRegistration",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "requestRegistration",
+  "signature": "requestRegistration(command: InputRequestRegistrationType!): RequestRegistrationType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputRequestRegistrationType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "RequestRegistrationType",
+  "referencedTypes": [
+    {
+      "name": "InputRequestRegistrationType",
+      "kind": "INPUT_OBJECT"
+    },
+    {
+      "name": "RequestRegistrationType",
+      "kind": "OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "RangeFacet",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "facetType",
+      "type": "FacetTypes!",
+      "description": "The three types of facets. Terms, Range, Filter"
+    },
+    {
+      "name": "label",
+      "type": "String!",
+      "description": "Localized name of the facet."
+    },
+    {
+      "name": "name",
+      "type": "String!",
+      "description": "The key/name  of the facet."
+    },
+    {
+      "name": "order",
+      "type": "Int",
+      "description": "Display order of the facet."
+    },
+    {
+      "name": "ranges",
+      "type": "[FacetRangeType!]!",
+      "description": "Ranges"
+    },
+    {
+      "name": "statistics",
+      "type": "RangeFacetStatistics",
+      "description": "Statistics for the facet, such as min and max values across ranges."
+    }
+  ]
+}

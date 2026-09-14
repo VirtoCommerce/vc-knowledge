@@ -1,0 +1,377 @@
+{
+  "key": "/api/members",
+  "modules": [
+    "VirtoCommerce.Customer"
+  ],
+  "tags": [
+    "Companies and Contacts"
+  ],
+  "operations": [
+    {
+      "coordinate": "DELETE /api/members",
+      "verb": "DELETE",
+      "route": "/api/members",
+      "operationId": "CustomerModule_DeleteMembers",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Delete members",
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/members",
+      "verb": "GET",
+      "route": "/api/members",
+      "operationId": "CustomerModule_GetMembersByIds",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        },
+        {
+          "name": "memberTypes",
+          "in": "query",
+          "required": false,
+          "type": "string[]"
+        },
+        {
+          "name": "responseGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Member[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/members/{id}",
+      "verb": "GET",
+      "route": "/api/members/{id}",
+      "operationId": "CustomerModule_GetMemberById",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Get member",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "memberType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "responseGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Member"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/members/{id}/organizations",
+      "verb": "GET",
+      "route": "/api/members/{id}/organizations",
+      "operationId": "CustomerModule_GetMemberOrganizations",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Get all member organizations",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Organization[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/members/accounts/{userId}",
+      "verb": "GET",
+      "route": "/api/members/accounts/{userId}",
+      "operationId": "CustomerModule_GetMemberByUserId",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": null,
+      "parameters": [
+        {
+          "name": "memberType",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "responseGroup",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Member"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/members/customers/invite/roles",
+      "verb": "GET",
+      "route": "/api/members/customers/invite/roles",
+      "operationId": "CustomerModule_GetInviteRoles",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "CustomerRoleSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/members/organizations",
+      "verb": "GET",
+      "route": "/api/members/organizations",
+      "operationId": "CustomerModule_ListOrganizations",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Get organizations",
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "Organization[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PATCH /api/members/{id}",
+      "verb": "PATCH",
+      "route": "/api/members/{id}",
+      "operationId": "CustomerModule_PatchMember",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Partial update for Member",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Operation[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/members",
+      "verb": "POST",
+      "route": "/api/members",
+      "operationId": "CustomerModule_CreateMember",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Create new member (can be any object inherited from Member type)",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Member"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/members/bulk",
+      "verb": "POST",
+      "route": "/api/members/bulk",
+      "operationId": "CustomerModule_BulkCreateMembers",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Bulk create new members (can be any objects inherited from Member type)",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Member[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "Member[]"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/members/customers/invite",
+      "verb": "POST",
+      "route": "/api/members/customers/invite",
+      "operationId": "CustomerModule_InviteCustomers",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": null,
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "InviteCustomerResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/members/delete",
+      "verb": "POST",
+      "route": "/api/members/delete",
+      "operationId": "CustomerModule_BulkDeleteMembersBySearchCriteria",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Bulk delete members",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/members/search",
+      "verb": "POST",
+      "route": "/api/members/search",
+      "operationId": "CustomerModule_SearchMember",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Get members",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "MemberSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/members",
+      "verb": "PUT",
+      "route": "/api/members",
+      "operationId": "CustomerModule_UpdateMember",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Update member",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/members/bulk",
+      "verb": "PUT",
+      "route": "/api/members/bulk",
+      "operationId": "CustomerModule_BulkUpdateMembers",
+      "module": "VirtoCommerce.Customer",
+      "tag": "Companies and Contacts",
+      "summary": "Bulk update members",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": "Member[]",
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

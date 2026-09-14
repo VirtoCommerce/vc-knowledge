@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.initializeCartPayment",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "initializeCartPayment",
+  "signature": "initializeCartPayment(command: InputInitializeCartPaymentType!): InitializeCartPaymentResultType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputInitializeCartPaymentType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "InitializeCartPaymentResultType",
+  "referencedTypes": [
+    {
+      "name": "InitializeCartPaymentResultType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputInitializeCartPaymentType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

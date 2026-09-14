@@ -1,0 +1,139 @@
+{
+  "key": "/api/personalization",
+  "modules": [
+    "VirtoCommerce.CatalogPersonalization"
+  ],
+  "tags": [
+    "Catalog Personalization"
+  ],
+  "operations": [
+    {
+      "coordinate": "GET /api/personalization/taggeditem/{id}",
+      "verb": "GET",
+      "route": "/api/personalization/taggeditem/{id}",
+      "operationId": "PersonalizationModule_GetTaggedItem",
+      "module": "VirtoCommerce.CatalogPersonalization",
+      "tag": "Catalog Personalization",
+      "summary": "GET: api/personalization/taggeditem/{id}",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "TaggedItem"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "GET /api/personalization/taggeditem/{id}/tags/count",
+      "verb": "GET",
+      "route": "/api/personalization/taggeditem/{id}/tags/count",
+      "operationId": "PersonalizationModule_GetTagsCount",
+      "module": "VirtoCommerce.CatalogPersonalization",
+      "tag": "Catalog Personalization",
+      "summary": "GET: api/personalization/taggeditem/{id}/tags/count",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "integer"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/personalization/outlines/synchronization/cancel",
+      "verb": "POST",
+      "route": "/api/personalization/outlines/synchronization/cancel",
+      "operationId": "PersonalizationModule_CancelSynchronization",
+      "module": "VirtoCommerce.CatalogPersonalization",
+      "tag": "Catalog Personalization",
+      "summary": "PUT: api/personalization/outlines/synchronization/cancel",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/personalization/outlines/synchronize",
+      "verb": "POST",
+      "route": "/api/personalization/outlines/synchronize",
+      "operationId": "PersonalizationModule_RunOutlinesSynchronization",
+      "module": "VirtoCommerce.CatalogPersonalization",
+      "tag": "Catalog Personalization",
+      "summary": "PUT: api/personalization/outlines/synchronize",
+      "parameters": [],
+      "requestBody": null,
+      "response": {
+        "code": "200",
+        "schema": "TaggedItemOutlineSyncPushNotification"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "POST /api/personalization/search",
+      "verb": "POST",
+      "route": "/api/personalization/search",
+      "operationId": "PersonalizationModule_Search",
+      "module": "VirtoCommerce.CatalogPersonalization",
+      "tag": "Catalog Personalization",
+      "summary": "POST: api/personalization/search",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "200",
+        "schema": "TaggedItemSearchResult"
+      },
+      "deprecated": false
+    },
+    {
+      "coordinate": "PUT /api/personalization/taggeditem",
+      "verb": "PUT",
+      "route": "/api/personalization/taggeditem",
+      "operationId": "PersonalizationModule_UpdateTaggedItem",
+      "module": "VirtoCommerce.CatalogPersonalization",
+      "tag": "Catalog Personalization",
+      "summary": "PUT: api/personalization/taggeditem",
+      "parameters": [],
+      "requestBody": {
+        "media": "application/json",
+        "schema": null,
+        "required": false,
+        "requiredFields": [],
+        "fields": []
+      },
+      "response": {
+        "code": "204",
+        "schema": null
+      },
+      "deprecated": false
+    }
+  ]
+}

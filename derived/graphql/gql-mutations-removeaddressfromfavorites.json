@@ -1,0 +1,22 @@
+{
+  "coordinate": "Mutations.removeAddressFromFavorites",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "removeAddressFromFavorites",
+  "signature": "removeAddressFromFavorites(command: RemoveAddressFromFavoritesCommandType!): Boolean",
+  "args": [
+    {
+      "name": "command",
+      "type": "RemoveAddressFromFavoritesCommandType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "Boolean",
+  "referencedTypes": [
+    {
+      "name": "RemoveAddressFromFavoritesCommandType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "name": "FacetRangeType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "count",
+      "type": "Long!",
+      "description": "Amount of products for which the values in a field fall into the specified range"
+    },
+    {
+      "name": "from",
+      "type": "Decimal",
+      "description": "The range’s lower endpoint in number format"
+    },
+    {
+      "name": "fromStr",
+      "type": "String",
+      "description": "The range’s lower endpoint in string format, empty string represents infinity"
+    },
+    {
+      "name": "includeFrom",
+      "type": "Boolean!",
+      "description": "The flag indicates that From exclusive"
+    },
+    {
+      "name": "includeTo",
+      "type": "Boolean!",
+      "description": "The flag indicates that To exclusive"
+    },
+    {
+      "name": "isSelected",
+      "type": "Boolean!",
+      "description": "is selected state"
+    },
+    {
+      "name": "label",
+      "type": "String!",
+      "description": "Localization label"
+    },
+    {
+      "name": "max",
+      "type": "Decimal!",
+      "description": "Maximum value among all values contained within the range"
+    },
+    {
+      "name": "min",
+      "type": "Decimal!",
+      "description": "Minimum value among all values contained within the range"
+    },
+    {
+      "name": "to",
+      "type": "Decimal",
+      "description": "The range’s upper endpoint in number format"
+    },
+    {
+      "name": "toStr",
+      "type": "String",
+      "description": "The range’s upper endpoint in string format, empty string represents infinity"
+    },
+    {
+      "name": "total",
+      "type": "Long!",
+      "description": "Sum of all values contained in the range"
+    }
+  ]
+}

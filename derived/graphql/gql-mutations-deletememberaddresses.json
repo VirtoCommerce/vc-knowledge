@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.deleteMemberAddresses",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "deleteMemberAddresses",
+  "signature": "deleteMemberAddresses(command: InputDeleteMemberAddressType!): MemberType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputDeleteMemberAddressType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "MemberType",
+  "referencedTypes": [
+    {
+      "name": "InputDeleteMemberAddressType",
+      "kind": "INPUT_OBJECT"
+    },
+    {
+      "name": "MemberType",
+      "kind": "OBJECT"
+    }
+  ]
+}

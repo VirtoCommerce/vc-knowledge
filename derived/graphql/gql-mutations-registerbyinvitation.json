@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.registerByInvitation",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "registerByInvitation",
+  "signature": "registerByInvitation(command: InputRegisterByInvitationType!): CustomIdentityResultType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputRegisterByInvitationType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "CustomIdentityResultType",
+  "referencedTypes": [
+    {
+      "name": "CustomIdentityResultType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputRegisterByInvitationType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

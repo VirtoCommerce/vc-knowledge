@@ -1,0 +1,11 @@
+{
+  "name": "RemoveAddressFromFavoritesCommandType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "addressId",
+      "type": "String!",
+      "description": null
+    }
+  ]
+}

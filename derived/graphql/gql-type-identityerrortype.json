@@ -1,0 +1,16 @@
+{
+  "name": "IdentityErrorType",
+  "kind": "OBJECT",
+  "fields": [
+    {
+      "name": "code",
+      "type": "String",
+      "description": null
+    },
+    {
+      "name": "description",
+      "type": "String",
+      "description": null
+    }
+  ]
+}

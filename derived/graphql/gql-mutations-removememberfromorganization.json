@@ -1,0 +1,26 @@
+{
+  "coordinate": "Mutations.removeMemberFromOrganization",
+  "role": "mutation",
+  "rootType": "Mutations",
+  "field": "removeMemberFromOrganization",
+  "signature": "removeMemberFromOrganization(command: InputRemoveMemberFromOrganizationType!): ContactType",
+  "args": [
+    {
+      "name": "command",
+      "type": "InputRemoveMemberFromOrganizationType!",
+      "required": true,
+      "description": null
+    }
+  ],
+  "returns": "ContactType",
+  "referencedTypes": [
+    {
+      "name": "ContactType",
+      "kind": "OBJECT"
+    },
+    {
+      "name": "InputRemoveMemberFromOrganizationType",
+      "kind": "INPUT_OBJECT"
+    }
+  ]
+}

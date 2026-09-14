@@ -1,0 +1,21 @@
+{
+  "name": "InputRemoveWishlistItemType",
+  "kind": "INPUT_OBJECT",
+  "fields": [
+    {
+      "name": "lineItemId",
+      "type": "String",
+      "description": "Line item ID to remove"
+    },
+    {
+      "name": "listId",
+      "type": "String!",
+      "description": "List ID"
+    },
+    {
+      "name": "productId",
+      "type": "String",
+      "description": "Line item product ID to remove"
+    }
+  ]
+}
