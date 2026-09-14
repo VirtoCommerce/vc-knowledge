@@ -45,3 +45,15 @@ STEP 5 - read the order back on the storefront. It lands at /account/orders/{id}
 STEP 6 - read it in Admin. Navigating to #!/orders alone does NOT open the Orders module; run 07 had to open the More menu and click Orders from it, then the order row, then the Line items widget to see per-line fields.
 
 An order cannot be deleted once placed - only cancelled.
+
+## Amendments
+
+Corrections to individual steps, each from somebody who walked this and found it wanting.
+The steps above are as first written; read these with them.
+
+- **Step 4** — Selecting a DELIVERY METHOD needs a shipping address on the cart first. Run 08's account had a default address on its organization and the field auto-populated, so this step worked without it being mentioned; an account with no default will find the delivery panel refuses to complete.  
+  _observed vcptcore_stable, platform 3.1007.26 · 2026-09-14T09:15:48.829Z_
+- **Step 4** — This store offers TWO Fixed Rate options, Ground and Air, not the one named here. Both cost 0.00 because neither Rate setting is configured -- see @kb(KB-6AA0D7FB) -- so the choice is recorded but priceless.  
+  _observed vcptcore_stable, platform 3.1007.26 · 2026-09-14T09:15:48.949Z_
+- **Step 4** — The claim that there is no /checkout route is true of checkout ITSELF and not of the whole prefix: /checkout/completed exists as the post-placement landing page. Run 09 observed it. No step depends on this, which is why run 09 confirmed the flow rather than disputing it.  
+  _observed vcptcore_stable, platform 3.1007.26 · 2026-09-14T09:15:49.071Z_
