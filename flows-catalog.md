@@ -10,5 +10,5 @@ and would otherwise be a plausible answer to most questions asked in ordinary wo
 | id | goal | confirmations | disputed | scope |
 |---|---|---|---|---|
 | [`KB-A54C919F`](flows/KB-A54C919F.md) | `make a promotion require a coupon and use the code on the storefront` | 1 | no | surface=admin-ui surface=storefront-ui |
-| [`KB-AFB2D3C5`](flows/KB-AFB2D3C5.md) | `an order placed on the storefront and read back in Admin` | 4 | no | surface=storefront-ui |
-| [`KB-EB228603`](flows/KB-EB228603.md) | `create a percentage-off promotion and see it apply on the storefront` | 2 | no | surface=admin-ui |
+| [`KB-AFB2D3C5`](flows/KB-AFB2D3C5.md) | `an order placed on the storefront and read back in Admin` | 5 | no | surface=storefront-ui |
+| [`KB-EB228603`](flows/KB-EB228603.md) | `create a percentage-off promotion and see it apply on the storefront` | 3 | no | surface=admin-ui |

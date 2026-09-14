@@ -1,6 +1,6 @@
 # Captured
 
-Written by agents through `kb capture`, not generated. 61 active entries, 8 retired.
+Written by agents through `kb capture`, not generated. 65 active entries, 9 retired.
 
 The confirmation count, the disputed flag and the versions each fact has been seen on are read
 out of `evidence[]`. Nothing here declares them.
@@ -17,11 +17,12 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-16AEF0C2`](captured/KB-16AEF0C2.md) | `order operation numbering and parentage` | 1 | no | surface=admin-ui surface=rest |
 | [`KB-18ABE89B`](captured/KB-18ABE89B.md) | `admin order address blade false dirty state` | 1 | no | surface=admin-ui |
 | [`KB-191B1B4C`](captured/KB-191B1B4C.md) | `the master product is a row in its own variations list` | 1 | no | surface=storefront-ui |
+| [`KB-1B230A62`](captured/KB-1B230A62.md) | `cart money is computed on read and persisted only on mutation` _(retired)_ | 1 | no | surface=rest surface=storefront-xapi principal=customer |
 | [`KB-27B4CD10`](captured/KB-27B4CD10.md) | `storefront members Active column reads contact status not account state` | 3 | no | surface=storefront-ui surface=storefront-xapi |
 | [`KB-2C3CA126`](captured/KB-2C3CA126.md) | `what a configurable product's page offers a buyer` _(retired)_ | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-3113CBC1`](captured/KB-3113CBC1.md) | `where a product's configurability is actually stored` | 2 | yes (1) | surface=rest |
 | [`KB-358A70CB`](captured/KB-358A70CB.md) | `storefront order page projection of the shipment` | 2 | no | surface=storefront-ui |
-| [`KB-35A09C64`](captured/KB-35A09C64.md) | `promotion re-evaluation on cart read` | 3 | no | surface=storefront-xapi |
+| [`KB-35A09C64`](captured/KB-35A09C64.md) | `promotion re-evaluation on cart read` | 4 | no | surface=storefront-xapi |
 | [`KB-35F20D97`](captured/KB-35F20D97.md) | `what a coupon code that does not work does to a cart` | 1 | no | surface=storefront-xapi |
 | [`KB-360127D0`](captured/KB-360127D0.md) | `a configuration loses its product and quantity on the way to the order` | 1 | yes (1) | surface=graphql |
 | [`KB-3691AC8D`](captured/KB-3691AC8D.md) | `order-discount-amount-precision` _(retired)_ | 1 | no | surface=rest surface=storefront-xapi reward=percentage-off-cart-subtotal |
@@ -48,11 +49,13 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-80BDCBE9`](captured/KB-80BDCBE9.md) | `shipment lifecycle states and their controls` _(retired)_ | 1 | no | surface=admin-ui |
 | [`KB-8264632C`](captured/KB-8264632C.md) | `how the storefront cart page renders an applied and an unapplied coupon` | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-8A82CF4D`](captured/KB-8A82CF4D.md) | `switching a product's configurability on and off` | 1 | no | surface=rest surface=graphql |
-| [`KB-996BDF08`](captured/KB-996BDF08.md) | `cart-level promotion reward placement` | 3 | no | surface=storefront-xapi |
+| [`KB-996BDF08`](captured/KB-996BDF08.md) | `cart-level promotion reward placement` | 4 | no | surface=storefront-xapi |
 | [`KB-A1B35892`](captured/KB-A1B35892.md) | `a configured product as a cart line item` | 1 | no | surface=graphql principal=customer |
 | [`KB-A3CE7FBA`](captured/KB-A3CE7FBA.md) | `recovering a percentage rate from a discount amount` | 1 | no | surface=storefront-xapi reward=percentage-off-cart-subtotal |
+| [`KB-A4EB3766`](captured/KB-A4EB3766.md) | `the cart record survives checkout, emptied and reused` | 1 | no | surface=rest principal=admin |
 | [`KB-A646D086`](captured/KB-A646D086.md) | `discount-row-withtax-zero-without-tax-provider` | 1 | no | surface=rest taxProvider=none |
 | [`KB-AB35BCDC`](captured/KB-AB35BCDC.md) | `what an order line item stops carrying once the cart becomes an order` | 1 | no | surface=rest surface=graphql |
+| [`KB-AD1FA66B`](captured/KB-AD1FA66B.md) | `where a cart's money lives, and which copy goes stale` | 1 | no | surface=rest surface=storefront-xapi principal=customer |
 | [`KB-B769C7B1`](captured/KB-B769C7B1.md) | `storefront org role and platform user role are one store` | 2 | no | surface=storefront-ui surface=admin-ui |
 | [`KB-BAEBCDA7`](captured/KB-BAEBCDA7.md) | `an organization invitation cannot be cancelled or resent` | 1 | no | surface=storefront-ui surface=admin-ui principal=org-maintainer |
 | [`KB-BC6FC633`](captured/KB-BC6FC633.md) | `admin account role assignment is staged until save` | 1 | no | surface=admin-ui |
@@ -70,9 +73,11 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-E01A9F11`](captured/KB-E01A9F11.md) | `the promotion blade's required-field warnings are not a save gate` | 1 | no | surface=admin-ui surface=rest |
 | [`KB-E17E4CEF`](captured/KB-E17E4CEF.md) | `admin account Status picker cannot represent the values it displays` | 1 | no | surface=admin-ui |
 | [`KB-E367DA11`](captured/KB-E367DA11.md) | `wishlist scope has three values and the roster shows two` | 1 | no | surface=storefront-ui surface=storefront-xapi |
-| [`KB-E7790BF6`](captured/KB-E7790BF6.md) | `where an applied coupon and its reward live on a cart` | 1 | no | surface=storefront-xapi surface=rest principal=customer |
+| [`KB-E7790BF6`](captured/KB-E7790BF6.md) | `where an applied coupon and its reward live on a cart` | 2 | no | surface=storefront-xapi surface=rest principal=customer |
 | [`KB-EAA7BA2F`](captured/KB-EAA7BA2F.md) | `storefront Lists page is an owner-only roster` | 1 | no | surface=storefront-ui |
 | [`KB-EB991080`](captured/KB-EB991080.md) | `configuration section options are filtered by storefront resolvability` | 1 | no | surface=graphql principal=customer |
 | [`KB-EF3CB7FB`](captured/KB-EF3CB7FB.md) | `Login on behalf is authorized on the storefront not in Admin` | 1 | no | surface=admin-ui surface=storefront-ui |
+| [`KB-EF925925`](captured/KB-EF925925.md) | `an open cart page is not re-confirmed before Place order` | 1 | no | surface=storefront-ui principal=customer |
+| [`KB-F027283D`](captured/KB-F027283D.md) | `the discount label a shopper sees is free text nobody keeps honest` | 1 | no | surface=storefront-ui surface=storefront-xapi surface=admin-ui |
 | [`KB-FA724D31`](captured/KB-FA724D31.md) | `storefront Delete member detaches the contact and orphans the account` | 2 | yes (1) | surface=storefront-ui surface=admin-ui |
 | [`KB-FF7E4D5B`](captured/KB-FF7E4D5B.md) | `cart-subtotal-percentage-reward-on-customerorder` | 2 | no | surface=storefront-xapi surface=rest principal=customer reward=percentage-off-cart-subtotal |

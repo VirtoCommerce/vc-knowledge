@@ -182,3 +182,44 @@
 {"kind":"ask","key":"6790025ed1e4","question":"what shape does a chosen configuration take on an order line item","miss":false,"at":"2026-09-14T12:42:40.952Z"}
 {"kind":"use","id":"KB-360127D0","at":"2026-09-14T12:42:40.954Z"}
 {"kind":"use","id":"KB-59E4B5FC","at":"2026-09-14T12:42:40.954Z"}
+{"kind":"ask","key":"7b2b2d0ecb7d","question":"what happens to an existing cart when its promotion is edited","miss":false,"at":"2026-09-14T13:14:10.765Z"}
+{"kind":"use","id":"KB-D992AF44","at":"2026-09-14T13:14:10.767Z"}
+{"kind":"use","id":"KB-E7790BF6","at":"2026-09-14T13:14:10.767Z"}
+{"kind":"ask","key":"67e5a6c226d1","question":"does a cart recalculate its discount when the promotion changes","miss":false,"at":"2026-09-14T13:14:18.510Z"}
+{"kind":"use","id":"KB-D992AF44","at":"2026-09-14T13:14:18.511Z"}
+{"kind":"use","id":"KB-D4A064A5","at":"2026-09-14T13:14:18.511Z"}
+{"kind":"ask","key":"22259148e687","question":"create a percentage-off promotion in the Admin Marketing module","miss":false,"at":"2026-09-14T13:14:25.882Z"}
+{"kind":"ask","key":"672e9493eee2","question":"cart discount stale after promotion rate changed","miss":false,"at":"2026-09-14T13:14:36.112Z"}
+{"kind":"use","id":"KB-35A09C64","at":"2026-09-14T13:14:36.115Z"}
+{"kind":"use","id":"KB-D992AF44","at":"2026-09-14T13:14:36.115Z"}
+{"kind":"use","id":"KB-A3CE7FBA","at":"2026-09-14T13:14:36.115Z"}
+{"kind":"ask","key":"672e9493eee2","question":"cart discount stale after promotion rate changed","miss":false,"at":"2026-09-14T13:14:42.533Z"}
+{"kind":"use","id":"KB-35A09C64","at":"2026-09-14T13:14:42.534Z"}
+{"kind":"use","id":"KB-D992AF44","at":"2026-09-14T13:14:42.534Z"}
+{"kind":"ask","key":"46cc70848d28","question":"does the platform store the cart totals and discount, or are they computed on every read","miss":false,"at":"2026-09-14T13:26:31.043Z"}
+{"kind":"use","id":"KB-0DD47BD1","at":"2026-09-14T13:26:31.045Z"}
+{"kind":"use","id":"KB-D4A064A5","at":"2026-09-14T13:26:31.045Z"}
+{"kind":"settled","id":"KB-35A09C64","at":"2026-09-14T13:27:03.533Z"}
+{"kind":"settled","id":"KB-EB228603","at":"2026-09-14T13:27:04.311Z"}
+{"kind":"ask","key":"4139f85d0139","question":"cancel a customer order from the Admin","miss":false,"at":"2026-09-14T13:33:43.755Z"}
+{"kind":"ask","key":"4053a6faff72","question":"what happens to the shopper's cart record once the order is placed","miss":false,"at":"2026-09-14T13:34:49.475Z"}
+{"kind":"use","id":"KB-AB35BCDC","at":"2026-09-14T13:34:49.477Z"}
+{"kind":"use","id":"KB-1B230A62","at":"2026-09-14T13:34:49.477Z"}
+{"kind":"settled","id":"KB-AFB2D3C5","at":"2026-09-14T13:36:12.675Z"}
+{"kind":"ask","key":"499b5c554830","question":"discount label description free text promotion reward drift","miss":false,"at":"2026-09-14T13:36:18.055Z"}
+{"kind":"use","id":"KB-F027283D","at":"2026-09-14T13:36:18.056Z"}
+{"kind":"use","id":"KB-E7790BF6","at":"2026-09-14T13:36:18.056Z"}
+{"kind":"dropped","key":"7b2b2d0ecb7d","question":"what happens to an existing cart when its promotion is edited","reason":"Found out and written back, but under other wordings, so the key never matched. The answer is now @kb(KB-1B230A62) (a read recomputes, a mutation persists, and the two can disagree) plus @kb(KB-EF925925) (what the shopper's open page does about it). @kb(KB-35A09C64) already held the read half. Nothing about this question is still unanswered.","at":"2026-09-14T13:37:06.652Z"}
+{"kind":"dropped","key":"67e5a6c226d1","question":"does a cart recalculate its discount when the promotion changes","reason":"Answered by @kb(KB-35A09C64), which I confirmed on this deployment: yes, on every read, no cart mutation needed. The base had it; my wording did not reach it.","at":"2026-09-14T13:37:06.759Z"}
+{"kind":"dropped","key":"672e9493eee2","question":"cart discount stale after promotion rate changed","reason":"Same question, the wording that DOES reach @kb(KB-35A09C64). Confirmed rather than captured, so nothing was written back and the row stayed open.","at":"2026-09-14T13:37:06.882Z"}
+{"kind":"dropped","key":"46cc70848d28","question":"does the platform store the cart totals and discount, or are they computed on every read","reason":"Answered and captured as @kb(KB-1B230A62), which I phrased around the promotion rather than around storage, so the key did not match.","at":"2026-09-14T13:37:07.017Z"}
+{"kind":"dropped","key":"4053a6faff72","question":"what happens to the shopper's cart record once the order is placed","reason":"Answered and captured as @kb(KB-A4EB3766): the cart row survives, emptied in place and reused, with a fresh checkoutId. Different question wording on the capture, so no match.","at":"2026-09-14T13:37:07.127Z"}
+{"kind":"dropped","key":"499b5c554830","question":"discount label description free text promotion reward drift","reason":"Answered and captured as @kb(KB-F027283D). This row is my own probe wording, not an asker's sentence; the capture uses the asker's.","at":"2026-09-14T13:37:07.233Z"}
+{"kind":"dropped","key":"4139f85d0139","question":"cancel a customer order from the Admin","reason":"Answered by walking it, and written back where it belongs: as an AMENDMENT to step 6 of the flow @kb(KB-AFB2D3C5), which already said an order can only be cancelled but not where the control is. An amendment writes no capture, so the row could not close itself.","at":"2026-09-14T13:37:07.360Z"}
+{"kind":"settled","id":"KB-E7790BF6","at":"2026-09-14T13:38:58.972Z"}
+{"kind":"ask","key":"76b1435e766d","question":"cart-level promotion reward placement","miss":false,"at":"2026-09-14T13:40:09.850Z"}
+{"kind":"use","id":"KB-996BDF08","at":"2026-09-14T13:40:09.851Z"}
+{"kind":"use","id":"KB-D992AF44","at":"2026-09-14T13:40:09.851Z"}
+{"kind":"use","id":"KB-FF7E4D5B","at":"2026-09-14T13:40:09.851Z"}
+{"kind":"settled","id":"KB-996BDF08","at":"2026-09-14T13:40:23.167Z"}
+{"kind":"dropped","key":"76b1435e766d","question":"cart-level promotion reward placement","reason":"Not a question I needed answered -- I asked by entry title to read KB-996BDF08 before deciding whether my own entries in its consolidate group disagreed with it. They do not: its claim (a RewardCartGetOfRelSubtotal lands only on CartType.discounts, every LineItemType staying at discountTotal 0) held exactly here on both GraphQL and REST, and I confirmed it.","at":"2026-09-14T13:41:08.404Z"}

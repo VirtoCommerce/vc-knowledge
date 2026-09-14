@@ -33,6 +33,11 @@ evidence:
     pin: c2f9c438eba4cd95
     platformVersion: 3.1007.26
     at: 2026-09-14T12:36:19.798Z
+  - method: observation
+    deployment: vcptcore_stable
+    pin: c2f9c438eba4cd95
+    platformVersion: 3.1007.26
+    at: 2026-09-14T13:36:12.651Z
 ---
 
 An order is placed ON THE CART PAGE. This storefront has no /checkout route: delivery method, payment method and Place order are all controls on /cart, and a run that goes looking for a checkout route does not find one. The sequence below is distilled from run 07's tool log (MEASUREMENT-archive/run-07-order-fields), which walked it on 2026-09-13 and spent 78 calls between reaching /cart and seeing the order in Admin, most of them rediscovering these steps.
@@ -64,3 +69,5 @@ The steps above are as first written; read these with them.
   _observed vcptcore_stable, platform 3.1007.26 · 2026-09-14T09:15:49.071Z_
 - **Step 6** — The Orders module DOES have a working deep link: #!/workspace/orders opens the Customer orders blade directly, no More menu needed. The step is right that a bare #!/orders does not. From there, a CONFIGURABLE line needs one more hop than this step describes: the Line items grid shows configured and unconfigured lines identically -- same product name, same SKU, same Qty, differing only in price -- and the configuration is behind clicking the line, then its Configuration widget, then one of Configuration products / texts / files. Configuration products lists the chosen option's name AND quantity, so Admin can answer what was chosen where the storefront's own order query cannot.  
   _2026-09-14T12:36:19.936Z_
+- **Step 6** — The step stops at reading the order, and the closing line says an order can only be cancelled without saying where. Cancelling is on the ORDER BLADE itself, not the grid: open #!/workspace/orders, click the order row, and the blade toolbar carries 'Cancel document' alongside New document / Save / Reset / Delete / Get invoice PDF / Create return. It opens a dialog headed 'Cancel operation' whose body asks 'Are you sure you want to remove this document?' with a free-text 'Enter the reason for removal...' box -- remove is the dialog's word, nothing is removed. Confirm sets status Cancelled, isCancelled true, cancelledDate and cancelReason (the text typed), and leaves every money field and the order number untouched: the order stays in the grid and in the 160-row count. The blade's 'Delete' button is a different act and is the one the flow's closing line warns about.  
+  _observed vcptcore_stable, platform 3.1007.26 · 2026-09-14T13:36:50.681Z_
