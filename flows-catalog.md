@@ -9,4 +9,4 @@ and would otherwise be a plausible answer to most questions asked in ordinary wo
 
 | id | goal | confirmations | disputed | scope |
 |---|---|---|---|---|
-| [`KB-AFB2D3C5`](flows/KB-AFB2D3C5.md) | `an order placed on the storefront and read back in Admin` | 1 | no | surface=storefront-ui |
+| [`KB-AFB2D3C5`](flows/KB-AFB2D3C5.md) | `an order placed on the storefront and read back in Admin` | 2 | no | surface=storefront-ui |

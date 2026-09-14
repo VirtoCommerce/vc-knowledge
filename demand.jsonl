@@ -81,3 +81,12 @@
 {"kind":"ask","key":"ebc41c6965e1","question":"how do I place an order","miss":false,"at":"2026-09-14T07:23:31.735Z"}
 {"kind":"ask","key":"bff3b20b2524","question":"how do I add a variation to the cart","miss":false,"at":"2026-09-14T07:23:31.860Z"}
 {"kind":"ask","key":"d912c5cc5245","question":"where is the checkout","miss":false,"at":"2026-09-14T07:23:31.983Z"}
+{"kind":"ask","key":"b71e843866f1","question":"place an order on the storefront as a signed-in customer","miss":false,"at":"2026-09-14T07:41:09.708Z"}
+{"kind":"ask","key":"2d78a4be1642","question":"what fields does OrderShipmentType have","miss":false,"at":"2026-09-14T07:44:13.569Z"}
+{"kind":"ask","key":"82da69b81321","question":"what fields does OrderShipmentItemType have","miss":false,"at":"2026-09-14T07:44:22.506Z"}
+{"kind":"settled","id":"KB-0DD47BD1","at":"2026-09-14T07:49:38.371Z"}
+{"kind":"settled","id":"KB-AFB2D3C5","at":"2026-09-14T07:51:28.854Z"}
+{"kind":"settled","id":"KB-4CCC2DD6","at":"2026-09-14T07:53:03.670Z"}
+{"kind":"dropped","key":"2d78a4be1642","question":"what fields does OrderShipmentType have","reason":"Answered in full by the derived plane (KB-C37E5F51): the 53-field table was exactly what was needed and every field name in the live storefront response appears in it. Nothing to add -- the gap this row implies does not exist.","at":"2026-09-14T07:54:06.179Z"}
+{"kind":"dropped","key":"82da69b81321","question":"what fields does OrderShipmentItemType have","reason":"Answered in full by the derived plane (KB-C85CD432). What I learned BEYOND the field list -- that the collection is empty on a checkout-created shipment -- is captured separately as KB-4D26A022, under its own question.","at":"2026-09-14T07:54:06.291Z"}
+{"kind":"dropped","key":"b71e843866f1","question":"place an order on the storefront as a signed-in customer","reason":"Answered in full by the flow plane (KB-AFB2D3C5) and confirmed against this deployment; the procedure held end to end. Nothing to add as a new flow.","at":"2026-09-14T07:54:06.416Z"}
