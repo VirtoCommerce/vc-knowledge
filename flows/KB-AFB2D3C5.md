@@ -23,6 +23,11 @@ evidence:
     pin: c2f9c438eba4cd95
     platformVersion: 3.1007.26
     at: 2026-09-14T07:51:28.839Z
+  - method: observation
+    deployment: vcptcore_stable
+    pin: c2f9c438eba4cd95
+    platformVersion: 3.1007.26
+    at: 2026-09-14T08:40:17.485Z
 ---
 
 An order is placed ON THE CART PAGE. This storefront has no /checkout route: delivery method, payment method and Place order are all controls on /cart, and a run that goes looking for a checkout route does not find one. The sequence below is distilled from run 07's tool log (MEASUREMENT-archive/run-07-order-fields), which walked it on 2026-09-13 and spent 78 calls between reaching /cart and seeing the order in Admin, most of them rediscovering these steps.

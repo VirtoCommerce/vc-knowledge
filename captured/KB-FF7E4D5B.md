@@ -23,6 +23,11 @@ evidence:
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-10T19:56:22.148Z
+  - method: observation
+    deployment: vcptcore_stable
+    pin: c2f9c438eba4cd95
+    platformVersion: 3.1007.26
+    at: 2026-09-14T08:41:12.175Z
 ---
 
 A promotion whose reward is a percentage off the cart subtotal is recorded on the resulting CustomerOrder as exactly one entry in the order-level discounts collection, and nowhere else: every line item keeps its full placedPrice with an empty discounts array and discountAmount/discountTotal of 0, the shipment discountAmount is 0, and subTotalDiscount is 0.00 as well - only the order-level discountAmount/discountTotal carry the reduction.

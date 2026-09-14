@@ -90,3 +90,30 @@
 {"kind":"dropped","key":"2d78a4be1642","question":"what fields does OrderShipmentType have","reason":"Answered in full by the derived plane (KB-C37E5F51): the 53-field table was exactly what was needed and every field name in the live storefront response appears in it. Nothing to add -- the gap this row implies does not exist.","at":"2026-09-14T07:54:06.179Z"}
 {"kind":"dropped","key":"82da69b81321","question":"what fields does OrderShipmentItemType have","reason":"Answered in full by the derived plane (KB-C85CD432). What I learned BEYOND the field list -- that the collection is empty on a checkout-created shipment -- is captured separately as KB-4D26A022, under its own question.","at":"2026-09-14T07:54:06.291Z"}
 {"kind":"dropped","key":"b71e843866f1","question":"place an order on the storefront as a signed-in customer","reason":"Answered in full by the flow plane (KB-AFB2D3C5) and confirmed against this deployment; the procedure held end to end. Nothing to add as a new flow.","at":"2026-09-14T07:54:06.416Z"}
+{"kind":"ask","key":"faf40b9f1fd0","question":"where does a placed order record a cart-level discount from a promotion","miss":false,"at":"2026-09-14T08:30:49.615Z"}
+{"kind":"use","id":"KB-FF7E4D5B","at":"2026-09-14T08:30:49.618Z"}
+{"kind":"use","id":"KB-CA4C93E4","at":"2026-09-14T08:30:49.618Z"}
+{"kind":"ask","key":"83947bef19f3","question":"does the shopping cart record the discount percentage rate of an applied promotion","miss":false,"at":"2026-09-14T08:30:57.037Z"}
+{"kind":"use","id":"KB-FF7E4D5B","at":"2026-09-14T08:30:57.039Z"}
+{"kind":"use","id":"KB-D4A064A5","at":"2026-09-14T08:30:57.039Z"}
+{"kind":"ask","key":"22259148e687","question":"create a percentage-off promotion in the Admin Marketing module","miss":true,"at":"2026-09-14T08:31:15.860Z"}
+{"kind":"ask","key":"d814056e6867","question":"place an order on the storefront and read it back in Admin","miss":false,"at":"2026-09-14T08:35:43.565Z"}
+{"kind":"ask","key":"4e6081514004","question":"what fields does the cart DiscountType expose in the storefront GraphQL schema","miss":false,"at":"2026-09-14T08:38:04.153Z"}
+{"kind":"use","id":"KB-358A70CB","at":"2026-09-14T08:38:04.155Z"}
+{"kind":"settled","id":"KB-D4A064A5","at":"2026-09-14T08:40:16.937Z"}
+{"kind":"settled","id":"KB-CA4C93E4","at":"2026-09-14T08:40:17.199Z"}
+{"kind":"settled","id":"KB-AFB2D3C5","at":"2026-09-14T08:40:17.496Z"}
+{"kind":"settled","id":"KB-FF7E4D5B","at":"2026-09-14T08:41:12.218Z"}
+{"kind":"ask","key":"628a9d92b8e4","question":"what happens to an existing cart when a promotion is edited","miss":true,"at":"2026-09-14T08:46:28.919Z"}
+{"kind":"closed","key":"22259148e687","question":"create a percentage-off promotion in the Admin Marketing module","id":"KB-EB228603","at":"2026-09-14T08:57:24.716Z"}
+{"kind":"dropped","key":"faf40b9f1fd0","question":"where does a placed order record a cart-level discount from a promotion","reason":"The base answered it in full - KB-FF7E4D5B and KB-CA4C93E4 between them name every field the order carries. Verified on CO260914-00002 and both confirmed; nothing left to write.","at":"2026-09-14T08:57:37.749Z"}
+{"kind":"dropped","key":"83947bef19f3","question":"does the shopping cart record the discount percentage rate of an applied promotion","reason":"Answered by KB-D4A064A5, confirmed. The rate is nowhere on the cart, but the raw reward amount is, which is the part worth knowing and it was already recorded.","at":"2026-09-14T08:57:37.876Z"}
+{"kind":"dropped","key":"4e6081514004","question":"what fields does the cart DiscountType expose in the storefront GraphQL schema","reason":"Answered by the derived plane (KB-C495274F). A generated type table is the right source for a field list; no observation to add.","at":"2026-09-14T08:57:37.987Z"}
+{"kind":"dropped","key":"d814056e6867","question":"place an order on the storefront and read it back in Admin","reason":"Answered by the flow KB-AFB2D3C5, which walked correctly end to end and is now confirmed a third time.","at":"2026-09-14T08:57:38.106Z"}
+{"kind":"dropped","key":"628a9d92b8e4","question":"what happens to an existing cart when a promotion is edited","reason":"Nothing to capture - the base already held the answer as KB-35A09C64 (promotions are re-evaluated on every cart read). deliver could not reach it from this wording and returned KB MISS; the coordinate hook handed it to me when I called PUT /api/marketing/promotions. A retrieval gap, not a knowledge gap, so an entry would be a duplicate. I reanchored that entry instead - it was filed under Promotion.isActive, which does not exist in this schema.","at":"2026-09-14T08:57:49.537Z"}
+{"kind":"settled","id":"KB-35A09C64","at":"2026-09-14T08:58:02.021Z"}
+{"kind":"settled","id":"KB-358A70CB","at":"2026-09-14T08:58:02.178Z"}
+{"kind":"settled","id":"KB-4982C91F","at":"2026-09-14T08:59:19.860Z"}
+{"kind":"settled","id":"KB-4CCC2DD6","at":"2026-09-14T09:02:33.302Z"}
+{"kind":"settled","id":"KB-6E98AA17","at":"2026-09-14T09:02:33.456Z"}
+{"kind":"ask","key":"628a9d92b8e4","question":"what happens to an existing cart when a promotion is edited","miss":true,"at":"2026-09-14T09:05:49.486Z"}
