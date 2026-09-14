@@ -78,3 +78,6 @@
 {"kind":"use","id":"KB-AB35BCDC","at":"2026-09-14T06:25:53.303Z"}
 {"kind":"use","id":"KB-996BDF08","at":"2026-09-14T06:25:53.303Z"}
 {"kind":"use","id":"KB-FF7E4D5B","at":"2026-09-14T06:25:53.303Z"}
+{"kind":"ask","key":"ebc41c6965e1","question":"how do I place an order","miss":false,"at":"2026-09-14T07:23:31.735Z"}
+{"kind":"ask","key":"bff3b20b2524","question":"how do I add a variation to the cart","miss":false,"at":"2026-09-14T07:23:31.860Z"}
+{"kind":"ask","key":"d912c5cc5245","question":"where is the checkout","miss":false,"at":"2026-09-14T07:23:31.983Z"}

@@ -2,12 +2,26 @@
 
 The knowledge base for Virto Commerce. Created empty, on purpose.
 
-Two planes, and the difference between them is the whole design. The **derived** plane is projected
-from a running deployment and *regenerated*, so it cannot rot and nothing may hand-edit it. The
-**experiential** plane holds what an agent learned by doing, is *written* through a door that
-enforces the shape, and has a lifecycle. They live in separate directories and separate indexes,
-because a regenerated corpus that is byte-gated and a written corpus that grows cannot share a file
-without one of them breaking the other's gate on every change.
+Three planes, and the differences between them are the whole design.
+
+The **derived** plane is projected from a running deployment and *regenerated*, so it cannot rot and
+nothing may hand-edit it. The **experiential** plane holds what an agent learned by doing, is
+*written* through a door that enforces the shape, and has a lifecycle. The **flow** plane holds
+procedures — how to get something done, in order — written through the same door and served by a
+different verb.
+
+The first two are apart because a regenerated corpus that is byte-gated and a written corpus that
+grows cannot share a file without one of them breaking the other's gate on every change.
+
+The third is apart for a measured reason. A procedure names the generic nouns of a whole journey —
+cart, order, payment, product, search — so in one ranked list with facts it is a plausible answer to
+most questions asked in ordinary words: one flow entry, written as an ordinary capture, cleared the
+relevance floor on **18 of 34** replay rows where four comparably long *facts* cleared 6–7, and took
+first place on questions it had nothing to do with. It is not a length effect and no threshold
+reaches it. A separate index would not have been enough either — the first two planes already have
+separate indexes and still compete, because `kb ask` merges both by score. What removes the
+competition is a separate **question**: `kb ask` asks what is true and never sees a flow, `kb how`
+asks what to do and sees nothing else.
 
 | path | plane | what |
 |---|---|---|
@@ -20,6 +34,9 @@ without one of them breaking the other's gate on every change.
 | `captured/` | experiential | entries written by agents through `kb capture` |
 | `captured-index.json` | experiential | retrieval index over the **active** captured entries |
 | `captured-catalog.md` | experiential | one line per captured entry, retired ones included |
+| `flows/` | flow | procedures written through `kb capture --flow`, served by `kb how` |
+| `flows-index.json` | flow | retrieval index over the **active** flows |
+| `flows-catalog.md` | flow | one line per flow, retired ones included |
 
 `kb extract` wipes and rewrites everything on the derived plane. It never touches `captured/`, and
 `kb check` never compares it — a capture must not be able to fail a gate that exists to police the
