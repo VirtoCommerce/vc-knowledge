@@ -28,6 +28,11 @@ evidence:
     pin: c2f9c438eba4cd95
     platformVersion: 3.1007.26
     at: 2026-09-14T08:40:17.485Z
+  - method: observation
+    deployment: vcptcore_stable
+    pin: c2f9c438eba4cd95
+    platformVersion: 3.1007.26
+    at: 2026-09-14T12:36:19.798Z
 ---
 
 An order is placed ON THE CART PAGE. This storefront has no /checkout route: delivery method, payment method and Place order are all controls on /cart, and a run that goes looking for a checkout route does not find one. The sequence below is distilled from run 07's tool log (MEASUREMENT-archive/run-07-order-fields), which walked it on 2026-09-13 and spent 78 calls between reaching /cart and seeing the order in Admin, most of them rediscovering these steps.
@@ -57,3 +62,5 @@ The steps above are as first written; read these with them.
   _observed vcptcore_stable, platform 3.1007.26 · 2026-09-14T09:15:48.949Z_
 - **Step 4** — The claim that there is no /checkout route is true of checkout ITSELF and not of the whole prefix: /checkout/completed exists as the post-placement landing page. Run 09 observed it. No step depends on this, which is why run 09 confirmed the flow rather than disputing it.  
   _observed vcptcore_stable, platform 3.1007.26 · 2026-09-14T09:15:49.071Z_
+- **Step 6** — The Orders module DOES have a working deep link: #!/workspace/orders opens the Customer orders blade directly, no More menu needed. The step is right that a bare #!/orders does not. From there, a CONFIGURABLE line needs one more hop than this step describes: the Line items grid shows configured and unconfigured lines identically -- same product name, same SKU, same Qty, differing only in price -- and the configuration is behind clicking the line, then its Configuration widget, then one of Configuration products / texts / files. Configuration products lists the chosen option's name AND quantity, so Admin can answer what was chosen where the storefront's own order query cannot.  
+  _2026-09-14T12:36:19.936Z_

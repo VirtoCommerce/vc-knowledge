@@ -147,3 +147,38 @@
 {"kind":"use","id":"KB-E7790BF6","at":"2026-09-14T11:33:45.372Z"}
 {"kind":"use","id":"KB-8264632C","at":"2026-09-14T11:33:45.372Z"}
 {"kind":"use","id":"KB-C1024558","at":"2026-09-14T11:33:45.372Z"}
+{"kind":"ask","key":"6f1eb4798248","question":"what does creating a product configuration require and can one be deleted","miss":false,"at":"2026-09-14T12:06:17.752Z"}
+{"kind":"use","id":"KB-3113CBC1","at":"2026-09-14T12:06:17.753Z"}
+{"kind":"ask","key":"464166b496f9","question":"what fields does a ProductConfiguration have and what does a configuration section reference","miss":false,"at":"2026-09-14T12:06:26.859Z"}
+{"kind":"settled","id":"KB-3113CBC1","at":"2026-09-14T12:07:18.382Z"}
+{"kind":"ask","key":"6c551edf93ad","question":"how do I search the catalog for products by keyword","miss":false,"at":"2026-09-14T12:08:01.241Z"}
+{"kind":"use","id":"KB-C440D4E3","at":"2026-09-14T12:08:01.243Z"}
+{"kind":"settled","id":"KB-C440D4E3","at":"2026-09-14T12:08:22.814Z"}
+{"kind":"ask","key":"f024cc10a151","question":"what does the storefront return for a configurable product's sections and options","miss":false,"at":"2026-09-14T12:19:40.555Z"}
+{"kind":"use","id":"KB-3113CBC1","at":"2026-09-14T12:19:40.556Z"}
+{"kind":"ask","key":"35bfafe676a2","question":"ConfigurationSectionType fields","miss":false,"at":"2026-09-14T12:19:53.539Z"}
+{"kind":"ask","key":"d794205d361d","question":"ConfigurationLineItemType fields","miss":false,"at":"2026-09-14T12:20:07.678Z"}
+{"kind":"ask","key":"e6ac9846d4b6","question":"what does a cart line item's configurationItems hold","miss":false,"at":"2026-09-14T12:27:14.644Z"}
+{"kind":"ask","key":"ac52f29c238e","question":"CartConfigurationItemType fields","miss":false,"at":"2026-09-14T12:27:22.754Z"}
+{"kind":"ask","key":"8752d3ed3d68","question":"OrderConfigurationItemType fields","miss":false,"at":"2026-09-14T12:27:23.033Z"}
+{"kind":"settled","id":"KB-360127D0","at":"2026-09-14T12:30:56.052Z"}
+{"kind":"closed","key":"4dd6bca5edfa","question":"how does a configurable product become a line item in the cart","id":"KB-A1B35892","at":"2026-09-14T12:31:26.069Z"}
+{"kind":"closed","key":"2bbfcba31f62","question":"how does a configurable product become a line item on an order","id":"KB-59E4B5FC","at":"2026-09-14T12:31:42.083Z"}
+{"kind":"ask","key":"c293016c1c17","question":"cancel an order I placed on the storefront","miss":false,"at":"2026-09-14T12:35:10.731Z"}
+{"kind":"settled","id":"KB-AFB2D3C5","at":"2026-09-14T12:36:19.826Z"}
+{"kind":"ask","key":"09e7465a80d5","question":"what happens to an order's shipment and payment when the order is cancelled","miss":false,"at":"2026-09-14T12:37:51.188Z"}
+{"kind":"closed","key":"09e7465a80d5","question":"what happens to an order's shipment and payment when the order is cancelled","id":"KB-469AA660","at":"2026-09-14T12:38:06.997Z"}
+{"kind":"settled","id":"KB-3113CBC1","at":"2026-09-14T12:39:22.419Z"}
+{"kind":"dropped","key":"35bfafe676a2","question":"ConfigurationSectionType fields","reason":"Pure contract lookup. The derived plane answered it exactly and completely (KB-89FB94FD); nothing was left over to write.","at":"2026-09-14T12:40:35.078Z"}
+{"kind":"dropped","key":"d794205d361d","question":"ConfigurationLineItemType fields","reason":"Pure contract lookup, answered exactly by KB-4CA5867D. The one thing worth adding -- that extendedPrice is listPrice times the option's configured quantity -- went into KB-A1B35892 instead, where a reader looking at a cart will meet it.","at":"2026-09-14T12:40:35.201Z"}
+{"kind":"dropped","key":"ac52f29c238e","question":"CartConfigurationItemType fields","reason":"Answered exactly by KB-9A411BDB. The gap it left -- that the STORED CartConfigurationItem has 16 fields where the GraphQL type shows 8 -- is recorded in KB-A1B35892.","at":"2026-09-14T12:40:35.346Z"}
+{"kind":"dropped","key":"8752d3ed3d68","question":"OrderConfigurationItemType fields","reason":"Answered exactly by KB-4869F834. What the base got wrong was not this field list but the conclusion another entry drew from it; that is handled by the dispute on KB-360127D0 and by KB-59E4B5FC.","at":"2026-09-14T12:40:35.491Z"}
+{"kind":"dropped","key":"e6ac9846d4b6","question":"what does a cart line item's configurationItems hold","reason":"Same coordinate as the CartConfigurationItemType row; KB-A1B35892 carries what I learned, under the demand wording run 07 used.","at":"2026-09-14T12:40:35.613Z"}
+{"kind":"dropped","key":"f024cc10a151","question":"what does the storefront return for a configurable product's sections and options","reason":"The shape half was answered by the derived plane. The behaviour half -- options silently filtered to storefront-resolvable products -- is captured as KB-EB991080 under its own question wording, which is where somebody hitting an empty section will look.","at":"2026-09-14T12:40:35.751Z"}
+{"kind":"dropped","key":"6c551edf93ad","question":"how do I search the catalog for products by keyword","reason":"KB-C440D4E3 answered it and I confirmed it. One detail it does not mention -- listentries keyword matches the NAME, not the code -- is too small to be worth an entry and too local to be a mechanism.","at":"2026-09-14T12:40:35.889Z"}
+{"kind":"dropped","key":"464166b496f9","question":"what fields does a ProductConfiguration have and what does a configuration section reference","reason":"The REST ProductConfiguration shape is on the deployment's own swagger, which is a better source than a hand-written entry would be and cannot drift from it. What is NOT derivable -- that the sections a Product section offers get filtered, and that nothing can delete the entity -- is captured as KB-EB991080 and KB-7AB0B13E.","at":"2026-09-14T12:40:36.032Z"}
+{"kind":"dropped","key":"6f1eb4798248","question":"what does creating a product configuration require and can one be deleted","reason":"Half of it is the swagger (see the sibling row). The half that mattered -- can one be deleted, no -- is captured as KB-7AB0B13E under its own question wording.","at":"2026-09-14T12:40:36.177Z"}
+{"kind":"dropped","key":"c293016c1c17","question":"cancel an order I placed on the storefront","reason":"kb how has no cancellation flow and I am not adding one: cancelling is a single toolbar command on the Admin order blade and needs no procedure. What was worth recording is what cancelling does NOT do, which is KB-469AA660.","at":"2026-09-14T12:40:36.313Z"}
+{"kind":"ask","key":"6790025ed1e4","question":"what shape does a chosen configuration take on an order line item","miss":false,"at":"2026-09-14T12:42:40.952Z"}
+{"kind":"use","id":"KB-360127D0","at":"2026-09-14T12:42:40.954Z"}
+{"kind":"use","id":"KB-59E4B5FC","at":"2026-09-14T12:42:40.954Z"}
