@@ -223,3 +223,8 @@
 {"kind":"use","id":"KB-FF7E4D5B","at":"2026-09-14T13:40:09.851Z"}
 {"kind":"settled","id":"KB-996BDF08","at":"2026-09-14T13:40:23.167Z"}
 {"kind":"dropped","key":"76b1435e766d","question":"cart-level promotion reward placement","reason":"Not a question I needed answered -- I asked by entry title to read KB-996BDF08 before deciding whether my own entries in its consolidate group disagreed with it. They do not: its claim (a RewardCartGetOfRelSubtotal lands only on CartType.discounts, every LineItemType staying at discountTotal 0) held exactly here on both GraphQL and REST, and I confirmed it.","at":"2026-09-14T13:41:08.404Z"}
+{"kind":"ask","key":"dd8ea6cf4b53","question":"create a percentage-off promotion in the Marketing module and make it active","miss":false,"at":"2026-09-15T09:13:24.221Z"}
+{"kind":"ask","key":"c061d8204ffd","question":"place an order on the B2B storefront checkout and read the order totals","miss":false,"at":"2026-09-15T09:13:28.978Z"}
+{"kind":"ask","key":"2562676ac870","question":"why is shipping cost zero and how is tax calculated on orders in this store","miss":false,"at":"2026-09-15T09:13:35.129Z"}
+{"kind":"use","id":"KB-A646D086","at":"2026-09-15T09:13:35.131Z"}
+{"kind":"use","id":"KB-6AA0D7FB","at":"2026-09-15T09:13:35.131Z"}
