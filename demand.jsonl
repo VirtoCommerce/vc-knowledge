@@ -265,3 +265,14 @@
 {"kind":"settled","id":"KB-6AA0D7FB","at":"2026-09-15T13:44:38.678Z"}
 {"kind":"ask","key":"b92378ebc8a2","question":"which REST endpoints list organization members and security accounts","miss":false,"at":"2026-09-15T14:19:48.073Z"}
 {"kind":"settled","id":"KB-4D082C89","at":"2026-09-15T16:21:18.795Z"}
+{"kind":"ask","key":"23c82d04e04a","question":"What does the Active status column on the storefront Company Members page report? How is member status computed?","miss":false,"at":"2026-09-15T17:28:37.458Z"}
+{"kind":"use","id":"KB-27B4CD10","at":"2026-09-15T17:28:37.476Z"}
+{"kind":"use","id":"KB-4B889114","at":"2026-09-15T17:28:37.476Z"}
+{"kind":"use","id":"KB-FA724D31","at":"2026-09-15T17:28:37.476Z"}
+{"kind":"ask","key":"d00dec43d6b2","question":"Does a security account with status PendingApproval or emailConfirmed false block storefront sign-in? What error does the user see?","miss":false,"at":"2026-09-15T17:34:42.948Z"}
+{"kind":"use","id":"KB-4D082C89","at":"2026-09-15T17:34:42.965Z"}
+{"kind":"use","id":"KB-27B4CD10","at":"2026-09-15T17:34:42.965Z"}
+{"kind":"use","id":"KB-DA14E8B7","at":"2026-09-15T17:34:42.965Z"}
+{"kind":"settled","id":"KB-27B4CD10","at":"2026-09-15T17:52:25.814Z"}
+{"kind":"settled","id":"KB-4B889114","at":"2026-09-15T17:52:26.042Z"}
+{"kind":"settled","id":"KB-4D082C89","at":"2026-09-15T17:53:02.414Z"}

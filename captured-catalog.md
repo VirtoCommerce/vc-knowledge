@@ -1,6 +1,6 @@
 # Captured
 
-Written by agents through `kb capture`, not generated. 66 active entries, 11 retired.
+Written by agents through `kb capture`, not generated. 67 active entries, 11 retired.
 
 The confirmation count, the disputed flag and the versions each fact has been seen on are read
 out of `evidence[]`. Nothing here declares them.
@@ -19,7 +19,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-18ABE89B`](captured/KB-18ABE89B.md) | `admin order address blade false dirty state` | 1 | no | surface=admin-ui |
 | [`KB-191B1B4C`](captured/KB-191B1B4C.md) | `the master product is a row in its own variations list` | 1 | no | surface=storefront-ui |
 | [`KB-1B230A62`](captured/KB-1B230A62.md) | `cart money is computed on read and persisted only on mutation` _(retired)_ | 1 | no | surface=rest surface=storefront-xapi principal=customer |
-| [`KB-27B4CD10`](captured/KB-27B4CD10.md) | `storefront members Active column reads contact status not account state` | 3 | no | surface=storefront-ui surface=storefront-xapi |
+| [`KB-27B4CD10`](captured/KB-27B4CD10.md) | `storefront members Active column reads contact status not account state` | 4 | no | surface=storefront-ui surface=storefront-xapi |
 | [`KB-2C3CA126`](captured/KB-2C3CA126.md) | `what a configurable product's page offers a buyer` _(retired)_ | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-3113CBC1`](captured/KB-3113CBC1.md) | `where a product's configurability is actually stored` | 2 | yes (1) | surface=rest |
 | [`KB-358A70CB`](captured/KB-358A70CB.md) | `storefront order page projection of the shipment` | 2 | no | surface=storefront-ui |
@@ -32,10 +32,10 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-48CF7684`](captured/KB-48CF7684.md) | `wishlist sharing key is minted at creation and never rotates` _(retired)_ | 1 | no | surface=storefront-ui surface=storefront-xapi |
 | [`KB-4982C91F`](captured/KB-4982C91F.md) | `order-discount-amount-rounding-split` | 2 | no | surface=rest surface=admin-ui reward=percentage-off-cart-subtotal |
 | [`KB-4A8606CA`](captured/KB-4A8606CA.md) | `an abandoned invitation can leave an account nothing can delete` | 1 | no | surface=rest surface=admin-ui surface=storefront-ui |
-| [`KB-4B889114`](captured/KB-4B889114.md) | `company members Active column vs account locked state` | 3 | no | surface=storefront-ui surface=admin-ui principal=org-maintainer |
+| [`KB-4B889114`](captured/KB-4B889114.md) | `company members Active column vs account locked state` | 4 | no | surface=storefront-ui surface=admin-ui principal=org-maintainer |
 | [`KB-4C5627CE`](captured/KB-4C5627CE.md) | `shipment lifecycle states and what moves them` | 1 | no | surface=admin-ui |
 | [`KB-4CCC2DD6`](captured/KB-4CCC2DD6.md) | `what Cancel document on an order actually cancels` | 3 | no | surface=admin-ui |
-| [`KB-4D082C89`](captured/KB-4D082C89.md) | `a pending invitation is a locked account with no status` | 2 | yes (2) | surface=storefront-ui surface=admin-ui |
+| [`KB-4D082C89`](captured/KB-4D082C89.md) | `a pending invitation is a locked account with no status` | 2 | yes (3) | surface=storefront-ui surface=admin-ui |
 | [`KB-4D26A022`](captured/KB-4D26A022.md) | `order shipment item allocation` | 1 | no | surface=admin-ui surface=rest |
 | [`KB-4E45A8BA`](captured/KB-4E45A8BA.md) | `admin contact Status picker cannot represent Invited or Locked` | 1 | no | surface=admin-ui |
 | [`KB-59E4B5FC`](captured/KB-59E4B5FC.md) | `a configured product as an order line item` | 1 | no | surface=rest surface=graphql |
@@ -61,6 +61,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-B769C7B1`](captured/KB-B769C7B1.md) | `storefront org role and platform user role are one store` | 2 | no | surface=storefront-ui surface=admin-ui |
 | [`KB-BAEBCDA7`](captured/KB-BAEBCDA7.md) | `an organization invitation cannot be cancelled or resent` | 1 | no | surface=storefront-ui surface=admin-ui principal=org-maintainer |
 | [`KB-BC6FC633`](captured/KB-BC6FC633.md) | `admin account role assignment is staged until save` | 1 | no | surface=admin-ui |
+| [`KB-BCA7468D`](captured/KB-BCA7468D.md) | `two endpoints disagree about whether a password hash is a secret` | 1 | no | surface=rest |
 | [`KB-BEA58773`](captured/KB-BEA58773.md) | `what the storefront cart page can and cannot say about a coupon` _(retired)_ | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-C1024558`](captured/KB-C1024558.md) | `telling a coupon-driven discount from an automatic one on a cart` | 1 | no | surface=storefront-xapi reward=percentage-off-cart-subtotal |
 | [`KB-C440D4E3`](captured/KB-C440D4E3.md) | `there is no product search route under /api/catalog/products` | 2 | no | surface=rest |
