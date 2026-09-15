@@ -237,3 +237,29 @@
 {"kind":"ask","key":"421b5663485d","question":"what does the customer order REST API return for an order","miss":false,"at":"2026-09-15T09:44:13.667Z"}
 {"kind":"ask","key":"14253fde68a9","question":"sign in to the Admin platform UI","miss":true,"at":"2026-09-15T09:44:13.805Z"}
 {"kind":"ask","key":"33c72f63cb22","question":"which endpoints does this deployment serve under /api/tax","miss":false,"at":"2026-09-15T09:53:47.125Z"}
+{"kind":"ask","key":"327d862ff9c9","question":"order discountAmountWithTax zero while discountAmount non-zero","miss":false,"at":"2026-09-15T13:12:08.932Z"}
+{"kind":"use","id":"KB-A646D086","at":"2026-09-15T13:12:08.950Z"}
+{"kind":"ask","key":"fe87e9651961","question":"order shippingTotal zero although shipping method selected fixed rate ground","miss":false,"at":"2026-09-15T13:12:16.452Z"}
+{"kind":"use","id":"KB-6AA0D7FB","at":"2026-09-15T13:12:16.454Z"}
+{"kind":"ask","key":"894c20454b36","question":"taxTotal zero taxDetails empty no tax provider configured store","miss":false,"at":"2026-09-15T13:12:18.234Z"}
+{"kind":"use","id":"KB-A646D086","at":"2026-09-15T13:12:18.236Z"}
+{"kind":"ask","key":"8a20a6fd05b6","question":"Which endpoints does this deployment serve under /api/order","miss":false,"at":"2026-09-15T13:13:08.590Z"}
+{"kind":"ask","key":"48de3dfa0464","question":"cancelling an order does not cancel its shipment status stays New","miss":false,"at":"2026-09-15T13:14:58.216Z"}
+{"kind":"use","id":"KB-469AA660","at":"2026-09-15T13:14:58.218Z"}
+{"kind":"use","id":"KB-6E98AA17","at":"2026-09-15T13:14:58.218Z"}
+{"kind":"use","id":"KB-4CCC2DD6","at":"2026-09-15T13:14:58.218Z"}
+{"kind":"ask","key":"1a3b91ee2058","question":"order paymentTotal is zero but inPayments sum is the order total","miss":false,"at":"2026-09-15T13:14:58.409Z"}
+{"kind":"use","id":"KB-0DD47BD1","at":"2026-09-15T13:14:58.411Z"}
+{"kind":"ask","key":"ef50db875def","question":"promotion reward amount does not match the promotion name","miss":false,"at":"2026-09-15T13:14:58.612Z"}
+{"kind":"use","id":"KB-D4A064A5","at":"2026-09-15T13:14:58.614Z"}
+{"kind":"use","id":"KB-E01A9F11","at":"2026-09-15T13:14:58.614Z"}
+{"kind":"ask","key":"5ca8c0c5736a","question":"Which endpoints does this deployment serve under /api/marketing/promotions","miss":false,"at":"2026-09-15T13:15:49.032Z"}
+{"kind":"ask","key":"0553a6bda34e","question":"how does the platform decide which promotions combine best reward policy","miss":true,"at":"2026-09-15T13:17:57.643Z"}
+{"kind":"ask","key":"9173af4ae349","question":"why did only one promotion apply when two were active and neither is exclusive","miss":false,"at":"2026-09-15T13:17:57.826Z"}
+{"kind":"use","id":"KB-8264632C","at":"2026-09-15T13:17:57.827Z"}
+{"kind":"use","id":"KB-35F20D97","at":"2026-09-15T13:17:57.827Z"}
+{"kind":"use","id":"KB-E7790BF6","at":"2026-09-15T13:17:57.827Z"}
+{"kind":"ask","key":"36155bb23f1b","question":"Which endpoints does this deployment serve under /api/platform/settings","miss":false,"at":"2026-09-15T13:18:08.040Z"}
+{"kind":"ask","key":"33c72f63cb22","question":"Which endpoints does this deployment serve under /api/tax","miss":false,"at":"2026-09-15T13:18:38.381Z"}
+{"kind":"ask","key":"4ac714d3f451","question":"What fields does the PaymentIn schema have in the order REST API","miss":false,"at":"2026-09-15T13:20:42.774Z"}
+{"kind":"settled","id":"KB-6AA0D7FB","at":"2026-09-15T13:44:38.678Z"}
