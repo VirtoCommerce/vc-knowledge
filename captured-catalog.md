@@ -35,7 +35,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-4B889114`](captured/KB-4B889114.md) | `company members Active column vs account locked state` | 3 | no | surface=storefront-ui surface=admin-ui principal=org-maintainer |
 | [`KB-4C5627CE`](captured/KB-4C5627CE.md) | `shipment lifecycle states and what moves them` | 1 | no | surface=admin-ui |
 | [`KB-4CCC2DD6`](captured/KB-4CCC2DD6.md) | `what Cancel document on an order actually cancels` | 3 | no | surface=admin-ui |
-| [`KB-4D082C89`](captured/KB-4D082C89.md) | `a pending invitation is a locked account with no status` | 2 | yes (1) | surface=storefront-ui surface=admin-ui |
+| [`KB-4D082C89`](captured/KB-4D082C89.md) | `a pending invitation is a locked account with no status` | 2 | yes (2) | surface=storefront-ui surface=admin-ui |
 | [`KB-4D26A022`](captured/KB-4D26A022.md) | `order shipment item allocation` | 1 | no | surface=admin-ui surface=rest |
 | [`KB-4E45A8BA`](captured/KB-4E45A8BA.md) | `admin contact Status picker cannot represent Invited or Locked` | 1 | no | surface=admin-ui |
 | [`KB-59E4B5FC`](captured/KB-59E4B5FC.md) | `a configured product as an order line item` | 1 | no | surface=rest surface=graphql |
