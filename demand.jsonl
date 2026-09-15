@@ -228,3 +228,12 @@
 {"kind":"ask","key":"2562676ac870","question":"why is shipping cost zero and how is tax calculated on orders in this store","miss":false,"at":"2026-09-15T09:13:35.129Z"}
 {"kind":"use","id":"KB-A646D086","at":"2026-09-15T09:13:35.131Z"}
 {"kind":"use","id":"KB-6AA0D7FB","at":"2026-09-15T09:13:35.131Z"}
+{"kind":"ask","key":"dd8ea6cf4b53","question":"create a percentage-off promotion in the Marketing module and make it active","miss":false,"at":"2026-09-15T09:43:49.922Z"}
+{"kind":"ask","key":"0d6b513d1a53","question":"place an order on the B2B storefront: add products to cart and complete checkout","miss":false,"at":"2026-09-15T09:43:55.584Z"}
+{"kind":"ask","key":"7a28a71e07aa","question":"call the platform REST API for a customer order as an authenticated admin","miss":false,"at":"2026-09-15T09:44:00.607Z"}
+{"kind":"ask","key":"961c78d3c19b","question":"why is the shipping cost zero on this store","miss":false,"at":"2026-09-15T09:44:06.845Z"}
+{"kind":"use","id":"KB-6AA0D7FB","at":"2026-09-15T09:44:06.847Z"}
+{"kind":"ask","key":"2a76e0bb6595","question":"how is tax calculated on orders in this deployment","miss":true,"at":"2026-09-15T09:44:07.019Z"}
+{"kind":"ask","key":"421b5663485d","question":"what does the customer order REST API return for an order","miss":false,"at":"2026-09-15T09:44:13.667Z"}
+{"kind":"ask","key":"14253fde68a9","question":"sign in to the Admin platform UI","miss":true,"at":"2026-09-15T09:44:13.805Z"}
+{"kind":"ask","key":"33c72f63cb22","question":"which endpoints does this deployment serve under /api/tax","miss":false,"at":"2026-09-15T09:53:47.125Z"}
