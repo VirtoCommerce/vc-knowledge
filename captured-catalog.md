@@ -1,6 +1,6 @@
 # Captured
 
-Written by agents through `kb capture`, not generated. 82 active entries, 12 retired.
+Written by agents through `kb capture`, not generated. 88 active entries, 12 retired.
 
 The confirmation count, the disputed flag and the versions each fact has been seen on are read
 out of `evidence[]`. Nothing here declares them.
@@ -14,7 +14,7 @@ it: 27 of 78 touch more than one, so these are tags, not folders.
 Within a section: disputed first, then by independent confirmations. A reader who stops early
 should stop on what most parties have seen, and on what somebody disagrees with.
 
-## members & accounts — 24
+## members & accounts — 25
 
 | id | subject | confirmations | attested | disputed | scope | also |
 |---|---|---|---|---|---|---|
@@ -32,6 +32,7 @@ should stop on what most parties have seen, and on what somebody disagrees with.
 | [`KB-4E45A8BA`](captured/KB-4E45A8BA.md) | `admin contact Status picker cannot represent Invited or Locked` | 1 | no | no | surface=admin-ui | — |
 | [`KB-6CC1EFE6`](captured/KB-6CC1EFE6.md) | `deleting a security account leaves the contact behind` | 1 | no | no | surface=admin-ui | — |
 | [`KB-82111688`](captured/KB-82111688.md) | `the storefront members Status filter finds nobody in a state the roster is full of` | 1 | yes | no | surface=storefront-ui | — |
+| [`KB-8C3E463D`](captured/KB-8C3E463D.md) | `which clock an Admin timestamp is in` | 1 | no | no | surface=admin-ui surface=rest | orders & shipments |
 | [`KB-ADFD93AB`](captured/KB-ADFD93AB.md) | `org-specific pricing runs through the organization's user groups, not through organizationId` | 1 | no | no | surface=admin-ui surface=storefront-ui principal=org-member | — |
 | [`KB-BAEBCDA7`](captured/KB-BAEBCDA7.md) | `an organization invitation cannot be cancelled or resent` | 1 | no | no | surface=storefront-ui surface=admin-ui principal=org-maintainer | — |
 | [`KB-BC6FC633`](captured/KB-BC6FC633.md) | `admin account role assignment is staged until save` | 1 | no | no | surface=admin-ui | — |
@@ -43,48 +44,53 @@ should stop on what most parties have seen, and on what somebody disagrees with.
 | [`KB-EF3CB7FB`](captured/KB-EF3CB7FB.md) | `Login on behalf is authorized on the storefront not in Admin` | 1 | no | no | surface=admin-ui surface=storefront-ui | — |
 | [`KB-BF730613`](captured/KB-BF730613.md) | `lockoutEnd has three meaningful values, and one of them looks like the opposite of what it means` | 0 | yes | no | surface=rest | — |
 
-## promotions & discounts — 19
+## promotions & discounts — 22
 
 | id | subject | confirmations | attested | disputed | scope | also |
 |---|---|---|---|---|---|---|
 | [`KB-35A09C64`](captured/KB-35A09C64.md) | `promotion re-evaluation on cart read` | 5 | no | no | surface=storefront-xapi | cart & checkout |
+| [`KB-4982C91F`](captured/KB-4982C91F.md) | `order-discount-amount-rounding-split` | 4 | yes | no | surface=rest surface=admin-ui reward=percentage-off-cart-subtotal | orders & shipments |
 | [`KB-996BDF08`](captured/KB-996BDF08.md) | `cart-level promotion reward placement` | 4 | no | no | surface=storefront-xapi | cart & checkout, orders & shipments |
-| [`KB-4982C91F`](captured/KB-4982C91F.md) | `order-discount-amount-rounding-split` | 3 | yes | no | surface=rest surface=admin-ui reward=percentage-off-cart-subtotal | orders & shipments |
 | [`KB-5ADBFB34`](captured/KB-5ADBFB34.md) | `only the largest cart-subtotal promotion applies, whatever isExclusive says` | 3 | yes | no | surface=rest | cart & checkout |
+| [`KB-CA4C93E4`](captured/KB-CA4C93E4.md) | `discount-rate-not-persisted-on-order` | 3 | yes | no | surface=storefront-xapi surface=rest principal=customer | orders & shipments |
 | [`KB-D4A064A5`](captured/KB-D4A064A5.md) | `promotion discount rounding on the cart` | 3 | no | no | surface=storefront-xapi | cart & checkout |
-| [`KB-CA4C93E4`](captured/KB-CA4C93E4.md) | `discount-rate-not-persisted-on-order` | 2 | no | no | surface=storefront-xapi surface=rest principal=customer | orders & shipments |
+| [`KB-F1542157`](captured/KB-F1542157.md) | `an order-level discount is not allocated to the line items` | 3 | yes | no | surface=admin-ui | orders & shipments |
+| [`KB-D992AF44`](captured/KB-D992AF44.md) | `order discount row is a snapshot, not a live reference` | 2 | yes | no | surface=rest surface=storefront-xapi surface=admin-ui | orders & shipments |
 | [`KB-E7790BF6`](captured/KB-E7790BF6.md) | `where an applied coupon and its reward live on a cart` | 2 | no | no | surface=storefront-xapi surface=rest principal=customer | cart & checkout |
-| [`KB-F1542157`](captured/KB-F1542157.md) | `an order-level discount is not allocated to the line items` | 2 | yes | no | surface=admin-ui | orders & shipments |
+| [`KB-F027283D`](captured/KB-F027283D.md) | `the discount label a shopper sees is free text nobody keeps honest` | 2 | yes | no | surface=storefront-ui surface=storefront-xapi surface=admin-ui | — |
 | [`KB-FF7E4D5B`](captured/KB-FF7E4D5B.md) | `cart-subtotal-percentage-reward-on-customerorder` | 2 | no | no | surface=storefront-xapi surface=rest principal=customer reward=percentage-off-cart-subtotal | cart & checkout, orders & shipments |
+| [`KB-13B32D5F`](captured/KB-13B32D5F.md) | `what makes a promotion reach a given store` | 1 | no | no | surface=admin-ui surface=rest | stores & tax |
+| [`KB-18991381`](captured/KB-18991381.md) | `where an order's coupon codes are readable` | 1 | no | no | surface=rest surface=storefront-xapi | orders & shipments |
 | [`KB-35F20D97`](captured/KB-35F20D97.md) | `what a coupon code that does not work does to a cart` | 1 | no | no | surface=storefront-xapi | cart & checkout |
 | [`KB-5790A068`](captured/KB-5790A068.md) | `marketing promotions are not change-tracked on this deployment` | 1 | yes | no | surface=rest | — |
 | [`KB-8264632C`](captured/KB-8264632C.md) | `how the storefront cart page renders an applied and an unapplied coupon` | 1 | no | no | surface=storefront-ui principal=customer | cart & checkout |
 | [`KB-A3CE7FBA`](captured/KB-A3CE7FBA.md) | `recovering a percentage rate from a discount amount` | 1 | no | no | surface=storefront-xapi reward=percentage-off-cart-subtotal | cart & checkout |
 | [`KB-AD1FA66B`](captured/KB-AD1FA66B.md) | `where a cart's money lives, and which copy goes stale` | 1 | no | no | surface=rest surface=storefront-xapi principal=customer | cart & checkout |
+| [`KB-B9C8ECD3`](captured/KB-B9C8ECD3.md) | `the scoped discount totals on an order` | 1 | no | no | surface=rest | orders & shipments |
 | [`KB-C1024558`](captured/KB-C1024558.md) | `telling a coupon-driven discount from an automatic one on a cart` | 1 | no | no | surface=storefront-xapi reward=percentage-off-cart-subtotal | cart & checkout |
 | [`KB-D60012DB`](captured/KB-D60012DB.md) | `discount-row-withtax-is-never-written` | 1 | yes | no | surface=rest | orders & shipments |
-| [`KB-D992AF44`](captured/KB-D992AF44.md) | `order discount row is a snapshot, not a live reference` | 1 | no | no | surface=rest surface=storefront-xapi surface=admin-ui | orders & shipments |
 | [`KB-E01A9F11`](captured/KB-E01A9F11.md) | `the promotion blade's required-field warnings are not a save gate` | 1 | no | no | surface=admin-ui surface=rest | — |
-| [`KB-F027283D`](captured/KB-F027283D.md) | `the discount label a shopper sees is free text nobody keeps honest` | 1 | no | no | surface=storefront-ui surface=storefront-xapi surface=admin-ui | — |
 
-## orders & shipments — 14
+## orders & shipments — 16
 
 | id | subject | confirmations | attested | disputed | scope | also |
 |---|---|---|---|---|---|---|
-| [`KB-0C102D97`](captured/KB-0C102D97.md) | `cancelling an order cascades to the payment and never to the shipment` | 3 | yes | no | surface=rest | — |
+| [`KB-7E35E6BC`](captured/KB-7E35E6BC.md) | `Admin renders order timestamps in local time while the API returns UTC` | 1 | yes | yes (1) | surface=admin-ui | — |
+| [`KB-0C102D97`](captured/KB-0C102D97.md) | `cancelling an order cascades to the payment and never to the shipment` | 4 | yes | no | surface=rest | — |
+| [`KB-0DD47BD1`](captured/KB-0DD47BD1.md) | `the amount a payment is for is not the payment's total` | 3 | yes | no | surface=rest surface=admin-ui | — |
+| [`KB-358A70CB`](captured/KB-358A70CB.md) | `storefront order page projection of the shipment` | 3 | yes | no | surface=storefront-ui | — |
 | [`KB-4CCC2DD6`](captured/KB-4CCC2DD6.md) | `what Cancel document on an order actually cancels` | 3 | no | no | surface=admin-ui | — |
-| [`KB-0DD47BD1`](captured/KB-0DD47BD1.md) | `the amount a payment is for is not the payment's total` | 2 | no | no | surface=rest surface=admin-ui | — |
-| [`KB-358A70CB`](captured/KB-358A70CB.md) | `storefront order page projection of the shipment` | 2 | no | no | surface=storefront-ui | — |
+| [`KB-4D26A022`](captured/KB-4D26A022.md) | `order shipment item allocation` | 2 | yes | no | surface=admin-ui surface=rest | — |
+| [`KB-53D776C2`](captured/KB-53D776C2.md) | `the Admin order tree blanks a zero shipment amount` | 2 | yes | no | surface=admin-ui | — |
 | [`KB-6AA0D7FB`](captured/KB-6AA0D7FB.md) | `fixed rate shipping method option pricing` | 2 | no | no | surface=storefront-ui surface=rest | — |
 | [`KB-6E98AA17`](captured/KB-6E98AA17.md) | `admin order operations tree staleness after cancel` | 2 | no | no | surface=admin-ui | — |
+| [`KB-068517DF`](captured/KB-068517DF.md) | `opening an Admin order blade by URL` | 1 | no | no | surface=admin-ui | — |
 | [`KB-16AEF0C2`](captured/KB-16AEF0C2.md) | `order operation numbering and parentage` | 1 | no | no | surface=admin-ui surface=rest | — |
 | [`KB-18ABE89B`](captured/KB-18ABE89B.md) | `admin order address blade false dirty state` | 1 | no | no | surface=admin-ui | — |
 | [`KB-4C5627CE`](captured/KB-4C5627CE.md) | `shipment lifecycle states and what moves them` | 1 | no | no | surface=admin-ui | — |
-| [`KB-4D26A022`](captured/KB-4D26A022.md) | `order shipment item allocation` | 1 | no | no | surface=admin-ui surface=rest | — |
-| [`KB-53D776C2`](captured/KB-53D776C2.md) | `the Admin order tree blanks a zero shipment amount` | 1 | yes | no | surface=admin-ui | — |
-| [`KB-7E35E6BC`](captured/KB-7E35E6BC.md) | `Admin renders order timestamps in local time while the API returns UTC` | 1 | yes | no | surface=admin-ui | — |
 | [`KB-CC9A98D3`](captured/KB-CC9A98D3.md) | `order address copies per operation` | 1 | no | no | surface=admin-ui surface=rest | — |
-| [`KB-EC76F588`](captured/KB-EC76F588.md) | `there is no paymentMethodCode on an order payment, and shipment spells its sibling differently` | 0 | yes | no | surface=rest | — |
+| [`KB-EC76F588`](captured/KB-EC76F588.md) | `there is no paymentMethodCode on an order payment, and shipment spells its sibling differently` | 1 | yes | no | surface=rest | — |
+| [`KB-F8707174`](captured/KB-F8707174.md) | `the cancellation reason is customer-facing` | 1 | no | no | surface=storefront-ui surface=admin-ui | — |
 
 ## catalog & products — 13
 
@@ -126,7 +132,7 @@ should stop on what most parties have seen, and on what somebody disagrees with.
 
 | id | subject | confirmations | attested | disputed | scope | also |
 |---|---|---|---|---|---|---|
-| [`KB-5F7C8FC4`](captured/KB-5F7C8FC4.md) | `an empty Tax providers widget is not evidence that a store has no tax provider` | 3 | yes | no | surface=admin-ui | — |
+| [`KB-5F7C8FC4`](captured/KB-5F7C8FC4.md) | `an empty Tax providers widget is not evidence that a store has no tax provider` | 4 | yes | no | surface=admin-ui | — |
 | [`KB-6D5E2CD1`](captured/KB-6D5E2CD1.md) | `what makes a price list apply to a store, and what the storefront reads it through` | 1 | no | no | surface=admin-ui surface=rest surface=storefront-ui | — |
 | [`KB-1B18B821`](captured/KB-1B18B821.md) | `tax is provider-driven and silently zero without an active provider` | 0 | yes | no | surface=rest | orders & shipments |
 
@@ -134,7 +140,7 @@ should stop on what most parties have seen, and on what somebody disagrees with.
 
 | id | subject | confirmations | attested | disputed | scope | also |
 |---|---|---|---|---|---|---|
-| [`KB-6824BC2B`](captured/KB-6824BC2B.md) | `platform GraphiQL runs as anonymous and takes a query in the URL` | 1 | no | no | surface=admin-ui principal=anonymous | — |
+| [`KB-6824BC2B`](captured/KB-6824BC2B.md) | `platform GraphiQL runs as anonymous and takes a query in the URL` | 2 | yes | no | surface=admin-ui principal=anonymous | — |
 
 ## retired — 12
 
