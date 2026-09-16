@@ -20,11 +20,13 @@ evidence:
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-10T19:56:35.741Z
+    by: session:82e15c99
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
     platformVersion: 3.1007.26
     at: 2026-09-14T08:40:17.155Z
+    by: session:0a2d9431
 ---
 
 A placed order stores no discount rate: the discount entry carries only a money amount plus promotionId, promotion name, description and coupon, so the percentage is recoverable only by dividing the amount by the base it was taken from, or by following promotionId back to the promotion definition - which is mutable and can be edited or deleted after the order exists. The free-text description is the only place a rate may appear, and only because a human happened to type it there. By contrast the same schema does keep a rate for tax, in taxPercentRate.

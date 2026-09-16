@@ -22,6 +22,7 @@ evidence:
     pin: c2f9c438eba4cd95
     platformVersion: 3.1007.26
     at: 2026-09-14T07:51:15.206Z
+    by: session:ea806a91
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95

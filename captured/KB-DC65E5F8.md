@@ -22,6 +22,7 @@ evidence:
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-12T08:17:17.111Z
+    by: session:f00f5968
 ---
 
 On the B2B storefront roster, Block user / Unblock user write the CONTACT's status field, and an outstanding invitation lives in that same field - so the pair is a one-way door that silently ends the invitation. Block (lockOrganizationContact) overwrites contact.status Invited -> Locked and the row stops showing the 'Invite sent' placeholder name, so it no longer reads as an invitation at all. Unblock (unlockOrganizationContact) does not restore what was there: it writes contact.status = Approved and additionally resets the security account's lockoutEnd from the invitation's 9999-12-31 sentinel to 0001-01-01. The account still has passwordHash null and emailConfirmed false - nobody registered - yet the roster now reports the person as Active, and there is no storefront control that can put the row back to Invited. Treat block/unblock on an un-accepted invitee as destructive: read the row's status before using it, and if you need the person back, delete the row and invite again rather than trying to undo.
