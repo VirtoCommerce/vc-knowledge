@@ -1,0 +1,90 @@
+{
+  "takenAt": "2026-09-16T14:26:35.644Z",
+  "contractCoordinates": 3386,
+  "note": "Coordinates that DID resolve, per licensed entry. A later extract that loses one is rot, not a coverage gap. Written by `kb refute --baseline`; read by `kb refute`.",
+  "entries": {
+    "KB-06409954": [
+      "mutations.lockorganizationcontact",
+      "mutations.unlockorganizationcontact"
+    ],
+    "KB-0C102D97": [
+      "GET /api/order/customerorders/{}"
+    ],
+    "KB-0DD47BD1": [
+      "GET /api/order/customerorders/{}"
+    ],
+    "KB-27B4CD10": [
+      "organization.contacts",
+      "contacttype.status"
+    ],
+    "KB-358A70CB": [
+      "customerordertype.shipments",
+      "ordershipmenttype.status",
+      "ordershipmenttype.number"
+    ],
+    "KB-35A09C64": [
+      "query.cart",
+      "PUT /api/marketing/promotions",
+      "GET /api/marketing/promotions/{}"
+    ],
+    "KB-4982C91F": [
+      "GET /api/order/customerorders/{}"
+    ],
+    "KB-4B889114": [
+      "mutations.lockorganizationcontact",
+      "mutations.unlockorganizationcontact"
+    ],
+    "KB-4CCC2DD6": [
+      "GET /api/order/customerorders/{}"
+    ],
+    "KB-5F7C8FC4": [
+      "POST /api/taxes/search"
+    ],
+    "KB-6AA0D7FB": [
+      "GET /api/order/customerorders/{}",
+      "ordershipmenttype.price",
+      "ordershipmenttype.shipmentmethodoption"
+    ],
+    "KB-6E98AA17": [
+      "GET /api/order/customerorders/{}"
+    ],
+    "KB-7040852E": [
+      "POST /api/members/search"
+    ],
+    "KB-996BDF08": [
+      "carttype.discounts",
+      "lineitemtype.discounts"
+    ],
+    "KB-B769C7B1": [
+      "mutations.changeorganizationcontactrole",
+      "GET /api/members/customers/invite/roles"
+    ],
+    "KB-C440D4E3": [
+      "POST /api/catalog/listentries",
+      "GET /api/catalog/products"
+    ],
+    "KB-CA4C93E4": [
+      "orderdiscounttype.amount",
+      "orderdiscounttype.promotionid"
+    ],
+    "KB-D4A064A5": [
+      "discounttype.amount",
+      "carttype.discounttotal"
+    ],
+    "KB-E7790BF6": [
+      "mutations.addcoupon",
+      "carttype.coupons",
+      "carttype.discounts",
+      "discounttype.coupon",
+      "coupontype.isappliedsuccessfully",
+      "GET /api/carts/{}"
+    ],
+    "KB-F1542157": [
+      "orderlineitemtype.discountamount"
+    ],
+    "KB-FF7E4D5B": [
+      "orderlineitemtype.discounttotal",
+      "GET /api/order/customerorders/{}"
+    ]
+  }
+}
