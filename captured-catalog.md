@@ -12,7 +12,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-06409954`](captured/KB-06409954.md) | `three independent fields represent a blocked organization member` | 2 | no | surface=storefront-ui surface=admin-ui |
 | [`KB-0B1AD487`](captured/KB-0B1AD487.md) | `the base a cart-level percentage reward is taken on` _(retired)_ | 1 | no | surface=storefront-xapi reward=percentage-off-cart-subtotal |
 | [`KB-0B6067F8`](captured/KB-0B6067F8.md) | `UserType.lockedState is the storefront-reachable sign-in state` | 1 | no | surface=storefront-xapi |
-| [`KB-0C102D97`](captured/KB-0C102D97.md) | `cancelling an order cascades to the payment and never to the shipment` | 1 | no | surface=rest |
+| [`KB-0C102D97`](captured/KB-0C102D97.md) | `cancelling an order cascades to the payment and never to the shipment` | 2 | no | surface=rest |
 | [`KB-0C163966`](captured/KB-0C163966.md) | `the storefront product page of a configurable product` | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-0DD47BD1`](captured/KB-0DD47BD1.md) | `the amount a payment is for is not the payment's total` | 2 | no | surface=rest surface=admin-ui |
 | [`KB-16AEF0C2`](captured/KB-16AEF0C2.md) | `order operation numbering and parentage` | 1 | no | surface=admin-ui surface=rest |
@@ -61,7 +61,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-B769C7B1`](captured/KB-B769C7B1.md) | `storefront org role and platform user role are one store` | 2 | no | surface=storefront-ui surface=admin-ui |
 | [`KB-BAEBCDA7`](captured/KB-BAEBCDA7.md) | `an organization invitation cannot be cancelled or resent` | 1 | no | surface=storefront-ui surface=admin-ui principal=org-maintainer |
 | [`KB-BC6FC633`](captured/KB-BC6FC633.md) | `admin account role assignment is staged until save` | 1 | no | surface=admin-ui |
-| [`KB-BCA7468D`](captured/KB-BCA7468D.md) | `two endpoints disagree about whether a password hash is a secret` | 1 | no | surface=rest |
+| [`KB-BCA7468D`](captured/KB-BCA7468D.md) | `two endpoints disagree about whether a password hash is a secret` | 3 | no | surface=rest |
 | [`KB-BEA58773`](captured/KB-BEA58773.md) | `what the storefront cart page can and cannot say about a coupon` _(retired)_ | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-C1024558`](captured/KB-C1024558.md) | `telling a coupon-driven discount from an automatic one on a cart` | 1 | no | surface=storefront-xapi reward=percentage-off-cart-subtotal |
 | [`KB-C440D4E3`](captured/KB-C440D4E3.md) | `there is no product search route under /api/catalog/products` | 2 | no | surface=rest |
