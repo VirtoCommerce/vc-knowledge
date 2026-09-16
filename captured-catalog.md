@@ -1,6 +1,6 @@
 # Captured
 
-Written by agents through `kb capture`, not generated. 67 active entries, 11 retired.
+Written by agents through `kb capture`, not generated. 68 active entries, 11 retired.
 
 The confirmation count, the disputed flag and the versions each fact has been seen on are read
 out of `evidence[]`. Nothing here declares them.
@@ -18,6 +18,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-16AEF0C2`](captured/KB-16AEF0C2.md) | `order operation numbering and parentage` | 1 | no | surface=admin-ui surface=rest |
 | [`KB-18ABE89B`](captured/KB-18ABE89B.md) | `admin order address blade false dirty state` | 1 | no | surface=admin-ui |
 | [`KB-191B1B4C`](captured/KB-191B1B4C.md) | `the master product is a row in its own variations list` | 1 | no | surface=storefront-ui |
+| [`KB-1B18B821`](captured/KB-1B18B821.md) | `tax is provider-driven and silently zero without an active provider` | 1 | no | surface=rest |
 | [`KB-1B230A62`](captured/KB-1B230A62.md) | `cart money is computed on read and persisted only on mutation` _(retired)_ | 1 | no | surface=rest surface=storefront-xapi principal=customer |
 | [`KB-27B4CD10`](captured/KB-27B4CD10.md) | `storefront members Active column reads contact status not account state` | 4 | no | surface=storefront-ui surface=storefront-xapi |
 | [`KB-2C3CA126`](captured/KB-2C3CA126.md) | `what a configurable product's page offers a buyer` _(retired)_ | 1 | no | surface=storefront-ui principal=customer |
