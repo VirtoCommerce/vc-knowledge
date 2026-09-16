@@ -300,3 +300,9 @@
 {"kind":"closed","key":"2a76e0bb6595","question":"how is tax calculated on orders in this deployment","id":"KB-1B18B821","at":"2026-09-16T08:13:48.083Z"}
 {"kind":"dropped","key":"894c20454b36","question":"taxTotal zero taxDetails empty no tax provider configured store","reason":"KB-1B18B821 answers it: no ACTIVE provider means EvaluateTaxesAsync never fills a rate, so taxTotal and taxDetails keep their defaults","at":"2026-09-16T08:13:56.711Z"}
 {"kind":"dropped","key":"2562676ac870","question":"why is shipping cost zero and how is tax calculated on orders in this store","reason":"both halves answered now: KB-6AA0D7FB for the shipping zero, KB-1B18B821 for the tax zero","at":"2026-09-16T08:13:56.824Z"}
+{"kind":"settled","id":"KB-4982C91F","at":"2026-09-16T08:26:07.723Z"}
+{"kind":"settled","id":"KB-5ADBFB34","at":"2026-09-16T08:27:16.405Z"}
+{"kind":"settled","id":"KB-0C102D97","at":"2026-09-16T08:27:59.090Z"}
+{"kind":"settled","id":"KB-0C102D97","at":"2026-09-16T08:27:59.288Z"}
+{"kind":"settled","id":"KB-5ADBFB34","at":"2026-09-16T08:27:59.491Z"}
+{"kind":"settled","id":"KB-5ADBFB34","at":"2026-09-16T08:27:59.685Z"}

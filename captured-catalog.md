@@ -1,6 +1,6 @@
 # Captured
 
-Written by agents through `kb capture`, not generated. 68 active entries, 11 retired.
+Written by agents through `kb capture`, not generated. 72 active entries, 11 retired.
 
 The confirmation count, the disputed flag and the versions each fact has been seen on are read
 out of `evidence[]`. Nothing here declares them.
@@ -12,7 +12,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-06409954`](captured/KB-06409954.md) | `three independent fields represent a blocked organization member` | 2 | no | surface=storefront-ui surface=admin-ui |
 | [`KB-0B1AD487`](captured/KB-0B1AD487.md) | `the base a cart-level percentage reward is taken on` _(retired)_ | 1 | no | surface=storefront-xapi reward=percentage-off-cart-subtotal |
 | [`KB-0B6067F8`](captured/KB-0B6067F8.md) | `UserType.lockedState is the storefront-reachable sign-in state` | 1 | no | surface=storefront-xapi |
-| [`KB-0C102D97`](captured/KB-0C102D97.md) | `cancelling an order cascades to the payment and never to the shipment` | 2 | no | surface=rest |
+| [`KB-0C102D97`](captured/KB-0C102D97.md) | `cancelling an order cascades to the payment and never to the shipment` | 4 | no | surface=rest |
 | [`KB-0C163966`](captured/KB-0C163966.md) | `the storefront product page of a configurable product` | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-0DD47BD1`](captured/KB-0DD47BD1.md) | `the amount a payment is for is not the payment's total` | 2 | no | surface=rest surface=admin-ui |
 | [`KB-16AEF0C2`](captured/KB-16AEF0C2.md) | `order operation numbering and parentage` | 1 | no | surface=admin-ui surface=rest |
@@ -31,7 +31,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-3F7C78F6`](captured/KB-3F7C78F6.md) | `wishlists have no REST and no Admin surface` | 1 | no | surface=admin-ui surface=rest |
 | [`KB-469AA660`](captured/KB-469AA660.md) | `what cancelling an order does to its shipment and its payment` _(retired)_ | 1 | no | surface=rest surface=admin-spa |
 | [`KB-48CF7684`](captured/KB-48CF7684.md) | `wishlist sharing key is minted at creation and never rotates` _(retired)_ | 1 | no | surface=storefront-ui surface=storefront-xapi |
-| [`KB-4982C91F`](captured/KB-4982C91F.md) | `order-discount-amount-rounding-split` | 2 | no | surface=rest surface=admin-ui reward=percentage-off-cart-subtotal |
+| [`KB-4982C91F`](captured/KB-4982C91F.md) | `order-discount-amount-rounding-split` | 3 | no | surface=rest surface=admin-ui reward=percentage-off-cart-subtotal |
 | [`KB-4A8606CA`](captured/KB-4A8606CA.md) | `an abandoned invitation can leave an account nothing can delete` | 1 | no | surface=rest surface=admin-ui surface=storefront-ui |
 | [`KB-4B889114`](captured/KB-4B889114.md) | `company members Active column vs account locked state` | 4 | no | surface=storefront-ui surface=admin-ui principal=org-maintainer |
 | [`KB-4C5627CE`](captured/KB-4C5627CE.md) | `shipment lifecycle states and what moves them` | 1 | no | surface=admin-ui |
@@ -39,8 +39,10 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-4D082C89`](captured/KB-4D082C89.md) | `a pending invitation is a locked account with no status` | 2 | yes (3) | surface=storefront-ui surface=admin-ui |
 | [`KB-4D26A022`](captured/KB-4D26A022.md) | `order shipment item allocation` | 1 | no | surface=admin-ui surface=rest |
 | [`KB-4E45A8BA`](captured/KB-4E45A8BA.md) | `admin contact Status picker cannot represent Invited or Locked` | 1 | no | surface=admin-ui |
+| [`KB-53D776C2`](captured/KB-53D776C2.md) | `the Admin order tree blanks a zero shipment amount` | 1 | no | surface=admin-ui |
+| [`KB-5790A068`](captured/KB-5790A068.md) | `marketing promotions are not change-tracked on this deployment` | 1 | no | surface=rest |
 | [`KB-59E4B5FC`](captured/KB-59E4B5FC.md) | `a configured product as an order line item` | 1 | no | surface=rest surface=graphql |
-| [`KB-5ADBFB34`](captured/KB-5ADBFB34.md) | `only the largest cart-subtotal promotion applies, whatever isExclusive says` | 1 | no | surface=rest |
+| [`KB-5ADBFB34`](captured/KB-5ADBFB34.md) | `only the largest cart-subtotal promotion applies, whatever isExclusive says` | 4 | no | surface=rest |
 | [`KB-6824BC2B`](captured/KB-6824BC2B.md) | `platform GraphiQL runs as anonymous and takes a query in the URL` | 1 | no | surface=admin-ui principal=anonymous |
 | [`KB-6AA0D7FB`](captured/KB-6AA0D7FB.md) | `fixed rate shipping method option pricing` | 2 | no | surface=storefront-ui surface=rest |
 | [`KB-6CC1EFE6`](captured/KB-6CC1EFE6.md) | `deleting a security account leaves the contact behind` | 1 | no | surface=admin-ui |
@@ -49,6 +51,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-7A12CF52`](captured/KB-7A12CF52.md) | `what a wishlist sharing key grants a signed-out holder` | 1 | no | surface=storefront-ui principal=anonymous |
 | [`KB-7A9D4927`](captured/KB-7A9D4927.md) | `revoking a wishlist share link: re-scoping suspends, deleting revokes` | 1 | no | surface=storefront-ui surface=storefront-xapi |
 | [`KB-7AB0B13E`](captured/KB-7AB0B13E.md) | `removing a product configuration` | 1 | no | surface=rest surface=admin-spa |
+| [`KB-7E35E6BC`](captured/KB-7E35E6BC.md) | `Admin renders order timestamps in local time while the API returns UTC` | 1 | no | surface=admin-ui |
 | [`KB-80BDCBE9`](captured/KB-80BDCBE9.md) | `shipment lifecycle states and their controls` _(retired)_ | 1 | no | surface=admin-ui |
 | [`KB-8264632C`](captured/KB-8264632C.md) | `how the storefront cart page renders an applied and an unapplied coupon` | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-8A82CF4D`](captured/KB-8A82CF4D.md) | `switching a product's configurability on and off` | 1 | no | surface=rest surface=graphql |
@@ -81,6 +84,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-E7790BF6`](captured/KB-E7790BF6.md) | `where an applied coupon and its reward live on a cart` | 2 | no | surface=storefront-xapi surface=rest principal=customer |
 | [`KB-EAA7BA2F`](captured/KB-EAA7BA2F.md) | `storefront Lists page is an owner-only roster` | 1 | no | surface=storefront-ui |
 | [`KB-EB991080`](captured/KB-EB991080.md) | `configuration section options are filtered by storefront resolvability` | 1 | no | surface=graphql principal=customer |
+| [`KB-EC76F588`](captured/KB-EC76F588.md) | `there is no paymentMethodCode on an order payment, and shipment spells its sibling differently` | 1 | no | surface=rest |
 | [`KB-EF3CB7FB`](captured/KB-EF3CB7FB.md) | `Login on behalf is authorized on the storefront not in Admin` | 1 | no | surface=admin-ui surface=storefront-ui |
 | [`KB-EF925925`](captured/KB-EF925925.md) | `an open cart page is not re-confirmed before Place order` | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-F027283D`](captured/KB-F027283D.md) | `the discount label a shopper sees is free text nobody keeps honest` | 1 | no | surface=storefront-ui surface=storefront-xapi surface=admin-ui |
