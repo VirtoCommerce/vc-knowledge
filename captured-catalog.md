@@ -50,11 +50,11 @@ should stop on what most parties have seen, and on what somebody disagrees with.
 |---|---|---|---|---|---|---|
 | [`KB-35A09C64`](captured/KB-35A09C64.md) | `promotion re-evaluation on cart read` | 5 | no | no | surface=storefront-xapi | cart & checkout |
 | [`KB-4982C91F`](captured/KB-4982C91F.md) | `order-discount-amount-rounding-split` | 4 | yes | no | surface=rest surface=admin-ui reward=percentage-off-cart-subtotal | orders & shipments |
+| [`KB-5ADBFB34`](captured/KB-5ADBFB34.md) | `only the largest cart-subtotal promotion applies, whatever isExclusive says` | 4 | yes | no | surface=rest | cart & checkout |
 | [`KB-996BDF08`](captured/KB-996BDF08.md) | `cart-level promotion reward placement` | 4 | no | no | surface=storefront-xapi | cart & checkout, orders & shipments |
-| [`KB-5ADBFB34`](captured/KB-5ADBFB34.md) | `only the largest cart-subtotal promotion applies, whatever isExclusive says` | 3 | yes | no | surface=rest | cart & checkout |
+| [`KB-F1542157`](captured/KB-F1542157.md) | `an order-level discount is not allocated to the line items` | 4 | yes | no | surface=admin-ui | orders & shipments |
 | [`KB-CA4C93E4`](captured/KB-CA4C93E4.md) | `discount-rate-not-persisted-on-order` | 3 | yes | no | surface=storefront-xapi surface=rest principal=customer | orders & shipments |
 | [`KB-D4A064A5`](captured/KB-D4A064A5.md) | `promotion discount rounding on the cart` | 3 | no | no | surface=storefront-xapi | cart & checkout |
-| [`KB-F1542157`](captured/KB-F1542157.md) | `an order-level discount is not allocated to the line items` | 3 | yes | no | surface=admin-ui | orders & shipments |
 | [`KB-D992AF44`](captured/KB-D992AF44.md) | `order discount row is a snapshot, not a live reference` | 2 | yes | no | surface=rest surface=storefront-xapi surface=admin-ui | orders & shipments |
 | [`KB-E7790BF6`](captured/KB-E7790BF6.md) | `where an applied coupon and its reward live on a cart` | 2 | no | no | surface=storefront-xapi surface=rest principal=customer | cart & checkout |
 | [`KB-F027283D`](captured/KB-F027283D.md) | `the discount label a shopper sees is free text nobody keeps honest` | 2 | yes | no | surface=storefront-ui surface=storefront-xapi surface=admin-ui | — |
