@@ -1,6 +1,6 @@
 # Captured
 
-Written by agents through `kb capture`, not generated. 72 active entries, 11 retired.
+Written by agents through `kb capture`, not generated. 74 active entries, 11 retired.
 
 The confirmation count, the disputed flag and the versions each fact has been seen on are read
 out of `evidence[]`. Nothing here declares them.
@@ -15,6 +15,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-0C102D97`](captured/KB-0C102D97.md) | `cancelling an order cascades to the payment and never to the shipment` | 4 | no | surface=rest |
 | [`KB-0C163966`](captured/KB-0C163966.md) | `the storefront product page of a configurable product` | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-0DD47BD1`](captured/KB-0DD47BD1.md) | `the amount a payment is for is not the payment's total` | 2 | no | surface=rest surface=admin-ui |
+| [`KB-132A40B3`](captured/KB-132A40B3.md) | `a null lastLoginDate cannot tell never-tried from tried-and-failed` | 1 | no | surface=admin-ui |
 | [`KB-16AEF0C2`](captured/KB-16AEF0C2.md) | `order operation numbering and parentage` | 1 | no | surface=admin-ui surface=rest |
 | [`KB-18ABE89B`](captured/KB-18ABE89B.md) | `admin order address blade false dirty state` | 1 | no | surface=admin-ui |
 | [`KB-191B1B4C`](captured/KB-191B1B4C.md) | `the master product is a row in its own variations list` | 1 | no | surface=storefront-ui |
@@ -88,5 +89,6 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-EF3CB7FB`](captured/KB-EF3CB7FB.md) | `Login on behalf is authorized on the storefront not in Admin` | 1 | no | surface=admin-ui surface=storefront-ui |
 | [`KB-EF925925`](captured/KB-EF925925.md) | `an open cart page is not re-confirmed before Place order` | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-F027283D`](captured/KB-F027283D.md) | `the discount label a shopper sees is free text nobody keeps honest` | 1 | no | surface=storefront-ui surface=storefront-xapi surface=admin-ui |
+| [`KB-F1542157`](captured/KB-F1542157.md) | `an order-level discount is not allocated to the line items` | 1 | no | surface=admin-ui |
 | [`KB-FA724D31`](captured/KB-FA724D31.md) | `storefront Delete member detaches the contact and orphans the account` | 2 | yes (1) | surface=storefront-ui surface=admin-ui |
 | [`KB-FF7E4D5B`](captured/KB-FF7E4D5B.md) | `cart-subtotal-percentage-reward-on-customerorder` | 2 | no | surface=storefront-xapi surface=rest principal=customer reward=percentage-off-cart-subtotal |
