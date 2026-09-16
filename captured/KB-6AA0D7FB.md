@@ -14,6 +14,8 @@ anchors:
   - coordinate: GET /api/order/customerOrders/{id}
   - coordinate: OrderShipmentType.price
   - coordinate: OrderShipmentType.shipmentMethodOption
+arrivesAt:
+  - coordinate: GET /api/stores/{id}
 evidence:
   - method: observation
     deployment: vcptcore_stable

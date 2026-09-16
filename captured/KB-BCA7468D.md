@@ -10,6 +10,8 @@ appliesTo:
     value: rest
 anchors:
   - coordinate: GET /api/members/{id}
+arrivesAt:
+  - coordinate: /sign-in
 evidence:
   - method: observation
     deployment: vcptcore_stable

@@ -10,6 +10,8 @@ appliesTo:
     value: admin-ui
 anchors:
   - coordinate: GET /api/order/customerOrders/{id}
+arrivesAt:
+  - coordinate: /account/orders/{id}
 evidence:
   - method: observation
     deployment: vcptcore_stable

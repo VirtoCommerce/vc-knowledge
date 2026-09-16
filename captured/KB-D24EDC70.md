@@ -10,6 +10,8 @@ appliesTo:
     value: storefront-ui
 anchors:
   - coordinate: GET /api/platform/security/users/{userName}
+arrivesAt:
+  - coordinate: /sign-in
 evidence:
   - method: observation
     deployment: vcptcore_stable

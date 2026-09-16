@@ -10,6 +10,8 @@ appliesTo:
     value: admin-ui
 anchors:
   - coordinate: POST /api/taxes/search
+arrivesAt:
+  - coordinate: GET /api/stores/{id}
 evidence:
   - method: observation
     deployment: vcptcore_stable
