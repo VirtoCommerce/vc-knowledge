@@ -1,6 +1,6 @@
 # Captured
 
-Written by agents through `kb capture`, not generated. 74 active entries, 11 retired.
+Written by agents through `kb capture`, not generated. 78 active entries, 11 retired.
 
 The confirmation count, the disputed flag and the versions each fact has been seen on are read
 out of `evidence[]`. Nothing here declares them.
@@ -44,6 +44,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-5790A068`](captured/KB-5790A068.md) | `marketing promotions are not change-tracked on this deployment` | 1 | no | surface=rest |
 | [`KB-59E4B5FC`](captured/KB-59E4B5FC.md) | `a configured product as an order line item` | 1 | no | surface=rest surface=graphql |
 | [`KB-5ADBFB34`](captured/KB-5ADBFB34.md) | `only the largest cart-subtotal promotion applies, whatever isExclusive says` | 4 | no | surface=rest |
+| [`KB-5F7C8FC4`](captured/KB-5F7C8FC4.md) | `an empty Tax providers widget is not evidence that a store has no tax provider` | 3 | no | surface=admin-ui |
 | [`KB-6824BC2B`](captured/KB-6824BC2B.md) | `platform GraphiQL runs as anonymous and takes a query in the URL` | 1 | no | surface=admin-ui principal=anonymous |
 | [`KB-6AA0D7FB`](captured/KB-6AA0D7FB.md) | `fixed rate shipping method option pricing` | 2 | no | surface=storefront-ui surface=rest |
 | [`KB-6CC1EFE6`](captured/KB-6CC1EFE6.md) | `deleting a security account leaves the contact behind` | 1 | no | surface=admin-ui |
@@ -54,6 +55,7 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-7AB0B13E`](captured/KB-7AB0B13E.md) | `removing a product configuration` | 1 | no | surface=rest surface=admin-spa |
 | [`KB-7E35E6BC`](captured/KB-7E35E6BC.md) | `Admin renders order timestamps in local time while the API returns UTC` | 1 | no | surface=admin-ui |
 | [`KB-80BDCBE9`](captured/KB-80BDCBE9.md) | `shipment lifecycle states and their controls` _(retired)_ | 1 | no | surface=admin-ui |
+| [`KB-82111688`](captured/KB-82111688.md) | `the storefront members Status filter finds nobody in a state the roster is full of` | 1 | no | surface=storefront-ui |
 | [`KB-8264632C`](captured/KB-8264632C.md) | `how the storefront cart page renders an applied and an unapplied coupon` | 1 | no | surface=storefront-ui principal=customer |
 | [`KB-8A82CF4D`](captured/KB-8A82CF4D.md) | `switching a product's configurability on and off` | 1 | no | surface=rest surface=graphql |
 | [`KB-996BDF08`](captured/KB-996BDF08.md) | `cart-level promotion reward placement` | 4 | no | surface=storefront-xapi |
@@ -68,14 +70,16 @@ out of `evidence[]`. Nothing here declares them.
 | [`KB-BC6FC633`](captured/KB-BC6FC633.md) | `admin account role assignment is staged until save` | 1 | no | surface=admin-ui |
 | [`KB-BCA7468D`](captured/KB-BCA7468D.md) | `two endpoints disagree about whether a password hash is a secret` | 3 | no | surface=rest |
 | [`KB-BEA58773`](captured/KB-BEA58773.md) | `what the storefront cart page can and cannot say about a coupon` _(retired)_ | 1 | no | surface=storefront-ui principal=customer |
+| [`KB-BF730613`](captured/KB-BF730613.md) | `lockoutEnd has three meaningful values, and one of them looks like the opposite of what it means` | 1 | no | surface=rest |
 | [`KB-C1024558`](captured/KB-C1024558.md) | `telling a coupon-driven discount from an automatic one on a cart` | 1 | no | surface=storefront-xapi reward=percentage-off-cart-subtotal |
 | [`KB-C440D4E3`](captured/KB-C440D4E3.md) | `there is no product search route under /api/catalog/products` | 2 | no | surface=rest |
 | [`KB-C51ACC81`](captured/KB-C51ACC81.md) | `placing an order on the storefront` _(retired)_ | 1 | no | surface=storefront-ui |
 | [`KB-CA4C93E4`](captured/KB-CA4C93E4.md) | `discount-rate-not-persisted-on-order` | 2 | no | surface=storefront-xapi surface=rest principal=customer |
 | [`KB-CC195687`](captured/KB-CC195687.md) | `a variation on an order does not record its parent` | 1 | no | surface=rest surface=graphql |
 | [`KB-CC9A98D3`](captured/KB-CC9A98D3.md) | `order address copies per operation` | 1 | no | surface=admin-ui surface=rest |
+| [`KB-D24EDC70`](captured/KB-D24EDC70.md) | `what refuses a never-registered account at sign-in was not established, and here is where the looking stopped` | 1 | no | surface=storefront-ui |
 | [`KB-D4A064A5`](captured/KB-D4A064A5.md) | `promotion discount rounding on the cart` | 3 | no | surface=storefront-xapi |
-| [`KB-D60012DB`](captured/KB-D60012DB.md) | `discount-row-withtax-is-never-written` | 1 | no | surface=rest |
+| [`KB-D60012DB`](captured/KB-D60012DB.md) | `discount-row-withtax-is-never-written` | 2 | no | surface=rest |
 | [`KB-D992AF44`](captured/KB-D992AF44.md) | `order discount row is a snapshot, not a live reference` | 1 | no | surface=rest surface=storefront-xapi surface=admin-ui |
 | [`KB-DA14E8B7`](captured/KB-DA14E8B7.md) | `block on an un-accepted invitation is irreversible` | 1 | no | surface=storefront-ui surface=storefront-xapi principal=org-maintainer |
 | [`KB-DC65E5F8`](captured/KB-DC65E5F8.md) | `blocking a pending invitation destroys the invitation` _(retired)_ | 1 | no | surface=storefront-ui surface=storefront-xapi principal=org-maintainer |
