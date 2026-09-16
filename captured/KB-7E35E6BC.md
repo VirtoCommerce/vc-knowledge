@@ -26,6 +26,8 @@ evidence:
     platformVersion: 3.1007.26
     at: 2026-09-16T12:29:23.274Z
     by: session:8ec21246
+    attested: false
+    whyNot: confirmed at the end of a pricing task; the run report names no timestamp anywhere. See C:/_VIRTO/_comparison-logs/round4/arm-C-catalog/REPORT.md
 ---
 
 They are the same instant in two timezones. Round one's arm C read Sep 15, 2026 5:51:39 AM on the Admin order screen for the instant the REST payload reports as 2026-09-15T09:51:39.6897076Z - a four-hour offset, that session's browser being at UTC-4. Admin renders in the viewer's local time and prints no offset with it; the API returns UTC with an explicit Z. So comparing a timestamp off a screenshot with one off a payload, without converting, shows a discrepancy of however many hours the reader happens to be from UTC, and it is not a discrepancy. This bites hardest when a screenshot is the evidence in a bug report and the reader is in a different timezone from the person who took it.
