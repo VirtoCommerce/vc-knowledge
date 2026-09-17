@@ -493,6 +493,8 @@ Testable business rules for the Virto Commerce B2B e-commerce platform. Use this
 - **Amended:** 2026-08-05 (auto-applied, triangulated — BL-AUDIT-2026-08-05). Rule and Verify unchanged; the "not-yet-merged PR" caveat is discharged (merged to the default branch and live-re-confirmed), and the still-source-only redirect clause is now labelled as such.
 - **Promoted:** 2026-07-30 (triangulated — BL-AUDIT-2026-07-30; source+live CONFIRMED, docs waived).
 
+**Anchor corrected.** `/connect/authorize` → `GET /connect/authorize` — the base publishes this endpoint verb-first (GET and POST); the bare path matched no coordinate, so the rule was filed under one that names nothing
+
 ### BL-AUTH-015: Active organization resolves by a fixed 5-step chain over *accessible* orgs only `[P0-revenue]`
 - **Rule:** At token issuance the active organization is resolved by a **fixed, ordered chain**, and every step is constrained to organizations the user can actually access:
   1. the request's explicit `organization_id` parameter, if present;

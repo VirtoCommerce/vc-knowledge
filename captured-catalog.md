@@ -1,6 +1,6 @@
 # Captured
 
-Written by agents through `kb capture`, not generated. 88 active entries, 12 retired.
+Written by agents through `kb capture`, not generated. 89 active entries, 12 retired.
 
 The confirmation count, the disputed flag and the versions each fact has been seen on are read
 out of `evidence[]`. Nothing here declares them.
@@ -136,11 +136,12 @@ should stop on what most parties have seen, and on what somebody disagrees with.
 | [`KB-6D5E2CD1`](captured/KB-6D5E2CD1.md) | `what makes a price list apply to a store, and what the storefront reads it through` | 1 | no | no | surface=admin-ui surface=rest surface=storefront-ui | — |
 | [`KB-1B18B821`](captured/KB-1B18B821.md) | `tax is provider-driven and silently zero without an active provider` | 0 | yes | no | surface=rest | orders & shipments |
 
-## unfiled — 1
+## unfiled — 2
 
 | id | subject | confirmations | attested | disputed | scope | also |
 |---|---|---|---|---|---|---|
 | [`KB-6824BC2B`](captured/KB-6824BC2B.md) | `platform GraphiQL runs as anonymous and takes a query in the URL` | 2 | yes | no | surface=admin-ui principal=anonymous | — |
+| [`KB-62EE7AF3`](captured/KB-62EE7AF3.md) | `some platform routes are hidden from the API document this base projects from` | 0 | yes | no | surface=rest | — |
 
 ## retired — 12
 
