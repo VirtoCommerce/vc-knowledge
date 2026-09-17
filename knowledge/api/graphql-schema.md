@@ -5,7 +5,7 @@
 > repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
 > checked -- never steps you have to follow. Every statement about the platform stands without them.
 
-> **Source**: Live introspection of `{{BACK_URL}}/graphql` (2026-09-16)
+> **Source**: Live introspection of `{{BACK_URL}}/graphql` (2026-09-17)
 > **Purpose**: Agents MUST consult this file before writing or reviewing GraphQL queries/mutations.
 > **Refresh**: `npm run schema:refresh` — run when the schema may have changed.
 > **SCOPE — read this before concluding a field does not exist.** The query and mutation
