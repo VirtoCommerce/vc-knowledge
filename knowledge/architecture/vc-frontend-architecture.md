@@ -6,7 +6,7 @@ applicability_rationale: "vc-frontend (Vue 3 / TS) storefront repo anatomy + vit
 # Virto Commerce Storefront Architecture (vc-frontend) — for the auto-fix pipeline
 
 > **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
-> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in the VirtoCommerce QA
 > repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
 > checked -- never steps you have to follow. Every statement about the platform stands without them.
 
