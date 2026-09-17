@@ -1,6 +1,10 @@
 ---
 applicability: reference
 applicability_rationale: "14 generic ECL chapters (1-13, 15; universal) + 1 VC-specific chapter (14, 10 subsections). File-level classification is reference because the VC-specific chapter is intermixed with the generic ones in document order; future refactor: split into universal + VC-specific files."
+# citedAs: the prefix this page's sections are cited by, so `kb show ECL-13.3` opens one.
+# Section numbers are per page -- a BA style guide in this base numbers its own sections 9.1
+# and 10.2 too -- so the prefix is what says which page a citation meant.
+citedAs: ECL
 ---
 
 # E-Commerce QA Edge Cases & Strange User Behavior Library

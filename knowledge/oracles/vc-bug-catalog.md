@@ -1,6 +1,8 @@
 ---
 applicability: reference
 applicability_rationale: "Historical VC bug patterns indexed by domain. Customer reads as 'Familiar Problems' oracle but VC-specific entries (VCST-NNNN refs) are vcst's history. Useful learning artifact, adapt for customer's."
+# citedAs: the prefix this page's entries are cited by, so `kb show VC-CART-001` opens one.
+citedAs: VC
 ---
 
 # VC Bug Catalog — Where Virto Commerce Historically Breaks
