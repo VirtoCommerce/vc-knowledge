@@ -5,7 +5,8 @@
   "planes": [
     "derived-first",
     "experiential",
-    "flow"
+    "flow",
+    "normative"
   ],
   "schemaFields": [
     "id",

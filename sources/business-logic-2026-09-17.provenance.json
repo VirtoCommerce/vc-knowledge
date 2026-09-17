@@ -1,0 +1,12 @@
+{
+  "archived": "sources/business-logic-2026-09-17.md",
+  "origin": {
+    "repository": "vc-mcp-testing-module",
+    "path": "C:/_VIRTO/vc-knowledge/knowledge/oracles/business-logic.md",
+    "commit": "b48da222c94b41e64b0c995a40950a607be3febc 2026-09-17T18:08:32+04:00"
+  },
+  "sha256": "c8da64ca0c1ca9aa8f248fb3162db0ea2eaff9e49540660b3c09e67b141862f2",
+  "importedBy": "scripts/import-business-logic-2026-09-17.mjs",
+  "rules": 217,
+  "note": "A verbatim copy. The rules transcribed from it cite this path in their first evidence row, which is marked attested: false — the page asserts, nobody observed. The original is being deleted from the plugin, which is why the copy is here rather than a path into it."
+}
