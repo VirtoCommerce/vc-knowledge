@@ -2,7 +2,14 @@
 
 The knowledge base for Virto Commerce. Created empty, on purpose.
 
-Three planes, and the differences between them are the whole design.
+Three planes of ENTRIES, and the differences between them are the whole design. A fourth store
+arrived on 2026-09-17 and is not a plane: `knowledge/` holds documents read WHOLE rather than cut
+into entries — the oracles, the domain maps, the API and architecture references. They carry no
+frontmatter, no ids and no anchors, `kb ask` does not search them, and `kb validate` does not gate
+them; a domain map is read for orientation, not retrieved by question. A **normative** plane, holding
+the `BL-*` invariants as entries that CAN be retrieved and contradicted, is still ahead: the tool
+already stores and gates it (`src/rules.mjs`, `kb capture --rule`) and this base holds no entry of
+one, which is why `kb stat` reports `0 rule(s)`.
 
 The **derived** plane is projected from a running deployment and *regenerated*, so it cannot rot and
 nothing may hand-edit it. The **experiential** plane holds what an agent learned by doing, is
@@ -29,14 +36,36 @@ asks what to do and sees nothing else.
 | `derived/` | derived | the projected plane: regenerated wholesale, byte-compared, never edited |
 | `derived/entries/` | derived | generated entry files, one per capability surface |
 | `derived/rest/`, `derived/graphql/` | derived | the contract tables those entries cite |
-| `derived-index.json` | derived | generated retrieval index |
+| `derived-index.json` | derived | generated retrieval index — **tracked**, see below |
 | `derived-catalog.md` | derived | generated one-line-per-entry digest |
 | `captured/` | experiential | entries written by agents through `kb capture` |
-| `captured-index.json` | experiential | retrieval index over the **active** captured entries |
+| `captured-index.json` | experiential | retrieval index over the **active** captured entries — *untracked* |
 | `captured-catalog.md` | experiential | one line per captured entry, retired ones included |
 | `flows/` | flow | procedures written through `kb capture --flow`, served by `kb how` |
-| `flows-index.json` | flow | retrieval index over the **active** flows |
+| `flows-index.json` | flow | retrieval index over the **active** flows — *untracked* |
 | `flows-catalog.md` | flow | one line per flow, retired ones included |
+| `knowledge/` | — | documents read whole: `oracles/`, `domain/`, `api/`, `architecture/`, `automation/`, `ba/`, `execution/`. Moved out of the QA repository on 2026-09-17 because what makes them untrue is a change in the PLATFORM |
+
+### Which of these git carries
+
+The **catalogs** are tracked. A person reads them, they are 19 KB, and byte-comparing one is how an
+entry edited by hand gets caught.
+
+The **written stores' indexes are not**, since 2026-09-17. `kb reindex` rebuilds `captured-index.json`
+and `flows-index.json` from the entries on disk, byte-identically — so tracking them stored a second
+copy of something the corpus already said, rewritten on every capture. They were 15 versions and
+360 KB of this repository's 1.0 MB of packed blobs, against 8 KB for the catalog beside them. Clone
+this repository and the first `kb reindex` writes them; it costs 250 ms at 700 entries.
+
+`derived-index.json` **is** tracked, and the exception is the whole of the rule. Nothing rebuilds it
+from disk. It is written only by `kb extract`, which reads a running deployment — so a clone without
+it would answer `degraded` to every `kb ask`, and the one verb that repairs it is the one an
+installation without credentials cannot run. It costs a single version, because it changes only when
+the contract is re-extracted.
+
+`kb validate` matches that split: an **absent** written-store index is a notice naming `kb reindex`,
+an absent derived index is a failure, and a **stale** index of either kind is a failure, because a
+stale one is served.
 
 `kb extract` wipes and rewrites everything on the derived plane. It never touches `captured/`, and
 `kb check` never compares it — a capture must not be able to fail a gate that exists to police the

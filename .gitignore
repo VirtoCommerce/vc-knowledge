@@ -12,3 +12,22 @@ node_modules/
 # ignore file, which a clone does not carry.
 .claude/settings.local.json
 *.local.json
+
+# THE WRITTEN STORES' RETRIEVAL INDEXES ARE NOT CONTENT. `kb reindex` rebuilds each of them from
+# the entries on disk -- byte-identically, which `kb validate` checks -- so a tracked copy is a
+# second statement of something the corpus already says, and one the door rewrites on EVERY
+# capture. Measured on 2026-09-17: captured-index.json is 15 versions and 360 KB of this
+# repository's 1.0 MB of packed blobs, against 8 KB for its catalog; at 700 written entries the
+# index is 2 MB and the rebuild costs 250 ms.
+#
+# The CATALOGS stay tracked on purpose. They are 19 KB, a person reads them, and their byte
+# comparison is what catches an entry edited by hand.
+#
+# `derived-index.json` IS TRACKED AND BELONGS TO NO RULE HERE, and the asymmetry is the point.
+# Nothing rebuilds it from disk: it is written only by `kb extract`, which reads a running
+# deployment. A clone that ignored it would answer `degraded` to every `kb ask` and the one verb
+# that repairs it is the one nobody may run against a stand. It costs a single version, because it
+# changes only when the contract is re-extracted.
+captured-index.json
+flows-index.json
+rules-index.json
