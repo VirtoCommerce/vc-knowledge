@@ -5,6 +5,11 @@ applicability_rationale: "Storefront catalog reference — assumes vcst's catalo
 
 # Catalog — Agent Reference
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 Platform knowledge for testing the Virto Commerce Catalog module.
 Covers both the **Admin SPA** (`Backend/catalog/` suites 051, 053) and **Storefront xCatalog GraphQL API** (`Frontend/catalog/` suites 001–003).
 

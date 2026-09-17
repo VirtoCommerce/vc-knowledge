@@ -5,6 +5,11 @@ applicability_rationale: "Storefront store config patterns. Customer's settings 
 
 # Store Settings — Agent Reference
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 QA testing knowledge for the Virto Commerce Store Settings module.
 For API schema (StoreResponseType, StoreSettingsType, GraphQL queries, REST endpoints) see `skills/qa-api/xapi-query-ref.md` → **Store Settings** section.
 

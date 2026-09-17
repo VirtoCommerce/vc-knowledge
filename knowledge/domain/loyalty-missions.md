@@ -56,6 +56,11 @@ excludes: |
 
 # Loyalty & Missions — domain map
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 > Refresh with `/qa-domain-map loy`. This file answers **what the feature is and where its
 > surfaces are**. It does **not** carry behavioural rules — those are `BL-LOY-*` in
 > `oracles/business-logic.md` (18 invariants, cited by id below, never restated) — and it can

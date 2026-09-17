@@ -5,6 +5,11 @@ applicability_rationale: "169 BLs (storefront + backend/xAPI/admin) covering pri
 
 # Business Logic Invariants — Agent Reference
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 Testable business rules for the Virto Commerce B2B e-commerce platform. Use this file to judge correctness when specs are ambiguous, absent, or when cross-domain interactions create emergent behavior.
 
 ## How to Use This File

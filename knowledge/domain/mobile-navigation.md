@@ -5,6 +5,11 @@ applicability_rationale: "Mobile navigation map of the vc-frontend storefront th
 
 # Mobile Navigation — Storefront Drawer & Header
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 **Generated:** September 9, 2026 (rev 1 — first mobile-nav map in this repo)
 **Base URL:** `FRONT_URL` (from the `FRONT_URL` env var) — vcst-qa
 **Storefront (theme) version:** **2.58.0-pr-2469-83d6-83d6e5d5** (footer "Ver.") — `domain/sitemap.md` rev 8 recorded `2.54.0-pr-2382`, so the theme has drifted since that crawl

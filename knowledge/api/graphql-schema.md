@@ -1,5 +1,10 @@
 # GraphQL xAPI Schema Reference
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 > **Source**: Live introspection of `{{BACK_URL}}/graphql` (2026-09-16)
 > **Purpose**: Agents MUST consult this file before writing or reviewing GraphQL queries/mutations.
 > **Refresh**: `npm run schema:refresh` — run when the schema may have changed.

@@ -15,6 +15,11 @@ exhaustive: false
 
 # VC Release Ledger — what shipped, when
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 **Generated** 2026-09-01 (rev 1) · **23** monthly digests · **242** features indexed · window 2024-11 → 2026-09
 
 > **GENERATED FILE — do not edit by hand.** Regenerate: `npm run releases:refresh`.

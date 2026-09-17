@@ -5,6 +5,11 @@ applicability_rationale: "vc-frontend $cfg.* flag inventory. Customer with stock
 
 # vc-frontend Storefront Config Flags
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 Source of truth: [`vc-frontend/client-app/config/settings_data.json`](https://github.com/VirtoCommerce/vc-frontend/blob/dev/client-app/config/settings_data.json) (branch `dev`).
 
 These are the **client-side `$cfg.*` flags** consumed by Vue components and route guards. They are baked into the deployed theme zip (e.g., `vc-theme-b2b-vue-2.48.0-pr-2269-cd06.zip`); a deployment can override defaults per environment.

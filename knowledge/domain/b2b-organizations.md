@@ -31,6 +31,11 @@ excludes: Sales Rep (deliberate — a separate later pass, now its own domain ma
 
 # B2B / Multi-Organization — domain map
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 > **GENERATED-ish, but hand-curated.** Refresh with `/qa-domain-map b2b`. This file answers **what the
 > feature is and where its surfaces are**. It does **not** carry behavioural rules — those are
 > `BL-*` in `oracles/business-logic.md` — and it can **never ground an assertion as `{DOC}`**. It is

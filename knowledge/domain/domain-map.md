@@ -1,5 +1,10 @@
 # Domain map — the shape
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 > **This file is the SHAPE, not a map.** It carries no `domain_slug`, so every slug-keyed
 > consumer skips it: `/qa-test` `1b` lookup, `npm run domain:check`, and any `domain_slug:` match.
 > It sits here rather than in `.claude/templates/` so it is beside the maps it shapes.

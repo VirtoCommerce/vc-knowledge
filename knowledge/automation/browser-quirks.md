@@ -5,6 +5,11 @@ applicability_rationale: "Per-browser rendering differences. Cross-VC universal.
 
 # Browser Quirks — Cross-Browser Testing Reference
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 ## iOS Safari
 
 - `100vh` includes toolbar — use `dvh` (dynamic viewport height) instead

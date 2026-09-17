@@ -5,6 +5,11 @@ applicability_rationale: "Full storefront URL map. Customer's sitemap differs by
 
 # Sitemap: FRONT_URL
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 **Generated:** September 4, 2026 (rev 8 — deterministic axis; body carried from rev 5, July 20 2026)
 **Base URL:** FRONT_URL (from `FRONT_URL` env var) — vcst-qa
 **Storefront (theme) version:** **2.54.0-pr-2382** (footer "Ver.") *(was 2.49.0 in May)*

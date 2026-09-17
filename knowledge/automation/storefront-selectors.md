@@ -5,6 +5,11 @@ applicability_rationale: "vc-frontend stable selectors (data-test-id / role / ar
 
 # Storefront Selectors — Live-Verified DOM Reference
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 **Captured:** 2026-05-14 against `FRONT_URL=https://vcst-qa-storefront.govirto.com` (Coffee theme, B2B-store)
 **Browser:** `playwright-chrome` (chromium 1920×1080), authenticated as `USER_EMAIL` from `.env`
 **Purpose:** Source of truth for selectors used by layout/shift audits (`/qa-design`, `critical-ui-scope.md` protocols) and other storefront UI tests. Previously also backed suite `048b-layout-stability.csv`, removed 2026-07-25. Every selector below was verified live with `document.querySelectorAll(...).length` returning the documented `matched` count.

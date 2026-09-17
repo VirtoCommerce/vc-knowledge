@@ -5,6 +5,11 @@ applicability_rationale: "14 generic ECL chapters (1-13, 15; universal) + 1 VC-s
 
 # E-Commerce QA Edge Cases & Strange User Behavior Library
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 **Version:** 1.1  
 **Last Updated:** August 2026 (oracle audit — deletions, drift fixes, and new sections; see audit history for the verdict trail)  
 **Status:** Living document—add real patterns from your platform

@@ -5,6 +5,11 @@ applicability_rationale: "Storefront white-labeling feature reference. Customer'
 
 # White Labeling — Agent Reference
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 Platform knowledge for testing the Virto Commerce White Labeling module.
 Includes **VCST-4637** (mainMenuLinks / MainMenuLinkListName — added Sprint 26-04).
 

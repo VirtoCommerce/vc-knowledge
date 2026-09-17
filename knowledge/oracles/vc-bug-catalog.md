@@ -5,6 +5,11 @@ applicability_rationale: "Historical VC bug patterns indexed by domain. Customer
 
 # VC Bug Catalog — Where Virto Commerce Historically Breaks
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 Curated reference of failure modes seen in this Virto Commerce deployment. Use as a **"Familiar Problems"** oracle (HICCUPPS-F) and to seed Bad Neighborhood Tours (`adversarial-heuristics.md`). When exploring a domain, scan this file for the relevant section first — known soft spots reveal themselves faster than fresh exploration.
 
 This file is the **index of VC-specific historical patterns**. Generic e-commerce patterns live in [`e-commerce-edge-cases-library.md`](e-commerce-edge-cases-library.md). Testable invariants live in [`business-logic.md`](business-logic.md). Project-specific lessons in chronological form live in `~/.claude/projects/.../memory/MEMORY.md`.

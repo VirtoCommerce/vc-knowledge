@@ -5,6 +5,11 @@ applicability_rationale: "VC module repo anatomy + .NET 10 / xUnit / Angular con
 
 # Virto Commerce Module Architecture — for the auto-fix pipeline
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 > LAYER 2 knowledge for the `developers/` team (`fullstack-backend`, `backend-reviewer`) and the CI
 > `ci/agents/fix-*` agents. How a `vc-module-*` repo is laid out, how to find the failing code, how to
 > write the red→green test, and which commands prove the fix. **The repo list and module→repo routing

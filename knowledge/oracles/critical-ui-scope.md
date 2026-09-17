@@ -5,6 +5,11 @@ applicability_rationale: "vcst's 7 components × 8 pages coverage matrix. Custom
 
 # Critical UI Scope — Regression-Enforced Component Checklist
 
+> **Virto-internal references.** This page cites paths (`regression/suites/...`, `scripts/...`,
+> `.claude/...`) and commands (`/qa-test`, `/qa-design`, ...) that live in VirtoCommerce's own QA
+> repository, which is not part of a plugin install. They are PROVENANCE -- where a claim was
+> checked -- never steps you have to follow. Every statement about the platform stands without them.
+
 **Canonical scope of UI primitives that every regression run must verify.** Layout-stability findings on these components are revenue-protecting, not cosmetic. The Coverage Matrix at the bottom of this file is **machine-readable**: `scripts/maintenance/validate-critical-ui-scope.ts` parses it and fails the build if any cell points at a test ID that doesn't exist in any regression suite CSV.
 
 > ⚠️ **UNCOVERED as of 2026-07-25.** Suite `048b-layout-stability.csv` — the sole carrier of every covering test ID in both matrices — was **removed**. All 197 applicable cells are now marked `GAP`. This file is retained as the **scope definition** (what SHOULD be covered) and as the audit-protocol reference for [`/qa-design`](../../skills/qa-design/SKILL.md), but it no longer gates a regression run. `npm run scope:validate` still hard-fails on a cell pointing at a **nonexistent** test ID, and reports the GAP count as a warning; `--strict` makes GAPs fatal again once a replacement suite lands.
