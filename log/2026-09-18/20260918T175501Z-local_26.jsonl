@@ -1,0 +1,4 @@
+{"at":"2026-09-18T17:15:49.699Z","kind":"reindex","base":"(local checkout)","entries":90,"added":0,"removed":0,"retrusted":0,"problems":0}
+{"at":"2026-09-18T17:54:25.712Z","kind":"ask","q":"what does the storefront members Active column reflect?","matched":["KB-27B4CD10","KB-4B889114","KB-FA724D31"],"opened":["KB-27B4CD10","KB-4B889114","KB-FA724D31"],"state":"answer","ms":567}
+{"at":"2026-09-18T17:54:26.208Z","kind":"show","id":"KB-D9B90536","state":"answer"}
+{"at":"2026-09-18T17:55:01.193Z","kind":"flush","entries":0,"lines":3,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
