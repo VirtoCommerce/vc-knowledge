@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-18T17:55:01.193Z",
-  "count": 90,
+  "generated": "2026-09-18T18:26:00.059Z",
+  "count": 91,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -342,6 +342,23 @@
       "status": "active",
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-316B2DDB",
+      "path": "entries/KB-316B2DDB.md",
+      "subject": "one invalid storeId answers Unauthorized on Query.product and NULL_REFERENCE on Query.products",
+      "question": "What does the storefront xAPI do when a product query carries an argument that names something that does not exist — an unknown store, currency, culture, product id or filter field?",
+      "anchors": [
+        "Query.product",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-358A70CB",

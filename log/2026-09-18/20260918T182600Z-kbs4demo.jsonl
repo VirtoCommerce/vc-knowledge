@@ -1,0 +1,4 @@
+{"at":"2026-09-18T18:25:17.213Z","kind":"ask","q":"what does the storefront xAPI do with an unknown storeId or currencyCode on a product query","matched":["KB-D9B90536","KB-6824BC2B","KB-0C163966"],"opened":["KB-D9B90536","KB-6824BC2B","KB-0C163966"],"state":"answer","ms":639}
+{"at":"2026-09-18T18:25:17.221Z","kind":"capture","id":"KB-316B2DDB","subject":"one invalid storeId answers Unauthorized on Query.product and NULL_REFERENCE on Query.products"}
+{"at":"2026-09-18T18:26:00.048Z","kind":"ask","q":"what does the storefront xAPI do with an unknown storeId or currencyCode on a product query","matched":["KB-D9B90536","KB-6824BC2B","KB-0C163966"],"opened":["KB-D9B90536","KB-6824BC2B","KB-0C163966"],"state":"answer","ms":804}
+{"at":"2026-09-18T18:26:00.059Z","kind":"flush","entries":1,"lines":3,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
