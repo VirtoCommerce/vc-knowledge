@@ -6,10 +6,14 @@ Three planes of ENTRIES, and the differences between them are the whole design. 
 arrived on 2026-09-17 and is not a plane: `knowledge/` holds documents read WHOLE rather than cut
 into entries — the oracles, the domain maps, the API and architecture references. They carry no
 frontmatter, no ids and no anchors, `kb ask` does not search them, and `kb validate` does not gate
-them; a domain map is read for orientation, not retrieved by question. A **normative** plane, holding
-the `BL-*` invariants as entries that CAN be retrieved and contradicted, is still ahead: the tool
-already stores and gates it (`src/rules.mjs`, `kb capture --rule`) and this base holds no entry of
-one, which is why `kb stat` reports `0 rule(s)`.
+them; a domain map is read for orientation, not retrieved by question. The **normative** plane holds
+the `BL-*` invariants as entries that CAN be retrieved and contradicted, stored and gated by the tool
+(`src/rules.mjs`, `kb capture --rule`).
+
+> This paragraph said the normative plane was "still ahead" and that `kb stat` reports `0 rule(s)`
+> — for weeks after the invariants had landed, while `kb stat` printed a number the sentence denied,
+> on the front page of a public repository. Corrected 2026-09-18. **Run `kb stat` for the counts.**
+> They are not written here, and this is why.
 
 The **derived** plane is projected from a running deployment and *regenerated*, so it cannot rot and
 nothing may hand-edit it. The **experiential** plane holds what an agent learned by doing, is
@@ -44,6 +48,9 @@ asks what to do and sees nothing else.
 | `flows/` | flow | procedures written through `kb capture --flow`, served by `kb how` |
 | `flows-index.json` | flow | retrieval index over the **active** flows — *untracked* |
 | `flows-catalog.md` | flow | one line per flow, retired ones included |
+| `rules/` | normative | the `BL-*` invariants, one entry per rule, written through `kb capture --rule` |
+| `rules-index.json` | normative | retrieval index over the **active** rules — *untracked* |
+| `rules-catalog.md` | normative | one line per rule, retired ones included |
 | `knowledge/` | — | documents read whole: `oracles/`, `domain/`, `api/`, `architecture/`, `automation/`, `ba/`, `execution/`. Moved out of the QA repository on 2026-09-17 because what makes them untrue is a change in the PLATFORM |
 
 ### Which of these git carries
