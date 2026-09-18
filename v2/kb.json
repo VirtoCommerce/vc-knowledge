@@ -1,7 +1,0 @@
-{
-  "schema": 1,
-  "idRule": "KB-<sha256(subject) hex, first 8, uppercased>",
-  "indexes": {
-    "experiential": "index.json"
-  }
-}
