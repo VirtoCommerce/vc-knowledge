@@ -1,0 +1,5 @@
+{"at":"2026-09-18T16:56:29.399Z","kind":"ask","q":"Does product price sorting use the indexed price field rather than the displayed price?","matched":["KB-1834ABE5","KB-3113CBC1","KB-C440D4E3"],"opened":["KB-1834ABE5","KB-3113CBC1","KB-C440D4E3"],"state":"answer","ms":2076}
+{"at":"2026-09-18T16:56:46.113Z","kind":"ask","q":"When sorting a product list by price ascending, does the storefront order by the indexed price or by the price actually displayed to the shopper?","matched":["KB-6D5E2CD1","KB-1834ABE5","KB-FA724D31"],"opened":["KB-6D5E2CD1","KB-1834ABE5","KB-FA724D31"],"state":"answer","ms":2147}
+{"at":"2026-09-18T17:00:37.019Z","kind":"capture","id":"KB-D9B90536","subject":"storefront xAPI accepts an unknown or malformed products sort argument without an error"}
+{"at":"2026-09-18T17:00:48.409Z","kind":"confirm","id":"KB-C440D4E3","deployment":"vcst_qa","trust":3}
+{"at":"2026-09-18T17:12:17.050Z","kind":"flush","entries":1,"lines":4,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}

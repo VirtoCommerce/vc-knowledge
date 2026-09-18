@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": null,
-  "count": 89,
+  "generated": "2026-09-18T17:12:17.050Z",
+  "count": 90,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -1210,7 +1210,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1338,6 +1338,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D9B90536",
+      "path": "entries/KB-D9B90536.md",
+      "subject": "storefront xAPI accepts an unknown or malformed products sort argument without an error",
+      "question": "What does the storefront products query do when its sort argument names a field that does not exist, or an invalid direction?",
+      "anchors": [
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
