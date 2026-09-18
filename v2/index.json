@@ -1,0 +1,1625 @@
+{
+  "schema": 1,
+  "generated": null,
+  "count": 89,
+  "entries": [
+    {
+      "id": "KB-02238DE5",
+      "path": "entries/KB-02238DE5.md",
+      "subject": "storefront org-role gating granularity",
+      "question": "Does a member's organization role gate which storefront sections they can reach, or only what they can do inside them?",
+      "anchors": [
+        "/company/members",
+        "Query.organizationOrders",
+        "Mutations.changeOrganizationContactRole"
+      ],
+      "scope": [
+        "principal=org-member",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-032FBB96",
+      "path": "entries/KB-032FBB96.md",
+      "subject": "SharingSettingType access is computed per caller",
+      "question": "Does a wishlist's access field say what the list allows, or what I am allowed to do with it?",
+      "anchors": [
+        "SharingSettingType.access",
+        "SharingSettingType.isOwner",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-055845A3",
+      "path": "entries/KB-055845A3.md",
+      "subject": "a cart line can serve a unit price that is in neither the configuration nor the line's history",
+      "question": "If pricing changes while a shopper's cart is open, what price does the cart show?",
+      "anchors": [
+        "Query.cart",
+        "CartType.items",
+        "LineItemType.listPrice"
+      ],
+      "scope": [
+        "principal=customer",
+        "surface=storefront-ui",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-06409954",
+      "path": "entries/KB-06409954.md",
+      "subject": "three independent fields represent a blocked organization member",
+      "question": "Where is it recorded that an organization member is blocked, and do the storefront and Admin write the same place?",
+      "anchors": [
+        "Mutations.lockOrganizationContact",
+        "Mutations.unlockOrganizationContact"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-068517DF",
+      "path": "entries/KB-068517DF.md",
+      "subject": "opening an Admin order blade by URL",
+      "question": "I was sent a link to an order blade and the screen does not match it - what am I looking at?",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "CustomerOrder.number"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0B6067F8",
+      "path": "entries/KB-0B6067F8.md",
+      "subject": "UserType.lockedState is the storefront-reachable sign-in state",
+      "question": "Which GraphQL field tells a storefront page whether an organization member can actually sign in?",
+      "anchors": [
+        "UserType.lockedState",
+        "ContactType.securityAccounts"
+      ],
+      "scope": [
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0C102D97",
+      "path": "entries/KB-0C102D97.md",
+      "subject": "cancelling an order cascades to the payment and never to the shipment",
+      "question": "what happens to an order's shipment and payment when the order is cancelled",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0C163966",
+      "path": "entries/KB-0C163966.md",
+      "subject": "the storefront product page of a configurable product",
+      "question": "what changes on the storefront product page once a product has a configuration",
+      "anchors": [
+        "/product/{id}",
+        "Query.productConfiguration"
+      ],
+      "scope": [
+        "principal=customer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0DD47BD1",
+      "path": "entries/KB-0DD47BD1.md",
+      "subject": "the amount a payment is for is not the payment's total",
+      "question": "does the admin order screen show the same totals the storefront charged",
+      "anchors": [
+        "PaymentIn.sum",
+        "CustomerOrder.paymentSubTotal",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-132A40B3",
+      "path": "entries/KB-132A40B3.md",
+      "subject": "a null lastLoginDate cannot tell never-tried from tried-and-failed",
+      "question": "what does a null lastLoginDate tell you about whether someone ever signed in",
+      "anchors": [
+        "GET /api/platform/security/users/{userName}"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-13B32D5F",
+      "path": "entries/KB-13B32D5F.md",
+      "subject": "what makes a promotion reach a given store",
+      "question": "this promotion has no store on it - does that mean it applies nowhere, or everywhere?",
+      "anchors": [
+        "GET /api/marketing/promotions/{id}",
+        "GET /api/platform/settings/{name}"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-16AEF0C2",
+      "path": "entries/KB-16AEF0C2.md",
+      "subject": "order operation numbering and parentage",
+      "question": "is a shipment number the order's numbering scheme with a different prefix?",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "OrderShipmentType.number",
+        "OrderShipmentType.parentOperationId"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1834ABE5",
+      "path": "entries/KB-1834ABE5.md",
+      "subject": "no Admin surface shows the price a given shopper would actually be charged",
+      "question": "The shopper and I disagree about a product's price -- where in Admin do I see what THEY see?",
+      "anchors": [
+        "GET /api/products/{productId}/{catalogId}/pricesWidget",
+        "PriceEvaluationContext.catalogId"
+      ],
+      "scope": [
+        "principal=admin",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-18991381",
+      "path": "entries/KB-18991381.md",
+      "subject": "where an order's coupon codes are readable",
+      "question": "which coupon did this shopper use? I have the order in Admin and cannot find the code",
+      "anchors": [
+        "CustomerOrderType.coupons",
+        "Discount.coupon"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-18ABE89B",
+      "path": "entries/KB-18ABE89B.md",
+      "subject": "admin order address blade false dirty state",
+      "question": "why does the admin order address form say the address has been modified when I only opened it?",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "OrderAddressType.countryName"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-191B1B4C",
+      "path": "entries/KB-191B1B4C.md",
+      "subject": "the master product is a row in its own variations list",
+      "question": "the product page says it has variations but the variations list shows one row -- what am I adding to the cart",
+      "anchors": [
+        "/{category}/{product-slug}",
+        "Product.masterVariation",
+        "Product.hasVariations"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1B18B821",
+      "path": "entries/KB-1B18B821.md",
+      "subject": "tax is provider-driven and silently zero without an active provider",
+      "question": "how is tax calculated on orders in this deployment",
+      "anchors": [
+        "GET /api/tax",
+        "CartType.total"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-27B4CD10",
+      "path": "entries/KB-27B4CD10.md",
+      "subject": "storefront members Active column reads contact status not account state",
+      "question": "Why does the storefront company members list show a member as Active when their platform account is locked or never registered?",
+      "anchors": [
+        "GET /company/members",
+        "Organization.contacts",
+        "ContactType.status"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3113CBC1",
+      "path": "entries/KB-3113CBC1.md",
+      "subject": "where a product's configurability is actually stored",
+      "question": "how do I tell whether a deployment has any configurable products",
+      "anchors": [
+        "POST /api/catalog/products/configurations/search",
+        "GET /api/catalog/products/{id}",
+        "Product.isConfigurable"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 1
+    },
+    {
+      "id": "KB-358A70CB",
+      "path": "entries/KB-358A70CB.md",
+      "subject": "storefront order page projection of the shipment",
+      "question": "does the storefront order page show the shipment, and what does it leave out?",
+      "anchors": [
+        "/account/orders",
+        "CustomerOrderType.shipments",
+        "OrderShipmentType.status",
+        "OrderShipmentType.number"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-35A09C64",
+      "path": "entries/KB-35A09C64.md",
+      "subject": "promotion re-evaluation on cart read",
+      "question": "after changing a promotion in the admin, do I have to touch the cart before the storefront shows the new discount?",
+      "anchors": [
+        "Query.cart",
+        "PUT /api/marketing/promotions",
+        "GET /api/marketing/promotions/{id}"
+      ],
+      "scope": [
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-35F20D97",
+      "path": "entries/KB-35F20D97.md",
+      "subject": "what a coupon code that does not work does to a cart",
+      "question": "if I apply a coupon code that is wrong, does the call fail?",
+      "anchors": [
+        "Mutations.addCoupon",
+        "Query.validateCoupon",
+        "CartType.coupons",
+        "CouponType.isAppliedSuccessfully",
+        "CartType.validationErrors"
+      ],
+      "scope": [
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-360127D0",
+      "path": "entries/KB-360127D0.md",
+      "subject": "a configuration loses its product and quantity on the way to the order",
+      "question": "what shape does a chosen configuration take on an order line item",
+      "anchors": [
+        "OrderConfigurationItemType",
+        "CartConfigurationItemType",
+        "OrderLineItemType.configurationItems"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 1
+    },
+    {
+      "id": "KB-3F7C78F6",
+      "path": "entries/KB-3F7C78F6.md",
+      "subject": "wishlists have no REST and no Admin surface",
+      "question": "Where in the Admin back office do I look at a customer's saved list?",
+      "anchors": [
+        "GET /docs/VirtoCommerce.XCart/swagger.json",
+        "Query.wishlist"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4982C91F",
+      "path": "entries/KB-4982C91F.md",
+      "subject": "order-discount-amount-rounding-split",
+      "question": "why does the same order discount show two different amounts depending on where I read it",
+      "anchors": [
+        "Discount.discountAmount",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "reward=percentage-off-cart-subtotal",
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4A8606CA",
+      "path": "entries/KB-4A8606CA.md",
+      "subject": "an abandoned invitation can leave an account nothing can delete",
+      "question": "I invited someone, changed my mind, and removed them from the organization - how do I delete the account that is left behind?",
+      "anchors": [
+        "DELETE /api/platform/security/users",
+        "POST /api/platform/security/users/search",
+        "GET /api/platform/security/users/id/{id}",
+        "GET /company/members"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4B889114",
+      "path": "entries/KB-4B889114.md",
+      "subject": "company members Active column vs account locked state",
+      "question": "The storefront lists an organization member as Active but the member cannot sign in - can I trust that column?",
+      "anchors": [
+        "/company/members",
+        "Mutations.lockOrganizationContact",
+        "Mutations.unlockOrganizationContact"
+      ],
+      "scope": [
+        "principal=org-maintainer",
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4C5627CE",
+      "path": "entries/KB-4C5627CE.md",
+      "subject": "shipment lifecycle states and what moves them",
+      "question": "what states can a shipment be in and what moves it between them?",
+      "anchors": [
+        "OrderShipmentType.status",
+        "OrderShipmentType.isCancelled",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4CCC2DD6",
+      "path": "entries/KB-4CCC2DD6.md",
+      "subject": "what Cancel document on an order actually cancels",
+      "question": "I cancelled an order in Admin -- is everything on it cancelled now",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "CustomerOrder.isCancelled"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4D082C89",
+      "path": "entries/KB-4D082C89.md",
+      "subject": "a pending invitation is a locked account with no status",
+      "question": "What does an organization member look like on each surface between being invited and completing registration?",
+      "anchors": [
+        "Mutations.inviteUser",
+        "GET /company/members"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 3
+    },
+    {
+      "id": "KB-4D26A022",
+      "path": "entries/KB-4D26A022.md",
+      "subject": "order shipment item allocation",
+      "question": "does the shipment created with an order carry the order's line items?",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "OrderShipmentType.items",
+        "OrderShipmentItemType"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4E45A8BA",
+      "path": "entries/KB-4E45A8BA.md",
+      "subject": "admin contact Status picker cannot represent Invited or Locked",
+      "question": "Can an administrator put a contact back into the Invited state, or read the invitation state from the Admin contact blade?",
+      "anchors": [
+        "GET /api/members",
+        "ContactType.status"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-53D776C2",
+      "path": "entries/KB-53D776C2.md",
+      "subject": "the Admin order tree blanks a zero shipment amount",
+      "question": "the Admin order document tree shows a dash where the shipment amount should be - is the shipment missing its money",
+      "anchors": [
+        "OrderShipmentType.total"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5790A068",
+      "path": "entries/KB-5790A068.md",
+      "subject": "marketing promotions are not change-tracked on this deployment",
+      "question": "who changed this promotion and when - is there an audit trail",
+      "anchors": [
+        "GET /api/platform/changelog/{type}/changes"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-59E4B5FC",
+      "path": "entries/KB-59E4B5FC.md",
+      "subject": "a configured product as an order line item",
+      "question": "how does a configurable product become a line item on an order",
+      "anchors": [
+        "OrderLineItemType.configurationItems",
+        "OrderConfigurationItemType",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=graphql",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5ADBFB34",
+      "path": "entries/KB-5ADBFB34.md",
+      "subject": "only the largest cart-subtotal promotion applies, whatever isExclusive says",
+      "question": "why did only one promotion apply when two were active, in scope and neither is exclusive",
+      "anchors": [
+        "Marketing.Promotion.CombinePolicy"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5F7C8FC4",
+      "path": "entries/KB-5F7C8FC4.md",
+      "subject": "an empty Tax providers widget is not evidence that a store has no tax provider",
+      "question": "how do I find out whether a store has a tax provider, and why does the Admin widget show nothing",
+      "anchors": [
+        "POST /api/taxes/search"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-62EE7AF3",
+      "path": "entries/KB-62EE7AF3.md",
+      "subject": "some platform routes are hidden from the API document this base projects from",
+      "question": "why does an endpoint that plainly exists resolve to nothing in the derived plane",
+      "anchors": [
+        "GET /api/platform/profiles/currentuser"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6824BC2B",
+      "path": "entries/KB-6824BC2B.md",
+      "subject": "platform GraphiQL runs as anonymous and takes a query in the URL",
+      "question": "How do I run a raw xAPI query without writing code or handling a token?",
+      "anchors": [
+        "GET /ui/graphiql",
+        "Query.me"
+      ],
+      "scope": [
+        "principal=anonymous",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6AA0D7FB",
+      "path": "entries/KB-6AA0D7FB.md",
+      "subject": "fixed rate shipping method option pricing",
+      "question": "why does choosing a different delivery method not change the shipping cost?",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "OrderShipmentType.price",
+        "OrderShipmentType.shipmentMethodOption"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6CC1EFE6",
+      "path": "entries/KB-6CC1EFE6.md",
+      "subject": "deleting a security account leaves the contact behind",
+      "question": "How do I fully remove a test member, and why can I not find the leftover afterwards?",
+      "anchors": [
+        "DELETE /api/platform/security/users"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6D5E2CD1",
+      "path": "entries/KB-6D5E2CD1.md",
+      "subject": "what makes a price list apply to a store, and what the storefront reads it through",
+      "question": "Which price list's price does a B2B storefront shopper actually get, and what decides it?",
+      "anchors": [
+        "GET /api/pricing/assignments",
+        "PricelistAssignment.storeId",
+        "PricelistAssignment.dynamicExpression"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6E98AA17",
+      "path": "entries/KB-6E98AA17.md",
+      "subject": "admin order operations tree staleness after cancel",
+      "question": "after cancelling an order the header says Cancelled but the payment under it still says New -- did the cascade fail?",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "CustomerOrder.childrenOperations",
+        "PaymentIn.cancelledState"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7040852E",
+      "path": "entries/KB-7040852E.md",
+      "subject": "member keyword search is index-backed",
+      "question": "A contact I can see in the Admin members list returns nothing when I type its name or email into the search box - where did it go?",
+      "anchors": [
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7A12CF52",
+      "path": "entries/KB-7A12CF52.md",
+      "subject": "what a wishlist sharing key grants a signed-out holder",
+      "question": "Does someone need an account to open a shared list link, and what do they see?",
+      "anchors": [
+        "Query.sharedWishlist",
+        "GET /shared-list/:sharingKey",
+        "WishlistType.scope"
+      ],
+      "scope": [
+        "principal=anonymous",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7A9D4927",
+      "path": "entries/KB-7A9D4927.md",
+      "subject": "revoking a wishlist share link: re-scoping suspends, deleting revokes",
+      "question": "If I make a shared list private again, does the old share link stop working for good?",
+      "anchors": [
+        "Query.sharedWishlist",
+        "Mutations.changeWishlist",
+        "Mutations.removeWishlist",
+        "SharingSettingType.id",
+        "GET /shared-list/:sharingKey"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7AB0B13E",
+      "path": "entries/KB-7AB0B13E.md",
+      "subject": "removing a product configuration",
+      "question": "can a product configuration be deleted once it has been created",
+      "anchors": [
+        "POST /api/catalog/products/configurations",
+        "ProductConfiguration.isActive",
+        "#!/workspace/catalog?productId="
+      ],
+      "scope": [
+        "surface=admin-spa",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7E35E6BC",
+      "path": "entries/KB-7E35E6BC.md",
+      "subject": "Admin renders order timestamps in local time while the API returns UTC",
+      "question": "why does the Admin order screen show a different time from the one in the REST payload",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 1
+    },
+    {
+      "id": "KB-82111688",
+      "path": "entries/KB-82111688.md",
+      "subject": "the storefront members Status filter finds nobody in a state the roster is full of",
+      "question": "why does filtering company members by Blocked or Invited return no results",
+      "anchors": [
+        "/company/members"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8264632C",
+      "path": "entries/KB-8264632C.md",
+      "subject": "how the storefront cart page renders an applied and an unapplied coupon",
+      "question": "what does the storefront cart page show a shopper about a coupon code they entered?",
+      "anchors": [
+        "/cart",
+        "CouponType.isAppliedSuccessfully",
+        "Query.validateCoupon",
+        "Mutations.removeCoupon",
+        "Mutations.clearCart"
+      ],
+      "scope": [
+        "principal=customer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8A82CF4D",
+      "path": "entries/KB-8A82CF4D.md",
+      "subject": "switching a product's configurability on and off",
+      "question": "how do I turn a product's configurability off, and how soon does the storefront see it",
+      "anchors": [
+        "ProductConfiguration.isActive",
+        "Product.isConfigurable",
+        "POST /api/catalog/products/configurations/search"
+      ],
+      "scope": [
+        "surface=graphql",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8C3E463D",
+      "path": "entries/KB-8C3E463D.md",
+      "subject": "which clock an Admin timestamp is in",
+      "question": "the Admin order screen says the order was created hours away from what the API returns - which is right?",
+      "anchors": [
+        "GET /api/platform/profiles/currentuser",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-996BDF08",
+      "path": "entries/KB-996BDF08.md",
+      "subject": "cart-level promotion reward placement",
+      "question": "where does a percentage-off-subtotal promotion show up on the cart — on the line items or on the cart?",
+      "anchors": [
+        "CartType.discounts",
+        "LineItemType.discounts",
+        "RewardCartGetOfRelSubtotal"
+      ],
+      "scope": [
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A1B35892",
+      "path": "entries/KB-A1B35892.md",
+      "subject": "a configured product as a cart line item",
+      "question": "how does a configurable product become a line item in the cart",
+      "anchors": [
+        "LineItemType.configurationItems",
+        "CartConfigurationItemType",
+        "/cart"
+      ],
+      "scope": [
+        "principal=customer",
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A3CE7FBA",
+      "path": "entries/KB-A3CE7FBA.md",
+      "subject": "recovering a percentage rate from a discount amount",
+      "question": "can I divide a cart-level discount amount by the subtotal to recover the percentage",
+      "anchors": [
+        "CartType.subTotal",
+        "LineItemType.discountTotal",
+        "DiscountType.amount"
+      ],
+      "scope": [
+        "reward=percentage-off-cart-subtotal",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A4EB3766",
+      "path": "entries/KB-A4EB3766.md",
+      "subject": "the cart record survives checkout, emptied and reused",
+      "question": "after an order is placed, is the cart it came from still there to look at?",
+      "anchors": [
+        "GET /api/carts/{id}",
+        "POST /api/carts/search"
+      ],
+      "scope": [
+        "principal=admin",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AB35BCDC",
+      "path": "entries/KB-AB35BCDC.md",
+      "subject": "what an order line item stops carrying once the cart becomes an order",
+      "question": "why can I not read listPrice off an order line item when the cart had one",
+      "anchors": [
+        "OrderLineItemType.listTotal",
+        "LineItemType.listPrice",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=graphql",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AD1FA66B",
+      "path": "entries/KB-AD1FA66B.md",
+      "subject": "where a cart's money lives, and which copy goes stale",
+      "question": "if a promotion changes while a shopper's cart is alive, does the cart still hold the old discount?",
+      "anchors": [
+        "GET /api/carts/{id}",
+        "Query.cart",
+        "CartType.discounts"
+      ],
+      "scope": [
+        "principal=customer",
+        "surface=rest",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ADFD93AB",
+      "path": "entries/KB-ADFD93AB.md",
+      "subject": "org-specific pricing runs through the organization's user groups, not through organizationId",
+      "question": "What makes a B2B customer who belongs to an organization get a different price?",
+      "anchors": [
+        "PriceEvaluationContext.userGroups",
+        "PriceEvaluationContext.organizationId",
+        "Contract.basePricelistAssignmentId"
+      ],
+      "scope": [
+        "principal=org-member",
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B769C7B1",
+      "path": "entries/KB-B769C7B1.md",
+      "subject": "storefront org role and platform user role are one store",
+      "question": "Is the organization role a member sees in the storefront a separate thing from the role assigned to their account in Admin?",
+      "anchors": [
+        "Mutations.changeOrganizationContactRole",
+        "GET /api/members/customers/invite/roles"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B9C8ECD3",
+      "path": "entries/KB-B9C8ECD3.md",
+      "subject": "the scoped discount totals on an order",
+      "question": "the order has a discount but subTotalDiscount is zero - where did the money go?",
+      "anchors": [
+        "CustomerOrder.subTotalDiscount",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BAEBCDA7",
+      "path": "entries/KB-BAEBCDA7.md",
+      "subject": "an organization invitation cannot be cancelled or resent",
+      "question": "How does an invited person complete registration into a B2B organization, and can a maintainer resend or cancel the invitation?",
+      "anchors": [
+        "GET /company/members",
+        "Mutations.inviteUser",
+        "RegistrationInvitationEmailNotification"
+      ],
+      "scope": [
+        "principal=org-maintainer",
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BC6FC633",
+      "path": "entries/KB-BC6FC633.md",
+      "subject": "admin account role assignment is staged until save",
+      "question": "I assigned and removed roles on an account in the Admin SPA and the list updated - why did the change not take effect?",
+      "anchors": [
+        "PUT /api/platform/security/users"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BCA7468D",
+      "path": "entries/KB-BCA7468D.md",
+      "subject": "two endpoints disagree about whether a password hash is a secret",
+      "question": "can a security account's password hash be read back over the REST API",
+      "anchors": [
+        "GET /api/members/{id}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BF730613",
+      "path": "entries/KB-BF730613.md",
+      "subject": "lockoutEnd has three meaningful values, and one of them looks like the opposite of what it means",
+      "question": "what do the different lockoutEnd dates on a security account mean",
+      "anchors": [
+        "GET /api/platform/security/users/{userName}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C1024558",
+      "path": "entries/KB-C1024558.md",
+      "subject": "telling a coupon-driven discount from an automatic one on a cart",
+      "question": "given only the cart, can I tell whether a discount came from a coupon or applied by itself?",
+      "anchors": [
+        "DiscountType.coupon",
+        "CartType.discounts",
+        "RewardCartGetOfRelSubtotal",
+        "POST /api/marketing/promotions/coupons/add"
+      ],
+      "scope": [
+        "reward=percentage-off-cart-subtotal",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C440D4E3",
+      "path": "entries/KB-C440D4E3.md",
+      "subject": "there is no product search route under /api/catalog/products",
+      "question": "which REST route searches catalog products by product type",
+      "anchors": [
+        "POST /api/catalog/listentries",
+        "GET /api/catalog/products"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CA4C93E4",
+      "path": "entries/KB-CA4C93E4.md",
+      "subject": "discount-rate-not-persisted-on-order",
+      "question": "can I tell from a placed order what percentage a promotion took off it",
+      "anchors": [
+        "OrderDiscountType.amount",
+        "OrderDiscountType.promotionId",
+        "Discount.discountAmount"
+      ],
+      "scope": [
+        "principal=customer",
+        "surface=rest",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CC195687",
+      "path": "entries/KB-CC195687.md",
+      "subject": "a variation on an order does not record its parent",
+      "question": "how do I find out which product an ordered variation is a variation of",
+      "anchors": [
+        "OrderLineItemType.product",
+        "GET /api/order/customerOrders/{id}",
+        "Product.masterVariation"
+      ],
+      "scope": [
+        "surface=graphql",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CC9A98D3",
+      "path": "entries/KB-CC9A98D3.md",
+      "subject": "order address copies per operation",
+      "question": "does a shipment share the order's shipping address or hold its own copy?",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "OrderShipmentType.deliveryAddress",
+        "CustomerOrderType.addresses"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D24EDC70",
+      "path": "entries/KB-D24EDC70.md",
+      "subject": "what refuses a never-registered account at sign-in was not established, and here is where the looking stopped",
+      "question": "does a security account with status PendingApproval or emailConfirmed false block storefront sign-in",
+      "anchors": [
+        "GET /api/platform/security/users/{userName}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D4A064A5",
+      "path": "entries/KB-D4A064A5.md",
+      "subject": "promotion discount rounding on the cart",
+      "question": "why does the discount amount on the promotion not match the discount total shown on the cart?",
+      "anchors": [
+        "DiscountType.amount",
+        "CartType.discountTotal"
+      ],
+      "scope": [
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D60012DB",
+      "path": "entries/KB-D60012DB.md",
+      "subject": "discount-row-withtax-is-never-written",
+      "question": "is discountAmountWithTax on an order discount row safe to read instead of discountAmount",
+      "anchors": [
+        "Discount.discountAmountWithTax"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D992AF44",
+      "path": "entries/KB-D992AF44.md",
+      "subject": "order discount row is a snapshot, not a live reference",
+      "question": "if the promotion is edited or disabled after an order was placed, does anything on the order change",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "OrderDiscountType.promotionName",
+        "PUT /api/marketing/promotions"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DA14E8B7",
+      "path": "entries/KB-DA14E8B7.md",
+      "subject": "block on an un-accepted invitation is irreversible",
+      "question": "What happens to a pending organization invitation if the maintainer blocks and then unblocks that row?",
+      "anchors": [
+        "GET /company/members",
+        "Mutations.lockOrganizationContact",
+        "Mutations.unlockOrganizationContact",
+        "ContactType.status"
+      ],
+      "scope": [
+        "principal=org-maintainer",
+        "surface=storefront-ui",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E01A9F11",
+      "path": "entries/KB-E01A9F11.md",
+      "subject": "the promotion blade's required-field warnings are not a save gate",
+      "question": "will the Admin promotion blade stop me saving a promotion that has no eligibility criterion and no reward?",
+      "anchors": [
+        "POST /api/marketing/promotions",
+        "PUT /api/marketing/promotions"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E17E4CEF",
+      "path": "entries/KB-E17E4CEF.md",
+      "subject": "admin account Status picker cannot represent the values it displays",
+      "question": "Why does the Admin account Status field show a value that is not in its own dropdown?",
+      "anchors": [
+        "GET /api/platform/security/users"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E367DA11",
+      "path": "entries/KB-E367DA11.md",
+      "subject": "wishlist scope has three values and the roster shows two",
+      "question": "What can a wishlist's scope actually be set to?",
+      "anchors": [
+        "InputCreateWishlistType.scope",
+        "WishlistType.scope",
+        "GET /account/lists"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E7790BF6",
+      "path": "entries/KB-E7790BF6.md",
+      "subject": "where an applied coupon and its reward live on a cart",
+      "question": "when a coupon is applied to a cart, where is the code and where is the money?",
+      "anchors": [
+        "Mutations.addCoupon",
+        "CartType.coupons",
+        "CartType.discounts",
+        "DiscountType.coupon",
+        "CouponType.isAppliedSuccessfully",
+        "GET /api/carts/{cartId}",
+        "/cart"
+      ],
+      "scope": [
+        "principal=customer",
+        "surface=rest",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EAA7BA2F",
+      "path": "entries/KB-EAA7BA2F.md",
+      "subject": "storefront Lists page is an owner-only roster",
+      "question": "Will a list a colleague scoped to the organization show up on my Lists page?",
+      "anchors": [
+        "Query.wishlists",
+        "GET /account/lists"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EB991080",
+      "path": "entries/KB-EB991080.md",
+      "subject": "configuration section options are filtered by storefront resolvability",
+      "question": "why does a configuration section have no options on the storefront when the Admin shows options on it",
+      "anchors": [
+        "Query.productConfiguration",
+        "ConfigurationSectionType.options",
+        "ConfigurationLineItemType.product"
+      ],
+      "scope": [
+        "principal=customer",
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EC76F588",
+      "path": "entries/KB-EC76F588.md",
+      "subject": "there is no paymentMethodCode on an order payment, and shipment spells its sibling differently",
+      "question": "why is paymentMethodCode absent on an order payment and what carries the gateway code",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "PaymentInType.gatewayCode"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EF3CB7FB",
+      "path": "entries/KB-EF3CB7FB.md",
+      "subject": "Login on behalf is authorized on the storefront not in Admin",
+      "question": "How do I get a second storefront identity without a second password, and why did Login on behalf fail?",
+      "anchors": [
+        "POST /connect/token",
+        "GET /account/impersonate/:userId"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EF925925",
+      "path": "entries/KB-EF925925.md",
+      "subject": "an open cart page is not re-confirmed before Place order",
+      "question": "can a shopper be charged a different total from the one their cart page is showing?",
+      "anchors": [
+        "/cart",
+        "/checkout/completed",
+        "CartType.total"
+      ],
+      "scope": [
+        "principal=customer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F027283D",
+      "path": "entries/KB-F027283D.md",
+      "subject": "the discount label a shopper sees is free text nobody keeps honest",
+      "question": "if I change a promotion's reward, does the label the shopper reads change with it?",
+      "anchors": [
+        "DiscountType.description",
+        "PUT /api/marketing/promotions",
+        "/cart"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=storefront-ui",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F1542157",
+      "path": "entries/KB-F1542157.md",
+      "subject": "an order-level discount is not allocated to the line items",
+      "question": "why does the Admin Line items blade show a different discount and total from the order header",
+      "anchors": [
+        "OrderLineItemType.discountAmount"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F8707174",
+      "path": "entries/KB-F8707174.md",
+      "subject": "the cancellation reason is customer-facing",
+      "question": "is the reason I type when cancelling an order internal?",
+      "anchors": [
+        "CustomerOrderType.cancelReason",
+        "CustomerOrder.cancelReason"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FA724D31",
+      "path": "entries/KB-FA724D31.md",
+      "subject": "storefront Delete member detaches the contact and orphans the account",
+      "question": "What does deleting a member from the storefront company members list actually delete?",
+      "anchors": [
+        "Mutations.removeMemberFromOrganization"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 1
+    },
+    {
+      "id": "KB-FF7E4D5B",
+      "path": "entries/KB-FF7E4D5B.md",
+      "subject": "cart-subtotal-percentage-reward-on-customerorder",
+      "question": "when a percentage promotion discounts the whole cart, where does that discount end up on the resulting CustomerOrder",
+      "anchors": [
+        "CustomerOrder.discounts",
+        "CustomerOrder.subTotalDiscount",
+        "OrderLineItemType.discountTotal",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "principal=customer",
+        "reward=percentage-off-cart-subtotal",
+        "surface=rest",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    }
+  ]
+}
