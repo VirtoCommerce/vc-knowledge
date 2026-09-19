@@ -1,0 +1,2 @@
+{"at":"2026-09-19T13:51:30.335Z","kind":"ask","q":"Can a non-admin platform token read module settings via /api/platform/settings, and what does it return?","matched":["KB-13B32D5F"],"scores":[10],"opened":["KB-13B32D5F"],"state":"answer","ms":884,"rank":"floor-1","via":"mcp"}
+{"at":"2026-09-19T13:57:05.463Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
