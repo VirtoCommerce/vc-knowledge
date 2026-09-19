@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-19T12:37:34.633Z",
-  "count": 94,
+  "generated": "2026-09-19T13:56:40.126Z",
+  "count": 95,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -774,6 +774,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6C3FA2B7",
+      "path": "entries/KB-6C3FA2B7.md",
+      "subject": "Storefront cart keeps its applied coupon across sign-out / sign-in",
+      "question": "Does the storefront cart keep an applied coupon when the shopper signs out and signs back in?",
+      "anchors": [
+        "Mutations.mergeCart",
+        "Mutations.addCoupon",
+        "Query.cart"
+      ],
+      "scope": [
+        "api=xapi-graphql",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
