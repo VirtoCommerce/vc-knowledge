@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-19T14:01:38.902Z",
-  "count": 96,
+  "generated": "2026-09-19T14:09:48.191Z",
+  "count": 100,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -323,7 +323,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-3113CBC1",
@@ -1016,6 +1016,52 @@
       "disputed": 0
     },
     {
+      "id": "KB-90B0D8F5",
+      "path": "entries/KB-90B0D8F5.md",
+      "subject": "Setting a contact's Status to \"Locked\" in Admin leaves the storefront members roster showing that member as \"Active\" — the membership status masks it.",
+      "question": "If an admin blocks a member by setting the contact-level Status to Locked, does the storefront company members list show it?",
+      "anchors": [
+        "/company/members",
+        "POST /api/members",
+        "Query.organization.contacts",
+        "ContactType.status",
+        "Contact.statusInOrganization"
+      ],
+      "scope": [
+        "build=2.58.0-pr-2467",
+        "store=b2b-store",
+        "surface=graphql-xapi",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-97170665",
+      "path": "entries/KB-97170665.md",
+      "subject": "A membership lock shows on the storefront members list as a red \"Blocked\" badge, and in xAPI only as Contact.isLockedInOrganization — the status fields stay \"Approved\".",
+      "question": "When an organization member is blocked from Admin, what does the storefront company members list show for them and what does the API return?",
+      "anchors": [
+        "/company/members",
+        "POST /api/customer/organization-memberships/{id}/lock",
+        "Query.organization.contacts",
+        "Contact.isLockedInOrganization",
+        "Mutation.lockOrganizationContact"
+      ],
+      "scope": [
+        "build=2.58.0-pr-2467",
+        "store=b2b-store",
+        "surface=graphql-xapi",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-996BDF08",
       "path": "entries/KB-996BDF08.md",
       "subject": "cart-level promotion reward placement",
@@ -1083,6 +1129,25 @@
       "scope": [
         "principal=admin",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A5F9BBED",
+      "path": "entries/KB-A5F9BBED.md",
+      "subject": "Contact.isLockedInOrganization is resolved from the CALLER's JWT organization claim, so a platform-admin token reads false for a genuinely locked member.",
+      "question": "Why does isLockedInOrganization come back false when I query the organization roster with an admin token?",
+      "anchors": [
+        "Contact.isLockedInOrganization",
+        "Query.organization.contacts",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=graphql-xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1177,6 +1242,25 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B9D1132A",
+      "path": "entries/KB-B9D1132A.md",
+      "subject": "Two platform API calls fail silently unless called exactly right: account lock needs the user id (by userName it returns succeeded:false), and member search needs deepSearch:true or it returns a totalCount with an empty results array.",
+      "question": "Why did POST /api/platform/security/users/{userName}/lock do nothing, and why does /api/members/search return a totalCount but no results?",
+      "anchors": [
+        "POST /api/platform/security/users/{id}/lock",
+        "POST /api/platform/security/users/{id}/unlock",
+        "POST /api/members/search",
+        "PUT /api/platform/security/users"
+      ],
+      "scope": [
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
