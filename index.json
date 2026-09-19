@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-19T14:09:48.191Z",
-  "count": 100,
+  "generated": "2026-09-19T16:33:15.595Z",
+  "count": 102,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -979,6 +979,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-8793DFE7",
+      "path": "entries/KB-8793DFE7.md",
+      "subject": "An order header's shippingTaxTotal reads 0 even when shipping is taxed, contradicting the header's own shippingTotalWithTax",
+      "question": "is the order header's shippingTaxTotal a reliable figure for the tax charged on shipping",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "CustomerOrder.shippingTaxTotal"
+      ],
+      "scope": [
+        "entity=customer-order-header-totals",
+        "module=virtocommerce.orders",
+        "surface=rest-api",
+        "version=3.1015.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8A82CF4D",
       "path": "entries/KB-8A82CF4D.md",
       "subject": "switching a product's configurability on and off",
@@ -1758,6 +1778,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F20CD11C",
+      "path": "entries/KB-F20CD11C.md",
+      "subject": "On Orders 3.1015.0 the order's configuration items DO carry sectionId and sectionName, so the section a choice answered is recoverable",
+      "question": "does a configurable product's order line record which configuration section each chosen option answered",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "POST /api/catalog/products/configurations/search"
+      ],
+      "scope": [
+        "entity=configurable-product-order-line",
+        "module=virtocommerce.orders",
+        "surface=rest-api",
+        "version=3.1015.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

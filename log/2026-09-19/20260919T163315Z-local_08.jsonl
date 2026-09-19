@@ -1,0 +1,6 @@
+{"at":"2026-09-19T16:29:30.170Z","kind":"capture","id":"KB-F20CD11C","subject":"On Orders 3.1015.0 the order's configuration items DO carry sectionId and sectionName, so the section a choice answered is recoverable","related":["KB-360127D0","KB-F1542157","KB-0C163966"],"via":"mcp"}
+{"at":"2026-09-19T16:29:36.443Z","kind":"show","id":"KB-CC195687","state":"answer","via":"mcp"}
+{"at":"2026-09-19T16:29:38.120Z","kind":"show","id":"KB-0DD47BD1","state":"answer","via":"mcp"}
+{"at":"2026-09-19T16:29:44.316Z","kind":"ask","q":"why is the order header shippingTaxTotal zero when the shipment's own taxTotal is non-zero","matched":[],"state":"miss","nearMiss":{"id":"KB-53D776C2","score":3,"coverage":0.38},"ms":2,"rank":"floor-1","via":"mcp"}
+{"at":"2026-09-19T16:30:12.405Z","kind":"capture","id":"KB-8793DFE7","subject":"An order header's shippingTaxTotal reads 0 even when shipping is taxed, contradicting the header's own shippingTotalWithTax","after":"2026-09-19T16:29:44.316Z","related":[],"via":"mcp"}
+{"at":"2026-09-19T16:33:15.595Z","kind":"flush","entries":2,"lines":5,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
