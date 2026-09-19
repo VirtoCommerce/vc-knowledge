@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-18T18:26:00.059Z",
-  "count": 91,
+  "generated": "2026-09-19T12:37:34.633Z",
+  "count": 94,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -494,6 +494,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-4AE52041",
+      "path": "entries/KB-4AE52041.md",
+      "subject": "The master hat PDP's variant picker never resolves to a purchasable variation, so a master page can be a dead end even when its variations are in stock.",
+      "question": "does selecting every variant option on a master product page make it purchasable",
+      "anchors": [
+        "/configurable-caps-shirts/hat",
+        "/configurable-caps-shirts/brown-vt-print-hat",
+        "Product.variations"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4B889114",
       "path": "entries/KB-4B889114.md",
       "subject": "company members Active column vs account locked state",
@@ -596,6 +615,25 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-50EBEEE9",
+      "path": "entries/KB-50EBEEE9.md",
+      "subject": "Storefront checkout happens on the /cart page itself; there is no separate checkout route until the order completes.",
+      "question": "what does the storefront require to place an order, and where does checkout happen",
+      "anchors": [
+        "/checkout/completed",
+        "/account/orders/{orderId}",
+        "Mutation.createOrderFromCart"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1595,6 +1633,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F78ED1CC",
+      "path": "entries/KB-F78ED1CC.md",
+      "subject": "On vcst-qa a configurable product's PDP has a real Add to cart button, while simple and variation PDPs add via the quantity stepper.",
+      "question": "what is the add-to-cart control on a storefront product page, and does it differ by product type",
+      "anchors": [
+        "/products-with-options/custom-t-shirt",
+        "/soft-drinks/soda",
+        "Query.product"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
