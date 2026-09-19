@@ -1,0 +1,2 @@
+{"at":"2026-09-19T13:48:16.094Z","kind":"ask","q":"When an organization member is blocked (status Blocked / locked) from the Admin side, what does the storefront company members list show for them, and what does the GraphQL/REST API return?","matched":[],"state":"miss","nearMiss":{"id":"KB-27B4CD10","score":8,"coverage":0.47},"ms":218,"rank":"floor-1","via":"mcp"}
+{"at":"2026-09-19T13:53:55.126Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
