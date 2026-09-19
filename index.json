@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-19T13:56:40.126Z",
-  "count": 95,
+  "generated": "2026-09-19T14:01:38.902Z",
+  "count": 96,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -1446,6 +1446,27 @@
         "principal=org-maintainer",
         "surface=storefront-ui",
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DF432371",
+      "path": "entries/KB-DF432371.md",
+      "subject": "A non-admin (__customer) platform token is refused SettingQuery-gated /api/platform/settings routes with 403, but can read two ungated routes: /values/{name} (no permission attribute) and /ui/customization (AllowAnonymous).",
+      "question": "Can a non-admin platform token read module settings via /api/platform/settings, and which ones?",
+      "anchors": [
+        "GET /api/platform/settings",
+        "GET /api/platform/settings/modules/{id}",
+        "GET /api/platform/settings/{name}",
+        "GET /api/platform/settings/values/{name}",
+        "GET /api/platform/settings/ui/customization"
+      ],
+      "scope": [
+        "auth=non-admin-customer-token",
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
