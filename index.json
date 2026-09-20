@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-19T16:33:15.595Z",
-  "count": 102,
+  "generated": "2026-09-20T18:19:06.946Z",
+  "count": 103,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -175,6 +175,28 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-133FD544",
+      "path": "entries/KB-133FD544.md",
+      "subject": "On XOrder 3.1011.0 the GraphQL OrderConfigurationItemType exposes the FULL configuration record — sectionId, sectionName, productId, sku, quantity and money — not the five-field display projection seen on older builds",
+      "question": "Can a buyer-facing order page reconstruct which configuration section each chosen option answered, or does the GraphQL order surface only give a display name?",
+      "anchors": [
+        "Query.order",
+        "OrderType.configurationItems",
+        "GET /api/order/customerOrders/{id}",
+        "POST /api/catalog/products/configurations/search"
+      ],
+      "scope": [
+        "domain=configurable-products",
+        "module=virtocommerce.xorder",
+        "surface=graphql-xapi",
+        "version=3.1011.0"
       ],
       "plane": "experiential",
       "status": "active",
@@ -995,7 +1017,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1797,7 +1819,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
