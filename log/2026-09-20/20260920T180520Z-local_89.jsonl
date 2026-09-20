@@ -1,0 +1,2 @@
+{"at":"2026-09-20T18:00:03.792Z","kind":"ask","q":"how does the storefront send a configurable product's chosen sections in the addItemsCart / createConfiguredLineItem GraphQL mutation","matched":[],"state":"miss","nearMiss":{"id":"KB-0C163966","score":3,"coverage":0.3},"ms":4481,"rank":"floor-1","via":"mcp","call":"toolu_01TkzARmE1uWZKPw7WXqXHmu"}
+{"at":"2026-09-20T18:05:20.757Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
