@@ -1,0 +1,3 @@
+{"at":"2026-09-21T07:50:48.635Z","kind":"ask","q":"how is a configurable product line priced in the storefront cart on /cart - option extendedPrice or unit salePrice?","matched":[],"state":"miss","nearMiss":{"id":"KB-F20CD11C","score":4,"coverage":0.4},"ms":846,"rank":"floor-1","via":"cli"}
+{"at":"2026-09-21T07:55:51.852Z","kind":"session","session":"local_30","tools":27,"turns":4,"touchAt":[],"firstAt":"2026-09-21T06:57:26.676Z","lastAt":"2026-09-21T07:22:43.745Z"}
+{"at":"2026-09-21T07:55:51.864Z","kind":"flush","entries":0,"lines":2,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
