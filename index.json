@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-21T08:05:43.324Z",
-  "count": 105,
+  "generated": "2026-09-21T08:14:51.996Z",
+  "count": 106,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -113,7 +113,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -221,7 +221,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -326,6 +326,27 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1AC55A1D",
+      "path": "entries/KB-1AC55A1D.md",
+      "subject": "A checkout payment stamps capturedDate at the same instant as authorizedDate even when it only reached Authorized and was never captured, so capturedDate cannot be used to decide whether funds were taken",
+      "question": "does an order's inPayments[].capturedDate mean the payment was actually captured?",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "POST /api/order/customerOrders/search"
+      ],
+      "scope": [
+        "gateway=cybersourcepaymentmethod",
+        "gateway=skyflowpaymentmethod",
+        "module=virtocommerce.orders@3.1015.0",
+        "store=b2b-store",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -575,7 +596,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1061,7 +1082,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1863,7 +1884,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
