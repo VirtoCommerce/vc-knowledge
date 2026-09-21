@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-20T18:19:06.946Z",
-  "count": 103,
+  "generated": "2026-09-21T08:05:43.324Z",
+  "count": 105,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -89,6 +89,27 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0B27E984",
+      "path": "entries/KB-0B27E984.md",
+      "subject": "The \"+ Add a gift\" section on the cart page is pre-checked by default and silently puts a $0.00 auto-promotion gift line into the placed order, without appearing in the cart's product table, item count or subtotal.",
+      "question": "Does the \"+ Add a gift\" section on the cart page add a gift line item to the placed order by default?",
+      "anchors": [
+        "/account/orders/{id}",
+        "Mutation.createOrderFromCart",
+        "Query.cart"
+      ],
+      "scope": [
+        "currency=usd",
+        "promotion=auto gift (no coupon)",
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -535,6 +556,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-4B47D094",
+      "path": "entries/KB-4B47D094.md",
+      "subject": "A configurable product's option contributes its EXTENDED price (unit x option quantity) to the storefront line price, at every stage from PDP to placed order.",
+      "question": "Is a configurable product option priced into the cart/order line at its unit salePrice or its extendedPrice?",
+      "anchors": [
+        "/products-with-options/cfg-parents",
+        "/account/orders/{id}",
+        "Mutation.createConfiguredLineItem",
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "currency=usd",
+        "product-type=configurable",
+        "section-type=product",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4B889114",
       "path": "entries/KB-4B889114.md",
       "subject": "company members Active column vs account locked state",
@@ -659,7 +703,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1838,7 +1882,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
