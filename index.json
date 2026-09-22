@@ -1,8 +1,24 @@
 {
   "schema": 1,
-  "generated": "2026-09-22T07:01:31.518Z",
-  "count": 107,
+  "generated": "2026-09-22T07:31:12.965Z",
+  "count": 109,
   "entries": [
+    {
+      "id": "KB-0153781B",
+      "path": "entries/KB-0153781B.md",
+      "subject": "Storefront sign-in page route is /sign-in, not /account/login",
+      "question": "What is the URL route for the storefront sign-in page?",
+      "anchors": [
+        "/account/login"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
     {
       "id": "KB-02238DE5",
       "path": "entries/KB-02238DE5.md",
@@ -34,6 +50,23 @@
       ],
       "scope": [
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0407F36E",
+      "path": "entries/KB-0407F36E.md",
+      "subject": "Storefront login authenticates via REST POST /connect/token, not a GraphQL mutation",
+      "question": "Which endpoint does the storefront sign-in form call to authenticate a user?",
+      "anchors": [
+        "/connect/token"
+      ],
+      "scope": [
+        "flow=authentication",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
