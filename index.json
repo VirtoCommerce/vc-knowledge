@@ -1,24 +1,8 @@
 {
   "schema": 1,
-  "generated": "2026-09-22T07:31:12.965Z",
-  "count": 109,
+  "generated": "2026-09-22T07:47:06.665Z",
+  "count": 108,
   "entries": [
-    {
-      "id": "KB-0153781B",
-      "path": "entries/KB-0153781B.md",
-      "subject": "Storefront sign-in page route is /sign-in, not /account/login",
-      "question": "What is the URL route for the storefront sign-in page?",
-      "anchors": [
-        "/account/login"
-      ],
-      "scope": [
-        "surface=storefront-ui"
-      ],
-      "plane": "experiential",
-      "status": "active",
-      "trust": 1,
-      "disputed": 0
-    },
     {
       "id": "KB-02238DE5",
       "path": "entries/KB-02238DE5.md",
