@@ -1,0 +1,3 @@
+{"at":"2026-09-22T08:11:16.757Z","kind":"ask","q":"what does the Active column on /company/members show for an organization member","matched":["KB-27B4CD10","KB-4B889114","KB-97170665"],"scores":[16,16,15],"matchedBy":["both","both","both"],"trustShown":["DISPUTED","well attested","corroborated"],"opened":["KB-27B4CD10","KB-4B889114","KB-97170665"],"state":"answer","ms":1082,"rank":"floor-1","via":"cli","who":"Dan-BV","synthetic":true}
+{"at":"2026-09-22T08:11:54.263Z","kind":"session","session":"a905b381","tools":34,"turns":2,"touchAt":[12],"firstAt":"2026-09-22T07:26:02.754Z","lastAt":"2026-09-22T07:38:38.623Z","who":"Dan-BV"}
+{"at":"2026-09-22T08:11:54.275Z","kind":"flush","entries":0,"lines":2,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
