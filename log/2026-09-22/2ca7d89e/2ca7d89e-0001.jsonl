@@ -1,0 +1,4 @@
+{"at":"2026-09-22T06:48:39.706Z","kind":"ask","q":"what payment methods are offered at the storefront checkout payment step for a signed-in B2B buyer, and where does that list come from","matched":[],"state":"miss","nearMiss":{"id":"KB-6D5E2CD1","score":3,"coverage":0.27},"ms":181,"rank":"floor-1","via":"mcp","call":"toolu_01K7w9qjGUy9dtxqEjnMBXUw","topic":"B2B checkout payment methods","deployment":"vcst_qa","who":"Dan-BV"}
+{"at":"2026-09-22T06:54:24.182Z","kind":"session","session":"35b6f0e1","tools":9,"turns":1,"touchAt":[3,5],"firstAt":"2026-09-22T06:24:11.821Z","lastAt":"2026-09-22T06:24:11.821Z","who":"Dan-BV"}
+{"at":"2026-09-22T06:54:24.184Z","kind":"session","session":"798dcffa","tools":0,"turns":1,"touchAt":[],"firstAt":"2026-09-22T06:20:39.394Z","lastAt":"2026-09-22T06:20:39.394Z","who":"Dan-BV"}
+{"at":"2026-09-22T06:54:24.196Z","kind":"flush","entries":0,"lines":3,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
