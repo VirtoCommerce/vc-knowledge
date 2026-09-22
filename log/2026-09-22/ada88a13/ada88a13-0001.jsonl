@@ -1,0 +1,5 @@
+{"at":"2026-09-22T06:31:38.803Z","kind":"ask","q":"GraphQL orders query totalCount and items on xOrder storefront surface","matched":[],"state":"miss","nearMiss":{"id":"KB-133FD544","score":3,"coverage":0.38},"ms":929,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-09-22T06:31:45.147Z","kind":"ask","q":"initializeCartPayment mutation publicParameters Skyflow","matched":[],"state":"miss","ms":158,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-09-22T06:31:46.129Z","kind":"ask","q":"allowCartPayment availablePaymentMethods cart GraphQL","matched":[],"state":"miss","nearMiss":{"id":"KB-35A09C64","score":1,"coverage":0.25},"ms":234,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-09-22T06:31:47.052Z","kind":"ask","q":"order(number:) query CustomerOrderType withPrices","matched":[],"state":"miss","nearMiss":{"id":"KB-16AEF0C2","score":2,"coverage":0.4},"ms":167,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-09-22T06:37:14.305Z","kind":"flush","entries":0,"lines":4,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
