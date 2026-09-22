@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-21T19:12:16.822Z",
-  "count": 106,
+  "generated": "2026-09-22T07:01:31.518Z",
+  "count": 107,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -511,6 +511,27 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-44B7B71E",
+      "path": "entries/KB-44B7B71E.md",
+      "subject": "The B2B-store cart offers six payment methods to a signed-in buyer, none preselected, ordered alphabetically by method code rather than by the configured priority.",
+      "question": "What payment methods does the storefront offer a signed-in B2B buyer at the payment step, what is preselected, and where does that list come from?",
+      "anchors": [
+        "Query.cart.availablePaymentMethods",
+        "POST /api/payment/search",
+        "PaymentMethodType.priority"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=graphql-xapi",
+        "surface=storefront-ui",
+        "user=authenticated-b2b-buyer"
       ],
       "plane": "experiential",
       "status": "active",
