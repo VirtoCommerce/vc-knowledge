@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-22T07:47:06.665Z",
-  "count": 108,
+  "generated": "2026-09-22T08:34:45.670Z",
+  "count": 109,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -403,7 +403,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 1
     },
     {
@@ -654,7 +654,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -708,7 +708,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 3
+      "disputed": 4
     },
     {
       "id": "KB-4D26A022",
@@ -1203,7 +1203,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1622,6 +1622,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D8FDFA6F",
+      "path": "entries/KB-D8FDFA6F.md",
+      "subject": "On /company/members a contact whose contact-level status is null has its NAME cell replaced by the literal text \"Invite sent\", while the Active column still shows a green \"Active\" tick.",
+      "question": "Why does the storefront company members list show \"Invite sent\" where a member's name should be, and why is that row still Active?",
+      "anchors": [
+        "/company/members",
+        "Query.organization.contacts",
+        "ContactType.status",
+        "ContactType.statusInOrganization",
+        "ContactType.fullName"
+      ],
+      "scope": [
+        "build=2.58.0-pr-2467",
+        "principal=org-maintainer",
+        "store=b2b-store",
+        "surface=storefront-ui",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
