@@ -1,0 +1,4 @@
+{"at":"2026-09-22T10:35:24.700Z","kind":"show","id":"KB-27B4CD10","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-09-22T10:35:30.056Z","kind":"ask","q":"what does the Active column on /company/members show","matched":["KB-27B4CD10","KB-D8FDFA6F","KB-4B889114"],"scores":[15,15,14],"matchedBy":["both","both","both"],"trustShown":["DISPUTED","single observation","well attested"],"opened":["KB-27B4CD10","KB-D8FDFA6F","KB-4B889114"],"state":"answer","ms":631,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-09-22T10:46:26.791Z","kind":"session","session":"651aa808","tools":99,"turns":1,"touchAt":[26,57,58,59,88,94],"firstAt":"2026-09-22T09:52:47.893Z","lastAt":"2026-09-22T09:52:47.893Z","who":"Dan-BV"}
+{"at":"2026-09-22T10:46:26.803Z","kind":"flush","entries":0,"lines":3,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
