@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-22T08:34:45.670Z",
-  "count": 109,
+  "generated": "2026-09-22T14:34:00.042Z",
+  "count": 110,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -779,6 +779,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-56979CB9",
+      "path": "entries/KB-56979CB9.md",
+      "subject": "The storefront's GA4 purchase event sets transaction_id to the order GUID (order.id), not the displayed order number",
+      "question": "Does the storefront's GA4 purchase event use the order number or the order id as transaction_id?",
+      "anchors": [
+        "/checkout/completed",
+        "window.dataLayer",
+        "Mutation.createOrderFromCart",
+        "client-app/modules/google-analytics/events.ts"
+      ],
+      "scope": [
+        "event=purchase",
+        "module=googleecommerceanalytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
