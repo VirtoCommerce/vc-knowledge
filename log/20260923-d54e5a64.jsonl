@@ -21,3 +21,5 @@
 {"at":"2026-09-23T08:48:29.903Z","kind":"flush","entries":0,"lines":12,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
 {"at":"2026-09-23T08:51:13.820Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
 {"at":"2026-09-23T09:43:25.946Z","kind":"session","session":"d54e5a64","tools":151,"turns":62,"touchAt":[1,4,5,7,13,15,28,31,34,37,61,76,77],"firstAt":"2026-09-23T07:04:16.600Z","lastAt":"2026-09-23T09:13:02.806Z","who":"Dan-BV"}
+{"at":"2026-09-23T11:01:37.329Z","kind":"restart","why":"state-dropped","who":"Dan-BV"}
+{"at":"2026-09-23T11:01:37.458Z","kind":"flush","entries":0,"lines":2,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
