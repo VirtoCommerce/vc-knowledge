@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-23T08:46:35.091Z",
-  "count": 114,
+  "generated": "2026-09-23T10:17:49.352Z",
+  "count": 117,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -554,7 +554,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -765,7 +765,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -784,7 +784,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1049,7 +1049,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1149,6 +1149,27 @@
       "disputed": 1
     },
     {
+      "id": "KB-7F535D52",
+      "path": "entries/KB-7F535D52.md",
+      "subject": "CyberSource sandbox authorization on the storefront cart is non-deterministic between runs on one build: the same card and amount can authorize cleanly to Processing, or be held for review and leave the order at Payment required.",
+      "question": "Does a CyberSource card order on /cart always end up held for review at 'Payment required', or can it authorize straight through to Processing?",
+      "anchors": [
+        "/cart",
+        "Mutation.authorizePayment",
+        "Mutation.createOrderFromCart",
+        "/account/orders"
+      ],
+      "scope": [
+        "payment-method=cybersourcepaymentmethod",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-82111688",
       "path": "entries/KB-82111688.md",
       "subject": "the storefront members Status filter finds nobody in a state the roster is full of",
@@ -1218,6 +1239,26 @@
       "scope": [
         "surface=graphql",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8BE777BB",
+      "path": "entries/KB-8BE777BB.md",
+      "subject": "Switching organization from the storefront account menu BLANKS the header account control instead of relabelling it; the new org name only appears after a full page reload.",
+      "question": "After a multi-org buyer switches organization from the account menu, does the header show the new organization name?",
+      "anchors": [
+        "/company/members",
+        "Query.me",
+        "Mutation.changeOrganization"
+      ],
+      "scope": [
+        "actor=multi-org-buyer",
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1707,6 +1748,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D54F3AAB",
+      "path": "entries/KB-D54F3AAB.md",
+      "subject": "On virtostart the seeded configurable-product fixtures CFG_LAPTOP and CFG_RING do not exist — both /products-with-options/cfg-parents/* URLs return the storefront 404 page.",
+      "question": "Do the @td(CFG_LAPTOP.url) / @td(CFG_RING.url) configurable-product URLs resolve on the virtostart demo storefront?",
+      "anchors": [
+        "/products-with-options/cfg-parents/agent-test-config-laptop",
+        "/products-with-options/cfg-parents/agent-test-ring-txt-cfg"
+      ],
+      "scope": [
+        "concern=test-data-availability",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
