@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-22T14:34:00.042Z",
-  "count": 110,
+  "generated": "2026-09-23T08:18:43.576Z",
+  "count": 114,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -130,7 +130,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -762,7 +762,26 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-512D556A",
+      "path": "entries/KB-512D556A.md",
+      "subject": "The storefront header's account button shows \"OrgName / UserName\" only for a multi-organization user; a single-organization member sees their name alone.",
+      "question": "Does the storefront header account button show the organization name for a single-organization B2B user?",
+      "anchors": [
+        "/company/members",
+        "/company/info",
+        "Query.me"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user-type=b2b-organization-member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1013,6 +1032,45 @@
       "disputed": 0
     },
     {
+      "id": "KB-737F80EE",
+      "path": "entries/KB-737F80EE.md",
+      "subject": "The storefront top header loses its controls' accessible names after a client-side state update; they return only on a full page reload.",
+      "question": "Why do storefront header buttons lose their accessible names after an in-page action like a profile save or an organization switch?",
+      "anchors": [
+        "/account/profile",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "concern=accessibility",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-78638393",
+      "path": "entries/KB-78638393.md",
+      "subject": "A CyberSource cart order whose authorizePayment is held for review by Decision Manager is created successfully but stays in status \"Payment required\".",
+      "question": "What happens to a storefront order when CyberSource authorization is held for review by Decision Manager?",
+      "anchors": [
+        "Mutation.authorizePayment",
+        "Mutation.createOrderFromCart",
+        "/account/orders",
+        "/checkout/completed"
+      ],
+      "scope": [
+        "environment=sandbox",
+        "payment-method=cybersource",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7A12CF52",
       "path": "entries/KB-7A12CF52.md",
       "subject": "what a wishlist sharing key grants a signed-out holder",
@@ -1225,6 +1283,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-98A231B6",
+      "path": "entries/KB-98A231B6.md",
+      "subject": "On a B2B store the PDP quantity stepper is the add-to-cart control, and its first increment sends updateCartQuantity — never addItem.",
+      "question": "Which GraphQL mutation does the B2B PDP quantity stepper send when it puts a product in the cart for the first time?",
+      "anchors": [
+        "Mutation.updateCartQuantity",
+        "Mutation.changeCartItemsQuantity",
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "store-type=b2b",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1986,7 +2063,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
