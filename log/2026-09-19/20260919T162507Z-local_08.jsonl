@@ -1,3 +1,0 @@
-{"at":"2026-09-19T16:25:01.701Z","kind":"ask","q":"how is a configurable product's selected configuration persisted on a customer order line item","matched":["KB-360127D0","KB-59E4B5FC"],"scores":[5,5],"opened":["KB-360127D0","KB-59E4B5FC"],"state":"answer","ms":1563,"rank":"floor-1","via":"mcp"}
-{"at":"2026-09-19T16:25:03.908Z","kind":"ask","q":"how do you search customer orders by order number via the Platform REST API","matched":[],"state":"miss","nearMiss":{"id":"KB-DF432371","score":4,"coverage":0.44},"ms":1,"rank":"floor-1","via":"mcp"}
-{"at":"2026-09-19T16:25:07.901Z","kind":"flush","entries":0,"lines":2,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}

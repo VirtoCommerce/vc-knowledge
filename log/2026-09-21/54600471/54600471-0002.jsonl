@@ -1,3 +1,0 @@
-{"at":"2026-09-21T19:10:07.146Z","kind":"confirm","id":"KB-97170665","deployment":"vcst_qa","trust":2,"via":"mcp","call":"toolu_01PyfgbMMcLz8xgbkq24kq1Y","topic":"B2B company members Active column","who":"Dan-BV"}
-{"at":"2026-09-21T19:10:15.550Z","kind":"confirm","id":"KB-27B4CD10","deployment":"vcst_qa","trust":5,"via":"mcp","call":"toolu_0114dUQNpMy48oR5WTn2Pwfv","topic":"B2B company members Active column","who":"Dan-BV"}
-{"at":"2026-09-21T19:12:16.822Z","kind":"flush","entries":0,"lines":2,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}

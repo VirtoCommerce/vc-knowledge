@@ -1,2 +1,0 @@
-{"at":"2026-09-22T05:16:43.614Z","kind":"ask","q":"what does Query.whiteLabelingSettings return and how do org and store settings merge","matched":[],"state":"miss","nearMiss":{"id":"KB-B769C7B1","score":2,"coverage":0.29},"ms":702,"rank":"floor-1","via":"mcp","call":"toolu_01DfjfcL3Y1scN3iXHnoq7nZ","topic":"white labeling domain map","deployment":"vcst_qa","who":"Dan-BV"}
-{"at":"2026-09-22T05:22:14.898Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}

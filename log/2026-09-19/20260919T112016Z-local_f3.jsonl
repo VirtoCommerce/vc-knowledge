@@ -1,2 +1,0 @@
-{"at":"2026-09-19T10:34:42.738Z","kind":"ask","q":"what does /api/members return for a member that was blocked","matched":["KB-BCA7468D","KB-4E45A8BA","KB-82111688"],"scores":[11,10,3],"opened":["KB-BCA7468D","KB-4E45A8BA","KB-82111688"],"state":"answer","ms":679,"rank":"floor-1","via":"cli","synthetic":true}
-{"at":"2026-09-19T11:20:16.292Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}

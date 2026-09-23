@@ -1,3 +1,0 @@
-{"at":"2026-09-19T16:14:23.275Z","kind":"ask","q":"How does the storefront configurable product PDP work — what must be filled before Add to Cart is enabled?","matched":["KB-F78ED1CC"],"scores":[6],"opened":["KB-F78ED1CC"],"state":"answer","ms":2306,"rank":"floor-1","via":"mcp"}
-{"at":"2026-09-19T16:14:30.621Z","kind":"ask","q":"vcst-qa storefront checkout flow — what steps and payment methods are available to place an order?","matched":[],"state":"miss","nearMiss":{"id":"KB-50EBEEE9","score":4,"coverage":0.36},"ms":2,"rank":"floor-1","via":"mcp"}
-{"at":"2026-09-19T16:14:39.745Z","kind":"flush","entries":0,"lines":2,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}

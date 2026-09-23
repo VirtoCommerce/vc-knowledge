@@ -1,2 +1,0 @@
-{"at":"2026-09-22T14:33:39.010Z","kind":"capture","id":"KB-56979CB9","subject":"The storefront's GA4 purchase event sets transaction_id to the order GUID (order.id), not the displayed order number","question":"Does the storefront's GA4 purchase event use the order number or the order id as transaction_id?","related":[],"read":[],"via":"mcp","call":"toolu_01Nw7WFUs2vHaUkewc2oYp4r","topic":"storefront smoke run","who":"Dan-BV"}
-{"at":"2026-09-22T14:34:00.042Z","kind":"flush","entries":1,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}

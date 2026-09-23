@@ -1,2 +1,0 @@
-{"at":"2026-09-19T14:01:16.392Z","kind":"capture","id":"KB-DF432371","subject":"A non-admin (__customer) platform token is refused SettingQuery-gated /api/platform/settings routes with 403, but can read two ungated routes: /values/{name} (no permission attribute) and /ui/customization (AllowAnonymous).","related":2,"via":"mcp"}
-{"at":"2026-09-19T14:01:38.902Z","kind":"flush","entries":1,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}

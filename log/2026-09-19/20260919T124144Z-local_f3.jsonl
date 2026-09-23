@@ -1,5 +1,0 @@
-{"kind":"ask","at":"2026-09-19T12:31:43.534Z","q":"timer probe seed - does the cart keep a coupon across a session change","matched":[],"state":"miss","ms":1,"rank":"floor-1","via":"mcp","synthetic":true}
-{"at":"2026-09-19T12:37:34.619Z","kind":"ask","q":"timer probe: does the cart keep a coupon across a session change","matched":[],"state":"miss","nearMiss":{"id":"KB-E7790BF6","score":2,"coverage":0.25},"ms":567,"rank":"floor-1","via":"mcp","synthetic":true}
-{"at":"2026-09-19T12:39:47.341Z","kind":"ask","q":"timer probe: does the cart keep a coupon across a session change","matched":[],"state":"miss","nearMiss":{"id":"KB-E7790BF6","score":2,"coverage":0.25},"ms":175,"rank":"floor-1","via":"mcp","synthetic":true}
-{"at":"2026-09-19T12:41:44.882Z","kind":"ask","q":"timer probe: does the cart keep a coupon across a session change","matched":[],"state":"miss","nearMiss":{"id":"KB-E7790BF6","score":2,"coverage":0.25},"ms":220,"rank":"floor-1","via":"mcp","synthetic":true}
-{"at":"2026-09-19T12:41:44.894Z","kind":"flush","entries":0,"lines":4,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"synthetic":true}

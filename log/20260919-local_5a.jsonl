@@ -1,0 +1,8 @@
+{"at":"2026-09-19T11:25:02.605Z","kind":"show","id":"KB-0C163966","state":"answer","via":"cli"}
+{"at":"2026-09-19T11:26:03.851Z","kind":"show","id":"KB-316B2DDB","state":"answer","via":"cli"}
+{"at":"2026-09-19T11:26:55.465Z","kind":"show","id":"KB-F78ED1CC","state":"miss","via":"cli"}
+{"at":"2026-09-19T13:46:26.541Z","kind":"ask","q":"Does the storefront cart keep an applied coupon when an anonymous shopper signs in? How does cart merge handle coupons on login/logout?","matched":[],"state":"miss","nearMiss":{"id":"KB-8264632C","score":5,"coverage":0.38},"ms":822,"rank":"floor-1","via":"mcp"}
+{"at":"2026-09-19T13:52:12.181Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
+{"at":"2026-09-19T13:55:48.329Z","kind":"capture","id":"KB-6C3FA2B7","subject":"Storefront cart keeps its applied coupon across sign-out / sign-in","related":2,"via":"cli"}
+{"at":"2026-09-19T13:55:55.177Z","kind":"show","id":"KB-35A09C64","state":"answer","via":"mcp"}
+{"at":"2026-09-19T13:56:40.126Z","kind":"flush","entries":1,"lines":2,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}

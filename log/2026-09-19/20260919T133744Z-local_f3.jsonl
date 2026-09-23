@@ -1,2 +1,0 @@
-{"kind":"ask","at":"2026-09-19T13:00:00Z","q":"flush hook probe - agent finished its turn","matched":[],"state":"miss","ms":1,"rank":"floor-1","via":"mcp","synthetic":true}
-{"at":"2026-09-19T13:37:44.286Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}

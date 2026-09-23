@@ -1,0 +1,5 @@
+{"at":"2026-09-19T06:40:26.332Z","kind":"flush","entries":0,"lines":8,"swept":["local_49.jsonl","local_f3.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0}
+{"at":"2026-09-19T06:41:06.672Z","kind":"ask","q":"does a Skyflow card element re-validate a stale CVV when update is called on it","matched":[],"state":"miss","nearMiss":{"id":"KB-35A09C64","score":1,"coverage":0.11},"ms":461,"rank":"floor-1","via":"cli"}
+{"at":"2026-09-19T06:41:14.635Z","kind":"ask","q":"does the storefront pack size rule reject a cart quantity that is not a multiple, or silently round it","matched":[],"state":"miss","nearMiss":{"id":"KB-35A09C64","score":2,"coverage":0.2},"ms":162,"rank":"floor-1","via":"cli"}
+{"at":"2026-09-19T06:41:14.939Z","kind":"ask","q":"what does the Admin SPA do when a catalog property name contains a character the validator rejects","matched":[],"state":"miss","nearMiss":{"id":"KB-7040852E","score":2,"coverage":0.22},"ms":167,"rank":"floor-1","via":"cli"}
+{"at":"2026-09-19T06:41:34.701Z","kind":"flush","entries":0,"lines":3,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
