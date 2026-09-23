@@ -13,3 +13,5 @@
 {"at":"2026-09-23T10:13:40.141Z","kind":"confirm","id":"KB-737F80EE","deployment":"virtostart","trust":2,"via":"mcp","call":"toolu_01AbAgNGYs2ShqVhNuzitvts","topic":"storefront smoke run","who":"Dan-BV","agent":"qa-frontend-expert"}
 {"at":"2026-09-23T10:13:47.705Z","kind":"confirm","id":"KB-50EBEEE9","deployment":"virtostart","trust":4,"via":"mcp","call":"toolu_01HiaHxCaVUz8J47wDwkdDwD","topic":"storefront smoke run","who":"Dan-BV","agent":"qa-frontend-expert"}
 {"at":"2026-09-23T10:17:49.352Z","kind":"flush","entries":3,"lines":8,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
+{"at":"2026-09-23T10:21:59.149Z","kind":"restart","why":"state-dropped","who":"Dan-BV"}
+{"at":"2026-09-23T10:21:59.232Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
