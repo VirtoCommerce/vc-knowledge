@@ -14,3 +14,5 @@
 {"at":"2026-09-23T08:13:59.884Z","kind":"capture","id":"KB-98A231B6","subject":"On a B2B store the PDP quantity stepper is the add-to-cart control, and its first increment sends updateCartQuantity — never addItem.","question":"Which GraphQL mutation does the B2B PDP quantity stepper send when it puts a product in the cart for the first time?","after":"2026-09-23T08:13:02.760Z","related":["KB-F78ED1CC","KB-0B27E984","KB-44B7B71E"],"read":[],"via":"mcp","call":"toolu_014RUP7KnikJ3XmvUDjFv2ee","topic":"storefront smoke revenue path","who":"Dan-BV"}
 {"at":"2026-09-23T08:14:04.678Z","kind":"confirm","id":"KB-F78ED1CC","deployment":"virtostart","trust":3,"via":"mcp","call":"toolu_01AWy9JrxTVx3ssQAPPJy1zg","topic":"storefront smoke revenue path","who":"Dan-BV"}
 {"at":"2026-09-23T08:18:43.576Z","kind":"flush","entries":4,"lines":9,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
+{"at":"2026-09-23T08:20:17.785Z","kind":"restart","why":"state-dropped","who":"Dan-BV"}
+{"at":"2026-09-23T08:20:17.878Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
