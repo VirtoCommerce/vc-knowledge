@@ -1,17 +1,6 @@
 {"at":"2026-09-19T04:38:29.134Z","kind":"ask","q":"what does the storefront company members Active column reflect","matched":["KB-27B4CD10","KB-4B889114"],"opened":["KB-27B4CD10","KB-4B889114"],"state":"answer","ms":1038}
 {"at":"2026-09-19T04:38:29.145Z","kind":"flush","entries":0,"lines":9,"swept":["local_26.jsonl","local_7b.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0}
-{"at":"2026-09-19T10:34:42.738Z","kind":"ask","q":"what does /api/members return for a member that was blocked","matched":["KB-BCA7468D","KB-4E45A8BA","KB-82111688"],"scores":[11,10,3],"opened":["KB-BCA7468D","KB-4E45A8BA","KB-82111688"],"state":"answer","ms":679,"rank":"floor-1","via":"cli","synthetic":true}
-{"at":"2026-09-19T10:34:42.746Z","kind":"flush","entries":0,"lines":7,"swept":["local_41.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"synthetic":true}
 {"at":"2026-09-19T11:20:16.292Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
-{"kind":"ask","at":"2026-09-19T12:31:43.534Z","q":"timer probe seed - does the cart keep a coupon across a session change","matched":[],"state":"miss","ms":1,"rank":"floor-1","via":"mcp","synthetic":true}
-{"kind":"ask","at":"2026-09-19T12:34:14.128Z","q":"timer isolation probe - seeded line, no request will follow","matched":[],"state":"miss","ms":1,"rank":"floor-1","via":"mcp","synthetic":true}
-{"at":"2026-09-19T12:37:34.619Z","kind":"ask","q":"timer probe: does the cart keep a coupon across a session change","matched":[],"state":"miss","nearMiss":{"id":"KB-E7790BF6","score":2,"coverage":0.25},"ms":567,"rank":"floor-1","via":"mcp","synthetic":true}
-{"at":"2026-09-19T12:37:34.633Z","kind":"flush","entries":3,"lines":10,"swept":["local_5a.jsonl","local_de.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"synthetic":true}
-{"at":"2026-09-19T12:39:47.341Z","kind":"ask","q":"timer probe: does the cart keep a coupon across a session change","matched":[],"state":"miss","nearMiss":{"id":"KB-E7790BF6","score":2,"coverage":0.25},"ms":175,"rank":"floor-1","via":"mcp","synthetic":true}
-{"at":"2026-09-19T12:41:44.882Z","kind":"ask","q":"timer probe: does the cart keep a coupon across a session change","matched":[],"state":"miss","nearMiss":{"id":"KB-E7790BF6","score":2,"coverage":0.25},"ms":220,"rank":"floor-1","via":"mcp","synthetic":true}
-{"at":"2026-09-19T12:41:44.894Z","kind":"flush","entries":0,"lines":4,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"synthetic":true}
-{"at":"2026-09-19T12:45:14.213Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"synthetic":true}
-{"kind":"ask","at":"2026-09-19T13:00:00Z","q":"flush hook probe - agent finished its turn","matched":[],"state":"miss","ms":1,"rank":"floor-1","via":"mcp","synthetic":true}
 {"at":"2026-09-19T13:37:44.286Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0}
 {"at":"2026-09-19T13:39:40.282Z","kind":"flush","entries":0,"lines":1,"swept":["timerprobe.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0}
 {"at":"2026-09-19T18:21:05.782Z","kind":"show","id":"KB-27B4CD10","state":"answer","via":"mcp"}
