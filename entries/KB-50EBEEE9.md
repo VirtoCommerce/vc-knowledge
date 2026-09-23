@@ -10,6 +10,7 @@ appliesTo:
   - axis: surface
     value: storefront-ui
 anchors:
+  - coordinate: /cart
   - coordinate: /checkout/completed
   - coordinate: /account/orders/{orderId}
   - coordinate: Mutation.createOrderFromCart

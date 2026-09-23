@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated": "2026-09-23T08:18:43.576Z",
+  "generated": "2026-09-23T08:46:35.091Z",
   "count": 114,
   "entries": [
     {
@@ -46,6 +46,7 @@
       "subject": "Storefront login authenticates via REST POST /connect/token, not a GraphQL mutation",
       "question": "Which endpoint does the storefront sign-in form call to authenticate a user?",
       "anchors": [
+        "/sign-in",
         "/connect/token"
       ],
       "scope": [
@@ -540,6 +541,7 @@
       "subject": "The B2B-store cart offers six payment methods to a signed-in buyer, none preselected, ordered alphabetically by method code rather than by the configured priority.",
       "question": "What payment methods does the storefront offer a signed-in B2B buyer at the payment step, what is preselected, and where does that list come from?",
       "anchors": [
+        "/cart",
         "Query.cart.availablePaymentMethods",
         "POST /api/payment/search",
         "PaymentMethodType.priority"
@@ -752,6 +754,7 @@
       "subject": "Storefront checkout happens on the /cart page itself; there is no separate checkout route until the order completes.",
       "question": "what does the storefront require to place an order, and where does checkout happen",
       "anchors": [
+        "/cart",
         "/checkout/completed",
         "/account/orders/{orderId}",
         "Mutation.createOrderFromCart"
