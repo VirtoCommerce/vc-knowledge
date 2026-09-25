@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-23T10:17:49.352Z",
-  "count": 117,
+  "generated": "2026-09-25T10:31:36.292Z",
+  "count": 118,
   "entries": [
     {
       "id": "KB-02238DE5",
@@ -1899,6 +1899,22 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E149ACF0",
+      "path": "entries/KB-E149ACF0.md",
+      "subject": "vc-shell blade stack keeps the hash route in sync on every close path",
+      "question": "Does closing a vc-shell blade (Esc, X, breadcrumb, mobile back, unsaved-changes confirm) update the URL?",
+      "anchors": [
+        "/apps/vendor-portal"
+      ],
+      "scope": [
+        "surface=vendor-portal-ui"
       ],
       "plane": "experiential",
       "status": "active",

@@ -1,0 +1,15 @@
+{"at":"2026-09-25T09:03:58.496Z","kind":"capture","id":"KB-E149ACF0","subject":"vc-shell blade stack keeps the hash route in sync on every close path","question":"Does closing a vc-shell blade (Esc, X, breadcrumb, mobile back, unsaved-changes confirm) update the URL?","related":[],"read":[],"via":"cli","topic":"vc-shell blade URL sync","who":"Lenajava1"}
+{"at":"2026-09-25T09:08:47.527Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"Lenajava1"}
+{"at":"2026-09-25T09:09:04.115Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 404 POST /git/blobs — Not Found","reason":"missing","who":"Lenajava1"}
+{"at":"2026-09-25T09:09:05.724Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 404 POST /git/blobs — Not Found","reason":"missing","who":"Lenajava1"}
+{"at":"2026-09-25T10:03:28.886Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"Lenajava1"}
+{"at":"2026-09-25T10:03:30.437Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"Lenajava1"}
+{"at":"2026-09-25T10:15:23.823Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 404 POST /git/blobs — Not Found","reason":"missing","who":"Lenajava1"}
+{"at":"2026-09-25T10:15:25.211Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 404 POST /git/blobs — Not Found","reason":"missing","who":"Lenajava1"}
+{"at":"2026-09-25T10:18:40.039Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 404 POST /git/blobs — Not Found","reason":"missing","who":"Lenajava1"}
+{"at":"2026-09-25T10:18:41.432Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 404 POST /git/blobs — Not Found","reason":"missing","who":"Lenajava1"}
+{"at":"2026-09-25T10:20:52.277Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 404 POST /git/blobs — Not Found","reason":"missing","who":"Lenajava1"}
+{"at":"2026-09-25T10:20:53.875Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 404 POST /git/blobs — Not Found","reason":"missing","who":"Lenajava1"}
+{"at":"2026-09-25T10:24:05.056Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 404 POST /git/blobs — Not Found","reason":"missing","who":"Lenajava1"}
+{"at":"2026-09-25T10:24:06.471Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 404 POST /git/blobs — Not Found","reason":"missing","who":"Lenajava1"}
+{"at":"2026-09-25T10:31:36.292Z","kind":"flush","entries":1,"lines":14,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
