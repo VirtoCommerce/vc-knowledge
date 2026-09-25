@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-25T11:21:51.110Z",
-  "count": 183,
+  "generated": "2026-09-25T15:51:04.360Z",
+  "count": 184,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2953,6 +2953,23 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E84AAF1D",
+      "path": "entries/KB-E84AAF1D.md",
+      "subject": "Admin loyalty mission blade never shows server-side validation messages",
+      "question": "What does the Admin SPA loyalty mission blade show when POST or PUT /api/loyalty-missions returns 400 with validation errors?",
+      "anchors": [
+        "POST /api/loyalty-missions",
+        "PUT /api/loyalty-missions"
+      ],
+      "scope": [
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
