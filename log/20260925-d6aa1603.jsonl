@@ -1,0 +1,3 @@
+{"at":"2026-09-25T11:26:33.425Z","kind":"reindex","base":"(local checkout)","entries":183,"added":0,"removed":0,"retrusted":0,"problems":0,"who":"Dan-BV"}
+{"at":"2026-09-25T11:27:41.691Z","kind":"ask","q":"what does GET /account/coupons show for a coupon code case","matched":["KB-001183CF","KB-50CD6A34"],"scores":[15,13],"matchedBy":["both","both"],"trustShown":["single observation","single observation"],"opened":["KB-001183CF","KB-50CD6A34"],"state":"answer","ms":1743,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-09-25T11:28:11.442Z","kind":"flush","entries":0,"lines":2,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
