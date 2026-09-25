@@ -1,8 +1,44 @@
 {
   "schema": 1,
-  "generated": "2026-09-25T10:31:36.292Z",
-  "count": 118,
+  "generated": "2026-09-25T11:21:51.110Z",
+  "count": 183,
   "entries": [
+    {
+      "id": "KB-001183CF",
+      "path": "entries/KB-001183CF.md",
+      "subject": "coupon codes validate case-insensitively while the account coupons page shows them uppercased",
+      "question": "Is a storefront coupon code case-sensitive when applied, and how does /account/coupons display it?",
+      "anchors": [
+        "/account/coupons",
+        "Mutation.addCoupon",
+        "Query.validateCoupon"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-00DB63A4",
+      "path": "entries/KB-00DB63A4.md",
+      "subject": "address search and country/state/city facets exist only in the checkout address-selection popup",
+      "question": "Where does the storefront offer address keyword search and country/state/city facets — /account/addresses or the checkout popup?",
+      "anchors": [
+        "Query.currentCustomerAddresses",
+        "Query.currentOrganizationAddresses",
+        "/account/addresses"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
     {
       "id": "KB-02238DE5",
       "path": "entries/KB-02238DE5.md",
@@ -72,6 +108,23 @@
         "principal=customer",
         "surface=storefront-ui",
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-057A596A",
+      "path": "entries/KB-057A596A.md",
+      "subject": "a configurable File section accepts a fixed broad list of document and image types",
+      "question": "Which file types and sizes does a configurable product File section accept in Query.productConfiguration?",
+      "anchors": [
+        "Query.productConfiguration",
+        "OrderLineItemType.configurationItems"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -186,6 +239,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-0D8C1133",
+      "path": "entries/KB-0D8C1133.md",
+      "subject": "asset upload goes to POST /api/assets with a folderUrl, not /api/platform/assets/upload",
+      "question": "Which endpoint uploads a file asset to the platform, /api/assets or /api/platform/assets/upload?",
+      "anchors": [
+        "POST /api/assets",
+        "/api/platform/assets/upload"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0DD47BD1",
       "path": "entries/KB-0DD47BD1.md",
       "subject": "the amount a payment is for is not the payment's total",
@@ -202,6 +272,41 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1144B33E",
+      "path": "entries/KB-1144B33E.md",
+      "subject": "storefront GraphQL is served at /graphql; /xapi/graphql is not a route",
+      "question": "Is the xAPI GraphQL endpoint /graphql or /xapi/graphql?",
+      "anchors": [
+        "/graphql",
+        "/xapi/graphql"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1205B62A",
+      "path": "entries/KB-1205B62A.md",
+      "subject": "the storefront never shows a shipment tracking number, and Shipped has no configured status chip",
+      "question": "Does the storefront order details page show a shipment trackingNumber or trackingUrl?",
+      "anchors": [
+        "OrderShipmentType.trackingNumber",
+        "OrderShipmentType.trackingUrl",
+        "/account/orders/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -389,6 +494,39 @@
       "disputed": 0
     },
     {
+      "id": "KB-1C28E89D",
+      "path": "entries/KB-1C28E89D.md",
+      "subject": "promotionCoupons sort honours promotion fields with colon syntax and silently ignores the rest",
+      "question": "Which sort values does the promotionCoupons query honour?",
+      "anchors": [
+        "Query.promotionCoupons.sort"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1F264839",
+      "path": "entries/KB-1F264839.md",
+      "subject": "the CyberSource card security-code field renders its input unmasked, and that is accepted",
+      "question": "Is the CVV typed into the CyberSource card form on /cart masked?",
+      "anchors": [
+        "/cart",
+        "Mutation.authorizePayment"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-27B4CD10",
       "path": "entries/KB-27B4CD10.md",
       "subject": "storefront members Active column reads contact status not account state",
@@ -406,6 +544,57 @@
       "status": "active",
       "trust": 6,
       "disputed": 1
+    },
+    {
+      "id": "KB-29037452",
+      "path": "entries/KB-29037452.md",
+      "subject": "the loyalty points-history page shows redeemed amounts unsigned",
+      "question": "Does /account/points-history show redeemed loyalty points as negative or coloured amounts?",
+      "anchors": [
+        "/account/points-history"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-29A75D95",
+      "path": "entries/KB-29A75D95.md",
+      "subject": "storefront theme presets are bundled light/dark pairs and dark mode comes only from a dark preset",
+      "question": "How does the storefront get into dark mode, and why does /assets/presets/{name}.json return 404?",
+      "anchors": [
+        "/assets/presets/{name}.json",
+        "GET /api/white-labeling/store/{storeId}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2CBB229F",
+      "path": "entries/KB-2CBB229F.md",
+      "subject": "PUT /api/stores replaces the whole store, and a null default currency, language or URL breaks the storefront",
+      "question": "What happens if a partial body is sent to PUT /api/stores, and which store fields must never be null?",
+      "anchors": [
+        "PUT /api/stores",
+        "Store.defaultCurrency",
+        "Store.defaultLanguage"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-3113CBC1",
@@ -436,6 +625,23 @@
       ],
       "scope": [
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-31A7EFFD",
+      "path": "entries/KB-31A7EFFD.md",
+      "subject": "the Lists page disables Create at the per-user list limit and shares only from the Settings dialog",
+      "question": "Why is Create list disabled on /account/lists, and where is a list's share link?",
+      "anchors": [
+        "/account/lists",
+        "/account/lists/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -518,6 +724,23 @@
       "disputed": 1
     },
     {
+      "id": "KB-37B8E605",
+      "path": "entries/KB-37B8E605.md",
+      "subject": "customer address records use ISO-3 country codes and carry a region only for the US and Canada",
+      "question": "What format do countryCode and regionId take on a platform CustomerAddress?",
+      "anchors": [
+        "CustomerAddress.countryCode",
+        "CustomerAddress.regionId"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3F7C78F6",
       "path": "entries/KB-3F7C78F6.md",
       "subject": "wishlists have no REST and no Admin surface",
@@ -529,6 +752,57 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-409CE7C7",
+      "path": "entries/KB-409CE7C7.md",
+      "subject": "a store reads stock from its main fulfillment center, and fulfillment-center search order is arbitrary",
+      "question": "Why does a product show zero stock for the store when /api/inventory/products/{productId} holds stock?",
+      "anchors": [
+        "POST /api/inventory/fulfillmentcenters/search",
+        "Store.mainFulfillmentCenterId"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-40CBB0C5",
+      "path": "entries/KB-40CBB0C5.md",
+      "subject": "a promotion's reward is set by editing the BlockReward children array in its dynamicExpression",
+      "question": "How do I set a promotion's discount reward through PUT /api/marketing/promotions?",
+      "anchors": [
+        "PUT /api/marketing/promotions",
+        "Promotion.dynamicExpression"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-432D02EF",
+      "path": "entries/KB-432D02EF.md",
+      "subject": "Purchase requests is an AI document-to-quote feature, not an approval workflow",
+      "question": "What does /account/purchase-requests do, and does it have approve or reject mutations?",
+      "anchors": [
+        "/account/purchase-requests",
+        "Mutation.createPurchaseRequestFromDocuments"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -555,6 +829,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-48A46F77",
+      "path": "entries/KB-48A46F77.md",
+      "subject": "stock is updated with a JSON Patch on the inventory record, and InventoryStatus is Disabled, Enabled or Ignored",
+      "question": "How do I update a product's stock through /api/inventory, and what values does the inventory status take?",
+      "anchors": [
+        "PATCH /api/inventory/{id}",
+        "GET /api/inventory/products/{productId}"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -674,7 +965,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -732,6 +1023,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-4DDAE053",
+      "path": "entries/KB-4DDAE053.md",
+      "subject": "/product/{sku} never resolves on the storefront and returns a soft 404 with HTTP 200",
+      "question": "Does the storefront PDP resolve at /product/{sku}?",
+      "anchors": [
+        "/product/{sku}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4E45A8BA",
       "path": "entries/KB-4E45A8BA.md",
       "subject": "admin contact Status picker cannot represent Invited or Locked",
@@ -742,6 +1049,23 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-50CD6A34",
+      "path": "entries/KB-50CD6A34.md",
+      "subject": "promotionCoupons returns only active public unexpired promotions, and its item id is the promotion id",
+      "question": "Why is a coupon missing from /account/coupons, and what id does a promotionCoupons item carry?",
+      "anchors": [
+        "Query.promotionCoupons",
+        "/account/coupons"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -801,6 +1125,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-54E1A0E6",
+      "path": "entries/KB-54E1A0E6.md",
+      "subject": "clicking an orders or quotes table row opens the detail in a new browser tab",
+      "question": "Why does clicking a row on /account/orders open the order in a new tab instead of navigating in place?",
+      "anchors": [
+        "/account/orders",
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -872,7 +1213,24 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5D688448",
+      "path": "entries/KB-5D688448.md",
+      "subject": "catalog search is index-backed and lags writes, so it cannot confirm a just-created category or product",
+      "question": "Why does POST /api/catalog/search/products not find a product or category that was just created?",
+      "anchors": [
+        "POST /api/catalog/search/products",
+        "GET /api/catalog/products/{id}"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -892,6 +1250,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-608F7C05",
+      "path": "entries/KB-608F7C05.md",
+      "subject": "deleting a loyalty mission that has accrued progress fails with a foreign-key 500",
+      "question": "Can DELETE /api/loyalty-missions remove a mission once members have made progress on it?",
+      "anchors": [
+        "/api/loyalty-missions",
+        "LoyaltyMission.status"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-62EE7AF3",
       "path": "entries/KB-62EE7AF3.md",
       "subject": "some platform routes are hidden from the API document this base projects from",
@@ -901,6 +1276,23 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-66089074",
+      "path": "entries/KB-66089074.md",
+      "subject": "a saved-for-later card omits a configured product's configuration, which is restored on move to cart",
+      "question": "Does getSavedForLater return configurationItems for a configurable product, and is the configuration lost?",
+      "anchors": [
+        "Query.getSavedForLater",
+        "Mutation.moveFromSavedForLater"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -926,6 +1318,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-6A20B0AF",
+      "path": "entries/KB-6A20B0AF.md",
+      "subject": "omitting an optional xAPI context argument returns 200 with wrong or empty data, never an error",
+      "question": "Why does an xAPI query such as loyaltyMissionProgress return null fields when cultureName, storeId, userId or organizationId is omitted?",
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "LoyaltyMissionProgressType.description"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6AA0D7FB",
       "path": "entries/KB-6AA0D7FB.md",
       "subject": "fixed rate shipping method option pricing",
@@ -942,6 +1351,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6AFE7618",
+      "path": "entries/KB-6AFE7618.md",
+      "subject": "the organization roles whitelist filters the Admin org role picker, and an empty whitelist allows every role",
+      "question": "Does the Customer organization roles whitelist setting restrict the Admin SPA organization role picker, and what does an empty whitelist do?",
+      "anchors": [
+        "PUT /api/platform/settings",
+        "POST /api/customer/organization-memberships"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1019,6 +1445,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-6FAB2EBA",
+      "path": "entries/KB-6FAB2EBA.md",
+      "subject": "addItem rejects a line quantity of one million or more through validationErrors, not errors",
+      "question": "What does addItem return when the requested quantity exceeds the store's line item limit?",
+      "anchors": [
+        "Mutation.addItem",
+        "CartType.validationErrors"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7040852E",
       "path": "entries/KB-7040852E.md",
       "subject": "member keyword search is index-backed",
@@ -1032,6 +1475,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-734A0813",
+      "path": "entries/KB-734A0813.md",
+      "subject": "same-product adds consolidate into one line, but configured items always stay separate lines",
+      "question": "Does adding the same product twice with addItem create one cart line or two, and what about configured products or mergeCart?",
+      "anchors": [
+        "Mutation.addItem",
+        "Mutation.mergeCart",
+        "LineItemType.quantity"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1050,6 +1511,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7564A9BF",
+      "path": "entries/KB-7564A9BF.md",
+      "subject": "logout and token revocation do not invalidate an issued access token by default",
+      "question": "Does signing out or /revoke/token invalidate an already-issued access token, and is /connect/revocation an endpoint?",
+      "anchors": [
+        "/revoke/token",
+        "/connect/revocation",
+        "/api/platform/security/logout"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1093,6 +1572,41 @@
       "disputed": 0
     },
     {
+      "id": "KB-7A4C260E",
+      "path": "entries/KB-7A4C260E.md",
+      "subject": "user_cannot_login_in_store: storeId must be camelCase and Administrator-type users always get it",
+      "question": "What makes /connect/token return user_cannot_login_in_store, and how is it told apart from a wrong credential?",
+      "anchors": [
+        "POST /connect/token",
+        "/sign-in",
+        "GET /account/impersonate/:userId"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7A613BE4",
+      "path": "entries/KB-7A613BE4.md",
+      "subject": "predefined notification templates are editable and saving one creates a restorable override",
+      "question": "Are predefined notification templates meant to be editable in the Admin SPA, and what do isPredefined and isReadonly mean?",
+      "anchors": [
+        "NotificationTemplate.isPredefined",
+        "NotificationTemplate.isReadonly"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7A9D4927",
       "path": "entries/KB-7A9D4927.md",
       "subject": "revoking a wishlist share link: re-scoping suspends, deleting revokes",
@@ -1126,6 +1640,41 @@
       "scope": [
         "surface=admin-spa",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7BBFAE10",
+      "path": "entries/KB-7BBFAE10.md",
+      "subject": "a UCP-audience token needs resource set to the storefront's /ucp/mcp and must be minted at the storefront",
+      "question": "How do I mint a token /connect/token will issue with an audience the UCP /ucp/mcp endpoint accepts?",
+      "anchors": [
+        "POST /connect/token",
+        "/ucp/mcp"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7DA9B0B7",
+      "path": "entries/KB-7DA9B0B7.md",
+      "subject": "platform REST APIs reject a store- or organization-scoped token with 401",
+      "question": "Why does /api/carts/{id} return 401 invalid_token with a token that works on /graphql?",
+      "anchors": [
+        "/api/carts/{id}",
+        "POST /connect/token",
+        "/graphql"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1200,6 +1749,40 @@
       "scope": [
         "principal=customer",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-84E540DD",
+      "path": "entries/KB-84E540DD.md",
+      "subject": "a promotion body ignores inline coupons; coupons are added through /coupons/add",
+      "question": "Can coupons be attached in the POST /api/marketing/promotions body, or does it need /api/marketing/promotions/coupons/add?",
+      "anchors": [
+        "POST /api/marketing/promotions",
+        "POST /api/marketing/promotions/coupons/add"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8646A9CB",
+      "path": "entries/KB-8646A9CB.md",
+      "subject": "five failed storefront sign-ins give a 15-minute temporary lockout code",
+      "question": "What error code does /connect/token return after repeated failed sign-ins, for an organization member and for a non-member?",
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/platform/security/users/{id}/unlock"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1307,6 +1890,76 @@
       "disputed": 0
     },
     {
+      "id": "KB-9139A1A3",
+      "path": "entries/KB-9139A1A3.md",
+      "subject": "mergeCart takes the source cart as secondCartId, not cartId",
+      "question": "Which input field names the source cart in the xAPI mergeCart mutation?",
+      "anchors": [
+        "Mutation.mergeCart",
+        "InputMergeCartType.secondCartId"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-92164C90",
+      "path": "entries/KB-92164C90.md",
+      "subject": "members are addressed under /api/members, and a deleted member reads 200 with an empty body",
+      "question": "What is the platform REST path for an organization or contact by id, and how do I tell whether a member was deleted?",
+      "anchors": [
+        "GET /api/members/{id}",
+        "DELETE /api/members",
+        "/api/customer/members/{id}"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-938D7C06",
+      "path": "entries/KB-938D7C06.md",
+      "subject": "the cart coupon sidebar shows the first four public coupons as cards, and none to anonymous shoppers",
+      "question": "Which coupons does the Discount and coupons sidebar on /cart offer as preset cards?",
+      "anchors": [
+        "/cart",
+        "Query.promotionCoupons"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-94C2ADCC",
+      "path": "entries/KB-94C2ADCC.md",
+      "subject": "a guest on /cart gets no card form for cart-payment gateways and the order is booked unpaid",
+      "question": "What happens when a guest pays by bank card on /cart with CyberSource or Authorize.Net?",
+      "anchors": [
+        "/cart",
+        "Mutation.createOrderFromCart",
+        "CartType.availablePaymentMethods"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-97170665",
       "path": "entries/KB-97170665.md",
       "subject": "A membership lock shows on the storefront members list as a red \"Blocked\" badge, and in xAPI only as Contact.isLockedInOrganization — the status fields stay \"Approved\".",
@@ -1367,6 +2020,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-9D80EE6B",
+      "path": "entries/KB-9D80EE6B.md",
+      "subject": "the Remember me checkbox on /sign-in has no effect on the session",
+      "question": "Does ticking Remember me on /sign-in change how long the storefront session lasts?",
+      "anchors": [
+        "/sign-in"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A1B35892",
       "path": "entries/KB-A1B35892.md",
       "subject": "a configured product as a cart line item",
@@ -1379,6 +2048,23 @@
       "scope": [
         "principal=customer",
         "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A23A4A41",
+      "path": "entries/KB-A23A4A41.md",
+      "subject": "organization white labeling resolves independently of the store's white-labeling setting",
+      "question": "Does disabling store-level White Labeling also switch off an organization's logo and theme in whiteLabelingSettings?",
+      "anchors": [
+        "Query.whiteLabelingSettings",
+        "GET /api/white-labeling/store/{storeId}"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1438,6 +2124,41 @@
       ],
       "plane": "experiential",
       "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A613223B",
+      "path": "entries/KB-A613223B.md",
+      "subject": "addItem's own response can list no items even when the add succeeded",
+      "question": "Why is items[] empty in the addItem response right after a successful add?",
+      "anchors": [
+        "Mutation.addItem",
+        "Mutation.unSelectAllCartItems"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AA1147AA",
+      "path": "entries/KB-AA1147AA.md",
+      "subject": "Organization.status is the organization's own status, not the caller's membership status",
+      "question": "Which field on Organization tells the caller's membership status and lock - status, myStatusInOrganization or isLockedForCurrentUser?",
+      "anchors": [
+        "Organization.status",
+        "Organization.myStatusInOrganization",
+        "Organization.isLockedForCurrentUser"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -1481,6 +2202,40 @@
       "disputed": 0
     },
     {
+      "id": "KB-ADA16454",
+      "path": "entries/KB-ADA16454.md",
+      "subject": "the checkout review step exists only when checkout_multistep_enabled is on",
+      "question": "Why does /checkout/review redirect back to /cart?",
+      "anchors": [
+        "/checkout/review",
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ADAFFBFF",
+      "path": "entries/KB-ADAFFBFF.md",
+      "subject": "removeConfigurationItem needs the option productId to remove a Product section",
+      "question": "Does removeConfigurationItem remove an optional Product section when called with only sectionId and type?",
+      "anchors": [
+        "Mutation.removeConfigurationItem",
+        "Mutation.removeConfigurationItems"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-ADFD93AB",
       "path": "entries/KB-ADFD93AB.md",
       "subject": "org-specific pricing runs through the organization's user groups, not through organizationId",
@@ -1494,6 +2249,24 @@
         "principal=org-member",
         "surface=admin-ui",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B5B57F41",
+      "path": "entries/KB-B5B57F41.md",
+      "subject": "sign-in pins the user to their persisted default organization without checking it is blocked",
+      "question": "Why does a user whose default organization membership is blocked land in Forbidden after /connect/token sign-in?",
+      "anchors": [
+        "ContactType.organizationId",
+        "ContactType.organizations",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1516,6 +2289,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B858E12A",
+      "path": "entries/KB-B858E12A.md",
+      "subject": "the Admin login page is the only anonymous source of the running platform version",
+      "question": "How can I read the running platform version without signing in - /api/platform/version, /api/platform/modules or the login page?",
+      "anchors": [
+        "/api/platform/version",
+        "/api/platform/modules",
+        "/health"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1660,6 +2451,58 @@
       "disputed": 0
     },
     {
+      "id": "KB-C55BBF2E",
+      "path": "entries/KB-C55BBF2E.md",
+      "subject": "a sale price is carried as the list subtotal plus a line discount, not a reduced subtotal",
+      "question": "How is a sale-priced product represented in the cart's subTotal and discountTotal?",
+      "anchors": [
+        "CartType.subTotal",
+        "LineItemType.placedPrice",
+        "CartType.discountTotal"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C7BFA751",
+      "path": "entries/KB-C7BFA751.md",
+      "subject": "the Authorize.Net card form takes expiry as MM/YY and works only in USD",
+      "question": "What expiry format does the Authorize.Net card form on /cart accept, and does it work in non-USD currencies?",
+      "anchors": [
+        "/cart",
+        "Mutation.initializeCartPayment"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C923D0DB",
+      "path": "entries/KB-C923D0DB.md",
+      "subject": "the email confirmation link works without a session and does not sign the user in",
+      "question": "What happens when a user opens the /account/confirmemail link, and how is a confirmation email resent?",
+      "anchors": [
+        "/account/confirmemail",
+        "/sign-in"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-CA4C93E4",
       "path": "entries/KB-CA4C93E4.md",
       "subject": "discount-rate-not-persisted-on-order",
@@ -1711,6 +2554,92 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CD451F5C",
+      "path": "entries/KB-CD451F5C.md",
+      "subject": "the product configuration POST silently saves an empty inactive configuration for a wrong sections field",
+      "question": "What body does POST /api/catalog/products/configurations need, and what happens if the sections field is named wrong?",
+      "anchors": [
+        "POST /api/catalog/products/configurations",
+        "ProductConfiguration.sections"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CF3FAD18",
+      "path": "entries/KB-CF3FAD18.md",
+      "subject": "loyalty cart validation errors show on /cart before Place order, which is disabled",
+      "question": "When a loyalty points cart has insufficient balance, does /cart warn and block Place order before submission?",
+      "anchors": [
+        "/cart",
+        "CartType.validationErrors",
+        "Mutation.changeCartItemsQuantity"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D080516B",
+      "path": "entries/KB-D080516B.md",
+      "subject": "organization membership statuses, which of them block sign-in, and how the storefront labels them",
+      "question": "What membership statuses does an OrganizationMembership have and which block organization sign-in?",
+      "anchors": [
+        "Mutation.revokeOrganizationInvite",
+        "OrganizationMembership.status"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D080C209",
+      "path": "entries/KB-D080C209.md",
+      "subject": "a sales rep serving a customer has full buyer rights on that customer's orders, payment included",
+      "question": "Can a sales rep open and pay a served customer's order on the buyer route /account/orders/{id}?",
+      "anchors": [
+        "/account/orders/{id}",
+        "CustomerOrder.organizationId"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D1D30720",
+      "path": "entries/KB-D1D30720.md",
+      "subject": "locking an organization membership revokes tokens but a live session in another organization survives",
+      "question": "Does locking one organization membership sign the user out of the storefront?",
+      "anchors": [
+        "POST /api/customer/organization-memberships/{id}/lock",
+        "/403"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1867,6 +2796,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-DB7B6317",
+      "path": "entries/KB-DB7B6317.md",
+      "subject": "the Admin order Status dropdown settables differ from the statuses orders display",
+      "question": "Which order statuses can be set in the Admin SPA order Status dropdown, and how do they map to storefront labels?",
+      "anchors": [
+        "CustomerOrder.status",
+        "PUT /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DF432371",
       "path": "entries/KB-DF432371.md",
       "subject": "A non-admin (__customer) platform token is refused SettingQuery-gated /api/platform/settings routes with 403, but can read two ungated routes: /values/{name} (no permission attribute) and /ui/customization (AllowAnonymous).",
@@ -1881,6 +2827,22 @@
       "scope": [
         "auth=non-admin-customer-token",
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DF8D085C",
+      "path": "entries/KB-DF8D085C.md",
+      "subject": "a page missing the requested culture falls back to the default-language content, not a 404",
+      "question": "What does the storefront serve at /{culture}/{permalink} when the page exists but has no version in that language?",
+      "anchors": [
+        "/{culture}/{permalink}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1981,6 +2943,58 @@
       "disputed": 0
     },
     {
+      "id": "KB-E7DF9B84",
+      "path": "entries/KB-E7DF9B84.md",
+      "subject": "the storefront footer renders top-level link-list entries as section headers and only their children as links",
+      "question": "Why do white-label footer links render as non-clickable text on the storefront?",
+      "anchors": [
+        "Query.whiteLabelingSettings",
+        "client-app/shared/layout/components/footer/_internal/footer-links.vue"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E8A134DF",
+      "path": "entries/KB-E8A134DF.md",
+      "subject": "the storefront robots.txt is store content uploaded in Admin, not frontend code",
+      "question": "Where does the storefront's /robots.txt come from, and how is it changed?",
+      "anchors": [
+        "/robots.txt",
+        "/sitemap/sitemap.xml"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EA467E9B",
+      "path": "entries/KB-EA467E9B.md",
+      "subject": "a per-organization sales-rep membership is the served-customer relationship itself",
+      "question": "Can a sales rep hold sales-rep:access and serve no customers, and what does salesRepCustomers return then?",
+      "anchors": [
+        "Query.salesRepCustomers",
+        "/company/my-customers",
+        "/graphql/sales-rep"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EAA7BA2F",
       "path": "entries/KB-EAA7BA2F.md",
       "subject": "storefront Lists page is an owner-only roster",
@@ -1994,7 +3008,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2034,6 +3048,57 @@
       "disputed": 0
     },
     {
+      "id": "KB-ECCE0632",
+      "path": "entries/KB-ECCE0632.md",
+      "subject": "a configurable Text section's maxLength binds custom text only; a preset option label bypasses it",
+      "question": "Does a configurable product Text section maxLength reject a preset option whose label is longer than the limit on addItem?",
+      "anchors": [
+        "CartConfigurationItemType.customText",
+        "Mutation.changeCartConfiguredItem"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ED01C2A4",
+      "path": "entries/KB-ED01C2A4.md",
+      "subject": "a storefront token without organization_id carries only view permissions",
+      "question": "How do I get an organization-scoped storefront token from /connect/token so me.permissions reflects that organization's role?",
+      "anchors": [
+        "POST /connect/token",
+        "Query.me"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EDDBBE75",
+      "path": "entries/KB-EDDBBE75.md",
+      "subject": "a loyalty balance has no write API and cannot be reset",
+      "question": "Can a loyalty member's points balance be set or reset to zero through /api/loyalty-program-operation-log?",
+      "anchors": [
+        "/api/loyalty-program-operation-log/balance/{userId}",
+        "/api/loyalty-program-operation-log/search"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EF3CB7FB",
       "path": "entries/KB-EF3CB7FB.md",
       "subject": "Login on behalf is authorized on the storefront not in Admin",
@@ -2048,7 +3113,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2127,6 +3192,41 @@
       "disputed": 0
     },
     {
+      "id": "KB-F6EDA2F4",
+      "path": "entries/KB-F6EDA2F4.md",
+      "subject": "the Vendor Portal authenticates by HttpOnly cookies, so local-storage tampering does not end the session",
+      "question": "How is a Vendor Portal session at /apps/vendor-portal authenticated, and can session expiry be triggered client-side?",
+      "anchors": [
+        "/apps/vendor-portal",
+        "/connect/authorize"
+      ],
+      "scope": [
+        "surface=vendor-portal-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F7449926",
+      "path": "entries/KB-F7449926.md",
+      "subject": "organization memberships use userId and role objects over REST but memberId and an org from the session in GraphQL",
+      "question": "What ids and role shapes do the organization-memberships REST routes and the lockOrganizationContact mutation take?",
+      "anchors": [
+        "POST /api/customer/organization-memberships/search",
+        "Mutation.lockOrganizationContact",
+        "Mutation.changeOrganizationContactRole"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F78ED1CC",
       "path": "entries/KB-F78ED1CC.md",
       "subject": "On vcst-qa a configurable product's PDP has a real Add to cart button, while simple and variation PDPs add via the quantity stepper.",
@@ -2179,6 +3279,23 @@
       "status": "active",
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-FB8014EB",
+      "path": "entries/KB-FB8014EB.md",
+      "subject": "security-user deletion takes names, and a wrong parameter returns a vacuous success",
+      "question": "Which query parameter does DELETE /api/platform/security/users take, and which lookup reliably finds a user?",
+      "anchors": [
+        "DELETE /api/platform/security/users",
+        "POST /api/platform/security/users/search"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-FF7E4D5B",
