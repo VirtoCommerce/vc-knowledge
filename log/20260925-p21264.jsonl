@@ -1,0 +1,1 @@
+{"at":"2026-09-25T15:08:07.197Z","kind":"ask","q":"PUT /api/loyalty-missions validation negative FixedAmountReward amount","matched":["KB-608F7C05"],"scores":[13],"matchedBy":["both"],"trustShown":["single observation"],"opened":["KB-608F7C05"],"state":"answer","ms":807,"rank":"floor-1","via":"cli","who":"Lenajava1"}
