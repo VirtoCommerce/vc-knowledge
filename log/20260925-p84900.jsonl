@@ -1,0 +1,2 @@
+{"at":"2026-09-25T16:11:11.364Z","kind":"dispute","id":"KB-E84AAF1D","deployment":"vcst_qa","via":"mcp","call":"toolu_01EhgTaQsXF68ngoEteNcdkE","topic":"loyalty mission blade validation errors","who":"Lenajava1","agent":"qa-backend-expert"}
+{"at":"2026-09-25T16:16:30.346Z","kind":"flush","entries":0,"lines":2,"swept":["p46356.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
