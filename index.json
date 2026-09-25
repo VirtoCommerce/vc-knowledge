@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-25T16:16:30.346Z",
-  "count": 184,
+  "generated": "2026-09-25T19:53:58.382Z",
+  "count": 185,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -590,6 +590,22 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2D446A42",
+      "path": "entries/KB-2D446A42.md",
+      "subject": "a store exposes a physical catalog's products only through its virtual catalog, which store-catalog matching misses",
+      "question": "which store serves products of a physical catalog via POST /api/stores/search and product outlines",
+      "anchors": [
+        "POST /api/stores/search"
+      ],
+      "scope": [
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2447,7 +2463,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
