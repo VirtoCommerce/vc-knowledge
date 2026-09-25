@@ -12,7 +12,7 @@ anchors:
   - coordinate: /account/lists/{id}
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:14:23.127Z
     by: session:memimpor
     who: Lenajava1

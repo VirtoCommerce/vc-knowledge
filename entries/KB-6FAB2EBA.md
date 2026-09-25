@@ -12,7 +12,7 @@ anchors:
   - coordinate: CartType.validationErrors
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:14:45.082Z
     by: session:memimpor
     who: Lenajava1

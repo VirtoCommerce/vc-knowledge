@@ -19,7 +19,7 @@ evidence:
     at: 2026-09-19T14:07:42.209Z
     by: session:local_3b
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:17:49.620Z
     by: session:memimpor
     who: Lenajava1

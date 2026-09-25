@@ -13,7 +13,7 @@ anchors:
   - coordinate: Mutation.changeCartItemsQuantity
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:14:44.450Z
     by: session:memimpor
     who: Lenajava1

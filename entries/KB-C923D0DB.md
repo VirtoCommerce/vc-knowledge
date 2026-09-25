@@ -12,7 +12,7 @@ anchors:
   - coordinate: /sign-in
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:17:26.163Z
     by: session:memimpor
     who: Lenajava1

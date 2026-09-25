@@ -13,7 +13,7 @@ anchors:
   - coordinate: Store.defaultLanguage
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:18:43.420Z
     by: session:memimpor
     who: Lenajava1

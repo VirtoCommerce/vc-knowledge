@@ -21,7 +21,7 @@ evidence:
     at: 2026-09-14T12:17:17.498Z
     by: session:a1f22912
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:17:23.044Z
     by: session:memimpor
     who: Lenajava1

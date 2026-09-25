@@ -13,7 +13,7 @@ anchors:
   - coordinate: Organization.isLockedForCurrentUser
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:18:15.323Z
     by: session:memimpor
     who: Lenajava1

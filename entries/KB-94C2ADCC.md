@@ -13,7 +13,7 @@ anchors:
   - coordinate: CartType.availablePaymentMethods
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:14:22.517Z
     by: session:memimpor
     who: Lenajava1

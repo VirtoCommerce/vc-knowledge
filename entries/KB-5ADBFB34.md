@@ -43,7 +43,7 @@ evidence:
     from: C:/_VIRTO/_comparison-logs/round5/arm-A/REPORT.md
     note: "Round five's control arm, with no register: read Settings > Marketing > General and found 'Selected policy of using multiple active promotions' = BestReward; created two cart-subtotal promotions and saw exactly one discount line; raising the second from 5pct to 30pct flipped the winner and dropped the 20pct entirely, with the loser left Active and no trace."
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:15:40.098Z
     by: session:memimpor
     who: Lenajava1

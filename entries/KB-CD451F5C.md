@@ -12,7 +12,7 @@ anchors:
   - coordinate: ProductConfiguration.sections
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:17:24.884Z
     by: session:memimpor
     who: Lenajava1

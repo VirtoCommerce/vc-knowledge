@@ -11,7 +11,7 @@ anchors:
   - coordinate: /apps/vendor-portal
 evidence:
   - method: observation
-    deployment: vcmp-dev
+    deployment: vcmp_dev
     at: 2026-09-25T09:03:58.486Z
     by: session:p75228
     who: Lenajava1

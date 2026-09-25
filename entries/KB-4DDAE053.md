@@ -11,7 +11,7 @@ anchors:
   - coordinate: /product/{sku}
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:18:16.567Z
     by: session:memimpor
     who: Lenajava1

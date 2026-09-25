@@ -12,7 +12,7 @@ anchors:
   - coordinate: /connect/authorize
 evidence:
   - method: observation
-    deployment: vcmp-dev
+    deployment: vcmp_dev
     at: 2026-09-25T11:19:02.414Z
     by: session:memimpor
     who: Lenajava1

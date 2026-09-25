@@ -12,7 +12,7 @@ anchors:
   - coordinate: LoyaltyMissionProgressType.description
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:19:01.767Z
     by: session:memimpor
     who: Lenajava1

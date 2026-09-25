@@ -13,7 +13,7 @@ anchors:
   - coordinate: /graphql
 evidence:
   - method: observation
-    deployment: vcst-qa
+    deployment: vcst_qa
     at: 2026-09-25T11:16:31.344Z
     by: session:memimpor
     who: Lenajava1
