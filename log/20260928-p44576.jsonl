@@ -1,0 +1,2 @@
+{"at":"2026-09-28T16:14:22.879Z","kind":"ask","q":"xAPI products filter term wildcard gtin asterisk","matched":["KB-A0B3940F","KB-110E0652"],"scores":[5,4],"matchedBy":["words","words"],"trustShown":["DISPUTED","single observation"],"opened":["KB-A0B3940F","KB-110E0652"],"state":"answer","ms":342,"rank":"floor-1","via":"cli","who":"Lenajava1"}
+{"at":"2026-09-28T16:21:49.162Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
