@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T22:11:38.310Z",
-  "count": 222,
+  "generated": "2026-09-28T22:22:54.602Z",
+  "count": 224,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1444,6 +1444,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-5A6C014E",
+      "path": "entries/KB-5A6C014E.md",
+      "subject": "xAPI createReturn/updateReturn accept a quantity above the returnable limit as a Draft; submitReturn refuses it",
+      "question": "Does createReturn refuse a return quantity above the order line's returnable quantity, or only submitReturn?",
+      "anchors": [
+        "Mutations.createReturn",
+        "Mutations.submitReturn",
+        "/account/returns/:id/edit"
+      ],
+      "scope": [
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5ADBFB34",
       "path": "entries/KB-5ADBFB34.md",
       "subject": "only the largest cart-subtotal promotion applies, whatever isExclusive says",
@@ -1519,6 +1537,24 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-657521DF",
+      "path": "entries/KB-657521DF.md",
+      "subject": "Returns are owner-scoped in xAPI: a same-organization colleague gets return(id)=null and RETURN_NOT_FOUND on cancel/update",
+      "question": "Can a colleague in the same organization read or cancel another buyer's return via xAPI or the storefront?",
+      "anchors": [
+        "Query.return",
+        "Mutations.cancelReturn",
+        "/account/returns/:id"
+      ],
+      "scope": [
+        "surface=graphql-xapi"
       ],
       "plane": "experiential",
       "status": "active",

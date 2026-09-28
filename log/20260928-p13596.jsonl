@@ -1,0 +1,1 @@
+{"at":"2026-09-28T21:52:21.287Z","kind":"capture-invalid","subject":"xAPI createReturn/updateReturn accept a quantity above the returnable limit as a Draft; submitReturn refuses it","why":"unusable anchor(s)","problems":["unstructured"],"via":"cli","topic":"returns buyer quantity limits","who":"kutasinaelena"}
