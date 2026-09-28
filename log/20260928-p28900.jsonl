@@ -1,0 +1,1 @@
+{"at":"2026-09-28T07:08:25.547Z","kind":"capture-invalid","subject":"Sales Rep details blade requires first/last name and caps their length","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"sales rep admin blade name validation"}

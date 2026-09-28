@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T08:20:27.365Z",
-  "count": 189,
+  "generated": "2026-09-28T08:33:44.220Z",
+  "count": 192,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1250,6 +1250,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-5A0C4200",
+      "path": "entries/KB-5A0C4200.md",
+      "subject": "PUT /api/members still clears a Sales Rep contact's names; the SalesRep validator does not cover it",
+      "question": "Does the Sales Rep first/last-name validation also stop PUT /api/members from clearing a rep's name?",
+      "anchors": [
+        "PUT /api/members",
+        "POST /api/sales-rep"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5ADBFB34",
       "path": "entries/KB-5ADBFB34.md",
       "subject": "only the largest cart-subtotal promotion applies, whatever isExclusive says",
@@ -2228,6 +2245,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-A8B46253",
+      "path": "entries/KB-A8B46253.md",
+      "subject": "Contact with a null first/last name breaks the storefront xAPI me.contact query",
+      "question": "Why does a user whose Contact has no firstName/lastName fail every storefront query that reads the current user?",
+      "anchors": [
+        "POST /graphql",
+        "me.contact"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AA1147AA",
       "path": "entries/KB-AA1147AA.md",
       "subject": "Organization.status is the organization's own status, not the caller's membership status",
@@ -2549,6 +2583,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C60BA776",
+      "path": "entries/KB-C60BA776.md",
+      "subject": "Sales Rep details blade requires first/last name and caps their length",
+      "question": "In the Admin SPA VC-Shell Sales Rep app, are First name and Last name required, and what max length do First name and Salutation accept?",
+      "anchors": [
+        "/apps/vc-sales-rep/#/sales-reps/sales-rep-details"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {

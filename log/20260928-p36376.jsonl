@@ -1,0 +1,1 @@
+{"at":"2026-09-28T07:08:41.982Z","kind":"capture-invalid","subject":"vcptcore-qa admin password is expired: the AngularJS platform SPA forces a password change, the VC-Shell apps do not","why":"unusable anchor(s)","problems":["unstructured"],"via":"cli","topic":"vcptcore admin password expiry"}

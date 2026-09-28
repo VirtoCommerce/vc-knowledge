@@ -1,0 +1,1 @@
+{"at":"2026-09-28T07:06:25.672Z","kind":"capture-invalid","subject":"Contact with a null first/last name breaks the storefront xAPI me.contact query","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"sales rep nameless contact storefront lockout","run":"VCST-5759"}
