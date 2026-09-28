@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T22:43:10.067Z",
-  "count": 226,
+  "generated": "2026-09-28T23:13:59.805Z",
+  "count": 227,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1588,6 +1588,26 @@
         "Mutation.moveFromSavedForLater"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-67D0AB31",
+      "path": "entries/KB-67D0AB31.md",
+      "subject": "Storefront order detail page has no return/RMA status display — GetFullOrder's CustomerOrderType exposes no return field, and no existing-return query exists",
+      "question": "Does the storefront order detail page show existing return/RMA status, reference number, or returned items for an order that already has a submitted/decided return?",
+      "anchors": [
+        "Query.order",
+        "Query.returnableItems",
+        "Query.returnPolicy",
+        "/account/orders"
+      ],
+      "scope": [
+        "feature=returns",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
