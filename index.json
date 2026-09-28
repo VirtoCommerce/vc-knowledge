@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T14:34:26.247Z",
-  "count": 202,
+  "generated": "2026-09-28T14:38:38.025Z",
+  "count": 204,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -682,6 +682,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-31802239",
+      "path": "entries/KB-31802239.md",
+      "subject": "With event-based indexation off, a deleted product's search document stays in the index; POST api/search/indexes/index with documentIds does not remove it, a startDate/endDate window over the deletion does",
+      "question": "How do I remove search-index documents of deleted products when Catalog.Search.EventBasedIndexation.Enable is false?",
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "POST /api/platform/changelog/v2/search",
+        "POST /api/catalog/search/products",
+        "Query.products"
+      ],
+      "scope": [
+        "module=search",
+        "setting=catalog.search.eventbasedindexation.enable=false",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-318E448E",
       "path": "entries/KB-318E448E.md",
       "subject": "any product save through PATCH /api/catalog/products trims the product name",
@@ -1014,6 +1035,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4C29749E",
+      "path": "entries/KB-4C29749E.md",
+      "subject": "A manual POST api/search/indexes/index moves the scheduled index-changes job's start date to now, so the job then skips any change or delete made before that request",
+      "question": "Why did the scheduled index-changes job not remove documents of products deleted before a manual index request?",
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "GET /api/platform/settings/VirtoCommerce.Search.IndexingJobs.IndexationDate.Product"
+      ],
+      "scope": [
+        "module=search",
+        "setting=catalog.search.eventbasedindexation.enable=false",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -2246,7 +2286,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
