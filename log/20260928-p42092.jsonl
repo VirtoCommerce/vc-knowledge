@@ -1,1 +1,2 @@
 {"at":"2026-09-28T15:44:07.061Z","kind":"ask","q":"PUT /api/catalog/barcode-search/store/{storeId} validation unknown field 400 404 unknown store","matched":["KB-C3945D5C","KB-BC55C4F0","KB-84EA18E3"],"scores":[28,24,16],"matchedBy":["both","both","both"],"trustShown":["single observation","corroborated","well attested"],"opened":["KB-C3945D5C","KB-BC55C4F0","KB-84EA18E3"],"state":"answer","ms":795,"rank":"floor-1","via":"cli","who":"Lenajava1"}
+{"at":"2026-09-28T16:37:05.155Z","kind":"restart","why":"state-absent","who":"Lenajava1"}
