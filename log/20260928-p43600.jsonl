@@ -1,0 +1,1 @@
+{"at":"2026-09-28T14:15:55.117Z","kind":"ask","q":"Catalog.Search.EventBasedIndexation.Enable false product delete search index stale document","matched":[],"state":"miss","nearMiss":{"id":"KB-5D688448","score":4,"coverage":0.4},"ms":94,"rank":"floor-1","via":"cli","who":"Lenajava1"}
