@@ -22,5 +22,11 @@ evidence:
     by: session:p43332
     who: Lenajava1
     note: "Read-only role: GET 200, GET fields 200, PUT 403 (unchanged); no-permission role: 403 on all three; anonymous 401."
+  - method: observation
+    deployment: vcst
+    at: 2026-09-28T16:03:59.351Z
+    by: session:p44044
+    who: Lenajava1
+    note: "Read-only role: GET 200, PUT 403, stored value unchanged; no-permission role: GET, GET fields and PUT all 403."
 ---
 For a non-administrator back-office (Manager) user: GET /api/catalog/barcode-search/store/{storeId} and GET .../fields return 200 with catalog:BrowseFilters:Read and 403 without it; PUT /api/catalog/barcode-search/store/{storeId} returns 403 when the user holds catalog:BrowseFilters:Read but not catalog:BrowseFilters:Update. store:access, store:read and catalog:access alone grant none of the three.

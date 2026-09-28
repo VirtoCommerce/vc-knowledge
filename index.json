@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T16:11:44.475Z",
-  "count": 209,
+  "generated": "2026-09-28T16:36:39.063Z",
+  "count": 215,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -591,7 +591,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -639,6 +639,24 @@
         "GET /api/white-labeling/store/{storeId}"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2B0274B9",
+      "path": "entries/KB-2B0274B9.md",
+      "subject": "Storefront Barcode scan modal never leaves loading when no camera stream is available: Browse (upload fallback) stays disabled and no message is shown",
+      "question": "What does the storefront barcode scanner modal do when the camera is denied or absent?",
+      "anchors": [
+        "/search",
+        "barcode-scanner-modal.vue"
+      ],
+      "scope": [
+        "component=barcode-scanner-modal",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -907,6 +925,23 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-417AC3F2",
+      "path": "entries/KB-417AC3F2.md",
+      "subject": "Barcode scanner blade: saved field missing from the index is shown checked with a badge, inert, and dropped on the next save",
+      "question": "What does the Admin SPA Barcode scanner blade do with a saved barcode field whose property is no longer in the index?",
+      "anchors": [
+        "GET /api/catalog/barcode-search/store/{}",
+        "PUT /api/catalog/barcode-search/store/{}"
+      ],
+      "scope": [
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2024,7 +2059,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -2398,6 +2433,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-A47C7347",
+      "path": "entries/KB-A47C7347.md",
+      "subject": "Deleting a barcode property then reindexing the product stops exact-mode scans matching its value",
+      "question": "What happens to barcode scans on a field whose catalog property is deleted?",
+      "anchors": [
+        "DELETE /api/catalog/properties",
+        "PUT /api/stores",
+        "POST /api/search/indexes/index"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A4EB3766",
       "path": "entries/KB-A4EB3766.md",
       "subject": "the cart record survives checkout, emptied and reused",
@@ -2616,6 +2669,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-B77CC09C",
+      "path": "entries/KB-B77CC09C.md",
+      "subject": "Storefront search results h1 accessible name has no space before or after the result count: '...returned the following3results'",
+      "question": "How is the storefront search results heading with the product count exposed to assistive technology?",
+      "anchors": [
+        "/search"
+      ],
+      "scope": [
+        "element=search-results-heading",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B858E12A",
       "path": "entries/KB-B858E12A.md",
       "subject": "the Admin login page is the only anonymous source of the running platform version",
@@ -2703,7 +2773,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2822,7 +2892,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3014,6 +3084,22 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D0BF25FF",
+      "path": "entries/KB-D0BF25FF.md",
+      "subject": "Barcode scanner blade keeps field order fixed while editing and asks before closing with unsaved changes",
+      "question": "How does the Admin SPA Barcode scanner blade order fields and guard unsaved changes?",
+      "anchors": [
+        "PUT /api/catalog/barcode-search/store/{}"
+      ],
+      "scope": [
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3614,6 +3700,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F3B1E987",
+      "path": "entries/KB-F3B1E987.md",
+      "subject": "Storefront mobile search overlay: submit button has no accessible name, the backdrop close button is named with the raw key common.labels.close, Cancel is 42x18 px",
+      "question": "What accessible names and target sizes do the storefront mobile search overlay controls have?",
+      "anchors": [
+        "mobile-search-bar.vue"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
