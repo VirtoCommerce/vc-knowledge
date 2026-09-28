@@ -1,0 +1,2 @@
+{"at":"2026-09-28T14:00:38.664Z","kind":"capture-refused","dupeOf":"KB-A0B3940F","subject":"xAPI full-text products(query) matches a product's GTIN as well as name words","why":"anchors+scope","when":"push"}
+{"at":"2026-09-28T14:00:38.664Z","kind":"flush","entries":4,"lines":10,"swept":["p42684.jsonl","p44348.jsonl","p44504.jsonl","p45000.jsonl","p48688.jsonl","p49492.jsonl","p50532.jsonl","p51696.jsonl","p51828.jsonl"],"retries":0,"ok":true,"convertedToConfirm":1,"who":"Lenajava1"}

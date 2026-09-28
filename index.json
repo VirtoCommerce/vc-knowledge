@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T13:39:31.047Z",
-  "count": 195,
+  "generated": "2026-09-28T14:00:38.664Z",
+  "count": 198,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1888,6 +1888,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-84EA18E3",
+      "path": "entries/KB-84EA18E3.md",
+      "subject": "barcode-search fields list offers only Product/Variation short-text properties, lowercased",
+      "question": "Which catalog properties does GET /api/catalog/barcode-search/store/{storeId}/fields offer as barcode fields?",
+      "anchors": [
+        "GET /api/catalog/barcode-search/store/{storeId}/fields"
+      ],
+      "scope": [
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8646A9CB",
       "path": "entries/KB-8646A9CB.md",
       "subject": "five failed storefront sign-ins give a 15-minute temporary lockout code",
@@ -2165,6 +2181,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A0B3940F",
+      "path": "entries/KB-A0B3940F.md",
+      "subject": "xAPI products filter field:\"value\" is an exact term match; variations need an explicit is: scope",
+      "question": "How does Query.products filter match code, gtin or manufacturerPartNumber, and are variations included?",
+      "anchors": [
+        "Query.products"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2508,6 +2540,23 @@
         "principal=org-maintainer",
         "surface=admin-ui",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BC55C4F0",
+      "path": "entries/KB-BC55C4F0.md",
+      "subject": "barcode-search endpoints are gated by catalog:BrowseFilters:Read (GET) and :Update (PUT)",
+      "question": "What permissions do the barcode-search settings endpoints require?",
+      "anchors": [
+        "PUT /api/catalog/barcode-search/store/{storeId}",
+        "GET /api/catalog/barcode-search/store/{storeId}"
+      ],
+      "scope": [
+        "surface=admin-api"
       ],
       "plane": "experiential",
       "status": "active",

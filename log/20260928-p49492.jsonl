@@ -1,0 +1,1 @@
+{"at":"2026-09-28T13:29:53.103Z","kind":"capture-invalid","subject":"barcode-search endpoints are gated by catalog:BrowseFilters:Read (GET) and :Update (PUT)","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"barcode scanner search fixtures","run":"VCST-2945","who":"Lenajava1"}

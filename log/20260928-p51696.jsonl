@@ -1,0 +1,1 @@
+{"at":"2026-09-28T13:30:11.837Z","kind":"capture","id":"KB-BC55C4F0","subject":"barcode-search endpoints are gated by catalog:BrowseFilters:Read (GET) and :Update (PUT)","question":"What permissions do the barcode-search settings endpoints require?","related":["KB-DF432371"],"read":[],"via":"cli","topic":"barcode scanner search fixtures","run":"VCST-2945","who":"Lenajava1"}

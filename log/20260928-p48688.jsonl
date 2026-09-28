@@ -1,0 +1,1 @@
+{"at":"2026-09-28T13:29:52.651Z","kind":"capture-invalid","subject":"barcode-search fields list offers only Product/Variation short-text properties, lowercased","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"barcode scanner search fixtures","run":"VCST-2945","who":"Lenajava1"}
