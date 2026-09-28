@@ -1,0 +1,1 @@
+{"at":"2026-09-28T14:11:42.321Z","kind":"capture-invalid","subject":"products(filter barcode:) expands to OR of configured fields and honours * and ? wildcards","why":"unusable anchor(s)","problems":["unstructured"],"via":"cli","topic":"barcode scanner search setup","run":"VCST-2945","who":"Lenajava1"}

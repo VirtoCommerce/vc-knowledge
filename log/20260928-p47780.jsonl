@@ -1,0 +1,1 @@
+{"at":"2026-09-28T14:11:43.215Z","kind":"capture-invalid","subject":"Deleted products leave index docs that inflate facet counts when event-based indexation is off","why":"unusable anchor(s)","problems":["unstructured","local-path"],"via":"cli","topic":"barcode scanner search setup","run":"VCST-2945","who":"Lenajava1"}

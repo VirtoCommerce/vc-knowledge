@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T14:38:38.025Z",
-  "count": 204,
+  "generated": "2026-09-28T14:44:34.877Z",
+  "count": 208,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -88,6 +88,24 @@
       "scope": [
         "flow=authentication",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-041DF407",
+      "path": "entries/KB-041DF407.md",
+      "subject": "Deleted products leave index docs that inflate facet counts when event-based indexation is off",
+      "question": "Why do xAPI term_facets counts exceed totalCount after products were deleted and recreated?",
+      "anchors": [
+        "Query.products",
+        "POST /api/search/indexes/index",
+        "POST /api/catalog/search/products"
+      ],
+      "scope": [
+        "surface=graphql-xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -272,6 +290,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-110E0652",
+      "path": "entries/KB-110E0652.md",
+      "subject": "products(filter barcode:) expands to OR of configured fields and honours * and ? wildcards",
+      "question": "What does the xAPI products filter term barcode:\"<value>\" do?",
+      "anchors": [
+        "Query.products"
+      ],
+      "scope": [
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -627,7 +661,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1990,7 +2024,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2287,7 +2321,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-A1B35892",
@@ -2650,7 +2684,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2722,6 +2756,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-C3945D5C",
+      "path": "entries/KB-C3945D5C.md",
+      "subject": "api/catalog/barcode-search PUT validates fields, GET returns defaults for unknown stores",
+      "question": "How does PUT/GET api/catalog/barcode-search/store/{storeId} validate and respond?",
+      "anchors": [
+        "PUT /api/catalog/barcode-search/store",
+        "GET /api/catalog/barcode-search/store"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C440D4E3",
       "path": "entries/KB-C440D4E3.md",
       "subject": "there is no product search route under /api/catalog/products",
@@ -2736,6 +2787,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C466AD5C",
+      "path": "entries/KB-C466AD5C.md",
+      "subject": "Barcode scanner blade without BrowseFilters:Read shows the scanner as off",
+      "question": "What does the Store > Search configuration > Barcode scanner blade show to a user without catalog:BrowseFilters:Read?",
+      "anchors": [
+        "GET /api/catalog/barcode-search/store",
+        "/workspace/store"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

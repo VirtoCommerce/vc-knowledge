@@ -1,0 +1,1 @@
+{"at":"2026-09-28T14:12:00.511Z","kind":"capture","id":"KB-110E0652","subject":"products(filter barcode:) expands to OR of configured fields and honours * and ? wildcards","question":"What does the xAPI products filter term barcode:\"<value>\" do?","related":[],"read":[],"via":"cli","topic":"barcode scanner search setup","run":"VCST-2945","who":"Lenajava1"}

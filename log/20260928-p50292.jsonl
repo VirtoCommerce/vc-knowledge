@@ -1,0 +1,1 @@
+{"at":"2026-09-28T14:11:41.862Z","kind":"capture-invalid","subject":"api/catalog/barcode-search PUT validates fields, GET returns defaults for unknown stores","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"barcode scanner search setup","run":"VCST-2945","who":"Lenajava1"}
