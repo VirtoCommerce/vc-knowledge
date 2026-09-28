@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T14:14:41.249Z",
-  "count": 199,
+  "generated": "2026-09-28T14:34:26.247Z",
+  "count": 202,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -537,6 +537,23 @@
       ],
       "scope": [
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-25829330",
+      "path": "entries/KB-25829330.md",
+      "subject": "Storefront barcode search: with no fields configured barcode:\"x\" stays a literal filter (0 hits); scannerEnabled=false hides the scanner button but /search?barcode= still resolves",
+      "question": "How does the storefront behave on /search?barcode= and in the header search bars under each barcode-search store setting?",
+      "anchors": [
+        "/search?barcode=",
+        "/api/catalog/barcode-search"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1576,6 +1593,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-71011C1F",
+      "path": "entries/KB-71011C1F.md",
+      "subject": "Storefront /search?barcode=<value> resolves by exact match on the store's configured barcode fields: 1 hit replaces the URL with the product page, N hits list, 0 hits show a reset-able empty state",
+      "question": "What does the storefront do on /search?barcode=<value> once a store has barcode search fields configured?",
+      "anchors": [
+        "/search?barcode=",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-734A0813",
       "path": "entries/KB-734A0813.md",
       "subject": "same-product adds consolidate into one line, but configured items always stay separate lines",
@@ -1648,6 +1682,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-78B45E71",
+      "path": "entries/KB-78B45E71.md",
+      "subject": "Barcode exact match treats * and ? as search wildcards: a GTIN prefix plus * opens a product, a bare * lists the whole catalog",
+      "question": "Are wildcard characters in a barcode value matched literally by the storefront's exact barcode search?",
+      "anchors": [
+        "/search?barcode="
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {

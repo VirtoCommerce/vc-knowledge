@@ -1,0 +1,2 @@
+{"at":"2026-09-28T14:34:26.247Z","kind":"capture-refused","dupeOf":"KB-78B45E71","subject":"Barcode scan modal without a usable camera spins forever: blank viewport, disabled unnamed button, no message, nothing logged","why":"anchors+scope","when":"push"}
+{"at":"2026-09-28T14:34:26.247Z","kind":"flush","entries":4,"lines":10,"swept":["p35608.jsonl","p39088.jsonl","p42564.jsonl","p46880.jsonl","p48092.jsonl","p49180.jsonl","p50920.jsonl","p51344.jsonl","p52016.jsonl"],"retries":0,"ok":true,"convertedToConfirm":1,"who":"Lenajava1"}
