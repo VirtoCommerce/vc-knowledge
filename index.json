@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T20:29:21.249Z",
-  "count": 218,
+  "generated": "2026-09-28T22:11:38.310Z",
+  "count": 222,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -400,6 +400,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-1564BA07",
+      "path": "entries/KB-1564BA07.md",
+      "subject": "submitReturn raises one ReturnRegisteredEmailNotification (tenant Return) and one push message whose topic is the return number",
+      "question": "What notifications does Mutation.submitReturn produce and how do I find them in /api/notifications/journal and /api/push-message/search?",
+      "anchors": [
+        "Mutation.submitReturn",
+        "POST /api/notifications/journal",
+        "POST /api/push-message/search",
+        "POST /api/files/return-attachments"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-16AEF0C2",
       "path": "entries/KB-16AEF0C2.md",
       "subject": "order operation numbering and parentage",
@@ -554,6 +573,22 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1F2EBF83",
+      "path": "entries/KB-1F2EBF83.md",
+      "subject": "Legacy PUT /api/return with no id creates a return in status New, and raises no ReturnRegistered email or push",
+      "question": "How do I create a return as an admin via REST PUT /api/return, and does it notify the buyer?",
+      "anchors": [
+        "PUT /api/return"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1679,6 +1714,22 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-700E5D52",
+      "path": "entries/KB-700E5D52.md",
+      "subject": "POST /api/return/{id}/authorize requires return:authorize; return:update alone gets 403",
+      "question": "Which permission gates the per-line return decision endpoint POST /api/return/{id}/authorize?",
+      "anchors": [
+        "POST /api/return/{id}/authorize"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2961,6 +3012,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C6BB1914",
+      "path": "entries/KB-C6BB1914.md",
+      "subject": "Return.LanguageCode comes from createReturn cultureName, not from the order languageCode",
+      "question": "Which language does a buyer-created return (Mutation.createReturn) and its notification use - the order language or the submission culture?",
+      "anchors": [
+        "Mutation.createReturn",
+        "GET /api/return/{id}"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
