@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T16:36:39.063Z",
-  "count": 215,
+  "generated": "2026-09-28T20:29:21.249Z",
+  "count": 218,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2760,6 +2760,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-BBC75DEA",
+      "path": "entries/KB-BBC75DEA.md",
+      "subject": "Push Messages recipient picker renders same-named people and companies with no discriminator",
+      "question": "Does the Push Messages 'Add specific recipients' picker distinguish options that share a display name?",
+      "anchors": [
+        "POST /api/push-message/search-recipients"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BC55C4F0",
       "path": "entries/KB-BC55C4F0.md",
       "subject": "barcode-search endpoints are gated by catalog:BrowseFilters:Read (GET) and :Update (PUT)",
@@ -2907,6 +2924,23 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C5B17CE2",
+      "path": "entries/KB-C5B17CE2.md",
+      "subject": "Push Messages audience caption omits the condition when the blade is rendered from saved state",
+      "question": "Does the Push Messages audience caption name the condition when a message combines a condition with a picked recipient?",
+      "anchors": [
+        "GET /api/push-message/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3520,6 +3554,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EB70C1F9",
+      "path": "entries/KB-EB70C1F9.md",
+      "subject": "Push Messages conditions builder drops an incomplete condition row without validation",
+      "question": "In the Push Messages admin blade (Match by conditions), what happens to a condition row whose value is left empty?",
+      "anchors": [
+        "POST /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
