@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T11:48:10.800Z",
-  "count": 194,
+  "generated": "2026-09-28T13:39:31.047Z",
+  "count": 195,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1085,6 +1085,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4DFE4750",
+      "path": "entries/KB-4DFE4750.md",
+      "subject": "Admin SPA vc-uk-htmleditor switches split/tab view at 1000px editor width",
+      "question": "When does the Admin SPA HTML/markdown editor (vc-uk-htmleditor, e.g. Notification layout Template) show split view vs Markdown/Preview tabs?",
+      "anchors": [
+        "/workspace/notifications"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
