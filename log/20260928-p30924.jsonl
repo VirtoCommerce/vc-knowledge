@@ -1,0 +1,1 @@
+{"at":"2026-09-28T09:16:00.153Z","kind":"ask","q":"vcptcore-qa admin password expired classic manager redirects to #!/changepassword, VC-Shell app not gated","matched":[],"state":"miss","nearMiss":{"id":"KB-C60BA776","score":4,"coverage":0.31},"ms":589,"rank":"floor-1","via":"cli","deployment":"vcptcore","who":"Aleksandra-Mitricheva"}
