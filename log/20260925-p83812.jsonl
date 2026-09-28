@@ -1,0 +1,1 @@
+{"at":"2026-09-25T19:55:56.304Z","kind":"ask","q":"storefront category page empty products not in search index indexingDate null /api/search/indexes","matched":[],"state":"miss","nearMiss":{"id":"KB-5D688448","score":5,"coverage":0.45},"ms":539,"rank":"floor-1","via":"cli","who":"Lenajava1"}

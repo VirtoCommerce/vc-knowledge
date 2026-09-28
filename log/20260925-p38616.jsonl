@@ -1,0 +1,1 @@
+{"at":"2026-09-25T20:05:45.418Z","kind":"ask","q":"PUT /api/products/prices pricelist assignment replaces existing prices","matched":["KB-1834ABE5"],"scores":[10],"matchedBy":["anchor"],"trustShown":["single observation"],"opened":["KB-1834ABE5"],"state":"answer","ms":660,"rank":"floor-1","via":"cli","who":"Lenajava1"}

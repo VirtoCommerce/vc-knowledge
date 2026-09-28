@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-25T19:53:58.382Z",
-  "count": 185,
+  "generated": "2026-09-28T08:20:27.365Z",
+  "count": 189,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -399,7 +399,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -527,6 +527,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-24AA6296",
+      "path": "entries/KB-24AA6296.md",
+      "subject": "PUT /api/products/prices touches only the price lists present in the payload and keeps a price row when its id is sent",
+      "question": "does PUT /api/products/prices replace a product's prices in other price lists",
+      "anchors": [
+        "PUT /api/products/prices",
+        "PUT /api/pricing/assignments"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-27B4CD10",
       "path": "entries/KB-27B4CD10.md",
       "subject": "storefront members Active column reads contact status not account state",
@@ -641,6 +658,22 @@
       ],
       "scope": [
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-318E448E",
+      "path": "entries/KB-318E448E.md",
+      "subject": "any product save through PATCH /api/catalog/products trims the product name",
+      "question": "does PATCH /api/catalog/products JSON Patch that only adds seoInfos change other product fields",
+      "anchors": [
+        "PATCH /api/catalog/products"
+      ],
+      "scope": [
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1772,6 +1805,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-82F52F81",
+      "path": "entries/KB-82F52F81.md",
+      "subject": "POST /api/seoinfos/search resolves a permalink path, needs storeId, and ignores the slug field",
+      "question": "how to check whether a semantic URL is already taken with POST /api/seoinfos/search",
+      "anchors": [
+        "POST /api/seoinfos/search",
+        "GET /api/seoinfos/duplicates"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-84E540DD",
       "path": "entries/KB-84E540DD.md",
       "subject": "a promotion body ignores inline coupons; coupons are added through /coupons/add",
@@ -2045,6 +2095,23 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9FDE89B8",
+      "path": "entries/KB-9FDE89B8.md",
+      "subject": "a personalization tag on a virtual category hides its whole subtree from customers without that user group",
+      "question": "why does a storefront category page show no products while the index holds them (user_groups, /api/personalization/taggeditem)",
+      "anchors": [
+        "GET /api/personalization/taggeditem/{id}",
+        "GET /api/search/indexes/index/Product/{id}"
+      ],
+      "scope": [
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
