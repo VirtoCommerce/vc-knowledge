@@ -1,0 +1,1 @@
+{"at":"2026-09-28T11:17:31.064Z","kind":"capture-invalid","subject":"A mixed-currency order's total excludes loyalty-currency lines","why":"unusable anchor(s)","problems":["local-path","unstructured"],"via":"cli","topic":"loyalty mission accrual currency","run":"VCST-6090","who":"Lenajava1"}

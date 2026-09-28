@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T09:20:58.008Z",
-  "count": 193,
+  "generated": "2026-09-28T11:48:10.800Z",
+  "count": 194,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2861,6 +2861,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D842824E",
+      "path": "entries/KB-D842824E.md",
+      "subject": "A mixed-currency order's total excludes loyalty-currency lines",
+      "question": "Does a customer order's top-level total include the value of lines priced in the loyalty currency (mixed cart)?",
+      "anchors": [
+        "POST /api/order/customerOrders/search",
+        "Query.loyaltyMissionProgress"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
