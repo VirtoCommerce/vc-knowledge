@@ -1,0 +1,2 @@
+{"at":"2026-09-28T14:04:53.584Z","kind":"capture-refused","dupeOf":"KB-84EA18E3","subject":"barcode-search fields list offers only Product/Variation short-text properties, lowercased","why":"anchors+scope","when":"push"}
+{"at":"2026-09-28T14:04:53.584Z","kind":"flush","entries":1,"lines":2,"swept":["p45580.jsonl"],"retries":0,"ok":true,"convertedToConfirm":1,"who":"Lenajava1"}
