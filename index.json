@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T08:33:44.220Z",
-  "count": 192,
+  "generated": "2026-09-28T09:20:58.008Z",
+  "count": 193,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1430,6 +1430,22 @@
       ],
       "scope": [
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6B0E2FF7",
+      "path": "entries/KB-6B0E2FF7.md",
+      "subject": "Storefront interactive controls at 375px are mostly 24-44 CSS px (UI-kit button tiers)",
+      "question": "What size are interactive controls on the storefront catalog page at a 375px mobile viewport?",
+      "anchors": [
+        "/catalog"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
