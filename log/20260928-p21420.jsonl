@@ -1,2 +1,3 @@
 {"at":"2026-09-28T06:32:15.524Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 401 GET /git/ref/heads/main — Bad credentials","reason":"denied"}
 {"at":"2026-09-28T15:07:30.879Z","kind":"flush","entries":0,"lines":1,"swept":["p24356.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
+{"at":"2026-09-28T15:36:24.425Z","kind":"capture-refused","dupeOf":"KB-78B45E71","subject":"Mobile header search overlay: close control exposes the raw key common.labels.close as its name, submit icon button has no accessible name","why":"anchors+scope","when":"call","via":"cli","topic":"barcode scanner storefront search","who":"Lenajava1"}
