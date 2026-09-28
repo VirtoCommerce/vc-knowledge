@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T23:13:59.805Z",
-  "count": 227,
+  "generated": "2026-09-28T23:30:59.978Z",
+  "count": 228,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2092,6 +2092,24 @@
       "scope": [
         "payment-method=cybersourcepaymentmethod",
         "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-809EA119",
+      "path": "entries/KB-809EA119.md",
+      "subject": "A return's releasable quantity after a partial-approval decision equals ordered minus approved (not requested minus approved) -- units never requested in the first decision stay independently returnable alongside the released unapproved units",
+      "question": "After a partial approval (ordered 500, requested 240, approved 200 on line A), what does returnableItems.returnableQuantity report for the buyer's next return -- just the 40 unapproved-and-released units, or does it include the 260 units never touched by the first return too?",
+      "anchors": [
+        "Query.returnableItems",
+        "/account/returns/new/{orderId}"
+      ],
+      "scope": [
+        "feature=returns",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
