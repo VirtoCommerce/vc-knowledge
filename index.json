@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T14:44:34.877Z",
-  "count": 208,
+  "generated": "2026-09-28T15:16:38.299Z",
+  "count": 209,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2208,6 +2208,25 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-969D7E09",
+      "path": "entries/KB-969D7E09.md",
+      "subject": "POSTing an unmodified GET /api/catalog/products/{id} body back to POST /api/catalog/products fails 500 (PK_Item duplicate key) when the product has variations; omitting variations[] succeeds and keeps them",
+      "question": "Why does a GET→POST round-trip of a catalog product return 500?",
+      "anchors": [
+        "POST /api/catalog/products",
+        "GET /api/catalog/products/{id}"
+      ],
+      "scope": [
+        "entity=product-with-variations",
+        "module=catalog",
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
