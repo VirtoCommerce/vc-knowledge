@@ -1,0 +1,1 @@
+{"at":"2026-09-28T17:58:04.023Z","kind":"ask","q":"CartAggregate cached by CartAggregateRepository shared instance distributed lock per user","matched":[],"state":"miss","nearMiss":{"id":"KB-31A7EFFD","score":2,"coverage":0.22},"ms":95,"rank":"floor-1","via":"cli","who":"Lenajava1"}
