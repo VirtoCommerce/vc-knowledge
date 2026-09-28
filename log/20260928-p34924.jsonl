@@ -1,0 +1,1 @@
+{"at":"2026-09-28T22:09:41.190Z","kind":"capture-invalid","subject":"POST /api/return/{id}/authorize: every line must be decided once, 0..requested; errors are 400 with a code; only Requested/New returns","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"returns approve decline","who":"kutasinaelena"}

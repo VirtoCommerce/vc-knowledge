@@ -1,0 +1,2 @@
+{"at":"2026-09-28T22:43:10.067Z","kind":"capture-refused","dupeOf":"KB-700E5D52","subject":"POST /api/return/{id}/authorize: every line must be decided once, 0..requested; errors are 400 with a code; only Requested/New returns","why":"anchors+scope","when":"push"}
+{"at":"2026-09-28T22:43:10.067Z","kind":"flush","entries":3,"lines":9,"swept":["p11268.jsonl","p1704.jsonl","p26260.jsonl","p30320.jsonl","p31436.jsonl","p34924.jsonl","p35716.jsonl","p37076.jsonl"],"retries":0,"ok":true,"convertedToConfirm":1,"who":"kutasinaelena"}

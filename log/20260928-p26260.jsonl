@@ -1,0 +1,1 @@
+{"at":"2026-09-28T22:09:42.060Z","kind":"capture-invalid","subject":"Return edit guards: PUT /api/return on a decided return returns 200 but silently keeps the decision; available-statuses lists Canceled and Cancelled","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"returns approve decline","who":"kutasinaelena"}

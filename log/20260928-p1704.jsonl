@@ -1,0 +1,1 @@
+{"at":"2026-09-28T22:09:42.987Z","kind":"capture-invalid","subject":"Return status notifications: one email + one push per status change via Hangfire; a job can succeed and send nothing (requeue sends it)","why":"unusable anchor(s)","problems":["unstructured","local-path"],"via":"cli","topic":"returns approve decline","who":"kutasinaelena"}

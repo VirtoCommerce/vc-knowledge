@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T22:22:54.602Z",
-  "count": 224,
+  "generated": "2026-09-28T22:43:10.067Z",
+  "count": 226,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -431,6 +431,23 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-17555498",
+      "path": "entries/KB-17555498.md",
+      "subject": "Return status notifications: one email + one push per status change via Hangfire; a job can succeed and send nothing (requeue sends it)",
+      "question": "How are buyer notifications sent when a return status changes, and can one be lost?",
+      "anchors": [
+        "POST /api/notifications/journal",
+        "/hangfire/jobs"
+      ],
+      "scope": [
+        "surface=background-jobs"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1769,7 +1786,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2463,6 +2480,23 @@
       "status": "active",
       "trust": 3,
       "disputed": 1
+    },
+    {
+      "id": "KB-A0C1338B",
+      "path": "entries/KB-A0C1338B.md",
+      "subject": "Return edit guards: PUT /api/return on a decided return returns 200 but silently keeps the decision; available-statuses lists Canceled and Cancelled",
+      "question": "What statuses can PUT /api/return set, and what happens to decision fields sent in a PUT?",
+      "anchors": [
+        "GET /api/return/{id}/available-statuses",
+        "PUT /api/return"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-A1B35892",
