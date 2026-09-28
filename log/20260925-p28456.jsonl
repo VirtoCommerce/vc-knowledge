@@ -1,0 +1,1 @@
+{"at":"2026-09-25T11:46:30.277Z","kind":"ask","q":"POST /api/catalog/properties/validate-property-name global-property-name-type same name different value type another catalog","matched":[],"state":"miss","nearMiss":{"id":"KB-C440D4E3","score":3,"coverage":0.23},"ms":1037,"rank":"floor-1","via":"cli"}
