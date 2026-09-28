@@ -1,0 +1,1 @@
+{"at":"2026-09-28T12:27:30.900Z","kind":"ask","q":"products(filter) gtin exact match variation is:product,variation","matched":[],"state":"miss","nearMiss":{"id":"KB-316B2DDB","score":3,"coverage":0.43},"ms":95,"rank":"floor-1","via":"cli","who":"Lenajava1"}
