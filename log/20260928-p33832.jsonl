@@ -1,0 +1,1 @@
+{"at":"2026-09-28T16:14:22.089Z","kind":"ask","q":"products(filter barcode:) wildcard asterisk question mark treated literally","matched":[],"state":"miss","nearMiss":{"id":"KB-78B45E71","score":3,"coverage":0.33},"ms":87,"rank":"floor-1","via":"cli","who":"Lenajava1"}
