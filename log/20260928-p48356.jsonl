@@ -1,0 +1,3 @@
+{"at":"2026-09-28T16:32:36.347Z","kind":"restart","why":"state-absent","who":"Lenajava1"}
+{"at":"2026-09-28T16:46:58.076Z","kind":"ask","q":"products filter wildcard * ? term filter Elasticsearch","matched":["KB-A0B3940F","KB-110E0652"],"scores":[3,3],"matchedBy":["words","words"],"trustShown":["DISPUTED","single observation"],"opened":["KB-A0B3940F","KB-110E0652"],"state":"answer","ms":150,"rank":"floor-1","via":"cli","who":"Lenajava1"}
+{"at":"2026-09-28T16:46:58.105Z","kind":"flush","entries":0,"lines":2,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
