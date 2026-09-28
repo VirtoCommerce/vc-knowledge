@@ -1,0 +1,2 @@
+{"at":"2026-09-28T08:30:19.816Z","kind":"ask","q":"what does the Active column on /company/members reflect","matched":["KB-27B4CD10"],"scores":[14],"matchedBy":["both"],"trustShown":["DISPUTED"],"opened":["KB-27B4CD10"],"state":"answer","ms":795,"rank":"floor-1","via":"mcp","call":"toolu_01PbESAvNw9Vc7S7b5NmRxkb","topic":"kb connectivity check","agent":"main"}
+{"at":"2026-09-28T08:35:28.771Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Aleksandra-Mitricheva"}
