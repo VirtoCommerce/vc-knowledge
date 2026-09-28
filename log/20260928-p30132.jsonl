@@ -1,0 +1,2 @@
+{"at":"2026-09-28T12:31:22.047Z","kind":"ask","q":"barcode scanner button search bar full-text vs exact match GTIN MPN store settings","matched":[],"state":"miss","nearMiss":{"id":"KB-2D446A42","score":2,"coverage":0.14},"ms":103,"rank":"floor-1","via":"mcp","call":"toolu_01NKjKupgK8DFudPqyUSzBR8","topic":"barcode scanner search VCST-2945","deployment":"vcst_qa","who":"Lenajava1","agent":"ba-system-analyzer"}
+{"at":"2026-09-28T12:36:37.263Z","kind":"flush","entries":0,"lines":2,"swept":["p34740.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
