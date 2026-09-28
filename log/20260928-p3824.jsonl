@@ -1,0 +1,1 @@
+{"at":"2026-09-28T12:57:53.036Z","kind":"ask","q":"POST /api/stores create store required fields catalog","matched":["KB-2CBB229F","KB-2D446A42"],"scores":[14,5],"matchedBy":["both","words"],"trustShown":["single observation","single observation"],"opened":["KB-2CBB229F","KB-2D446A42"],"state":"answer","ms":387,"rank":"floor-1","via":"cli","who":"Lenajava1"}
