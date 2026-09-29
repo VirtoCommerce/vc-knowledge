@@ -1,1 +1,2 @@
 {"at":"2026-09-29T10:56:22.835Z","kind":"flush","entries":0,"lines":1,"swept":["p37072.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Aleksandra-Mitricheva"}
+{"at":"2026-09-29T10:56:22.818Z","kind":"ask","q":"vcptcore-qa changeWishlist Customer scope addSharedWithIds sharing multiple organizations shared-list access","matched":[],"state":"miss","nearMiss":{"id":"KB-0E177E02","score":5,"coverage":0.42},"ms":1112,"rank":"floor-1","via":"cli","who":"Aleksandra-Mitricheva"}
