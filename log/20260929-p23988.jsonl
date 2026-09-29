@@ -1,0 +1,1 @@
+{"at":"2026-09-29T09:23:11.619Z","kind":"ask","q":"POST connect/token user_is_temporary_locked_out storefront sign-in message","matched":["KB-0407F36E","KB-8646A9CB"],"scores":[6,5],"matchedBy":["words","words"],"trustShown":["single observation","single observation"],"opened":["KB-0407F36E","KB-8646A9CB"],"state":"answer","ms":348,"rank":"floor-1","via":"cli","who":"Lenajava1"}
