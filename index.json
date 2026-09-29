@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T08:15:46.666Z",
-  "count": 243,
+  "generated": "2026-09-29T09:51:00.860Z",
+  "count": 244,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -779,6 +779,24 @@
       ],
       "scope": [
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2F64A447",
+      "path": "entries/KB-2F64A447.md",
+      "subject": "Target-org member reads a Customer share only through sharedWishlist(sharingKey)",
+      "question": "Which read paths return a Customer-scope wishlist to a member of the target organization?",
+      "anchors": [
+        "Query.sharedWishlist",
+        "Query.wishlist",
+        "Query.wishlists"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
