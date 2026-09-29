@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T10:48:17.752Z",
-  "count": 252,
+  "generated": "2026-09-29T10:54:29.776Z",
+  "count": 253,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1160,6 +1160,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4895528A",
+      "path": "entries/KB-4895528A.md",
+      "subject": "sharedWishlist on a list that is now Private returns data null with no error",
+      "question": "what does sharedWishlist(sharingKey) return after the list is set back to Private",
+      "anchors": [
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
