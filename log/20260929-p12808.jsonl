@@ -1,0 +1,1 @@
+{"at":"2026-09-29T11:45:01.886Z","kind":"capture-invalid","subject":"UCP REST GET /ucp/v1/carts/{cartId} cannot read an anonymous cart","why":"unusable anchor(s)","problems":["local-path","unstructured"],"via":"cli","topic":"UCP inventory refusal","run":"VCST-6054","who":"Lenajava1"}

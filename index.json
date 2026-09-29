@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T12:10:13.358Z",
-  "count": 264,
+  "generated": "2026-09-29T12:18:09.246Z",
+  "count": 266,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1244,7 +1244,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4085,6 +4085,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-DAD0D552",
+      "path": "entries/KB-DAD0D552.md",
+      "subject": "UCP refuses over-stock cart and checkout calls with isError, a stable inventory code and structured quantities",
+      "question": "What does UCP /ucp/mcp create_cart, update_cart or create_checkout return when the requested quantity exceeds available stock?",
+      "anchors": [
+        "/ucp/mcp",
+        "POST /ucp/v1/carts",
+        "PUT /ucp/v1/carts/{cartId}",
+        "POST /ucp/v1/checkouts",
+        "POST /ucp/v1/checkouts/{checkoutId}/handoff",
+        "POST /ucp/v1/internal/handoff/restore"
+      ],
+      "scope": [
+        "surface=ucp-mcp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DB7B6317",
       "path": "entries/KB-DB7B6317.md",
       "subject": "the Admin order Status dropdown settables differ from the statuses orders display",
@@ -4292,6 +4313,23 @@
       ],
       "scope": [
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E9939511",
+      "path": "entries/KB-E9939511.md",
+      "subject": "UCP REST GET /ucp/v1/carts/{cartId} cannot read an anonymous cart",
+      "question": "Can an anonymous caller read a cart through UCP REST GET /ucp/v1/carts/{cartId}?",
+      "anchors": [
+        "GET /ucp/v1/carts/{cartId}",
+        "/ucp/mcp"
+      ],
+      "scope": [
+        "surface=ucp-rest"
       ],
       "plane": "experiential",
       "status": "active",

@@ -1,0 +1,1 @@
+{"at":"2026-09-29T11:45:18.633Z","kind":"capture","id":"KB-E9939511","subject":"UCP REST GET /ucp/v1/carts/{cartId} cannot read an anonymous cart","question":"Can an anonymous caller read a cart through UCP REST GET /ucp/v1/carts/{cartId}?","related":["KB-D1DF95A5"],"read":[],"via":"cli","topic":"UCP inventory refusal","run":"VCST-6054","who":"Lenajava1"}

@@ -1,1 +1,2 @@
 {"at":"2026-09-29T09:50:59.116Z","kind":"confirm","id":"KB-7A9D4927","deployment":"vcst","trust":2,"via":"cli","topic":"sales rep shared wishlist message","run":"FAST-VCST-5728","who":"Lenajava1"}
+{"at":"2026-09-29T11:45:01.428Z","kind":"capture-invalid","subject":"UCP refuses over-stock cart and checkout calls with isError, a stable inventory code and structured quantities","why":"unusable anchor(s)","problems":["local-path","unstructured"],"via":"cli","topic":"UCP inventory refusal","run":"VCST-6054","who":"Lenajava1"}
