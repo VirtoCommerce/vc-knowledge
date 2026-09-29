@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T15:30:58.308Z",
-  "count": 281,
+  "generated": "2026-09-29T15:41:36.052Z",
+  "count": 282,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -197,6 +197,25 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-06FE6C8D",
+      "path": "entries/KB-06FE6C8D.md",
+      "subject": "POST /connect/token grant_type=otp_email accepts the SAME code twice, issuing a fresh valid access token both times — the OTP is not invalidated after a successful sign-in (matches ECL-4.3 \"same OTP reused multiple times\")",
+      "question": "Is an OTP email sign-in code single-use, or can the same code be replayed for a second sign-in",
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=backend-api",
+        "ticket=vcst-5748"
       ],
       "plane": "experiential",
       "status": "active",
