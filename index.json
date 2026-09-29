@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T12:46:59.343Z",
-  "count": 274,
+  "generated": "2026-09-29T13:42:17.647Z",
+  "count": 275,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -627,6 +627,22 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1EA7184C",
+      "path": "entries/KB-1EA7184C.md",
+      "subject": "xAPI full-text products(query) matches a product's GTIN as well as name words",
+      "question": "Does a full-text Query.products query phrase find a product by its GTIN?",
+      "anchors": [
+        "Query.products"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
