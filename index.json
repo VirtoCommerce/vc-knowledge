@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-28T23:30:59.978Z",
-  "count": 228,
+  "generated": "2026-09-29T06:28:17.030Z",
+  "count": 232,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -606,6 +606,22 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-21E70170",
+      "path": "entries/KB-21E70170.md",
+      "subject": "Return detail page CLS ~0.145 when the loaded content is taller than the viewport",
+      "question": "Does /account/returns/:id shift layout on load?",
+      "anchors": [
+        "/account/returns/{}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1476,7 +1492,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-5ADBFB34",
@@ -1575,7 +1591,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1593,6 +1609,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-66D78761",
+      "path": "entries/KB-66D78761.md",
+      "subject": "Admin Approve / decline commits in one click with no confirmation and emails the decision",
+      "question": "In the Admin SPA Return Line items blade, does Approve / decline ask for confirmation, and does each decision raise an email notification?",
+      "anchors": [
+        "/workspace/Return"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2434,6 +2466,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-97A675C1",
+      "path": "entries/KB-97A675C1.md",
+      "subject": "Approve / decline commits immediately without confirmation and emails the decision",
+      "question": "What happens when admin clicks Approve / decline on a Requested return's Line items blade?",
+      "anchors": [
+        "PUT /api/return"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 3,
+      "disputed": 0
+    },
+    {
       "id": "KB-98A231B6",
       "path": "entries/KB-98A231B6.md",
       "subject": "On a B2B store the PDP quantity stepper is the add-to-cart control, and its first increment sends updateCartQuantity — never addItem.",
@@ -2533,7 +2581,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3813,6 +3861,23 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ED76FF4B",
+      "path": "entries/KB-ED76FF4B.md",
+      "subject": "Storefront return detail shows only the line reasonComment, never reasonCode or the legacy free-text reason",
+      "question": "Does /account/returns/:id show the return reason of each line to the buyer?",
+      "anchors": [
+        "/account/returns/{}",
+        "Query.return"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",

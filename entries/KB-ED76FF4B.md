@@ -1,0 +1,20 @@
+---
+id: KB-ED76FF4B
+subject: Storefront return detail shows only the line reasonComment, never reasonCode or the legacy free-text reason
+plane: experiential
+question: Does /account/returns/:id show the return reason of each line to the buyer?
+status: active
+appliesTo:
+  - axis: surface
+    value: storefront-ui
+anchors:
+  - coordinate: /account/returns/{}
+  - coordinate: Query.return
+evidence:
+  - method: observation
+    deployment: vcptcore_qa1
+    at: 2026-09-29T05:46:55.668Z
+    by: session:p1804
+    who: kutasinaelena
+---
+On theme 2.59 (pr-2500) the buyer's return detail page renders, per line, the product name, SKU, reasonComment (if any), the per-line decline reason and attachments. It does not render reasonCode (a buyer line with reasonCode NoLongerNeeded and no comment shows no reason) and does not render the legacy free-text 'reason' that admin-created returns carry (an admin-created return with reason 'AGENT-TEST admin-created return' shows no reason). The xAPI ReturnLineItemType selected by GetReturn has reasonCode and reasonComment but no legacy reason field.

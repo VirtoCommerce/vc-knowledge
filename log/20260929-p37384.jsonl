@@ -1,0 +1,1 @@
+{"at":"2026-09-29T05:46:38.829Z","kind":"capture-invalid","subject":"Return detail page CLS ~0.145 when the loaded content is taller than the viewport","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"returns storefront re-triage","run":"VCST-5883","who":"kutasinaelena"}

@@ -1,0 +1,1 @@
+{"at":"2026-09-29T05:46:36.864Z","kind":"capture-invalid","subject":"Storefront return detail shows only the line reasonComment, never reasonCode or the legacy free-text reason","why":"unusable anchor(s)","problems":["local-path","unstructured"],"via":"cli","topic":"returns storefront re-triage","run":"VCST-5883","who":"kutasinaelena"}

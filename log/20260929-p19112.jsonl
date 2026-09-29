@@ -1,0 +1,1 @@
+{"at":"2026-09-29T05:46:58.302Z","kind":"capture","id":"KB-21E70170","subject":"Return detail page CLS ~0.145 when the loaded content is taller than the viewport","question":"Does /account/returns/:id shift layout on load?","related":["KB-5A6C014E","KB-B9D1132A","KB-50CD6A34"],"read":[],"via":"cli","topic":"returns storefront re-triage","run":"VCST-5883","who":"kutasinaelena"}
