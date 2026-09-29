@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T12:18:09.246Z",
-  "count": 266,
+  "generated": "2026-09-29T12:23:23.350Z",
+  "count": 268,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -256,7 +256,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -343,7 +343,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -731,7 +731,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -978,7 +978,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-358A70CB",
@@ -1721,6 +1721,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-5EACBEDD",
+      "path": "entries/KB-5EACBEDD.md",
+      "subject": "Sales-rep list: Stop sharing keeps the link key; re-share does not restore recipients",
+      "question": "After a sales rep stops sharing a list (scope Private) and shares it again, is the link the same and are old recipients restored?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Query.sharedWishlist",
+        "/account/lists"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
       "id": "KB-5F7C8FC4",
       "path": "entries/KB-5F7C8FC4.md",
       "subject": "an empty Tax providers widget is not evidence that a store has no tax provider",
@@ -2349,7 +2367,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -2405,7 +2423,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-7CC25D4A",
@@ -3145,7 +3163,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-AA610EE3",
@@ -4522,6 +4540,24 @@
       ],
       "scope": [
         "principal=customer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EFD1A7FD",
+      "path": "entries/KB-EFD1A7FD.md",
+      "subject": "Sales-rep list share: notify only newly-added orgs, message-only edit sends nothing",
+      "question": "Which organizations does the storefront notify when a sales rep saves a Customer-scope list share (Mutation.changeWishlist addSharedWithIds) and what does the push contain?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Mutation.sendCustomerCommunication",
+        "/account/lists"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
