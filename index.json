@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T11:56:03.157Z",
-  "count": 260,
+  "generated": "2026-09-29T12:03:58.569Z",
+  "count": 261,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -732,6 +732,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-25388E6C",
+      "path": "entries/KB-25388E6C.md",
+      "subject": "UCP search_products reports indexed availability.available_quantity, and a new product indexed by documentIds appears within about 20 s",
+      "question": "Does the UCP MCP search_products tool return a product's available stock, and how soon after creating a product is it searchable?",
+      "anchors": [
+        "POST /ucp/mcp",
+        "POST /api/search/indexes/index",
+        "PUT /api/inventory/plenty"
+      ],
+      "scope": [
+        "surface=ucp-mcp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
