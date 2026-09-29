@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T11:30:42.136Z",
-  "count": 258,
+  "generated": "2026-09-29T11:50:28.439Z",
+  "count": 260,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -660,6 +660,23 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-21BA7389",
+      "path": "entries/KB-21BA7389.md",
+      "subject": "pushMessages query shape for reading a customer's push inbox",
+      "question": "How does a storefront customer read their push notifications via Query.pushMessages?",
+      "anchors": [
+        "Query.pushMessages",
+        "PushMessageType.shortMessage"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2202,6 +2219,24 @@
         "environment=sandbox",
         "payment-method=cybersource",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-789D47BE",
+      "path": "entries/KB-789D47BE.md",
+      "subject": "salesRepCustomer returns null, not an error, for an unserved or nonexistent organization id",
+      "question": "What does Query.salesRepCustomer return to a sales rep on /graphql/sales-rep for an organization the rep does not serve?",
+      "anchors": [
+        "Query.salesRepCustomer",
+        "Query.salesRepCustomers",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",

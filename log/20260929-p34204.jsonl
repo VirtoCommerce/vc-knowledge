@@ -1,0 +1,1 @@
+{"at":"2026-09-29T11:18:31.099Z","kind":"capture-invalid","subject":"salesRepCustomer returns null, not an error, for an unserved or nonexistent organization id","why":"unusable anchor(s)","problems":["unstructured","local-path"],"via":"cli","topic":"sales rep list sharing test data","who":"Aleksandra-Mitricheva"}
