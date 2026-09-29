@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T12:03:58.569Z",
-  "count": 261,
+  "generated": "2026-09-29T12:10:13.358Z",
+  "count": 264,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -888,7 +888,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -3275,6 +3275,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-B4377884",
+      "path": "entries/KB-B4377884.md",
+      "subject": "changeWishlist sharing deltas without scope are silently ignored; sharing refusals carry a generic message",
+      "question": "What does Mutation.changeWishlist do with addSharedWithIds/removeSharedWithIds when scope is omitted, and what error text do sharing refusals return?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "InputChangeWishlistType.addSharedWithIds"
+      ],
+      "scope": [
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B5B57F41",
       "path": "entries/KB-B5B57F41.md",
       "subject": "sign-in pins the user to their persisted default organization without checking it is blocked",
@@ -3325,6 +3342,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B811FD82",
+      "path": "entries/KB-B811FD82.md",
+      "subject": "Refused changeWishlist can leave a poisoned cached list that the next rename persists",
+      "question": "After Mutation.changeWishlist is refused with INVALID_OPERATION, what does the owner read, and what does the next save write?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Query.wishlist"
+      ],
+      "scope": [
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3741,6 +3775,23 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CD99436F",
+      "path": "entries/KB-CD99436F.md",
+      "subject": "Refused addWishlistItem still persists the quantity change",
+      "question": "Does Mutation.addWishlistItem on another user's list write anything when it returns Access denied?",
+      "anchors": [
+        "Mutation.addWishlistItem",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "surface=graphql-xapi"
       ],
       "plane": "experiential",
       "status": "active",

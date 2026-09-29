@@ -1,0 +1,1 @@
+{"at":"2026-09-29T11:39:55.292Z","kind":"capture","id":"KB-CD99436F","subject":"Refused addWishlistItem still persists the quantity change","question":"Does Mutation.addWishlistItem on another user's list write anything when it returns Access denied?","related":[],"read":[],"via":"cli","topic":"list sharing contract","who":"Aleksandra-Mitricheva"}

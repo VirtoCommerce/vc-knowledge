@@ -1,0 +1,1 @@
+{"at":"2026-09-29T11:39:28.761Z","kind":"capture-invalid","subject":"changeWishlist sharing deltas without scope are silently ignored; empty-set refusals carry a generic message","why":"unusable anchor(s)","problems":["unstructured"],"via":"cli","topic":"list sharing contract","who":"Aleksandra-Mitricheva"}
