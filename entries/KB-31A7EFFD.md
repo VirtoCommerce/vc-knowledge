@@ -16,5 +16,11 @@ evidence:
     at: 2026-09-25T11:14:23.127Z
     by: session:memimpor
     who: Lenajava1
+  - method: observation
+    deployment: vcst
+    at: 2026-09-29T09:39:02.967Z
+    by: session:p54868
+    who: Lenajava1
+    note: "Theme 2.59: the list card menu entry is labelled Edit and opens the editable dialog titled List settings; the share Link with copy icon appears there once Sharing options = Customer."
 ---
 On /account/lists the Create list button disables once the signed-in user owns as many lists as the store's per-user lists limit allows - an account already at the limit sees a permanently disabled button, BY DESIGN. The list Settings dialog is one shared component: opened from the list card's menu it is editable, opened from the button on the list detail page it is view-only with its fields disabled. There is no Share button on the list card or detail page; the share URL with its copy icon lives only inside the Settings dialog, shown when the list's sharing scope supports a link and the user is a corporate member.

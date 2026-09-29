@@ -1,0 +1,1 @@
+{"at":"2026-09-29T09:40:00.457Z","kind":"capture-invalid","subject":"Customer-scope wishlist share grants the target organization's member no read access","why":"capture needs at least one --scope axis=value (without scope, a storefront fact gets applied to admin)","via":"cli","run":"FAST-VCST-5728","who":"Lenajava1"}

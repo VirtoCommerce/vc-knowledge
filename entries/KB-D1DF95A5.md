@@ -1,0 +1,22 @@
+---
+id: KB-D1DF95A5
+subject: How a member of a target organization can read a Customer-scope shared wishlist
+plane: experiential
+question: "sharedWishlist vs wishlist(listId) vs wishlists for a Customer-scope list: what does a target-org member, a non-target member and an anonymous caller get?"
+status: active
+appliesTo:
+  - axis: surface
+    value: graphql
+anchors:
+  - coordinate: Query.sharedWishlist
+  - coordinate: Query.wishlist
+  - coordinate: Query.wishlists
+  - coordinate: /shared-list/:sharingKey
+evidence:
+  - method: observation
+    deployment: vcst
+    at: 2026-09-29T09:40:11.914Z
+    by: session:p27968
+    who: Lenajava1
+---
+For a list a sales rep shared with scope Customer: a member of a TARGET organization gets the list through sharedWishlist(sharingKey) with sharingSetting.access Read, isOwner false, targets [] and sharedWithId null (owner-only fields stay empty), but wishlist(listId) for the same list returns data null with the error 'Access denied.', and the member's wishlists query does not include the list at all (totalCount 0), so the storefront Lists page shows 'You have not created any lists yet'. The only way the recipient reaches the list is the /shared-list/<sharingKey> link. A member of a served but NOT targeted organization gets 'Access denied.' with extensions.code Forbidden from sharedWishlist; an anonymous caller gets Unauthorized. Observed on XCart 3.1037.0-pr-141, SalesRep 3.1012.0-pr-21, Cart 3.1011.0-pr-194.

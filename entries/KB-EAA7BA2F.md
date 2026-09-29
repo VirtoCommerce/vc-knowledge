@@ -21,6 +21,18 @@ evidence:
     by: session:memimpor
     who: Lenajava1
     note: The owner's own lists are keyed by store and user with no organization argument, so switching the active organization does not change the owner's list set; only lists shared with Organization scope are org-bounded for other members.
+  - method: observation
+    deployment: vcst
+    at: 2026-09-29T09:51:56.899Z
+    by: session:p62432
+    who: Lenajava1
+    note: wishlists(storeId,userId) without scope, as a member of the target org of a Customer-scope share, does not include that list (totalCount 0).
+  - method: observation
+    deployment: vcst
+    at: 2026-09-29T09:39:03.515Z
+    by: session:p24664
+    who: Lenajava1
+    note: A member of the target organization of a Customer-scope list has an empty /account/lists; the list is reachable only through /shared-list/<key>.
 ---
 
 Not by that page. The storefront's Lists screen issues GetWishlists, and that document passes storeId, userId, currencyCode, cultureName, first, after and sort - it does NOT pass the scope argument the schema offers on Query.wishlists, and userId is always the signed-in user. So the roster is defined as lists you own, and an organization-scoped list belonging to someone else cannot reach it by any path, however the platform resolves organization visibility. The only storefront route that reaches a list you do not own is /shared-list/<sharingKey>, which needs the link. Read this as a surface gap rather than a permission answer: the schema exposes a scope filter that the shipped UI never exercises, so what Query.wishlists does with scope is untested from the storefront and must be settled with a direct call.

@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T09:51:00.860Z",
-  "count": 244,
+  "generated": "2026-09-29T10:14:55.654Z",
+  "count": 249,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -309,6 +309,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0E177E02",
+      "path": "entries/KB-0E177E02.md",
+      "subject": "customer opens a rep Customer-scope list via its share link with Read access",
+      "question": "Can a member of the target organization open a sales rep's Customer-scope list at /shared-list/<key>, and is the rep's message shown?",
+      "anchors": [
+        "/shared-list/{}",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -665,6 +682,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-24B83B02",
+      "path": "entries/KB-24B83B02.md",
+      "subject": "The shared-list page does not show the sales rep's share message",
+      "question": "Does the recipient see the rep's share message on /shared-list/<key>, or only in the push notification?",
+      "anchors": [
+        "/shared-list/:sharingKey",
+        "Query.sharedWishlist",
+        "/account/notifications"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-25829330",
       "path": "entries/KB-25829330.md",
       "subject": "Storefront barcode search: with no fields configured barcode:\"x\" stays a literal filter (0 hits); scannerEnabled=false hides the scanner button but /search?barcode= still resolves",
@@ -889,7 +924,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2200,6 +2235,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-7C8B8B8B",
+      "path": "entries/KB-7C8B8B8B.md",
+      "subject": "storefront 2.59 rep share dialog never writes the message to the list",
+      "question": "Does the storefront List settings dialog persist the Customer-share message on the wishlist, and is it shown on reopen?",
+      "anchors": [
+        "/account/lists",
+        "Mutation.changeWishlist",
+        "Mutation.sendCustomerCommunication",
+        "SharingSettingType.message"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7CC25D4A",
       "path": "entries/KB-7CC25D4A.md",
       "subject": "A Draft row in the storefront returns list opens the /edit wizard step, which has no cancel/discard control; Cancel return exists only on /account/returns/:id",
@@ -2392,7 +2446,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2879,6 +2933,24 @@
         "Organization.status",
         "Organization.myStatusInOrganization",
         "Organization.isLockedForCurrentUser"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AA3C8721",
+      "path": "entries/KB-AA3C8721.md",
+      "subject": "Customer-scope wishlist share grants the target organization's member no read access",
+      "question": "Can a member of the target organization read a wishlist a sales rep shared with scope Customer (wishlist(listId), wishlists)?",
+      "anchors": [
+        "Query.wishlist",
+        "Query.wishlists",
+        "Mutation.changeWishlist"
       ],
       "scope": [
         "surface=xapi"
@@ -3558,6 +3630,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-D1DF95A5",
+      "path": "entries/KB-D1DF95A5.md",
+      "subject": "How a member of a target organization can read a Customer-scope shared wishlist",
+      "question": "sharedWishlist vs wishlist(listId) vs wishlists for a Customer-scope list: what does a target-org member, a non-target member and an anonymous caller get?",
+      "anchors": [
+        "Query.sharedWishlist",
+        "Query.wishlist",
+        "Query.wishlists",
+        "/shared-list/:sharingKey"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D24EDC70",
       "path": "entries/KB-D24EDC70.md",
       "subject": "what refuses a never-registered account at sign-in was not established, and here is where the looking stopped",
@@ -3876,7 +3967,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-E7790BF6",
@@ -3985,7 +4076,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 4,
       "disputed": 0
     },
     {
