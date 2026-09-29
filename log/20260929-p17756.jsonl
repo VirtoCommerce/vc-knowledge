@@ -1,0 +1,1 @@
+{"at":"2026-09-29T15:55:34.427Z","kind":"ask","q":"POST /api/otp/request outcome CodeSent lockout","matched":["KB-06FE6C8D"],"scores":[12],"matchedBy":["both"],"trustShown":["single observation"],"opened":["KB-06FE6C8D"],"state":"answer","ms":844,"rank":"floor-1","via":"cli","who":"kutasinaelena"}
