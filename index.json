@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T12:23:23.350Z",
-  "count": 268,
+  "generated": "2026-09-29T12:26:48.359Z",
+  "count": 270,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -343,7 +343,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -1688,6 +1688,25 @@
       "disputed": 1
     },
     {
+      "id": "KB-5AB85ADC",
+      "path": "entries/KB-5AB85ADC.md",
+      "subject": "Sales-rep list share notification carries no organization name; a typed rep message replaces the default body",
+      "question": "what does the notification sent when a sales rep shares a list with a customer organization contain",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "Mutation.changeWishlist",
+        "/account/lists"
+      ],
+      "scope": [
+        "feature=sales-rep-list-sharing",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5ADBFB34",
       "path": "entries/KB-5ADBFB34.md",
       "subject": "only the largest cart-subtotal promotion applies, whatever isExclusive says",
@@ -1701,6 +1720,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5CEB51A1",
+      "path": "entries/KB-5CEB51A1.md",
+      "subject": "Share dialog: Undo after Clear all restores recipients but Share stays disabled when nothing changed",
+      "question": "is the Share button enabled after Clear all then Undo on an already-shared list",
+      "anchors": [
+        "/account/lists",
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "feature=sales-rep-list-sharing",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1886,7 +1923,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-67D0AB31",
@@ -2367,7 +2404,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -2423,7 +2460,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-7CC25D4A",
@@ -3163,7 +3200,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 2
+      "disputed": 3
     },
     {
       "id": "KB-AA610EE3",
@@ -3548,7 +3585,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4386,7 +4423,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {

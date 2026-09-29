@@ -15,5 +15,11 @@ evidence:
     at: 2026-09-29T10:54:38.407Z
     by: session:p25420
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_qa
+    at: 2026-09-29T12:22:06.201Z
+    by: session:p20808
+    who: Aleksandra-Mitricheva
+    note: Rename save sends ChangeWishlist with listId/listName/description only; sharing (scope, targets, message, key) survives the rename.
 ---
 On vc-frontend#2476 (theme 2.59.0-pr-2476-0604) the list card Actions menu is Rename / Share / Remove list and the list page offers Rename and Share. Rename edits only name and description; sharing (scope, customers, message) lives only in the Share dialog. The earlier view-only settings dialog is gone.
