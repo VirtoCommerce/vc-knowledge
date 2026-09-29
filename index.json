@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T07:34:05.742Z",
-  "count": 241,
+  "generated": "2026-09-29T08:15:46.666Z",
+  "count": 243,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -106,6 +106,25 @@
       ],
       "scope": [
         "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-048CB22A",
+      "path": "entries/KB-048CB22A.md",
+      "subject": "On storefront mobile/tablet header the notifications badge wraps a two-digit unread count onto two lines over the bell, and the bell button's accessible name is only the count",
+      "question": "how does the storefront mobile header render the notifications unread count",
+      "anchors": [
+        "/account/notifications",
+        "/account/returns"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=2.59",
+        "viewport=mobile"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1626,7 +1645,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2156,6 +2175,25 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7CC25D4A",
+      "path": "entries/KB-7CC25D4A.md",
+      "subject": "A Draft row in the storefront returns list opens the /edit wizard step, which has no cancel/discard control; Cancel return exists only on /account/returns/:id",
+      "question": "how does a buyer discard a draft return on the storefront",
+      "anchors": [
+        "/account/returns",
+        "/account/returns/{}/edit",
+        "/account/returns/{}"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=2.59"
       ],
       "plane": "experiential",
       "status": "active",
