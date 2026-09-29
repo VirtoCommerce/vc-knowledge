@@ -1,1 +1,2 @@
 {"at":"2026-09-29T09:39:17.252Z","kind":"capture-invalid","subject":"storefront 2.59 rep share dialog never writes the message to the list","why":"unusable anchor(s)","problems":["unstructured"],"via":"cli","topic":"rep list share message","run":"FAST-VCST-5728-2026-09-29","who":"Lenajava1"}
+{"at":"2026-09-29T13:21:21.911Z","kind":"session","session":"p39656","tools":29,"turns":1,"touchAt":[],"agents":1,"agentTools":1,"agentTouches":0,"firstAt":"2026-09-29T11:54:17.618Z","lastAt":"2026-09-29T12:03:58.497Z","who":"Lenajava1"}
