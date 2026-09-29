@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T14:16:10.253Z",
-  "count": 276,
+  "generated": "2026-09-29T15:02:50.870Z",
+  "count": 278,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -696,7 +696,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2030,6 +2030,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6AF43C39",
+      "path": "entries/KB-6AF43C39.md",
+      "subject": "Sent push with memberIds reaches the recipient's xAPI inbox within seconds; xAPI item id equals the push message id",
+      "question": "How long after POST /api/push-message {status: Sent, memberIds} does the message appear in the recipient's pushMessages, and which id does the inbox row carry?",
+      "anchors": [
+        "POST /api/push-message",
+        "Query.pushMessages",
+        "Mutation.markPushMessageRead"
+      ],
+      "scope": [
+        "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3863,6 +3881,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CB05268E",
+      "path": "entries/KB-CB05268E.md",
+      "subject": "A tracked Sent push (Track new recipients + free-text memberQuery) reaches a member within seconds of the member's creation",
+      "question": "Does a newly created storefront account start with an empty push-message inbox, and what does Track new recipients do on member creation?",
+      "anchors": [
+        "POST /api/push-message",
+        "POST /api/push-message/search",
+        "Query.pushMessages"
+      ],
+      "scope": [
+        "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
