@@ -1,0 +1,1 @@
+{"at":"2026-09-29T10:54:09.485Z","kind":"capture-invalid","subject":"a failed notification after a successful share save shows a warning and offers no resend","why":"unusable anchor(s)","problems":["local-path","unstructured"],"via":"cli","topic":"sales rep list sharing","run":"VCST-5728","who":"Lenajava1"}

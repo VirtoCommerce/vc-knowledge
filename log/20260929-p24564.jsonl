@@ -1,0 +1,1 @@
+{"at":"2026-09-29T10:54:28.446Z","kind":"capture","id":"KB-A871AA8D","subject":"changeWishlist legacy sharedWithId input becomes a one-element target set","question":"what does changeWishlist do with the old sharedWithId input on a Customer share","related":["KB-2F64A447","KB-0E177E02"],"read":[],"via":"cli","topic":"sales rep list sharing","run":"VCST-5728","who":"Lenajava1"}

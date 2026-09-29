@@ -1,0 +1,1 @@
+{"at":"2026-09-29T10:54:29.092Z","kind":"capture","id":"KB-5D5BE6B8","subject":"addSharedWithIds with an empty string is ignored without error","question":"what happens when changeWishlist gets addSharedWithIds with an empty id","related":["KB-EB70C1F9"],"read":[],"via":"cli","topic":"sales rep list sharing","run":"VCST-5728","who":"Lenajava1"}
