@@ -1,0 +1,1 @@
+{"at":"2026-09-28T23:07:59.130Z","kind":"ask","q":"returnableItems / return wizard: line already fully requested reduces returnable quantity to 0 and blocks re-selecting that line for a new return","matched":[],"state":"miss","nearMiss":{"id":"KB-5A6C014E","score":4,"coverage":0.29},"ms":1081,"rank":"floor-1","via":"cli","who":"kutasinaelena"}
