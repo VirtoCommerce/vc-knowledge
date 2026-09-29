@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T16:13:37.194Z",
-  "count": 283,
+  "generated": "2026-09-29T21:57:23.597Z",
+  "count": 284,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -379,7 +379,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -801,7 +801,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -1861,7 +1861,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2011,7 +2011,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 1
     },
     {
@@ -3760,7 +3760,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -4633,7 +4633,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -4866,6 +4866,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F2FA8EBD",
+      "path": "entries/KB-F2FA8EBD.md",
+      "subject": "share-list confirmation copy and revoked-link states",
+      "question": "Which confirmation does the storefront Share dialog show per scope transition, and what does a revoked recipient see on /shared-list/{key}?",
+      "anchors": [
+        "/account/lists",
+        "/shared-list/{key}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

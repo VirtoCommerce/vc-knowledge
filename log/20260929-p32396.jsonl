@@ -1,0 +1,1 @@
+{"at":"2026-09-29T12:21:32.205Z","kind":"capture-invalid","subject":"reworked Share dialog persists the share message and shows it on reopen","why":"unusable anchor(s)","problems":["unstructured"],"via":"cli","topic":"list sharing regression","who":"Aleksandra-Mitricheva"}
