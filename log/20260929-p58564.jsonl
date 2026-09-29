@@ -1,0 +1,4 @@
+{"at":"2026-09-29T10:43:09.946Z","kind":"show","id":"KB-7A9D4927","state":"answer","via":"mcp","call":"toolu_01EnBC7rq1ttpx4cULjvDEbT","topic":"sales rep list share message","who":"Lenajava1","agent":"qa-testing-expert"}
+{"at":"2026-09-29T10:43:17.151Z","kind":"confirm","id":"KB-7A9D4927","deployment":"vcst","trust":3,"via":"mcp","call":"toolu_01MTYvHdPTRBQEFMAuPqH4KG","topic":"sales rep list share message","who":"Lenajava1","agent":"qa-testing-expert"}
+{"at":"2026-09-29T10:43:17.177Z","kind":"confirm","id":"KB-24B83B02","deployment":"vcst","trust":2,"via":"mcp","call":"toolu_01JZQAAxx5J9pzXFhuPnHbFz","topic":"sales rep list share message","who":"Lenajava1","agent":"qa-testing-expert"}
+{"at":"2026-09-29T10:48:17.752Z","kind":"flush","entries":0,"lines":3,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
