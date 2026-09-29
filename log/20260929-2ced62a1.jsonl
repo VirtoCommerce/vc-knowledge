@@ -3,3 +3,5 @@
 {"at":"2026-09-29T06:54:07.144Z","kind":"session","session":"2ced62a1","tools":11,"turns":2,"touchAt":[5,6],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-09-28T09:47:12.272Z","lastAt":"2026-09-29T06:18:32.047Z","who":"Dan-BV"}
 {"at":"2026-09-29T06:54:07.138Z","kind":"session","session":"2ced62a1","tools":11,"turns":2,"touchAt":[5,6],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-09-28T09:47:12.272Z","lastAt":"2026-09-29T06:18:32.047Z","who":"Dan-BV"}
 {"at":"2026-09-29T07:11:36.997Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
+{"at":"2026-09-29T07:12:11.806Z","kind":"restart","why":"state-dropped","who":"Dan-BV"}
+{"at":"2026-09-29T07:12:11.917Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
