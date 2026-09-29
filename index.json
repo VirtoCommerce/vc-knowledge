@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T13:42:17.647Z",
-  "count": 275,
+  "generated": "2026-09-29T13:52:20.427Z",
+  "count": 276,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2366,6 +2366,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-79DB4E17",
+      "path": "entries/KB-79DB4E17.md",
+      "subject": "Admin SPA setError builds the error text from any error body shape",
+      "question": "What does the Admin SPA bladeNavigationService.setError show for each shape of HTTP error response body?",
+      "anchors": [
+        "bladeNavigationService.setError",
+        "POST /api/loyalty-missions"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7A12CF52",
       "path": "entries/KB-7A12CF52.md",
       "subject": "what a wishlist sharing key grants a signed-out holder",
@@ -4439,7 +4456,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-E8A134DF",
