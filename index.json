@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T15:25:53.722Z",
-  "count": 279,
+  "generated": "2026-09-29T15:30:58.308Z",
+  "count": 281,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -197,6 +197,23 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-09CEE315",
+      "path": "entries/KB-09CEE315.md",
+      "subject": "Sales rep customer orders date filter builds a createddate range in the browser's local day bounds",
+      "question": "What filter does the sales rep customer orders page send when a custom Start/End date is applied?",
+      "anchors": [
+        "/company/my-customers",
+        "Query.salesRepCustomerOrders"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4895,6 +4912,23 @@
       ],
       "scope": [
         "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F9D75EA0",
+      "path": "entries/KB-F9D75EA0.md",
+      "subject": "VcDateRangePicker footer Clear scope differs between split and combined layouts",
+      "question": "In the storefront date range picker, does the calendar footer Clear empty both dates or only one?",
+      "anchors": [
+        "/company/my-customers",
+        "/account/orders"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
