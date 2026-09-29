@@ -1,0 +1,1 @@
+{"at":"2026-09-29T11:30:49.083Z","kind":"ask","q":"UCP /ucp/mcp create_cart over-stock quantity insufficient_stock refusal isError","matched":["KB-7BBFAE10"],"scores":[12],"matchedBy":["both"],"trustShown":["single observation"],"opened":["KB-7BBFAE10"],"state":"answer","ms":313,"rank":"floor-1","via":"cli","who":"Lenajava1"}

@@ -1,0 +1,1 @@
+{"at":"2026-09-29T11:28:32.503Z","kind":"ask","q":"UCP MCP create_cart over-stock quantity isError insufficient_stock inventory error","matched":[],"state":"miss","nearMiss":{"id":"KB-4B47D094","score":2,"coverage":0.18},"ms":511,"rank":"floor-1","via":"cli","who":"Lenajava1"}

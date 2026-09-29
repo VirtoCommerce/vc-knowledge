@@ -1,0 +1,1 @@
+{"at":"2026-09-29T11:29:29.743Z","kind":"ask","q":"PUT /api/inventory/plenty inventory status Enabled addItem","matched":["KB-48A46F77"],"scores":[14],"matchedBy":["both"],"trustShown":["single observation"],"opened":["KB-48A46F77"],"state":"answer","ms":331,"rank":"floor-1","via":"cli","who":"Lenajava1"}
