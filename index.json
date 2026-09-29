@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T15:02:50.870Z",
-  "count": 278,
+  "generated": "2026-09-29T15:25:53.722Z",
+  "count": 279,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -627,6 +627,24 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1E9580BB",
+      "path": "entries/KB-1E9580BB.md",
+      "subject": "A push message POSTed as Sent with an empty memberIds list is accepted and stays Sent with zero recipients",
+      "question": "What happens when POST /api/push-message is sent with status Sent and no recipients?",
+      "anchors": [
+        "POST /api/push-message",
+        "POST /api/push-message/search-recipients"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3898,7 +3916,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
