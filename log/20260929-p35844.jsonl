@@ -1,0 +1,1 @@
+{"at":"2026-09-29T09:50:59.679Z","kind":"capture","id":"KB-614BDEDE","subject":"changeWishlist silently ignores message when scope is omitted","question":"Does changeWishlist save a new sharing message if the command carries message but no scope?","related":[],"read":[],"via":"cli","topic":"sales rep shared wishlist message","run":"FAST-VCST-5728","who":"Lenajava1"}

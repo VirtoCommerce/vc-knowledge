@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T10:14:55.654Z",
-  "count": 249,
+  "generated": "2026-09-29T10:28:53.404Z",
+  "count": 252,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -73,7 +73,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -235,6 +235,24 @@
       ],
       "scope": [
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0BC18481",
+      "path": "entries/KB-0BC18481.md",
+      "subject": "Wishlist sharing message normalisation, 1024 limit and opaque over-limit error",
+      "question": "How does changeWishlist/createWishlist store the Customer-scope sharing message: blanks, whitespace, length limit, error?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Mutation.createWishlist",
+        "SharingSettingType.message"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -835,7 +853,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1668,6 +1686,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-614BDEDE",
+      "path": "entries/KB-614BDEDE.md",
+      "subject": "changeWishlist silently ignores message when scope is omitted",
+      "question": "Does changeWishlist save a new sharing message if the command carries message but no scope?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "SharingSettingType.message"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-62EE7AF3",
       "path": "entries/KB-62EE7AF3.md",
       "subject": "some platform routes are hidden from the API document this base projects from",
@@ -2195,7 +2230,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2915,6 +2950,23 @@
       "anchors": [
         "POST /graphql",
         "me.contact"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A98E467C",
+      "path": "entries/KB-A98E467C.md",
+      "subject": "sendCustomerCommunication caps the message at 1000 characters and pushes it verbatim",
+      "question": "What limit does sendCustomerCommunication put on the message, and what does the recipient's push contain?",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "Query.pushMessages"
       ],
       "scope": [
         "surface=xapi"
