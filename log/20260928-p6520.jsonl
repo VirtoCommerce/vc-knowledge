@@ -1,0 +1,1 @@
+{"at":"2026-09-28T18:21:57.972Z","kind":"capture-invalid","subject":"Storefront /search?barcode= with a repeated barcode param or an extra q: first barcode wins, q is ignored, barcode lookups never enter search history","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"barcode scanner search storefront","run":"FASTG-VCST-2945-2026-09-28","who":"Lenajava1"}

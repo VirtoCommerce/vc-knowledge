@@ -1,0 +1,1 @@
+{"at":"2026-09-28T18:22:34.109Z","kind":"capture-invalid","subject":"During /search?barcode=<v>&q=<term> the header search box shows the ignored term and hides the Barcode scan button","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"barcode scanner search exploratory","run":"FASTG-VCST-2945-2026-09-28","who":"Lenajava1"}

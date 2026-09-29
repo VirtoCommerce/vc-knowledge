@@ -1,0 +1,1 @@
+{"at":"2026-09-28T18:27:25.069Z","kind":"capture-invalid","subject":"Barcode scanner blade shows the scanner OFF with no match mode whenever GET .../fields fails, not only on 403","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"barcode scanner search setup","who":"Lenajava1"}

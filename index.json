@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T06:28:17.030Z",
-  "count": 232,
+  "generated": "2026-09-29T07:25:21.670Z",
+  "count": 239,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -305,7 +305,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -659,7 +659,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -729,7 +729,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -747,7 +747,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -948,6 +948,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-3BFF73A3",
+      "path": "entries/KB-3BFF73A3.md",
+      "subject": "xAPI products filter: sku: is accepted as an alias of code, but mpn: is not an alias of manufacturerPartNumber and matches nothing",
+      "question": "Which field names does Query.products filter accept for a product's SKU and manufacturer part number?",
+      "anchors": [
+        "Query.products"
+      ],
+      "scope": [
+        "element=products-filter-field-names",
+        "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3F7C78F6",
       "path": "entries/KB-3F7C78F6.md",
       "subject": "wishlists have no REST and no Admin surface",
@@ -1013,7 +1030,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1308,6 +1325,24 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4F298EB0",
+      "path": "entries/KB-4F298EB0.md",
+      "subject": "A barcode lookup applies the active currency's price filter: in a currency the product has no price in, a known code shows 'No products found for barcode'",
+      "question": "Does /search?barcode= find a product that has no price in the currency the shopper selected?",
+      "anchors": [
+        "/search",
+        "Query.products"
+      ],
+      "scope": [
+        "element=barcode-currency-price-filter",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1666,6 +1701,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-68F7432D",
+      "path": "entries/KB-68F7432D.md",
+      "subject": "During /search?barcode=<v>&q=<term> the header search box shows the ignored term and hides the Barcode scan button",
+      "question": "What does the header search bar show while a barcode lookup URL also carries a q keyword?",
+      "anchors": [
+        "/search"
+      ],
+      "scope": [
+        "element=header-search-bar",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6A20B0AF",
       "path": "entries/KB-6A20B0AF.md",
       "subject": "omitting an optional xAPI context argument returns 200 with wrong or empty data, never an error",
@@ -1809,6 +1861,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-6F0094B3",
+      "path": "entries/KB-6F0094B3.md",
+      "subject": "Barcode lookups on /search?barcode= send view_search_results with the code as search_term; a single hit that opens the product sends none",
+      "question": "Which Google Analytics events does the storefront push for a /search?barcode= lookup compared with a /search?q= search?",
+      "anchors": [
+        "/search"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6FAB2EBA",
       "path": "entries/KB-6FAB2EBA.md",
       "subject": "addItem rejects a line quantity of one million or more through validationErrors, not errors",
@@ -1871,7 +1940,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -1929,6 +1998,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-7837F100",
+      "path": "entries/KB-7837F100.md",
+      "subject": "Barcode lookup hides unpriced products only because the storefront adds a price term; xAPI expansion itself does not",
+      "question": "Is a product without a price in the store currency found by Query.products barcode: filter?",
+      "anchors": [
+        "Query.products",
+        "/search?barcode="
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-78638393",
       "path": "entries/KB-78638393.md",
       "subject": "A CyberSource cart order whose authorizePayment is held for review by Decision Manager is created successfully but stays in status \"Payment required\".",
@@ -1962,7 +2048,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2233,7 +2319,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -2565,7 +2651,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-A0C1338B",
@@ -2654,7 +2740,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2740,6 +2826,22 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AA610EE3",
+      "path": "entries/KB-AA610EE3.md",
+      "subject": "Barcode scanner blade shows the scanner OFF with no match mode whenever GET .../fields fails, not only on 403",
+      "question": "What does the Admin SPA Barcode scanner blade show when api/catalog/barcode-search/store/{id}/fields fails?",
+      "anchors": [
+        "GET /api/catalog/barcode-search/store/{id}/fields"
+      ],
+      "scope": [
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2840,6 +2942,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-B41CE06E",
+      "path": "entries/KB-B41CE06E.md",
+      "subject": "Storefront /search?barcode= with a repeated barcode param or an extra q: first barcode wins, q is ignored, barcode lookups never enter search history",
+      "question": "What does /search?barcode= do when the URL repeats barcode, also carries q, and does a barcode lookup add to the search history dropdown?",
+      "anchors": [
+        "/search?barcode=&barcode=",
+        "/search?barcode=&q="
+      ],
+      "scope": [
+        "feature=search-history",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B5B57F41",
       "path": "entries/KB-B5B57F41.md",
       "subject": "sign-in pins the user to their persisted default organization without checking it is blocked",
@@ -2889,7 +3009,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3082,7 +3202,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -3116,7 +3236,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -3362,7 +3482,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-D1D30720",

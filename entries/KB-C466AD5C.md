@@ -22,5 +22,11 @@ evidence:
     by: session:p45780
     who: Lenajava1
     note: "Outsider opens blade: only GET .../fields sent (403), Error 403 banner, switch OFF with no mode although stored scannerEnabled=true; after Dismiss the scanner-OFF UI remains with no error text. Read-only role: stored state rendered, radios disabled, no Save, Reset disabled."
+  - method: observation
+    deployment: vcst
+    at: 2026-09-28T18:27:00.651Z
+    by: session:p55136
+    who: Lenajava1
+    note: "No-permission user: only GET .../fields sent (403), Error 403 banner, switch OFF with no mode although stored scannerEnabled=true. Read-only user: stored Full-text state shown, radios and switch disabled, no Save, Reset disabled."
 ---
 Admin SPA, Catalog 3.1046 (PR 909 build): the tile still opens; the blade calls only GET .../fields, gets 403, shows an 'Error 403' banner, and still renders the switch OFF with neither match mode selected, although the stored value is scannerEnabled=true. The settings GET is never issued. With Read but not Update the blade renders the stored state correctly: no Save, Reset disabled, rows and radios inert.
