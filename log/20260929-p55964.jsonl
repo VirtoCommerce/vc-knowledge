@@ -1,0 +1,1 @@
+{"at":"2026-09-29T12:10:31.599Z","kind":"capture-invalid","subject":"UCP cart projection omits promotion gift lines that exist in the platform cart","why":"unusable anchor(s)","problems":["unstructured","local-path"],"via":"cli","topic":"UCP create_cart duplicate line consolidation","run":"VCST-6056","who":"Lenajava1"}

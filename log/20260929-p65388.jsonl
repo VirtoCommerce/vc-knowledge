@@ -1,0 +1,1 @@
+{"at":"2026-09-29T12:10:31.136Z","kind":"capture-invalid","subject":"UCP create_cart/update_cart reject duplicate quantities whose sum overflows int32 as invalid_request","why":"unusable anchor(s)","problems":["unstructured","local-path"],"via":"cli","topic":"UCP create_cart duplicate line consolidation","run":"VCST-6056","who":"Lenajava1"}

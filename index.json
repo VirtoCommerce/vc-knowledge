@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T12:26:48.359Z",
-  "count": 270,
+  "generated": "2026-09-29T12:46:59.343Z",
+  "count": 274,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -749,7 +749,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2261,6 +2261,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-75BD84BE",
+      "path": "entries/KB-75BD84BE.md",
+      "subject": "UCP cart projection omits promotion gift lines that exist in the platform cart",
+      "question": "UCP MCP get_cart: are promotion gift items (isGift) shown in line_items?",
+      "anchors": [
+        "POST /ucp/mcp",
+        "GET /api/carts/{id}"
+      ],
+      "scope": [
+        "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7837F100",
       "path": "entries/KB-7837F100.md",
       "subject": "Barcode lookup hides unpriced products only because the storefront adds a price term; xAPI expansion itself does not",
@@ -2733,6 +2750,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8F33647E",
+      "path": "entries/KB-8F33647E.md",
+      "subject": "UCP create_cart duplicate grouping is case-insensitive but keeps the first spelling; product id lookup is case-sensitive",
+      "question": "UCP MCP create_cart product_id letter case: are uppercase and lowercase GUIDs the same product?",
+      "anchors": [
+        "POST /ucp/mcp",
+        "POST /ucp/v1/carts"
+      ],
+      "scope": [
+        "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3305,6 +3339,23 @@
         "principal=org-member",
         "surface=admin-ui",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B142F52E",
+      "path": "entries/KB-B142F52E.md",
+      "subject": "Rejected UCP update_cart over stock leaves the over-stock quantity in the cart; checkout paths refuse it",
+      "question": "UCP MCP update_cart refused with insufficient_stock: does get_cart keep the requested quantity?",
+      "anchors": [
+        "POST /ucp/mcp",
+        "POST /ucp/v1/checkouts/{id}/handoff"
+      ],
+      "scope": [
+        "surface=api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4298,6 +4349,23 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-E4DE692A",
+      "path": "entries/KB-E4DE692A.md",
+      "subject": "UCP create_cart/update_cart reject duplicate quantities whose sum overflows int32 as invalid_request",
+      "question": "UCP MCP create_cart or update_cart duplicate line quantities summing above int32 max: what error?",
+      "anchors": [
+        "POST /ucp/v1/carts",
+        "PUT /ucp/v1/carts/{id}"
+      ],
+      "scope": [
+        "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-E7790BF6",
