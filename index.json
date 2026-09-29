@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T15:41:36.052Z",
-  "count": 282,
+  "generated": "2026-09-29T16:13:37.194Z",
+  "count": 283,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1049,6 +1049,25 @@
       "status": "active",
       "trust": 2,
       "disputed": 2
+    },
+    {
+      "id": "KB-348505EB",
+      "path": "entries/KB-348505EB.md",
+      "subject": "Barcode exact mode (x-catalog PR #113 build, ES8 provider) runs * and ? in the scanned value as wildcards; a truncated code plus * matches the full product",
+      "question": "In barcode exact-match mode, are * and ? in a scanned barcode value matched literally or as wildcards?",
+      "anchors": [
+        "Query.products",
+        "/search"
+      ],
+      "scope": [
+        "feature=barcode-exact-mode",
+        "search-provider=elasticsearch8",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-358A70CB",
@@ -2434,7 +2453,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
