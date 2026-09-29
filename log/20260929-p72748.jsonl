@@ -1,0 +1,1 @@
+{"at":"2026-09-29T13:52:41.039Z","kind":"ask","q":"PUT /api/inventory/plenty inStockQuantity update visible to cart availability lag","matched":["KB-48A46F77","KB-25388E6C"],"scores":[13,11],"matchedBy":["both","both"],"trustShown":["corroborated","corroborated"],"opened":["KB-48A46F77","KB-25388E6C"],"state":"answer","ms":330,"rank":"floor-1","via":"cli","who":"Lenajava1"}

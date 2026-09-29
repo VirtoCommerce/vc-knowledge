@@ -1,0 +1,3 @@
+{"at":"2026-09-29T14:27:56.075Z","kind":"restart","why":"state-absent","who":"Lenajava1"}
+{"at":"2026-09-29T14:27:56.179Z","kind":"session","session":"e9a0101e","tools":15,"turns":1,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-09-29T14:11:43.928Z","lastAt":"2026-09-29T14:27:56.075Z","who":"Lenajava1"}
+{"at":"2026-09-29T14:27:56.188Z","kind":"flush","entries":0,"lines":13,"swept":["p29968.jsonl","p39400.jsonl","p46044.jsonl","p48072.jsonl","p60304.jsonl","p72164.jsonl","p72748.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
