@@ -1,0 +1,3 @@
+{"at":"2026-09-29T14:08:40.077Z","kind":"restart","why":"state-absent","who":"Lenajava1"}
+{"at":"2026-09-29T14:16:10.253Z","kind":"capture-refused","dupeOf":"KB-79DB4E17","subject":"Admin SPA setError turns any error body into blade.errorBody without throwing (platform with PR 3125)","why":"anchors+scope","when":"push"}
+{"at":"2026-09-29T14:16:10.253Z","kind":"flush","entries":2,"lines":7,"swept":["p32524.jsonl","p64772.jsonl","p72176.jsonl","p72984.jsonl"],"retries":0,"ok":true,"convertedToConfirm":2,"who":"Lenajava1"}
