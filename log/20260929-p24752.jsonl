@@ -1,2 +1,3 @@
 {"at":"2026-09-29T10:13:18.596Z","kind":"ask","q":"sharedWishlist sharingKey: can the target customer read a rep-shared list and its message","matched":["KB-2F64A447"],"scores":[5],"matchedBy":["words"],"trustShown":["single observation"],"opened":["KB-2F64A447"],"state":"answer","ms":324,"rank":"floor-1","via":"cli","who":"Lenajava1"}
 {"at":"2026-09-29T15:48:36.096Z","kind":"restart","why":"state-absent","who":"kutasinaelena"}
+{"at":"2026-09-29T16:19:29.613Z","kind":"session","session":"p24752","tools":127,"turns":1,"touchAt":[],"agents":8,"agentTools":564,"agentTouches":11,"firstAt":"2026-09-28T12:49:45.042Z","lastAt":"2026-09-29T15:48:36.096Z","who":"kutasinaelena"}

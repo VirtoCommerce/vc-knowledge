@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-29T21:57:23.597Z",
-  "count": 284,
+  "generated": "2026-09-30T06:50:36.945Z",
+  "count": 285,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2980,6 +2980,22 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9560787E",
+      "path": "entries/KB-9560787E.md",
+      "subject": "security users search keyword matches userName, not email",
+      "question": "Does POST /api/platform/security/users/search with keyword find an account by its email when the userName differs?",
+      "anchors": [
+        "POST /api/platform/security/users/search"
+      ],
+      "scope": [
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",

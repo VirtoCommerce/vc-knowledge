@@ -1,0 +1,1 @@
+{"at":"2026-09-29T16:06:32.237Z","kind":"capture-invalid","subject":"security users search keyword matches userName, not email","why":"capture needs at least one --scope axis=value (without scope, a storefront fact gets applied to admin)","via":"cli","who":"kutasinaelena"}
