@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T11:48:01.413Z",
-  "count": 295,
+  "generated": "2026-09-30T11:55:09.368Z",
+  "count": 298,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2365,6 +2365,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-735DF4D1",
+      "path": "entries/KB-735DF4D1.md",
+      "subject": "Whether an incomplete Push Messages condition row raises a hint and holds Save depends on there already being a complete condition in the rule.",
+      "question": "Does an incomplete condition row in the Push Messages audience builder always show a hint and hold Save?",
+      "anchors": [
+        "POST /api/push-message",
+        "POST /api/push-message/preview-recipients"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa",
+        "version=3.1006.0-pr-28"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-737F80EE",
       "path": "entries/KB-737F80EE.md",
       "subject": "The storefront top header loses its controls' accessible names after a client-side state update; they return only on a full page reload.",
@@ -2957,7 +2976,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -3547,6 +3566,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-AC05FCD4",
+      "path": "entries/KB-AC05FCD4.md",
+      "subject": "The Push Messages audience-builder mode shown when a saved message is reopened is derived from the stored recipients query, not persisted alongside it.",
+      "question": "Does a push message saved in 'Advanced query' mode reopen in that mode?",
+      "anchors": [
+        "/api/push-message",
+        "POST /api/push-message/preview-recipients"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa",
+        "version=3.1006.0-pr-28"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AD1FA66B",
       "path": "entries/KB-AD1FA66B.md",
       "subject": "where a cart's money lives, and which copy goes stale",
@@ -3912,7 +3950,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4035,7 +4073,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-C60BA776",
@@ -4493,7 +4531,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5098,6 +5136,26 @@
       ],
       "scope": [
         "surface=vendor-portal-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F6F89D31",
+      "path": "entries/KB-F6F89D31.md",
+      "subject": "Picking a company in the Push Messages audience expands recursively into its sub-companies, counts only members holding a login, and that previewed count equals what is delivered.",
+      "question": "Does picking a company as a push audience include the companies under it, and does the previewed count match the delivered count?",
+      "anchors": [
+        "POST /api/push-message/preview-recipients",
+        "POST /api/push-message/search-recipients",
+        "POST /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa",
+        "version=3.1006.0-pr-28"
       ],
       "plane": "experiential",
       "status": "active",
