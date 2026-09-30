@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T15:37:05.043Z",
-  "count": 309,
+  "generated": "2026-09-30T15:41:11.672Z",
+  "count": 310,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3423,6 +3423,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-A240F961",
+      "path": "entries/KB-A240F961.md",
+      "subject": "Sales Rep customer-orders list: card layout below 1024px, order link opens buyer order details",
+      "question": "At what viewport does the Sales Rep customer orders list switch from mobile cards to a table, and where does the order-number link go?",
+      "anchors": [
+        "/company/my-customers",
+        "/company/customer-orders",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A3CE7FBA",
       "path": "entries/KB-A3CE7FBA.md",
       "subject": "recovering a percentage rate from a discount amount",
@@ -5029,7 +5047,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
