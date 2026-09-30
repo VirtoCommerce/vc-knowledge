@@ -2515,6 +2515,33 @@
         "bladeNavigationService.setError",
         "POST /api/loyalty-missions"
       ]
+    },
+    {
+      "id": "loyalty-history",
+      "label": "Loyalty history",
+      "parent": "loyalty",
+      "aliases": [
+        "points-history",
+        "loyalty history",
+        "loyalty transactions",
+        "points balance history"
+      ],
+      "anchors": []
+    },
+    {
+      "id": "blade-navigation",
+      "label": "Blade navigation",
+      "parent": null,
+      "aliases": [
+        "blade",
+        "close blade",
+        "hash route",
+        "deep link",
+        "breadcrumb",
+        "routable blade",
+        "child blade"
+      ],
+      "anchors": []
     }
   ]
 }
