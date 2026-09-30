@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T22:04:53.898Z",
-  "count": 312,
+  "generated": "2026-09-30T22:35:59.062Z",
+  "count": 315,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1099,6 +1099,25 @@
       "status": "active",
       "trust": 2,
       "disputed": 2
+    },
+    {
+      "id": "KB-33B89BDD",
+      "path": "entries/KB-33B89BDD.md",
+      "subject": "OTP request for an unregistered email returns succeeded:false with code user_not_found (DetailedErrors on); a 255-char email is refused 400 by MaxLength(254) while the storefront form lets it through",
+      "question": "What does POST /api/otp/request return for an unknown email or an over-long email, and which layer rejects the length?",
+      "anchors": [
+        "POST /api/otp/request",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "setting=detailederrors-on",
+        "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-348505EB",
@@ -2366,6 +2385,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-6D7B2ED7",
+      "path": "entries/KB-6D7B2ED7.md",
+      "subject": "Storefront OTP sign-in form posts to the storefront origin /api/otp/request, which the storefront ingress answers 405; the form shows an inline generic error plus a global server-error toast",
+      "question": "What happens when a guest clicks Continue on the storefront OTP email sign-in form?",
+      "anchors": [
+        "POST /api/otp/request",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6E98AA17",
       "path": "entries/KB-6E98AA17.md",
       "subject": "admin order operations tree staleness after cancel",
@@ -3487,6 +3524,23 @@
       "scope": [
         "reward=percentage-off-cart-subtotal",
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A424AB94",
+      "path": "entries/KB-A424AB94.md",
+      "subject": "The storefront sign-in page does not remember the password-view choice or the typed email: reload and every view switch return to an empty one-time-code view",
+      "question": "Does the storefront /sign-in page keep the password view or the typed email when switching views or reloading?",
+      "anchors": [
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
