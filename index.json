@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T15:04:28.295Z",
-  "count": 308,
+  "generated": "2026-09-30T15:37:05.043Z",
+  "count": 309,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -870,7 +870,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -2169,7 +2169,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-6A20B0AF",
@@ -3814,7 +3814,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3900,7 +3900,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4144,6 +4144,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C298769B",
+      "path": "entries/KB-C298769B.md",
+      "subject": "Header search box follows the results page: empty during a barcode lookup, shows q only when the page ran a keyword search",
+      "question": "What does the storefront header search box show on /search when the URL has both barcode and q?",
+      "anchors": [
+        "/search"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
