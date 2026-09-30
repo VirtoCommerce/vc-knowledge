@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T14:52:22.117Z",
-  "count": 301,
+  "generated": "2026-09-30T15:00:01.363Z",
+  "count": 302,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3473,6 +3473,28 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A8067930",
+      "path": "entries/KB-A8067930.md",
+      "subject": "A vc-shell embedded app renders its own environment badge inside the platform iframe even though the shell knows it is embedded, so the badge appears twice.",
+      "question": "Why does the environment badge (e.g. \"QA\") appear twice on an admin workspace/embedded-app page, and does every embedded app do it?",
+      "anchors": [
+        "/apps/push-messages",
+        "/apps/vc-sales-rep",
+        "GET /api/platform/apps",
+        "aside.vc-environment-banner",
+        "div.vc-env-badge"
+      ],
+      "scope": [
+        "component=vc-shell-framework",
+        "feature=environment-banner",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
