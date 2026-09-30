@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T15:00:01.363Z",
-  "count": 302,
+  "generated": "2026-09-30T15:01:05.243Z",
+  "count": 306,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -430,7 +430,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1196,6 +1196,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-3B0D8460",
+      "path": "entries/KB-3B0D8460.md",
+      "subject": "Push Messages builder: a comma in a text value silently removes the wildcard operators",
+      "question": "In the Push Messages audience builder, why do 'starts with' / 'ends with' / 'contains' disappear from the operator dropdown on a text field?",
+      "anchors": [
+        "GET /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3BFF73A3",
       "path": "entries/KB-3BFF73A3.md",
       "subject": "xAPI products filter: sku: is accepted as an alias of code, but mpn: is not an alias of manufacturerPartNumber and matches nothing",
@@ -1296,6 +1313,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-41DDD2A9",
+      "path": "entries/KB-41DDD2A9.md",
+      "subject": "Push Messages builder: typing into the Registered date field surfaces a raw RangeError stack trace",
+      "question": "What happens if a user types a date into the Registered condition's date input in the Push Messages audience builder instead of picking it from the calendar?",
+      "anchors": [
+        "GET /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1470,6 +1504,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4BFCE2B2",
+      "path": "entries/KB-4BFCE2B2.md",
+      "subject": "Push Messages audience builder: field to member-index phrase mapping",
+      "question": "In the Push Messages back-office audience builder (Match by conditions, Custom conditions), what phrase does each field+operator emit into PushMessage.MemberQuery?",
+      "anchors": [
+        "GET /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -4524,6 +4575,23 @@
       ],
       "scope": [
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D84CA5F2",
+      "path": "entries/KB-D84CA5F2.md",
+      "subject": "Push Messages builder: 'is any of' cannot build a multi-value phrase on an enum field",
+      "question": "In the Push Messages audience builder, does the 'is any of' operator on a dropdown-backed field (Customer type, Status) produce a comma-separated multi-value phrase?",
+      "anchors": [
+        "GET /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
