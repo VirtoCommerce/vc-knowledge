@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T15:01:05.243Z",
-  "count": 306,
+  "generated": "2026-09-30T15:04:28.295Z",
+  "count": 308,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3674,6 +3674,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-ABB5F450",
+      "path": "entries/KB-ABB5F450.md",
+      "subject": "Admin Notification list search matches the notification type key, not the localized display name",
+      "question": "does the Admin SPA Notifications > Notification list keyword search match the localized (e.g. German) display name",
+      "anchors": [
+        "/workspace/notifications"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AC05FCD4",
       "path": "entries/KB-AC05FCD4.md",
       "subject": "The Push Messages audience-builder mode shown when a saved message is reopened is derived from the stored recipients query, not persisted alongside it.",
@@ -4042,6 +4058,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BDCD3057",
+      "path": "entries/KB-BDCD3057.md",
+      "subject": "Admin 'Add new return' creates a return in status New that the buyer sees on /account/returns",
+      "question": "what status does a return created from the Admin SPA Returns 'Add new return' blade get, and does the buyer see it",
+      "anchors": [
+        "/workspace/Return",
+        "/account/returns"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
