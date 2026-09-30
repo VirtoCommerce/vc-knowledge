@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T15:55:06.573Z",
-  "count": 310,
+  "generated": "2026-09-30T17:26:04.695Z",
+  "count": 311,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1223,6 +1223,24 @@
       "scope": [
         "element=products-filter-field-names",
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3EA119C5",
+      "path": "entries/KB-3EA119C5.md",
+      "subject": "The storefront category page header banner loads the ORIGINAL category image (no _md/_sm thumbnail suffix) and crops it to a wide banner, while product cards on the same page load _md thumbnails.",
+      "question": "which image size does the storefront category page request for the category's own image, and does it use image-tools thumbnails",
+      "anchors": [
+        "POST /api/catalog/categories",
+        "Query.category"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=desktop-1920"
       ],
       "plane": "experiential",
       "status": "active",
