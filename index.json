@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T12:12:58.730Z",
-  "count": 298,
+  "generated": "2026-09-30T12:42:08.764Z",
+  "count": 299,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3704,6 +3704,22 @@
       ],
       "scope": [
         "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B59A1F9D",
+      "path": "entries/KB-B59A1F9D.md",
+      "subject": "Organization-scope wishlist: any Write member who sends changeWishlist with a scope becomes the list owner",
+      "question": "Can a non-owner org member with Write access change a wishlist's sharing scope via changeWishlist, and what happens to ownership?",
+      "anchors": [
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
