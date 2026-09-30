@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T12:42:08.764Z",
-  "count": 299,
+  "generated": "2026-09-30T14:41:32.569Z",
+  "count": 300,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -409,6 +409,24 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1178FECF",
+      "path": "entries/KB-1178FECF.md",
+      "subject": "Push Messages audience resolution survives an ElasticAppSearch to ElasticSearch8 provider switch; only text-matched counts move",
+      "question": "Does switching the search provider to ElasticSearch8 and rebuilding the member index change the Push Messages audience-builder recipient counts?",
+      "anchors": [
+        "/api/push-message/preview-recipients",
+        "/api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2380,7 +2398,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -3581,7 +3599,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -5175,7 +5193,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
