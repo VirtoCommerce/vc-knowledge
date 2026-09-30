@@ -1,0 +1,1 @@
+{"at":"2026-09-30T10:56:53.604Z","kind":"ask","q":"PUT /api/sales-rep revokes rep access token","matched":["KB-5A0C4200"],"scores":[14],"matchedBy":["both"],"trustShown":["single observation"],"opened":["KB-5A0C4200"],"state":"answer","ms":768,"rank":"floor-1","via":"cli","run":"VCST-5707","who":"Aleksandra-Mitricheva"}

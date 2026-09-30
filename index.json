@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T07:55:29.018Z",
-  "count": 289,
+  "generated": "2026-09-30T11:48:01.413Z",
+  "count": 295,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -637,6 +637,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-1B066196",
+      "path": "entries/KB-1B066196.md",
+      "subject": "PUT /api/sales-rep revokes the sales rep's current access token",
+      "question": "Does editing a sales rep's served organizations in the back office sign the rep out?",
+      "anchors": [
+        "PUT /api/sales-rep"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1B18B821",
       "path": "entries/KB-1B18B821.md",
       "subject": "tax is provider-driven and silently zero without an active provider",
@@ -958,7 +974,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -1607,6 +1623,23 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-50D03D62",
+      "path": "entries/KB-50D03D62.md",
+      "subject": "A member of two organizations reads a rep's Customer share only while the targeted org is active",
+      "question": "Does sharedWishlist(sharingKey) access for a contact in several organizations follow the active organization or any membership?",
+      "anchors": [
+        "Query.sharedWishlist",
+        "Mutation.sendCustomerCommunication"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2712,6 +2745,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-8246C473",
+      "path": "entries/KB-8246C473.md",
+      "subject": "An organization address of type BillingAndShipping cannot be marked default",
+      "question": "Can POST /api/members create an organization whose address is BillingAndShipping with isDefault true?",
+      "anchors": [
+        "POST /api/members"
+      ],
+      "scope": [
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
       "id": "KB-8264632C",
       "path": "entries/KB-8264632C.md",
       "subject": "how the storefront cart page renders an applied and an unapplied coupon",
@@ -2743,6 +2792,24 @@
       ],
       "scope": [
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-843D0515",
+      "path": "entries/KB-843D0515.md",
+      "subject": "Deleting an org a Sales Rep serves leaves it in the rep record; a PUT /api/sales-rep that echoes it back 500s",
+      "question": "What happens to a Sales Rep's served organizations when one of those organizations is deleted via DELETE /api/members?",
+      "anchors": [
+        "PUT /api/sales-rep",
+        "DELETE /api/members",
+        "GET /api/sales-rep/{id}"
+      ],
+      "scope": [
+        "surface=admin-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2911,6 +2978,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-8F61528A",
+      "path": "entries/KB-8F61528A.md",
+      "subject": "Sharing targets of an unserved or deleted organization, as the list owner sees them",
+      "question": "What happens to a rep's Customer share when a targeted organization stops being served or is deleted?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "PUT /api/sales-rep",
+        "DELETE /api/members"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-903E980C",
       "path": "entries/KB-903E980C.md",
       "subject": "OTP request outcome for a contact whose account storeId names no existing store",
@@ -2981,7 +3066,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3267,6 +3352,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A4ABEFEA",
+      "path": "entries/KB-A4ABEFEA.md",
+      "subject": "Notification journal search returns full email bodies; keyword matches the recipient",
+      "question": "How do I read the sent email body for a recipient from POST /api/notifications/journal?",
+      "anchors": [
+        "POST /api/notifications/journal",
+        "GET /api/notifications/journal/{id}"
+      ],
+      "scope": [
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
