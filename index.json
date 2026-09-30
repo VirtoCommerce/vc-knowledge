@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T14:41:32.569Z",
-  "count": 300,
+  "generated": "2026-09-30T14:52:22.117Z",
+  "count": 301,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2012,7 +2012,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -2237,6 +2237,23 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6CDB7E6F",
+      "path": "entries/KB-6CDB7E6F.md",
+      "subject": "Storefront return details page shows 'Return' title placeholder while GetReturn loads",
+      "question": "What does /account/returns/{id} show as title and breadcrumb while the return is loading?",
+      "anchors": [
+        "/account/returns/{id}",
+        "/account/returns/new/{orderId}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
