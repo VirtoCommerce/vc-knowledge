@@ -2465,12 +2465,9 @@
         "points",
         "points balance",
         "pay with points",
-        "points history",
         "reward points",
         "loyalty currency",
-        "loyalty balance",
-        "earned points",
-        "redeemed points"
+        "loyalty balance"
       ],
       "anchors": [
         "/account/points-history",
@@ -2521,6 +2518,9 @@
       "label": "Loyalty history",
       "parent": "loyalty",
       "aliases": [
+        "points history",
+        "earned points",
+        "redeemed points",
         "points-history",
         "loyalty history",
         "loyalty transactions",
