@@ -22,3 +22,4 @@
 {"at":"2026-09-30T12:10:40.912Z","kind":"confirm","id":"KB-735DF4D1","deployment":"vcptcore_qa1","trust":2,"via":"cli","who":"kutasinaelena"}
 {"at":"2026-09-30T12:10:43.883Z","kind":"ask","q":"Admin Push Messages 'Add specific recipients' picker: do Company options show an email, and does picking a parent company expand to its child companies?","matched":["KB-BBC75DEA"],"scores":[8],"matchedBy":["words"],"trustShown":["single observation"],"opened":["KB-BBC75DEA"],"state":"answer","ms":901,"rank":"floor-1","via":"cli","who":"kutasinaelena"}
 {"at":"2026-09-30T12:11:10.346Z","kind":"dispute","id":"KB-BBC75DEA","deployment":"vcptcore_qa1","via":"cli","who":"kutasinaelena"}
+{"at":"2026-09-30T14:06:47.394Z","kind":"ask","q":"Push Messages audience builder Custom conditions generated phrase field operator matrix admin SPA","matched":[],"state":"miss","nearMiss":{"id":"KB-EB70C1F9","score":5,"coverage":0.38},"ms":1231,"rank":"floor-1","via":"cli","who":"kutasinaelena"}
