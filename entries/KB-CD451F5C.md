@@ -3,10 +3,21 @@ id: KB-CD451F5C
 subject: the product configuration POST silently saves an empty inactive configuration for a wrong sections field
 plane: experiential
 question: What body does POST /api/catalog/products/configurations need, and what happens if the sections field is named wrong?
+questions:
+  - text: I set up a configurable product through the API but the shop shows no options, what went wrong?
+  - text: Which field name must hold the sections array when creating a product configuration over REST?
+  - text: Why is a product configuration saved inactive and empty after a 200 response?
+  - text: What happens when a configuration section has two default options or is of Variation type?
+  - text: Does the configuration endpoint validate option products or reject unknown fields?
+concepts:
+  - id: configurable-product
+  - id: rest-api
 status: active
 appliesTo:
   - axis: surface
-    value: rest-api
+    value: rest
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: POST /api/catalog/products/configurations
   - coordinate: ProductConfiguration.sections

@@ -3,10 +3,19 @@ id: KB-C466AD5C
 subject: Barcode scanner blade without BrowseFilters:Read shows the scanner as off
 plane: experiential
 question: What does the Store > Search configuration > Barcode scanner blade show to a user without catalog:BrowseFilters:Read?
+questions:
+  - text: Why does the store's barcode scanner look switched off for me when a colleague says it is on?
+  - text: What does a back-office user without browse filter read permission see on the barcode scanner blade?
+  - text: Which request does the barcode scanner blade send when the user lacks permission, and does it fetch settings at all?
+  - text: Can a read-only admin change barcode scanner settings, or are Save and Reset unavailable?
+  - text: Does the barcode blade show an error after the 403 banner is dismissed?
+concepts:
+  - id: barcode-settings
+  - id: permission
 status: active
 appliesTo:
   - axis: surface
-    value: admin-spa
+    value: admin-ui
 anchors:
   - coordinate: GET /api/catalog/barcode-search/store
   - coordinate: /workspace/store

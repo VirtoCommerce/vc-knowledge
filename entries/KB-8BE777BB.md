@@ -3,6 +3,15 @@ id: KB-8BE777BB
 subject: Switching organization from the storefront account menu BLANKS the header account control instead of relabelling it; the new org name only appears after a full page reload.
 plane: experiential
 question: After a multi-org buyer switches organization from the account menu, does the header show the new organization name?
+questions:
+  - text: After I switch to another company in the account menu, why does the top bar no longer say which company I'm buying for?
+  - text: Does a multi-organization buyer's header button show the new organization name straight after switching, or only after reload?
+  - text: Why does the account menu button lose its text and accessible label after a client-side cart or organization update?
+  - text: How does the header organization slot differ between a buyer in one organization and a buyer in several?
+  - text: Should an end-to-end case reload the page before asserting the header shows the organization chosen via changeOrganization?
+concepts:
+  - id: multi-organization
+  - id: site-header
 status: active
 appliesTo:
   - axis: actor

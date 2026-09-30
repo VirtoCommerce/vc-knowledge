@@ -3,7 +3,10 @@ id: KB-B41CE06E
 subject: "Storefront /search?barcode= with a repeated barcode param or an extra q: first barcode wins, q is ignored, barcode lookups never enter search history"
 plane: experiential
 question: What does /search?barcode= do when the URL repeats barcode, also carries q, and does a barcode lookup add to the search history dropdown?
-status: active
+status: superseded
+supersededBy:
+  - id: KB-9CD03E2B
+  - id: KB-E8984A18
 appliesTo:
   - axis: feature
     value: search-history

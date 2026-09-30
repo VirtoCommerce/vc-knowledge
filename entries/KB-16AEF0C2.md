@@ -3,6 +3,16 @@ id: KB-16AEF0C2
 subject: order operation numbering and parentage
 plane: experiential
 question: is a shipment number the order's numbering scheme with a different prefix?
+questions:
+  - text: My order and shipment numbers match - can I always find one from the other?
+  - text: Is a shipment or payment number the order number with a different prefix?
+  - text: How are order, shipment and incoming payment numbers generated, and is the counter per prefix?
+  - text: Why is a shipment's parentOperationId null when the admin tree shows it under the order?
+  - text: Which fields reliably link a shipment or payment back to its customer order?
+concepts:
+  - id: order-number
+  - id: shipment
+  - id: admin-order-screen
 status: active
 appliesTo:
   - axis: surface

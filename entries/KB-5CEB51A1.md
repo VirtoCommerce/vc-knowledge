@@ -3,6 +3,13 @@ id: KB-5CEB51A1
 subject: "Share dialog: Undo after Clear all restores recipients but Share stays disabled when nothing changed"
 plane: experiential
 question: is the Share button enabled after Clear all then Undo on an already-shared list
+questions:
+  - text: I cleared everyone from a shared list and pressed Undo - why can't I press Share now?
+  - text: After Clear all then Undo in the list share dialog, does Share stay disabled because nothing changed?
+  - text: Does cancelling the share dialog after Clear all remove any recipients?
+  - text: Which toast text appears when a list share save adds recipients versus only removes them or edits the message?
+concepts:
+  - id: list-sharing
 status: active
 appliesTo:
   - axis: feature

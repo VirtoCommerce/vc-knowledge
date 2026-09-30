@@ -3,12 +3,21 @@ id: KB-AB35BCDC
 subject: what an order line item stops carrying once the cart becomes an order
 plane: experiential
 question: why can I not read listPrice off an order line item when the cart had one
+questions:
+  - text: Where can I see the original list price of an item on my placed order?
+  - text: Why does an order line item have no listPrice or salePrice while the cart line had them?
+  - text: Which price fields does an order line item carry compared with a cart line item?
+  - text: How do I recover the per-unit list price from an order line?
+concepts:
+  - id: order-line-item
+  - id: price
+  - id: cart-line-item
 status: active
 appliesTo:
   - axis: surface
     value: rest
   - axis: surface
-    value: graphql
+    value: xapi
 anchors:
   - coordinate: OrderLineItemType.listTotal
   - coordinate: LineItemType.listPrice

@@ -3,10 +3,21 @@ id: KB-D1DF95A5
 subject: How a member of a target organization can read a Customer-scope shared wishlist
 plane: experiential
 question: "sharedWishlist vs wishlist(listId) vs wishlists for a Customer-scope list: what does a target-org member, a non-target member and an anonymous caller get?"
+questions:
+  - text: My sales rep shared a list with my company, so why is it missing from my Lists page?
+  - text: Can a member of a targeted organization open a customer-scoped shared list any way other than the share link?
+  - text: What does a member of a served but not targeted organization get when opening a rep's shared list?
+  - text: For a Customer-scope list, how do sharedWishlist, wishlist by id and wishlists differ for a target member versus an anonymous caller?
+  - text: Which owner-only fields come back empty when a recipient reads a shared list by its sharing key?
+concepts:
+  - id: list-sharing
+  - id: sales-rep
 status: active
 appliesTo:
   - axis: surface
-    value: graphql
+    value: xapi
+  - axis: surface
+    value: storefront-ui
 anchors:
   - coordinate: Query.sharedWishlist
   - coordinate: Query.wishlist

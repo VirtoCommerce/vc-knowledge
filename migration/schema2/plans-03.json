@@ -1,0 +1,751 @@
+[
+ {
+  "id": "KB-348505EB",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "If I scan a code with a star at the end, will the shop still open a product page?",
+   "Does exact barcode matching treat asterisk and question mark as wildcards instead of literal characters?",
+   "Why does a truncated GTIN followed by * return the full product in exact barcode mode?",
+   "Can the products query's barcode filter escape wildcard characters, or does every * become a wildcard query?",
+   "Why does a barcode filter of just * return every product that has a GTIN?"
+  ],
+  "concepts": [
+   "barcode-search",
+   "product-filter"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "093c3152ba382bae"
+ },
+ {
+  "id": "KB-358A70CB",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "On my order page, where can I see my shipment's number or delivery status?",
+   "Why does a customer's order page never show the shipment record or its state?",
+   "Is the Shipping method block on the account order page built from the order or from its shipment?",
+   "Which shipment fields does the storefront order details page select, and which does it leave out?",
+   "Can a cancelled order badge on the order page hide a shipment that is still live?"
+  ],
+  "concepts": [
+   "shipment",
+   "shipping-method",
+   "customer-order"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3f2aabd450988948"
+ },
+ {
+  "id": "KB-35A09C64",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "After a sale is switched on, will my basket show the new discount without me changing it?",
+   "Do I need to touch a cart after activating or deactivating a promotion in the back office?",
+   "Are cart discounts recomputed on every cart read or frozen into the stored cart?",
+   "Does toggling a promotion's active flag change discountTotal on the next cart query without any mutation?"
+  ],
+  "concepts": [
+   "promotion",
+   "discount",
+   "cart"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "9addef6b96a99b29"
+ },
+ {
+  "id": "KB-35F20D97",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "rest"
+  ],
+  "questions": [
+   "I typed a wrong promo code and got no error - did it do anything to my basket?",
+   "Why does a cart keep coupon codes that gave no discount?",
+   "Does addCoupon ever return an error or validation message for an invalid code?",
+   "Why can't the coupon pre-check tell a shopper why a code was rejected?",
+   "Is coupon code matching case-sensitive and does it trim surrounding spaces?",
+   "Is a coupon's applied-successfully flag stored or recomputed on each cart read?"
+  ],
+  "concepts": [
+   "coupon",
+   "cart-validation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7ba734d68d2c28ab"
+ },
+ {
+  "id": "KB-360127D0",
+  "action": "split",
+  "why": "(b) the evidence note confirms the schema diff of the storefront GraphQL projection but contradicts the claim that the stored order loses product and quantity | (a) the corrected fact is about the REST order record, a different surface",
+  "children": [
+   {
+    "subject": "The storefront GraphQL order configuration item exposes five fields and drops productId, quantity and sectionId",
+    "question": "Which configuration item fields does the storefront GraphQL order projection expose compared with the cart?",
+    "anchors": [
+     "OrderConfigurationItemType",
+     "CartConfigurationItemType",
+     "OrderLineItemType.configurationItems"
+    ],
+    "surface": [
+     "xapi"
+    ],
+    "body": "The configuration a buyer assembled is not exposed on the storefront GraphQL order in the shape it had in the cart. CartConfigurationItemType has eight fields -- id, name, type, customText, files, productId, quantity and sectionId. OrderConfigurationItemType has five: id, name, type, customText and files. productId, quantity and sectionId are all dropped, and selecting productId, quantity, sectionId, sku, catalogId, categoryId or imageUrl on OrderConfigurationItemType is refused by validation error. So for a configuration section whose type is 'Product', this projection of the order gives the chosen option's NAME and nothing that identifies the product it was or how many were taken, and it does not give which section the choice answered. Anything reconciling a configured order back to catalog products through this projection has only a display string to match on. This is read off the deployment's own schema: read the same two type tables on any deployment and a diff either confirms it or retires it.",
+    "fromNotes": true,
+    "questions": [
+     "In my order history, can the shop tell which product I picked for each configuration option?",
+     "Why can't a storefront order query return the product and quantity chosen in a configurable item?",
+     "Which fields does the GraphQL order configuration item type lack compared with the cart configuration item type?",
+     "Does selecting productId or quantity on an order's configuration items fail schema validation?"
+    ],
+    "concepts": [
+     "configured-line-item",
+     "order-line-item"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The stored order keeps the configured product and quantity; only sectionId is lost between cart and order",
+    "question": "Does the stored order record keep the product and quantity chosen in a configuration?",
+    "anchors": [
+     "OrderLineItemType.configurationItems"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "The stored order keeps the product and the quantity of a configuration: GET /api/order/customerOrders/{id} returns, per Product-type configuration item, productId, sku, quantity, imageUrl, catalogId and categoryId alongside name and type, so the order does identify the catalog product that was chosen and how many were taken. In the modules' own swagger, CartConfigurationItem carries 16 fields and OrderConfigurationItem 15, and the only field the crossing loses is sectionId. The loss of product and quantity is in the storefront GraphQL read surface, not in the record.",
+    "fromNotes": true,
+    "questions": [
+     "After I order a custom-built item, does the shop still know exactly which parts and how many I chose?",
+     "Can a back-office integration reconcile a configured order line to catalog products from the order record?",
+     "Which configuration item field is lost when a cart becomes an order in the REST model?",
+     "Does the order REST endpoint return productId and quantity for Product-type configuration items?"
+    ],
+    "concepts": [
+     "configured-line-item",
+     "order-line-item"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "28b27e6108ac692d"
+ },
+ {
+  "id": "KB-37B8E605",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why does my saved address show the full country name instead of a short code?",
+   "Which countries get a state or region filled in on a customer address record?",
+   "Is countryCode on a platform customer address ISO alpha-2 or alpha-3?",
+   "Where is the postal code kept on a customer address, and is zip ever populated?",
+   "Is the favorite-address flag stored on the platform address or only in the storefront projection?"
+  ],
+  "concepts": [
+   "address",
+   "contact"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "e4da3d254c6729ce"
+ },
+ {
+  "id": "KB-3BFF73A3",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Can I search the shop by manufacturer part number using a short field name?",
+   "Which filter field names work for SKU and part number when filtering the product catalog?",
+   "Is sku an alias of code in the products query filter, and is mpn an alias of manufacturerPartNumber?",
+   "What does the products filter return for a field name that is not in the search index?"
+  ],
+  "concepts": [
+   "product-filter",
+   "product-identifier"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3da0b69d5c356b9f"
+ },
+ {
+  "id": "KB-3F7C78F6",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "Can support staff look at the shopping lists I saved in my account?",
+   "Where in the back office can an administrator audit or correct a customer's wishlist?",
+   "Is there any REST endpoint for reading a stored wish list?",
+   "Which queries are the only readers of wishlists, and what principal do they authorize as?"
+  ],
+  "concepts": [
+   "wishlist",
+   "rest-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "2b5beb7cb1b1f948"
+ },
+ {
+  "id": "KB-409CE7C7",
+  "action": "split",
+  "why": "(b) the later note contradicts the main-fulfillment-center-only claim while the fulfillment-center search findings are untouched | (a) the search order and projection are a separate API finding",
+  "children": [
+   {
+    "subject": "A store's stock is read from its main fulfillment center, and stock elsewhere leaves the product at zero",
+    "question": "Which fulfillment centers' stock counts toward a store's product availability?",
+    "anchors": [
+     "Store.mainFulfillmentCenterId"
+    ],
+    "surface": [
+     "rest",
+     "ucp"
+    ],
+    "body": "Stock counts for a store only on the store's own main fulfillment center; stock written to another fulfillment center leaves the product at zero for that store. Disputed by a later observation: a product whose only inventory record (inStockQuantity 2, reserved 0, Enabled) sits on a fulfillment center that is in the store's additionalFulfillmentCenterIds but is not store.mainFulfillmentCenterId was returned by UCP search_products with availability.available_quantity 2 and is_in_stock true. So 'only the main fulfillment center counts' does not hold as stated; the zero-stock case is more likely stock on a fulfillment center that is not assigned to the store at all, neither main nor additional.",
+    "fromNotes": true,
+    "questions": [
+     "Why does the shop say out of stock when the warehouse clearly has units?",
+     "Does stock on a store's additional warehouses count toward availability, or only the main one?",
+     "Why is a product at zero stock for a store although its inventory record holds quantity?",
+     "Does availability read inventory from mainFulfillmentCenterId only or also from additionalFulfillmentCenterIds?"
+    ],
+    "concepts": [
+     "fulfillment-center",
+     "inventory",
+     "store"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Fulfillment-center search returns centers in arbitrary order and its projection omits code",
+    "question": "Can I rely on the order or the code field of fulfillment-center search results?",
+    "anchors": [
+     "POST /api/inventory/fulfillmentcenters/search"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "The order of fulfillment-center search results is arbitrary, so its first result is not necessarily the store's own fulfillment center. The fulfillment-center search projection does not include code, so matching on code there never succeeds.",
+    "fromNotes": false,
+    "questions": [
+     "When seeding stock, is it safe to pick the first warehouse the search returns?",
+     "Is the result order of the warehouse search API stable?",
+     "Why does matching fulfillment centers by code in the search response never find a match?",
+     "Does the fulfillment-center search projection include the code field?"
+    ],
+    "concepts": [
+     "fulfillment-center"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "d7698f59d4a5fceb"
+ },
+ {
+  "id": "KB-40CBB0C5",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "How do I make a newly created deal actually give a percentage off the order?",
+   "Where in a promotion's expression tree does the discount reward go when configuring it by API?",
+   "Why does updating a promotion return 500 when children arrays are sent as index-keyed objects?",
+   "Which reward node gives percent off versus a fixed amount off the cart subtotal?",
+   "How is promotion exclusivity set, and how are bad date values handled on update?"
+  ],
+  "concepts": [
+   "promotion-reward",
+   "promotion"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "6d56c1d57a2a6055"
+ },
+ {
+  "id": "KB-40FCBAE6",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "I shared my list but the email didn't go out - can I send it again?",
+   "Is a shared list still saved when the recipient notification fails?",
+   "What toast does the Share dialog show when the save succeeds but the message send fails?",
+   "Does the list Share dialog offer any way to re-notify a recipient after a failed notification?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "customer-communication"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "80d9fbd375eb1ea4"
+ },
+ {
+  "id": "KB-417AC3F2",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Why is a barcode field ticked with a missing-from-index badge that I can't untick?",
+   "What happens to a saved scanner field whose property was deleted from the catalog?",
+   "Does the barcode scanner blade silently drop a stale field on the next save?",
+   "Does the back office warn when a configured barcode search field is no longer indexed?"
+  ],
+  "concepts": [
+   "barcode-settings",
+   "search-index"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c13c7ce008857b4e"
+ },
+ {
+  "id": "KB-432D02EF",
+  "action": "split",
+  "why": "(a) the raw i18n title and missing upload control are an unrelated UI defect noticed while observing what the feature does",
+  "children": [
+   {
+    "subject": "Purchase requests turn uploaded order documents into a quote and have no approve or reject step",
+    "question": "What does the purchase requests feature do, and does it have approve or reject mutations?",
+    "anchors": [
+     "/account/purchase-requests",
+     "Mutation.createPurchaseRequestFromDocuments"
+    ],
+    "surface": [
+     "storefront-ui",
+     "xapi"
+    ],
+    "body": "The storefront's /account/purchase-requests is served by the AI document processing module: a buyer uploads order-like documents (PDF, image, even handwritten) and the pipeline turns them into a quote. The xAPI flow is createPurchaseRequestFromDocuments, then extractPurchaseRequestSourcesData (OCR and line extraction), then postProcessPurchaseRequestSources (catalog matching, which sets quoteId), then normal quote acceptance; there is no approve or reject mutation - buyer approval belongs to quote requests at /account/quotes. The module is flagged experimental.",
+    "fromNotes": false,
+    "questions": [
+     "Can I upload a photo of a handwritten order and get it turned into a quote?",
+     "Is the purchase requests page an approval workflow for buyers, or something else?",
+     "Which mutation sequence turns uploaded documents into a quote with a quoteId?",
+     "Where does buyer approval live if purchase requests have no approve or reject mutation?"
+    ],
+    "concepts": [
+     "purchase-request",
+     "quote"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The purchase requests list page shows a raw i18n key as its title and has no upload control when empty",
+    "question": "What does the empty purchase requests list page look like?",
+    "anchors": [
+     "/account/purchase-requests"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "On the storefront /account/purchase-requests list page, the browser title shows a raw i18n key and the empty state has no create or upload control.",
+    "fromNotes": false,
+    "questions": [
+     "Why is there no button to upload a document on my empty purchase requests page?",
+     "Why does the browser tab of the purchase requests page show a translation key instead of a title?",
+     "Is the purchase requests empty state missing its create or upload action?"
+    ],
+    "concepts": [
+     "purchase-request",
+     "localization"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "88a30fe4cc6bd459"
+ },
+ {
+  "id": "KB-4895528A",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "What does someone see when opening a list I shared and then made private again?",
+   "Does un-sharing a list return a forbidden error to the former recipient?",
+   "What does sharedWishlist return for a sharing key after the list is set to Private?",
+   "Does re-sharing a list create a new sharing key or revive the old one?"
+  ],
+  "concepts": [
+   "list-sharing"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "6a182461b1f1417a"
+ },
+ {
+  "id": "KB-48A46F77",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "Why does clicking add to cart do nothing for an item that looks available?",
+   "How do I change a product's stock quantity through the inventory API?",
+   "Why do full-object PUT updates to inventory return 500 while a JSON Patch works?",
+   "Which values does InventoryStatus accept, and is InStock one of them?",
+   "Does a product with inventory tracking off ignore its stock quantity?"
+  ],
+  "concepts": [
+   "inventory",
+   "add-to-cart"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c1ef1154f993c8ef"
+ },
+ {
+  "id": "KB-4982C91F",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "admin-ui",
+   "xapi"
+  ],
+  "questions": [
+   "Why does my order discount show slightly different amounts in different places?",
+   "Why does the back-office order screen show an unrounded discount in the grid and a rounded one in the header?",
+   "Is an order discount row stored at full precision while discountTotal is rounded to the currency?",
+   "Which order fields hold the raw percentage discount and which hold the currency-rounded value?"
+  ],
+  "concepts": [
+   "discount",
+   "totals",
+   "admin-order-screen"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8b93a6bf04741a10"
+ },
+ {
+  "id": "KB-4A8606CA",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "admin-ui",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why can't my colleague be invited again after I removed their unfinished invitation?",
+   "How do I delete a leftover user account from a withdrawn organization invitation?",
+   "Why does user search return zero for an account that lookup by user name still finds?",
+   "Why does deleting a security user keep failing with a concurrency error?",
+   "Can walking an invitation back through block and delete leave an orphaned account?"
+  ],
+  "concepts": [
+   "member-deletion",
+   "security-account",
+   "organization-invitation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7e83df54bab8075c"
+ },
+ {
+  "id": "KB-4AE52041",
+  "action": "split",
+  "why": "(a) the dead-end variant picker is on the master product page, while variation reachability through search, category listings, the variation slug and order-line links are different places a reader reaches separately",
+  "children": [
+   {
+    "subject": "A master product page's variant picker never makes it purchasable, even with every option chosen",
+    "question": "Does selecting every variant option on a master product page make it purchasable?",
+    "anchors": [
+     "/configurable-caps-shirts/hat",
+     "Product.variations"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "Not necessarily. On /products-with-options/configurable-caps-shirts/hat (\"Men's Adjustable Scholarship Hat Team Color\", advertised as 6 variations, From $4.00) the PDP renders four variant groups - Color, size_shirts, Size_chart, Fabric (data-test-id=\"variant-picker--<group>--<value>\"). Picking a Color alone re-renders the H1 to a concrete variation name (\"Light Brown Clemson Hat\"), proving the picker does resolve a product, yet the Price stays \"N/A\" and the add control stays a DISABLED button whose accessible name is \"Select options to proceed\" - and it still does after one value is selected in ALL FOUR groups (Brown / 55 / No size / Cotton). No option is ever disabled or greyed as unavailable, so the UI gives no way to tell a valid combination from an invalid one; the offered matrix is 6x4x5x4 = 480 combinations against only 6 real variations.",
+    "fromNotes": false,
+    "questions": [
+     "I picked every option on the product page but the price stays N/A and I can't buy it - why?",
+     "Why does a master product page stay unpurchasable even when its variations are in stock?",
+     "Does the variant picker grey out option combinations that have no real variation?",
+     "Why does the add button keep the label to select options after every variant group has a value?"
+    ],
+    "concepts": [
+     "product-variation",
+     "product-page"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Variations are reachable only through their own SEO slug, not search or category listings, and order lines link to the master",
+    "question": "How can a shopper reach a specific product variation, and where does its order line link?",
+    "anchors": [
+     "/configurable-caps-shirts/brown-vt-print-hat",
+     "/configurable-caps-shirts/hat"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "Variation names are NOT in the storefront search index (searching \"Light Brown Clemson Hat\" returns no results), and variations do NOT appear as their own cards in their category listing (Configurable caps & shirts shows 6 results, all masters/configurables/simples, none of the hat's variations). What DOES work is the variation's own SEO slug, e.g. /products-with-options/configurable-caps-shirts/brown-vt-print-hat, which shows a real price ($8.99), real stock (3249) and a working quantity stepper. An ORDER line for a variation links back to the MASTER's slug (/products-with-options/configurable-caps-shirts/hat), which is a reliable way to tell a variation line from a simple-product line on an order.",
+    "fromNotes": false,
+    "questions": [
+     "Why can't I find a specific colour of a product by typing its name in the search box?",
+     "Do product variants show up as their own cards in category listings?",
+     "Which URL opens a variation page with a real price, stock and quantity stepper?",
+     "How can QA tell a variation line from a simple-product line on a placed order?"
+    ],
+    "concepts": [
+     "product-variation",
+     "seo-url",
+     "product-search"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "cd594818c572b0c5"
+ },
+ {
+  "id": "KB-4B889114",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "admin-ui"
+  ],
+  "questions": [
+   "My teammate shows as Active in our company members list but can't log in - why?",
+   "Can an organization maintainer trust the Active column on the members page as sign-in status?",
+   "Does a lockout set in the back office show up as Blocked on the storefront roster?",
+   "Do block and unblock on the members page write the same lockout flag the admin account blade reads?"
+  ],
+  "concepts": [
+   "member-block",
+   "account-lockout",
+   "membership-status"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "323a4df5ed974d65"
+ },
+ {
+  "id": "KB-4C29749E",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why does a product I deleted still appear in shop search results an hour later?",
+   "Why did the scheduled index-changes job skip deletions made before a manual index request?",
+   "Does a manual index request move the indexation start date the recurring job replays from?",
+   "With event-based indexation off, how soon does a catalog change reach the search index?"
+  ],
+  "concepts": [
+   "search-index",
+   "background-job"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f4ec29e091397eea"
+ },
+ {
+  "id": "KB-4C5627CE",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "My order was cancelled - why does its delivery still show as new?",
+   "Which statuses can a shipment take, and is the shipped value Send or Sent?",
+   "Can an operator set any shipment status from any other, even with no items on it?",
+   "Is there a Delivered status on shipments, or does the order status carry that meaning?",
+   "Are a shipment's isCancelled and cancelledState fields moved by its status select?"
+  ],
+  "concepts": [
+   "shipment",
+   "order-status"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8fa09e136ddc8187"
+ },
+ {
+  "id": "KB-4CCC2DD6",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "If the shop cancels my order, is my reserved stock put back?",
+   "When an operator cancels an order document, are its shipment and line items cancelled too?",
+   "Why does an order look unchanged right after clicking Cancel document in the back office?",
+   "Does order cancellation cascade to the incoming payment, and which cancellation field stays Undefined?"
+  ],
+  "concepts": [
+   "order-cancellation",
+   "shipment",
+   "order-payment"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c7655ac1f0a5c136"
+ },
+ {
+  "id": "KB-4D082C89",
+  "action": "split",
+  "why": "(b) later notes contradict the storefront roster representation and the claim that only registration clears the lockout, while the Admin-side state mapping was confirmed; three parts, three trust figures",
+  "children": [
+   {
+    "subject": "Inviting a member immediately provisions a contact and a locked account that Admin shows with an empty Status",
+    "question": "What does a pending invitee look like in Admin right after the invitation?",
+    "anchors": [
+     "Mutations.inviteUser"
+    ],
+    "surface": [
+     "admin-ui"
+    ],
+    "body": "Inviting a member creates BOTH a contact and a security account immediately, and the account already carries the role chosen in the invite dialog - the invitation is not a queued message, it is a provisioned account that cannot yet be used. On the Admin account blade the same person shows Locked state = Locked and a Status field that is EMPTY, rendering as the 'Select ...' placeholder. So a pending invitee and a blocked member are both simply 'Locked' in Admin, and the field that could tell them apart is blank for the invitee. Do not read a Locked account as evidence that someone was blocked: check the contact's own status, where a pending invitation reads Invited and a block reads Locked. Disputed in part: an invited account observed after a Block-then-Unblock cycle held zero roles, while another invited row did carry its role, so whether the account keeps the role chosen in the invite dialog is not established.",
+    "fromNotes": true,
+    "questions": [
+     "Does inviting a colleague create their user account straight away, before they accept?",
+     "How can an administrator tell a pending invitee from a blocked member when both show Locked?",
+     "Why is the Status field empty on the admin account blade of an invited user?",
+     "Does the security account created by inviteUser carry the role chosen in the invite dialog?"
+    ],
+    "concepts": [
+     "organization-invitation",
+     "account-lockout"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The storefront roster shows a pending invitee as 'Invite sent' with status Invited",
+    "question": "How does a pending invitee appear on the storefront company members list?",
+    "anchors": [
+     "GET /company/members"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "On the storefront roster the row of a pending invitee shows the literal name 'Invite sent' with an empty real name, the chosen role, the email lowercased, and status 'Invited' - so the status column does have a third value beyond Active and Blocked. Disputed on another build: a row rendering 'Invite sent' had a full name in the organization-contacts response, so the page substitutes 'Invite sent' over a name the API supplied, and it showed the green Active badge rather than Invited, because the Active column consumes statusInOrganization and the effective-status fallback materialises a null status as Approved; that row did show its role.",
+    "fromNotes": true,
+    "questions": [
+     "Why does someone I invited show as 'Invite sent' on our company members page?",
+     "Does the members list distinguish a pending invitation from an active member?",
+     "Is 'Invite sent' a placeholder for an empty name or a substitution over a real one?",
+     "Which field does the roster status badge read, and can it ever render Invited?"
+    ],
+    "concepts": [
+     "organization-invitation",
+     "membership-status"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Block then Unblock on the roster moves a pending invitee out of the invited state without any mailbox",
+    "question": "Can a pending invitee be moved out of the invited state without completing registration?",
+    "anchors": [
+     "GET /company/members"
+    ],
+    "surface": [
+     "storefront-ui",
+     "admin-ui",
+     "rest"
+    ],
+    "body": "Completing the registration clears the lockout, but it is not the only way out of the invited state, and a deployment with no reachable mailbox can still move a member out of it from the storefront side: Block user followed by Unblock user on the roster row does it. contact.status goes Invited -> Locked -> Approved, Unblock resets the account lockoutEnd from 9999-12-31 to 0001-01-01, emailConfirmed stays false, and the roster afterwards reports the person as Active; Admin then shows Locked state Unlocked and Status PendingApproval. The account's passwordHash reads null through GET /api/platform/security/users/{userName}, which strips the field, but is populated through GET /api/members/{id} on the same invited account, so the two endpoints redact differently.",
+    "fromNotes": true,
+    "questions": [
+     "Our test site can't send emails - can an invited colleague still be activated?",
+     "Does blocking and then unblocking an invited member turn them into an active member?",
+     "What happens to contact status and lockoutEnd when a pending invitee is blocked and unblocked?",
+     "Why does passwordHash look null on one user endpoint but populated on the members endpoint?"
+    ],
+    "concepts": [
+     "organization-invitation",
+     "member-block",
+     "account-lockout"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "57bbec4e9fb917dd"
+ },
+ {
+  "id": "KB-4D26A022",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "Does the delivery created for my order list the items I bought?",
+   "Why does a new order's shipment have no line items in the back office?",
+   "How are order line items allocated to a shipment, and can quantities differ for partial shipments?",
+   "Does shipments[].items on a checkout-created order ever contain the order's lines?"
+  ],
+  "concepts": [
+   "shipment",
+   "order-line-item"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f0f4c0e6cbee701b"
+ },
+ {
+  "id": "KB-4DDAE053",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why do I get page not found when opening a product link that uses its item code?",
+   "Which URL forms open a product page on the storefront: id, slug or SKU?",
+   "Why does a missing storefront route still return HTTP 200?",
+   "Can an HTTP status check validate that a storefront page route resolves?"
+  ],
+  "concepts": [
+   "product-page",
+   "page-not-found",
+   "product-identifier"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "2b0744693b3b6c68"
+ },
+ {
+  "id": "KB-4DFE4750",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Why does the template editor show code and preview side by side only sometimes?",
+   "At what editor width does the back-office markdown editor switch from tabs to split view?",
+   "Does the HTML editor re-evaluate its view mode when a blade is maximized or restored?",
+   "Does the editor preview run scripts or event-handler attributes from the template?"
+  ],
+  "concepts": [
+   "html-editor",
+   "notification-template"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ff902cc4b0ea49ea"
+ },
+ {
+  "id": "KB-4E45A8BA",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Can the shop put my invitation back after it was accidentally changed?",
+   "Which values does the contact Status dropdown in the back office offer?",
+   "Why does a contact's status show Invited or Locked when those are not in the picker's list?",
+   "Can an administrator restore a contact to the Invited state after it leaves it?"
+  ],
+  "concepts": [
+   "contact",
+   "organization-invitation",
+   "membership-status"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "472c5f56d18758cb"
+ }
+]

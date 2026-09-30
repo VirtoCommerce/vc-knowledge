@@ -3,6 +3,14 @@ id: KB-62EE7AF3
 subject: some platform routes are hidden from the API document this base projects from
 plane: experiential
 question: why does an endpoint that plainly exists resolve to nothing in the derived plane
+questions:
+  - text: Why can't I find an endpoint in the API documentation even though it clearly works?
+  - text: Which platform controllers are hidden from the deployment's OpenAPI document?
+  - text: Does an ApiExplorer IgnoreApi attribute keep a live route out of the swagger projection?
+  - text: An anchor in a projected namespace resolves to nothing - besides a typo or a missing route, could it be hidden?
+concepts:
+  - id: openapi-document
+  - id: rest-api
 status: active
 appliesTo:
   - axis: surface

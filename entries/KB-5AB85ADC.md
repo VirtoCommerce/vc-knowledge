@@ -3,12 +3,23 @@ id: KB-5AB85ADC
 subject: Sales-rep list share notification carries no organization name; a typed rep message replaces the default body
 plane: experiential
 question: what does the notification sent when a sales rep shares a list with a customer organization contain
+questions:
+  - text: What does the message say when my account manager shares a product list with our company?
+  - text: Does the list-share notification to a customer organization mention that organization's name?
+  - text: If the rep types a note in the share dialog, does it replace the default notification text?
+  - text: Is one customer communication mutation sent per newly added organization, with email and push both enabled?
+  - text: What happens to a whitespace-only share note - is it sent as-is or trimmed to empty?
+concepts:
+  - id: customer-communication
+  - id: list-sharing
 status: active
 appliesTo:
   - axis: feature
     value: sales-rep-list-sharing
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: Mutation.sendCustomerCommunication
   - coordinate: Mutation.changeWishlist

@@ -3,14 +3,24 @@ id: KB-DA14E8B7
 subject: block on an un-accepted invitation is irreversible
 plane: experiential
 question: What happens to a pending organization invitation if the maintainer blocks and then unblocks that row?
+questions:
+  - text: If I block and then unblock someone I invited but who never joined, can they still accept the invitation?
+  - text: As a company maintainer, can I undo blocking a pending invitee, or re-invite the same email afterwards?
+  - text: Why does an unblocked invitee show as Active on the roster though they never registered?
+  - text: What do lockOrganizationContact and unlockOrganizationContact write to contact status and account lockoutEnd for an invited contact?
+  - text: Does deleting a blocked invitee from the organization free the email address for a new invitation?
+concepts:
+  - id: member-block
+  - id: organization-invitation
+  - id: membership-status
 status: active
 appliesTo:
+  - axis: principal
+    value: org-maintainer
   - axis: surface
     value: storefront-ui
   - axis: surface
-    value: storefront-xapi
-  - axis: principal
-    value: org-maintainer
+    value: xapi
 anchors:
   - coordinate: GET /company/members
   - coordinate: Mutations.lockOrganizationContact

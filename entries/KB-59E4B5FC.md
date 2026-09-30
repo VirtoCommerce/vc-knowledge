@@ -3,12 +3,22 @@ id: KB-59E4B5FC
 subject: a configured product as an order line item
 plane: experiential
 question: how does a configurable product become a line item on an order
+questions:
+  - text: When I order a customized product, does the order remember which options I picked?
+  - text: Does a configurable product become one order line with its options nested, or separate lines per option?
+  - text: Which configuration item field is lost when a cart line becomes an order line - is sectionId dropped?
+  - text: Why does the storefront order configuration item type reject productId, sku and quantity while the REST order has them?
+  - text: Is an order line for a configurable product with an empty configuration items array a data fault?
+concepts:
+  - id: configured-line-item
+  - id: order-line-item
+  - id: configurable-product
 status: active
 appliesTo:
   - axis: surface
     value: rest
   - axis: surface
-    value: graphql
+    value: xapi
 anchors:
   - coordinate: OrderLineItemType.configurationItems
   - coordinate: OrderConfigurationItemType

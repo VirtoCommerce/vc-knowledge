@@ -3,6 +3,16 @@ id: KB-D8FDFA6F
 subject: On /company/members a contact whose contact-level status is null has its NAME cell replaced by the literal text "Invite sent", while the Active column still shows a green "Active" tick.
 plane: experiential
 question: Why does the storefront company members list show "Invite sent" where a member's name should be, and why is that row still Active?
+questions:
+  - text: Why does my company members page say Invite sent instead of a colleague's name?
+  - text: As a company maintainer, why does a row with no contact status still show a green Active tick?
+  - text: Which field does the storefront members roster use for the Active badge, status or statusInOrganization?
+  - text: What does the members roster render in the Name column when the contact's own status is null though the API returns the full name?
+  - text: How is a null contact status resolved to an effective organization status before it reaches the roster?
+concepts:
+  - id: organization-member
+  - id: membership-status
+  - id: organization-invitation
 status: active
 appliesTo:
   - axis: build
@@ -14,7 +24,7 @@ appliesTo:
   - axis: surface
     value: storefront-ui
   - axis: surface
-    value: storefront-xapi
+    value: xapi
 anchors:
   - coordinate: /company/members
   - coordinate: Query.organization.contacts

@@ -3,6 +3,14 @@ id: KB-ADAFFBFF
 subject: removeConfigurationItem needs the option productId to remove a Product section
 plane: experiential
 question: Does removeConfigurationItem remove an optional Product section when called with only sectionId and type?
+questions:
+  - text: Why can I not remove an optional add-on from my configured product in the cart?
+  - text: Why does removing a configuration section succeed with no errors but change nothing?
+  - text: What input does removeConfigurationItem need to remove a Product-type section?
+  - text: Which validation errors appear when removing a required or incompletely specified configuration section?
+concepts:
+  - id: configured-line-item
+  - id: cart-validation
 status: active
 appliesTo:
   - axis: surface

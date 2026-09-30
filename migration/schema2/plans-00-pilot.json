@@ -1,0 +1,575 @@
+[
+ {
+  "id": "KB-001183CF",
+  "action": "split",
+  "why": "(a) different places: coupon matching in the xAPI (validateCoupon/addCoupon) vs how the /account/coupons page displays and copies codes",
+  "children": [
+   {
+    "subject": "xAPI coupon validation and application are case-insensitive, so coupon codes that differ only by case collide",
+    "question": "Is a coupon code case-sensitive when it is validated or applied through the xAPI?",
+    "anchors": [
+     "Mutation.addCoupon",
+     "Query.validateCoupon"
+    ],
+    "surface": [
+     "xapi"
+    ],
+    "body": "Coupon validation and application through xAPI are case-insensitive: a code typed in another case applies the same coupon. That means two distinct coupons whose codes differ only by case collide, and the promotion policy picks between them.",
+    "fromNotes": false,
+    "questions": [
+     "If I type my promo code in lowercase at checkout, will it still work?",
+     "Can two coupons whose codes differ only in upper and lower case coexist in one store?",
+     "Does validateCoupon or addCoupon compare the coupon code case-sensitively?",
+     "Which promotion wins when two voucher codes are identical apart from letter case?",
+     "Should a negative QA case expect a wrongly-cased discount code to be rejected?"
+    ],
+    "concepts": [
+     "coupon"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The account coupons page uppercases coupon codes in the card and in the copied clipboard value",
+    "question": "How does the account coupons page display and copy a coupon code?",
+    "anchors": [
+     "/account/coupons"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "The coupon card on /account/coupons forces the code to uppercase in JavaScript, both in the display and in the copied clipboard value - a presentation-only issue, since the uppercased code still applies.",
+    "fromNotes": false,
+    "questions": [
+     "Why does my coupon look all capitals in my account when I received it in lowercase?",
+     "When a buyer copies a code from the account coupons list, is the original letter case preserved?",
+     "Does the coupon card on the account page transform the code before showing or copying it?",
+     "Is the uppercase coupon code on the my-coupons page a defect that breaks redemption?"
+    ],
+    "concepts": [
+     "public-coupon-list"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "7ada806a11deff13"
+ },
+ {
+  "id": "KB-0B27E984",
+  "action": "split",
+  "why": "(a) unrelated side finding: the gift checkbox's wrong accessible name is an accessibility defect noticed while observing the auto-gift order behaviour",
+  "children": [
+   {
+    "subject": "A pre-checked auto-promotion gift on the cart page silently becomes a zero-price line of the placed order without showing in the cart table, count or subtotal",
+    "question": "Does the \"+ Add a gift\" section on the cart page add a gift line item to the placed order by default?",
+    "anchors": [
+     "/account/orders/{id}",
+     "Mutation.createOrderFromCart",
+     "Query.cart"
+    ],
+    "surface": [
+     "storefront-ui",
+     "xapi",
+     "rest"
+    ],
+    "body": "Placing an order with exactly one product added to the cart produced an order containing TWO line items. The cart page shows a \"+ Add a gift\" panel below the product table offering a printer with its checkbox ALREADY CHECKED on arrival, a disabled quantity of 1, and no price. Nothing else on the cart reflects it: the product table lists one row, the cart badge reads 1, \"Subtotal\" is the single product's price, and the GA4 view_cart event reports items_count=1. After Place order, createOrderFromCart returns the gift as a second line item with isGift:true, price $0.00 and a discount from promotion \"Auto Gift (no coupon)\", and the GA4 purchase event reports items_count=2 with the printer at $0.00, qt1, carrying that promotion. The placed-order page likewise renders the printer in its own \"+ Add a gift\" panel, outside the product table, so the order's product table and subtotal still show only the one purchased product. The panel offers no visible indication that the item is an applied promotion reward rather than an optional add-on. Net effect: a shopper who never interacts with the gift panel still receives an extra order line, and a check that asserts confirmation line items equal cart line items, or an items[] length, sees an extra row it never added. The stored order record shows the gift line is well-formed: quantity 1, price/placedPrice/extendedPrice all 0, taxTotal 0, isGift=true, a discount of 0 from the promotion; it contributes nothing to money, since the order subtotal is the other line alone and the total reconciles without it. The promotion fires every time because it is active, has no coupons, and its condition tree is everyone plus empty catalog and cart conditions with a gift-item reward, so the backend behaviour is correct per the promotion as configured. It is not specific to one order or to configurable products: a gift line was on 11 of the last 12 orders of the store, across three shoppers and both configured and plain carts. The gift IS visible over the API - GraphQL Query.order items{isGift} returns true for it - so a storefront order page that omits it from the product table is choosing to, not missing the data.",
+    "fromNotes": true,
+    "questions": [
+     "Why did my order contain a free item I never added to my cart?",
+     "Is the free gift offered on the cart page automatically included when I place the order?",
+     "Why does a placed order have one more line item than the cart showed, and should QA flag it?",
+     "Does the storefront order page hide gift line items even though the order API returns them with isGift?",
+     "Does an unconditional gift promotion add a zero-price line to every order placed in the store?",
+     "Why does the analytics purchase event report more items than the view_cart event for the same cart?"
+    ],
+    "concepts": [
+     "gift",
+     "order-line-item"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The cart gift row's checkbox carries a wrong accessible name copied from the product table's select-all",
+    "question": "What accessible name does the gift checkbox in the cart's \"+ Add a gift\" panel expose?",
+    "anchors": [
+     "Query.cart"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "On the cart page's \"+ Add a gift\" panel, the gift row's checkbox carries aria-label \"Toggle vendor select\", copied from the product table's select-all.",
+    "fromNotes": false,
+    "questions": [
+     "What does a screen reader announce for the gift checkbox on the cart page?",
+     "Does the add-a-gift checkbox have a correct accessible label for a WCAG audit?",
+     "Which aria-label is set on the gift row checkbox in the cart gift panel?",
+     "Is the gift selector on the basket page labelled as a vendor toggle for assistive technology?"
+    ],
+    "concepts": [
+     "accessibility",
+     "gift"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "d6f3660489713c6f"
+ },
+ {
+  "id": "KB-17555498",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Will I get an email or an app notification each time the status of my return changes?",
+   "Which return status changes notify the buyer, and which edits such as drafts or cancelling a draft send nothing?",
+   "Can a return decision report success while the buyer's email and push are never sent, and does requeueing the background job recover it?",
+   "In which language is a return status notification sent when the return culture is empty or has no localized template?",
+   "Does writing the Return.SendNotifications store setting through the settings API disable return emails?",
+   "Which scheduled jobs and journal records does a return status change produce for the email and the push message?"
+  ],
+  "concepts": [
+   "return",
+   "notification",
+   "background-job"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f11af3c56e6fa633"
+ },
+ {
+  "id": "KB-27B4CD10",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "Why does my company members list show a colleague as Active when they cannot log in?",
+   "Does blocking a member in the organization change the status shown in the storefront members roster?",
+   "Does locking a platform user account or setting the contact status to Locked show up in the company members list?",
+   "Which fields of the organization contacts query drive the member status badge on the roster page?",
+   "Where should an admin check whether an invited or locked colleague can actually sign in?"
+  ],
+  "concepts": [
+   "membership-status",
+   "member-block",
+   "account-lockout"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "bbae3c421f18e71f"
+ },
+ {
+  "id": "KB-29037452",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "How can I tell which loyalty points I spent and which I earned in my points history?",
+   "Should redeemed points appear with a minus sign or a different colour on the points history page?",
+   "Does the loyalty transactions page show a running balance per row or only one total balance?",
+   "Is an unsigned redeemed amount in the rewards history a product defect or intended behaviour for a test oracle?"
+  ],
+  "concepts": [
+   "loyalty-history",
+   "loyalty"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "a87ae0961ca13f69"
+ },
+ {
+  "id": "KB-44B7B71E",
+  "action": "split",
+  "why": "(b) divergent evidence: a later note confirms the ordering / no-preselection half but contradicts the offered set (four methods, not six), so the set and the ordering can no longer share one trust figure",
+  "children": [
+   {
+    "subject": "The payment methods a B2B cart offers are the store's active payment methods from availablePaymentMethods, and the set differs per deployment",
+    "question": "Which payment methods does the storefront offer a signed-in B2B buyer, and where does that list come from?",
+    "anchors": [
+     "Query.cart.availablePaymentMethods",
+     "POST /api/payment/search",
+     "PaymentMethodType.priority"
+    ],
+    "surface": [
+     "xapi",
+     "rest",
+     "storefront-ui"
+    ],
+    "body": "Observed on store B2B-store, signed in as an organization buyer with one physical item in the cart. The storefront offered six options: \"Bank card (Authorize.Net)\", \"Bank card (CyberSource)\", \"Bank card (Datatrans)\", \"Manual\", \"Pay with points\", \"Bank card (Skyflow)\". Query.cart.availablePaymentMethods returns exactly those six. Their codes/types/priorities: AuthorizeNetPaymentMethod (PreparedForm, priority 1), CyberSourcePaymentMethod (Standard, 0), DatatransPaymentMethod (Standard, 0), DefaultManualPaymentMethod (Unknown, 1), LoyaltyPaymentMethod (Unknown, 0), SkyflowPaymentMethod (PreparedForm, 0). Behind that, POST /api/payment/search returns 21 rows system-wide across all stores; B2B-store has exactly six rows, all isActive=true, with priorities that match the GraphQL priorities one-for-one. Six distinct method codes exist in the whole system, so B2B-store enables all of them. On a second deployment the same store's cart offers FOUR methods, not six: \"Bank card (Authorize.Net)\", \"Bank card (CyberSource)\", \"Manual\", \"Bank card (Skyflow)\" - Datatrans and \"Pay with points\" are absent - so the offered set is per-deployment. Every method row on the observed store is isActive=true, so this does NOT demonstrate that setting isActive=false removes a method from the cart - only that the enabled set and the offered set coincide.",
+    "fromNotes": true,
+    "questions": [
+     "Which ways to pay can I choose from when buying as a company account?",
+     "Why does the B2B store offer a different number of payment options on one environment than on another?",
+     "Does availablePaymentMethods on the cart return exactly the store's active payment method records?",
+     "Does deactivating a payment method in the store remove it from the buyer's cart options?",
+     "How do the cart's payment options relate to the payment method search results in the platform API?"
+    ],
+    "concepts": [
+     "payment-method",
+     "store"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Cart payment methods render unselected and ordered alphabetically by method code, not by configured priority",
+    "question": "In what order are payment methods listed at the cart's payment step, and is any of them preselected?",
+    "anchors": [
+     "/cart",
+     "Query.cart.availablePaymentMethods",
+     "PaymentMethodType.priority"
+    ],
+    "surface": [
+     "storefront-ui",
+     "xapi"
+    ],
+    "body": "Payment selection is on the /cart page itself, in a \"Payment details\" section (alongside \"Shipping details\"), not on a separate /checkout/payment route. The control is a \"Payment method*\" dropdown. Nothing is preselected: the control reads \"Select a payment method\" and no option carries a selected state, and Place order is disabled with \"Complete all required information to proceed.\" until a method is chosen. The list renders in full before any shipping address or delivery method is chosen, so it is not gated on shipping selection. The dropdown renders the methods in exactly the order Query.cart.availablePaymentMethods returns them - the UI does no filtering or re-sorting of its own. That order is not priority: with priorities 1,0,0,1,0,0 the rendered order is neither ascending nor descending by priority. It is alphabetical by method code (AuthorizeNet < CyberSource < Datatrans < DefaultManual < Loyalty < Skyflow). The platform developer guide states that a store's priority setting determines \"the order in which the payment methods will be displayed at checkout\" - that did not hold here. On a second deployment with a smaller set the order was still alphabetical by code (AuthorizeNet < CyberSource < DefaultManual < Skyflow), so the sort key is not per-deployment. The observation cannot distinguish alphabetical-by-code from registration order that happens to coincide with it.",
+    "fromNotes": true,
+    "questions": [
+     "Why is no payment option selected for me when I reach the payment part of checkout?",
+     "Does changing a payment method's priority in the store change the order buyers see them in?",
+     "Is the payment method dropdown sorted by priority, alphabetically, or as the API returns it?",
+     "Why is Place order disabled until the buyer picks a way to pay?",
+     "Does the storefront re-sort or filter availablePaymentMethods before rendering the selector?"
+    ],
+    "concepts": [
+     "payment-method",
+     "sort"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "b22bed2586bb23b3"
+ },
+ {
+  "id": "KB-4B47D094",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi",
+   "rest"
+  ],
+  "questions": [
+   "When I pick an option that comes in a pack of two, is its price counted once or twice in my product price?",
+   "Is a configurable product's option added to the line price at its unit price or at unit price times option quantity?",
+   "Does the configured line keep the same price from product page through cart and checkout to the placed order?",
+   "Can a shopper change the quantity of a configuration option on the product detail page?",
+   "Why does the placed order's components list not show the section and price of each configuration option?",
+   "How does the persisted order store a configuration item's price, sale price and extended price versus the parent line?"
+  ],
+  "concepts": [
+   "configured-line-item",
+   "configurable-product",
+   "price"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "e07734cc8d181cdf"
+ },
+ {
+  "id": "KB-50EBEEE9",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Where do I enter my delivery address and payment when I want to check out?",
+   "Is there a separate checkout page, or does the whole checkout happen on the cart page?",
+   "What must be filled in before the Place order button becomes enabled?",
+   "What does the order confirmation page show, and where should a test assert the ordered items and totals?",
+   "Why does the address form keep the state field disabled until a country is selected?",
+   "Is a newly placed order already paid, or is paying a separate step after placing it?"
+  ],
+  "concepts": [
+   "checkout",
+   "address",
+   "shipping-method"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "da72cd85afeecf09"
+ },
+ {
+  "id": "KB-6AF43C39",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "How soon after a message is sent to me does it appear in my notification inbox?",
+   "How quickly does a push message sent to specific member ids reach the recipients' inboxes?",
+   "Is the inbox item id returned by pushMessages the same as the push message id from the admin API?",
+   "Does marking one push notification as read affect the other messages in the inbox?",
+   "What read and hidden state does a freshly delivered in-app notification start with?"
+  ],
+  "concepts": [
+   "push-message",
+   "push-audience"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "5302b957c71ffd66"
+ },
+ {
+  "id": "KB-6D5E2CD1",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why do I see a different price than my colleague for the same product?",
+   "What decides which price list a B2B customer group gets on the storefront?",
+   "Should a price list assignment be scoped to the store or to the catalog when the store uses a virtual catalog?",
+   "Does the price list priority or the assignment priority decide which price wins?",
+   "Why does a price list full of prices never show on the storefront?",
+   "Which conditions on a pricelist assignment - dates, eligible shoppers, scope - gate whether it applies?"
+  ],
+  "concepts": [
+   "price-list",
+   "user-group"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f440ac02bb871f71"
+ },
+ {
+  "id": "KB-734A0813",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "If I add the same product to my basket twice, do I get one row or two?",
+   "Why doesn't the cart item count go up when a test adds the same SKU again?",
+   "Is a configured product added twice with an identical configuration merged into one line?",
+   "Does mergeCart combine configured line items from the guest cart with matching ones in the user's cart?",
+   "Does addItem consolidate quantity into an existing line item for the same product?"
+  ],
+  "concepts": [
+   "add-to-cart",
+   "configured-line-item",
+   "cart-merge"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "b40f067783b89793"
+ },
+ {
+  "id": "KB-7837F100",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does scanning the barcode of a product find nothing when the product exists?",
+   "Can a product without a price in the store currency be found by barcode lookup?",
+   "Is it the barcode middleware or the storefront's own price filter term that hides unpriced products?",
+   "Will an integration calling Query.products with a barcode filter get products that have no prices?",
+   "What filter does the storefront search page send for a barcode query?"
+  ],
+  "concepts": [
+   "barcode-search",
+   "product-filter",
+   "price"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "d87ec5b6fb65fd6f"
+ },
+ {
+  "id": "KB-8264632C",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "How do I know whether the promo code I entered in my cart was actually accepted?",
+   "Why does the cart show a coupon code in an editable box with an Apply button even though it is on the cart?",
+   "How can a shopper remove a coupon that is stored on the cart but did not apply?",
+   "Is the cart's 'does not match any active coupons' message returned by the API or written by the page?",
+   "Does the cart page call validateCoupon before addCoupon, and is isAppliedSuccessfully what drives the coupon box?",
+   "Does applying a second voucher in the cart replace the first, and which code does the discount row credit?"
+  ],
+  "concepts": [
+   "coupon",
+   "discount"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "b28afae258601828"
+ },
+ {
+  "id": "KB-8646A9CB",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "storefront-ui"
+  ],
+  "questions": [
+   "What happens after I type the wrong password several times in a row?",
+   "Which error code does the token endpoint return once a user is temporarily locked out after failed sign-ins?",
+   "Does an organization member get a permanent or a temporary lockout code for too many failed logins?",
+   "How does a failed-attempt lockout differ from an administrator blocking the member in the organization?",
+   "Does the storefront sign-in page tell the user they are locked out, or only that the credentials failed?",
+   "Does a failed-login lockout change the contact's status in the organization?"
+  ],
+  "concepts": [
+   "account-lockout",
+   "sign-in",
+   "api-error"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "99e81833b613354b"
+ },
+ {
+  "id": "KB-8F33647E",
+  "action": "keep",
+  "surface": [
+   "ucp"
+  ],
+  "questions": [
+   "Does it matter whether an AI shopping agent sends a product id in upper or lower case when creating a cart?",
+   "Why does UCP create_cart return success with an empty cart and a product-unavailable message?",
+   "When the same product is listed twice with different letter case, how does create_cart group the quantities?",
+   "Why does the order of duplicate line entries change whether a UCP cart is created or refused for stock?"
+  ],
+  "concepts": [
+   "ucp",
+   "cart-line-item"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "998fbb05d57eef71"
+ },
+ {
+  "id": "KB-A0B3940F",
+  "action": "split",
+  "why": "(b) divergent evidence: later notes contradict the 'whole value only' matching claim (wildcards inside quotes are honoured) while confirming the variation-scope part",
+  "children": [
+   {
+    "subject": "A quoted xAPI products filter term matches the whole value case-insensitively but honours * and ? wildcards inside the quotes",
+    "question": "Does a quoted term in the Query.products filter match exactly, by prefix, or with wildcards?",
+    "anchors": [
+     "Query.products"
+    ],
+    "surface": [
+     "xapi"
+    ],
+    "body": "In xAPI products(storeId, filter), a quoted term such as code:\"ABC-1\" or gtin:\"<13 digits>\" matches the whole value: a strict prefix of an existing product code, without a wildcard, returns 0. A quoted term is not a pure exact match, though: * and ? inside the quotes are honoured as wildcards - gtin:\"2945100000*\" returned 1 hit, gtin:\"*\" returned 318 and code:\"QA-BC-2945-00?\" returned 8 on an Elasticsearch 8 provider, and the same held through the storefront barcode expansion on code, gtin, manufacturerPartNumber and a short-text property. Values are matched case-insensitively on this deployment's search provider. A double quote inside a quoted value can be escaped with a backslash and still matches.",
+    "fromNotes": true,
+    "questions": [
+     "If I search by the first part of a product code, will the catalog find the product?",
+     "Can a QA filter on a partial SKU or GTIN, or does the quoted value have to be complete?",
+     "Are asterisk and question mark treated as wildcards inside a quoted products filter value?",
+     "Is the Query.products field filter case-sensitive, and how do I escape a double quote in the value?"
+    ],
+    "concepts": [
+     "product-filter",
+     "product-identifier"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The xAPI products filter covers products only by default; variations need an explicit is:variation or is:product,variation scope",
+    "question": "Are variations included when Query.products is filtered by code, gtin or manufacturerPartNumber?",
+    "anchors": [
+     "Query.products"
+    ],
+    "surface": [
+     "xapi"
+    ],
+    "body": "In xAPI products(storeId, filter) the default scope is products only: a variation is found with is:variation code:\"...\", and a manufacturerPartNumber held only by a variation is found with is:product,variation manufacturerPartNumber:\"...\" (1 hit; the parent does not match).",
+    "fromNotes": false,
+    "questions": [
+     "Why can't I find a specific size or colour variant by its item code?",
+     "Does filtering the catalog by manufacturer part number also return variants of a master product?",
+     "Which is: scope must be added to a Query.products filter to match variations?",
+     "When a manufacturer part number exists only on a variation, does the parent product match the filter?"
+    ],
+    "concepts": [
+     "product-variation",
+     "product-filter"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "0d2f0cb7de127d6c"
+ },
+ {
+  "id": "KB-BAEBCDA7",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "admin-ui",
+   "xapi"
+  ],
+  "questions": [
+   "I invited a colleague to the wrong email address - can I cancel or resend that invitation?",
+   "Why does inviting the same address again fail with a duplicate user name and email error?",
+   "Does deleting an invited member from the company roster free the email address for a new invitation?",
+   "How can an admin confirm the invitation email actually left the system when nobody can read the mailbox?",
+   "Does the Resend link on the account blade resend the organization invitation or the email confirmation?",
+   "Does inviteUser provision a real account immediately, before the invited person completes registration?"
+  ],
+  "concepts": [
+   "organization-invitation",
+   "member-deletion",
+   "notification"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "205b2ab17c1a43a6"
+ },
+ {
+  "id": "KB-D080C209",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Can my account manager open and pay my company's orders on my behalf?",
+   "Can a sales representative pay a served customer's order from the buyer order page?",
+   "Why does a sales rep get access denied on orders of organizations they do not serve?",
+   "Which principals does the order access rule allow on a buyer order route, and why does a serving rep qualify?",
+   "Is a rep seeing a pay action on a customer's order a security defect or intended behaviour?"
+  ],
+  "concepts": [
+   "sales-rep",
+   "organization-order-access"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "e4b8307671a8d578"
+ },
+ {
+  "id": "KB-DB7B6317",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does my order show a status name that is different from what the store back office calls it?",
+   "Which order statuses can an administrator set from the order status dropdown?",
+   "Why can't Processing be selected manually on an order in the back office?",
+   "Should seeded test orders use the admin status value or the storefront label, and do they map one-to-one?"
+  ],
+  "concepts": [
+   "order-status",
+   "admin-order-screen"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "926fd57860b6a652"
+ },
+ {
+  "id": "KB-E149ACF0",
+  "action": "keep",
+  "surface": [
+   "vendor-ui"
+  ],
+  "questions": [
+   "If I close a panel in the vendor portal and refresh the page, does the closed panel come back?",
+   "Does the URL update when a blade is closed with Esc, the X button, a breadcrumb or the mobile back arrow?",
+   "Does cancelling the unsaved-changes dialog keep the blade and its route?",
+   "Do non-routable child blades appear in the hash route, and what does Esc close when a child is open?"
+  ],
+  "concepts": [
+   "blade-navigation",
+   "vendor-portal"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c0b42f6c9470bdd6"
+ }
+]

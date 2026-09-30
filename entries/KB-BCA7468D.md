@@ -3,6 +3,16 @@ id: KB-BCA7468D
 subject: two endpoints disagree about whether a password hash is a secret
 plane: experiential
 question: can a security account's password hash be read back over the REST API
+questions:
+  - text: Could someone read my stored password hash through the platform's API?
+  - text: Which platform endpoint leaks a security account's password hash inside the member payload?
+  - text: Does the security users endpoint blank passwordHash while the members endpoint returns it populated?
+  - text: Is it safe to paste a raw contact API response into a bug report or screenshot?
+  - text: Does a null password hash on the security endpoint mean the account has no password?
+concepts:
+  - id: security-account
+  - id: contact
+  - id: rest-api
 status: active
 appliesTo:
   - axis: surface

@@ -3,12 +3,20 @@ id: KB-3BFF73A3
 subject: "xAPI products filter: sku: is accepted as an alias of code, but mpn: is not an alias of manufacturerPartNumber and matches nothing"
 plane: experiential
 question: Which field names does Query.products filter accept for a product's SKU and manufacturer part number?
+questions:
+  - text: Can I search the shop by manufacturer part number using a short field name?
+  - text: Which filter field names work for SKU and part number when filtering the product catalog?
+  - text: Is sku an alias of code in the products query filter, and is mpn an alias of manufacturerPartNumber?
+  - text: What does the products filter return for a field name that is not in the search index?
+concepts:
+  - id: product-filter
+  - id: product-identifier
 status: active
 appliesTo:
   - axis: element
     value: products-filter-field-names
   - axis: surface
-    value: storefront-xapi
+    value: xapi
 anchors:
   - coordinate: Query.products
 evidence:

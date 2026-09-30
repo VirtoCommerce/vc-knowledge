@@ -3,10 +3,19 @@ id: KB-40CBB0C5
 subject: a promotion's reward is set by editing the BlockReward children array in its dynamicExpression
 plane: experiential
 question: How do I set a promotion's discount reward through PUT /api/marketing/promotions?
+questions:
+  - text: How do I make a newly created deal actually give a percentage off the order?
+  - text: Where in a promotion's expression tree does the discount reward go when configuring it by API?
+  - text: Why does updating a promotion return 500 when children arrays are sent as index-keyed objects?
+  - text: Which reward node gives percent off versus a fixed amount off the cart subtotal?
+  - text: How is promotion exclusivity set, and how are bad date values handled on update?
+concepts:
+  - id: promotion-reward
+  - id: promotion
 status: active
 appliesTo:
   - axis: surface
-    value: rest-api
+    value: rest
 anchors:
   - coordinate: PUT /api/marketing/promotions
   - coordinate: Promotion.dynamicExpression

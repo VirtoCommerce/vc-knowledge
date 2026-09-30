@@ -3,6 +3,15 @@ id: KB-E17E4CEF
 subject: admin account Status picker cannot represent the values it displays
 plane: experiential
 question: Why does the Admin account Status field show a value that is not in its own dropdown?
+questions:
+  - text: Why does a user's status show Locked but the status list only offers four other choices?
+  - text: Is it safe for an admin to change the account Status picker on a Locked or PendingApproval user?
+  - text: "How should I stop an account from signing in: the Status field or the Lock account button?"
+  - text: Is the security account status a free string, and which values can the fixed picker not represent?
+  - text: What does the Status control show for a freshly invited back-office account?
+concepts:
+  - id: security-account
+  - id: account-lockout
 status: active
 appliesTo:
   - axis: surface

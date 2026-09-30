@@ -3,6 +3,15 @@ id: KB-6A20B0AF
 subject: omitting an optional xAPI context argument returns 200 with wrong or empty data, never an error
 plane: experiential
 question: Why does an xAPI query such as loyaltyMissionProgress return null fields when cultureName, storeId, userId or organizationId is omitted?
+questions:
+  - text: Why does my loyalty mission list show names but no descriptions?
+  - text: Two testers get different GraphQL results for the same query - could a missing store or language argument explain it?
+  - text: Does xAPI return an error when cultureName, storeId, userId or organizationId is left out of a query?
+  - text: Which default does the storefront API substitute when an optional context argument is omitted, and is the response still 200?
+  - text: How common are optional culture and store arguments across the GraphQL query surface?
+concepts:
+  - id: context-argument
+  - id: graphql-api
 status: active
 appliesTo:
   - axis: surface

@@ -3,6 +3,14 @@ id: KB-E7DF9B84
 subject: the storefront footer renders top-level link-list entries as section headers and only their children as links
 plane: experiential
 question: Why do white-label footer links render as non-clickable text on the storefront?
+questions:
+  - text: Why are the links at the bottom of the store just plain text that I cannot click?
+  - text: How must a white-label footer link list be structured so its entries render as clickable links?
+  - text: Why does the mobile footer accordion open to nothing for a flat link list?
+  - text: How are child link lists nested under a footer header, and is the name matching scoped per list or global?
+concepts:
+  - id: footer
+  - id: white-labeling
 status: active
 appliesTo:
   - axis: surface

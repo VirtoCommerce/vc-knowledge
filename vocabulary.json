@@ -766,7 +766,6 @@
         "search page",
         "search box",
         "search bar",
-        "search history",
         "find product",
         "search term"
       ],
@@ -1246,7 +1245,6 @@
         "return request",
         "product return",
         "return merchandise",
-        "return status",
         "draft return",
         "submit return",
         "cancel return",
@@ -2022,9 +2020,6 @@
         "platform api",
         "rest endpoint",
         "rest route",
-        "swagger",
-        "openapi",
-        "api document",
         "rest"
       ],
       "anchors": [
@@ -2540,6 +2535,56 @@
         "breadcrumb",
         "routable blade",
         "child blade"
+      ],
+      "anchors": []
+    },
+    {
+      "id": "order-deletion",
+      "label": "Order deletion",
+      "parent": "customer-order",
+      "aliases": [
+        "delete order",
+        "order deletion",
+        "remove order",
+        "deleteordersbyids"
+      ],
+      "anchors": []
+    },
+    {
+      "id": "openapi-document",
+      "label": "Openapi document",
+      "parent": "rest-api",
+      "aliases": [
+        "api document",
+        "swagger",
+        "openapi",
+        "swagger document",
+        "ignoreapi",
+        "hidden endpoint"
+      ],
+      "anchors": []
+    },
+    {
+      "id": "return-status",
+      "label": "Return status",
+      "parent": "return",
+      "aliases": [
+        "return status",
+        "rma status",
+        "return state",
+        "available statuses"
+      ],
+      "anchors": []
+    },
+    {
+      "id": "search-history",
+      "label": "Search history",
+      "parent": "product-search",
+      "aliases": [
+        "search history",
+        "recent searches",
+        "previous searches",
+        "search dropdown history"
       ],
       "anchors": []
     }

@@ -3,6 +3,17 @@ id: KB-50EBEEE9
 subject: Storefront checkout happens on the /cart page itself; there is no separate checkout route until the order completes.
 plane: experiential
 question: what does the storefront require to place an order, and where does checkout happen
+questions:
+  - text: Where do I enter my delivery address and payment when I want to check out?
+  - text: Is there a separate checkout page, or does the whole checkout happen on the cart page?
+  - text: What must be filled in before the Place order button becomes enabled?
+  - text: What does the order confirmation page show, and where should a test assert the ordered items and totals?
+  - text: Why does the address form keep the state field disabled until a country is selected?
+  - text: Is a newly placed order already paid, or is paying a separate step after placing it?
+concepts:
+  - id: checkout
+  - id: address
+  - id: shipping-method
 status: active
 appliesTo:
   - axis: store

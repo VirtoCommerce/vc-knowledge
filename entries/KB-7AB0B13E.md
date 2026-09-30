@@ -3,12 +3,19 @@ id: KB-7AB0B13E
 subject: removing a product configuration
 plane: experiential
 question: can a product configuration be deleted once it has been created
+questions:
+  - text: Can I delete a product's configuration options once they have been set up?
+  - text: What does the Delete button on the admin product configuration blade actually remove?
+  - text: Is there a DELETE route for product configurations, and how do I tear one down in tests?
+  - text: Why do an unconfigured product and a deactivated configuration look the same in the back office?
+concepts:
+  - id: configurable-product
 status: active
 appliesTo:
   - axis: surface
     value: rest
   - axis: surface
-    value: admin-spa
+    value: admin-ui
 anchors:
   - coordinate: POST /api/catalog/products/configurations
   - coordinate: ProductConfiguration.isActive

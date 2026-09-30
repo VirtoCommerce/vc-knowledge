@@ -3,10 +3,21 @@ id: KB-4CCC2DD6
 subject: what Cancel document on an order actually cancels
 plane: experiential
 question: I cancelled an order in Admin -- is everything on it cancelled now
+questions:
+  - text: If the shop cancels my order, is my reserved stock put back?
+  - text: When an operator cancels an order document, are its shipment and line items cancelled too?
+  - text: Why does an order look unchanged right after clicking Cancel document in the back office?
+  - text: Does order cancellation cascade to the incoming payment, and which cancellation field stays Undefined?
+concepts:
+  - id: order-cancellation
+  - id: shipment
+  - id: order-payment
 status: active
 appliesTo:
   - axis: surface
     value: admin-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: GET /api/order/customerOrders/{id}
   - coordinate: CustomerOrder.isCancelled

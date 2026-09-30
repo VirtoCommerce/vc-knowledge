@@ -3,14 +3,23 @@ id: KB-ADFD93AB
 subject: org-specific pricing runs through the organization's user groups, not through organizationId
 plane: experiential
 question: What makes a B2B customer who belongs to an organization get a different price?
+questions:
+  - text: Why does my company see special prices when my own profile has no groups?
+  - text: How do I set up contract pricing for one B2B customer when there is no organization condition?
+  - text: Is price list assignment eligibility matched against the organization's user groups or only the contact's?
+  - text: How does a contract's base and priority price list assignment decide which price a buyer sees?
+concepts:
+  - id: price-list
+  - id: user-group
+  - id: organization
 status: active
 appliesTo:
+  - axis: principal
+    value: org-member
   - axis: surface
     value: admin-ui
   - axis: surface
     value: storefront-ui
-  - axis: principal
-    value: org-member
 anchors:
   - coordinate: PriceEvaluationContext.userGroups
   - coordinate: PriceEvaluationContext.organizationId

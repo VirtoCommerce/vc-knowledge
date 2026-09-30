@@ -1,0 +1,684 @@
+[
+ {
+  "id": "KB-A0C1338B",
+  "action": "split",
+  "why": "(a) two different APIs a reader reaches separately: the available-statuses lookup (with its admin dropdown mirror and duplicate Canceled/Cancelled values) versus the PUT /api/return edit guards on decided returns",
+  "children": [
+   {
+    "subject": "Return available-statuses offers both Canceled and Cancelled, mirrored in the admin status dropdown",
+    "question": "Which statuses does GET /api/return/{id}/available-statuses offer for each return status?",
+    "anchors": [
+     "GET /api/return/{id}/available-statuses"
+    ],
+    "surface": [
+     "rest",
+     "admin-ui"
+    ],
+    "body": "Observed on Return module 3.1003 (PR build). GET /api/return/{id}/available-statuses returned: New -> [New, Completed, Canceled, Processing, Cancelled]; Requested -> [Requested]; Draft -> [Draft]; Approved -> [Approved, Completed, Processing]; PartiallyApproved -> [Completed, Processing, PartiallyApproved]; Rejected -> [Rejected]; Cancelled -> [Canceled, Cancelled]; a legacy Completed return without decided lines -> [New, Completed, Canceled, Processing, Cancelled]. The admin status dropdown shows the same list. On a cancelled return the Status dropdown and the Returns 'All statuses' filter show both values, and in translation they are indistinguishable (de Storniert twice, ru Отменён twice). Saving Completed -> New and New -> Completed in the admin UI both persisted.",
+    "fromNotes": true,
+    "questions": [
+     "Why does the return status dropdown show two cancel options that look identical?",
+     "Which target statuses may an admin pick for a return that is New, Requested, Approved or Cancelled?",
+     "What list does the available-statuses endpoint return per return state, and does it contain both Canceled and Cancelled?",
+     "Can a completed return be moved back to New from the back office, and does it save?",
+     "In German or Russian, can a support agent tell the two cancelled return statuses apart in the filter?"
+    ],
+    "concepts": [
+     "return-status",
+     "return",
+     "localization"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "PUT /api/return on a decided return discards decision changes with a 200",
+    "question": "What happens to decision fields sent in a PUT /api/return on an already decided return?",
+    "anchors": [
+     "PUT /api/return"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "On a decided return, PUT /api/return changing approvedQuantity, itemState, line quantity or decline reasons returns 200 and the stored decision is unchanged (the fields are discarded without an error); moving to Approved/Requested/Cancelled or adding/removing a line returns 400 with a message. On a Requested return a PUT that raises a line quantity within the order's availability returns 200 and changes the buyer's requested quantity with no notification; above availability it is 400 'LineItem ... has incorrect quantity'. Moving a decided return to Processing and then Completed keeps the released quantities.",
+    "fromNotes": false,
+    "questions": [
+     "If support edits my return after it was approved, can they change what was approved?",
+     "Why does saving new approved quantities on a decided return succeed but change nothing?",
+     "Which return updates are rejected with 400 and which are silently ignored with 200?",
+     "Can an admin raise the quantity on a requested return without the buyer being told?",
+     "Does moving a decided return through Processing to Completed keep the released quantities?"
+    ],
+    "concepts": [
+     "return-decision",
+     "returnable-quantity"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "22ac824ad26a1863"
+ },
+ {
+  "id": "KB-A1B35892",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "When I build a product with options, why does my basket show one line instead of one per option?",
+   "Why do two configured lines of the same product share the same SKU in the cart?",
+   "How is the price of a configured line item rolled up from base price and option quantities?",
+   "Can a buyer change the quantity of an option inside a product configuration?",
+   "Which configuration item fields does CartConfigurationItemType expose compared with what is stored?"
+  ],
+  "concepts": [
+   "configured-line-item",
+   "configurable-product"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "6075d82eee1b60ef"
+ },
+ {
+  "id": "KB-A23A4A41",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "If the store's white labeling is off, will a company still see its own logo and colours?",
+   "Does an organization theme override the store theme in the white labeling result?",
+   "How does whiteLabelingSettings merge organization and store settings, and what makes menus come back empty?",
+   "Why are the header menu and footer links empty for a white-labeled organization?"
+  ],
+  "concepts": [
+   "white-labeling"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8c951b125f6ee5e6"
+ },
+ {
+  "id": "KB-A3CE7FBA",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "rest"
+  ],
+  "questions": [
+   "My order shows a discount amount; can I work out what percent off it was?",
+   "Why does dividing the cart discount by the subtotal not give back the configured percentage?",
+   "What base is a percentage-off-subtotal reward computed on when item-level rewards also apply?",
+   "Where does an item-level discount show up, and why is it missing from the discounts collection?",
+   "Which surfaces serve the unrounded discount amount needed to reverse-engineer a rate?"
+  ],
+  "concepts": [
+   "promotion-reward",
+   "discount",
+   "totals"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3eeb401c19fae2d2"
+ },
+ {
+  "id": "KB-A47C7347",
+  "action": "split",
+  "why": "(a) the REST route-shape findings (path-id DELETE and PUT answering 405, the Json-typed setting) are an unrelated side finding noticed while observing barcode scans on a deleted property",
+  "children": [
+   {
+    "subject": "Deleting a configured barcode property and reindexing stops barcode scans matching its value",
+    "question": "What happens to barcode scans on a field whose catalog property is deleted?",
+    "anchors": [
+     "DELETE /api/catalog/properties",
+     "POST /api/search/indexes/index"
+    ],
+    "surface": [
+     "rest",
+     "xapi"
+    ],
+    "body": "vcst, Catalog 3.1046 (PR 909 build), event-based indexation off: with barcode fields = [a Product ShortText property], xAPI products(filter: ... barcode:'<value>') returns 1 hit; after DELETE /api/catalog/properties?id=<id>&doDeleteValues=true (204) and POST /api/search/indexes/index for that product (200), the same query returns totalCount 0 within about 5-10 s, with no errors[]. The store setting still lists the field, and the dedicated barcode fields GET still lists it, while the /fields list no longer contains the property; re-PUT of the same selection returns 400. On a store whose only configured barcode field was the deleted property, the response still listed the deleted field as a filter with isGenerated true, and a GTIN that exists on a product also returned 0.",
+    "fromNotes": true,
+    "questions": [
+     "Why does scanning a product's barcode suddenly find nothing after an attribute was removed from the catalog?",
+     "After deleting the property used as a barcode field, does the store setting still show it as configured?",
+     "Does a barcode query return an error or just zero hits once its only configured field's property is deleted and reindexed?",
+     "Why is saving the same barcode field selection refused with 400 after the property was deleted?"
+    ],
+    "concepts": [
+     "barcode-settings",
+     "search-index",
+     "product-property"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Store update and property delete reject id-in-path routes with 405",
+    "question": "What are the correct REST route shapes for updating a store and deleting a catalog property?",
+    "anchors": [
+     "DELETE /api/catalog/properties",
+     "PUT /api/stores"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "DELETE /api/catalog/properties/{id} (id in path) answers 405, and PUT /api/stores/{id} answers 405 — store update is PUT /api/stores with the whole store body; Catalog.Search.BarcodeSearchFields is a Json-typed setting whose value is a JSON string.",
+    "fromNotes": false,
+    "questions": [
+     "Why does my script get 405 Method Not Allowed when updating a store by id in the URL?",
+     "How do I delete a catalog property through the platform API: path id or query parameter?",
+     "What value format does the barcode search fields store setting expect when written over REST?"
+    ],
+    "concepts": [
+     "rest-api",
+     "store"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "17000985811ef482"
+ },
+ {
+  "id": "KB-A4EB3766",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "After I place an order, what happens to my shopping basket?",
+   "Can support see what a customer's cart looked like at the moment they checked out?",
+   "Does the cart record survive order placement, and does it keep its id and created date?",
+   "Where should an investigation read the purchased lines and discounts if the cart has been emptied?"
+  ],
+  "concepts": [
+   "cart",
+   "checkout"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "144c002fa77ddb67"
+ },
+ {
+  "id": "KB-A5F9BBED",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why does a blocked company member look unlocked when I check the roster as an administrator?",
+   "Which token must I use to assert whether a member is locked in the organization?",
+   "What drives isLockedInOrganization: the userId argument or the caller's organization claim?",
+   "How can I reliably read a member's lock state without an organization-scoped storefront token?"
+  ],
+  "concepts": [
+   "member-block",
+   "access-token"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "b90705a2d8383257"
+ },
+ {
+  "id": "KB-A613223B",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "I added something to my cart but the response shows the cart as empty - did it work?",
+   "How should a test get the id of a newly added line item?",
+   "Why does the addItem mutation return an empty items list after a successful add?",
+   "Which follow-up cart mutations return the settled line items with ids?"
+  ],
+  "concepts": [
+   "add-to-cart",
+   "cart-line-item"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "75abdf62aabb531a"
+ },
+ {
+  "id": "KB-A871AA8D",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "If a rep shares my private list with my company the old way, who does it end up shared with?",
+   "What happens to the legacy sharedWithId input when changing a list to Customer sharing?",
+   "Is an old single-recipient share call dropped or converted to the new multi-target model?"
+  ],
+  "concepts": [
+   "list-sharing"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "77b6fe98b2645909"
+ },
+ {
+  "id": "KB-A8B46253",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why can a customer with no first or last name on file not sign in to the store at all?",
+   "Why does the current-user query fail with Error trying to resolve field firstName?",
+   "Are contact name fields non-nullable in the storefront GraphQL schema, and what does a null do?",
+   "How do I fix a buyer account that is locked out because its contact record lacks names?"
+  ],
+  "concepts": [
+   "contact",
+   "graphql-api",
+   "sign-in"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "5c9d224481f7605e"
+ },
+ {
+  "id": "KB-A98E467C",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "What do I receive when my sales representative shares a list or sends me a message?",
+   "How long can a message from a sales rep to a customer company be?",
+   "Why can a saved list-share message over 1000 characters not be forwarded to the customer?",
+   "What does sendCustomerCommunication return, and does the push text equal the message verbatim?",
+   "Which organizations does the storefront share dialog notify when a list share is updated?"
+  ],
+  "concepts": [
+   "customer-communication",
+   "push-message"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "36113f81ebbeefb6"
+ },
+ {
+  "id": "KB-AA1147AA",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "How can the storefront tell that I am blocked in one of my companies but not another?",
+   "Which organization field shows my own membership status versus the company's status?",
+   "Does myStatusInOrganization change when a membership is locked?",
+   "Which field detects a lock in a sibling organization that is not the active one?"
+  ],
+  "concepts": [
+   "membership-status",
+   "member-block",
+   "multi-organization"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7e1bf2077de24357"
+ },
+ {
+  "id": "KB-AA3C8721",
+  "action": "split",
+  "why": "(b) later notes confirm that wishlist(listId) is Forbidden and the list is absent from the member's wishlists(), but contradict the claim of no read access: sharedWishlist(sharingKey) grants Read",
+  "children": [
+   {
+    "subject": "A Customer-scope shared wishlist is Forbidden via wishlist(listId) and missing from the recipient's own lists",
+    "question": "Does a target organization member get the Customer-scope shared list through wishlist(listId) or wishlists?",
+    "anchors": [
+     "Query.wishlist",
+     "Query.wishlists",
+     "Mutation.changeWishlist"
+    ],
+    "surface": [
+     "xapi"
+    ],
+    "body": "With a wishlist whose sharingSetting is scope Customer, access Read, and a single target equal to the member's active organization, a buyer of that organization gets errors[Access denied., code Forbidden] with data.wishlist null from wishlist(listId), and the list is absent from that buyer's own wishlists(). A member of a different organization gets the same Access denied. Observed on the multi-target sharing build (sharingSetting.targets[] / addSharedWithIds, vc-module-x-cart 3.1037.0-pr-141, vc-module-cart 3.1011.0-pr-194) on a share created through the storefront; the same denial was observed on the older single sharedWithId model.",
+    "fromNotes": false,
+    "questions": [
+     "Why does a list my sales rep shared with my company not show up in my account lists?",
+     "Opening a rep-shared list by its id returns access denied - is that expected for a company buyer?",
+     "Does wishlist(listId) return Forbidden for a member of the organization a Customer-scope list targets?",
+     "Is a Customer-scope share listed in the recipient's wishlists query results?"
+    ],
+    "concepts": [
+     "list-sharing",
+     "wishlist"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Target organization members read a Customer-scope shared list through its sharing link",
+    "question": "How does a target organization member read a wishlist a sales rep shared with scope Customer?",
+    "anchors": [
+     "Query.wishlists",
+     "Mutation.changeWishlist"
+    ],
+    "surface": [
+     "xapi",
+     "storefront-ui"
+    ],
+    "body": "The target organization's member does get read access to a Customer-scope list, through sharedWishlist(sharingKey) (access Read, isOwner false, current message); members of each targeted organization opened /shared-list/<key> and saw the list with 'Recommended by your sales representative', while a removed organization's member got /403. The member's wishlists() is not necessarily totalCount 0 or free of non-owner lists: it returned an Organization-scope list of the member's own organization with isOwner false, while the Customer share was absent.",
+    "fromNotes": true,
+    "questions": [
+     "How do I open a product list my sales representative recommended to my company?",
+     "Does a member of a targeted company get read access to a Customer-scope list via its share link?",
+     "What does sharedWishlist(sharingKey) return for a Customer-scope list read by a target organization member?",
+     "What happens to a shared-list link for a member whose organization was removed from the targets?",
+     "Can a member's own lists include non-owner lists shared at organization scope?"
+    ],
+    "concepts": [
+     "list-sharing",
+     "wishlist",
+     "sales-rep"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "4c5e5413284b03a7"
+ },
+ {
+  "id": "KB-AA610EE3",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Why does the barcode scanner setting look switched off in the store settings when it is actually on?",
+   "What does the Barcode scanner blade render when loading its field list fails?",
+   "Is the false off state of the scanner blade caused only by missing permission or by any fields request failure?",
+   "Does reopening the barcode scanner blade after a network error show the stored settings again?"
+  ],
+  "concepts": [
+   "barcode-settings",
+   "blade-navigation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "9523b589d27d61a7"
+ },
+ {
+  "id": "KB-AB35BCDC",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "Where can I see the original list price of an item on my placed order?",
+   "Why does an order line item have no listPrice or salePrice while the cart line had them?",
+   "Which price fields does an order line item carry compared with a cart line item?",
+   "How do I recover the per-unit list price from an order line?"
+  ],
+  "concepts": [
+   "order-line-item",
+   "price",
+   "cart-line-item"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "516a47022196a315"
+ },
+ {
+  "id": "KB-AD1FA66B",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "If a sale ends while items sit in my basket, will I still get the old discount?",
+   "Why does an abandoned-cart email show a discount the storefront no longer shows?",
+   "Why does the stored cart from the REST API disagree with the storefront cart totals?",
+   "When does a cart mutation write the recomputed discount snapshot back to the stored record?",
+   "Is the storefront cart total recomputed from live promotions on every read?"
+  ],
+  "concepts": [
+   "cart",
+   "discount",
+   "totals"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "1b84313ef19a6fa7"
+ },
+ {
+  "id": "KB-ADA16454",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why am I sent back to my cart when I try to open the order review page?",
+   "Which theme setting turns on the multi-step checkout with a review step?",
+   "Is a redirect from the checkout review route a removed page or a configuration state?"
+  ],
+  "concepts": [
+   "checkout",
+   "theme"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "9a77571c8770ac02"
+ },
+ {
+  "id": "KB-ADAFFBFF",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why can I not remove an optional add-on from my configured product in the cart?",
+   "Why does removing a configuration section succeed with no errors but change nothing?",
+   "What input does removeConfigurationItem need to remove a Product-type section?",
+   "Which validation errors appear when removing a required or incompletely specified configuration section?"
+  ],
+  "concepts": [
+   "configured-line-item",
+   "cart-validation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7a663308b54f0673"
+ },
+ {
+  "id": "KB-ADFD93AB",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does my company see special prices when my own profile has no groups?",
+   "How do I set up contract pricing for one B2B customer when there is no organization condition?",
+   "Is price list assignment eligibility matched against the organization's user groups or only the contact's?",
+   "How does a contract's base and priority price list assignment decide which price a buyer sees?"
+  ],
+  "concepts": [
+   "price-list",
+   "user-group",
+   "organization"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ea6fefe25c500878"
+ },
+ {
+  "id": "KB-B142F52E",
+  "action": "keep",
+  "surface": [
+   "ucp"
+  ],
+  "questions": [
+   "If an agent tries to put more items than are in stock in my cart, what quantity stays in it?",
+   "Is a refused cart update over stock atomic, or does the over-stock quantity persist?",
+   "After update_cart fails with insufficient_stock, what does get_cart report per line?",
+   "Why does checkout handoff give no continue URL after an out-of-stock cart update?"
+  ],
+  "concepts": [
+   "ucp",
+   "inventory",
+   "cart-validation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "2da3942066a5e4aa"
+ },
+ {
+  "id": "KB-B41CE06E",
+  "action": "split",
+  "why": "(a) barcode URL parameter handling and the search-history dropdown are different features of the storefront search a reader reaches separately",
+  "children": [
+   {
+    "subject": "On /search?barcode= the first barcode value wins and a q keyword is ignored",
+    "question": "What does /search?barcode= do when the URL repeats barcode or also carries q?",
+    "anchors": [
+     "/search?barcode=&barcode=",
+     "/search?barcode=&q="
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "Observed on a vc-frontend build carrying the barcode scanner search setup (theme PR 2501 over x-catalog PR 113 and catalog PR 909), store barcode fields configured. /search?barcode=<A>&barcode=<B> does not crash and logs no console error: the first value wins (a shared-GTIN A listed its 3 products even though B alone opens one product). /search?barcode=<single-hit value>&q=<unrelated term> still opens the product page, so the keyword is suppressed while a barcode is present; on a 0-hit barcode with q, Reset search navigates straight to /catalog with both barcode and q cleared, and Back returns to the barcode URL (one history step).",
+    "fromNotes": false,
+    "questions": [
+     "If a scanned link carries two barcodes, which product do I end up seeing?",
+     "Does a keyword in the search URL still count when a barcode is also present?",
+     "What does Reset search do on a zero-hit barcode search that also has a keyword?",
+     "How does the storefront resolve a repeated barcode query parameter on the search route?"
+    ],
+    "concepts": [
+     "barcode-search"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Barcode lookups are never added to the storefront search history",
+    "question": "Does a barcode lookup add an entry to the search history dropdown?",
+    "anchors": [
+     "/search?barcode=&q="
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "Barcode lookups, whether on /search or on a category route, add nothing to the search history shown in the search dropdown for a signed-in buyer, while a keyword submitted from the search bar does appear there right away.",
+    "fromNotes": false,
+    "questions": [
+     "Why do products I scanned not appear in my recent searches?",
+     "Does a barcode scan on a category page get recorded in the buyer's search history?",
+     "Which searches populate the search dropdown history for a signed-in user: keywords, barcodes or both?"
+    ],
+    "concepts": [
+     "search-history",
+     "barcode-search"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "4c58e539a535f65f"
+ },
+ {
+  "id": "KB-B4377884",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why did adding companies to my list share do nothing and show no error?",
+   "What happens when changeWishlist sends added or removed sharing targets without a scope?",
+   "Which sharing refusals return only the generic Error trying to resolve field message?",
+   "What does a rep get when sharing a list with an organization they do not serve?",
+   "Does a legacy single-target share call on a one-target list keep the existing share link?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "api-error"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "fe51a383b573bcbf"
+ },
+ {
+  "id": "KB-B5B57F41",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why do I get a Forbidden page right after signing in when one of my companies blocked me?",
+   "Is the default organization checked against blocked membership statuses at sign-in?",
+   "How does a single-organization member whose default membership is blocked recover access?",
+   "Where is the active organization persisted when a user switches companies, and can REST change it?"
+  ],
+  "concepts": [
+   "multi-organization",
+   "member-block",
+   "sign-in"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3d7abbdeac9ab0d5"
+ },
+ {
+  "id": "KB-B769C7B1",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "admin-ui"
+  ],
+  "questions": [
+   "If my company admin changes my role on the website, does the back office see the same role?",
+   "Why can the storefront role dialog offer only a few roles when the admin lists many more?",
+   "Are organization roles in the storefront and security roles on the account one assignment?",
+   "Why does a member still act with the old role right after it was changed?"
+  ],
+  "concepts": [
+   "organization-role",
+   "platform-role"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "d84c98952046721e"
+ },
+ {
+  "id": "KB-B77CC09C",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does my screen reader read the search result count glued to the surrounding words?",
+   "Is there a missing space in the accessible name of the search results heading?",
+   "How is the result-count heading on keyword and barcode search pages exposed to assistive technology?"
+  ],
+  "concepts": [
+   "accessibility",
+   "product-search"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "fcfb4b887917e1cc"
+ },
+ {
+  "id": "KB-B811FD82",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why did my publicly shared list stop working after I only renamed it?",
+   "After a refused sharing change, why does reading the list flip between old and new sharing?",
+   "Does a refused changeWishlist write to storage, and what does the next rename-only save persist?",
+   "Which changeWishlist refusals poison the cached list read and which do not?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "wishlist"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "5f9ac2046447f135"
+ },
+ {
+  "id": "KB-B858E12A",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "admin-ui"
+  ],
+  "questions": [
+   "How can I tell which platform version is running without an admin login?",
+   "Is there a REST endpoint for the platform version, and do module listings require authentication?",
+   "Does a 200 from the health check prove a newly deployed build is serving?",
+   "Where does the back-office sign-in page show the running version?"
+  ],
+  "concepts": [
+   "platform-version"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "400a9e7afc56689f"
+ }
+]

@@ -3,10 +3,20 @@ id: KB-7BBFAE10
 subject: a UCP-audience token needs resource set to the storefront's /ucp/mcp and must be minted at the storefront
 plane: experiential
 question: How do I mint a token /connect/token will issue with an audience the UCP /ucp/mcp endpoint accepts?
+questions:
+  - text: How do I get a login token that the AI commerce endpoint will accept?
+  - text: Why does the agent commerce endpoint reject my token with an audience of resource_server?
+  - text: Which origin and resource value must a token grant use so its audience matches the storefront MCP endpoint?
+  - text: What causes invalid_target versus invalid_token when minting and using a token for the agent endpoint?
+concepts:
+  - id: access-token
+  - id: ucp
 status: active
 appliesTo:
   - axis: surface
-    value: rest-api
+    value: rest
+  - axis: surface
+    value: ucp
 anchors:
   - coordinate: POST /connect/token
   - coordinate: /ucp/mcp

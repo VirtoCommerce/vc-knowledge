@@ -3,10 +3,19 @@ id: KB-ED76FF4B
 subject: Storefront return detail shows only the line reasonComment, never reasonCode or the legacy free-text reason
 plane: experiential
 question: Does /account/returns/:id show the return reason of each line to the buyer?
+questions:
+  - text: Will I see the reason I chose for returning each item on my return details page?
+  - text: Does the buyer's return detail page display the reason code or only the free-text comment?
+  - text: Why doesn't a return created by an admin show its reason to the customer on the storefront?
+  - text: Does the return line type in GraphQL expose the legacy free-text reason field?
+concepts:
+  - id: return
 status: active
 appliesTo:
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: /account/returns/{}
   - coordinate: Query.return

@@ -3,7 +3,10 @@ id: KB-E8A134DF
 subject: the storefront robots.txt is store content uploaded in Admin, not frontend code
 plane: experiential
 question: Where does the storefront's /robots.txt come from, and how is it changed?
-status: active
+status: superseded
+supersededBy:
+  - id: KB-54D11D0D
+  - id: KB-4E0175CF
 appliesTo:
   - axis: surface
     value: admin-spa

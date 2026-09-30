@@ -3,7 +3,10 @@ id: KB-8A82CF4D
 subject: switching a product's configurability on and off
 plane: experiential
 question: how do I turn a product's configurability off, and how soon does the storefront see it
-status: active
+status: superseded
+supersededBy:
+  - id: KB-1D885AE7
+  - id: KB-8E1456B8
 appliesTo:
   - axis: surface
     value: rest

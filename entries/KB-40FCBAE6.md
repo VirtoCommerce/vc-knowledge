@@ -3,6 +3,14 @@ id: KB-40FCBAE6
 subject: a failed notification after a successful share save shows a warning and offers no resend
 plane: experiential
 question: what happens in the list Share dialog when the notification send fails after the save
+questions:
+  - text: I shared my list but the email didn't go out - can I send it again?
+  - text: Is a shared list still saved when the recipient notification fails?
+  - text: What toast does the Share dialog show when the save succeeds but the message send fails?
+  - text: Does the list Share dialog offer any way to re-notify a recipient after a failed notification?
+concepts:
+  - id: list-sharing
+  - id: customer-communication
 status: active
 appliesTo:
   - axis: surface

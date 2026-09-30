@@ -3,10 +3,22 @@ id: KB-CF3FAD18
 subject: loyalty cart validation errors show on /cart before Place order, which is disabled
 plane: experiential
 question: When a loyalty points cart has insufficient balance, does /cart warn and block Place order before submission?
+questions:
+  - text: If I don't have enough points, does the basket tell me before I try to place the order?
+  - text: Is Place order disabled on the cart when the loyalty balance is insufficient?
+  - text: Which validation error codes does a points cart return, and in which response?
+  - text: Is a points total exactly equal to the balance allowed at checkout?
+  - text: What message appears when a cart holds only points products?
+concepts:
+  - id: loyalty
+  - id: cart-validation
+  - id: checkout
 status: active
 appliesTo:
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: /cart
   - coordinate: CartType.validationErrors

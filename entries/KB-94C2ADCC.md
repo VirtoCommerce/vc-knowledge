@@ -3,6 +3,14 @@ id: KB-94C2ADCC
 subject: a guest on /cart gets no card form for cart-payment gateways and the order is booked unpaid
 plane: experiential
 question: What happens when a guest pays by bank card on /cart with CyberSource or Authorize.Net?
+questions:
+  - text: Checking out as a guest, why is there no box to type my card details even though card payment is selected?
+  - text: Is an unpaid Payment required order placed by a guest through a card gateway evidence of a payment bypass?
+  - text: Does the cart-embedded card form of cart-payment gateways render for anonymous users, and does Place order stay enabled?
+  - text: What status and approval flag does createOrderFromCart give a guest order paid by card, and is the gateway called?
+concepts:
+  - id: card-payment
+  - id: checkout
 status: active
 appliesTo:
   - axis: surface

@@ -3,12 +3,21 @@ id: KB-C5B17CE2
 subject: Push Messages audience caption omits the condition when the blade is rendered from saved state
 plane: experiential
 question: Does the Push Messages audience caption name the condition when a message combines a condition with a picked recipient?
+questions:
+  - text: After I saved a push message, why does the audience summary only mention the one person I picked?
+  - text: Is the push message audience caption reliable after reopening a message that mixes a condition and explicit recipients?
+  - text: Does the stored member query and generated query stay correct while the estimate caption drops the condition?
+  - text: What makes the push audience caption re-derive correctly after saving?
+  - text: Does the push send job union the condition audience with explicitly selected members?
+concepts:
+  - id: push-audience
+  - id: push-message
 status: active
 appliesTo:
   - axis: module
     value: virtocommerce.pushmessages
   - axis: surface
-    value: admin-spa
+    value: admin-ui
 anchors:
   - coordinate: GET /api/push-message/{id}
 evidence:

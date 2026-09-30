@@ -3,10 +3,20 @@ id: KB-316B2DDB
 subject: one invalid storeId answers Unauthorized on Query.product and NULL_REFERENCE on Query.products
 plane: experiential
 question: What does the storefront xAPI do when a product query carries an argument that names something that does not exist — an unknown store, currency, culture, product id or filter field?
+questions:
+  - text: Why does the shop API tell me access is denied when I'm browsing anonymously just fine?
+  - text: What error does the product GraphQL query return for a store id that does not exist?
+  - text: Which invalid arguments to the products query fail silently with no errors array?
+  - text: Is an unknown cultureName ignored or rejected by the storefront product queries?
+  - text: Why can a test asserting only 'no errors' pass on a typo in a product query argument?
+concepts:
+  - id: api-error
+  - id: context-argument
+  - id: graphql-api
 status: active
 appliesTo:
   - axis: surface
-    value: storefront-xapi
+    value: xapi
 anchors:
   - coordinate: Query.product
   - coordinate: Query.products

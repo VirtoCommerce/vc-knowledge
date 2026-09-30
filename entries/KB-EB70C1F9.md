@@ -3,12 +3,23 @@ id: KB-EB70C1F9
 subject: Push Messages conditions builder drops an incomplete condition row without validation
 plane: experiential
 question: In the Push Messages admin blade (Match by conditions), what happens to a condition row whose value is left empty?
+questions:
+  - text: If I leave a condition value blank when targeting a push message, who ends up receiving it?
+  - text: Does the push message audience builder warn about a condition row with no value before saving?
+  - text: What member query is stored when a match-all condition row has an empty value?
+  - text: Can an admin still save or send a push campaign while one audience condition is incomplete?
+  - text: Why is the recipient estimate identical with and without an empty custom condition?
+concepts:
+  - id: push-audience
+  - id: admin-validation
 status: active
 appliesTo:
   - axis: module
     value: virtocommerce.pushmessages
   - axis: surface
-    value: admin-spa
+    value: admin-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: POST /api/push-message
 evidence:

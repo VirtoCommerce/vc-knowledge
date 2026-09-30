@@ -3,12 +3,24 @@ id: KB-0DD47BD1
 subject: the amount a payment is for is not the payment's total
 plane: experiential
 question: does the admin order screen show the same totals the storefront charged
+questions:
+  - text: Why does the back office say payment subtotal is zero for an order I paid?
+  - text: Do the storefront checkout summary and the admin order blade show the same order totals?
+  - text: Which payment field holds the amount the payment is for, and which hold the method's fee?
+  - text: Why does every pay-later order look unpaid when reconciling by payment total?
+  - text: How should I reconcile an order's incoming payment against the amount owed?
+concepts:
+  - id: order-payment
+  - id: totals
+  - id: manual-payment
 status: active
 appliesTo:
   - axis: surface
     value: rest
   - axis: surface
     value: admin-ui
+  - axis: surface
+    value: storefront-ui
 anchors:
   - coordinate: PaymentIn.sum
   - coordinate: CustomerOrder.paymentSubTotal

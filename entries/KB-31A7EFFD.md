@@ -3,7 +3,10 @@ id: KB-31A7EFFD
 subject: the Lists page disables Create at the per-user list limit and shares only from the Settings dialog
 plane: experiential
 question: Why is Create list disabled on /account/lists, and where is a list's share link?
-status: active
+status: superseded
+supersededBy:
+  - id: KB-1898248D
+  - id: KB-799D20A6
 appliesTo:
   - axis: surface
     value: storefront-ui

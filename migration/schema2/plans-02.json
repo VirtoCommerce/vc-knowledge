@@ -1,0 +1,684 @@
+[
+ {
+  "id": "KB-1834ABE5",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "A customer says the price on the site is different from what I see in the back office -- who is right?",
+   "Where in the admin can I see the price a specific signed-in B2B buyer will be charged for a product?",
+   "Why does the product blade price widget show a different number than the logged-in shopper sees?",
+   "Does the pricesWidget endpoint evaluate prices with any customer or user-group context?",
+   "Why is there no store column in the price list assignments grid, and how do I tell what a store-scoped assignment applies to?"
+  ],
+  "concepts": [
+   "price-list",
+   "price",
+   "user-group"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "b3c3061ccdc30a1b"
+ },
+ {
+  "id": "KB-18991381",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "I used a promo code on my order -- can support see which code I entered?",
+   "Which field of an order in the admin or the orders API shows the coupon code the buyer applied?",
+   "Does the REST CustomerOrder model have a coupons property like the GraphQL order type does?",
+   "How should a report join orders to the coupons redeemed on them?",
+   "Why is discounts[].coupon null on some discount rows of an order?"
+  ],
+  "concepts": [
+   "coupon",
+   "customer-order",
+   "discount"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8667f01ad3a700ad"
+ },
+ {
+  "id": "KB-18ABE89B",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Why does the back office ask me to save address changes on an order when I only looked at it?",
+   "Is it safe to answer Yes to 'the address has been modified' after opening an order's shipping address blade?",
+   "Why is the Save button already enabled on an untouched order or shipment address form in the admin?",
+   "Does the country select rewrite a stored countryName when the order address blade binds its values?"
+  ],
+  "concepts": [
+   "admin-validation",
+   "address",
+   "admin-order-screen"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "cfab566c478dd251"
+ },
+ {
+  "id": "KB-191B1B4C",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "The product says it comes in several options but I can only see one row -- which one am I buying?",
+   "Why does the variations panel on a product page hide out-of-stock variants by default?",
+   "Is the master product itself listed as a row in the storefront's product variations list?",
+   "Why does a line item added from the variations panel carry the parent product's sku instead of a variant's?",
+   "Where does the product page's variations table get its rows from, and can it show variants missing from the search index?"
+  ],
+  "concepts": [
+   "product-variation",
+   "product-page",
+   "inventory"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "77aa03f7031a9862"
+ },
+ {
+  "id": "KB-1AC55A1D",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "My card was only authorized, but the order record says it was captured -- was I actually charged?",
+   "Can finance rely on an incoming payment's capturedDate to know that funds were taken?",
+   "Why are authorizedDate and capturedDate on inPayments written within a microsecond of each other?",
+   "Which fields should reconciliation read to tell an authorized payment from a settled one?",
+   "Is a populated capture timestamp on an order payment with status Authorized a gateway module defect?"
+  ],
+  "concepts": [
+   "order-payment",
+   "card-payment",
+   "timestamp"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "42b55cf67a86356c"
+ },
+ {
+  "id": "KB-1B18B821",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "Why is there no sales tax on my cart total at all?",
+   "What has to be configured on a store for tax to be calculated on carts and orders?",
+   "Does a registered but inactive tax provider still calculate taxes on the cart?",
+   "Why do taxTotal and taxPercentRate stay zero with no error when tax calculation is enabled?",
+   "Does the platform compute VAT itself or only through a tax provider?"
+  ],
+  "concepts": [
+   "tax",
+   "store",
+   "totals"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "0dbe5c0f1d4a5962"
+ },
+ {
+  "id": "KB-1C28E89D",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why does the list of my coupons not sort the way I asked?",
+   "Which fields can the promotion coupons GraphQL query be sorted by?",
+   "How do I pass several sort keys to promotionCoupons, and why is everything after a comma ignored?",
+   "Does promotionCoupons sort accept 'endDate ASC' or only the colon form endDate:asc?",
+   "Where do nulls land when sorting coupons by end date ascending versus descending?"
+  ],
+  "concepts": [
+   "sort",
+   "public-coupon-list",
+   "coupon"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8069ce425e6efc1d"
+ },
+ {
+  "id": "KB-1E9580BB",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Can an admin accidentally publish an in-app notification that nobody receives?",
+   "Does the push message API refuse a Sent message with an empty recipient list?",
+   "What status does a push message posted as Sent with memberIds empty end up in?",
+   "Can a sent push notification with zero recipients be edited or deleted afterwards?"
+  ],
+  "concepts": [
+   "push-message",
+   "push-audience"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "e84c2c66c8e624da"
+ },
+ {
+  "id": "KB-1EA7184C",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Can I type a product's barcode number into the search box and find it?",
+   "Does storefront keyword search match GTIN values that are not in the product name or code?",
+   "Does a partial prefix of a GTIN still find the product through the products query full-text search?",
+   "Is GTIN part of the searchable content of the GraphQL products query even though the docs omit it?"
+  ],
+  "concepts": [
+   "product-search",
+   "product-identifier"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "1245b491babfe818"
+ },
+ {
+  "id": "KB-1F264839",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "When I type my card's security code at checkout, why can I see the digits?",
+   "Is the unmasked CVV field in the hosted card form a defect or accepted behaviour?",
+   "Who renders the card security-code input on the cart page -- storefront markup or the processor's hosted iframe?",
+   "Should a test fail if the CVV field in the card payment form shows plain text?"
+  ],
+  "concepts": [
+   "card-payment",
+   "checkout"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c6bdd5c426ba8694"
+ },
+ {
+  "id": "KB-1F2EBF83",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "If support opens a return for me from the back office, will I get a confirmation email?",
+   "How does an admin create a return through the REST API when there is no POST create route?",
+   "What status does a return created via PUT without an id start in, New or Requested?",
+   "Does a return created over REST reduce the order's returnable quantity?",
+   "Which path raises the return-registered notification and push -- REST upsert or the GraphQL submit?"
+  ],
+  "concepts": [
+   "return",
+   "returnable-quantity",
+   "notification"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3c474cb777ddbe87"
+ },
+ {
+  "id": "KB-21BA7389",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "How does the site load my notification inbox?",
+   "Which GraphQL query and arguments read a signed-in customer's push notifications?",
+   "Does PushMessageConnection return an unread count, or must the client count unread items itself?",
+   "Can a client see who sent a push message, or only the HTML in shortMessage?",
+   "How do I page through push messages and include hidden ones?"
+  ],
+  "concepts": [
+   "push-message",
+   "graphql-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "24a71d2cf4334887"
+ },
+ {
+  "id": "KB-21E70170",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does my return details page jump when it finishes loading?",
+   "Does the storefront return detail page exceed the cumulative layout shift budget?",
+   "What causes the layout shift on the account return page -- scrollbar, footer or content wrapper?",
+   "Is the return detail page's CLS worse for long returns than for short ones that fit the screen?"
+  ],
+  "concepts": [
+   "layout-shift",
+   "return"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "1bbeda9ffffd91de"
+ },
+ {
+  "id": "KB-24AA6296",
+  "action": "split",
+  "why": "(a) two different REST APIs reached separately: price-row upsert on PUT /api/products/prices vs price-list assignment priority on PUT /api/pricing/assignments",
+  "children": [
+   {
+    "subject": "PUT /api/products/prices changes only the price lists in the payload and upserts rows by id",
+    "question": "does PUT /api/products/prices replace a product's prices in other price lists",
+    "anchors": [
+     "PUT /api/products/prices"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "Sending PUT /api/products/prices with rows for a single price list changed only that list. The same products' rows in two other price lists came back identical (ids, list, sale, minQuantity). A row sent with its existing id was updated in place and kept that id; rows sent without an id were added. The source shows the flip side: an existing row in a list that is in the payload but is left out of it is deleted, so a product's full desired set for that list must be sent.",
+    "fromNotes": false,
+    "questions": [
+     "If I update prices for one price list through the API, will my other price lists lose their prices?",
+     "Does the bulk product prices endpoint delete rows of a list that are missing from the request?",
+     "Does sending a price row with its existing id update it in place or create a duplicate?",
+     "What must an import send to change one tier price without wiping the rest of that price list?"
+    ],
+    "concepts": [
+     "price",
+     "price-list",
+     "rest-api"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "raising a price list assignment's priority makes its list win over another unconditional list at the same scope",
+    "question": "how do I make one price list win over another at the same scope",
+    "anchors": [
+     "PUT /api/pricing/assignments"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "Raising an assignment's priority via GET + PUT /api/pricing/assignments with only priority changed made that list win over another unconditional list at the same scope, as seen in POST /api/pricing/evaluate.",
+    "fromNotes": false,
+    "questions": [
+     "Two price lists apply to the same store -- how do I choose which one shoppers get?",
+     "Does raising a pricing assignment's priority change which price list wins in price evaluation?",
+     "Can I change only the priority of a price list assignment with a GET-then-PUT round trip?"
+    ],
+    "concepts": [
+     "price-list"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "5c2deead0e5dadb2"
+ },
+ {
+  "id": "KB-24B83B02",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "My account manager said they left me a note with a shared list -- why can't I see it on the list page?",
+   "Where does the recipient of a shared list read the sales rep's accompanying message?",
+   "Does the sharedWishlist request on the shared-list page ask for the sharing message at all?",
+   "How is the rep's share message delivered -- in the notification inbox with a link, or on the list itself?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "customer-communication",
+   "push-message"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "9e6d0322ae492621"
+ },
+ {
+  "id": "KB-25388E6C",
+  "action": "keep",
+  "surface": [
+   "ucp"
+  ],
+  "questions": [
+   "Can an AI shopping assistant tell me how many units of a product are in stock?",
+   "Does the agentic commerce search_products tool return available quantity, and where does that number come from?",
+   "Does stock on a store's additional fulfillment center count toward the quantity the MCP search reports?",
+   "How long after creating and explicitly indexing a product does it show up in agent product search?"
+  ],
+  "concepts": [
+   "ucp",
+   "inventory",
+   "search-index"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "cb3461136761774a"
+ },
+ {
+  "id": "KB-25829330",
+  "action": "split",
+  "why": "(a) the search-history clause is an unrelated side finding about search history, not about barcode search settings",
+  "children": [
+   {
+    "subject": "storefront barcode search leaves barcode:\"x\" a literal filter with no fields configured, and scannerEnabled=false hides only the scan button",
+    "question": "How does the storefront behave on /search?barcode= and in the header search bars under each barcode-search store setting?",
+    "anchors": [
+     "/search?barcode=",
+     "/api/catalog/barcode-search"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "Observed on a vc-frontend build carrying the barcode scanner search setup (theme PR 2501, x-catalog PR 113, catalog PR 909). Store settings are read at app load, so a change is seen only after a full reload. Defaults (scannerEnabled true, fields empty): the Barcode scan button shows in the desktop search bar and in the mobile (390 px) overlay bar; typing a GTIN into the box is a full-text search (?q=) that also matches the value inside other products' names; /search?barcode=<value> is still routed to the barcode heading, but the products query carries barcode:\"<value>\" as a literal filter term and returns 0, so the page shows 'No products found for barcode <value>'. scannerEnabled false with fields configured: the Barcode scan button disappears from both bars, yet /search?barcode=<value> still expands to the configured fields and opens the product, so the switch hides the entry point only. A whitespace-only ?barcode=%20%20 is not trimmed: it renders the empty state with a blank value in the heading, no error. On a category route (for example /<category-slug>?barcode=<value>) the term is applied inside that category's scope and the plain category heading is used.",
+    "fromNotes": false,
+    "questions": [
+     "I scanned a barcode and the shop says no products found -- why?",
+     "Which store setting must be filled for a barcode lookup URL to find the product instead of an empty result?",
+     "Does turning the scanner off in store settings also stop barcode lookups by URL?",
+     "Why does a barcode sent as barcode:\"value\" filter return zero hits when no barcode fields are configured?",
+     "What does the storefront show for a whitespace-only barcode parameter or a barcode lookup inside a category page?"
+    ],
+    "concepts": [
+     "barcode-settings",
+     "barcode-search"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "opening a /search?q= URL directly does not add the term to search history",
+    "question": "Does opening a search results URL directly add the term to the storefront search history?",
+    "anchors": [
+     "/search?barcode="
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "Opening a URL /search?q=<term> directly does not add the term to search history; only a submit from the search bar does.",
+    "fromNotes": false,
+    "questions": [
+     "Why isn't a search I opened from a bookmark showing in my recent searches?",
+     "Which action records a term in the storefront's search history -- a search-bar submit or loading a results URL?",
+     "Should a test that deep-links to a search results page expect the term in recent searches?"
+    ],
+    "concepts": [
+     "product-search"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "20b601e683906838"
+ },
+ {
+  "id": "KB-29A75D95",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "My computer is in dark mode -- why does the shop still look light?",
+   "How does a store get its storefront into dark mode?",
+   "Why does requesting a bundled color preset file under the presets folder return 404?",
+   "Which record decides the live theme preset, and can an anonymous shopper switch it?"
+  ],
+  "concepts": [
+   "theme",
+   "white-labeling"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "5eadb2daf14dfa24"
+ },
+ {
+  "id": "KB-2B0274B9",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "I have no camera -- why does the barcode scan window just keep spinning?",
+   "Can a shopper upload a photo of a barcode when camera access is denied or absent?",
+   "Why does the Browse button in the barcode scanner modal never enable without a camera stream?",
+   "Does the scanner dialog show any error or console warning when the camera fails to start?",
+   "Does the disabled upload button in the scan dialog have an accessible name?"
+  ],
+  "concepts": [
+   "barcode-scanner"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "aaf2e0df33dd83ee"
+ },
+ {
+  "id": "KB-2CBB229F",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why did prices go blank and links break across the whole shop after a store update?",
+   "Is PUT on the stores API a partial update or a full replacement of the store?",
+   "Which store fields must never be null for the storefront to keep working?",
+   "What is the safe way to change one store setting through the REST API?"
+  ],
+  "concepts": [
+   "store",
+   "rest-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "14694902443d6e8a"
+ },
+ {
+  "id": "KB-2D446A42",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "These products are live on the site, but which storefront are they sold in?",
+   "Why does searching stores by catalog return no store for a physical catalog whose products are on sale?",
+   "How do product outlines reveal which virtual catalog, and so which store, exposes a product?",
+   "Does a store link to physical catalogs directly or only through its virtual catalog?"
+  ],
+  "concepts": [
+   "catalog",
+   "store"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c25202f0040eec68"
+ },
+ {
+  "id": "KB-2F64A447",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Someone shared a list with my company -- why isn't it in my own lists?",
+   "Which query lets a member of the target organization read a customer-scope shared list?",
+   "Does wishlist(listId) return a list shared with my organization or answer Forbidden?",
+   "Can a shared list's recipient see its targets, and what does a non-target member get from sharedWishlist?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "wishlist",
+   "permission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "cf8dc6726cb70522"
+ },
+ {
+  "id": "KB-3113CBC1",
+  "action": "split",
+  "why": "(b) a later contradicting note disputes only the count clause of the configurations search and confirms every other part",
+  "children": [
+   {
+    "subject": "a product's configurability is a separate entity keyed by productId, not a field on the product record",
+    "question": "how do I tell from product data whether a product is configurable",
+    "anchors": [
+     "GET /api/catalog/products/{id}",
+     "Product.isConfigurable"
+    ],
+    "surface": [
+     "rest",
+     "xapi"
+    ],
+    "body": "A product's configurability is NOT a field on the product. GET /api/catalog/products/{id} returns the full CatalogProduct record -- 60+ fields including mainProductId, variations and productType -- and carries no isConfigurable and no configuration at all, so reading products can never tell you. The configuration is a separate entity keyed by productId. Note also that productType is Physical/Digital/null -- 'Configurable' is not one of its values, so filtering products by type finds nothing either. The storefront GraphQL Product type does expose a computed isConfigurable, but only for products the search index holds, so it answers a narrower question than the REST route does. A catalog can hold the configuration OPTION products (the parts a configuration is assembled from) and categories named for configurables while having no configurable product at all -- the options are ordinary products and look like any other.",
+    "fromNotes": false,
+    "questions": [
+     "How can I tell whether a product can be customised before buying it?",
+     "Why doesn't the catalog product record returned by REST say whether the product is configurable?",
+     "Is 'Configurable' a productType value I can filter products by?",
+     "Does the GraphQL isConfigurable flag cover products that are missing from the search index?",
+     "Do configuration option products look any different from ordinary products in the catalog?"
+    ],
+    "concepts": [
+     "configurable-product",
+     "product"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "the configurations search with an empty criteria body counts inactive configurations too",
+    "question": "how do I count the configurable products on a deployment",
+    "anchors": [
+     "POST /api/catalog/products/configurations/search"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "POST /api/catalog/products/configurations/search is where configurability is read, but an empty criteria body counts configurations regardless of isActive, so its totalCount is not the number of configurable products on the deployment. After creating one configuration and then deactivating it, the empty body returns totalCount 1 while {isActive:true} returns 0 and the product reads isConfigurable false. Since there is no delete route, deactivated rows are permanent, so the empty-body count drifts upward from the number of genuinely configurable products and never comes back. Use {isActive:true} for the count.",
+    "fromNotes": true,
+    "questions": [
+     "How many products in our shop can actually be configured by buyers?",
+     "Does the configurations search endpoint count deactivated configurations when the criteria body is empty?",
+     "Which criteria give a reliable count of configurable products via the REST configurations search?",
+     "Why does the configurations totalCount stay higher after a configuration is deactivated?"
+    ],
+    "concepts": [
+     "configurable-product",
+     "rest-api"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "69d3dc569f84d18d"
+ },
+ {
+  "id": "KB-316B2DDB",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why does the shop API tell me access is denied when I'm browsing anonymously just fine?",
+   "What error does the product GraphQL query return for a store id that does not exist?",
+   "Which invalid arguments to the products query fail silently with no errors array?",
+   "Is an unknown cultureName ignored or rejected by the storefront product queries?",
+   "Why can a test asserting only 'no errors' pass on a typo in a product query argument?"
+  ],
+  "concepts": [
+   "api-error",
+   "context-argument",
+   "graphql-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "fe526917ccc7b65e"
+ },
+ {
+  "id": "KB-31802239",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "Why do filter counts on the site include products that were deleted?",
+   "How do I purge search-index documents of deleted products when event-based indexation is switched off?",
+   "Does reindexing with documentIds of deleted products remove their ghost index documents?",
+   "How does a startDate/endDate indexing window use the change log to turn deletions into index removals?",
+   "How can I cheaply check how many deleted product ids still have an index document?"
+  ],
+  "concepts": [
+   "search-index",
+   "changelog",
+   "facet"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "07d06533a581c2cd"
+ },
+ {
+  "id": "KB-318E448E",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why did a product's name change slightly after someone edited an unrelated field?",
+   "Does a JSON Patch that only adds SEO info change any other product fields?",
+   "Does every product save through the catalog API trim leading and trailing whitespace from the name?",
+   "Will imported products whose names end in a space be renamed by the next unrelated edit?"
+  ],
+  "concepts": [
+   "product",
+   "seo-url",
+   "rest-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "249c8afa98956e3d"
+ },
+ {
+  "id": "KB-31A7EFFD",
+  "action": "split",
+  "why": "(b) later notes contradict the share-link location clause (theme share-dialog rework) while nothing disputes the per-user list limit clause",
+  "children": [
+   {
+    "subject": "the Lists page disables Create list once the user owns the per-user list limit",
+    "question": "Why is Create list disabled on /account/lists?",
+    "anchors": [
+     "/account/lists"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "On /account/lists the Create list button disables once the signed-in user owns as many lists as the store's per-user lists limit allows - an account already at the limit sees a permanently disabled button, BY DESIGN.",
+    "fromNotes": false,
+    "questions": [
+     "Why can't I create another shopping list in my account?",
+     "Is a greyed-out Create list button a defect or the store's per-user list limit?",
+     "Which store limit decides when the account lists page stops allowing new lists?"
+    ],
+    "concepts": [
+     "wishlist"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "a list's share link lives only in the list Settings dialog, editable from the card and view-only from the detail page",
+    "question": "Where is a list's share link on /account/lists?",
+    "anchors": [
+     "/account/lists",
+     "/account/lists/{id}"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "The list Settings dialog is one shared component: opened from the list card's menu it is editable, opened from the button on the list detail page it is view-only with its fields disabled. There is no Share button on the list card or detail page; the share URL with its copy icon lives only inside the Settings dialog, shown when the list's sharing scope supports a link and the user is a corporate member.",
+    "fromNotes": false,
+    "questions": [
+     "How do I get a link to send my shopping list to a colleague?",
+     "Where does a corporate member find the copy-link control for sharing a list?",
+     "Why are the list settings fields disabled when opened from the list detail page but editable from the card menu?",
+     "Is there a dedicated Share action on the list card, or only the settings dialog?"
+    ],
+    "concepts": [
+     "list-sharing",
+     "wishlist"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "aed272bd87f69511"
+ }
+]

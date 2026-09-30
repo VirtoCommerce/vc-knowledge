@@ -3,6 +3,16 @@ id: KB-CC9A98D3
 subject: order address copies per operation
 plane: experiential
 question: does a shipment share the order's shipping address or hold its own copy?
+questions:
+  - text: If I fix the shipping address on an order, does the shipment go to the new address?
+  - text: Does a shipment reference the order's shipping address or hold its own copy?
+  - text: How many independent address rows does one checkout create across order, shipment and payment?
+  - text: Does a change in the customer's address book propagate to a placed order?
+  - text: Why can order.addresses and shipment.deliveryAddress disagree after an admin edit?
+concepts:
+  - id: address
+  - id: shipment
+  - id: customer-order
 status: active
 appliesTo:
   - axis: surface

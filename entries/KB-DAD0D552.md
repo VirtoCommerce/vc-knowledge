@@ -3,10 +3,20 @@ id: KB-DAD0D552
 subject: UCP refuses over-stock cart and checkout calls with isError, a stable inventory code and structured quantities
 plane: experiential
 question: What does UCP /ucp/mcp create_cart, update_cart or create_checkout return when the requested quantity exceeds available stock?
+questions:
+  - text: What does a shopping agent get back when it asks for more units than are in stock?
+  - text: Which error codes distinguish partial stock, zero stock and an unmeetable minimum order quantity for agent cart calls?
+  - text: Does a refused over-stock cart update roll back, or can the over-stock quantity persist on the line?
+  - text: Do checkout and handoff tools refuse a cart with inventory errors, and is a continue_url returned?
+  - text: What fields are in the details of an MCP inventory refusal, and which codes are retryable?
+concepts:
+  - id: ucp
+  - id: inventory
+  - id: api-error
 status: active
 appliesTo:
   - axis: surface
-    value: ucp-mcp
+    value: ucp
 anchors:
   - coordinate: /ucp/mcp
   - coordinate: POST /ucp/v1/carts

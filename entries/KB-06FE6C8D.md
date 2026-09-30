@@ -3,14 +3,23 @@ id: KB-06FE6C8D
 subject: POST /connect/token grant_type=otp_email accepts the SAME code twice, issuing a fresh valid access token both times — the OTP is not invalidated after a successful sign-in (matches ECL-4.3 "same OTP reused multiple times")
 plane: experiential
 question: Is an OTP email sign-in code single-use, or can the same code be replayed for a second sign-in
+questions:
+  - text: Can I sign in again with the same one-time code from my email?
+  - text: Is the email one-time password single-use, or does it stay valid until it expires?
+  - text: Does a successful OTP sign-in invalidate the code, or only a security stamp change?
+  - text: Why does replaying the same otp_email grant return a fresh token instead of invalid_code?
+  - text: Which mechanism generates and verifies OTP codes, and why is it not consumed after use?
+concepts:
+  - id: otp
+  - id: access-token
 status: active
 appliesTo:
   - axis: feature
     value: otp-sign-in
-  - axis: surface
-    value: backend-api
   - axis: ticket
     value: vcst-5748
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: POST /connect/token
   - coordinate: POST /api/otp/request

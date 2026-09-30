@@ -3,6 +3,14 @@ id: KB-F2FA8EBD
 subject: share-list confirmation copy and revoked-link states
 plane: experiential
 question: Which confirmation does the storefront Share dialog show per scope transition, and what does a revoked recipient see on /shared-list/{key}?
+questions:
+  - text: What happens when I open a shared list link after the owner stopped sharing it with me?
+  - text: Which confirmation dialog appears when a list's sharing moves from specific customers to my organization or private?
+  - text: Does the Share dialog warn that access will be lost even when the change actually widens access?
+  - text: Is the same sharing key reused after re-sharing, and what does a former recipient get then?
+  - text: When is Save disabled in the list Share dialog, and is there a confirmation on first share?
+concepts:
+  - id: list-sharing
 status: active
 appliesTo:
   - axis: surface
