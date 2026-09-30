@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T06:50:36.945Z",
-  "count": 285,
+  "generated": "2026-09-30T07:55:29.018Z",
+  "count": 289,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2877,6 +2877,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-8DA09FE8",
+      "path": "entries/KB-8DA09FE8.md",
+      "subject": "Push Messages advanced query: a malformed member query is rejected in the UI and holds Save/Send",
+      "question": "What does the Push Messages admin blade show when an Advanced query is malformed, and are Save and Send held?",
+      "anchors": [
+        "POST /api/push-message/preview-recipients",
+        "/workspace/embedded-app/push-messages"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
       "id": "KB-8F33647E",
       "path": "entries/KB-8F33647E.md",
       "subject": "UCP create_cart duplicate grouping is case-insensitive but keeps the first spelling; product id lookup is case-sensitive",
@@ -2891,6 +2908,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-903E980C",
+      "path": "entries/KB-903E980C.md",
+      "subject": "OTP request outcome for a contact whose account storeId names no existing store",
+      "question": "What does POST /api/otp/request return for a Customer contact whose security account storeId is a store id that does not exist?",
+      "anchors": [
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3764,6 +3797,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-BFB83695",
+      "path": "entries/KB-BFB83695.md",
+      "subject": "Push Messages recipient picker shows a Person/Company badge and an email, but not a per-row unique key",
+      "question": "Can the Push Messages recipient picker tell same-named entries apart?",
+      "anchors": [
+        "POST /api/members/search",
+        "/workspace/embedded-app/push-messages"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C075BDF9",
       "path": "entries/KB-C075BDF9.md",
       "subject": "reworked Lists menu: Rename edits name and description only; Share is its own dialog",
@@ -4328,6 +4378,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-D9F48037",
+      "path": "entries/KB-D9F48037.md",
+      "subject": "Push Messages audience caption and picked recipients survive save and reopen",
+      "question": "Does a saved Push Message keep its conditions and picked recipients in the audience caption after reopening?",
+      "anchors": [
+        "POST /api/push-message",
+        "/workspace/embedded-app/push-messages"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DA14E8B7",
       "path": "entries/KB-DA14E8B7.md",
       "subject": "block on an un-accepted invitation is irreversible",
@@ -4667,7 +4734,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-EB991080",

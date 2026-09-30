@@ -1,0 +1,1 @@
+{"at":"2026-09-30T07:23:11.758Z","kind":"capture-invalid","subject":"Push Messages advanced query: a malformed member query is rejected in the UI and holds Save/Send","why":"unusable anchor(s)","problems":["local-path"],"via":"cli","topic":"push messages audience builder validation","run":"VCST-5944","who":"kutasinaelena"}
