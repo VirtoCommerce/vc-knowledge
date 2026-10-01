@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T16:25:29.942Z",
-  "count": 337,
+  "generated": "2026-10-01T16:41:59.584Z",
+  "count": 338,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1007,6 +1007,24 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2AEC62B4",
+      "path": "entries/KB-2AEC62B4.md",
+      "subject": "Barcode scanner blade: Exact-match mode reveals a 'Fields to match *' checklist; Reset reverts unsaved mode/field changes with no PUT",
+      "question": "What does the Admin Barcode scanner blade show in each match mode, and does Reset discard unsaved changes without writing?",
+      "anchors": [
+        "GET /api/catalog/barcode-search/store/{}",
+        "GET /api/catalog/barcode-search/store/{}/fields"
+      ],
+      "scope": [
+        "blade=store-barcode-scanner",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
