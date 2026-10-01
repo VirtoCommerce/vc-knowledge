@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T06:12:52.974Z",
-  "count": 317,
+  "generated": "2026-10-01T08:28:20.559Z",
+  "count": 318,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5230,6 +5230,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-EC1EDCE2",
+      "path": "entries/KB-EC1EDCE2.md",
+      "subject": "GET loyalty balance/organization/{id} returns 200 with a balance for an organization id that no longer exists; the ledger outlives the organization",
+      "question": "What does the loyalty organization balance REST route return when the organization has been deleted?",
+      "anchors": [
+        "GET /api/loyalty-program-operation-log/balance/organization/{organizationId}",
+        "GET /api/loyalty-program-operation-log/balance/user/{userId}"
+      ],
+      "scope": [
+        "mode=customer",
+        "module=loyalty",
+        "surface=admin-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EC76F588",
       "path": "entries/KB-EC76F588.md",
       "subject": "there is no paymentMethodCode on an order payment, and shipment spells its sibling differently",
@@ -5311,7 +5330,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
