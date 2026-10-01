@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T20:55:52.841Z",
-  "count": 347,
+  "generated": "2026-10-01T20:56:08.366Z",
+  "count": 349,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1381,6 +1381,22 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3D3B8531",
+      "path": "entries/KB-3D3B8531.md",
+      "subject": "Admin Returns screens are fully translated in French (menu, list, blade, Line items, store settings)",
+      "question": "Admin SPA Returns module in French: are the menu entry, Return list, return blade, Line items blade toolbar and Return store settings translated?",
+      "anchors": [
+        "/workspace/Return"
+      ],
+      "scope": [
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2805,6 +2821,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-747FEC71",
+      "path": "entries/KB-747FEC71.md",
+      "subject": "Admin Returns: a decided line keeps its Price editable and the Line items Save persists it",
+      "question": "Admin SPA Returns Line items blade: after Approve / decline, can the line price still be edited and saved, and are quantity/decision locked?",
+      "anchors": [
+        "/api/return"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7564A9BF",
       "path": "entries/KB-7564A9BF.md",
       "subject": "logout and token revocation do not invalidate an issued access token by default",
@@ -3646,7 +3678,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
