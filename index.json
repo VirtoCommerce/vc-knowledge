@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T20:43:33.718Z",
-  "count": 345,
+  "generated": "2026-10-01T20:55:52.841Z",
+  "count": 347,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2292,6 +2292,23 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-62D97984",
+      "path": "entries/KB-62D97984.md",
+      "subject": "POST /api/punchout/cxml answers HTTP 200 with a cXML Status for every rejection, and checks the user mapping BEFORE the store checks",
+      "question": "What does the Punchout cXML endpoint return for a bad secret, bad return URL or unmapped identity, and in what order are the checks done?",
+      "anchors": [
+        "POST /api/punchout/cxml"
+      ],
+      "scope": [
+        "module=virtocommerce.punchout",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4801,6 +4818,24 @@
         "Mutation.updateCartQuantity"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CA2AE929",
+      "path": "entries/KB-CA2AE929.md",
+      "subject": "An invalid /punchout/&lt;token&gt; start page silently lands the visitor on the anonymous homepage; the grant answers 400 login_failed",
+      "question": "What does a buyer see when the punchout start-page token is invalid or expired?",
+      "anchors": [
+        "/punchout/:sessionToken",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "module=virtocommerce.punchout",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
