@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T16:13:29.837Z",
-  "count": 335,
+  "generated": "2026-10-01T16:25:29.942Z",
+  "count": 337,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5630,6 +5630,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-EDF22BE8",
+      "path": "entries/KB-EDF22BE8.md",
+      "subject": "Shared Components workspace: Escape closes Component details and Rename dialog",
+      "question": "page-builder-shared-components Component details Rename: does Escape close them and where does focus go?",
+      "anchors": [
+        "/page-builder-shell/page-builder-shared-components"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EF3CB7FB",
       "path": "entries/KB-EF3CB7FB.md",
       "subject": "Login on behalf is authorized on the storefront not in Admin",
@@ -5877,6 +5893,22 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FA3338C3",
+      "path": "entries/KB-FA3338C3.md",
+      "subject": "Page Builder Designer section tree is keyboard operable (PageBuilderModule 3.1030 pr-165)",
+      "question": "page-builder-designer section tree keyboard: can Tab reach section rows and can sections be reordered by keyboard?",
+      "anchors": [
+        "/page-builder-designer/pages"
+      ],
+      "scope": [
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
