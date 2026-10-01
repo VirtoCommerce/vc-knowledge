@@ -8,3 +8,4 @@
 {"at":"2026-10-01T11:58:52.587Z","kind":"confirm","id":"KB-AF607E75","deployment":"vcptcore_qa1","trust":2,"via":"mcp","call":"toolu_01VKU9W9gToDmz37MPiBSXqz","topic":"OTP email sign-in storefront","who":"kutasinaelena","agent":"qa-frontend-expert"}
 {"at":"2026-10-01T11:58:59.142Z","kind":"dispute","id":"KB-08CC76A3","deployment":"vcptcore_qa1","via":"mcp","call":"toolu_01TGZ9xwKN8jvya3hfyLqd3J","topic":"OTP email sign-in storefront","who":"kutasinaelena","agent":"qa-frontend-expert"}
 {"at":"2026-10-01T13:04:19.629Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":1,"ok":true,"convertedToConfirm":0,"who":"kutasinaelena"}
+{"at":"2026-10-01T16:27:25.139Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
