@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T12:00:28.409Z",
-  "count": 321,
+  "generated": "2026-10-01T12:01:29.169Z",
+  "count": 323,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2774,7 +2774,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 1
     },
     {
@@ -2956,6 +2956,23 @@
       "scope": [
         "feature=returns",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-813DD6AC",
+      "path": "entries/KB-813DD6AC.md",
+      "subject": "loyaltyMissionProgress daysRemaining reads ceil of days to EndDate on the server clock",
+      "question": "How is loyaltyMissionProgress daysRemaining computed and which value does a mission N days out read?",
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "LoyaltyUserMission.daysRemaining"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -5116,6 +5133,24 @@
       ],
       "scope": [
         "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E7007F44",
+      "path": "entries/KB-E7007F44.md",
+      "subject": "loyaltyMissionProgress returns items[].product null for a PerSku target whose product was deleted; an inactive product still returns flags",
+      "question": "When does loyaltyMissionProgress items[].product come back without availabilityData?",
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "LoyaltyMissionProgressItem.product",
+        "POST /api/loyalty-mission-goal-items"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
