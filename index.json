@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T08:28:20.559Z",
-  "count": 318,
+  "generated": "2026-10-01T08:48:33.951Z",
+  "count": 319,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1729,6 +1729,26 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4EDC989E",
+      "path": "entries/KB-4EDC989E.md",
+      "subject": "xAPI resolves a contact's current organization from contact.organizations, not from the OrganizationMembership entity",
+      "question": "Why does Query.me return contact.organizationId null for a user who has an Approved OrganizationMembership?",
+      "anchors": [
+        "Query.me",
+        "GET /api/members/{id}",
+        "PUT /api/members",
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
