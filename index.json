@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T18:57:39.124Z",
-  "count": 341,
+  "generated": "2026-10-01T19:11:39.220Z",
+  "count": 342,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3290,6 +3290,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8A2F58EA",
+      "path": "entries/KB-8A2F58EA.md",
+      "subject": "xAPI returnableItems caps returnableQuantity at deliveredQuantity, computed per line",
+      "question": "Is returnableItems returnableQuantity capped by deliveredQuantity or orderedQuantity, and is it per line?",
+      "anchors": [
+        "Query.returnableItems"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
