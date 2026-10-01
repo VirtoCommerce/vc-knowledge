@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T16:41:59.584Z",
-  "count": 338,
+  "generated": "2026-10-01T16:56:59.402Z",
+  "count": 339,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3619,6 +3619,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9AF5645D",
+      "path": "entries/KB-9AF5645D.md",
+      "subject": "With PasswordLogin DetailedErrors off, the storefront OTP flow does not reveal whether an email has an account: an unknown address gets \"Check your email\", no email is sent, and a wrong code returns the same invalid_code as for a real account",
+      "question": "Does the storefront OTP sign-in disclose whether an email is registered when DetailedErrors is off?",
+      "anchors": [
+        "POST /api/otp/request",
+        "POST /connect/token",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "setting=detailederrors-off",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
