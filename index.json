@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T16:56:59.402Z",
-  "count": 339,
+  "generated": "2026-10-01T16:57:17.742Z",
+  "count": 341,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4589,6 +4589,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-C4597892",
+      "path": "entries/KB-C4597892.md",
+      "subject": "/account/missions renders no skeleton for the mission-card grid; the footer jumps ~1.2k px when the cards arrive (CLS ~0.115)",
+      "question": "Does the /account/missions card grid show a skeleton while loading, and does the page shift when mission cards resolve?",
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=red-light",
+        "viewport=1280"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C466AD5C",
       "path": "entries/KB-C466AD5C.md",
       "subject": "Barcode scanner blade without BrowseFilters:Read shows the scanner as off",
@@ -4829,6 +4847,23 @@
       ],
       "scope": [
         "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CE2F9A45",
+      "path": "entries/KB-CE2F9A45.md",
+      "subject": "Missions SKU modal at 375px: footer is visually Add to cart above Close but the DOM/tab order is Close then Add to cart; stepper buttons sit 1 px from the quantity input",
+      "question": "What are the tab order and target gaps in the missions SKU modal on mobile?",
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=375"
       ],
       "plane": "experiential",
       "status": "active",
