@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-09-30T22:35:59.062Z",
-  "count": 315,
+  "generated": "2026-10-01T06:12:52.974Z",
+  "count": 317,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -232,6 +232,25 @@
         "feature=otp-sign-in",
         "surface=backend-api",
         "ticket=vcst-5748"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-08CC76A3",
+      "path": "entries/KB-08CC76A3.md",
+      "subject": "Storefront OTP code step: digits only, auto-submit at 6, 7-digit input cut to the first 6, spaced paste accepted; wrong code shows one message and keeps the digits; Resend clears field+error and says \"New code sent.\"",
+      "question": "How does the storefront OTP code input behave for malformed codes, a wrong code, Resend and Use a different email?",
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2400,7 +2419,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-6E98AA17",
@@ -3881,6 +3900,25 @@
       "scope": [
         "principal=org-member",
         "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AF607E75",
+      "path": "entries/KB-AF607E75.md",
+      "subject": "With DetailedErrors on, the storefront OTP form tells an unknown email \"User not found. Ensure you've entered the correct information\" and stays on the email step, while a known email gets \"Check your email\"",
+      "question": "Does the storefront OTP sign-in form show the same screen for an unregistered email as for a registered one?",
+      "anchors": [
+        "/sign-in",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "setting=detailederrors-on",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
