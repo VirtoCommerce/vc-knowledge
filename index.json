@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T12:01:29.169Z",
-  "count": 323,
+  "generated": "2026-10-01T12:12:32.189Z",
+  "count": 324,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -925,6 +925,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-26B8BE64",
+      "path": "entries/KB-26B8BE64.md",
+      "subject": "A mission past its EndDate stays on loyaltyMissionProgress as InProgress with daysRemaining 0 until the expiry sweep, for a user with a progress row",
+      "question": "Does loyaltyMissionProgress still return a mission whose EndDate has passed, and what does it read?",
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "LoyaltyUserMission.daysRemaining"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
