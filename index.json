@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T19:35:39.444Z",
-  "count": 342,
+  "generated": "2026-10-01T19:59:22.385Z",
+  "count": 344,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2074,6 +2074,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-58A94337",
+      "path": "entries/KB-58A94337.md",
+      "subject": "Return /edit route on a Cancelled return names the status instead of a generic error",
+      "question": "What does /account/returns/{id}/edit show for a Cancelled return?",
+      "anchors": [
+        "/account/returns/{}/edit"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-59E4B5FC",
       "path": "entries/KB-59E4B5FC.md",
       "subject": "a configured product as an order line item",
@@ -2574,7 +2590,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3041,7 +3057,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3506,6 +3522,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-93FFCC74",
+      "path": "entries/KB-93FFCC74.md",
+      "subject": "Storefront return wizard rejects a disallowed attachment extension client-side, without calling the upload endpoint",
+      "question": "What happens on /account/returns/{id}/edit when the buyer attaches a .xlsx file?",
+      "anchors": [
+        "/account/returns/{}/edit"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5698,7 +5730,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
