@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T21:02:52.902Z",
-  "count": 350,
+  "generated": "2026-10-01T21:07:10.197Z",
+  "count": 352,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -865,6 +865,22 @@
       "question": "Does /account/returns/:id shift layout on load?",
       "anchors": [
         "/account/returns/{}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-22E1D313",
+      "path": "entries/KB-22E1D313.md",
+      "subject": "A declined return produces two buyer push messages, 'Return {number} received' then 'Return {number} declined', and the bell lists the declined one first",
+      "question": "Which push messages does the buyer see on /account/notifications for a return that is submitted and then declined?",
+      "anchors": [
+        "/account/notifications"
       ],
       "scope": [
         "surface=storefront-ui"
@@ -2348,6 +2364,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-6323ED21",
+      "path": "entries/KB-6323ED21.md",
+      "subject": "Storefront return wizard clamps a typed return quantity above Returnable down to the returnable maximum",
+      "question": "What happens on /account/returns/new/{orderId} when the buyer types a return quantity larger than the line's Returnable value?",
+      "anchors": [
+        "/account/returns/new/{orderId}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-649D673C",
       "path": "entries/KB-649D673C.md",
       "subject": "push message text is rendered as sanitized markdown/HTML",
@@ -3179,7 +3211,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
