@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T10:19:25.188Z",
-  "count": 319,
+  "generated": "2026-10-01T12:00:28.409Z",
+  "count": 321,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -31,6 +31,25 @@
       ],
       "scope": [
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0080ED6D",
+      "path": "entries/KB-0080ED6D.md",
+      "subject": "The storefront code sign-in sends the last-used organization_id, so a multi-org buyer signing in by code lands in the organization chosen before sign-out",
+      "question": "Which organization is active after a multi-organization buyer signs in to the storefront with an emailed one-time code?",
+      "anchors": [
+        "POST /connect/token",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "persona=multi-org",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -255,7 +274,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-09CEE315",
@@ -3943,7 +3962,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4865,6 +4884,23 @@
       ],
       "scope": [
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D9DF8E54",
+      "path": "entries/KB-D9DF8E54.md",
+      "subject": "The storefront serves its index HTML with cache-control max-age=7200, so after a theme deploy a returning browser keeps loading the previous bundle for up to 2 hours",
+      "question": "Why does a storefront still show the old theme build after a successful theme deploy?",
+      "anchors": [
+        "/sign-in"
+      ],
+      "scope": [
+        "layer=deployment",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
