@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T15:42:59.205Z",
-  "count": 334,
+  "generated": "2026-10-01T16:13:29.837Z",
+  "count": 335,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5310,6 +5310,22 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-E423C32F",
+      "path": "entries/KB-E423C32F.md",
+      "subject": "Page Builder Designer actions menus: clipboard is read on Paste click, not on menu open (PR-165 build)",
+      "question": "Does the Page Builder Designer section/page actions menu need clipboard-read permission to render, and when is the clipboard payload validated?",
+      "anchors": [
+        "/Modules/$(VirtoCommerce.PageBuilderModule)/Content/page-builder-designer/index.html"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-E4DE692A",
