@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T19:59:22.385Z",
-  "count": 344,
+  "generated": "2026-10-01T20:43:33.718Z",
+  "count": 345,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4580,6 +4580,23 @@
       "scope": [
         "reward=percentage-off-cart-subtotal",
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C239652A",
+      "path": "entries/KB-C239652A.md",
+      "subject": "Punchout PunchOutSetupRequest returns StartPage that signs the mapped user in",
+      "question": "What does POST /api/punchout/cxml return for a valid PunchOutSetupRequest and what happens when the StartPage is opened?",
+      "anchors": [
+        "/api/punchout/cxml",
+        "/punchout"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
