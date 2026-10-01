@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T12:12:32.189Z",
-  "count": 324,
+  "generated": "2026-10-01T12:36:53.037Z",
+  "count": 327,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -65,6 +65,23 @@
         "Query.currentCustomerAddresses",
         "Query.currentOrganizationAddresses",
         "/account/addresses"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-011D79B2",
+      "path": "entries/KB-011D79B2.md",
+      "subject": "Missions SKU modal Add to cart sets absolute cart quantity",
+      "question": "What does the storefront missions SKU modal send when Add to cart is pressed, and how is the stepper initialised on reopen?",
+      "anchors": [
+        "/account/missions",
+        "Mutation.updateCartQuantity"
       ],
       "scope": [
         "surface=storefront-ui"
@@ -1982,6 +1999,23 @@
       ],
       "scope": [
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5A3931CE",
+      "path": "entries/KB-5A3931CE.md",
+      "subject": "Ended-but-unswept loyalty mission still reads InProgress with daysRemaining 0",
+      "question": "What does loyaltyMissionProgress return for a published mission after its endDate passes but before the expiry job runs, and how does the storefront card render it?",
+      "anchors": [
+        "/account/missions",
+        "Query.loyaltyMissionProgress"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4523,6 +4557,24 @@
       "anchors": [
         "/account/confirmemail",
         "/sign-in"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C992D3B8",
+      "path": "entries/KB-C992D3B8.md",
+      "subject": "Adding PerSku mission targets to the cart does not move mission progress",
+      "question": "Does adding a PerSku mission's target product to the cart (or removing it) change loyaltyMissionProgress?",
+      "anchors": [
+        "/account/missions",
+        "Query.loyaltyMissionProgress",
+        "Mutation.updateCartQuantity"
       ],
       "scope": [
         "surface=storefront-ui"
