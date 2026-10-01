@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-09-30T12:02:09.579Z",
-  "count": 378,
+  "generated": "2026-10-01T09:09:40.105Z",
+  "count": 408,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -22,6 +22,22 @@
         "KB-A3004A3B",
         "KB-F0C5CA5E"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-003D1D01",
+      "path": "entries/KB-003D1D01.md",
+      "subject": "Push Messages recipients picker label is keyed to the audience mode",
+      "question": "What is the Add specific recipients picker labelled in each Push Messages audience mode?",
+      "anchors": [
+        "/api/push-message/preview-recipients"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -337,6 +353,25 @@
         "feature=otp-sign-in",
         "surface=rest",
         "ticket=vcst-5748"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-08CC76A3",
+      "path": "entries/KB-08CC76A3.md",
+      "subject": "Storefront OTP code step: digits only, auto-submit at 6, 7-digit input cut to the first 6, spaced paste accepted; wrong code shows one message and keeps the digits; Resend clears field+error and says \"New code sent.\"",
+      "question": "How does the storefront OTP code input behave for malformed codes, a wrong code, Resend and Use a different email?",
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -706,6 +741,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-1178FECF",
+      "path": "entries/KB-1178FECF.md",
+      "subject": "Push Messages audience resolution survives an ElasticAppSearch to ElasticSearch8 provider switch; only text-matched counts move",
+      "question": "Does switching the search provider to ElasticSearch8 and rebuilding the member index change the Push Messages audience-builder recipient counts?",
+      "anchors": [
+        "/api/push-message/preview-recipients",
+        "/api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 3,
+      "disputed": 0
+    },
+    {
       "id": "KB-1205B62A",
       "path": "entries/KB-1205B62A.md",
       "subject": "the storefront never shows a shipment tracking number, and Shipped has no configured status chip",
@@ -947,7 +1000,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -1209,6 +1262,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1B066196",
+      "path": "entries/KB-1B066196.md",
+      "subject": "PUT /api/sales-rep revokes the sales rep's current access token",
+      "question": "Does editing a sales rep's served organizations in the back office sign the rep out?",
+      "anchors": [
+        "PUT /api/sales-rep"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1640,7 +1709,7 @@
         "KB-16859F54",
         "KB-58989663"
       ],
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -1974,7 +2043,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -2138,6 +2207,25 @@
       ],
       "trust": 2,
       "disputed": 2
+    },
+    {
+      "id": "KB-33B89BDD",
+      "path": "entries/KB-33B89BDD.md",
+      "subject": "OTP request for an unregistered email returns succeeded:false with code user_not_found (DetailedErrors on); a 255-char email is refused 400 by MaxLength(254) while the storefront form lets it through",
+      "question": "What does POST /api/otp/request return for an unknown email or an over-long email, and which layer rejects the length?",
+      "anchors": [
+        "POST /api/otp/request",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "setting=detailederrors-on",
+        "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-348505EB",
@@ -2342,6 +2430,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-3B0D8460",
+      "path": "entries/KB-3B0D8460.md",
+      "subject": "Push Messages builder: a comma in a text value silently removes the wildcard operators",
+      "question": "In the Push Messages audience builder, why do 'starts with' / 'ends with' / 'contains' disappear from the operator dropdown on a text field?",
+      "anchors": [
+        "GET /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3BFF73A3",
       "path": "entries/KB-3BFF73A3.md",
       "subject": "xAPI products filter: sku: is accepted as an alias of code, but mpn: is not an alias of manufacturerPartNumber and matches nothing",
@@ -2362,6 +2467,24 @@
       "scope": [
         "element=products-filter-field-names",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3EA119C5",
+      "path": "entries/KB-3EA119C5.md",
+      "subject": "The storefront category page header banner loads the ORIGINAL category image (no _md/_sm thumbnail suffix) and crops it to a wide banner, while product cards on the same page load _md thumbnails.",
+      "question": "which image size does the storefront category page request for the category's own image, and does it use image-tools thumbnails",
+      "anchors": [
+        "POST /api/catalog/categories",
+        "Query.category"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=desktop-1920"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2604,6 +2727,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-41DDD2A9",
+      "path": "entries/KB-41DDD2A9.md",
+      "subject": "Push Messages builder: typing into the Registered date field surfaces a raw RangeError stack trace",
+      "question": "What happens if a user types a date into the Registered condition's date input in the Push Messages audience builder instead of picking it from the calendar?",
+      "anchors": [
+        "GET /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -2890,6 +3030,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-4BFCE2B2",
+      "path": "entries/KB-4BFCE2B2.md",
+      "subject": "Push Messages audience builder: field to member-index phrase mapping",
+      "question": "In the Push Messages back-office audience builder (Match by conditions, Custom conditions), what phrase does each field+operator emit into PushMessage.MemberQuery?",
+      "anchors": [
+        "GET /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4C29749E",
       "path": "entries/KB-4C29749E.md",
       "subject": "A manual POST api/search/indexes/index moves the scheduled index-changes job's start date to now, so the job then skips any change or delete made before that request",
@@ -3165,6 +3322,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-4EDC989E",
+      "path": "entries/KB-4EDC989E.md",
+      "subject": "xAPI resolves a contact's current organization from contact.organizations, not from the OrganizationMembership entity",
+      "question": "Why does Query.me return contact.organizationId null for a user who has an Approved OrganizationMembership?",
+      "anchors": [
+        "Query.me",
+        "GET /api/members/{id}",
+        "PUT /api/members",
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4F298EB0",
       "path": "entries/KB-4F298EB0.md",
       "subject": "A barcode lookup applies the active currency's price filter: in a currency the product has no price in, a known code shows 'No products found for barcode'",
@@ -3218,6 +3395,23 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-50D03D62",
+      "path": "entries/KB-50D03D62.md",
+      "subject": "A member of two organizations reads a rep's Customer share only while the targeted org is active",
+      "question": "Does sharedWishlist(sharingKey) access for a contact in several organizations follow the active organization or any membership?",
+      "anchors": [
+        "Query.sharedWishlist",
+        "Mutation.sendCustomerCommunication"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3607,7 +3801,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -4069,7 +4263,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -4252,7 +4446,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-6A20B0AF",
@@ -4449,6 +4643,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-6CDB7E6F",
+      "path": "entries/KB-6CDB7E6F.md",
+      "subject": "Storefront return details page shows 'Return' title placeholder while GetReturn loads",
+      "question": "What does /account/returns/{id} show as title and breadcrumb while the return is loading?",
+      "anchors": [
+        "/account/returns/{id}",
+        "/account/returns/new/{orderId}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6D5E2CD1",
       "path": "entries/KB-6D5E2CD1.md",
       "subject": "what makes a price list apply to a store, and what the storefront reads it through",
@@ -4479,6 +4690,24 @@
       "status": "active",
       "trust": 1,
       "disputed": 0
+    },
+    {
+      "id": "KB-6D7B2ED7",
+      "path": "entries/KB-6D7B2ED7.md",
+      "subject": "Storefront OTP sign-in form posts to the storefront origin /api/otp/request, which the storefront ingress answers 405; the form shows an inline generic error plus a global server-error toast",
+      "question": "What happens when a guest clicks Continue on the storefront OTP email sign-in form?",
+      "anchors": [
+        "POST /api/otp/request",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 1
     },
     {
       "id": "KB-6E63AFF4",
@@ -4682,7 +4911,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -4742,6 +4971,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-735DF4D1",
+      "path": "entries/KB-735DF4D1.md",
+      "subject": "Whether an incomplete Push Messages condition row raises a hint and holds Save depends on there already being a complete condition in the rule.",
+      "question": "Does an incomplete condition row in the Push Messages audience builder always show a hint and hold Save?",
+      "anchors": [
+        "POST /api/push-message",
+        "POST /api/push-message/preview-recipients"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa",
+        "version=3.1006.0-pr-28"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -5417,6 +5665,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-8246C473",
+      "path": "entries/KB-8246C473.md",
+      "subject": "An organization address of type BillingAndShipping cannot be marked default",
+      "question": "Can POST /api/members create an organization whose address is BillingAndShipping with isDefault true?",
+      "anchors": [
+        "POST /api/members"
+      ],
+      "scope": [
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
       "id": "KB-8264632C",
       "path": "entries/KB-8264632C.md",
       "subject": "how the storefront cart page renders an applied and an unapplied coupon",
@@ -5467,6 +5731,24 @@
         "KB-14F26013",
         "KB-6FAB0205"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-843D0515",
+      "path": "entries/KB-843D0515.md",
+      "subject": "Deleting an org a Sales Rep serves leaves it in the rep record; a PUT /api/sales-rep that echoes it back 500s",
+      "question": "What happens to a Sales Rep's served organizations when one of those organizations is deleted via DELETE /api/members?",
+      "anchors": [
+        "PUT /api/sales-rep",
+        "DELETE /api/members",
+        "GET /api/sales-rep/{id}"
+      ],
+      "scope": [
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -5724,7 +6006,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -5777,6 +6059,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8F61528A",
+      "path": "entries/KB-8F61528A.md",
+      "subject": "Sharing targets of an unserved or deleted organization, as the list owner sees them",
+      "question": "What happens to a rep's Customer share when a targeted organization stops being served or is deleted?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "PUT /api/sales-rep",
+        "DELETE /api/members"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5919,7 +6219,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6316,7 +6616,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6558,6 +6858,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-A240F961",
+      "path": "entries/KB-A240F961.md",
+      "subject": "Sales Rep customer-orders list: card layout below 1024px, order link opens buyer order details",
+      "question": "At what viewport does the Sales Rep customer orders list switch from mobile cards to a table, and where does the order-number link go?",
+      "anchors": [
+        "/company/my-customers",
+        "/company/customer-orders",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A272971F",
       "path": "entries/KB-A272971F.md",
       "subject": "Saved-for-later cards omit a configured product's configuration, which returns on move to cart",
@@ -6674,6 +6992,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-A424AB94",
+      "path": "entries/KB-A424AB94.md",
+      "subject": "The storefront sign-in page does not remember the password-view choice or the typed email: reload and every view switch return to an empty one-time-code view",
+      "question": "Does the storefront /sign-in page keep the password view or the typed email when switching views or reloading?",
+      "anchors": [
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A47C7347",
       "path": "entries/KB-A47C7347.md",
       "subject": "Deleting a barcode property then reindexing the product stops exact-mode scans matching its value",
@@ -6693,6 +7028,23 @@
         "KB-F91252E5"
       ],
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A4ABEFEA",
+      "path": "entries/KB-A4ABEFEA.md",
+      "subject": "Notification journal search returns full email bodies; keyword matches the recipient",
+      "question": "How do I read the sent email body for a recipient from POST /api/notifications/journal?",
+      "anchors": [
+        "POST /api/notifications/journal",
+        "GET /api/notifications/journal/{id}"
+      ],
+      "scope": [
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -6773,6 +7125,28 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A8067930",
+      "path": "entries/KB-A8067930.md",
+      "subject": "A vc-shell embedded app renders its own environment badge inside the platform iframe even though the shell knows it is embedded, so the badge appears twice.",
+      "question": "Why does the environment badge (e.g. \"QA\") appear twice on an admin workspace/embedded-app page, and does every embedded app do it?",
+      "anchors": [
+        "/apps/push-messages",
+        "/apps/vc-sales-rep",
+        "GET /api/platform/apps",
+        "aside.vc-environment-banner",
+        "div.vc-env-badge"
+      ],
+      "scope": [
+        "component=vc-shell-framework",
+        "feature=environment-banner",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7020,6 +7394,41 @@
       "disputed": 0
     },
     {
+      "id": "KB-ABB5F450",
+      "path": "entries/KB-ABB5F450.md",
+      "subject": "Admin Notification list search matches the notification type key, not the localized display name",
+      "question": "does the Admin SPA Notifications > Notification list keyword search match the localized (e.g. German) display name",
+      "anchors": [
+        "/workspace/notifications"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AC05FCD4",
+      "path": "entries/KB-AC05FCD4.md",
+      "subject": "The Push Messages audience-builder mode shown when a saved message is reopened is derived from the stored recipients query, not persisted alongside it.",
+      "question": "Does a push message saved in 'Advanced query' mode reopen in that mode?",
+      "anchors": [
+        "/api/push-message",
+        "POST /api/push-message/preview-recipients"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa",
+        "version=3.1006.0-pr-28"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 3,
+      "disputed": 0
+    },
+    {
       "id": "KB-AD1FA66B",
       "path": "entries/KB-AD1FA66B.md",
       "subject": "where a cart's money lives, and which copy goes stale",
@@ -7192,6 +7601,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-AF607E75",
+      "path": "entries/KB-AF607E75.md",
+      "subject": "With DetailedErrors on, the storefront OTP form tells an unknown email \"User not found. Ensure you've entered the correct information\" and stays on the email step, while a known email gets \"Check your email\"",
+      "question": "Does the storefront OTP sign-in form show the same screen for an unregistered email as for a registered one?",
+      "anchors": [
+        "/sign-in",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "setting=detailederrors-on",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B142F52E",
       "path": "entries/KB-B142F52E.md",
       "subject": "Rejected UCP update_cart over stock leaves the over-stock quantity in the cart; checkout paths refuse it",
@@ -7265,7 +7693,7 @@
         "KB-9CD03E2B",
         "KB-E8984A18"
       ],
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7315,6 +7743,22 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B59A1F9D",
+      "path": "entries/KB-B59A1F9D.md",
+      "subject": "Organization-scope wishlist: any Write member who sends changeWishlist with a scope becomes the list owner",
+      "question": "Can a non-owner org member with Write access change a wishlist's sharing scope via changeWishlist, and what happens to ownership?",
+      "anchors": [
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7402,7 +7846,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -7598,7 +8042,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-BC55C4F0",
@@ -7685,6 +8129,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-BDCD3057",
+      "path": "entries/KB-BDCD3057.md",
+      "subject": "Admin 'Add new return' creates a return in status New that the buyer sees on /account/returns",
+      "question": "what status does a return created from the Admin SPA Returns 'Add new return' blade get, and does the buyer see it",
+      "anchors": [
+        "/workspace/Return",
+        "/account/returns"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BF730613",
       "path": "entries/KB-BF730613.md",
       "subject": "lockoutEnd has three meaningful values, and one of them looks like the opposite of what it means",
@@ -7736,7 +8197,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7797,6 +8258,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C298769B",
+      "path": "entries/KB-C298769B.md",
+      "subject": "Header search box follows the results page: empty during a barcode lookup, shows q only when the page ran a keyword search",
+      "question": "What does the storefront header search box show on /search when the URL has both barcode and q?",
+      "anchors": [
+        "/search"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7969,7 +8446,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-C60BA776",
@@ -8684,6 +9161,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-D84CA5F2",
+      "path": "entries/KB-D84CA5F2.md",
+      "subject": "Push Messages builder: 'is any of' cannot build a multi-value phrase on an enum field",
+      "question": "In the Push Messages audience builder, does the 'is any of' operator on a dropdown-backed field (Customer type, Status) produce a comma-separated multi-value phrase?",
+      "anchors": [
+        "GET /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D8FDFA6F",
       "path": "entries/KB-D8FDFA6F.md",
       "subject": "On /company/members a contact whose contact-level status is null has its NAME cell replaced by the literal text \"Invite sent\", while the Active column still shows a green \"Active\" tick.",
@@ -8803,7 +9297,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9311,7 +9805,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9416,7 +9910,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9500,6 +9994,25 @@
       "scope": [
         "principal=customer",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EC1EDCE2",
+      "path": "entries/KB-EC1EDCE2.md",
+      "subject": "GET loyalty balance/organization/{id} returns 200 with a balance for an organization id that no longer exists; the ledger outlives the organization",
+      "question": "What does the loyalty organization balance REST route return when the organization has been deleted?",
+      "anchors": [
+        "GET /api/loyalty-program-operation-log/balance/organization/{organizationId}",
+        "GET /api/loyalty-program-operation-log/balance/user/{userId}"
+      ],
+      "scope": [
+        "mode=customer",
+        "module=loyalty",
+        "surface=admin-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9677,7 +10190,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10139,7 +10652,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10161,6 +10674,26 @@
         "KB-66A126E3"
       ],
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F6F89D31",
+      "path": "entries/KB-F6F89D31.md",
+      "subject": "Picking a company in the Push Messages audience expands recursively into its sub-companies, counts only members holding a login, and that previewed count equals what is delivered.",
+      "question": "Does picking a company as a push audience include the companies under it, and does the previewed count match the delivered count?",
+      "anchors": [
+        "POST /api/push-message/preview-recipients",
+        "POST /api/push-message/search-recipients",
+        "POST /api/push-message"
+      ],
+      "scope": [
+        "module=virtocommerce.pushmessages",
+        "surface=admin-spa",
+        "version=3.1006.0-pr-28"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
