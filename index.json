@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T14:41:38.884Z",
-  "count": 333,
+  "generated": "2026-10-01T15:42:59.205Z",
+  "count": 334,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1347,6 +1347,22 @@
       "scope": [
         "element=products-filter-field-names",
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3C7B6A36",
+      "path": "entries/KB-3C7B6A36.md",
+      "subject": "Storefront VcModal scrollable body has no scroll-edge cue; SKU mission modal estimate hint can straddle the fold",
+      "question": "Does the storefront VcModal scrollable body show any cue that more content is below, and where does the SKU mission modal put its subtotal estimate hint?",
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
