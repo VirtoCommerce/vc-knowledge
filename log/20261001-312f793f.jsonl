@@ -1,0 +1,2 @@
+{"at":"2026-10-01T16:44:23.330Z","kind":"restart","why":"state-absent","who":"Lenajava1"}
+{"at":"2026-10-01T16:44:23.397Z","kind":"session","session":"312f793f","tools":10,"turns":1,"touchAt":[],"agents":1,"agentTools":2,"agentTouches":0,"firstAt":"2026-10-01T16:41:45.365Z","lastAt":"2026-10-01T16:44:23.330Z","who":"Lenajava1"}
