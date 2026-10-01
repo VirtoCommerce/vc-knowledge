@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T13:07:27.625Z",
-  "count": 330,
+  "generated": "2026-10-01T14:41:38.884Z",
+  "count": 333,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1084,6 +1084,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-306AC615",
+      "path": "entries/KB-306AC615.md",
+      "subject": "Per-mission DELETE of loyalty missions succeeded after their accounts placed orders",
+      "question": "Can DELETE /api/loyalty-missions remove a mission whose bound account has placed orders?",
+      "anchors": [
+        "/api/loyalty-missions",
+        "/api/loyalty-mission-progress/search"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3113CBC1",
       "path": "entries/KB-3113CBC1.md",
       "subject": "where a product's configurability is actually stored",
@@ -1330,6 +1347,23 @@
       "scope": [
         "element=products-filter-field-names",
         "surface=storefront-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3E408000",
+      "path": "entries/KB-3E408000.md",
+      "subject": "Two active tax providers on one store: tax evaluation returns nothing",
+      "question": "What tax does a cart get when a store has both AvaTaxRateProvider and FixedRateTaxProvider active?",
+      "anchors": [
+        "/api/taxes/{storeId}/evaluate",
+        "/api/taxes/search"
+      ],
+      "scope": [
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4814,6 +4848,23 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-D12432BD",
+      "path": "entries/KB-D12432BD.md",
+      "subject": "loyaltyMissionProgress reports tracked stock as availableQuantity on a PerSku target",
+      "question": "Does loyaltyMissionProgress items[].product.availabilityData carry a stock quantity for a PerSku target?",
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "PUT /api/inventory/plenty"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D1D30720",
