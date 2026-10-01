@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T20:56:08.366Z",
-  "count": 349,
+  "generated": "2026-10-01T21:02:52.902Z",
+  "count": 350,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4159,6 +4159,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ACC12F26",
+      "path": "entries/KB-ACC12F26.md",
+      "subject": "A punchout user mapping accepts an unvalidated userId (incl. an administrator account), yielding a privilege-escalation sign-in via the anonymous cXML + punchout grant chain",
+      "question": "Does POST /api/punchout-user-mappings validate userId against the contact, and can a punchout mapping bind an administrator account to escalate privilege?",
+      "anchors": [
+        "POST /api/punchout-user-mappings",
+        "POST /connect/token",
+        "POST /api/punchout/cxml"
+      ],
+      "scope": [
+        "module=virtocommerce.punchout",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
