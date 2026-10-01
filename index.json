@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T12:36:53.037Z",
-  "count": 327,
+  "generated": "2026-10-01T13:07:27.625Z",
+  "count": 330,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -363,7 +363,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -1080,7 +1080,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -1458,6 +1458,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-42230B0A",
+      "path": "entries/KB-42230B0A.md",
+      "subject": "Wishlist sharing targets: write response order differs from read order; legacy sharedWithId follows it",
+      "question": "In what order does SharingSettingType.targets come back, and which target does the deprecated sharedWithId report?",
+      "anchors": [
+        "SharingSettingType.targets",
+        "SharingSettingType.sharedWithId",
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-432D02EF",
       "path": "entries/KB-432D02EF.md",
       "subject": "Purchase requests is an AI document-to-quote feature, not an approval workflow",
@@ -1509,7 +1527,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1820,6 +1838,24 @@
       "scope": [
         "element=barcode-currency-price-filter",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-509D70C4",
+      "path": "entries/KB-509D70C4.md",
+      "subject": "Wishlist share target ids are case-insensitive; the 1000-id cap applies to addSharedWithIds only",
+      "question": "How does changeWishlist treat id case, duplicates and the size of addSharedWithIds/removeSharedWithIds?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "InputChangeWishlistType.addSharedWithIds",
+        "InputChangeWishlistType.removeSharedWithIds"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3294,7 +3330,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4082,7 +4118,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4322,6 +4358,23 @@
       ],
       "scope": [
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BE7DF8DA",
+      "path": "entries/KB-BE7DF8DA.md",
+      "subject": "Customer share switched to AnyoneAnonymous: targets and message cleared, key kept",
+      "question": "What happens to a Customer-scope wishlist share when changeWishlist sets scope AnyoneAnonymous?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
