@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-01T21:17:15.754Z",
-  "count": 353,
+  "generated": "2026-10-02T05:36:50.708Z",
+  "count": 355,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -249,6 +249,23 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-06CFE625",
+      "path": "entries/KB-06CFE625.md",
+      "subject": "a New legacy return reduces returnableItems returnableQuantity; orderId filter works",
+      "question": "Does a legacy admin return in status New hold units of the order line for returnableItems?",
+      "anchors": [
+        "PUT /api/return",
+        "POST /api/return/search"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6135,6 +6152,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F7E4DB8E",
+      "path": "entries/KB-F7E4DB8E.md",
+      "subject": "customerOrders/search keyword is a prefix match, results newest first",
+      "question": "Does POST /api/order/customerOrders/search with keyword=<order number> return only that order?",
+      "anchors": [
+        "POST /api/order/customerOrders/search"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
