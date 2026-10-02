@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-02T05:36:50.708Z",
-  "count": 355,
+  "generated": "2026-10-02T06:05:44.923Z",
+  "count": 356,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3387,6 +3387,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-85F02FDB",
+      "path": "entries/KB-85F02FDB.md",
+      "subject": "Admin Return blade field set and Line items columns for an admin-created return",
+      "question": "Which fields does the Admin SPA Return blade and its Line items blade show for a return created via Add new return?",
+      "anchors": [
+        "/api/return"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8646A9CB",
       "path": "entries/KB-8646A9CB.md",
       "subject": "five failed storefront sign-ins give a 15-minute temporary lockout code",
@@ -4631,7 +4647,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
