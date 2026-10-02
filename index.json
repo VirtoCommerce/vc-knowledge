@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-02T08:49:29.070Z",
-  "count": 360,
+  "generated": "2026-10-02T12:21:53.249Z",
+  "count": 361,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2896,6 +2896,23 @@
       ],
       "scope": [
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-74D9B9B0",
+      "path": "entries/KB-74D9B9B0.md",
+      "subject": "Saving a localizable dictionary setting 500s when stored translations collide case-insensitively",
+      "question": "Why does POST /api/platform/localizable-settings/{name}/dictionary-items return 500 'An item with the same key has already been added. Key: <lang>' even for an unchanged payload?",
+      "anchors": [
+        "POST /api/platform/localizable-settings/{name}/dictionary-items",
+        "GET /api/platform/localizable-settings"
+      ],
+      "scope": [
+        "surface=admin-api"
       ],
       "plane": "experiential",
       "status": "active",
