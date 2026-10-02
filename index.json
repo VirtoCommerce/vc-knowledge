@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-02T06:05:44.923Z",
-  "count": 356,
+  "generated": "2026-10-02T08:37:25.562Z",
+  "count": 359,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1589,7 +1589,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3099,7 +3099,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-7AB0B13E",
@@ -5241,6 +5241,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-D3328AFF",
+      "path": "entries/KB-D3328AFF.md",
+      "subject": "Wishlist sharing deprecation shape: no plural sharingSettings, singular sharingSetting not deprecated, sharedWithId deprecated",
+      "question": "Is WishlistType.sharingSetting or SharingSettingType.sharedWithId deprecated in the multi-target sharing build, and is there a plural sharingSettings field?",
+      "anchors": [
+        "WishlistType.sharingSetting",
+        "SharingSettingType.sharedWithId"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
       "id": "KB-D4A064A5",
       "path": "entries/KB-D4A064A5.md",
       "subject": "promotion discount rounding on the cart",
@@ -5290,6 +5307,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D7F08A26",
+      "path": "entries/KB-D7F08A26.md",
+      "subject": "Customer-scope wishlist share: stop sharing deletes the target rows, re-share grants only the new orgs, key kept",
+      "question": "When a Customer-scope wishlist share is switched to Private and later re-enabled with a different organization, does the former target keep or regain any access, and does the deactivated row keep its SharedWithId?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Query.sharedWishlist",
+        "/api/carts/{id}"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5703,6 +5738,23 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E8234FA0",
+      "path": "entries/KB-E8234FA0.md",
+      "subject": "Never-shared wishlist: sharingSetting.id is a fresh random id on every read; first share keeps a client-sent sharingKey",
+      "question": "What does wishlist.sharingSetting.id return for a list that was never shared, and which key does the first share persist?",
+      "anchors": [
+        "WishlistType.sharingSetting",
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
