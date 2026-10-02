@@ -1,1 +1,2 @@
-{"at":"2026-10-02T15:46:33.303Z","kind":"session","session":"e3fca9a7","tools":79,"turns":15,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-02T13:45:28.739Z","lastAt":"2026-10-02T15:03:40.625Z","who":"kutasinaelena"}
+{"at":"2026-10-02T16:53:25.283Z","kind":"session","session":"e3fca9a7","tools":81,"turns":1,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-02T13:45:28.739Z","lastAt":"2026-10-02T16:53:24.981Z","who":"kutasinaelena"}
+{"at":"2026-10-02T16:53:24.981Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
