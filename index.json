@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-03T03:45:28.937Z",
-  "count": 361,
+  "generated": "2026-10-03T04:41:53.828Z",
+  "count": 362,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1921,6 +1921,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4E1FD1E8",
+      "path": "entries/KB-4E1FD1E8.md",
+      "subject": "The impersonate OAuth grant gates on the operator's loginOnBehalf permission but applies NO guard on the target user (existence only) and mints the token from the target's identity, so impersonating an Administrator yields a token carrying the target's Administrator role",
+      "question": "Can a non-admin operator with loginOnBehalf impersonate an Administrator via the impersonate grant on /connect/token, and does the token carry admin rights?",
+      "anchors": [
+        "/connect/token",
+        "/account/impersonate/{userId}",
+        "AuthorizationController.Exchange"
+      ],
+      "scope": [
+        "grant=impersonate",
+        "surface=admin-spa",
+        "surface=platform-oauth",
+        "target=administrator"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
