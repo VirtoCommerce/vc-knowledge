@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-03T04:41:53.828Z",
-  "count": 362,
+  "generated": "2026-10-03T04:51:26.212Z",
+  "count": 363,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2554,6 +2554,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-68D63D8C",
+      "path": "entries/KB-68D63D8C.md",
+      "subject": "organization.assignableRoles(storeId) returns [] when the store's MembershipRolesWhitelist override is empty",
+      "question": "Why does organization assignableRoles return an empty list on the storefront Invite member / Edit role dialogs?",
+      "anchors": [
+        "Organization.assignableRoles",
+        "/company/members",
+        "Customer.MembershipRolesWhitelist"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
