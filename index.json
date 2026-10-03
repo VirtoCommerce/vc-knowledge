@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-03T04:51:26.212Z",
-  "count": 363,
+  "generated": "2026-10-03T04:56:22.895Z",
+  "count": 364,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4259,6 +4259,25 @@
       ],
       "scope": [
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AA7CCB07",
+      "path": "entries/KB-AA7CCB07.md",
+      "subject": "Draft quote request: Save changes after a line quantity edit keeps catalog prices",
+      "question": "Does saving a quantity edit on a draft quote request (RFQ) zero the line prices?",
+      "anchors": [
+        "Mutation.changeQuoteItemQuantity",
+        "Query.quote",
+        "/account/quotes"
+      ],
+      "scope": [
+        "module=virtocommerce.quote",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
