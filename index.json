@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-05T10:54:30.709Z",
+  "generated": "2026-10-05T10:54:50.202Z",
   "count": 457,
   "entries": [
     {
@@ -900,12 +900,23 @@
       "path": "entries/KB-11E3EE30.md",
       "subject": "admin product search carries order-quantity limits and honours sort",
       "question": "Does POST /api/catalog/search/products with responseGroup ItemInfo return minQuantity/maxQuantity, and can its page order be made deterministic?",
+      "questions": [
+        "Does the admin product search return min and max order quantity for each product?",
+        "POST /api/catalog/search/products responseGroup ItemInfo minQuantity maxQuantity packSize",
+        "How do I get a stable page order from the back-office product search?",
+        "What does maxQuantity 0 mean on a product returned by the catalog REST API?",
+        "GET /api/catalog/products ids batch respGroup ItemInfo deleted product missing"
+      ],
+      "concepts": [
+        "product-search",
+        "product"
+      ],
       "anchors": [
         "POST /api/catalog/search/products",
         "GET /api/catalog/products"
       ],
       "scope": [
-        "surface=platform-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3066,11 +3077,21 @@
       "path": "entries/KB-40B9AEF4.md",
       "subject": "member keyword search misses hyphenated organization names",
       "question": "Does POST /api/members/search with keyword find an organization named like AGENT-TEST-Org-Kingsbridge-Imports-20260514?",
+      "questions": [
+        "Why can't I find an organization by its full name in the members search?",
+        "POST /api/members/search keyword hyphenated organization name totalCount 0",
+        "Is members keyword search reliable for a find-or-create lookup of an organization?",
+        "How do I list every organization through the REST API without a keyword?"
+      ],
+      "concepts": [
+        "member-search",
+        "organization"
+      ],
       "anchors": [
         "POST /api/members/search"
       ],
       "scope": [
-        "surface=platform-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9195,11 +9216,21 @@
       "path": "entries/KB-B85A6FC2.md",
       "subject": "coupons/add updates an existing coupon in place when its id is sent",
       "question": "Can an existing coupon's expiration date be changed without deleting and re-adding it?",
+      "questions": [
+        "Can I change a coupon's expiration date without deleting and recreating it?",
+        "POST /api/marketing/promotions/coupons/add with an existing coupon id upsert",
+        "Is there a PUT endpoint for updating a coupon?",
+        "When does the coupon code uniqueness check apply on coupons/add?"
+      ],
+      "concepts": [
+        "coupon",
+        "promotion"
+      ],
       "anchors": [
         "POST /api/marketing/promotions/coupons/add"
       ],
       "scope": [
-        "surface=platform-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",

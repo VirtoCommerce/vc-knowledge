@@ -3,10 +3,18 @@ id: KB-40B9AEF4
 subject: member keyword search misses hyphenated organization names
 plane: experiential
 question: Does POST /api/members/search with keyword find an organization named like AGENT-TEST-Org-Kingsbridge-Imports-20260514?
+questions:
+  - text: Why can't I find an organization by its full name in the members search?
+  - text: POST /api/members/search keyword hyphenated organization name totalCount 0
+  - text: Is members keyword search reliable for a find-or-create lookup of an organization?
+  - text: How do I list every organization through the REST API without a keyword?
+concepts:
+  - id: member-search
+  - id: organization
 status: active
 appliesTo:
   - axis: surface
-    value: platform-api
+    value: rest
 anchors:
   - coordinate: POST /api/members/search
 evidence:

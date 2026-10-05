@@ -1,0 +1,57 @@
+[
+ {
+  "id": "KB-11E3EE30",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Does the admin product search return min and max order quantity for each product?",
+   "POST /api/catalog/search/products responseGroup ItemInfo minQuantity maxQuantity packSize",
+   "How do I get a stable page order from the back-office product search?",
+   "What does maxQuantity 0 mean on a product returned by the catalog REST API?",
+   "GET /api/catalog/products ids batch respGroup ItemInfo deleted product missing"
+  ],
+  "concepts": [
+   "product-search",
+   "product"
+  ],
+  "basedOn": "899c1d2c344fb4b1"
+ },
+ {
+  "id": "KB-40B9AEF4",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why can't I find an organization by its full name in the members search?",
+   "POST /api/members/search keyword hyphenated organization name totalCount 0",
+   "Is members keyword search reliable for a find-or-create lookup of an organization?",
+   "How do I list every organization through the REST API without a keyword?"
+  ],
+  "concepts": [
+   "member-search",
+   "organization"
+  ],
+  "basedOn": "fc25f61065f94291"
+ },
+ {
+  "id": "KB-B85A6FC2",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Can I change a coupon's expiration date without deleting and recreating it?",
+   "POST /api/marketing/promotions/coupons/add with an existing coupon id upsert",
+   "Is there a PUT endpoint for updating a coupon?",
+   "When does the coupon code uniqueness check apply on coupons/add?"
+  ],
+  "concepts": [
+   "coupon",
+   "promotion"
+  ],
+  "basedOn": "ffdbac3bc0a061e3"
+ }
+]
