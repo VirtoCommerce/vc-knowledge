@@ -40,5 +40,11 @@ evidence:
     by: session:bbd60c47
     who: Aleksandra-Mitricheva
     note: "Theme 2.59.0-pr-2476-0abb: Stop sharing -> former target reader gets /shared-list 404 page; re-share to another org reuses the same key, recipients and message empty on reopen (0/250), former recipient /403. Toasts 'List shared with 1 customer.' / 'List shared with 2 customers.'; none after Anyone-with-link save."
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-05T15:22:47.031Z
+    by: session:70a35285
+    who: Lenajava1
+    note: "Local theme 2.59.0-pr-2476-0abb over vcst_qa backend: Stop sharing from Anyone with link -> Private, same key; signed-out /shared-list/{key} renders the 404 page, anonymous sharedWishlist null with no error. No toast after Anyone-with-link / My organization saves or Stop sharing; 'List shared with N customer(s).' and 'List saved. Now shared with 1 customer.' as stated."
 ---
 Stop sharing (Share dialog Private + 'Stop sharing this list?' confirm) sets scope Private, clears targets and message; readers get Query.sharedWishlist = null with no error (an org removed from a still-shared list instead gets errors[] 'Access denied.' Forbidden). Re-sharing reuses the same sharing key/URL; previous recipients and message are not restored. The Rename dialog holds only List name + Description (no sharing details). No toast after Stop sharing or after saving Anyone-with-link / My organization, while Specific-customers saves toast 'List shared with N customers.' / 'List saved. Now shared with N customers.'

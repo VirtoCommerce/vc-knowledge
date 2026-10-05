@@ -22,5 +22,11 @@ evidence:
     by: session:7c4c6f53
     who: Aleksandra-Mitricheva
     note: "2026-10-02 theme 2.59.0-pr-2476-31b5 via storefront Share dialog: Customer(AcmeCorp)->Anyone with link kept sharingSetting.id, targets [] message null; target-org member, another-org member and anonymous all read via sharedWishlist(key) with access Read. Back to Specific customers with a customer picked -> same key, anonymous Unauthorized, non-target org Forbidden."
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-05T15:22:47.018Z
+    by: session:70a35285
+    who: Lenajava1
+    note: "Local theme 2.59.0-pr-2476-0abb over vcst_qa backend: Customer -> AnyoneAnonymous via Share dialog, changeWishlist response kept sharingSetting.id, targets [] message null; anonymous sharedWishlist(key) access Read (3/3). Back to Customer: anonymous gets Unauthorized."
 ---
 On x-cart pr-141 / cart pr-194: changing a Customer list with targets and a message to scope AnyoneAnonymous keeps sharingSetting.id, sets targets [] and message null; anonymous sharedWishlist(key) then returns the list with access Read; a member of the former target org still gets Access denied from wishlist(listId) and reads only by key. Switching it back to Customer without addSharedWithIds is refused INVALID_OPERATION (empty set) and leaves AnyoneAnonymous in place.
