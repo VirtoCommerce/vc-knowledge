@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T11:33:52.278Z",
-  "count": 370,
+  "generated": "2026-10-05T12:16:05.784Z",
+  "count": 371,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2820,6 +2820,25 @@
       "disputed": 1
     },
     {
+      "id": "KB-6E56FB4B",
+      "path": "entries/KB-6E56FB4B.md",
+      "subject": "Organization-scope wishlist: only the owner may change scope/sharing or remove the list; members keep rename and item edits",
+      "question": "Can a non-owner member of an Organization-scope wishlist change its scope, share it, or delete it?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Mutation.removeWishlist",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "module=x-cart",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6E98AA17",
       "path": "entries/KB-6E98AA17.md",
       "subject": "admin order operations tree staleness after cancel",
@@ -4548,7 +4567,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4565,7 +4584,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-B5B57F41",
