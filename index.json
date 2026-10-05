@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T13:02:42.896Z",
-  "count": 375,
+  "generated": "2026-10-05T13:08:39.827Z",
+  "count": 376,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -869,6 +869,25 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-20F8350F",
+      "path": "entries/KB-20F8350F.md",
+      "subject": "sendCustomerCommunication to a served org whose only member is the sending rep returns succeeded:false, pushSent:false, emailSent:false, warnings[0]=NoRecipients, errors[] empty",
+      "question": "What does sendCustomerCommunication return when the target organization's only member is the sending sales rep?",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "PUT /api/sales-rep",
+        "/graphql/sales-rep"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
