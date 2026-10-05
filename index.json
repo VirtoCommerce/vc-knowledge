@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T17:59:13.228Z",
-  "count": 388,
+  "generated": "2026-10-05T18:02:12.176Z",
+  "count": 389,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1753,6 +1753,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4593FC41",
+      "path": "entries/KB-4593FC41.md",
+      "subject": "vc-shell framework 2.6.1 never leaves focus on <body> after sign-in, blade open, maximize/restore (button or mod+\\), save, popup close or sign-out — each lands on a defined element",
+      "question": "where does keyboard focus go in a vc-shell app after sign-in, blade open, maximize/restore, save and sign-out",
+      "anchors": [
+        "/apps/vendor-portal/#/products",
+        "/apps/vendor-portal/#/login"
+      ],
+      "scope": [
+        "browser=chrome",
+        "framework=@vc-shell/framework@2.6.1",
+        "surface=vc-shell-vendor-portal"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
