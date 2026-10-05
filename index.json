@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T12:25:47.931Z",
-  "count": 372,
+  "generated": "2026-10-05T12:56:20.116Z",
+  "count": 374,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1639,7 +1639,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-432D02EF",
@@ -2401,6 +2401,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-5FA94169",
+      "path": "entries/KB-5FA94169.md",
+      "subject": "Customer-scope list switched to Organization: targets cleared, former target orgs denied, owner's active-org members get Write",
+      "question": "What happens to access when a Specific-customers wishlist share is changed to My organization?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-608F7C05",
       "path": "entries/KB-608F7C05.md",
       "subject": "deleting a loyalty mission that has accrued progress fails with a foreign-key 500",
@@ -2431,7 +2448,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2835,7 +2852,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4592,6 +4609,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-B540D063",
+      "path": "entries/KB-B540D063.md",
+      "subject": "changeWishlist with message (or other sharing fields) but no scope is a silent no-op, even for the owner",
+      "question": "Does changeWishlist persist a message sent without scope?",
+      "anchors": [
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B59A1F9D",
       "path": "entries/KB-B59A1F9D.md",
       "subject": "Organization-scope wishlist: any Write member who sends changeWishlist with a scope becomes the list owner",
@@ -5541,7 +5574,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
