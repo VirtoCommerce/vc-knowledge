@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T13:40:48.455Z",
-  "count": 379,
+  "generated": "2026-10-05T15:13:40.568Z",
+  "count": 381,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2031,6 +2031,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-4E1FF232",
+      "path": "entries/KB-4E1FF232.md",
+      "subject": "returnableItems reports NOT_DELIVERED for a Completed order whose shipment has no DeliveryDate",
+      "question": "Why does returnableItems say NOT_DELIVERED / deliveredQuantity 0 on a Completed order?",
+      "anchors": [
+        "Query.returnableItems",
+        "PUT /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4E45A8BA",
       "path": "entries/KB-4E45A8BA.md",
       "subject": "admin contact Status picker cannot represent Invited or Locked",
@@ -3545,6 +3562,23 @@
       ],
       "scope": [
         "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-84773559",
+      "path": "entries/KB-84773559.md",
+      "subject": "Return 3.1003.0 release: return-attachments file scope not registered, submitReturn works without attachments",
+      "question": "Can a buyer upload return attachments / submit a return without them on Return 3.1003.0?",
+      "anchors": [
+        "POST /api/files/return-attachments",
+        "Mutation.submitReturn"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
