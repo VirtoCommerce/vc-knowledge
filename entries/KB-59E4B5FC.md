@@ -60,6 +60,7 @@ evidence:
     by: session:6d4f2631
     splitFrom: KB-360127D0
     mergedFrom: KB-E1E2716F
+    duplicateSession: true
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
