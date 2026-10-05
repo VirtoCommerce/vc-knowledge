@@ -56,6 +56,12 @@ evidence:
     by: session:p35948
     who: Aleksandra-Mitricheva
     note: recipient of a rep Customer-scope share sees an empty /account/lists
+  - method: observation
+    deployment: vcptcore_qa
+    at: 2026-10-05T12:20:35.518Z
+    by: session:91e50fbd
+    who: Aleksandra-Mitricheva
+    contradicts: true
+    note: "Theme 2.59.0-pr-2476-0abb: a list created by a sales rep (org context = the buyer's org) and set to scope Organization via changeWishlist appears on /account/lists AND in the sidebar for a different member of that organization (buyer, not the owner), with a 'Shared' badge, and opens at /account/lists/<id>. So an Organization-scope list belonging to someone else DOES reach the Lists roster; the 'owner-only' statement holds for Customer-scope shares, not for Organization scope."
 ---
-
 Not by that page. The storefront's Lists screen issues GetWishlists, and that document passes storeId, userId, currencyCode, cultureName, first, after and sort - it does NOT pass the scope argument the schema offers on Query.wishlists, and userId is always the signed-in user. So the roster is defined as lists you own, and an organization-scoped list belonging to someone else cannot reach it by any path, however the platform resolves organization visibility. The only storefront route that reaches a list you do not own is /shared-list/<sharingKey>, which needs the link. Read this as a surface gap rather than a permission answer: the schema exposes a scope filter that the shipped UI never exercises, so what Query.wishlists does with scope is untested from the storefront and must be settled with a direct call.

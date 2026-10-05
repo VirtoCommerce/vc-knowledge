@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-05T17:12:52.189Z",
-  "count": 457,
+  "generated": "2026-10-05T17:14:16.213Z",
+  "count": 475,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1547,7 +1547,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1572,6 +1572,24 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1E03BE5A",
+      "path": "entries/KB-1E03BE5A.md",
+      "subject": "The storefront Barcode scan control sits inside the desktop header search input at 1920 px, but at 390 px it is reachable only after \"Toggle search bar\"",
+      "question": "where is the Barcode scan entry point in the storefront header at desktop vs mobile width",
+      "anchors": [
+        "client-app/shared/layout/components/header/_internal/search-bar/search-bar.vue",
+        "client-app/shared/layout/components/header/_internal/mobile-search-bar.vue"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=390,1920"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1712,6 +1730,25 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-20F8350F",
+      "path": "entries/KB-20F8350F.md",
+      "subject": "sendCustomerCommunication to a served org whose only member is the sending rep returns succeeded:false, pushSent:false, emailSent:false, warnings[0]=NoRecipients, errors[] empty",
+      "question": "What does sendCustomerCommunication return when the target organization's only member is the sending sales rep?",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "PUT /api/sales-rep",
+        "/graphql/sales-rep"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-21BA7389",
@@ -2138,7 +2175,25 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2BCFC8A6",
+      "path": "entries/KB-2BCFC8A6.md",
+      "subject": "Quote Approve converts to an order in one step; no Accepted status",
+      "question": "What quote status does the storefront need to offer Accept/Approve, and is there an Accepted state before conversion to order?",
+      "anchors": [
+        "Mutation.approveQuoteRequest",
+        "Mutation.declineQuoteRequest",
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -2570,6 +2625,22 @@
         "setting=detailederrors-on",
         "surface=rest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3483ADA3",
+      "path": "entries/KB-3483ADA3.md",
+      "subject": "xAPI removeWishlist returns a Boolean scalar, so selecting { id } on it fails validation",
+      "question": "What does the removeWishlist GraphQL mutation return?",
+      "anchors": [
+        "Mutation.removeWishlist"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3265,7 +3336,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-432D02EF",
@@ -3337,7 +3408,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3895,6 +3966,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-4E1FF232",
+      "path": "entries/KB-4E1FF232.md",
+      "subject": "returnableItems reports NOT_DELIVERED for a Completed order whose shipment has no DeliveryDate",
+      "question": "Why does returnableItems say NOT_DELIVERED / deliveredQuantity 0 on a Completed order?",
+      "anchors": [
+        "Query.returnableItems",
+        "PUT /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4E45A8BA",
       "path": "entries/KB-4E45A8BA.md",
       "subject": "admin contact Status picker cannot represent Invited or Locked",
@@ -4133,7 +4221,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4193,6 +4281,25 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-5196FCE9",
+      "path": "entries/KB-5196FCE9.md",
+      "subject": "When the store's anonymousUsersAllowed setting is false, the storefront sends every anonymous visitor to /sign-in, so an 'Anyone with link' list link cannot be opened without signing in",
+      "question": "Can an anonymous visitor open an 'Anyone with link' shared list when the store does not allow anonymous users?",
+      "anchors": [
+        "/shared-list/{}",
+        "/sign-in",
+        "Query.pageContext"
+      ],
+      "scope": [
+        "actor=anonymous",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-535FF3AC",
@@ -4792,7 +4899,7 @@
       "supersededBy": [
         "KB-D7F08A26"
       ],
-      "trust": 4,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -4821,6 +4928,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5FA94169",
+      "path": "entries/KB-5FA94169.md",
+      "subject": "Customer-scope list switched to Organization: targets cleared, former target orgs denied, owner's active-org members get Write",
+      "question": "What happens to access when a Specific-customers wishlist share is changed to My organization?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -4873,7 +4997,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5549,6 +5673,25 @@
       "disputed": 1
     },
     {
+      "id": "KB-6E56FB4B",
+      "path": "entries/KB-6E56FB4B.md",
+      "subject": "Organization-scope wishlist: only the owner may change scope/sharing or remove the list; members keep rename and item edits",
+      "question": "Can a non-owner member of an Organization-scope wishlist change its scope, share it, or delete it?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Mutation.removeWishlist",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "module=x-cart",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
       "id": "KB-6E63AFF4",
       "path": "entries/KB-6E63AFF4.md",
       "subject": "an order can be deleted, not only cancelled",
@@ -5615,7 +5758,7 @@
         "KB-1D53A1BE",
         "KB-456FD813"
       ],
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6715,6 +6858,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-84773559",
+      "path": "entries/KB-84773559.md",
+      "subject": "Return 3.1003.0 release: return-attachments file scope not registered, submitReturn works without attachments",
+      "question": "Can a buyer upload return attachments / submit a return without them on Return 3.1003.0?",
+      "anchors": [
+        "POST /api/files/return-attachments",
+        "Mutation.submitReturn"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-84E540DD",
       "path": "entries/KB-84E540DD.md",
       "subject": "a promotion body ignores inline coupons; coupons are added through /coupons/add",
@@ -6829,6 +6989,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-874B24DD",
+      "path": "entries/KB-874B24DD.md",
+      "subject": "Buyer quote list filters by login id AND current organization",
+      "question": "Which quotes does the storefront /account/quotes list (xAPI quotes query) show to a B2B buyer?",
+      "anchors": [
+        "Query.quotes",
+        "/account/quotes",
+        "POST /api/quote/requests"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8793DFE7",
       "path": "entries/KB-8793DFE7.md",
       "subject": "An order header's shippingTaxTotal reads 0 even when shipping is taxed, contradicting the header's own shippingTotalWithTax",
@@ -6858,6 +7036,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8A1B3406",
+      "path": "entries/KB-8A1B3406.md",
+      "subject": "Header search dropdown pushes one view_item_list search_bar per open with a phrase; Escape clears the box and a reopen with it empty shows the previous phrase's results and pushes nothing",
+      "question": "How many search_bar view_item_list impressions does the header search dropdown push per open, and what does Escape do to the phrase?",
+      "anchors": [
+        "/search"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7260,7 +7455,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 2
     },
     {
       "id": "KB-92164C90",
@@ -7454,6 +7649,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-95FBC464",
+      "path": "entries/KB-95FBC464.md",
+      "subject": "For a corporate (organization) storefront user the header Ship-to selection is stored server-side on Contact.selectedAddressId (plus the cart shipment delivery address), so it is shared across storefront origins and sessions rather than kept in browser storage",
+      "question": "where does the storefront header Ship to selector keep the selected address for an organization member",
+      "anchors": [
+        "Mutation.updateContact",
+        "Mutation.addOrUpdateCartShipment",
+        "/ (header ship-to selector)"
+      ],
+      "scope": [
+        "frontend=2.59.x",
+        "surface=storefront-ui",
+        "user=organization-member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-969D7E09",
       "path": "entries/KB-969D7E09.md",
       "subject": "POSTing an unmodified GET /api/catalog/products/{id} body back to POST /api/catalog/products fails 500 (PK_Item duplicate key) when the product has variations; omitting variations[] succeeds and keeps them",
@@ -7574,6 +7789,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 8,
+      "disputed": 0
+    },
+    {
+      "id": "KB-97C03EB4",
+      "path": "entries/KB-97C03EB4.md",
+      "subject": "A quote without languageCode is listed by xAPI quotes but quote(id) fails ARGUMENT_NULL",
+      "question": "Why does a quote created via POST /api/quote/requests show in the buyer's quote list but fail to open (Something went wrong)?",
+      "anchors": [
+        "POST /api/quote/requests",
+        "Query.quote",
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8176,6 +8409,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-A46DF150",
+      "path": "entries/KB-A46DF150.md",
+      "subject": "The storefront desktop top utility bar (h-10 header row with language, currency, ship-to, call us, dashboard, account) renders only at viewport ≥1024px; the account org/user names inside it render only at ≥1280px (xl), and below 1024px a separate 90px mobile header is shown instead",
+      "question": "at which viewport widths does the storefront top utility bar and the account org/user name label render",
+      "anchors": [
+        "/ (top-header.vue utility bar)",
+        "/catalog"
+      ],
+      "scope": [
+        "frontend=2.59.x",
+        "surface=storefront-ui",
+        "theme=coffee"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A47C7347",
       "path": "entries/KB-A47C7347.md",
       "subject": "Deleting a barcode property then reindexing the product stops exact-mode scans matching its value",
@@ -8704,6 +8956,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-ACDF81BB",
+      "path": "entries/KB-ACDF81BB.md",
+      "subject": "On theme 2.59.0-pr-2476 a non-owner member of an Organization-scope list is offered only Rename — no Share, no Remove list — on the card menu and the list page",
+      "question": "which list actions does /account/lists offer a non-owner member of an Organization-scope list",
+      "anchors": [
+        "/account/lists",
+        "/account/lists/{id}",
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "actor=non-owner-org-member",
+        "list-scope=organization",
+        "surface=storefront-ui",
+        "theme=2.59.0-pr-2476"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
       "id": "KB-AD1FA66B",
       "path": "entries/KB-AD1FA66B.md",
       "subject": "Stored cart (GET /api/carts/{id}) keeps the last mutation's promotion snapshot while Query.cart recomputes promotions on every read",
@@ -9016,7 +9289,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -9038,6 +9311,22 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B540D063",
+      "path": "entries/KB-B540D063.md",
+      "subject": "changeWishlist with message (or other sharing fields) but no scope is a silent no-op, even for the owner",
+      "question": "Does changeWishlist persist a message sent without scope?",
+      "anchors": [
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9070,7 +9359,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-B5B57F41",
@@ -9514,7 +9803,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -9596,7 +9885,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -9830,6 +10119,23 @@
       "status": "active",
       "trust": 3,
       "disputed": 0
+    },
+    {
+      "id": "KB-C4DC8774",
+      "path": "entries/KB-C4DC8774.md",
+      "subject": "me.contact.addresses default order is not insertion order and changes when addresses are re-created",
+      "question": "In what order does xAPI me.contact.addresses return a customer's addresses by default?",
+      "anchors": [
+        "me.contact.addresses",
+        "GET /api/members/{}"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 1
     },
     {
       "id": "KB-C55BBF2E",
@@ -10723,7 +11029,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 8,
       "disputed": 0
     },
     {
@@ -11402,6 +11708,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-E6436922",
+      "path": "entries/KB-E6436922.md",
+      "subject": "Share-list dialog on theme 2.59.0-pr-2476-0abb warns only when access can be lost: widening to Anyone with link saves directly, narrowing and removing a recipient show 'Change who can access?'",
+      "question": "Which Share-dialog changes on /account/lists show a confirmation before Mutation.changeWishlist runs, and which save directly?",
+      "anchors": [
+        "/account/lists",
+        "Mutation.changeWishlist",
+        "Query.sharedWishlist",
+        "/shared-list/{key}"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "surface=storefront-ui",
+        "theme=2.59.0-pr-2476-0abb"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E7007F44",
       "path": "entries/KB-E7007F44.md",
       "subject": "loyaltyMissionProgress returns items[].product null for a PerSku target whose product was deleted; an inactive product still returns flags",
@@ -11697,7 +12024,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-EB70C1F9",
@@ -12382,7 +12709,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-F31BD5B8",
