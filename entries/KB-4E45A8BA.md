@@ -3,6 +3,15 @@ id: KB-4E45A8BA
 subject: admin contact Status picker cannot represent Invited or Locked
 plane: experiential
 question: Can an administrator put a contact back into the Invited state, or read the invitation state from the Admin contact blade?
+questions:
+  - text: Can the shop put my invitation back after it was accidentally changed?
+  - text: Which values does the contact Status dropdown in the back office offer?
+  - text: Why does a contact's status show Invited or Locked when those are not in the picker's list?
+  - text: Can an administrator restore a contact to the Invited state after it leaves it?
+concepts:
+  - id: contact
+  - id: organization-invitation
+  - id: membership-status
 status: active
 appliesTo:
   - axis: surface

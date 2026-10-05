@@ -1,0 +1,678 @@
+[
+ {
+  "id": "KB-6A20B0AF",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why does my loyalty mission list show names but no descriptions?",
+   "Two testers get different GraphQL results for the same query - could a missing store or language argument explain it?",
+   "Does xAPI return an error when cultureName, storeId, userId or organizationId is left out of a query?",
+   "Which default does the storefront API substitute when an optional context argument is omitted, and is the response still 200?",
+   "How common are optional culture and store arguments across the GraphQL query surface?"
+  ],
+  "concepts": [
+   "context-argument",
+   "graphql-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "6bd4c54c3d5655ab"
+ },
+ {
+  "id": "KB-6AA0D7FB",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "rest"
+  ],
+  "questions": [
+   "Why is shipping still free when I switch from ground to air delivery at checkout?",
+   "A store offers two fixed-rate delivery options that both cost zero - is that a bug or missing configuration?",
+   "Where are per-option fixed rate shipping prices configured, and what value applies when the setting was never set?",
+   "Does the placed order still record which fixed-rate delivery option the buyer chose even when its price is zero?",
+   "How do shipment price, shippingSubTotal and shippingTotal relate on an order with a single shipment?"
+  ],
+  "concepts": [
+   "shipping-method",
+   "shipment"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "9c6d7fde195aa437"
+ },
+ {
+  "id": "KB-6AFE7618",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Why can an admin assign any company role to a member when the allowed-roles list is empty?",
+   "Does the customer module's organization roles whitelist limit which roles the back-office role picker offers?",
+   "I edited the allowed organization roles setting but the picker did not change - what refresh is needed?",
+   "How is the organization role picker's option list computed from the whitelist, assignable roles and already-assigned roles?",
+   "Does clearing a dictionary-type platform setting to empty survive a page reload?"
+  ],
+  "concepts": [
+   "organization-role",
+   "platform-settings"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8b8c93003e203310"
+ },
+ {
+  "id": "KB-6B0E2FF7",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Are the buttons on the catalog page big enough to tap comfortably on a phone?",
+   "What touch target sizes do storefront catalog controls have at a narrow mobile viewport for a target-size audit?",
+   "Which interactive controls on the mobile catalog page fall below 24 CSS pixels?",
+   "Do storefront catalog control heights follow the UI kit button size tiers on small screens?"
+  ],
+  "concepts": [
+   "mobile-layout",
+   "accessibility"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "cd69fe2c16baa642"
+ },
+ {
+  "id": "KB-6C3FA2B7",
+  "action": "split",
+  "why": "(a) the last sentence is an unrelated side finding about which cart Query.cart returns without a cart name, a different question a reader reaches separately from coupon survival across re-authentication",
+  "children": [
+   {
+    "subject": "An applied cart coupon survives storefront sign-out and sign-in, and re-prices after a cart merge",
+    "question": "Does the storefront cart keep an applied coupon when the shopper signs out and signs back in?",
+    "anchors": [
+     "Mutations.mergeCart",
+     "Mutations.addCoupon"
+    ],
+    "surface": [
+     "storefront-ui",
+     "xapi"
+    ],
+    "body": "Yes - on every path. Sign-out issues NO cart mutation (signMeOut = unauthorize + Apollo clearStore + localStorage cleanup), so the registered user's server-side cart, coupon row included, is untouched. On sign-in vc-frontend calls mergeCart ONLY when the anonymous cart has line items (guard: cart.value?.id && cart.value.items?.length), so a plain round-trip with an empty guest cart performs no merge at all. When a merge DOES fire, the coupon survives from BOTH sides and its discount RE-PRICES against the post-merge subtotal rather than staying frozen. Measured 2026-09-19 via xAPI with coupon VALID10 (10% off cart): S1 plain re-auth - sub 378 / disc 37.8 unchanged; S2 coupon on the user cart + guest cart with items - disc 37.8 -> 45.3 (10% of merged 453); S3 coupon on the GUEST cart only, user cart had none - coupon carried onto the user cart, disc 5 -> 23.9 (10% of merged 239); S4b empty guest cart merged explicitly - coupon and discount unchanged. All four ended coupons=[VALID10:isAppliedSuccessfully=true]. Storefront side verified against the DEPLOYED bundle /assets/index-DYzexmEK.js, byte-equivalent to useSignMeIn.ts / useSignMeOut.ts. Corroborates BL-CART-008 and adds the storefront-side merge guard, which BL-CART-008 does not state.",
+    "fromNotes": false,
+    "questions": [
+     "If I log out and log back in, is my promo code still applied to my basket?",
+     "When a guest cart with a coupon merges into a buyer's cart at sign-in, does the coupon carry over?",
+     "Is a cart discount recalculated against the merged subtotal or frozen at its pre-merge amount?",
+     "Under what condition does the storefront call mergeCart on sign-in, and does sign-out send any cart mutation?"
+    ],
+    "concepts": [
+     "coupon",
+     "cart-merge"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Query.cart without a cart name returns the most recently touched cart, not the default one",
+    "question": "Which cart does Query.cart return when no cartName is passed?",
+    "anchors": [
+     "Query.cart"
+    ],
+    "surface": [
+     "xapi"
+    ],
+    "body": "Query.cart with no cartName returns the most-recently-touched cart, NOT the one named 'default'.",
+    "fromNotes": false,
+    "questions": [
+     "Why does the API show me a different basket than the one I expected to be my main cart?",
+     "A user has several carts - which one comes back from the cart query when no cart name is given?",
+     "Does omitting cartName on Query.cart resolve the cart named default or the last modified one?"
+    ],
+    "concepts": [
+     "cart",
+     "context-argument"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "b8d0bbd44a2c9105"
+ },
+ {
+  "id": "KB-6CC1EFE6",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "How do I completely remove a test user so neither their login nor their contact record remains?",
+   "Does deleting a back-office security account also delete the linked customer contact, or vice versa?",
+   "Contacts search says No data after I deleted someone - does that prove the contact is gone?",
+   "How can I find an invitation-created contact with an empty name that keyword search does not return?",
+   "Which admin list bypasses the member search index and reliably confirms an account was deleted?"
+  ],
+  "concepts": [
+   "member-deletion",
+   "security-account",
+   "contact"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ce98bbca9816650a"
+ },
+ {
+  "id": "KB-6E98AA17",
+  "action": "split",
+  "why": "(a) the cancelledState semantics are a data fact read from the order API, a different place from the Admin order blade's stale operations tree, and a reader checking payment state programmatically reaches it separately",
+  "children": [
+   {
+    "subject": "The Admin order operations tree keeps stale child payment and shipment states after cancelling the order",
+    "question": "After cancelling an order the header says Cancelled but the payment under it still says New -- did the cascade fail?",
+    "anchors": [
+     "CustomerOrder.childrenOperations",
+     "GET /api/order/customerOrders/{id}"
+    ],
+    "surface": [
+     "admin-ui"
+    ],
+    "body": "No -- the tree is stale. Cancel document updates the order blade's own header in place, but the operations-tree widget that draws the child PaymentIn and Shipment keeps the child objects it was given when the blade opened, and nothing re-reads them. So immediately after a successful cancel the header reads Cancelled while both children still read New, which looks exactly like a cascade that did not fire. It did: re-fetch and the payment is status Cancelled with isCancelled true, while the shipment genuinely stays New. Force the re-read by CLOSING the order blade and reopening it from the list -- an in-app hash navigation to the same orderId does not do it, because the blade is already open and is not rebuilt. The general rule: never read a child operation's state off the tree after acting on the parent; read it from the order API response.",
+    "fromNotes": false,
+    "questions": [
+     "I cancelled an order in the back office but its payment still shows New - did cancellation not reach the payment?",
+     "Why does the admin order document tree show outdated child statuses right after a cancel?",
+     "Does cancelling an order also cancel its shipment, or only the incoming payment?",
+     "How do I force the Admin order blade to re-read its child operations after acting on the parent?"
+    ],
+    "concepts": [
+     "admin-order-screen",
+     "order-cancellation"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "cancelledState stays Undefined on a cancelled order but becomes Completed on its cascaded payment",
+    "question": "What value does cancelledState take on a cancelled order versus its cascaded PaymentIn?",
+    "anchors": [
+     "PaymentIn.cancelledState",
+     "GET /api/order/customerOrders/{id}"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "cancelledState is not uniform across operations. On the cancelled ORDER it stays Undefined, but on the cascaded PaymentIn it becomes Completed, so a check that tests cancelledState == Undefined to mean not-cancelled is wrong on the payment and right on the order.",
+    "fromNotes": false,
+    "questions": [
+     "Can I rely on the cancellation state field to tell whether an order's payment was cancelled?",
+     "Why does an automated check think a cancelled order is not cancelled when it reads cancelledState?",
+     "After an order cancel cascades, is PaymentIn.cancelledState Completed while the order's own cancelledState stays Undefined?"
+    ],
+    "concepts": [
+     "order-payment",
+     "order-cancellation"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "8883030eef0a2b78"
+ },
+ {
+  "id": "KB-6F0094B3",
+  "action": "split",
+  "why": "(a) the mislabelled results-grid view_item_list and the spurious search-bar list are a side finding on both search routes, unrelated to how barcode lookups report search events",
+  "children": [
+   {
+    "subject": "A barcode lookup pushes view_search_results with the barcode as search_term, and a single-hit redirect pushes only view_item",
+    "question": "Which analytics events does the storefront push for a /search?barcode= lookup compared with a /search?q= search?",
+    "anchors": [
+     "/search"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "Observed in the GA4 dataLayer on a vc-frontend 2.59 build carrying the barcode scanner search setup (theme PR 2501), store in exact mode. Opening /search?barcode=<v> by link: 3 hits pushed view_item_list and view_search_results with search_term <v>, results_count 3, results_page 1 and the three SKUs in visible_items; 0 hits pushed both with results_count 0 and an empty visible_items; exactly one hit replaced the URL with the product page and pushed only view_item, no view_search_results and no view_item_list. With &q=<other term> added, view_search_results still carried the barcode as search_term. /search?q=<v> pushed view_search_results with the phrase as search_term. No search event was pushed for a link-opened lookup (in source it is sent only after a scan).",
+    "fromNotes": false,
+    "questions": [
+     "When a shopper scans a code that matches one item, is that counted as a search in our analytics?",
+     "What search_term does the search results event carry for a barcode lookup that also has a keyword?",
+     "Does a zero-result barcode lookup still report a search results event with a count of zero?",
+     "Is the search event pushed when a barcode results page is opened from a link rather than a scan?"
+    ],
+    "concepts": [
+     "analytics",
+     "barcode-search"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The search results grid reports its item list as an undefined category, and a search-bar item list is pushed without the dropdown opening",
+    "question": "What item_list_id and item_list_name does the storefront search results grid send in view_item_list?",
+    "anchors": [
+     "/search"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "On both routes the results-grid view_item_list carried item_list_id category_undefined_page_1 and item_list_name 'Category \"undefined\" (page 1)', and a separate view_item_list with item_list_id search_bar was pushed for the q value although the search dropdown was never opened.",
+    "fromNotes": false,
+    "questions": [
+     "Why do our analytics reports show search result impressions under an undefined category?",
+     "Is the item list name on the search results page tracked correctly for merchandising reports?",
+     "Why is a view_item_list with item_list_id search_bar pushed when the search dropdown never opened?"
+    ],
+    "concepts": [
+     "analytics",
+     "product-search"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "fa1fd241b16799b0"
+ },
+ {
+  "id": "KB-6FAB2EBA",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "I typed a huge quantity and the item silently was not added to my basket - why no error?",
+   "What happens on add to cart when a buyer requests a quantity above the store's per-line limit?",
+   "Does addItem report an over-limit quantity in GraphQL errors or in the cart's validationErrors?",
+   "Why does an automated add-to-cart check pass on HTTP 200 while the line was never added?"
+  ],
+  "concepts": [
+   "cart-validation",
+   "add-to-cart"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "467cc113ec036b0a"
+ },
+ {
+  "id": "KB-700E5D52",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "admin-ui"
+  ],
+  "questions": [
+   "Why can a manager see return requests but not approve or reject individual lines?",
+   "Which role permission does a back-office user need to decide on return lines?",
+   "Does return:update alone allow calling the per-line return authorize endpoint, or does it get 403?",
+   "What permissions does the Return module define, and is the authorize gate checked before the handler runs?",
+   "Why is the approve or decline command missing on a return's line items for some admin users?"
+  ],
+  "concepts": [
+   "return-decision",
+   "permission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "799722ffb422dbae"
+ },
+ {
+  "id": "KB-7040852E",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "A contact appears in the members list but typing its name in the search box finds nothing - where is it?",
+   "Is the companies and contacts keyword search served from the database or the search index?",
+   "How can I tell from a member's blade whether that member is in the search index?",
+   "Why does member keyword search return No data for a member whose index entry is missing?"
+  ],
+  "concepts": [
+   "member-search",
+   "search-index"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "bc01563b353d7a41"
+ },
+ {
+  "id": "KB-71011C1F",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "What happens when I scan a code that matches exactly one item in the shop?",
+   "How does barcode search behave when several products share the same trade item number?",
+   "Which store fields does barcode lookup match on, and is the match exact or fuzzy?",
+   "What do shoppers see and where does Reset search go when a scanned barcode matches nothing?",
+   "Does a barcode search respect facets and the show-in-stock preference, or are out-of-stock variations still found?",
+   "How is a barcode value expanded into product filter terms in the products query response?"
+  ],
+  "concepts": [
+   "barcode-search",
+   "barcode-settings"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "56d42e2d589afa60"
+ },
+ {
+  "id": "KB-737F80EE",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "My screen reader stops announcing the header buttons after I save my profile - why?",
+   "After switching organization the account menu shows no company name - how does a buyer know which company they order for?",
+   "Why do automated tests selecting header controls by accessible name fail after an in-page state change?",
+   "Which storefront header controls lose their accessible names after a client-side update, and what restores them?"
+  ],
+  "concepts": [
+   "accessibility",
+   "site-header"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ad72a2238968668c"
+ },
+ {
+  "id": "KB-7564A9BF",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "If I log out, can someone who copied my session token still use it?",
+   "Does revoking a token immediately cut off an already-issued bearer token on the platform by default?",
+   "Is /connect/revocation a real endpoint, and does discovery advertise a revocation endpoint?",
+   "What happens when a refresh token is reused after it was revoked?",
+   "Which authorization setting makes access tokens be validated against persistent storage for immediate invalidation?"
+  ],
+  "concepts": [
+   "access-token",
+   "sign-out"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ae0268e8e637f160"
+ },
+ {
+  "id": "KB-75BD84BE",
+  "action": "keep",
+  "surface": [
+   "ucp",
+   "rest"
+  ],
+  "questions": [
+   "Why does the AI shopping assistant not show the free gift that my promotion added to the cart?",
+   "Does the agent commerce cart projection include auto-added promotional gift lines?",
+   "The platform cart has an isGift line at zero price but the MCP get_cart line_items do not - is that expected?",
+   "Are gift rewards missing from the agent-facing create cart, get cart and checkout line items?"
+  ],
+  "concepts": [
+   "ucp",
+   "gift"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ef5fa0cbad7e8fa4"
+ },
+ {
+  "id": "KB-78638393",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "I paid by card but my order still says Payment required with a Pay now button - what happened?",
+   "Is an order stuck in Payment required after a card checkout evidence of a payment integration defect?",
+   "What does authorizePayment return when the card processor's fraud screening holds the transaction for review?",
+   "Why does an order not advance to Processing when card authorization is held for manual fraud review?"
+  ],
+  "concepts": [
+   "card-payment",
+   "order-status"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "64134898a7c3e0c1"
+ },
+ {
+  "id": "KB-789D47BE",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why does my account manager view show nothing for a company instead of an access error?",
+   "How can a sales rep prove an organization they do not serve actually exists without admin rights?",
+   "What does salesRepCustomer return for an organization the rep does not serve, or an id that does not exist?",
+   "Which identifier and name fields does the sales rep customer type expose?"
+  ],
+  "concepts": [
+   "sales-rep",
+   "organization"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "729903fb0fd5be23"
+ },
+ {
+  "id": "KB-78B45E71",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why did scanning a partial code with a star open a product that does not have that code?",
+   "Does exact-mode barcode lookup treat asterisk and question mark as wildcards?",
+   "Which characters does the storefront escape before building the quoted barcode filter term?",
+   "Why does searching for a lone asterisk as a barcode list the whole catalog?"
+  ],
+  "concepts": [
+   "barcode-search",
+   "product-filter"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "1991dc02689f3585"
+ },
+ {
+  "id": "KB-79DB4E17",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "When saving fails in the back office, what text appears in the error banner and its details?",
+   "Why did the admin error panel's View details come out empty for a validation failure on older builds?",
+   "How does bladeNavigationService.setError build errorBody from arrays, message, exceptionMessage or errors fields?",
+   "What does the blade error show when the response body is ProblemDetails without errors or has no body at all?"
+  ],
+  "concepts": [
+   "admin-validation",
+   "api-error"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "007269c48e52a790"
+ },
+ {
+  "id": "KB-7A12CF52",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "Can someone without an account open a shopping list link I shared?",
+   "What does a signed-out visitor see for a list shared with a whole organization versus a private list?",
+   "Does an anyone-with-the-link list expose store prices publicly to anonymous callers?",
+   "What does Query.sharedWishlist return anonymously for each scope - full list, Unauthorized error, or null?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "wishlist"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "5f0d8c57c8b52184"
+ },
+ {
+  "id": "KB-7A4C260E",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why can a back-office administrator not sign in to the online store with the same login?",
+   "How do I tell a store refusal apart from a wrong password when a storefront token request fails?",
+   "What store parameter spelling does /connect/token require to avoid user_cannot_login_in_store?",
+   "Does an Admin back-office session carry over to the storefront?"
+  ],
+  "concepts": [
+   "sign-in",
+   "api-error"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "5227b52cc31b9cb0"
+ },
+ {
+  "id": "KB-7A613BE4",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Can I change the wording of a built-in order confirmation email and undo it later?",
+   "Is editing a predefined notification template allowed, and how is the shipped default restored?",
+   "What do isPredefined and isReadonly mean on a notification template, and is isReadonly ever set?",
+   "Why does the template list show a Predefined Edited badge, and where does isEdited come from?",
+   "How do I reach the original predefined template when it has no row in the template list?"
+  ],
+  "concepts": [
+   "notification-template"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "64d898660c664ec2"
+ },
+ {
+  "id": "KB-7A9D4927",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "If I stop sharing my list, will the old link work again if I share it later?",
+   "How do I permanently revoke a leaked shopping list link?",
+   "Does changing a wishlist's scope to Private and back mint a new sharing key?",
+   "Is the wishlist sharing key the id of its sharing setting row, and does removeWishlist invalidate it?",
+   "After stop sharing and re-sharing a list, are the previous recipients and message restored?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "wishlist"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "002858510db60151"
+ },
+ {
+  "id": "KB-7AB0B13E",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "admin-ui"
+  ],
+  "questions": [
+   "Can I delete a product's configuration options once they have been set up?",
+   "What does the Delete button on the admin product configuration blade actually remove?",
+   "Is there a DELETE route for product configurations, and how do I tear one down in tests?",
+   "Why do an unconfigured product and a deactivated configuration look the same in the back office?"
+  ],
+  "concepts": [
+   "configurable-product"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "5af1ea50eee607ac"
+ },
+ {
+  "id": "KB-7BBFAE10",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "ucp"
+  ],
+  "questions": [
+   "How do I get a login token that the AI commerce endpoint will accept?",
+   "Why does the agent commerce endpoint reject my token with an audience of resource_server?",
+   "Which origin and resource value must a token grant use so its audience matches the storefront MCP endpoint?",
+   "What causes invalid_target versus invalid_token when minting and using a token for the agent endpoint?"
+  ],
+  "concepts": [
+   "access-token",
+   "ucp"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8d4522839e387f72"
+ },
+ {
+  "id": "KB-7C8B8B8B",
+  "action": "split",
+  "why": "(b) two later notes contradict the entry for the reworked share dialog while it still holds for the pre-rework client, so the two client behaviours cannot share one trust figure",
+  "children": [
+   {
+    "subject": "Before the share-dialog rework, the storefront never writes the customer-share message to the wishlist",
+    "question": "Does the pre-rework storefront List settings dialog persist the Customer-share message on the wishlist?",
+    "anchors": [
+     "/account/lists",
+     "Mutation.changeWishlist",
+     "Mutation.sendCustomerCommunication",
+     "SharingSettingType.message"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "On theme 2.59 (before the share-dialog rework), choosing Sharing options = Customer and a customer reveals a Message textarea whose counter is 1000 minus the length of the share link plus two newlines (911 for a 87-char link). On Save, ChangeWishlist is sent with scope, sharingKey and the legacy single sharedWithId only - no message field - and the text travels solely in SendCustomerCommunication (organizationId singular, sendEmail and sendPush true) as '<message>\\n\\n<shared-list link>'. GetWishlists and ChangeWishlist do not select sharingSetting.message. Reopening the dialog shows Customer and the selected customer but no Message field at all, and Save stays disabled until a field changes; a save with the customer unchanged (e.g. description edit) sends ChangeWishlist without message and fires no SendCustomerCommunication. So on that client the backend's persisted share message is never written and never displayed.",
+    "fromNotes": false,
+    "questions": [
+     "Why is the note I wrote when sharing a list with a customer gone when I reopen the dialog?",
+     "On the older share dialog, how does the share message reach the customer if it is not saved on the list?",
+     "Does the legacy client's changeWishlist carry a message field, or only sendCustomerCommunication?",
+     "Why does editing a shared list's description not resend the customer communication?"
+    ],
+    "concepts": [
+     "list-sharing",
+     "customer-communication"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The reworked storefront share dialog saves the share message on the wishlist and shows it on reopen",
+    "question": "Does the reworked storefront Share dialog persist the share message and show it again on reopen?",
+    "anchors": [
+     "/account/lists",
+     "Mutation.changeWishlist",
+     "SharingSettingType.message"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "On the reworked share dialog, ChangeWishlist DOES carry message (with scope Customer, addSharedWithIds/removeSharedWithIds deltas); the server returns sharingSetting.message and the Share dialog shows it on reopen, also after a full page reload. The Message field is capped at 250 characters via maxlength, a 250-char message persisted intact, and a whitespace-only message is saved as null.",
+    "fromNotes": true,
+    "questions": [
+     "After I share a list with a message, will I see that message again when I reopen the share window?",
+     "What is the maximum length of a list share message, and is a blank message stored?",
+     "Does the reworked dialog's changeWishlist send message together with added and removed recipient deltas?"
+    ],
+    "concepts": [
+     "list-sharing",
+     "customer-communication"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "c35ed7984bf0c289"
+ },
+ {
+  "id": "KB-7CC25D4A",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "How do I throw away a return I started but never submitted?",
+   "Why is there no cancel option when a buyer opens a draft return from the returns list?",
+   "Which storefront return page offers the Cancel return button for a draft?",
+   "Do draft return fields such as reason, comment and attachment persist via autosave?"
+  ],
+  "concepts": [
+   "return"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "d4f05b228af7c978"
+ }
+]

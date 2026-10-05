@@ -3,6 +3,16 @@ id: KB-6D5E2CD1
 subject: what makes a price list apply to a store, and what the storefront reads it through
 plane: experiential
 question: Which price list's price does a B2B storefront shopper actually get, and what decides it?
+questions:
+  - text: Why do I see a different price than my colleague for the same product?
+  - text: What decides which price list a B2B customer group gets on the storefront?
+  - text: Should a price list assignment be scoped to the store or to the catalog when the store uses a virtual catalog?
+  - text: Does the price list priority or the assignment priority decide which price wins?
+  - text: Why does a price list full of prices never show on the storefront?
+  - text: Which conditions on a pricelist assignment - dates, eligible shoppers, scope - gate whether it applies?
+concepts:
+  - id: price-list
+  - id: user-group
 status: active
 appliesTo:
   - axis: surface

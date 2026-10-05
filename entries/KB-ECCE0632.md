@@ -3,10 +3,21 @@ id: KB-ECCE0632
 subject: a configurable Text section's maxLength binds custom text only; a preset option label bypasses it
 plane: experiential
 question: Does a configurable product Text section maxLength reject a preset option whose label is longer than the limit on addItem?
+questions:
+  - text: Can I pick a ready-made engraving text that is longer than the character limit on a custom item?
+  - text: Is a Text section's maximum length enforced on preset options or only on free text typed by the shopper?
+  - text: How does the server tell a preset option from custom text when validating a configured cart line?
+  - text: Why does updating a configured item with too-long custom text appear to do nothing?
+  - text: Can two preset options with identical labels in one text section be distinguished?
+concepts:
+  - id: configured-line-item
+  - id: cart-validation
 status: active
 appliesTo:
   - axis: surface
     value: xapi
+  - axis: surface
+    value: storefront-ui
 anchors:
   - coordinate: CartConfigurationItemType.customText
   - coordinate: Mutation.changeCartConfiguredItem

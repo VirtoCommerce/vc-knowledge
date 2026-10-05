@@ -3,10 +3,21 @@ id: KB-EAA7BA2F
 subject: storefront Lists page is an owner-only roster
 plane: experiential
 question: Will a list a colleague scoped to the organization show up on my Lists page?
+questions:
+  - text: Why can't I see the list my colleague shared with our company on my Lists page?
+  - text: Does switching the active organization change which lists appear on a buyer's account lists screen?
+  - text: Does the storefront lists query send the scope argument, or only the signed-in user's id?
+  - text: How does a recipient of a customer-scoped shared list actually open it from the storefront?
+  - text: Is organization visibility of wish lists ever exercised by the shipped storefront UI?
+concepts:
+  - id: wishlist
+  - id: list-sharing
 status: active
 appliesTo:
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: Query.wishlists
   - coordinate: GET /account/lists

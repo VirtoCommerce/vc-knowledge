@@ -3,6 +3,16 @@ id: KB-B9C8ECD3
 subject: the scoped discount totals on an order
 plane: experiential
 question: the order has a discount but subTotalDiscount is zero - where did the money go?
+questions:
+  - text: My order shows a promotion took money off, so why does the subtotal discount field read zero?
+  - text: For a report on order discounts, which fields actually hold a cart-subtotal promotion's amount?
+  - text: Does a percentage-off-subtotal reward populate subTotalDiscount or only discountTotal and the discounts collection on the order DTO?
+  - text: Why do the per-line discount amounts stay at zero when the whole order got a subtotal promotion?
+  - text: Is summing the scoped discount totals on an order a reliable way to find how much was discounted?
+concepts:
+  - id: discount
+  - id: customer-order
+  - id: totals
 status: active
 appliesTo:
   - axis: surface

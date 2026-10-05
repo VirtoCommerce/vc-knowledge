@@ -3,7 +3,10 @@ id: KB-6C3FA2B7
 subject: Storefront cart keeps its applied coupon across sign-out / sign-in
 plane: experiential
 question: Does the storefront cart keep an applied coupon when the shopper signs out and signs back in?
-status: active
+status: superseded
+supersededBy:
+  - id: KB-EF478346
+  - id: KB-2EDC661F
 appliesTo:
   - axis: api
     value: xapi-graphql

@@ -3,6 +3,15 @@ id: KB-4DDAE053
 subject: /product/{sku} never resolves on the storefront and returns a soft 404 with HTTP 200
 plane: experiential
 question: Does the storefront PDP resolve at /product/{sku}?
+questions:
+  - text: Why do I get page not found when opening a product link that uses its item code?
+  - text: "Which URL forms open a product page on the storefront: id, slug or SKU?"
+  - text: Why does a missing storefront route still return HTTP 200?
+  - text: Can an HTTP status check validate that a storefront page route resolves?
+concepts:
+  - id: product-page
+  - id: page-not-found
+  - id: product-identifier
 status: active
 appliesTo:
   - axis: surface

@@ -3,10 +3,19 @@ id: KB-E4DE692A
 subject: UCP create_cart/update_cart reject duplicate quantities whose sum overflows int32 as invalid_request
 plane: experiential
 question: "UCP MCP create_cart or update_cart duplicate line quantities summing above int32 max: what error?"
+questions:
+  - text: What happens if a shopping agent adds the same item twice with quantities that add up to an absurdly large number?
+  - text: How does the agent cart API respond when duplicate line quantities for one product overflow a 32-bit integer?
+  - text: Is the existing cart changed when an update with an overflowing combined quantity is rejected?
+  - text: Which error code and HTTP status do MCP and REST cart calls return for an out-of-range combined line quantity?
+concepts:
+  - id: ucp
+  - id: cart-validation
+  - id: api-error
 status: active
 appliesTo:
   - axis: surface
-    value: api
+    value: ucp
 anchors:
   - coordinate: POST /ucp/v1/carts
   - coordinate: PUT /ucp/v1/carts/{id}

@@ -3,6 +3,16 @@ id: KB-1AC55A1D
 subject: A checkout payment stamps capturedDate at the same instant as authorizedDate even when it only reached Authorized and was never captured, so capturedDate cannot be used to decide whether funds were taken
 plane: experiential
 question: does an order's inPayments[].capturedDate mean the payment was actually captured?
+questions:
+  - text: My card was only authorized, but the order record says it was captured -- was I actually charged?
+  - text: Can finance rely on an incoming payment's capturedDate to know that funds were taken?
+  - text: Why are authorizedDate and capturedDate on inPayments written within a microsecond of each other?
+  - text: Which fields should reconciliation read to tell an authorized payment from a settled one?
+  - text: Is a populated capture timestamp on an order payment with status Authorized a gateway module defect?
+concepts:
+  - id: order-payment
+  - id: card-payment
+  - id: timestamp
 status: active
 appliesTo:
   - axis: gateway
@@ -14,7 +24,7 @@ appliesTo:
   - axis: store
     value: b2b-store
   - axis: surface
-    value: rest-api
+    value: rest
 anchors:
   - coordinate: GET /api/order/customerOrders/{id}
   - coordinate: POST /api/order/customerOrders/search

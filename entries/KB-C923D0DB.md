@@ -3,7 +3,10 @@ id: KB-C923D0DB
 subject: the email confirmation link works without a session and does not sign the user in
 plane: experiential
 question: What happens when a user opens the /account/confirmemail link, and how is a confirmation email resent?
-status: active
+status: superseded
+supersededBy:
+  - id: KB-AA00AD13
+  - id: KB-3FEB9EAF
 appliesTo:
   - axis: surface
     value: storefront-ui

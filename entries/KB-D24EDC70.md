@@ -3,10 +3,22 @@ id: KB-D24EDC70
 subject: what refuses a never-registered account at sign-in was not established, and here is where the looking stopped
 plane: experiential
 question: does a security account with status PendingApproval or emailConfirmed false block storefront sign-in
+questions:
+  - text: Why can someone who never finished registering not log in to the store?
+  - text: Can a test expect that an account in PendingApproval status is blocked from storefront sign-in?
+  - text: Which check refuses sign-in for a security account with unconfirmed email and no roles?
+  - text: Does the contact sign-in validator's email-verification branch refuse a login, or only rewrite the error of an already-failed one?
+  - text: Is RequireConfirmedEmail in the identity configuration the gate for never-registered accounts, and can any endpoint expose it?
+concepts:
+  - id: sign-in
+  - id: email-confirmation
+  - id: security-account
 status: active
 appliesTo:
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: GET /api/platform/security/users/{userName}
 arrivesAt:

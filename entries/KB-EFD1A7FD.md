@@ -3,10 +3,22 @@ id: KB-EFD1A7FD
 subject: "Sales-rep list share: notify only newly-added orgs, message-only edit sends nothing"
 plane: experiential
 question: Which organizations does the storefront notify when a sales rep saves a Customer-scope list share (Mutation.changeWishlist addSharedWithIds) and what does the push contain?
+questions:
+  - text: What notification does my company get when our account manager shares a product list with us?
+  - text: If a rep adds another company to an existing list share, are earlier recipients notified again?
+  - text: Does editing only the note of a shared list send a new customer communication?
+  - text: Which organizationIds does the storefront pass to sendCustomerCommunication when a list share is saved?
+  - text: Does the push text about a rep-shared list name the receiving organization?
+concepts:
+  - id: list-sharing
+  - id: customer-communication
+  - id: push-message
 status: active
 appliesTo:
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: Mutation.changeWishlist
   - coordinate: Mutation.sendCustomerCommunication

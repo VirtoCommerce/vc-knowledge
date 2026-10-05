@@ -3,6 +3,14 @@ id: KB-614BDEDE
 subject: changeWishlist silently ignores message when scope is omitted
 plane: experiential
 question: Does changeWishlist save a new sharing message if the command carries message but no scope?
+questions:
+  - text: I changed the note on a list I had already shared, but customers still see the old one - why?
+  - text: Does updating a shared list's message without resending the scope actually save the message?
+  - text: Why does changeWishlist return success and bump modifiedDate yet keep sharingSetting.message unchanged?
+  - text: Must the sharing scope be sent in the same command for a new list-share message to persist?
+concepts:
+  - id: list-sharing
+  - id: wishlist
 status: active
 appliesTo:
   - axis: surface

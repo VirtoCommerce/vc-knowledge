@@ -3,6 +3,14 @@ id: KB-F9D75EA0
 subject: VcDateRangePicker footer Clear scope differs between split and combined layouts
 plane: experiential
 question: In the storefront date range picker, does the calendar footer Clear empty both dates or only one?
+questions:
+  - text: How do I clear both dates in the order history date filter?
+  - text: Does the calendar footer Clear reset the whole range or only one field in the date range picker?
+  - text: Why does the date range filter behave differently when clearing on a narrow screen?
+  - text: What accessible names do the calendar triggers have in the split and combined date range layouts?
+concepts:
+  - id: date-range-picker
+  - id: mobile-layout
 status: active
 appliesTo:
   - axis: surface

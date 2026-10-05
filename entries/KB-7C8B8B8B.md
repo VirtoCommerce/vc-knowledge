@@ -3,7 +3,10 @@ id: KB-7C8B8B8B
 subject: storefront 2.59 rep share dialog never writes the message to the list
 plane: experiential
 question: Does the storefront List settings dialog persist the Customer-share message on the wishlist, and is it shown on reopen?
-status: active
+status: superseded
+supersededBy:
+  - id: KB-EEE4C4BB
+  - id: KB-75B67E06
 appliesTo:
   - axis: surface
     value: storefront-ui

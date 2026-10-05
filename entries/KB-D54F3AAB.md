@@ -3,6 +3,15 @@ id: KB-D54F3AAB
 subject: On virtostart the seeded configurable-product fixtures CFG_LAPTOP and CFG_RING do not exist — both /products-with-options/cfg-parents/* URLs return the storefront 404 page.
 plane: experiential
 question: Do the @td(CFG_LAPTOP.url) / @td(CFG_RING.url) configurable-product URLs resolve on the virtostart demo storefront?
+questions:
+  - text: Why do the configurable laptop and ring test products show a page not found on the demo store?
+  - text: Are the seeded configurable-product fixtures present on the demo deployment, or are cases using them blocked on data?
+  - text: Is a 404 on the configurable-product fixture URLs a routing defect or missing seed data?
+  - text: Can I re-point configurable-product cases at the demo catalog's own customizable products instead of the fixtures?
+  - text: Does the demo storefront support configurable products with a Customize button and a from-price at all?
+concepts:
+  - id: configurable-product
+  - id: page-not-found
 status: active
 appliesTo:
   - axis: concern

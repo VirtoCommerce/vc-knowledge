@@ -3,6 +3,16 @@ id: KB-6CC1EFE6
 subject: deleting a security account leaves the contact behind
 plane: experiential
 question: How do I fully remove a test member, and why can I not find the leftover afterwards?
+questions:
+  - text: How do I completely remove a test user so neither their login nor their contact record remains?
+  - text: Does deleting a back-office security account also delete the linked customer contact, or vice versa?
+  - text: Contacts search says No data after I deleted someone - does that prove the contact is gone?
+  - text: How can I find an invitation-created contact with an empty name that keyword search does not return?
+  - text: Which admin list bypasses the member search index and reliably confirms an account was deleted?
+concepts:
+  - id: member-deletion
+  - id: security-account
+  - id: contact
 status: active
 appliesTo:
   - axis: surface

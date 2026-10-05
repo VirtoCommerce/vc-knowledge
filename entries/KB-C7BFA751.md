@@ -3,6 +3,15 @@ id: KB-C7BFA751
 subject: the Authorize.Net card form takes expiry as MM/YY and works only in USD
 plane: experiential
 question: What expiry format does the Authorize.Net card form on /cart accept, and does it work in non-USD currencies?
+questions:
+  - text: Why does my card expiry change to a past date when I type the full year?
+  - text: Does this card processor's inline form check for an expired date before submitting?
+  - text: What expiry mask does this processor's inline card form on the cart page apply?
+  - text: Is this card processor expected to fail or be unavailable for a non-USD cart?
+  - text: Does the USD-only restriction apply to the other card processors too?
+concepts:
+  - id: card-payment
+  - id: currency
 status: active
 appliesTo:
   - axis: surface

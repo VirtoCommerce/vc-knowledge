@@ -3,6 +3,13 @@ id: KB-B77CC09C
 subject: "Storefront search results h1 accessible name has no space before or after the result count: '...returned the following3results'"
 plane: experiential
 question: How is the storefront search results heading with the product count exposed to assistive technology?
+questions:
+  - text: Why does my screen reader read the search result count glued to the surrounding words?
+  - text: Is there a missing space in the accessible name of the search results heading?
+  - text: How is the result-count heading on keyword and barcode search pages exposed to assistive technology?
+concepts:
+  - id: accessibility
+  - id: product-search
 status: active
 appliesTo:
   - axis: element

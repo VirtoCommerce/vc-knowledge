@@ -3,6 +3,16 @@ id: KB-BC6FC633
 subject: admin account role assignment is staged until save
 plane: experiential
 question: I assigned and removed roles on an account in the Admin SPA and the list updated - why did the change not take effect?
+questions:
+  - text: I gave a colleague a new role in the back office and the list updated, but nothing changed for them, why?
+  - text: When is a role assignment on an account actually persisted in the admin interface?
+  - text: Does removing a security role in the Roles blade call the users update endpoint immediately or only on parent Save?
+  - text: Why can a permission test look like privilege escalation after changing an account's roles without saving?
+  - text: What happens to unsaved role changes if I reload the account page?
+concepts:
+  - id: platform-role
+  - id: security-account
+  - id: blade-navigation
 status: active
 appliesTo:
   - axis: surface

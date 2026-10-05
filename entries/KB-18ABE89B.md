@@ -3,6 +3,15 @@ id: KB-18ABE89B
 subject: admin order address blade false dirty state
 plane: experiential
 question: why does the admin order address form say the address has been modified when I only opened it?
+questions:
+  - text: Why does the back office ask me to save address changes on an order when I only looked at it?
+  - text: Is it safe to answer Yes to 'the address has been modified' after opening an order's shipping address blade?
+  - text: Why is the Save button already enabled on an untouched order or shipment address form in the admin?
+  - text: Does the country select rewrite a stored countryName when the order address blade binds its values?
+concepts:
+  - id: admin-validation
+  - id: address
+  - id: admin-order-screen
 status: active
 appliesTo:
   - axis: surface

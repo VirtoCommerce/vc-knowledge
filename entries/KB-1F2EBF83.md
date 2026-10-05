@@ -3,10 +3,20 @@ id: KB-1F2EBF83
 subject: Legacy PUT /api/return with no id creates a return in status New, and raises no ReturnRegistered email or push
 plane: experiential
 question: How do I create a return as an admin via REST PUT /api/return, and does it notify the buyer?
+questions:
+  - text: If support opens a return for me from the back office, will I get a confirmation email?
+  - text: How does an admin create a return through the REST API when there is no POST create route?
+  - text: What status does a return created via PUT without an id start in, New or Requested?
+  - text: Does a return created over REST reduce the order's returnable quantity?
+  - text: Which path raises the return-registered notification and push -- REST upsert or the GraphQL submit?
+concepts:
+  - id: return
+  - id: returnable-quantity
+  - id: notification
 status: active
 appliesTo:
   - axis: surface
-    value: rest-api
+    value: rest
 anchors:
   - coordinate: PUT /api/return
 evidence:

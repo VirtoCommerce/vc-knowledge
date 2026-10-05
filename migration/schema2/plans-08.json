@@ -1,0 +1,671 @@
+[
+ {
+  "id": "KB-B9C8ECD3",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "My order shows a promotion took money off, so why does the subtotal discount field read zero?",
+   "For a report on order discounts, which fields actually hold a cart-subtotal promotion's amount?",
+   "Does a percentage-off-subtotal reward populate subTotalDiscount or only discountTotal and the discounts collection on the order DTO?",
+   "Why do the per-line discount amounts stay at zero when the whole order got a subtotal promotion?",
+   "Is summing the scoped discount totals on an order a reliable way to find how much was discounted?"
+  ],
+  "concepts": [
+   "discount",
+   "customer-order",
+   "totals"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "9f98a50c01e41936"
+ },
+ {
+  "id": "KB-B9D1132A",
+  "action": "split",
+  "why": "(a) two unrelated platform APIs a reader reaches separately: the security account lock/unlock routes and the member search route",
+  "children": [
+   {
+    "subject": "Platform account lock and unlock succeed only when called with the user id, and unlock leaves lockoutEnd at the minimum date",
+    "question": "Why does POST /api/platform/security/users/{userName}/lock return succeeded:false and change nothing?",
+    "anchors": [
+     "POST /api/platform/security/users/{id}/lock",
+     "POST /api/platform/security/users/{id}/unlock",
+     "PUT /api/platform/security/users"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "Measured on vcst-qa 2026-09-19. POST /api/platform/security/users/{userName}/lock returns HTTP 200 with body {\"succeeded\":false,\"errors\":[]} and changes nothing — an empty errors array, so there is no message to act on. The same call with the account's GUID id in place of the userName returns {\"succeeded\":true,\"errors\":[]} and sets lockoutEnd to 9999-12-31T23:59:59.9999999+00:00. The matching /unlock also takes the id. Note that unlock does not restore lockoutEnd to null: it becomes 0001-01-01T00:00:00+00:00, and a PUT /api/platform/security/users carrying lockoutEnd:null is accepted (succeeded:true) but normalized back to 0001-01-01, so null is not reachable again once an account has been locked. Functionally the min date is unlocked.",
+    "fromNotes": false,
+    "questions": [
+     "I tried to block a back-office user through the API and nothing happened even though it said OK, why?",
+     "Does the platform lock endpoint accept a login name, or must a QA script pass the account id?",
+     "Why does the lock call return HTTP 200 with succeeded false and an empty errors array?",
+     "After unlocking an account, can lockoutEnd be set back to null through a user update?",
+     "What lockoutEnd value does an account carry after an admin locks it permanently over REST?"
+    ],
+    "concepts": [
+     "account-lockout",
+     "security-account",
+     "rest-api"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Platform member search returns a totalCount with an empty results array unless deepSearch is true",
+    "question": "Why does POST /api/members/search return a totalCount but no results?",
+    "anchors": [
+     "POST /api/members/search"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "POST /api/members/search returns {\"totalCount\":N,\"results\":[]} with N greater than zero unless the criteria include deepSearch:true; with it the same criteria return the populated results array. This raises no error, so it reads as \"no such member\" to a caller that does not know.",
+    "fromNotes": false,
+    "questions": [
+     "The admin API says it found some customers but hands back an empty list, what am I missing?",
+     "Which flag must a test script set so the member search endpoint actually returns the matching contacts?",
+     "Why is the results array empty while totalCount is greater than zero on the platform members search?",
+     "Can an empty member search result be trusted as proof that no such contact exists?"
+    ],
+    "concepts": [
+     "member-search",
+     "rest-api"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "59e4c7945713184f"
+ },
+ {
+  "id": "KB-BBC75DEA",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "When I pick push notification recipients, how do I tell apart two people with the same name?",
+   "In the back office push message audience, do dropdown options show email, type or company before selection?",
+   "Does the search-recipients picker render only the display name for each option, without a discriminator?",
+   "When does the Person or Company badge and recipient count appear on a picked push recipient?",
+   "Can duplicate-named companies be distinguished in the specific recipients combobox of a push message?"
+  ],
+  "concepts": [
+   "push-audience",
+   "push-message"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "2aac1819970c49fc"
+ },
+ {
+  "id": "KB-BC55C4F0",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Which permission lets a back-office manager view the store's barcode scanning settings?",
+   "What does a read-only admin role get when trying to save barcode search configuration over the API?",
+   "Which catalog permissions gate GET and PUT on the barcode-search store endpoints?",
+   "Do store access or catalog access permissions alone allow reading barcode search settings?",
+   "What status does an anonymous caller receive from the barcode search settings endpoints?"
+  ],
+  "concepts": [
+   "barcode-settings",
+   "permission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "730c0c4c8a609aff"
+ },
+ {
+  "id": "KB-BC6FC633",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "I gave a colleague a new role in the back office and the list updated, but nothing changed for them, why?",
+   "When is a role assignment on an account actually persisted in the admin interface?",
+   "Does removing a security role in the Roles blade call the users update endpoint immediately or only on parent Save?",
+   "Why can a permission test look like privilege escalation after changing an account's roles without saving?",
+   "What happens to unsaved role changes if I reload the account page?"
+  ],
+  "concepts": [
+   "platform-role",
+   "security-account",
+   "blade-navigation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "20e0a833e2886d01"
+ },
+ {
+  "id": "KB-BCA7468D",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Could someone read my stored password hash through the platform's API?",
+   "Which platform endpoint leaks a security account's password hash inside the member payload?",
+   "Does the security users endpoint blank passwordHash while the members endpoint returns it populated?",
+   "Is it safe to paste a raw contact API response into a bug report or screenshot?",
+   "Does a null password hash on the security endpoint mean the account has no password?"
+  ],
+  "concepts": [
+   "security-account",
+   "contact",
+   "rest-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8415f0f8f6a4f396"
+ },
+ {
+  "id": "KB-BF730613",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why does my account show a lockout date in year one when I can sign in fine?",
+   "How do I tell a deliberate admin unlock from an account that was never locked?",
+   "What do null, 0001-01-01 and 9999-12-31 mean for lockoutEnd on a platform user?",
+   "Which lockoutEnd values actually block sign-in, and how does accessFailedCount distinguish a password lockout?",
+   "Does the platform's unlock action set the lockout end to the minimum date rather than clearing it?"
+  ],
+  "concepts": [
+   "account-lockout",
+   "security-account"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "0c9d4062a99eee14"
+ },
+ {
+  "id": "KB-BFB83695",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "When choosing who gets a push notification, can I see whether an option is a person or a company?",
+   "Does the push message recipient picker show emails that let an admin separate same-named people?",
+   "Can duplicate member records sharing both name and email be distinguished in the recipients dropdown?",
+   "What does each option in the specific-recipients combobox render: badge, name, email, id or count?",
+   "Why do some company options in the push audience picker show only a name and badge?"
+  ],
+  "concepts": [
+   "push-audience",
+   "push-message"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "51a17655ff3d23c6"
+ },
+ {
+  "id": "KB-C075BDF9",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Where do I go to share one of my saved product lists with a colleague?",
+   "After the lists rework, which actions does a list card's menu offer on the account lists page?",
+   "Does renaming a list change or reset its sharing scope, targets or message?",
+   "Does the rename dialog send only listId, listName and description in the wishlist change mutation?",
+   "Is there still a separate list settings dialog, or is sharing only in its own Share dialog?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "wishlist"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7b79656a5b690b31"
+ },
+ {
+  "id": "KB-C1024558",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "On my basket, can I see which of my promo codes gave me which reduction?",
+   "How can QA tell from the cart response whether a discount was unlocked by a code or applied automatically?",
+   "Which field on the cart's discount row distinguishes a coupon-driven reward from an automatic one?",
+   "What happens to the discount's coupon value once the promotion's last coupon is deleted?",
+   "Does the storefront cart render the coupon field it selects on each discount line?"
+  ],
+  "concepts": [
+   "coupon",
+   "discount",
+   "cart"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "e7cab466ef945f99"
+ },
+ {
+  "id": "KB-C3945D5C",
+  "action": "split",
+  "why": "(a) the generic store update API is a different endpoint a reader reaches separately from the dedicated barcode-search settings endpoint",
+  "children": [
+   {
+    "subject": "The dedicated barcode-search settings endpoint validates and normalises fields on PUT and answers GET with defaults for unknown stores",
+    "question": "How does PUT/GET api/catalog/barcode-search/store/{storeId} validate and respond?",
+    "anchors": [
+     "PUT /api/catalog/barcode-search/store",
+     "GET /api/catalog/barcode-search/store"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "Catalog 3.1046 (PR 909 build): GET store/{id} returns 200 {scannerEnabled:true,fields:[]} for a store with nothing stored and ALSO for a store id that does not exist; GET store/{id}/fields also answers 200 for an unknown store. PUT rejects unknown or excluded fields (e.g. sku) with 400 naming them and persists nothing; null, empty or malformed JSON body -> 400 'Barcode search settings are required.'; unknown store -> 404 even when the fields are also invalid; mixed case and duplicates are normalised (GTIN,gtin,Code -> gtin,code), padded names are trimmed, empty-string entries are dropped; omitting fields saves []; omitting scannerEnabled keeps true. Permissions: catalog:BrowseFilters:Read for both GETs (403 without), :Update for PUT (403 with Read only); anonymous 401.",
+    "fromNotes": false,
+    "questions": [
+     "If an admin saves barcode lookup fields with odd casing or duplicates, what gets stored?",
+     "What does the barcode search settings API return for a store id that does not exist?",
+     "Which PUT bodies does the barcode-search store endpoint reject with 400, and does it persist anything then?",
+     "Does omitting scannerEnabled or fields in the barcode settings update keep or reset them?",
+     "Can a store's barcode scan be configured to match on sku through the settings endpoint?"
+    ],
+    "concepts": [
+     "barcode-settings",
+     "api-error"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The generic store update API stores an unknown barcode-search field verbatim with no validation",
+    "question": "Does saving a store through PUT /api/stores validate its barcode-search settings?",
+    "anchors": [
+     "GET /api/catalog/barcode-search/store"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "The generic PUT /api/stores does no validation: an unknown field is stored verbatim, returned by the dedicated GET and exposed in public store settings.",
+    "fromNotes": false,
+    "questions": [
+     "Can a bad barcode lookup field end up visible in the shop's public settings?",
+     "Does updating the whole store record bypass the validation the dedicated barcode settings endpoint enforces?",
+     "Will the barcode-search GET echo an invalid field that was written through the generic stores PUT?",
+     "Which route should an integration use to change barcode settings safely: the store save or the dedicated endpoint?"
+    ],
+    "concepts": [
+     "barcode-settings",
+     "store"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "c306d86a0dc9e5ad"
+ },
+ {
+  "id": "KB-C440D4E3",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "How does a back-office integration search the catalog for products, since there is no products search route?",
+   "Which REST call lists catalog products and categories by keyword and object type?",
+   "How can I find out quickly whether a catalog has any variations using listentries?",
+   "Is productType a useful filter for separating variations or configurable products?",
+   "Why do some routes under the catalog products path end in search if none searches products?"
+  ],
+  "concepts": [
+   "product-search",
+   "product-variation",
+   "rest-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7d487661ebb4120a"
+ },
+ {
+  "id": "KB-C466AD5C",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Why does the store's barcode scanner look switched off for me when a colleague says it is on?",
+   "What does a back-office user without browse filter read permission see on the barcode scanner blade?",
+   "Which request does the barcode scanner blade send when the user lacks permission, and does it fetch settings at all?",
+   "Can a read-only admin change barcode scanner settings, or are Save and Reset unavailable?",
+   "Does the barcode blade show an error after the 403 banner is dismissed?"
+  ],
+  "concepts": [
+   "barcode-settings",
+   "permission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "0cf39a15b8b4af63"
+ },
+ {
+  "id": "KB-C55BBF2E",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does my basket subtotal show the full price when the product is on sale?",
+   "How does the cart represent a sale-priced item: reduced subtotal or list subtotal plus line discount?",
+   "Does the cart's discountTotal combine sale-price and coupon discounts, and where is a coupon's own share?",
+   "Why doesn't the grand total drop by exactly the discount amount when a coupon is applied?",
+   "Which placed and extended price does a sale line carry relative to the list price?"
+  ],
+  "concepts": [
+   "price",
+   "discount",
+   "totals"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "98b409ef40a1965e"
+ },
+ {
+  "id": "KB-C5B17CE2",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "After I saved a push message, why does the audience summary only mention the one person I picked?",
+   "Is the push message audience caption reliable after reopening a message that mixes a condition and explicit recipients?",
+   "Does the stored member query and generated query stay correct while the estimate caption drops the condition?",
+   "What makes the push audience caption re-derive correctly after saving?",
+   "Does the push send job union the condition audience with explicitly selected members?"
+  ],
+  "concepts": [
+   "push-audience",
+   "push-message"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "2dcaf34924d727bf"
+ },
+ {
+  "id": "KB-C60BA776",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Can I save a sales representative without entering their first or last name?",
+   "What error text does the sales rep details form show for an empty name field?",
+   "How many characters do the first name and salutation fields accept in the sales rep app?",
+   "Does the inline validation message use the camelCase model key instead of the visible label?",
+   "Is Save disabled when clearing the last name on an existing sales rep?"
+  ],
+  "concepts": [
+   "sales-rep",
+   "admin-validation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "519dff48673ffa92"
+ },
+ {
+  "id": "KB-C6BB1914",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "rest"
+  ],
+  "questions": [
+   "If I ordered in one language and request a return in another, which language is the return email in?",
+   "Does a buyer's return inherit the order's language code or the culture it was submitted in?",
+   "Which return command types carry cultureName: create, update or submit?",
+   "What languageCode does the return registered notification use for a return created with a different culture?"
+  ],
+  "concepts": [
+   "return",
+   "localization",
+   "notification"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "00a0b159dd0211a3"
+ },
+ {
+  "id": "KB-C7BFA751",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does my card expiry change to a past date when I type the full year?",
+   "Does this card processor's inline form check for an expired date before submitting?",
+   "What expiry mask does this processor's inline card form on the cart page apply?",
+   "Is this card processor expected to fail or be unavailable for a non-USD cart?",
+   "Does the USD-only restriction apply to the other card processors too?"
+  ],
+  "concepts": [
+   "card-payment",
+   "currency"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "e111cc2ac188f0af"
+ },
+ {
+  "id": "KB-C923D0DB",
+  "action": "split",
+  "why": "(a) two different places: the storefront confirmation-link page versus the Admin user blade resend path",
+  "children": [
+   {
+    "subject": "Opening the email confirmation link shows a success page without signing the user in",
+    "question": "What happens when a user opens the /account/confirmemail link?",
+    "anchors": [
+     "/account/confirmemail"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "The confirmation email's link points to /account/confirmemail with the user id and an identity token; opened in a fresh browser with no session it renders the Email confirmation success page asking the user to sign in, and does not sign them in. Opening a freshly resent link for an already-confirmed account shows the same success page rather than an error.",
+    "fromNotes": false,
+    "questions": [
+     "After clicking the verify link in my email, why am I asked to sign in instead of being logged in?",
+     "Does the email confirmation page need an existing session to work?",
+     "What does the confirm-email route show for an account that is already confirmed?",
+     "Which parameters does the confirmation link carry to the storefront page?"
+    ],
+    "concepts": [
+     "email-confirmation"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "A confirmation email is resent only from the Admin user blade, not from the storefront sign-in page",
+    "question": "How is a confirmation email resent?",
+    "anchors": [
+     "/sign-in"
+    ],
+    "surface": [
+     "storefront-ui",
+     "admin-ui"
+    ],
+    "body": "The storefront /sign-in page has no self-service resend link, BY DESIGN; the resend path is the Admin user blade's Resend link, which produces an Email confirmation notification visible in the Admin notification activity feed with a preview of the body.",
+    "fromNotes": false,
+    "questions": [
+     "I never got my verification email, can I request a new one from the sign-in page?",
+     "How does a back-office admin resend an account's email confirmation?",
+     "Where can QA check that a resent confirmation email was actually generated?",
+     "Is the missing resend link on the storefront sign-in page a defect or by design?"
+    ],
+    "concepts": [
+     "email-confirmation",
+     "notification"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "f0b6b7b9e67141b0"
+ },
+ {
+  "id": "KB-CA4C93E4",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "rest"
+  ],
+  "questions": [
+   "Can I see on my past order what percent discount I received?",
+   "Does a placed order store the promotion's percentage rate or only the money amount?",
+   "Which fields does an order discount entry carry, and is any a rate?",
+   "Why is following promotionId back to the promotion an unreliable way to recover an order's discount rate?",
+   "Does the order keep a tax rate while dropping the discount rate?"
+  ],
+  "concepts": [
+   "discount",
+   "customer-order",
+   "promotion-reward"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "9960c0f64f06eb76"
+ },
+ {
+  "id": "KB-CB05268E",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "Why does a brand new customer account already have a notification in its inbox?",
+   "Does Track new recipients add a freshly created member to an already sent push message?",
+   "How can a test create an account guaranteed to have an empty push inbox?",
+   "Does a free-text member query match new accounts by tokens in their name or email?",
+   "Can an old Sent push with tracking be edited or deleted to stop it reaching new members?"
+  ],
+  "concepts": [
+   "push-audience",
+   "push-message"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "618652e61aebfcb5"
+ },
+ {
+  "id": "KB-CC195687",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "My order lists a specific size or colour, how do I see which main product it belongs to?",
+   "Does an order line for a variation store the parent product id?",
+   "Can a REST reader of an order tell a variation line from a standalone product?",
+   "Is the line item's product.masterVariation stored data or a live catalog resolve?",
+   "What happens to an order's variation parent link if the parent product is later deleted?"
+  ],
+  "concepts": [
+   "order-line-item",
+   "product-variation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "bd3eee8cdfe92646"
+ },
+ {
+  "id": "KB-CC9A98D3",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "If I fix the shipping address on an order, does the shipment go to the new address?",
+   "Does a shipment reference the order's shipping address or hold its own copy?",
+   "How many independent address rows does one checkout create across order, shipment and payment?",
+   "Does a change in the customer's address book propagate to a placed order?",
+   "Why can order.addresses and shipment.deliveryAddress disagree after an admin edit?"
+  ],
+  "concepts": [
+   "address",
+   "shipment",
+   "customer-order"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "5e1685687adf853a"
+ },
+ {
+  "id": "KB-CD451F5C",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "I set up a configurable product through the API but the shop shows no options, what went wrong?",
+   "Which field name must hold the sections array when creating a product configuration over REST?",
+   "Why is a product configuration saved inactive and empty after a 200 response?",
+   "What happens when a configuration section has two default options or is of Variation type?",
+   "Does the configuration endpoint validate option products or reject unknown fields?"
+  ],
+  "concepts": [
+   "configurable-product",
+   "rest-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "aff502fa65e6c81c"
+ },
+ {
+  "id": "KB-CD99436F",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Can someone I shared my list with read-only still change quantities on it?",
+   "Does adding an item to another user's shared list write anything when access is denied?",
+   "Is the quantity bump from a refused addWishlistItem persisted or only cached?",
+   "Which wishlist mutations by a read-only reader are refused with nothing changed?",
+   "What errors does addWishlistItem return for a no-access user versus an anonymous caller?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "wishlist",
+   "permission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "a0f88b1660f1ed92"
+ },
+ {
+  "id": "KB-CF3FAD18",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "If I don't have enough points, does the basket tell me before I try to place the order?",
+   "Is Place order disabled on the cart when the loyalty balance is insufficient?",
+   "Which validation error codes does a points cart return, and in which response?",
+   "Is a points total exactly equal to the balance allowed at checkout?",
+   "What message appears when a cart holds only points products?"
+  ],
+  "concepts": [
+   "loyalty",
+   "cart-validation",
+   "checkout"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "980e9beffa1cac00"
+ },
+ {
+  "id": "KB-D080516B",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why can't an invited colleague log in to our company account yet?",
+   "Which organization membership statuses block sign-in, and which can be re-invited?",
+   "How is the effective membership status derived when the membership has none of its own?",
+   "What status does revoking an organization invite set?",
+   "How does the storefront label Approved, Deleted, Invited and Rejected members?"
+  ],
+  "concepts": [
+   "membership-status",
+   "organization-membership",
+   "organization-invitation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "5cb04fea4ab36492"
+ }
+]

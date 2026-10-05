@@ -3,7 +3,10 @@ id: KB-7E35E6BC
 subject: Admin renders order timestamps in local time while the API returns UTC
 plane: experiential
 question: why does the Admin order screen show a different time from the one in the REST payload
-status: active
+status: superseded
+supersededBy:
+  - id: KB-5E4764CF
+  - id: KB-F320B037
 appliesTo:
   - axis: surface
     value: admin-ui

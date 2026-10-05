@@ -1,0 +1,2592 @@
+{
+  "schema": 1,
+  "about": "Controlled vocabulary (VCST-6122 Decision 4): concept id -> aliases, parent, typical anchors. Applied to both the question and the index. An alias belongs to one concept. A new concept is a vocabulary edit, reviewed like an entry. Public: no client names or client jargon.",
+  "concepts": [
+    {
+      "id": "cart",
+      "label": "Cart",
+      "parent": null,
+      "aliases": [
+        "cart",
+        "shopping cart",
+        "basket",
+        "shopping basket",
+        "trolley",
+        "cart page",
+        "clear cart"
+      ],
+      "anchors": [
+        "Query.cart",
+        "/cart",
+        "GET /api/carts/{id}",
+        "POST /api/carts/search",
+        "Mutations.clearCart"
+      ]
+    },
+    {
+      "id": "cart-line-item",
+      "label": "Cart line item",
+      "parent": "cart",
+      "aliases": [
+        "cart line",
+        "cart item",
+        "cart line item",
+        "basket item",
+        "basket line",
+        "cart quantity",
+        "line quantity",
+        "item quantity"
+      ],
+      "anchors": [
+        "CartType.items",
+        "LineItemType.quantity",
+        "LineItemType.listPrice",
+        "Mutation.changeCartItemsQuantity"
+      ]
+    },
+    {
+      "id": "add-to-cart",
+      "label": "Add to cart",
+      "parent": "cart",
+      "aliases": [
+        "add to cart",
+        "add item",
+        "additem",
+        "add to basket",
+        "quantity stepper",
+        "increase quantity",
+        "put in cart",
+        "updatecartquantity"
+      ],
+      "anchors": [
+        "Mutation.addItem",
+        "Mutation.updateCartQuantity",
+        "Mutation.changeCartItemsQuantity"
+      ]
+    },
+    {
+      "id": "cart-merge",
+      "label": "Cart merge and line consolidation",
+      "parent": "cart",
+      "aliases": [
+        "merge cart",
+        "cart merge",
+        "mergecart",
+        "merged cart",
+        "cart merged",
+        "guest cart",
+        "anonymous cart",
+        "line consolidation",
+        "consolidate line",
+        "consolidated line",
+        "secondcartid",
+        "duplicate line"
+      ],
+      "anchors": [
+        "Mutation.mergeCart",
+        "Mutations.mergeCart",
+        "InputMergeCartType.secondCartId",
+        "LineItemType.quantity"
+      ]
+    },
+    {
+      "id": "cart-validation",
+      "label": "Cart validation errors",
+      "parent": "cart",
+      "aliases": [
+        "cart validation",
+        "validation error",
+        "validationerrors",
+        "line item limit",
+        "quantity limit",
+        "max quantity",
+        "maximum quantity",
+        "insufficient balance"
+      ],
+      "anchors": [
+        "CartType.validationErrors",
+        "Mutation.addItem"
+      ]
+    },
+    {
+      "id": "checkout",
+      "label": "Checkout",
+      "parent": "cart",
+      "aliases": [
+        "checkout",
+        "check out",
+        "place order",
+        "placing an order",
+        "createorderfromcart",
+        "checkout review",
+        "review order",
+        "multistep checkout",
+        "order confirmation",
+        "checkout completed",
+        "one-page checkout"
+      ],
+      "anchors": [
+        "Mutation.createOrderFromCart",
+        "/checkout/completed",
+        "/checkout/review",
+        "/cart"
+      ]
+    },
+    {
+      "id": "saved-for-later",
+      "label": "Saved for later",
+      "parent": "cart",
+      "aliases": [
+        "save for later",
+        "saved for later",
+        "saved item",
+        "move to cart",
+        "getsavedforlater"
+      ],
+      "anchors": [
+        "Query.getSavedForLater",
+        "Mutation.moveFromSavedForLater"
+      ]
+    },
+    {
+      "id": "gift",
+      "label": "Gift reward",
+      "parent": "promotion",
+      "aliases": [
+        "gift",
+        "free gift",
+        "gift item",
+        "gift line",
+        "add a gift",
+        "isgift",
+        "free item",
+        "gift with purchase"
+      ],
+      "anchors": [
+        "Query.cart",
+        "Mutation.createOrderFromCart",
+        "GET /api/carts/{id}"
+      ]
+    },
+    {
+      "id": "payment-method",
+      "label": "Payment method",
+      "parent": "checkout",
+      "aliases": [
+        "payment method",
+        "payment option",
+        "payment type",
+        "way to pay",
+        "availablepaymentmethods",
+        "payment gateway",
+        "gateway code",
+        "gatewaycode",
+        "paymentmethodcode"
+      ],
+      "anchors": [
+        "Query.cart.availablePaymentMethods",
+        "CartType.availablePaymentMethods",
+        "PaymentMethodType.priority",
+        "POST /api/payment/search",
+        "PaymentInType.gatewayCode"
+      ]
+    },
+    {
+      "id": "manual-payment",
+      "label": "Manual payment (purchase order)",
+      "parent": "payment-method",
+      "aliases": [
+        "manual payment",
+        "pay manually",
+        "pay later",
+        "pay on account",
+        "purchase order number",
+        "po number",
+        "purchase order",
+        "invoice payment",
+        "pay by invoice",
+        "net terms",
+        "deferred payment",
+        "bill me later",
+        "offline payment"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.createOrderFromCart"
+      ]
+    },
+    {
+      "id": "card-payment",
+      "label": "Bank card payment",
+      "parent": "payment-method",
+      "aliases": [
+        "bank card",
+        "credit card",
+        "debit card",
+        "card payment",
+        "card form",
+        "pay by card",
+        "cvv",
+        "security code",
+        "card expiry",
+        "expiry date",
+        "cybersource",
+        "authorize.net",
+        "skyflow",
+        "datatrans",
+        "flex microform",
+        "saved card"
+      ],
+      "anchors": [
+        "Mutation.authorizePayment",
+        "Mutation.initializeCartPayment",
+        "/cart"
+      ]
+    },
+    {
+      "id": "order-payment",
+      "label": "Order payment record",
+      "parent": "customer-order",
+      "aliases": [
+        "order payment",
+        "payment record",
+        "paymentin",
+        "payment in",
+        "incoming payment",
+        "payment status",
+        "captured",
+        "capture",
+        "payment capture",
+        "authorized payment",
+        "payment authorization",
+        "held for review",
+        "decision manager",
+        "pay now",
+        "payment required"
+      ],
+      "anchors": [
+        "PaymentIn.sum",
+        "CustomerOrder.paymentSubTotal",
+        "Mutation.authorizePayment",
+        "PaymentIn.cancelledState",
+        "PaymentInType.gatewayCode"
+      ]
+    },
+    {
+      "id": "shipping-method",
+      "label": "Shipping method",
+      "parent": "checkout",
+      "aliases": [
+        "shipping method",
+        "delivery method",
+        "shipping option",
+        "delivery option",
+        "shipping cost",
+        "shipping rate",
+        "shipping price",
+        "fixed rate",
+        "fixedrate",
+        "ground shipping",
+        "air shipping",
+        "freight"
+      ],
+      "anchors": [
+        "OrderShipmentType.price",
+        "OrderShipmentType.shipmentMethodOption",
+        "GET /api/stores/{id}"
+      ]
+    },
+    {
+      "id": "pickup",
+      "label": "Pickup",
+      "parent": "shipping-method",
+      "aliases": [
+        "pickup",
+        "pick up",
+        "pickup location",
+        "pickup point",
+        "bopis",
+        "click and collect",
+        "store pickup",
+        "ready for pickup"
+      ],
+      "anchors": [
+        "/cart",
+        "/account/orders/{id}"
+      ]
+    },
+    {
+      "id": "address",
+      "label": "Address",
+      "parent": null,
+      "aliases": [
+        "address",
+        "shipping address",
+        "billing address",
+        "delivery address",
+        "address book",
+        "ship-to",
+        "ship to",
+        "country code",
+        "region",
+        "state province",
+        "addresses"
+      ],
+      "anchors": [
+        "Query.currentCustomerAddresses",
+        "Query.currentOrganizationAddresses",
+        "/account/addresses",
+        "CustomerAddress.countryCode",
+        "OrderShipmentType.deliveryAddress"
+      ]
+    },
+    {
+      "id": "tax",
+      "label": "Tax",
+      "parent": null,
+      "aliases": [
+        "tax",
+        "taxes",
+        "tax provider",
+        "tax rate",
+        "vat",
+        "sales tax",
+        "tax calculation",
+        "taxtotal",
+        "shipping tax",
+        "with tax"
+      ],
+      "anchors": [
+        "GET /api/tax",
+        "POST /api/taxes/search",
+        "CustomerOrder.shippingTaxTotal",
+        "Discount.discountAmountWithTax"
+      ]
+    },
+    {
+      "id": "promotion",
+      "label": "Promotion",
+      "parent": null,
+      "aliases": [
+        "promotion",
+        "promo",
+        "marketing promotion",
+        "special offer",
+        "deal",
+        "campaign",
+        "promotion store",
+        "promotion blade",
+        "dynamicexpression"
+      ],
+      "anchors": [
+        "GET /api/marketing/promotions/{id}",
+        "PUT /api/marketing/promotions",
+        "POST /api/marketing/promotions",
+        "Promotion.dynamicExpression"
+      ]
+    },
+    {
+      "id": "coupon",
+      "label": "Coupon",
+      "parent": "promotion",
+      "aliases": [
+        "coupon",
+        "coupon code",
+        "promo code",
+        "promotion code",
+        "discount code",
+        "voucher",
+        "voucher code",
+        "redeem code",
+        "apply code",
+        "addcoupon",
+        "validatecoupon"
+      ],
+      "anchors": [
+        "Mutation.addCoupon",
+        "Query.validateCoupon",
+        "CartType.coupons",
+        "CouponType.isAppliedSuccessfully",
+        "Query.promotionCoupons"
+      ]
+    },
+    {
+      "id": "promotion-reward",
+      "label": "Promotion reward",
+      "parent": "promotion",
+      "aliases": [
+        "reward",
+        "promotion reward",
+        "percentage off",
+        "percent off",
+        "discount rate",
+        "discount percentage",
+        "blockreward",
+        "subtotal discount",
+        "cart-level discount",
+        "order-level discount"
+      ],
+      "anchors": [
+        "RewardCartGetOfRelSubtotal",
+        "Promotion.dynamicExpression",
+        "CartType.discounts",
+        "CustomerOrder.discounts"
+      ]
+    },
+    {
+      "id": "promotion-combination",
+      "label": "Promotion combine policy",
+      "parent": "promotion",
+      "aliases": [
+        "combine policy",
+        "combinepolicy",
+        "stackable promotion",
+        "stacking",
+        "promotion stacking",
+        "best reward",
+        "exclusive promotion",
+        "isexclusive",
+        "two promotions",
+        "multiple promotions"
+      ],
+      "anchors": [
+        "Marketing.Promotion.CombinePolicy"
+      ]
+    },
+    {
+      "id": "discount",
+      "label": "Discount amount",
+      "parent": "promotion",
+      "aliases": [
+        "discount",
+        "discount amount",
+        "discount total",
+        "discounttotal",
+        "discount row",
+        "discount label",
+        "discount rounding",
+        "markdown",
+        "price reduction",
+        "savings"
+      ],
+      "anchors": [
+        "CartType.discountTotal",
+        "DiscountType.amount",
+        "Discount.discountAmount",
+        "DiscountType.description",
+        "OrderDiscountType.amount"
+      ]
+    },
+    {
+      "id": "public-coupon-list",
+      "label": "Coupons page",
+      "parent": "coupon",
+      "aliases": [
+        "coupons page",
+        "account coupons",
+        "coupons and promotions",
+        "coupon card",
+        "coupon list",
+        "available coupons",
+        "preset coupon",
+        "promotioncoupons"
+      ],
+      "anchors": [
+        "/account/coupons",
+        "Query.promotionCoupons",
+        "Query.promotionCoupons.sort"
+      ]
+    },
+    {
+      "id": "price",
+      "label": "Price",
+      "parent": null,
+      "aliases": [
+        "price",
+        "unit price",
+        "list price",
+        "sale price",
+        "product price",
+        "placed price",
+        "extended price",
+        "listprice",
+        "saleprice",
+        "price widget",
+        "charged price"
+      ],
+      "anchors": [
+        "LineItemType.listPrice",
+        "LineItemType.placedPrice",
+        "GET /api/products/{productId}/{catalogId}/pricesWidget",
+        "PUT /api/products/prices"
+      ]
+    },
+    {
+      "id": "price-list",
+      "label": "Price list",
+      "parent": "price",
+      "aliases": [
+        "price list",
+        "pricelist",
+        "price list assignment",
+        "pricelist assignment",
+        "pricing assignment",
+        "contract price",
+        "customer-specific price",
+        "organization price",
+        "tiered price",
+        "price evaluation"
+      ],
+      "anchors": [
+        "GET /api/pricing/assignments",
+        "PricelistAssignment.storeId",
+        "PriceEvaluationContext.userGroups",
+        "PUT /api/pricing/assignments",
+        "Contract.basePricelistAssignmentId"
+      ]
+    },
+    {
+      "id": "currency",
+      "label": "Currency",
+      "parent": null,
+      "aliases": [
+        "currency",
+        "currencies",
+        "currency code",
+        "multi-currency",
+        "mixed currency",
+        "switch currency",
+        "eur",
+        "usd"
+      ],
+      "anchors": [
+        "Store.defaultCurrency"
+      ]
+    },
+    {
+      "id": "totals",
+      "label": "Totals",
+      "parent": null,
+      "aliases": [
+        "total",
+        "subtotal",
+        "sub-total",
+        "grand total",
+        "order total",
+        "cart total",
+        "order summary",
+        "totals",
+        "rounding",
+        "subtotaldiscount"
+      ],
+      "anchors": [
+        "CartType.total",
+        "CartType.subTotal",
+        "CustomerOrder.subTotalDiscount",
+        "CustomerOrder.paymentSubTotal"
+      ]
+    },
+    {
+      "id": "catalog",
+      "label": "Catalog and category",
+      "parent": null,
+      "aliases": [
+        "catalog",
+        "category",
+        "categories",
+        "virtual catalog",
+        "physical catalog",
+        "category page",
+        "catalog page",
+        "subcategory",
+        "product catalog"
+      ],
+      "anchors": [
+        "/catalog",
+        "POST /api/catalog/listentries",
+        "POST /api/stores/search"
+      ]
+    },
+    {
+      "id": "product",
+      "label": "Product record",
+      "parent": "catalog",
+      "aliases": [
+        "catalog product",
+        "product record",
+        "product data",
+        "product save",
+        "product name"
+      ],
+      "anchors": [
+        "GET /api/catalog/products/{id}",
+        "POST /api/catalog/products",
+        "PATCH /api/catalog/products",
+        "Query.product"
+      ]
+    },
+    {
+      "id": "product-page",
+      "label": "Product page",
+      "parent": "product",
+      "aliases": [
+        "product page",
+        "pdp",
+        "product detail page",
+        "product details page",
+        "product detail",
+        "product route"
+      ],
+      "anchors": [
+        "/product/{id}",
+        "/product/{sku}",
+        "Query.product",
+        "/{category}/{product-slug}"
+      ]
+    },
+    {
+      "id": "product-variation",
+      "label": "Product variation",
+      "parent": "product",
+      "aliases": [
+        "variation",
+        "variations",
+        "variant",
+        "variants",
+        "product variant",
+        "master product",
+        "variant picker",
+        "variant option",
+        "parent product",
+        "hasvariations",
+        "mastervariation"
+      ],
+      "anchors": [
+        "Product.masterVariation",
+        "Product.hasVariations",
+        "Product.variations"
+      ]
+    },
+    {
+      "id": "configurable-product",
+      "label": "Configurable product",
+      "parent": "product",
+      "aliases": [
+        "configurable product",
+        "product configuration",
+        "configurable",
+        "configuration section",
+        "configurator",
+        "build your own",
+        "custom product",
+        "isconfigurable",
+        "configure the parameters",
+        "section option",
+        "text section",
+        "file section"
+      ],
+      "anchors": [
+        "Query.productConfiguration",
+        "Product.isConfigurable",
+        "ProductConfiguration.isActive",
+        "POST /api/catalog/products/configurations",
+        "POST /api/catalog/products/configurations/search"
+      ]
+    },
+    {
+      "id": "configured-line-item",
+      "label": "Configured line item",
+      "parent": "configurable-product",
+      "aliases": [
+        "configured item",
+        "configured line",
+        "configured line item",
+        "configuration item",
+        "configurationitems",
+        "chosen option",
+        "selected option",
+        "custom text"
+      ],
+      "anchors": [
+        "LineItemType.configurationItems",
+        "OrderLineItemType.configurationItems",
+        "CartConfigurationItemType",
+        "OrderConfigurationItemType",
+        "Mutation.createConfiguredLineItem"
+      ]
+    },
+    {
+      "id": "product-identifier",
+      "label": "Product identifier (SKU, GTIN, MPN)",
+      "parent": "product",
+      "aliases": [
+        "sku",
+        "product code",
+        "item code",
+        "gtin",
+        "upc",
+        "ean",
+        "mpn",
+        "manufacturer part number",
+        "part number",
+        "manufacturerpartnumber"
+      ],
+      "anchors": [
+        "Query.products"
+      ]
+    },
+    {
+      "id": "product-property",
+      "label": "Catalog property",
+      "parent": "catalog",
+      "aliases": [
+        "catalog property",
+        "product property",
+        "property",
+        "attribute",
+        "product attribute",
+        "custom property",
+        "short text property"
+      ],
+      "anchors": [
+        "DELETE /api/catalog/properties"
+      ]
+    },
+    {
+      "id": "product-search",
+      "label": "Product search",
+      "parent": "catalog",
+      "aliases": [
+        "product search",
+        "full-text search",
+        "full text search",
+        "keyword search",
+        "search query",
+        "search results",
+        "search page",
+        "search box",
+        "search bar",
+        "find product",
+        "search term"
+      ],
+      "anchors": [
+        "Query.products",
+        "/search",
+        "POST /api/catalog/search/products"
+      ]
+    },
+    {
+      "id": "product-filter",
+      "label": "Product filter",
+      "parent": "product-search",
+      "aliases": [
+        "product filter",
+        "filter term",
+        "term filter",
+        "filter field",
+        "filter syntax",
+        "wildcard",
+        "exact match",
+        "in stock filter",
+        "show in stock"
+      ],
+      "anchors": [
+        "Query.products"
+      ]
+    },
+    {
+      "id": "facet",
+      "label": "Facet",
+      "parent": "product-search",
+      "aliases": [
+        "facet",
+        "facets",
+        "facet count",
+        "term facet",
+        "term_facets",
+        "aggregation",
+        "facet filter"
+      ],
+      "anchors": [
+        "Query.products"
+      ]
+    },
+    {
+      "id": "sort",
+      "label": "Sort",
+      "parent": null,
+      "aliases": [
+        "sort",
+        "sorting",
+        "sort order",
+        "sort by",
+        "sort argument",
+        "order by",
+        "ascending",
+        "descending"
+      ],
+      "anchors": [
+        "Query.products",
+        "Query.promotionCoupons.sort"
+      ]
+    },
+    {
+      "id": "search-index",
+      "label": "Search index",
+      "parent": "product-search",
+      "aliases": [
+        "search index",
+        "index",
+        "indexing",
+        "indexation",
+        "reindex",
+        "re-index",
+        "index document",
+        "elasticsearch",
+        "event-based indexation",
+        "index rebuild",
+        "stale index",
+        "index lag"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "GET /api/search/indexes/index/Product/{id}",
+        "POST /api/platform/changelog/v2/search"
+      ]
+    },
+    {
+      "id": "barcode-search",
+      "label": "Barcode search",
+      "parent": "product-search",
+      "aliases": [
+        "barcode",
+        "barcode search",
+        "barcode lookup",
+        "scan barcode",
+        "scanned code",
+        "barcode filter",
+        "barcode exact mode",
+        "exact mode"
+      ],
+      "anchors": [
+        "/search?barcode=",
+        "Query.products",
+        "/api/catalog/barcode-search"
+      ]
+    },
+    {
+      "id": "barcode-scanner",
+      "label": "Barcode scanner",
+      "parent": "barcode-search",
+      "aliases": [
+        "barcode scanner",
+        "scanner",
+        "scan modal",
+        "barcode scan",
+        "camera",
+        "scan button",
+        "scanner button",
+        "browse upload"
+      ],
+      "anchors": [
+        "barcode-scanner-modal.vue",
+        "/search"
+      ]
+    },
+    {
+      "id": "barcode-settings",
+      "label": "Barcode search settings",
+      "parent": "barcode-search",
+      "aliases": [
+        "barcode field",
+        "barcode fields",
+        "barcode setting",
+        "barcode settings",
+        "scanner blade",
+        "barcode scanner blade",
+        "barcodesearchfields",
+        "scannerenabled",
+        "match mode"
+      ],
+      "anchors": [
+        "GET /api/catalog/barcode-search/store/{storeId}/fields",
+        "PUT /api/catalog/barcode-search/store/{storeId}",
+        "GET /api/catalog/barcode-search/store/{storeId}"
+      ]
+    },
+    {
+      "id": "seo-url",
+      "label": "SEO URL",
+      "parent": null,
+      "aliases": [
+        "seo",
+        "semantic url",
+        "slug",
+        "permalink",
+        "url slug",
+        "friendly url",
+        "seoinfo",
+        "seo info"
+      ],
+      "anchors": [
+        "POST /api/seoinfos/search",
+        "GET /api/seoinfos/duplicates"
+      ]
+    },
+    {
+      "id": "personalization",
+      "label": "Catalog personalization",
+      "parent": "catalog",
+      "aliases": [
+        "personalization",
+        "personalisation",
+        "tagged item",
+        "taggeditem",
+        "personalization tag",
+        "catalog tag",
+        "inherited tag"
+      ],
+      "anchors": [
+        "GET /api/personalization/taggeditem/{id}"
+      ]
+    },
+    {
+      "id": "user-group",
+      "label": "User group",
+      "parent": null,
+      "aliases": [
+        "user group",
+        "user groups",
+        "customer group",
+        "customer segment",
+        "usergroups",
+        "eligible shopper"
+      ],
+      "anchors": [
+        "PriceEvaluationContext.userGroups"
+      ]
+    },
+    {
+      "id": "inventory",
+      "label": "Inventory",
+      "parent": null,
+      "aliases": [
+        "inventory",
+        "stock",
+        "stock level",
+        "in stock",
+        "out of stock",
+        "availability",
+        "available quantity",
+        "stock quantity",
+        "instockquantity",
+        "insufficient stock",
+        "over-stock"
+      ],
+      "anchors": [
+        "PATCH /api/inventory/{id}",
+        "GET /api/inventory/products/{productId}",
+        "PUT /api/inventory/plenty"
+      ]
+    },
+    {
+      "id": "fulfillment-center",
+      "label": "Fulfillment center",
+      "parent": "inventory",
+      "aliases": [
+        "fulfillment center",
+        "fulfilment centre",
+        "warehouse",
+        "distribution center",
+        "main fulfillment center",
+        "fulfillmentcenter"
+      ],
+      "anchors": [
+        "POST /api/inventory/fulfillmentcenters/search",
+        "Store.mainFulfillmentCenterId"
+      ]
+    },
+    {
+      "id": "asset",
+      "label": "Asset",
+      "parent": null,
+      "aliases": [
+        "asset",
+        "assets",
+        "file upload",
+        "asset upload",
+        "upload image",
+        "image upload",
+        "media file",
+        "attachment",
+        "content assets"
+      ],
+      "anchors": [
+        "POST /api/assets",
+        "POST /api/files/return-attachments"
+      ]
+    },
+    {
+      "id": "customer-order",
+      "label": "Customer order",
+      "parent": null,
+      "aliases": [
+        "customer order",
+        "placed order",
+        "order details",
+        "order detail",
+        "order history",
+        "purchase history",
+        "my orders",
+        "orders page",
+        "past order",
+        "customerorder"
+      ],
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "/account/orders",
+        "/account/orders/{id}",
+        "Query.order",
+        "POST /api/order/customerOrders/search"
+      ]
+    },
+    {
+      "id": "order-status",
+      "label": "Order status",
+      "parent": "customer-order",
+      "aliases": [
+        "order status",
+        "order state",
+        "order lifecycle",
+        "status dropdown",
+        "processing status",
+        "order statuses"
+      ],
+      "anchors": [
+        "CustomerOrder.status",
+        "PUT /api/order/customerOrders"
+      ]
+    },
+    {
+      "id": "order-cancellation",
+      "label": "Order cancellation",
+      "parent": "customer-order",
+      "aliases": [
+        "cancel order",
+        "order cancellation",
+        "cancelled order",
+        "canceled order",
+        "cancel document",
+        "cancel reason",
+        "cancellation reason",
+        "cancelreason",
+        "iscancelled"
+      ],
+      "anchors": [
+        "CustomerOrder.isCancelled",
+        "CustomerOrder.cancelReason",
+        "CustomerOrderType.cancelReason",
+        "PaymentIn.cancelledState"
+      ]
+    },
+    {
+      "id": "order-line-item",
+      "label": "Order line item",
+      "parent": "customer-order",
+      "aliases": [
+        "order line",
+        "order line item",
+        "ordered item",
+        "ordered product",
+        "ordered variation",
+        "order item"
+      ],
+      "anchors": [
+        "OrderLineItemType.listTotal",
+        "OrderLineItemType.product",
+        "OrderLineItemType.discountAmount",
+        "OrderLineItemType.configurationItems"
+      ]
+    },
+    {
+      "id": "order-number",
+      "label": "Order and operation number",
+      "parent": "customer-order",
+      "aliases": [
+        "order number",
+        "order id",
+        "operation number",
+        "document number",
+        "shipment number",
+        "numbering",
+        "transaction id",
+        "number template"
+      ],
+      "anchors": [
+        "CustomerOrder.number",
+        "OrderShipmentType.number",
+        "OrderShipmentType.parentOperationId"
+      ]
+    },
+    {
+      "id": "admin-order-screen",
+      "label": "Admin order screen",
+      "parent": "customer-order",
+      "aliases": [
+        "order blade",
+        "admin order",
+        "order screen",
+        "order document tree",
+        "operations tree",
+        "order tree",
+        "orders workspace",
+        "order address blade"
+      ],
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "CustomerOrder.childrenOperations"
+      ]
+    },
+    {
+      "id": "shipment",
+      "label": "Shipment",
+      "parent": "customer-order",
+      "aliases": [
+        "shipment",
+        "shipments",
+        "shipment status",
+        "tracking number",
+        "tracking link",
+        "tracking url",
+        "delivery tracking",
+        "pick pack",
+        "pickpack",
+        "ready to send",
+        "parcel",
+        "shipment item",
+        "allocation"
+      ],
+      "anchors": [
+        "OrderShipmentType.status",
+        "OrderShipmentType.trackingNumber",
+        "OrderShipmentType.items",
+        "CustomerOrderType.shipments",
+        "OrderShipmentType.isCancelled"
+      ]
+    },
+    {
+      "id": "organization-order-access",
+      "label": "Organization order visibility",
+      "parent": "customer-order",
+      "aliases": [
+        "organization order",
+        "organization orders",
+        "company order",
+        "company orders",
+        "colleague order",
+        "colleague's order",
+        "orders visible",
+        "order visibility",
+        "order access",
+        "shared order",
+        "all orders",
+        "team order"
+      ],
+      "anchors": [
+        "Query.organizationOrders",
+        "CustomerOrder.organizationId",
+        "/account/orders/{id}"
+      ]
+    },
+    {
+      "id": "timestamp",
+      "label": "Timestamp and time zone",
+      "parent": null,
+      "aliases": [
+        "timestamp",
+        "time zone",
+        "timezone",
+        "local time",
+        "utc",
+        "date format",
+        "created date",
+        "createddate",
+        "date and time"
+      ],
+      "anchors": [
+        "GET /api/platform/profiles/currentuser",
+        "GET /api/order/customerOrders/{id}"
+      ]
+    },
+    {
+      "id": "date-range-picker",
+      "label": "Date range picker",
+      "parent": null,
+      "aliases": [
+        "date range",
+        "date picker",
+        "date range picker",
+        "date filter",
+        "calendar",
+        "start date",
+        "end date"
+      ],
+      "anchors": [
+        "/company/my-customers",
+        "/account/orders"
+      ]
+    },
+    {
+      "id": "return",
+      "label": "Return (RMA)",
+      "parent": "customer-order",
+      "aliases": [
+        "rma",
+        "return request",
+        "product return",
+        "return merchandise",
+        "draft return",
+        "submit return",
+        "cancel return",
+        "return reason",
+        "return item",
+        "returns page",
+        "returned item",
+        "return module",
+        "buyer return"
+      ],
+      "anchors": [
+        "Mutation.submitReturn",
+        "Mutations.createReturn",
+        "Query.return",
+        "PUT /api/return",
+        "/account/returns/{}"
+      ]
+    },
+    {
+      "id": "return-decision",
+      "label": "Return decision",
+      "parent": "return",
+      "aliases": [
+        "approve return",
+        "decline return",
+        "approve / decline",
+        "return approval",
+        "return authorization",
+        "authorize return",
+        "partial approval",
+        "partially approved",
+        "decline reason",
+        "return decision"
+      ],
+      "anchors": [
+        "POST /api/return/{id}/authorize",
+        "/workspace/Return",
+        "PUT /api/return"
+      ]
+    },
+    {
+      "id": "returnable-quantity",
+      "label": "Returnable quantity",
+      "parent": "return",
+      "aliases": [
+        "returnable quantity",
+        "returnable item",
+        "returnable items",
+        "return quantity",
+        "returnable",
+        "return limit",
+        "over-limit quantity"
+      ],
+      "anchors": [
+        "Query.returnableItems",
+        "/account/returns/new/{orderId}"
+      ]
+    },
+    {
+      "id": "organization",
+      "label": "Organization",
+      "parent": null,
+      "aliases": [
+        "organization",
+        "organisation",
+        "company",
+        "company account",
+        "corporate account",
+        "business account",
+        "customer organization",
+        "buyer organization",
+        "company info"
+      ],
+      "anchors": [
+        "/company/info",
+        "Organization.status",
+        "GET /api/members/{id}"
+      ]
+    },
+    {
+      "id": "organization-member",
+      "label": "Organization member",
+      "parent": "organization",
+      "aliases": [
+        "organization member",
+        "company member",
+        "company members",
+        "member",
+        "members",
+        "colleague",
+        "coworker",
+        "co-worker",
+        "team member",
+        "employee",
+        "roster",
+        "members list",
+        "corporate user"
+      ],
+      "anchors": [
+        "/company/members",
+        "GET /company/members",
+        "Query.organization.contacts",
+        "Organization.contacts"
+      ]
+    },
+    {
+      "id": "organization-role",
+      "label": "Organization role",
+      "parent": "organization",
+      "aliases": [
+        "organization role",
+        "company role",
+        "purchasing agent",
+        "procurement agent",
+        "buyer role",
+        "organization maintainer",
+        "maintainer",
+        "company admin",
+        "company account admin",
+        "company administrator",
+        "organization employee",
+        "change role",
+        "edit role"
+      ],
+      "anchors": [
+        "Mutations.changeOrganizationContactRole",
+        "Mutation.changeOrganizationContactRole",
+        "GET /api/members/customers/invite/roles"
+      ]
+    },
+    {
+      "id": "organization-invitation",
+      "label": "Organization invitation",
+      "parent": "organization",
+      "aliases": [
+        "invite",
+        "invitation",
+        "invite user",
+        "invite member",
+        "invite a colleague",
+        "invites",
+        "invited",
+        "pending invitation",
+        "invite sent",
+        "registration invitation",
+        "resend invitation",
+        "revoke invite"
+      ],
+      "anchors": [
+        "Mutations.inviteUser",
+        "RegistrationInvitationEmailNotification",
+        "Mutation.revokeOrganizationInvite"
+      ]
+    },
+    {
+      "id": "member-block",
+      "label": "Block organization member",
+      "parent": "organization-member",
+      "aliases": [
+        "block member",
+        "block user",
+        "blocked member",
+        "unblock",
+        "unblock user",
+        "blocked",
+        "lock in organization",
+        "locked in organization",
+        "membership lock",
+        "islockedinorganization"
+      ],
+      "anchors": [
+        "Mutations.lockOrganizationContact",
+        "Mutations.unlockOrganizationContact",
+        "Contact.isLockedInOrganization",
+        "POST /api/customer/organization-memberships/{id}/lock"
+      ]
+    },
+    {
+      "id": "membership-status",
+      "label": "Member status",
+      "parent": "organization-member",
+      "aliases": [
+        "membership status",
+        "member status",
+        "contact status",
+        "status in organization",
+        "statusinorganization",
+        "active column",
+        "active badge",
+        "mystatusinorganization"
+      ],
+      "anchors": [
+        "ContactType.status",
+        "OrganizationMembership.status",
+        "Contact.statusInOrganization",
+        "Organization.myStatusInOrganization"
+      ]
+    },
+    {
+      "id": "organization-membership",
+      "label": "Organization membership",
+      "parent": "organization",
+      "aliases": [
+        "organization membership",
+        "membership",
+        "memberships",
+        "organization-memberships",
+        "membership record"
+      ],
+      "anchors": [
+        "POST /api/customer/organization-memberships/search",
+        "POST /api/customer/organization-memberships"
+      ]
+    },
+    {
+      "id": "multi-organization",
+      "label": "Multiple organizations",
+      "parent": "organization",
+      "aliases": [
+        "switch organization",
+        "organization switch",
+        "change organization",
+        "multiple organizations",
+        "multi-org",
+        "multi-organization",
+        "active organization",
+        "default organization",
+        "several organizations"
+      ],
+      "anchors": [
+        "Mutation.changeOrganization",
+        "ContactType.organizationId",
+        "ContactType.organizations"
+      ]
+    },
+    {
+      "id": "member-deletion",
+      "label": "Member deletion",
+      "parent": "organization-member",
+      "aliases": [
+        "delete member",
+        "remove member",
+        "delete contact",
+        "remove from organization",
+        "orphaned account",
+        "leftover account",
+        "removememberfromorganization"
+      ],
+      "anchors": [
+        "Mutations.removeMemberFromOrganization",
+        "DELETE /api/members",
+        "DELETE /api/platform/security/users"
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "parent": null,
+      "aliases": [
+        "contact",
+        "contacts",
+        "customer contact",
+        "contact record",
+        "customer record",
+        "first name",
+        "last name",
+        "full name",
+        "contact blade"
+      ],
+      "anchors": [
+        "GET /api/members/{id}",
+        "PUT /api/members",
+        "me.contact",
+        "ContactType.fullName"
+      ]
+    },
+    {
+      "id": "member-search",
+      "label": "Member and user search",
+      "parent": null,
+      "aliases": [
+        "member search",
+        "contact search",
+        "user search",
+        "find member",
+        "find user",
+        "companies and contacts",
+        "search members",
+        "deepsearch"
+      ],
+      "anchors": [
+        "POST /api/members/search",
+        "POST /api/platform/security/users/search"
+      ]
+    },
+    {
+      "id": "sales-rep",
+      "label": "Sales representative",
+      "parent": null,
+      "aliases": [
+        "sales rep",
+        "sales representative",
+        "account manager",
+        "sales agent",
+        "served customer",
+        "my customers",
+        "rep",
+        "sales-rep",
+        "salesrep"
+      ],
+      "anchors": [
+        "Query.salesRepCustomers",
+        "Query.salesRepCustomer",
+        "/company/my-customers",
+        "/graphql/sales-rep",
+        "Query.salesRepCustomerOrders"
+      ]
+    },
+    {
+      "id": "customer-communication",
+      "label": "Sales rep customer communication",
+      "parent": "sales-rep",
+      "aliases": [
+        "customer communication",
+        "sendcustomercommunication",
+        "rep message",
+        "share message",
+        "sharing message",
+        "notify customer",
+        "default message"
+      ],
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "SharingSettingType.message"
+      ]
+    },
+    {
+      "id": "white-labeling",
+      "label": "White labeling",
+      "parent": null,
+      "aliases": [
+        "white labeling",
+        "white label",
+        "white-labeling",
+        "whitelabeling",
+        "branding",
+        "logo",
+        "company logo",
+        "organization theme"
+      ],
+      "anchors": [
+        "Query.whiteLabelingSettings",
+        "GET /api/white-labeling/store/{storeId}"
+      ]
+    },
+    {
+      "id": "wishlist",
+      "label": "List (wishlist)",
+      "parent": null,
+      "aliases": [
+        "wishlist",
+        "wish list",
+        "shopping list",
+        "product list",
+        "saved list",
+        "my lists",
+        "lists page",
+        "favorites",
+        "favourites",
+        "create list",
+        "list limit",
+        "createwishlist"
+      ],
+      "anchors": [
+        "Query.wishlist",
+        "Query.wishlists",
+        "/account/lists",
+        "Mutation.createWishlist",
+        "Mutation.addWishlistItem"
+      ]
+    },
+    {
+      "id": "list-sharing",
+      "label": "List sharing",
+      "parent": "wishlist",
+      "aliases": [
+        "share list",
+        "list sharing",
+        "shared list",
+        "share link",
+        "sharing link",
+        "sharing key",
+        "sharingkey",
+        "sharing scope",
+        "share dialog",
+        "stop sharing",
+        "sharing setting",
+        "shared wishlist"
+      ],
+      "anchors": [
+        "Query.sharedWishlist",
+        "Mutation.changeWishlist",
+        "SharingSettingType.access",
+        "/shared-list/:sharingKey",
+        "WishlistType.scope"
+      ]
+    },
+    {
+      "id": "push-message",
+      "label": "Push message",
+      "parent": "notification",
+      "aliases": [
+        "push message",
+        "push messages",
+        "push notification",
+        "in-app notification",
+        "notification inbox",
+        "notification bell",
+        "unread count",
+        "unread",
+        "notifications page",
+        "mark as read"
+      ],
+      "anchors": [
+        "Query.pushMessages",
+        "POST /api/push-message",
+        "/account/notifications",
+        "Mutation.markPushMessageRead",
+        "POST /api/push-message/search"
+      ]
+    },
+    {
+      "id": "push-audience",
+      "label": "Push message audience",
+      "parent": "push-message",
+      "aliases": [
+        "audience",
+        "recipient",
+        "recipients",
+        "member query",
+        "memberquery",
+        "advanced query",
+        "recipient picker",
+        "specific recipients",
+        "track new recipients",
+        "match by conditions",
+        "audience caption"
+      ],
+      "anchors": [
+        "POST /api/push-message/search-recipients",
+        "POST /api/push-message/preview-recipients",
+        "/workspace/embedded-app/push-messages"
+      ]
+    },
+    {
+      "id": "notification",
+      "label": "Notification",
+      "parent": null,
+      "aliases": [
+        "notification",
+        "notifications",
+        "email notification",
+        "notification email",
+        "notification journal",
+        "send email",
+        "notification sent"
+      ],
+      "anchors": [
+        "POST /api/notifications/journal"
+      ]
+    },
+    {
+      "id": "notification-template",
+      "label": "Notification template",
+      "parent": "notification",
+      "aliases": [
+        "notification template",
+        "email template",
+        "template",
+        "notification layout",
+        "layout template",
+        "predefined template",
+        "restore template"
+      ],
+      "anchors": [
+        "NotificationTemplate.isPredefined",
+        "NotificationTemplate.isReadonly",
+        "/workspace/notifications"
+      ]
+    },
+    {
+      "id": "html-editor",
+      "label": "HTML and markdown editor",
+      "parent": null,
+      "aliases": [
+        "html editor",
+        "markdown editor",
+        "rich text editor",
+        "wysiwyg",
+        "htmleditor",
+        "split view",
+        "editor preview"
+      ],
+      "anchors": [
+        "/workspace/notifications",
+        "POST /api/assets"
+      ]
+    },
+    {
+      "id": "sign-in",
+      "label": "Sign-in",
+      "parent": null,
+      "aliases": [
+        "sign in",
+        "sign-in",
+        "signin",
+        "log in",
+        "login",
+        "logon",
+        "log on",
+        "signing in",
+        "sign-in form",
+        "login page",
+        "password grant",
+        "user_cannot_login_in_store"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token",
+        "/connect/token"
+      ]
+    },
+    {
+      "id": "access-token",
+      "label": "Access token",
+      "parent": "sign-in",
+      "aliases": [
+        "access token",
+        "token",
+        "bearer token",
+        "jwt",
+        "token audience",
+        "audience claim",
+        "refresh token",
+        "oauth",
+        "grant type",
+        "organization_id",
+        "store-scoped token",
+        "invalid_token"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "Query.me"
+      ]
+    },
+    {
+      "id": "sign-out",
+      "label": "Sign-out and token revocation",
+      "parent": "sign-in",
+      "aliases": [
+        "sign out",
+        "sign-out",
+        "log out",
+        "logout",
+        "revoke token",
+        "token revocation",
+        "revocation",
+        "session invalidation"
+      ],
+      "anchors": [
+        "/revoke/token",
+        "/connect/revocation",
+        "/api/platform/security/logout"
+      ]
+    },
+    {
+      "id": "session",
+      "label": "Session",
+      "parent": "sign-in",
+      "aliases": [
+        "session",
+        "session length",
+        "session expiry",
+        "remember me",
+        "stay signed in",
+        "keep me signed in",
+        "live session",
+        "httponly cookie",
+        "cookie"
+      ],
+      "anchors": [
+        "/sign-in",
+        "/connect/authorize"
+      ]
+    },
+    {
+      "id": "otp",
+      "label": "One-time password sign-in",
+      "parent": "sign-in",
+      "aliases": [
+        "otp",
+        "one-time password",
+        "one-time code",
+        "one time code",
+        "email code",
+        "passwordless",
+        "verification code",
+        "otp_email"
+      ],
+      "anchors": [
+        "POST /api/otp/request",
+        "POST /connect/token"
+      ]
+    },
+    {
+      "id": "impersonation",
+      "label": "Login on behalf",
+      "parent": "sign-in",
+      "aliases": [
+        "login on behalf",
+        "log in on behalf",
+        "impersonate",
+        "impersonation",
+        "act as",
+        "log in as",
+        "sign in as"
+      ],
+      "anchors": [
+        "GET /account/impersonate/:userId",
+        "POST /connect/token"
+      ]
+    },
+    {
+      "id": "email-confirmation",
+      "label": "Email confirmation",
+      "parent": "sign-in",
+      "aliases": [
+        "email confirmation",
+        "confirm email",
+        "verify email",
+        "confirmation link",
+        "confirmation email",
+        "confirmemail",
+        "emailconfirmed"
+      ],
+      "anchors": [
+        "/account/confirmemail"
+      ]
+    },
+    {
+      "id": "account-lockout",
+      "label": "Account lockout",
+      "parent": "security-account",
+      "aliases": [
+        "lockout",
+        "account lock",
+        "locked account",
+        "account locked",
+        "lockout end",
+        "lockoutend",
+        "locked state",
+        "lockedstate",
+        "temporary lockout",
+        "failed sign-in",
+        "failed login",
+        "unlock account"
+      ],
+      "anchors": [
+        "UserType.lockedState",
+        "POST /api/platform/security/users/{id}/lock",
+        "POST /api/platform/security/users/{id}/unlock",
+        "GET /api/platform/security/users/{userName}"
+      ]
+    },
+    {
+      "id": "security-account",
+      "label": "Security account",
+      "parent": null,
+      "aliases": [
+        "security account",
+        "user account",
+        "platform user",
+        "back-office user",
+        "username",
+        "user name",
+        "account status",
+        "last login",
+        "lastlogindate",
+        "password hash",
+        "securityaccounts",
+        "pendingapproval"
+      ],
+      "anchors": [
+        "GET /api/platform/security/users/{userName}",
+        "ContactType.securityAccounts",
+        "PUT /api/platform/security/users",
+        "GET /api/platform/security/users/id/{id}"
+      ]
+    },
+    {
+      "id": "platform-role",
+      "label": "Platform role",
+      "parent": "permission",
+      "aliases": [
+        "platform role",
+        "security role",
+        "admin role",
+        "back-office role",
+        "role assignment",
+        "assign role",
+        "assigned roles",
+        "roles blade",
+        "role whitelist",
+        "organization roles whitelist"
+      ],
+      "anchors": [
+        "PUT /api/platform/security/users",
+        "PUT /api/platform/settings"
+      ]
+    },
+    {
+      "id": "permission",
+      "label": "Permission",
+      "parent": null,
+      "aliases": [
+        "permission",
+        "permissions",
+        "access right",
+        "rbac",
+        "privilege",
+        "forbidden",
+        "access denied",
+        "403",
+        "401",
+        "unauthorized",
+        "not allowed"
+      ],
+      "anchors": [
+        "POST /api/return/{id}/authorize",
+        "GET /api/catalog/barcode-search/store/{storeId}",
+        "GET /api/platform/settings"
+      ]
+    },
+    {
+      "id": "graphql-api",
+      "label": "GraphQL xAPI",
+      "parent": null,
+      "aliases": [
+        "xapi",
+        "graphql",
+        "graphql endpoint",
+        "graphiql",
+        "storefront api",
+        "experience api",
+        "graphql schema",
+        "introspection",
+        "graphql query",
+        "graphql mutation"
+      ],
+      "anchors": [
+        "/graphql",
+        "POST /graphql",
+        "GET /ui/graphiql",
+        "/xapi/graphql"
+      ]
+    },
+    {
+      "id": "rest-api",
+      "label": "Platform REST API",
+      "parent": null,
+      "aliases": [
+        "rest api",
+        "platform api",
+        "rest endpoint",
+        "rest route",
+        "rest"
+      ],
+      "anchors": [
+        "GET /docs/VirtoCommerce.XCart/swagger.json",
+        "GET /api/platform/profiles/currentuser"
+      ]
+    },
+    {
+      "id": "context-argument",
+      "label": "xAPI context argument",
+      "parent": "graphql-api",
+      "aliases": [
+        "context argument",
+        "culturename",
+        "storeid",
+        "store id",
+        "ambient context",
+        "optional argument",
+        "invalid argument",
+        "unknown store"
+      ],
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "Query.product",
+        "Query.products"
+      ]
+    },
+    {
+      "id": "api-error",
+      "label": "API error shape",
+      "parent": null,
+      "aliases": [
+        "error code",
+        "error response",
+        "error message",
+        "error shape",
+        "silent failure",
+        "silently ignored",
+        "vacuous success",
+        "null response",
+        "returns null",
+        "http 200 error",
+        "500 error",
+        "internal server error"
+      ],
+      "anchors": [
+        "bladeNavigationService.setError",
+        "CartType.validationErrors"
+      ]
+    },
+    {
+      "id": "store",
+      "label": "Store",
+      "parent": null,
+      "aliases": [
+        "store",
+        "store settings",
+        "store setting",
+        "default language",
+        "default currency",
+        "store url",
+        "multi-store",
+        "store blade",
+        "store configuration"
+      ],
+      "anchors": [
+        "PUT /api/stores",
+        "GET /api/stores/{id}",
+        "Store.defaultCurrency",
+        "Store.defaultLanguage",
+        "POST /api/stores/search"
+      ]
+    },
+    {
+      "id": "platform-settings",
+      "label": "Platform settings",
+      "parent": null,
+      "aliases": [
+        "platform setting",
+        "platform settings",
+        "module setting",
+        "module settings",
+        "settings api",
+        "setting value"
+      ],
+      "anchors": [
+        "GET /api/platform/settings",
+        "GET /api/platform/settings/{name}",
+        "GET /api/platform/settings/values/{name}",
+        "PUT /api/platform/settings"
+      ]
+    },
+    {
+      "id": "platform-version",
+      "label": "Platform and module version",
+      "parent": null,
+      "aliases": [
+        "platform version",
+        "module version",
+        "running version",
+        "installed modules",
+        "modules list",
+        "build version",
+        "theme version"
+      ],
+      "anchors": [
+        "/api/platform/version",
+        "/api/platform/modules",
+        "/health"
+      ]
+    },
+    {
+      "id": "changelog",
+      "label": "Change log",
+      "parent": null,
+      "aliases": [
+        "change log",
+        "changelog",
+        "audit trail",
+        "audit log",
+        "change history",
+        "who changed",
+        "change tracking"
+      ],
+      "anchors": [
+        "GET /api/platform/changelog/{type}/changes",
+        "POST /api/platform/changelog/v2/search"
+      ]
+    },
+    {
+      "id": "background-job",
+      "label": "Background job",
+      "parent": null,
+      "aliases": [
+        "background job",
+        "hangfire",
+        "scheduled job",
+        "recurring job",
+        "job queue",
+        "cron",
+        "requeue",
+        "indexchangesjob"
+      ],
+      "anchors": [
+        "/hangfire/jobs",
+        "POST /api/search/indexes/index"
+      ]
+    },
+    {
+      "id": "vendor-portal",
+      "label": "Vendor portal",
+      "parent": null,
+      "aliases": [
+        "vendor portal",
+        "vendor",
+        "vendors",
+        "vc-shell",
+        "vcshell",
+        "shell app",
+        "blade stack"
+      ],
+      "anchors": [
+        "/apps/vendor-portal",
+        "/apps/vc-sales-rep/#/sales-reps/sales-rep-details"
+      ]
+    },
+    {
+      "id": "ucp",
+      "label": "UCP agentic commerce",
+      "parent": null,
+      "aliases": [
+        "ucp",
+        "universal commerce protocol",
+        "mcp",
+        "ucp mcp",
+        "agentic commerce",
+        "ai agent",
+        "ai shopping agent",
+        "search_products",
+        "create_cart",
+        "get_cart",
+        "update_cart",
+        "checkout handoff"
+      ],
+      "anchors": [
+        "POST /ucp/mcp",
+        "/ucp/mcp",
+        "POST /ucp/v1/carts",
+        "POST /ucp/v1/checkouts",
+        "GET /ucp/v1/carts/{cartId}"
+      ]
+    },
+    {
+      "id": "analytics",
+      "label": "Web analytics",
+      "parent": null,
+      "aliases": [
+        "google analytics",
+        "ga4",
+        "analytics",
+        "datalayer",
+        "analytics event",
+        "purchase event",
+        "view_search_results",
+        "view_item_list",
+        "gtm"
+      ],
+      "anchors": [
+        "window.dataLayer",
+        "client-app/modules/google-analytics/events.ts"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "label": "Accessibility",
+      "parent": null,
+      "aliases": [
+        "accessibility",
+        "a11y",
+        "accessible name",
+        "screen reader",
+        "aria",
+        "wcag",
+        "assistive technology",
+        "accessibility tree",
+        "touch target",
+        "tap target",
+        "target size"
+      ],
+      "anchors": [
+        "mobile-search-bar.vue",
+        "/account/profile"
+      ]
+    },
+    {
+      "id": "mobile-layout",
+      "label": "Mobile layout",
+      "parent": null,
+      "aliases": [
+        "mobile",
+        "mobile view",
+        "responsive",
+        "small screen",
+        "tablet",
+        "mobile header",
+        "375px",
+        "390px",
+        "mobile overlay",
+        "smartphone"
+      ],
+      "anchors": [
+        "mobile-search-bar.vue",
+        "/catalog"
+      ]
+    },
+    {
+      "id": "layout-shift",
+      "label": "Layout shift",
+      "parent": null,
+      "aliases": [
+        "layout shift",
+        "cls",
+        "cumulative layout shift",
+        "page jump",
+        "core web vitals",
+        "web vitals"
+      ],
+      "anchors": [
+        "/account/returns/{}"
+      ]
+    },
+    {
+      "id": "theme",
+      "label": "Storefront theme",
+      "parent": null,
+      "aliases": [
+        "theme",
+        "theme preset",
+        "color preset",
+        "colour preset",
+        "dark mode",
+        "light mode",
+        "dark theme",
+        "color scheme",
+        "presets"
+      ],
+      "anchors": [
+        "/assets/presets/{name}.json"
+      ]
+    },
+    {
+      "id": "site-header",
+      "label": "Site header",
+      "parent": null,
+      "aliases": [
+        "top header",
+        "site header",
+        "header bar",
+        "account menu",
+        "account button",
+        "header menu",
+        "header search",
+        "storefront header",
+        "header control"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.me"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "parent": null,
+      "aliases": [
+        "footer",
+        "footer link",
+        "footer links",
+        "footer menu",
+        "link list"
+      ],
+      "anchors": [
+        "client-app/shared/layout/components/footer/_internal/footer-links.vue",
+        "Query.whiteLabelingSettings"
+      ]
+    },
+    {
+      "id": "content-page",
+      "label": "Content page",
+      "parent": null,
+      "aliases": [
+        "content page",
+        "cms page",
+        "static page",
+        "page builder",
+        "landing page",
+        "language fallback",
+        "localized page"
+      ],
+      "anchors": [
+        "/{culture}/{permalink}"
+      ]
+    },
+    {
+      "id": "localization",
+      "label": "Language and localization",
+      "parent": null,
+      "aliases": [
+        "language",
+        "languages",
+        "localization",
+        "localisation",
+        "translation",
+        "culture",
+        "locale",
+        "multilingual",
+        "languagecode"
+      ],
+      "anchors": [
+        "/{culture}/{permalink}",
+        "Store.defaultLanguage"
+      ]
+    },
+    {
+      "id": "robots-sitemap",
+      "label": "Robots and sitemap",
+      "parent": null,
+      "aliases": [
+        "robots.txt",
+        "robots",
+        "sitemap",
+        "crawler",
+        "search engine indexing"
+      ],
+      "anchors": [
+        "/robots.txt",
+        "/sitemap/sitemap.xml"
+      ]
+    },
+    {
+      "id": "page-not-found",
+      "label": "Page not found",
+      "parent": null,
+      "aliases": [
+        "404",
+        "page not found",
+        "soft 404",
+        "not found page",
+        "broken link",
+        "dead link"
+      ],
+      "anchors": [
+        "/product/{sku}"
+      ]
+    },
+    {
+      "id": "quote",
+      "label": "Quote request",
+      "parent": null,
+      "aliases": [
+        "quote",
+        "quotes",
+        "quote request",
+        "request for quote",
+        "rfq",
+        "request a quote"
+      ],
+      "anchors": [
+        "/account/quotes"
+      ]
+    },
+    {
+      "id": "purchase-request",
+      "label": "Purchase request",
+      "parent": "quote",
+      "aliases": [
+        "purchase request",
+        "purchase requests",
+        "document to quote",
+        "document processing",
+        "upload order document",
+        "handwritten order",
+        "ai document"
+      ],
+      "anchors": [
+        "/account/purchase-requests",
+        "Mutation.createPurchaseRequestFromDocuments"
+      ]
+    },
+    {
+      "id": "loyalty",
+      "label": "Loyalty program",
+      "parent": null,
+      "aliases": [
+        "loyalty",
+        "loyalty points",
+        "loyalty program",
+        "points",
+        "points balance",
+        "pay with points",
+        "reward points",
+        "loyalty currency",
+        "loyalty balance"
+      ],
+      "anchors": [
+        "/account/points-history",
+        "/api/loyalty-program-operation-log/balance/{userId}",
+        "/api/loyalty-program-operation-log/search"
+      ]
+    },
+    {
+      "id": "loyalty-mission",
+      "label": "Loyalty mission",
+      "parent": "loyalty",
+      "aliases": [
+        "loyalty mission",
+        "mission",
+        "missions",
+        "mission progress",
+        "mission transaction",
+        "challenge"
+      ],
+      "anchors": [
+        "/api/loyalty-missions",
+        "Query.loyaltyMissionProgress",
+        "LoyaltyMission.status",
+        "POST /api/loyalty-missions"
+      ]
+    },
+    {
+      "id": "admin-validation",
+      "label": "Admin blade validation and errors",
+      "parent": null,
+      "aliases": [
+        "required field",
+        "blade error",
+        "error banner",
+        "unsaved changes",
+        "dirty state",
+        "save disabled",
+        "form validation",
+        "required asterisk"
+      ],
+      "anchors": [
+        "bladeNavigationService.setError",
+        "POST /api/loyalty-missions"
+      ]
+    },
+    {
+      "id": "loyalty-history",
+      "label": "Loyalty history",
+      "parent": "loyalty",
+      "aliases": [
+        "points history",
+        "earned points",
+        "redeemed points",
+        "points-history",
+        "loyalty history",
+        "loyalty transactions",
+        "points balance history"
+      ],
+      "anchors": []
+    },
+    {
+      "id": "blade-navigation",
+      "label": "Blade navigation",
+      "parent": null,
+      "aliases": [
+        "blade",
+        "close blade",
+        "hash route",
+        "deep link",
+        "breadcrumb",
+        "routable blade",
+        "child blade"
+      ],
+      "anchors": []
+    },
+    {
+      "id": "order-deletion",
+      "label": "Order deletion",
+      "parent": "customer-order",
+      "aliases": [
+        "delete order",
+        "order deletion",
+        "remove order",
+        "deleteordersbyids"
+      ],
+      "anchors": []
+    },
+    {
+      "id": "openapi-document",
+      "label": "Openapi document",
+      "parent": "rest-api",
+      "aliases": [
+        "api document",
+        "swagger",
+        "openapi",
+        "swagger document",
+        "ignoreapi",
+        "hidden endpoint"
+      ],
+      "anchors": []
+    },
+    {
+      "id": "return-status",
+      "label": "Return status",
+      "parent": "return",
+      "aliases": [
+        "return status",
+        "rma status",
+        "return state",
+        "available statuses"
+      ],
+      "anchors": []
+    },
+    {
+      "id": "search-history",
+      "label": "Search history",
+      "parent": "product-search",
+      "aliases": [
+        "search history",
+        "recent searches",
+        "previous searches",
+        "search dropdown history"
+      ],
+      "anchors": []
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+---
+id: KB-2CADFEBD
+subject: The dedicated barcode-search settings endpoint validates and normalises fields on PUT and answers GET with defaults for unknown stores
+plane: experiential
+question: How does PUT/GET api/catalog/barcode-search/store/{storeId} validate and respond?
+questions:
+  - text: If an admin saves barcode lookup fields with odd casing or duplicates, what gets stored?
+  - text: What does the barcode search settings API return for a store id that does not exist?
+  - text: Which PUT bodies does the barcode-search store endpoint reject with 400, and does it persist anything then?
+  - text: Does omitting scannerEnabled or fields in the barcode settings update keep or reset them?
+  - text: Can a store's barcode scan be configured to match on sku through the settings endpoint?
+concepts:
+  - id: barcode-settings
+  - id: api-error
+status: active
+appliesTo:
+  - axis: surface
+    value: rest
+anchors:
+  - coordinate: PUT /api/catalog/barcode-search/store
+  - coordinate: GET /api/catalog/barcode-search/store
+evidence:
+  - method: observation
+    deployment: vcst
+    at: 2026-09-28T14:11:59.942Z
+    by: session:p46688
+    who: Lenajava1
+    splitFrom: KB-C3945D5C
+  - method: observation
+    deployment: vcst
+    at: 2026-09-28T16:03:44.486Z
+    by: session:p23500
+    who: Lenajava1
+    note: "Catalog 3.1046.0-pr-909-2839: unknown field PUT 400 naming it; null body 400 'Barcode search settings are required.'; unknown-store GET 200 defaults, /fields 200; unknown-store PUT 404; valid PUT 204. Generic PUT /api/stores stores an unknown field verbatim and the dedicated GET echoes it."
+    splitFrom: KB-C3945D5C
+  - method: observation
+    deployment: vcst
+    at: 2026-09-28T18:21:47.940Z
+    by: session:p39152
+    who: Lenajava1
+    note: Valid PUT api/catalog/barcode-search/store/{id} returned 204 and the next GET echoed the body exactly, four times in a row (fields set / scannerEnabled false / fields empty / defaults)
+    splitFrom: KB-C3945D5C
+  - method: observation
+    deployment: vcst
+    at: 2026-09-28T18:26:57.906Z
+    by: session:p48928
+    who: Lenajava1
+    note: "Re-run on the same PR builds: unknown field and sku -> 400 naming the field, nothing persisted; null body 400; unknown store PUT 404, GET 200 defaults; GTIN,gtin,Code -> gtin,code; Read-only role GET 200/200 PUT 403; no-permission role 403 x3."
+    splitFrom: KB-C3945D5C
+---
+Catalog 3.1046 (PR 909 build): GET store/{id} returns 200 {scannerEnabled:true,fields:[]} for a store with nothing stored and ALSO for a store id that does not exist; GET store/{id}/fields also answers 200 for an unknown store. PUT rejects unknown or excluded fields (e.g. sku) with 400 naming them and persists nothing; null, empty or malformed JSON body -> 400 'Barcode search settings are required.'; unknown store -> 404 even when the fields are also invalid; mixed case and duplicates are normalised (GTIN,gtin,Code -> gtin,code), padded names are trimmed, empty-string entries are dropped; omitting fields saves []; omitting scannerEnabled keeps true. Permissions: catalog:BrowseFilters:Read for both GETs (403 without), :Update for PUT (403 with Read only); anonymous 401.

@@ -3,6 +3,14 @@ id: KB-6B0E2FF7
 subject: Storefront interactive controls at 375px are mostly 24-44 CSS px (UI-kit button tiers)
 plane: experiential
 question: What size are interactive controls on the storefront catalog page at a 375px mobile viewport?
+questions:
+  - text: Are the buttons on the catalog page big enough to tap comfortably on a phone?
+  - text: What touch target sizes do storefront catalog controls have at a narrow mobile viewport for a target-size audit?
+  - text: Which interactive controls on the mobile catalog page fall below 24 CSS pixels?
+  - text: Do storefront catalog control heights follow the UI kit button size tiers on small screens?
+concepts:
+  - id: mobile-layout
+  - id: accessibility
 status: active
 appliesTo:
   - axis: surface

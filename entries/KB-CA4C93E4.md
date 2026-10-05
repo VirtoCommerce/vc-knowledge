@@ -3,14 +3,24 @@ id: KB-CA4C93E4
 subject: discount-rate-not-persisted-on-order
 plane: experiential
 question: can I tell from a placed order what percentage a promotion took off it
+questions:
+  - text: Can I see on my past order what percent discount I received?
+  - text: Does a placed order store the promotion's percentage rate or only the money amount?
+  - text: Which fields does an order discount entry carry, and is any a rate?
+  - text: Why is following promotionId back to the promotion an unreliable way to recover an order's discount rate?
+  - text: Does the order keep a tax rate while dropping the discount rate?
+concepts:
+  - id: discount
+  - id: customer-order
+  - id: promotion-reward
 status: active
 appliesTo:
-  - axis: surface
-    value: storefront-xapi
-  - axis: surface
-    value: rest
   - axis: principal
     value: customer
+  - axis: surface
+    value: xapi
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: OrderDiscountType.amount
   - coordinate: OrderDiscountType.promotionId

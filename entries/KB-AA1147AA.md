@@ -3,6 +3,15 @@ id: KB-AA1147AA
 subject: Organization.status is the organization's own status, not the caller's membership status
 plane: experiential
 question: Which field on Organization tells the caller's membership status and lock - status, myStatusInOrganization or isLockedForCurrentUser?
+questions:
+  - text: How can the storefront tell that I am blocked in one of my companies but not another?
+  - text: Which organization field shows my own membership status versus the company's status?
+  - text: Does myStatusInOrganization change when a membership is locked?
+  - text: Which field detects a lock in a sibling organization that is not the active one?
+concepts:
+  - id: membership-status
+  - id: member-block
+  - id: multi-organization
 status: active
 appliesTo:
   - axis: surface

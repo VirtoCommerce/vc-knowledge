@@ -3,6 +3,15 @@ id: KB-5ADBFB34
 subject: only the largest cart-subtotal promotion applies, whatever isExclusive says
 plane: experiential
 question: why did only one promotion apply when two were active, in scope and neither is exclusive
+questions:
+  - text: Two discounts were running but my basket only got one of them - why not both?
+  - text: Why did only the larger cart-subtotal promotion apply when neither was marked exclusive?
+  - text: Under the BestReward combine policy, is the winning subtotal reward chosen by raw amount or by money value?
+  - text: Does promotion priority or the exclusive flag affect which subtotal reward wins under the default policy?
+  - text: What setting must change so that two order-level promotions stack on the same cart?
+concepts:
+  - id: promotion-combination
+  - id: promotion-reward
 status: active
 appliesTo:
   - axis: surface

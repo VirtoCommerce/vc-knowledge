@@ -3,10 +3,21 @@ id: KB-FFB3268E
 subject: "Admin notification layout editor: image drop/paste/toolbar each upload once to cms-content/layouts/assets"
 plane: experiential
 question: Where does an image dropped or pasted into the Admin notification layout markdown editor (vcUkHtmleditor) get uploaded, and what is inserted?
+questions:
+  - text: Where do pictures I paste into an email layout in the back office get stored?
+  - text: Does dropping, pasting or using the toolbar image button in the notification layout editor upload the file once?
+  - text: Which assets folder does the notification layout editor upload images to, and what is inserted into the template?
+  - text: Why does a pasted image's file name contain the weekday number instead of the day of month?
+concepts:
+  - id: notification-template
+  - id: html-editor
+  - id: asset
 status: active
 appliesTo:
   - axis: surface
-    value: admin-spa
+    value: admin-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: POST /api/assets
 evidence:

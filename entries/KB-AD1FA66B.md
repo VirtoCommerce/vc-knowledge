@@ -3,14 +3,24 @@ id: KB-AD1FA66B
 subject: where a cart's money lives, and which copy goes stale
 plane: experiential
 question: if a promotion changes while a shopper's cart is alive, does the cart still hold the old discount?
+questions:
+  - text: If a sale ends while items sit in my basket, will I still get the old discount?
+  - text: Why does an abandoned-cart email show a discount the storefront no longer shows?
+  - text: Why does the stored cart from the REST API disagree with the storefront cart totals?
+  - text: When does a cart mutation write the recomputed discount snapshot back to the stored record?
+  - text: Is the storefront cart total recomputed from live promotions on every read?
+concepts:
+  - id: cart
+  - id: discount
+  - id: totals
 status: active
 appliesTo:
+  - axis: principal
+    value: customer
   - axis: surface
     value: rest
   - axis: surface
-    value: storefront-xapi
-  - axis: principal
-    value: customer
+    value: xapi
 anchors:
   - coordinate: GET /api/carts/{id}
   - coordinate: Query.cart

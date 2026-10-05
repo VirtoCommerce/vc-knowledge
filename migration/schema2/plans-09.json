@@ -1,0 +1,701 @@
+[
+ {
+  "id": "KB-D0BF25FF",
+  "action": "split",
+  "why": "(b) a later note confirms the edit guards (frozen order, Save/Reset rules, dirty-close dialog) but contradicts the claim that saved fields are listed first in stored order",
+  "children": [
+   {
+    "subject": "Barcode scanner blade lists saved fields first in stored order, then the rest by display label",
+    "question": "In what order does the Admin Barcode scanner blade list the saved and unsaved barcode fields?",
+    "anchors": [
+     "PUT /api/catalog/barcode-search/store/{}"
+    ],
+    "surface": [
+     "admin-ui"
+    ],
+    "body": "Catalog 3.1046 (PR 909 build): the blade lists the saved (checked) fields first in stored order, then every other field sorted by its display label (GTIN, MPN and SKU sort by label, e.g. MPN between monday and mycustom).",
+    "fromNotes": false,
+    "questions": [
+     "When I reopen the barcode scanner settings, why are my chosen fields not shown in the order I saved them?",
+     "Does the admin barcode field list keep the stored field order for checked fields, or sort everything by label?",
+     "How is the field list ordered in the store barcode search settings blade after saving?",
+     "Is the barcode-fields blade ordering driven by the persisted array order or by display-label sorting?"
+    ],
+    "concepts": [
+     "barcode-settings",
+     "sort"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Barcode scanner blade freezes field order while editing and guards Save, Reset and closing with unsaved changes",
+    "question": "How does the Admin Barcode scanner blade guard Save, Reset and closing with unsaved changes?",
+    "anchors": [
+     "PUT /api/catalog/barcode-search/store/{}"
+    ],
+    "surface": [
+     "admin-ui"
+    ],
+    "body": "The order of the fields does not change while the admin toggles modes or checkboxes. In Exact mode with zero fields selected Save is disabled. Reset restores the saved selection and mode and disables Save. Closing the blade with unsaved changes opens a 'Save changes' dialog (Yes / No); No discards. Closing while the form is dirty AND invalid (Exact, zero fields) opens a different 'Warning - Validation failed for this object. Will you continue editing and save later?' dialog; No closes the blade without saving. After toggling the mode away and back, Save stays enabled although the form equals the saved state.",
+    "fromNotes": true,
+    "questions": [
+     "If I close the barcode scanner settings without saving, will it warn me first?",
+     "Why can I not save the barcode settings in Exact mode when no field is ticked?",
+     "What does Reset do on the store barcode scanner blade, and does Save stay enabled afterwards?",
+     "Which dialog appears when closing a dirty and invalid barcode settings blade, and what does No do?",
+     "Does the barcode blade's dirty-state detection clear when the mode is toggled back to its saved value?"
+    ],
+    "concepts": [
+     "barcode-settings",
+     "admin-validation"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "4801c2ddc2f94b47"
+ },
+ {
+  "id": "KB-D1D30720",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "If my access to one of my companies is locked, am I kicked out of the store I am shopping in?",
+   "After an admin locks a buyer's membership in one organization, does their live session in another organization keep working?",
+   "Where does a user land on the storefront when every one of their organization memberships is locked?",
+   "Does locking a membership revoke already-issued access tokens immediately, or do they keep working until expiry?",
+   "What happens on re-authentication when the active organization is the one whose membership was locked?"
+  ],
+  "concepts": [
+   "organization-membership",
+   "multi-organization",
+   "access-token"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "a11b204989252e34"
+ },
+ {
+  "id": "KB-D1DF95A5",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "My sales rep shared a list with my company, so why is it missing from my Lists page?",
+   "Can a member of a targeted organization open a customer-scoped shared list any way other than the share link?",
+   "What does a member of a served but not targeted organization get when opening a rep's shared list?",
+   "For a Customer-scope list, how do sharedWishlist, wishlist by id and wishlists differ for a target member versus an anonymous caller?",
+   "Which owner-only fields come back empty when a recipient reads a shared list by its sharing key?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "sales-rep"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "da923537e3222651"
+ },
+ {
+  "id": "KB-D24EDC70",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "rest"
+  ],
+  "questions": [
+   "Why can someone who never finished registering not log in to the store?",
+   "Can a test expect that an account in PendingApproval status is blocked from storefront sign-in?",
+   "Which check refuses sign-in for a security account with unconfirmed email and no roles?",
+   "Does the contact sign-in validator's email-verification branch refuse a login, or only rewrite the error of an already-failed one?",
+   "Is RequireConfirmedEmail in the identity configuration the gate for never-registered accounts, and can any endpoint expose it?"
+  ],
+  "concepts": [
+   "sign-in",
+   "email-confirmation",
+   "security-account"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "fd767e25564ae428"
+ },
+ {
+  "id": "KB-D4A064A5",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why does the savings on my basket look slightly different from the promotion's discount value?",
+   "Why does my test comparing the promotion reward amount to the displayed cart discount fail by a fraction of a cent?",
+   "Is the discount amount on a cart discount row rounded to currency precision like the cart discount total?",
+   "Which cart fields carry the raw full-precision percentage reward and which are rounded to two decimals?"
+  ],
+  "concepts": [
+   "discount",
+   "totals",
+   "promotion-reward"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "a701626d7e794ab4"
+ },
+ {
+  "id": "KB-D54F3AAB",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why do the configurable laptop and ring test products show a page not found on the demo store?",
+   "Are the seeded configurable-product fixtures present on the demo deployment, or are cases using them blocked on data?",
+   "Is a 404 on the configurable-product fixture URLs a routing defect or missing seed data?",
+   "Can I re-point configurable-product cases at the demo catalog's own customizable products instead of the fixtures?",
+   "Does the demo storefront support configurable products with a Customize button and a from-price at all?"
+  ],
+  "concepts": [
+   "configurable-product",
+   "page-not-found"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "99f541584484008a"
+ },
+ {
+  "id": "KB-D60012DB",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why does an order with a tax-inclusive discount show no discount when I read the with-tax discount value?",
+   "Can reporting use discountAmountWithTax on an order's discount row instead of discountAmount?",
+   "Is the order discount row's with-tax amount ever populated when the store has an active tax provider?",
+   "Which order fields correctly carry the with-tax discount, and how is discountTotalWithTax derived?"
+  ],
+  "concepts": [
+   "discount",
+   "tax"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ed58900e00a5d0d9"
+ },
+ {
+  "id": "KB-D839801A",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Why does the returns status filter show the same word for cancelled twice in German or Russian?",
+   "In the Admin returns list, how can I tell the two cancel statuses apart when the UI is not in English?",
+   "Does the return status dictionary contain both Canceled and Cancelled spellings as separate entries?",
+   "Which localized labels do the two return cancel statuses get in the status dropdown per language?"
+  ],
+  "concepts": [
+   "return",
+   "localization",
+   "order-status"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c18777fbb36d5ebb"
+ },
+ {
+  "id": "KB-D842824E",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "If I pay for part of my order with loyalty points, does the order total include those items?",
+   "Does an order-value loyalty mission count lines priced in the loyalty currency?",
+   "In a mixed-currency order, where does the value of loyalty-currency lines appear in orderTotals?",
+   "Is a customer order's top-level total the sum of all currency buckets or only the primary currency bucket?",
+   "Does a per-SKU mission goal filter line quantities by currency the way the order-value goal does?"
+  ],
+  "concepts": [
+   "currency",
+   "totals",
+   "loyalty-mission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c94ba8e936f8d9bf"
+ },
+ {
+  "id": "KB-D8FDFA6F",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "Why does my company members page say Invite sent instead of a colleague's name?",
+   "As a company maintainer, why does a row with no contact status still show a green Active tick?",
+   "Which field does the storefront members roster use for the Active badge, status or statusInOrganization?",
+   "What does the members roster render in the Name column when the contact's own status is null though the API returns the full name?",
+   "How is a null contact status resolved to an effective organization status before it reaches the roster?"
+  ],
+  "concepts": [
+   "organization-member",
+   "membership-status",
+   "organization-invitation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c1f28df98afa74e3"
+ },
+ {
+  "id": "KB-D992AF44",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi",
+   "admin-ui",
+   "storefront-ui"
+  ],
+  "questions": [
+   "If a shop renames or ends a promotion after I ordered, will my order history show something different?",
+   "After editing or deactivating a promotion, does anything change on orders that already used it?",
+   "For an audit of what an order was given, should I read the order discount row or the promotion it points to?",
+   "Is the GraphQL order discount promotionName a live lookup through promotionId or a snapshot taken at placement?",
+   "Does cancelling an order alter its stored discount name, description or amount?"
+  ],
+  "concepts": [
+   "discount",
+   "customer-order",
+   "promotion"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f6fd1ca3bedd383c"
+ },
+ {
+  "id": "KB-D9B90536",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why does the catalog still look sorted when I chose a sort option that does not exist?",
+   "Can a regression case with a misspelled sort field still pass, and how should sort cases assert?",
+   "What does the products query return for an unknown sort field or an invalid sort direction?",
+   "Is there one fallback order for all unknown sort fields, and is the direction ignored with it?",
+   "Does an invalid direction on a valid sort field default to ascending without any GraphQL error?"
+  ],
+  "concepts": [
+   "sort",
+   "product-search",
+   "api-error"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "d2dd708c505d7d6a"
+ },
+ {
+  "id": "KB-D9F48037",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "If I save an in-app announcement for a customer group plus one extra person, will it still target them when I reopen it?",
+   "Does a saved push message keep its match-by-conditions rules and picked people after closing and reopening?",
+   "Does the audience caption collapse to picked recipients only after the push message is reopened?",
+   "How does a push message saved in Everyone mode reopen: radio, caption, or a raw member query?"
+  ],
+  "concepts": [
+   "push-audience"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f56d98062e379657"
+ },
+ {
+  "id": "KB-DA14E8B7",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "If I block and then unblock someone I invited but who never joined, can they still accept the invitation?",
+   "As a company maintainer, can I undo blocking a pending invitee, or re-invite the same email afterwards?",
+   "Why does an unblocked invitee show as Active on the roster though they never registered?",
+   "What do lockOrganizationContact and unlockOrganizationContact write to contact status and account lockoutEnd for an invited contact?",
+   "Does deleting a blocked invitee from the organization free the email address for a new invitation?"
+  ],
+  "concepts": [
+   "member-block",
+   "organization-invitation",
+   "membership-status"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "07455dbcca83bbe2"
+ },
+ {
+  "id": "KB-DAD0D552",
+  "action": "keep",
+  "surface": [
+   "ucp"
+  ],
+  "questions": [
+   "What does a shopping agent get back when it asks for more units than are in stock?",
+   "Which error codes distinguish partial stock, zero stock and an unmeetable minimum order quantity for agent cart calls?",
+   "Does a refused over-stock cart update roll back, or can the over-stock quantity persist on the line?",
+   "Do checkout and handoff tools refuse a cart with inventory errors, and is a continue_url returned?",
+   "What fields are in the details of an MCP inventory refusal, and which codes are retryable?"
+  ],
+  "concepts": [
+   "ucp",
+   "inventory",
+   "api-error"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "9685864196f12fc5"
+ },
+ {
+  "id": "KB-DF432371",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Can a regular store customer's login be used to read the shop's configuration settings?",
+   "Which platform settings routes can a customer token without any permissions still read?",
+   "Is the settings values-by-name route protected by the SettingQuery permission or only by authentication?",
+   "Can an anonymous request read the settings UI customization endpoint?",
+   "Which settings endpoints return 403 versus 200 for a non-admin bearer token?"
+  ],
+  "concepts": [
+   "platform-settings",
+   "permission",
+   "access-token"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "1246d1cac91c6f5c"
+ },
+ {
+  "id": "KB-DF8D085C",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "If I switch the store to another language and a page is not translated, do I get an error page?",
+   "Is serving the default-language body for an untranslated content page expected behaviour or a defect?",
+   "What does a localized content page URL return when the page has no version in that culture?",
+   "In which order does the storefront resolve the locale: URL, pinned locale, contact culture, store default?",
+   "Do draft or archived content pages render the not-found view or fall back to another language?"
+  ],
+  "concepts": [
+   "localization",
+   "content-page",
+   "page-not-found"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ce4e69f13a3ed4c7"
+ },
+ {
+  "id": "KB-DF9F415E",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Why can my back-office colleague edit a return but not approve or decline it?",
+   "What does the return line items blade show to a user without the authorize-returns permission?",
+   "Which permission unlocks the Approve / decline command and the Approved and Decline reason inputs on returns?",
+   "Which statuses does the return details dropdown offer a user lacking return:authorize on a Requested return?"
+  ],
+  "concepts": [
+   "return-decision",
+   "permission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7192b62014b30e1b"
+ },
+ {
+  "id": "KB-E01A9F11",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "Why does a promotion I created give customers nothing even though it is active?",
+   "Can a marketer save a promotion that has no eligibility condition and no reward despite the red warnings?",
+   "Does the promotion blade's must-have-a-reward warning block the Create or Save button?",
+   "How can I tell from the promotions grid whether an active promotion carries any reward at all?",
+   "What does a promotion saved without conditions or rewards look like in its dynamic expression tree?"
+  ],
+  "concepts": [
+   "promotion",
+   "admin-validation",
+   "promotion-reward"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "172f05005489bb2f"
+ },
+ {
+  "id": "KB-E17E4CEF",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Why does a user's status show Locked but the status list only offers four other choices?",
+   "Is it safe for an admin to change the account Status picker on a Locked or PendingApproval user?",
+   "How should I stop an account from signing in: the Status field or the Lock account button?",
+   "Is the security account status a free string, and which values can the fixed picker not represent?",
+   "What does the Status control show for a freshly invited back-office account?"
+  ],
+  "concepts": [
+   "security-account",
+   "account-lockout"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "4c3fea670b4ca3f3"
+ },
+ {
+  "id": "KB-E367DA11",
+  "action": "split",
+  "why": "(b) a later note contradicts the two-state badge claim on the lists roster while the three persisted scope values stand unchallenged",
+  "children": [
+   {
+    "subject": "A wishlist scope can be Private, AnyoneAnonymous or Organization, more than the schema doc names",
+    "question": "What values can a wishlist's scope actually be set to?",
+    "anchors": [
+     "InputCreateWishlistType.scope",
+     "WishlistType.scope"
+    ],
+    "surface": [
+     "xapi",
+     "storefront-ui"
+    ],
+    "body": "Three values, not the two the schema's doc string names. InputCreateWishlistType.scope is documented 'List scope (private or organization)', but the storefront's Sharing options dropdown offers Private, 'Anyone (readonly)' and Organization, and those persist as scope Private, AnyoneAnonymous and Organization - AnyoneAnonymous appears in no documentation string anywhere in the contract and is the one that exposes a list to callers with no account. Treat the gloss on that field as incomplete and read the value back after writing it.",
+    "fromNotes": false,
+    "questions": [
+     "Can I share my shopping list so that people without an account can see it?",
+     "Which sharing options does the list settings dropdown offer, and what does each one store?",
+     "Is the scope field description on the create-wishlist input complete, or are there undocumented values?",
+     "Which wishlist scope value makes a list readable by anonymous callers?"
+    ],
+    "concepts": [
+     "wishlist",
+     "list-sharing"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The lists page badge collapses organization-scoped and world-readable lists into one Shared state",
+    "question": "Can a list owner tell an organization-shared list from a public one on the lists page?",
+    "anchors": [
+     "GET /account/lists",
+     "WishlistType.scope"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "The roster loses the scope distinction: /account/lists and the Add-to-list dialog render a badge with exactly two states, Private and 'Shared', so an organization-scoped list and a world-readable one are indistinguishable on the page where an owner would go looking. The scope is only legible in the List settings dialog, one click deeper, or in WishlistType.scope.",
+    "fromNotes": false,
+    "questions": [
+     "On my lists page, how do I know whether a shared list is visible to my company or to everyone?",
+     "Which badge labels can the account lists page and add-to-list dialog show for a list's sharing state?",
+     "Does the lists roster badge distinguish organization, public and customer-shared scopes?",
+     "Where must a tester read a list's real scope when the roster badge only says Shared?"
+    ],
+    "concepts": [
+     "wishlist",
+     "list-sharing"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "370217bee463b3a0"
+ },
+ {
+  "id": "KB-E4DE692A",
+  "action": "keep",
+  "surface": [
+   "ucp"
+  ],
+  "questions": [
+   "What happens if a shopping agent adds the same item twice with quantities that add up to an absurdly large number?",
+   "How does the agent cart API respond when duplicate line quantities for one product overflow a 32-bit integer?",
+   "Is the existing cart changed when an update with an overflowing combined quantity is rejected?",
+   "Which error code and HTTP status do MCP and REST cart calls return for an out-of-range combined line quantity?"
+  ],
+  "concepts": [
+   "ucp",
+   "cart-validation",
+   "api-error"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7b5358779aaa1053"
+ },
+ {
+  "id": "KB-E7790BF6",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "rest"
+  ],
+  "questions": [
+   "After I enter a promo code, where does the cart show how much that code saved me?",
+   "How can a test tie an applied coupon code to the discount money it produced on a cart?",
+   "Does the cart coupons list carry any amount, or only the code and whether it applied?",
+   "Why is the promotion name available on the REST cart discount but not on the GraphQL DiscountType?",
+   "Which field on a cart discount row links it back to the coupon code that triggered it?"
+  ],
+  "concepts": [
+   "coupon",
+   "discount"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8aa7efbb1b6a0ba6"
+ },
+ {
+  "id": "KB-E7DF9B84",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why are the links at the bottom of the store just plain text that I cannot click?",
+   "How must a white-label footer link list be structured so its entries render as clickable links?",
+   "Why does the mobile footer accordion open to nothing for a flat link list?",
+   "How are child link lists nested under a footer header, and is the name matching scoped per list or global?"
+  ],
+  "concepts": [
+   "footer",
+   "white-labeling"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "5b170fa1e144714f"
+ },
+ {
+  "id": "KB-E84AAF1D",
+  "action": "split",
+  "why": "(b) later notes confirm the API's 400 with a raw FluentValidation array but contradict the Admin blade's missing messages, blanked tree and console TypeError on newer builds",
+  "children": [
+   {
+    "subject": "Loyalty mission create and update endpoints reject invalid input with 400 and a raw FluentValidation array, persisting nothing",
+    "question": "What do POST and PUT /api/loyalty-missions return for an invalid mission?",
+    "anchors": [
+     "POST /api/loyalty-missions",
+     "PUT /api/loyalty-missions"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "POST and PUT /api/loyalty-missions return 400 with a raw array of FluentValidation errors (propertyName, errorMessage). Nothing is persisted on a 400.",
+    "fromNotes": false,
+    "questions": [
+     "If I try to save a loyalty mission with a negative reward, does anything get saved?",
+     "What error shape does the loyalty missions API return when mission validation fails?",
+     "Is the mission validation error body a problem-details object or a bare array of propertyName and errorMessage?",
+     "Which HTTP status does creating or updating an invalid loyalty mission produce?"
+    ],
+    "concepts": [
+     "loyalty-mission",
+     "api-error"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Admin loyalty mission blade hides server validation messages and blanks the mission tree after a failed save",
+    "question": "What does the Admin loyalty mission blade show when a save is rejected with validation errors?",
+    "anchors": [
+     "POST /api/loyalty-missions",
+     "PUT /api/loyalty-missions"
+    ],
+    "surface": [
+     "admin-ui"
+    ],
+    "body": "The Admin SPA mission details blade does not surface errorMessage: on create (POST, no error callback) the blade header shows only '400: Bad request', View details opens an empty Error details dialog, and the platform setError throws 'Cannot read properties of undefined (reading join)' in the console. On update (PUT) the header shows only 'Error 400'. In both cases the mission expression tree (conditions, goal, reward) renders blank after the failed save because the UI information is stripped from the entity before the request and not restored. On create, confirming the Error details dialog re-runs GET /api/loyalty-missions/new and discards everything the admin entered.",
+    "fromNotes": false,
+    "questions": [
+     "Why does the loyalty mission screen just say Bad request without telling me what is wrong?",
+     "After a rejected mission save in the back office, are the conditions, goal and reward I entered still there?",
+     "Does dismissing the error dialog on a new mission reload a blank mission and lose my input?",
+     "Is the 'reading join' TypeError in the console on a failed mission save a platform setError bug?",
+     "Does the mission blade header or View details show the server's validation errorMessage?"
+    ],
+    "concepts": [
+     "loyalty-mission",
+     "admin-validation"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "58cdfbf0e6cd821a"
+ },
+ {
+  "id": "KB-E8A134DF",
+  "action": "split",
+  "why": "(a) the sitemap location is a side finding about a different storefront URL, separate from where robots.txt comes from and how it is changed",
+  "children": [
+   {
+    "subject": "The storefront robots.txt is store content uploaded through the store Assets widget in Admin",
+    "question": "Where does the storefront's /robots.txt come from, and how is it changed?",
+    "anchors": [
+     "/robots.txt"
+    ],
+    "surface": [
+     "admin-ui",
+     "storefront-ui"
+    ],
+    "body": "The storefront robots.txt is store content, not part of the frontend code, and changing it needs no redeploy: in Admin, open the store, use its Assets widget and upload a custom robots.txt, which overrides the system-generated one; separate policies per domain mean separate stores. Editing robots.txt inside a theme through the Content module is the legacy storefront pattern and does not apply to the current Vue storefront. robots.txt crawl control is independent of the per-route robots meta tag.",
+    "fromNotes": false,
+    "questions": [
+     "How do I stop search engines crawling parts of my shop without asking developers to redeploy?",
+     "Where in the back office does an admin upload a custom robots.txt, and does it override the generated one?",
+     "Can two domains have different crawler policies, and what does that require?",
+     "Does editing robots.txt in a theme via the Content module still work on the current storefront?",
+     "Is robots.txt crawl control related to the per-route robots meta tag?"
+    ],
+    "concepts": [
+     "robots-sitemap",
+     "asset",
+     "store"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The storefront sitemap is served at /sitemap/sitemap.xml while the root /sitemap.xml returns 404",
+    "question": "At which URL does the storefront serve its sitemap?",
+    "anchors": [
+     "/sitemap/sitemap.xml"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "On this deployment the sitemap is served at /sitemap/sitemap.xml and the root /sitemap.xml returns 404.",
+    "fromNotes": false,
+    "questions": [
+     "Where can a search engine find the store's list of pages?",
+     "Why does the usual root sitemap address give a page not found?",
+     "Which path should an SEO check request to fetch the storefront sitemap XML?"
+    ],
+    "concepts": [
+     "robots-sitemap",
+     "page-not-found"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "63dd72d2938b6512"
+ },
+ {
+  "id": "KB-E9939511",
+  "action": "keep",
+  "surface": [
+   "ucp"
+  ],
+  "questions": [
+   "Can a shopping assistant look up a guest's basket without the guest signing in?",
+   "Why does reading an anonymous cart over the agent REST route always fail with buyer_id is required?",
+   "Which query parameters does the agent REST get-cart route bind, and can buyer identity be passed in headers?",
+   "Is the MCP get_cart tool able to read the same anonymous cart that the REST route refuses?"
+  ],
+  "concepts": [
+   "ucp",
+   "cart"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "b82c7a4620eaae23"
+ }
+]

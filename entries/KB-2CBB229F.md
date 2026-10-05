@@ -3,10 +3,18 @@ id: KB-2CBB229F
 subject: PUT /api/stores replaces the whole store, and a null default currency, language or URL breaks the storefront
 plane: experiential
 question: What happens if a partial body is sent to PUT /api/stores, and which store fields must never be null?
+questions:
+  - text: Why did prices go blank and links break across the whole shop after a store update?
+  - text: Is PUT on the stores API a partial update or a full replacement of the store?
+  - text: Which store fields must never be null for the storefront to keep working?
+  - text: What is the safe way to change one store setting through the REST API?
+concepts:
+  - id: store
+  - id: rest-api
 status: active
 appliesTo:
   - axis: surface
-    value: rest-api
+    value: rest
 anchors:
   - coordinate: PUT /api/stores
   - coordinate: Store.defaultCurrency
