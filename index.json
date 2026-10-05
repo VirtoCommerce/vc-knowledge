@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T07:21:59.328Z",
-  "count": 364,
+  "generated": "2026-10-05T07:30:59.378Z",
+  "count": 365,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6147,6 +6147,25 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EFFB28BE",
+      "path": "entries/KB-EFFB28BE.md",
+      "subject": "Member addresses carry separate name and description fields; the storefront address Description column reads description",
+      "question": "Why is the Description column empty in the storefront select-address table when the organization address has a name set?",
+      "anchors": [
+        "POST /api/members",
+        "Query.me",
+        "/company/info"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
