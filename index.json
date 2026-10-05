@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T16:49:26.860Z",
-  "count": 386,
+  "generated": "2026-10-05T17:59:13.228Z",
+  "count": 388,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -396,7 +396,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -553,7 +553,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1242,6 +1242,26 @@
       "disputed": 1
     },
     {
+      "id": "KB-31224A5E",
+      "path": "entries/KB-31224A5E.md",
+      "subject": "The storefront orders list differs by role: org maintainer gets All orders / My orders tabs (and the All tab replaces the Purchase order column with Buyer name), an org employee gets no tabs at all",
+      "question": "What does /account/orders show an org maintainer versus an org employee, and what changes between the All orders and My orders tabs?",
+      "anchors": [
+        "/account/orders",
+        "/account/orders/{id}",
+        "/403",
+        "Query.organizationOrders"
+      ],
+      "scope": [
+        "role=org-maintainer-vs-employee",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-316B2DDB",
       "path": "entries/KB-316B2DDB.md",
       "subject": "one invalid storeId answers Unauthorized on Query.product and NULL_REFERENCE on Query.products",
@@ -1382,7 +1402,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -2260,7 +2280,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4125,6 +4145,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-98A5D804",
+      "path": "entries/KB-98A5D804.md",
+      "subject": "The live xAPI schema has no processOrderPayment mutation; payment on an existing order goes through initializePayment, authorizePayment and addOrUpdateOrderPayment, and changeOrderStatus takes only orderId and status",
+      "question": "Which xAPI order mutations exist (processOrderPayment, changeOrderStatus, initializePayment)?",
+      "anchors": [
+        "Mutation.changeOrderStatus",
+        "Mutation.initializePayment",
+        "Query.orderStatuses",
+        "Query.organizationOrders"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-996BDF08",
       "path": "entries/KB-996BDF08.md",
       "subject": "cart-level promotion reward placement",
@@ -5602,7 +5641,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
