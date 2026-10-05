@@ -1,0 +1,2 @@
+{"at":"2026-10-02T17:02:09.279Z","kind":"session","session":"f80ac8f4","tools":281,"turns":15,"touchAt":[5,10,11,12,16,78,87,88,100,110,121,175,176,223],"agents":1,"agentTools":2,"agentTouches":0,"firstAt":"2026-10-02T13:40:31.684Z","lastAt":"2026-10-02T15:21:26.616Z","who":"Dan-BV"}
+{"at":"2026-10-02T15:09:59.123Z","kind":"restart","why":"transcript-moved","priorTools":257,"who":"Dan-BV"}

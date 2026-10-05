@@ -1,0 +1,2 @@
+{"at":"2026-10-05T07:20:14.152Z","kind":"session","session":"20b4ce67","tools":41,"turns":8,"touchAt":[2],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-02T17:01:31.249Z","lastAt":"2026-10-05T07:20:13.695Z","who":"Dan-BV"}
+{"at":"2026-10-02T19:07:24.625Z","kind":"flush","entries":0,"lines":3,"swept":["05de83c9.jsonl","1ce786a4.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}

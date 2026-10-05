@@ -1,0 +1,5 @@
+{"at":"2026-10-01T13:19:30.909Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
+{"at":"2026-10-01T13:56:34.170Z","kind":"ask","q":"POST /api/push-message/preview-recipients breakdown: what is membersMatched vs peopleInScope vs extraLogins","matched":["KB-AC05FCD4","KB-1178FECF","KB-735DF4D1"],"scores":[23,21,21],"matchedBy":["both","both","both"],"trustShown":["well attested","well attested","well attested"],"opened":["KB-AC05FCD4","KB-1178FECF","KB-735DF4D1"],"state":"answer","ms":1888,"rank":"floor-1","via":"cli","who":"kutasinaelena"}
+{"at":"2026-10-01T13:58:46.254Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
+{"at":"2026-10-01T14:41:47.209Z","kind":"flush","entries":0,"lines":1,"swept":[],"retries":1,"ok":true,"convertedToConfirm":0,"who":"kutasinaelena"}
+{"at":"2026-10-01T18:19:39.247Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}

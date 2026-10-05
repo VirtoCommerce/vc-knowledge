@@ -25,5 +25,10 @@ evidence:
     at: 2026-09-29T05:46:55.668Z
     by: session:p1804
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa1
+    at: 2026-10-01T19:55:44.242Z
+    by: session:0cfc9f97
+    who: kutasinaelena
 ---
 On theme 2.59 (pr-2500) the buyer's return detail page renders, per line, the product name, SKU, reasonComment (if any), the per-line decline reason and attachments. It does not render reasonCode (a buyer line with reasonCode NoLongerNeeded and no comment shows no reason) and does not render the legacy free-text 'reason' that admin-created returns carry (an admin-created return with reason 'AGENT-TEST admin-created return' shows no reason). The xAPI ReturnLineItemType selected by GetReturn has reasonCode and reasonComment but no legacy reason field.

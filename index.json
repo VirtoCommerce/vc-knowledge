@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-01T09:09:40.105Z",
-  "count": 408,
+  "generated": "2026-10-05T08:12:40.794Z",
+  "count": 454,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -42,6 +42,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-0080ED6D",
+      "path": "entries/KB-0080ED6D.md",
+      "subject": "The storefront code sign-in sends the last-used organization_id, so a multi-org buyer signing in by code lands in the organization chosen before sign-out",
+      "question": "Which organization is active after a multi-organization buyer signs in to the storefront with an emailed one-time code?",
+      "anchors": [
+        "POST /connect/token",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "persona=multi-org",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-00DB63A4",
       "path": "entries/KB-00DB63A4.md",
       "subject": "address search and country/state/city facets exist only in the checkout address-selection popup",
@@ -60,6 +79,23 @@
         "KB-1447353E",
         "KB-19826CC0"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-011D79B2",
+      "path": "entries/KB-011D79B2.md",
+      "subject": "Missions SKU modal Add to cart sets absolute cart quantity",
+      "question": "What does the storefront missions SKU modal send when Add to cart is pressed, and how is the stepper initialised on reopen?",
+      "anchors": [
+        "/account/missions",
+        "Mutation.updateCartQuantity"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -330,6 +366,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-06CFE625",
+      "path": "entries/KB-06CFE625.md",
+      "subject": "a New legacy return reduces returnableItems returnableQuantity; orderId filter works",
+      "question": "Does a legacy admin return in status New hold units of the order line for returnableItems?",
+      "anchors": [
+        "PUT /api/return",
+        "POST /api/return/search"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-06FE6C8D",
       "path": "entries/KB-06FE6C8D.md",
       "subject": "POST /connect/token grant_type=otp_email accepts the SAME code twice, issuing a fresh valid access token both times — the OTP is not invalidated after a successful sign-in (matches ECL-4.3 \"same OTP reused multiple times\")",
@@ -376,7 +429,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-097CB5D6",
@@ -518,7 +571,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -1608,7 +1661,23 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
+      "disputed": 1
+    },
+    {
+      "id": "KB-22E1D313",
+      "path": "entries/KB-22E1D313.md",
+      "subject": "A declined return produces two buyer push messages, 'Return {number} received' then 'Return {number} declined', and the bell lists the declined one first",
+      "question": "Which push messages does the buyer see on /account/notifications for a return that is submitted and then declined?",
+      "anchors": [
+        "/account/notifications"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1710,6 +1779,23 @@
         "KB-58989663"
       ],
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-26B8BE64",
+      "path": "entries/KB-26B8BE64.md",
+      "subject": "A mission past its EndDate stays on loyaltyMissionProgress as InProgress with daysRemaining 0 until the expiry sweep, for a user with a progress row",
+      "question": "Does loyaltyMissionProgress still return a mission whose EndDate has passed, and what does it read?",
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "LoyaltyUserMission.daysRemaining"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1822,7 +1908,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 3
+      "disputed": 4
+    },
+    {
+      "id": "KB-2AEC62B4",
+      "path": "entries/KB-2AEC62B4.md",
+      "subject": "Barcode scanner blade: Exact-match mode reveals a 'Fields to match *' checklist; Reset reverts unsaved mode/field changes with no PUT",
+      "question": "What does the Admin Barcode scanner blade show in each match mode, and does Reset discard unsaved changes without writing?",
+      "anchors": [
+        "GET /api/catalog/barcode-search/store/{}",
+        "GET /api/catalog/barcode-search/store/{}/fields"
+      ],
+      "scope": [
+        "blade=store-barcode-scanner",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-2B0274B9",
@@ -2043,7 +2147,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -2073,6 +2177,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-306AC615",
+      "path": "entries/KB-306AC615.md",
+      "subject": "Per-mission DELETE of loyalty missions succeeded after their accounts placed orders",
+      "question": "Can DELETE /api/loyalty-missions remove a mission whose bound account has placed orders?",
+      "anchors": [
+        "/api/loyalty-missions",
+        "/api/loyalty-mission-progress/search"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -2474,6 +2595,55 @@
       "disputed": 0
     },
     {
+      "id": "KB-3C7B6A36",
+      "path": "entries/KB-3C7B6A36.md",
+      "subject": "Storefront VcModal scrollable body has no scroll-edge cue; SKU mission modal estimate hint can straddle the fold",
+      "question": "Does the storefront VcModal scrollable body show any cue that more content is below, and where does the SKU mission modal put its subtotal estimate hint?",
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3D3B8531",
+      "path": "entries/KB-3D3B8531.md",
+      "subject": "Admin Returns screens are fully translated in French (menu, list, blade, Line items, store settings)",
+      "question": "Admin SPA Returns module in French: are the menu entry, Return list, return blade, Line items blade toolbar and Return store settings translated?",
+      "anchors": [
+        "/workspace/Return"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3E408000",
+      "path": "entries/KB-3E408000.md",
+      "subject": "Two active tax providers on one store: tax evaluation returns nothing",
+      "question": "What tax does a cart get when a store has both AvaTaxRateProvider and FixedRateTaxProvider active?",
+      "anchors": [
+        "/api/taxes/{storeId}/evaluate",
+        "/api/taxes/search"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3EA119C5",
       "path": "entries/KB-3EA119C5.md",
       "subject": "The storefront category page header banner loads the ORIGINAL category image (no _md/_sm thumbnail suffix) and crops it to a wide banner, while product cards on the same page load _md thumbnails.",
@@ -2747,6 +2917,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-42230B0A",
+      "path": "entries/KB-42230B0A.md",
+      "subject": "Wishlist sharing targets: write response order differs from read order; legacy sharedWithId follows it",
+      "question": "In what order does SharingSettingType.targets come back, and which target does the deprecated sharedWithId report?",
+      "anchors": [
+        "SharingSettingType.targets",
+        "SharingSettingType.sharedWithId",
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
       "id": "KB-432D02EF",
       "path": "entries/KB-432D02EF.md",
       "subject": "Purchase requests is an AI document-to-quote feature, not an approval workflow",
@@ -2841,7 +3029,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2902,6 +3090,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-49F6B6EF",
+      "path": "entries/KB-49F6B6EF.md",
+      "subject": "roles search returns every role with an empty permissions array; only GET roles/{name} carries them",
+      "question": "Does POST /api/platform/security/roles/search return the permissions of each role?",
+      "anchors": [
+        "POST /api/platform/security/roles/search",
+        "GET /api/platform/security/roles/{}"
+      ],
+      "scope": [
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3294,6 +3499,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-4E1FD1E8",
+      "path": "entries/KB-4E1FD1E8.md",
+      "subject": "The impersonate OAuth grant gates on the operator's loginOnBehalf permission but applies NO guard on the target user (existence only) and mints the token from the target's identity, so impersonating an Administrator yields a token carrying the target's Administrator role",
+      "question": "Can a non-admin operator with loginOnBehalf impersonate an Administrator via the impersonate grant on /connect/token, and does the token carry admin rights?",
+      "anchors": [
+        "/connect/token",
+        "/account/impersonate/{userId}",
+        "AuthorizationController.Exchange"
+      ],
+      "scope": [
+        "grant=impersonate",
+        "surface=admin-spa",
+        "surface=platform-oauth",
+        "target=administrator"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4E45A8BA",
       "path": "entries/KB-4E45A8BA.md",
       "subject": "admin contact Status picker cannot represent Invited or Locked",
@@ -3338,7 +3564,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3365,6 +3591,24 @@
       "scope": [
         "element=barcode-currency-price-filter",
         "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-509D70C4",
+      "path": "entries/KB-509D70C4.md",
+      "subject": "Wishlist share target ids are case-insensitive; the 1000-id cap applies to addSharedWithIds only",
+      "question": "How does changeWishlist treat id case, duplicates and the size of addSharedWithIds/removeSharedWithIds?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "InputChangeWishlistType.addSharedWithIds",
+        "InputChangeWishlistType.removeSharedWithIds"
+      ],
+      "scope": [
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -3805,6 +4049,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-58A94337",
+      "path": "entries/KB-58A94337.md",
+      "subject": "Return /edit route on a Cancelled return names the status instead of a generic error",
+      "question": "What does /account/returns/{id}/edit show for a Cancelled return?",
+      "anchors": [
+        "/account/returns/{}/edit"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-59E4B5FC",
       "path": "entries/KB-59E4B5FC.md",
       "subject": "a configured product as an order line item",
@@ -3856,6 +4116,23 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5A3931CE",
+      "path": "entries/KB-5A3931CE.md",
+      "subject": "Ended-but-unswept loyalty mission still reads InProgress with daysRemaining 0",
+      "question": "What does loyaltyMissionProgress return for a published mission after its endDate passes but before the expiry job runs, and how does the storefront card render it?",
+      "anchors": [
+        "/account/missions",
+        "Query.loyaltyMissionProgress"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4075,7 +4352,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -4186,6 +4463,23 @@
       "disputed": 1
     },
     {
+      "id": "KB-62D97984",
+      "path": "entries/KB-62D97984.md",
+      "subject": "POST /api/punchout/cxml answers HTTP 200 with a cXML Status for every rejection, and checks the user mapping BEFORE the store checks",
+      "question": "What does the Punchout cXML endpoint return for a bad secret, bad return URL or unmapped identity, and in what order are the checks done?",
+      "anchors": [
+        "POST /api/punchout/cxml"
+      ],
+      "scope": [
+        "module=virtocommerce.punchout",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
       "id": "KB-62EE7AF3",
       "path": "entries/KB-62EE7AF3.md",
       "subject": "some platform routes are hidden from the API document this base projects from",
@@ -4205,6 +4499,22 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6323ED21",
+      "path": "entries/KB-6323ED21.md",
+      "subject": "Storefront return wizard clamps a typed return quantity above Returnable down to the returnable maximum",
+      "question": "What happens on /account/returns/new/{orderId} when the buyer types a return quantity larger than the line's Returnable value?",
+      "anchors": [
+        "/account/returns/new/{orderId}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4419,6 +4729,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-68D63D8C",
+      "path": "entries/KB-68D63D8C.md",
+      "subject": "organization.assignableRoles(storeId) returns [] when the store's MembershipRolesWhitelist override is empty",
+      "question": "Why does organization assignableRoles return an empty list on the storefront Invite member / Edit role dialogs?",
+      "anchors": [
+        "Organization.assignableRoles",
+        "/company/members",
+        "Customer.MembershipRolesWhitelist"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -4656,7 +4985,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5021,6 +5350,39 @@
       "disputed": 0
     },
     {
+      "id": "KB-747FEC71",
+      "path": "entries/KB-747FEC71.md",
+      "subject": "Admin Returns: a decided line keeps its Price editable and the Line items Save persists it",
+      "question": "Admin SPA Returns Line items blade: after Approve / decline, can the line price still be edited and saved, and are quantity/decision locked?",
+      "anchors": [
+        "/api/return"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-74D9B9B0",
+      "path": "entries/KB-74D9B9B0.md",
+      "subject": "Saving a localizable dictionary setting 500s when stored translations collide case-insensitively",
+      "question": "Why does POST /api/platform/localizable-settings/{name}/dictionary-items return 500 'An item with the same key has already been added. Key: <lang>' even for an unchanged payload?",
+      "anchors": [
+        "POST /api/platform/localizable-settings/{name}/dictionary-items",
+        "GET /api/platform/localizable-settings"
+      ],
+      "scope": [
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7564A9BF",
       "path": "entries/KB-7564A9BF.md",
       "subject": "logout and token revocation do not invalidate an issued access token by default",
@@ -5046,7 +5408,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5357,8 +5719,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0
+      "trust": 2,
+      "disputed": 1
     },
     {
       "id": "KB-7A613BE4",
@@ -5417,7 +5779,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-7AB0B13E",
@@ -5523,7 +5885,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5631,6 +5993,23 @@
       "scope": [
         "feature=returns",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-813DD6AC",
+      "path": "entries/KB-813DD6AC.md",
+      "subject": "loyaltyMissionProgress daysRemaining reads ceil of days to EndDate on the server clock",
+      "question": "How is loyaltyMissionProgress daysRemaining computed and which value does a mission N days out read?",
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "LoyaltyUserMission.daysRemaining"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -5808,6 +6187,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-85F02FDB",
+      "path": "entries/KB-85F02FDB.md",
+      "subject": "Admin Return blade field set and Line items columns for an admin-created return",
+      "question": "Which fields does the Admin SPA Return blade and its Line items blade show for a return created via Add new return?",
+      "anchors": [
+        "/api/return"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8646A9CB",
       "path": "entries/KB-8646A9CB.md",
       "subject": "five failed storefront sign-ins give a 15-minute temporary lockout code",
@@ -5868,6 +6263,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8A2F58EA",
+      "path": "entries/KB-8A2F58EA.md",
+      "subject": "xAPI returnableItems caps returnableQuantity at deliveredQuantity, computed per line",
+      "question": "Is returnableItems returnableQuantity capped by deliveredQuantity or orderedQuantity, and is it per line?",
+      "anchors": [
+        "Query.returnableItems"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -6076,7 +6487,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6193,6 +6604,25 @@
       "disputed": 2
     },
     {
+      "id": "KB-91DF8883",
+      "path": "entries/KB-91DF8883.md",
+      "subject": "Share-list dialog: 'Change who can access?' confirm on every scope swap, including widening to Anyone with link",
+      "question": "Which confirmation does the storefront Share list dialog show for each scope transition, and is its copy accurate?",
+      "anchors": [
+        "/account/lists",
+        "/shared-list",
+        "Mutation.changeWishlist",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-92164C90",
       "path": "entries/KB-92164C90.md",
       "subject": "members are addressed under /api/members, and a deleted member reads 200 with an empty body",
@@ -6272,8 +6702,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 0
+      "trust": 4,
+      "disputed": 1
     },
     {
       "id": "KB-938D7C06",
@@ -6301,6 +6731,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-93FFCC74",
+      "path": "entries/KB-93FFCC74.md",
+      "subject": "Storefront return wizard rejects a disallowed attachment extension client-side, without calling the upload endpoint",
+      "question": "What happens on /account/returns/{id}/edit when the buyer attaches a .xlsx file?",
+      "anchors": [
+        "/account/returns/{}/edit"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6471,7 +6917,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -6559,6 +7005,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9AF5645D",
+      "path": "entries/KB-9AF5645D.md",
+      "subject": "With PasswordLogin DetailedErrors off, the storefront OTP flow does not reveal whether an email has an account: an unknown address gets \"Check your email\", no email is sent, and a wrong code returns the same invalid_code as for a real account",
+      "question": "Does the storefront OTP sign-in disclose whether an email is registered when DetailedErrors is off?",
+      "anchors": [
+        "POST /api/otp/request",
+        "POST /connect/token",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "setting=detailederrors-off",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -6767,8 +7233,8 @@
         "KB-21F4F161",
         "KB-93804F07"
       ],
-      "trust": 3,
-      "disputed": 0
+      "trust": 4,
+      "disputed": 1
     },
     {
       "id": "KB-A0FFEA0A",
@@ -6798,7 +7264,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 3
+      "disputed": 4
     },
     {
       "id": "KB-A1B35892",
@@ -7309,7 +7775,7 @@
         "KB-A0FFEA0A"
       ],
       "trust": 1,
-      "disputed": 3
+      "disputed": 4
     },
     {
       "id": "KB-AA57B0E5",
@@ -7357,6 +7823,25 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AA7CCB07",
+      "path": "entries/KB-AA7CCB07.md",
+      "subject": "Draft quote request: Save changes after a line quantity edit keeps catalog prices",
+      "question": "Does saving a quantity edit on a draft quote request (RFQ) zero the line prices?",
+      "anchors": [
+        "Mutation.changeQuoteItemQuantity",
+        "Query.quote",
+        "/account/quotes"
+      ],
+      "scope": [
+        "module=virtocommerce.quote",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7426,6 +7911,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ACC12F26",
+      "path": "entries/KB-ACC12F26.md",
+      "subject": "A punchout user mapping accepts an unvalidated userId (incl. an administrator account), yielding a privilege-escalation sign-in via the anonymous cXML + punchout grant chain",
+      "question": "Does POST /api/punchout-user-mappings validate userId against the contact, and can a punchout mapping bind an administrator account to escalate privilege?",
+      "anchors": [
+        "POST /api/punchout-user-mappings",
+        "POST /connect/token",
+        "POST /api/punchout/cxml"
+      ],
+      "scope": [
+        "module=virtocommerce.punchout",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7616,7 +8120,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7721,7 +8225,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8142,7 +8646,24 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BE7DF8DA",
+      "path": "entries/KB-BE7DF8DA.md",
+      "subject": "Customer share switched to AnyoneAnonymous: targets and message cleared, key kept",
+      "question": "What happens to a Customer-scope wishlist share when changeWishlist sets scope AnyoneAnonymous?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8261,6 +8782,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-C239652A",
+      "path": "entries/KB-C239652A.md",
+      "subject": "Punchout PunchOutSetupRequest returns StartPage that signs the mapped user in",
+      "question": "What does POST /api/punchout/cxml return for a valid PunchOutSetupRequest and what happens when the StartPage is opened?",
+      "anchors": [
+        "/api/punchout/cxml",
+        "/punchout"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C298769B",
       "path": "entries/KB-C298769B.md",
       "subject": "Header search box follows the results page: empty during a barcode lookup, shows q only when the page ran a keyword search",
@@ -8360,6 +8898,24 @@
       "status": "active",
       "trust": 4,
       "disputed": 0
+    },
+    {
+      "id": "KB-C4597892",
+      "path": "entries/KB-C4597892.md",
+      "subject": "/account/missions renders no skeleton for the mission-card grid; the footer jumps ~1.2k px when the cards arrive (CLS ~0.115)",
+      "question": "Does the /account/missions card grid show a skeleton while loading, and does the page shift when mission cards resolve?",
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=red-light",
+        "viewport=1280"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 1
     },
     {
       "id": "KB-C466AD5C",
@@ -8586,6 +9142,42 @@
       "disputed": 0
     },
     {
+      "id": "KB-C992D3B8",
+      "path": "entries/KB-C992D3B8.md",
+      "subject": "Adding PerSku mission targets to the cart does not move mission progress",
+      "question": "Does adding a PerSku mission's target product to the cart (or removing it) change loyaltyMissionProgress?",
+      "anchors": [
+        "/account/missions",
+        "Query.loyaltyMissionProgress",
+        "Mutation.updateCartQuantity"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CA2AE929",
+      "path": "entries/KB-CA2AE929.md",
+      "subject": "An invalid /punchout/&lt;token&gt; start page silently lands the visitor on the anonymous homepage; the grant answers 400 login_failed",
+      "question": "What does a buyer see when the punchout start-page token is invalid or expired?",
+      "anchors": [
+        "/punchout/:sessionToken",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "module=virtocommerce.punchout",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-CA4C93E4",
       "path": "entries/KB-CA4C93E4.md",
       "subject": "discount-rate-not-persisted-on-order",
@@ -8767,6 +9359,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-CE2F9A45",
+      "path": "entries/KB-CE2F9A45.md",
+      "subject": "Missions SKU modal at 375px: footer is visually Add to cart above Close but the DOM/tab order is Close then Add to cart; stepper buttons sit 1 px from the quantity input",
+      "question": "What are the tab order and target gaps in the missions SKU modal on mobile?",
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-CF3FAD18",
       "path": "entries/KB-CF3FAD18.md",
       "subject": "loyalty cart validation errors show on /cart before Place order, which is disabled",
@@ -8905,6 +9514,23 @@
       "disputed": 1
     },
     {
+      "id": "KB-D12432BD",
+      "path": "entries/KB-D12432BD.md",
+      "subject": "loyaltyMissionProgress reports tracked stock as availableQuantity on a PerSku target",
+      "question": "Does loyaltyMissionProgress items[].product.availabilityData carry a stock quantity for a PerSku target?",
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "PUT /api/inventory/plenty"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D1D30720",
       "path": "entries/KB-D1D30720.md",
       "subject": "locking an organization membership revokes tokens but a live session in another organization survives",
@@ -8991,6 +9617,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D3328AFF",
+      "path": "entries/KB-D3328AFF.md",
+      "subject": "Wishlist sharing deprecation shape: no plural sharingSettings, singular sharingSetting not deprecated, sharedWithId deprecated",
+      "question": "Is WishlistType.sharingSetting or SharingSettingType.sharedWithId deprecated in the multi-target sharing build, and is there a plural sharingSettings field?",
+      "anchors": [
+        "WishlistType.sharingSetting",
+        "SharingSettingType.sharedWithId"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9103,6 +9746,24 @@
       "status": "active",
       "trust": 1,
       "disputed": 3
+    },
+    {
+      "id": "KB-D7F08A26",
+      "path": "entries/KB-D7F08A26.md",
+      "subject": "Customer-scope wishlist share: stop sharing deletes the target rows, re-share grants only the new orgs, key kept",
+      "question": "When a Customer-scope wishlist share is switched to Private and later re-enabled with a different organization, does the former target keep or regain any access, and does the deactivated row keep its SharedWithId?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Query.sharedWishlist",
+        "/api/carts/{id}"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D839801A",
@@ -9268,6 +9929,23 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D9DF8E54",
+      "path": "entries/KB-D9DF8E54.md",
+      "subject": "The storefront serves its index HTML with cache-control max-age=7200, so after a theme deploy a returning browser keeps loading the previous bundle for up to 2 hours",
+      "question": "Why does a storefront still show the old theme build after a successful theme deploy?",
+      "anchors": [
+        "/sign-in"
+      ],
+      "scope": [
+        "layer=deployment",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9672,6 +10350,22 @@
       "disputed": 1
     },
     {
+      "id": "KB-E423C32F",
+      "path": "entries/KB-E423C32F.md",
+      "subject": "Page Builder Designer actions menus: clipboard is read on Paste click, not on menu open (PR-165 build)",
+      "question": "Does the Page Builder Designer section/page actions menu need clipboard-read permission to render, and when is the clipboard payload validated?",
+      "anchors": [
+        "/Modules/$(VirtoCommerce.PageBuilderModule)/Content/page-builder-designer/index.html"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E4DE692A",
       "path": "entries/KB-E4DE692A.md",
       "subject": "UCP create_cart/update_cart reject duplicate quantities whose sum overflows int32 as invalid_request",
@@ -9693,6 +10387,24 @@
       ],
       "scope": [
         "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E7007F44",
+      "path": "entries/KB-E7007F44.md",
+      "subject": "loyaltyMissionProgress returns items[].product null for a PerSku target whose product was deleted; an inactive product still returns flags",
+      "question": "When does loyaltyMissionProgress items[].product come back without availabilityData?",
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "LoyaltyMissionProgressItem.product",
+        "POST /api/loyalty-mission-goal-items"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9755,6 +10467,23 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E8234FA0",
+      "path": "entries/KB-E8234FA0.md",
+      "subject": "Never-shared wishlist: sharingSetting.id is a fresh random id on every read; first share keeps a client-sent sharingKey",
+      "question": "What does wishlist.sharingSetting.id return for a list that was never shared, and which key does the first share persist?",
+      "anchors": [
+        "WishlistType.sharingSetting",
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -10162,7 +10891,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10191,6 +10920,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EDF22BE8",
+      "path": "entries/KB-EDF22BE8.md",
+      "subject": "Shared Components workspace: Escape closes Component details and Rename dialog",
+      "question": "page-builder-shared-components Component details Rename: does Escape close them and where does focus go?",
+      "anchors": [
+        "/page-builder-shell/page-builder-shared-components"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10362,6 +11107,25 @@
       ],
       "scope": [
         "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EFFB28BE",
+      "path": "entries/KB-EFFB28BE.md",
+      "subject": "Member addresses carry separate name and description fields; the storefront address Description column reads description",
+      "question": "Why is the Description column empty in the storefront select-address table when the organization address has a name set?",
+      "anchors": [
+        "POST /api/members",
+        "Query.me",
+        "/company/info"
+      ],
+      "scope": [
+        "module=customer",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -10547,7 +11311,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-F31BD5B8",
@@ -10786,6 +11550,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-F7E4DB8E",
+      "path": "entries/KB-F7E4DB8E.md",
+      "subject": "customerOrders/search keyword is a prefix match, results newest first",
+      "question": "Does POST /api/order/customerOrders/search with keyword=<order number> return only that order?",
+      "anchors": [
+        "POST /api/order/customerOrders/search"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F8707174",
       "path": "entries/KB-F8707174.md",
       "subject": "the cancellation reason is customer-facing",
@@ -10917,6 +11697,22 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FA3338C3",
+      "path": "entries/KB-FA3338C3.md",
+      "subject": "Page Builder Designer section tree is keyboard operable (PageBuilderModule 3.1030 pr-165)",
+      "question": "page-builder-designer section tree keyboard: can Tab reach section rows and can sections be reordered by keyboard?",
+      "anchors": [
+        "/page-builder-designer/pages"
+      ],
+      "scope": [
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",

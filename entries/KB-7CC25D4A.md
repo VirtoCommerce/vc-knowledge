@@ -26,5 +26,10 @@ evidence:
     at: 2026-09-29T07:56:50.466Z
     by: session:p14200
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa1
+    at: 2026-10-01T19:55:41.295Z
+    by: session:0cfc9f97
+    who: kutasinaelena
 ---
 On theme 2.59 pr-2500, clicking a Draft row in /account/returns navigates to /account/returns/:id/edit ('Add details to return'), which shows details fields, Saved automatically and Submit return but no Cancel/Delete. The draft's /account/returns/:id page (reached by URL) shows an enabled Cancel return button with a confirm dialog. The header Back button on the /edit step is history-back. Draft fields (reason, comment, attachment) persist via autosave. Viewports 375 and 768.

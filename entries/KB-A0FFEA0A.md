@@ -53,5 +53,13 @@ evidence:
     contradicts: true
     note: "Theme 2.59.0-pr-2476 on vcptcore-qa: members of both targeted organizations (AcmeCorp buyer, TechFlow member) opened /shared-list/<key> of a Customer-scope list and saw the list with 'Recommended by your sales representative'; a removed org's member got /403. Read access via link works; only the recipient's own /account/lists does not show the list."
     splitFrom: KB-AA3C8721
+  - method: observation
+    deployment: vcptcore
+    at: 2026-10-02T08:44:55.953Z
+    by: session:7c4c6f53
+    who: Aleksandra-Mitricheva
+    contradicts: true
+    note: "2026-10-02 (theme 2.59.0-pr-2476-31b5): a member of the targeted organization reads a Customer-scope list via sharedWishlist(sharingKey) with access Read, isOwner false; only non-target orgs get Access denied."
+    splitFrom: KB-AA3C8721
 ---
 The target organization's member does get read access to a Customer-scope list, through sharedWishlist(sharingKey) (access Read, isOwner false, current message); members of each targeted organization opened /shared-list/<key> and saw the list with 'Recommended by your sales representative', while a removed organization's member got /403. The member's wishlists() is not necessarily totalCount 0 or free of non-owner lists: it returned an Organization-scope list of the member's own organization with isOwner false, while the Customer share was absent.
