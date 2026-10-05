@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T09:59:43.143Z",
-  "count": 367,
+  "generated": "2026-10-05T10:09:47.487Z",
+  "count": 368,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4633,6 +4633,22 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B85A6FC2",
+      "path": "entries/KB-B85A6FC2.md",
+      "subject": "coupons/add updates an existing coupon in place when its id is sent",
+      "question": "Can an existing coupon's expiration date be changed without deleting and re-adding it?",
+      "anchors": [
+        "POST /api/marketing/promotions/coupons/add"
+      ],
+      "scope": [
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
