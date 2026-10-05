@@ -1,4 +1,4 @@
-{"at":"2026-10-05T09:54:56.073Z","kind":"session","session":"03f4d2b6","tools":186,"turns":30,"touchAt":[23,68,69,153,183],"agents":7,"agentTools":58,"agentTouches":0,"firstAt":"2026-10-05T07:20:51.907Z","lastAt":"2026-10-05T09:54:55.961Z","who":"Dan-BV"}
+{"at":"2026-10-05T10:08:42.885Z","kind":"session","session":"03f4d2b6","tools":193,"turns":31,"touchAt":[23,68,69,153,183,189],"agents":7,"agentTools":99,"agentTouches":0,"firstAt":"2026-10-05T07:20:51.907Z","lastAt":"2026-10-05T10:08:42.755Z","who":"Dan-BV"}
 {"at":"2026-10-05T08:12:59.533Z","kind":"reindex","base":"(local checkout)","entries":454,"added":0,"removed":0,"retrusted":0,"problems":0,"who":"Dan-BV","synthetic":true}
 {"at":"2026-10-05T08:12:59.722Z","kind":"ask","q":"What happens in the cart when a customer applies an invalid coupon code?","verdict":"ambiguous","p":0.59,"f":{"idfCoverage":0.73,"sentenceStrength":0.24,"sentenceMargin":-0.03,"margin":0.09},"shown":["KB-35F20D97","KB-938D7C06","KB-8264632C"],"state":"ambiguous","ms":74,"rank":"verdict-1","via":"cli","run":"sync-check","who":"Dan-BV","synthetic":true}
 {"at":"2026-10-05T09:09:57.933Z","kind":"show","id":"KB-4B889114","state":"answer","via":"cli","who":"Dan-BV","synthetic":true}
@@ -6,3 +6,22 @@
 {"at":"2026-10-05T09:53:17.264Z","kind":"ask","q":"Query.validateCoupon coupon code case sensitivity","matched":["KB-001183CF","KB-8264632C","KB-35F20D97"],"scores":[13,12,12],"matchedBy":["both","both","both"],"trustShown":["single observation","corroborated","single observation"],"opened":["KB-001183CF","KB-8264632C","KB-35F20D97"],"state":"answer","ms":1809,"rank":"floor-1","via":"cli","who":"Dan-BV"}
 {"at":"2026-10-05T09:53:19.810Z","kind":"ask","q":"Query.wishlists sharingSetting.id private wishlist stable","matched":["KB-D1DF95A5","KB-AA3C8721","KB-2F64A447"],"scores":[22,22,21],"matchedBy":["both","both","both"],"trustShown":["corroborated","DISPUTED","well attested"],"opened":["KB-D1DF95A5","KB-AA3C8721","KB-2F64A447"],"state":"answer","ms":1279,"rank":"floor-1","via":"cli","who":"Dan-BV"}
 {"at":"2026-10-05T09:53:21.067Z","kind":"ask","q":"OrderConfigurationItemType sectionId fields","matched":["KB-133FD544"],"scores":[2],"matchedBy":["words"],"trustShown":["well attested"],"opened":["KB-133FD544"],"state":"answer","ms":543,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:07.994Z","kind":"ask","q":"Query.wishlists sharingSetting id fresh GUID each read private never shared","matched":["KB-D1DF95A5","KB-AA3C8721","KB-2F64A447"],"scores":[23,23,21],"matchedBy":["both","both","both"],"trustShown":["corroborated","DISPUTED","well attested"],"opened":["KB-D1DF95A5","KB-AA3C8721","KB-2F64A447"],"state":"answer","ms":1785,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:09.004Z","kind":"ask","q":"B2B-store tax providers AvaTaxRateProvider FixedRate isActive Stores.TaxCalculationEnabled","matched":[],"state":"miss","nearMiss":{"id":"KB-3E408000","score":4,"coverage":0.44},"ms":281,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:09.983Z","kind":"ask","q":"organization contacts invited statusInOrganization isLockedInOrganization inviteUser pending","matched":[],"state":"miss","nearMiss":{"id":"KB-4D082C89","score":3,"coverage":0.43},"ms":231,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:10.967Z","kind":"ask","q":"OrderConfigurationItemType REST customerOrders configurationItems sectionId stored order","matched":[],"state":"miss","nearMiss":{"id":"KB-133FD544","score":3,"coverage":0.43},"ms":214,"rank":"floor-1","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:18.784Z","kind":"show","id":"KB-7A9D4927","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:19.918Z","kind":"show","id":"KB-E8234FA0","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:20.816Z","kind":"show","id":"KB-A3004A3B","state":"miss","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:21.718Z","kind":"show","id":"KB-4105EEBE","state":"miss","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:22.890Z","kind":"show","id":"KB-1B18B821","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:24.099Z","kind":"show","id":"KB-3E408000","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:24.963Z","kind":"show","id":"KB-BBBC4225","state":"miss","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:26.337Z","kind":"show","id":"KB-D8FDFA6F","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:36.373Z","kind":"show","id":"KB-7A9D4927","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:37.325Z","kind":"show","id":"KB-3E408000","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:38.246Z","kind":"show","id":"KB-1B18B821","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:42.810Z","kind":"show","id":"KB-7A9D4927","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:43.741Z","kind":"show","id":"KB-3E408000","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:05:44.669Z","kind":"show","id":"KB-1B18B821","state":"answer","via":"cli","who":"Dan-BV"}
+{"at":"2026-10-05T10:07:31.981Z","kind":"show","id":"KB-35F20D97","state":"answer","via":"cli","who":"Dan-BV","synthetic":true}
