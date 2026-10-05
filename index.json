@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T12:56:20.116Z",
-  "count": 374,
+  "generated": "2026-10-05T13:02:42.896Z",
+  "count": 375,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2140,6 +2140,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-5196FCE9",
+      "path": "entries/KB-5196FCE9.md",
+      "subject": "When the store's anonymousUsersAllowed setting is false, the storefront sends every anonymous visitor to /sign-in, so an 'Anyone with link' list link cannot be opened without signing in",
+      "question": "Can an anonymous visitor open an 'Anyone with link' shared list when the store does not allow anonymous users?",
+      "anchors": [
+        "/shared-list/{}",
+        "/sign-in",
+        "Query.pageContext"
+      ],
+      "scope": [
+        "actor=anonymous",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-53D776C2",
       "path": "entries/KB-53D776C2.md",
       "subject": "the Admin order tree blanks a zero shipment amount",
@@ -2381,7 +2400,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -3779,7 +3798,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-92164C90",
@@ -4460,7 +4479,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4946,7 +4965,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
