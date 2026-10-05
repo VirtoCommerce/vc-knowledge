@@ -33,5 +33,11 @@ evidence:
     by: session:p5868
     who: Aleksandra-Mitricheva
     note: "theme 2.59.0-pr-2476-0604: card menu Rename/Share/Remove list; list page Rename+Share; no List settings action"
+  - method: observation
+    deployment: vcptcore_qa
+    at: 2026-10-05T12:20:35.492Z
+    by: session:91e50fbd
+    who: Aleksandra-Mitricheva
+    note: "theme 2.59.0-pr-2476-0abb, list OWNER: card Actions = Rename / Share / Remove list; list page = Rename + Share (no Remove list on the page). For a NON-owner the set shrinks to Rename only (separate entry)."
 ---
 On vc-frontend#2476 (theme 2.59.0-pr-2476-0604) the list card Actions menu is Rename / Share / Remove list and the list page offers Rename and Share. Rename edits only name and description; sharing (scope, customers, message) lives only in the Share dialog. The earlier view-only settings dialog is gone.

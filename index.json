@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T12:16:05.784Z",
-  "count": 371,
+  "generated": "2026-10-05T12:25:47.931Z",
+  "count": 372,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4426,6 +4426,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-ACDF81BB",
+      "path": "entries/KB-ACDF81BB.md",
+      "subject": "On theme 2.59.0-pr-2476 a non-owner member of an Organization-scope list is offered only Rename — no Share, no Remove list — on the card menu and the list page",
+      "question": "which list actions does /account/lists offer a non-owner member of an Organization-scope list",
+      "anchors": [
+        "/account/lists",
+        "/account/lists/{id}",
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "actor=non-owner-org-member",
+        "list-scope=organization",
+        "surface=storefront-ui",
+        "theme=2.59.0-pr-2476"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AD1FA66B",
       "path": "entries/KB-AD1FA66B.md",
       "subject": "where a cart's money lives, and which copy goes stale",
@@ -4892,7 +4913,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -6041,7 +6062,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-EB70C1F9",
