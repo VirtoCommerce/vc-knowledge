@@ -3,12 +3,24 @@ id: KB-4EDC989E
 subject: xAPI resolves a contact's current organization from contact.organizations, not from the OrganizationMembership entity
 plane: experiential
 question: Why does Query.me return contact.organizationId null for a user who has an Approved OrganizationMembership?
+questions:
+  - text: Why does a user with an approved company membership show no company on the storefront?
+  - text: Query.me contact.organizationId null Approved OrganizationMembership
+  - text: Does xAPI read the current organization from contact.organizations or OrganizationMembership?
+  - text: What happens to organizationId for a locked membership with the organization in contact.organizations?
+  - text: Why do organization-mode loyalty balances fall back to personal scope for a seeded member?
+concepts:
+  - id: organization-membership
+  - id: organization
+  - id: contact
 status: active
 appliesTo:
   - axis: module
     value: customer
   - axis: surface
     value: xapi
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: Query.me
   - coordinate: GET /api/members/{id}

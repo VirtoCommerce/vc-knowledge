@@ -3,12 +3,23 @@ id: KB-CA2AE929
 subject: An invalid /punchout/&lt;token&gt; start page silently lands the visitor on the anonymous homepage; the grant answers 400 login_failed
 plane: experiential
 question: What does a buyer see when the punchout start-page token is invalid or expired?
+questions:
+  - text: What does a buyer see if the punchout link from their purchasing system has expired?
+  - text: /punchout/:sessionToken invalid token POST /connect/token grant_type=punchout login_failed
+  - text: Does an invalid punchout start page token show an error message on the storefront?
+  - text: What does the punchout grant return when session_token is missing?
+concepts:
+  - id: sign-in
+  - id: access-token
+  - id: api-error
 status: active
 appliesTo:
   - axis: module
     value: virtocommerce.punchout
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: /punchout/:sessionToken
   - coordinate: POST /connect/token

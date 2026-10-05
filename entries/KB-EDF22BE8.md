@@ -3,10 +3,19 @@ id: KB-EDF22BE8
 subject: "Shared Components workspace: Escape closes Component details and Rename dialog"
 plane: experiential
 question: "page-builder-shared-components Component details Rename: does Escape close them and where does focus go?"
+questions:
+  - text: Can I close the shared component details panel with the Escape key?
+  - text: page-builder-shared-components Escape Component details Rename dialog focus
+  - text: Where does focus go after Escape cancels the Rename shared component dialog?
+  - text: At 375px does a floating button overlap the Rename button in the Shared Components workspace?
+concepts:
+  - id: accessibility
+  - id: content-page
+  - id: mobile-layout
 status: active
 appliesTo:
   - axis: surface
-    value: admin-spa
+    value: admin-ui
 anchors:
   - coordinate: /page-builder-shell/page-builder-shared-components
 evidence:

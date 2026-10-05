@@ -3,10 +3,20 @@ id: KB-85F02FDB
 subject: Admin Return blade field set and Line items columns for an admin-created return
 plane: experiential
 question: Which fields does the Admin SPA Return blade and its Line items blade show for a return created via Add new return?
+questions:
+  - text: What fields does an admin see when creating a product return in the back office?
+  - text: /api/return Add new return blade fields Line items columns
+  - text: Which statuses does the Status dropdown offer for a New return in the Admin SPA?
+  - text: Is Buyer's reference filled for a return created via Returns > Add new return?
+  - text: Is the Approved column pre-filled on an admin-created return's Line items blade?
+concepts:
+  - id: return
+  - id: return-status
+  - id: admin-order-screen
 status: active
 appliesTo:
   - axis: surface
-    value: admin-spa
+    value: admin-ui
 anchors:
   - coordinate: /api/return
 evidence:

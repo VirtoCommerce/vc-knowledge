@@ -3,12 +3,23 @@ id: KB-EFFB28BE
 subject: Member addresses carry separate name and description fields; the storefront address Description column reads description
 plane: experiential
 question: Why is the Description column empty in the storefront select-address table when the organization address has a name set?
+questions:
+  - text: Why is the Description column blank when choosing a company address at checkout?
+  - text: POST /api/members address name description Query.me organization addresses
+  - text: Which address field does the storefront select-address Description column read?
+  - text: Are a member address's name and description stored as separate fields?
+concepts:
+  - id: address
+  - id: organization
+  - id: checkout
 status: active
 appliesTo:
   - axis: module
     value: customer
   - axis: surface
     value: xapi
+  - axis: surface
+    value: storefront-ui
 anchors:
   - coordinate: POST /api/members
   - coordinate: Query.me

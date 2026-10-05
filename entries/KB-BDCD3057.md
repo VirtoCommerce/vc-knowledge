@@ -3,10 +3,20 @@ id: KB-BDCD3057
 subject: Admin 'Add new return' creates a return in status New that the buyer sees on /account/returns
 plane: experiential
 question: what status does a return created from the Admin SPA Returns 'Add new return' blade get, and does the buyer see it
+questions:
+  - text: If an admin creates a product return for a customer in the back office, does the customer see it in their account?
+  - text: /workspace/Return Add new return status New legacy
+  - text: What statuses does the status dropdown offer on a return created through Admin 'Add new return'?
+  - text: Does an admin-created return appear on /account/returns next to Requested and Partially approved returns?
+concepts:
+  - id: return
+  - id: return-status
 status: active
 appliesTo:
   - axis: surface
-    value: admin-spa
+    value: admin-ui
+  - axis: surface
+    value: storefront-ui
 anchors:
   - coordinate: /workspace/Return
   - coordinate: /account/returns

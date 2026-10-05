@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-05T09:09:57.716Z",
+  "generated": "2026-10-05T09:53:45.721Z",
   "count": 454,
   "entries": [
     {
@@ -30,11 +30,22 @@
       "path": "entries/KB-003D1D01.md",
       "subject": "Push Messages recipients picker label is keyed to the audience mode",
       "question": "What is the Add specific recipients picker labelled in each Push Messages audience mode?",
+      "questions": [
+        "What is the label of the recipients picker in the Push Messages audience section in each mode?",
+        "Why does the Push Messages recipients field say 'Also add specific recipients' in Match by conditions mode?",
+        "/api/push-message/preview-recipients specific recipients plus conditions union count",
+        "Does a company picked in 'Specific people or companies' survive switching the audience to 'Match by conditions'?",
+        "When I add a company and a condition to a push notification audience, are the recipients combined or replaced?"
+      ],
+      "concepts": [
+        "push-audience",
+        "push-message"
+      ],
       "anchors": [
         "/api/push-message/preview-recipients"
       ],
       "scope": [
-        "surface=admin-spa"
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -46,6 +57,18 @@
       "path": "entries/KB-0080ED6D.md",
       "subject": "The storefront code sign-in sends the last-used organization_id, so a multi-org buyer signing in by code lands in the organization chosen before sign-out",
       "question": "Which organization is active after a multi-organization buyer signs in to the storefront with an emailed one-time code?",
+      "questions": [
+        "Which company is active after a buyer with two companies logs in with an emailed code?",
+        "POST /connect/token grant_type=otp_email organization_id last used organization",
+        "Does a multi-org buyer who switched organization before sign-out land in that organization after OTP sign-in?",
+        "Is the organization choice remembered between sign-ins for one-time code login?",
+        "Does the emailed-code sign-in pick the same organization as the password sign-in?"
+      ],
+      "concepts": [
+        "otp",
+        "multi-organization",
+        "sign-in"
+      ],
       "anchors": [
         "POST /connect/token",
         "/sign-in"
@@ -87,12 +110,25 @@
       "path": "entries/KB-011D79B2.md",
       "subject": "Missions SKU modal Add to cart sets absolute cart quantity",
       "question": "What does the storefront missions SKU modal send when Add to cart is pressed, and how is the stepper initialised on reopen?",
+      "questions": [
+        "Does Add to cart in the missions product popup add to the basket quantity or replace it?",
+        "/account/missions updateCartQuantity UpdateShortCartItemQuantity absolute quantity",
+        "What does the missions SKU modal stepper show when reopened for a product already in the cart?",
+        "Why is Add to cart disabled in the mission SKU modal until I change the quantity?",
+        "Does the missions modal close and update the header cart badge after adding?"
+      ],
+      "concepts": [
+        "loyalty-mission",
+        "add-to-cart",
+        "cart-line-item"
+      ],
       "anchors": [
         "/account/missions",
         "Mutation.updateCartQuantity"
       ],
       "scope": [
-        "surface=storefront-ui"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -373,12 +409,23 @@
       "path": "entries/KB-06CFE625.md",
       "subject": "a New legacy return reduces returnableItems returnableQuantity; orderId filter works",
       "question": "Does a legacy admin return in status New hold units of the order line for returnableItems?",
+      "questions": [
+        "Does a return in status New already reduce how many units of an order line can still be returned?",
+        "PUT /api/return status New returnableItems returnableQuantity",
+        "POST /api/return/search orderId filter returns only that order's returns?",
+        "What happens to returns in the admin grid if I delete the order without deleting its returns first?",
+        "Is the order line still isReturnable after a legacy return for 1 of 20 delivered units?"
+      ],
+      "concepts": [
+        "return",
+        "returnable-quantity"
+      ],
       "anchors": [
         "PUT /api/return",
         "POST /api/return/search"
       ],
       "scope": [
-        "surface=rest-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -420,6 +467,18 @@
       "path": "entries/KB-08CC76A3.md",
       "subject": "Storefront OTP code step: digits only, auto-submit at 6, 7-digit input cut to the first 6, spaced paste accepted; wrong code shows one message and keeps the digits; Resend clears field+error and says \"New code sent.\"",
       "question": "How does the storefront OTP code input behave for malformed codes, a wrong code, Resend and Use a different email?",
+      "questions": [
+        "What happens if I type letters or seven digits into the emailed sign-in code field?",
+        "POST /connect/token otp_email invalid_code wrong code error message",
+        "Does the storefront code input auto-submit on the sixth digit and accept a pasted code with spaces?",
+        "What does Resend code do to the field and error, and is the new code different?",
+        "How long is an emailed one-time sign-in code accepted before it is refused as invalid?",
+        "Where does the user land after OTP sign-in with and without returnUrl?"
+      ],
+      "concepts": [
+        "otp",
+        "sign-in"
+      ],
       "anchors": [
         "/sign-in",
         "POST /connect/token",
@@ -810,13 +869,26 @@
       "path": "entries/KB-1178FECF.md",
       "subject": "Push Messages audience resolution survives an ElasticAppSearch to ElasticSearch8 provider switch; only text-matched counts move",
       "question": "Does switching the search provider to ElasticSearch8 and rebuilding the member index change the Push Messages audience-builder recipient counts?",
+      "questions": [
+        "Do push notification recipient counts change after switching the search engine to ElasticSearch8 and reindexing?",
+        "/api/push-message/preview-recipients ElasticSearch8 reindex audience count",
+        "Which Push Messages audience counts are provider-independent and which must be re-measured after a reindex?",
+        "How does the audience preview dialog page a 146-recipient audience?",
+        "What happens to Save and Send when a Push Messages advanced query phrase is malformed?",
+        "Does preview-recipients return HTTP 400 for an invalid member query phrase?"
+      ],
+      "concepts": [
+        "push-audience",
+        "search-index"
+      ],
       "anchors": [
         "/api/push-message/preview-recipients",
         "/api/push-message"
       ],
       "scope": [
         "module=virtocommerce.pushmessages",
-        "surface=admin-spa"
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1342,11 +1414,23 @@
       "path": "entries/KB-1B066196.md",
       "subject": "PUT /api/sales-rep revokes the sales rep's current access token",
       "question": "Does editing a sales rep's served organizations in the back office sign the rep out?",
+      "questions": [
+        "Does changing a sales rep's assigned companies in the back office log the rep out of the storefront?",
+        "PUT /api/sales-rep revokes access token me.userName Anonymous",
+        "After editing served organizations, does the sales rep's existing token return Unauthorized for salesRepCustomers?",
+        "Does a failed PUT /api/sales-rep with 500 also revoke the rep's token?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "access-token",
+        "sign-out"
+      ],
       "anchors": [
         "PUT /api/sales-rep"
       ],
       "scope": [
-        "surface=rest-api"
+        "surface=rest",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1689,6 +1773,17 @@
       "path": "entries/KB-22E1D313.md",
       "subject": "A declined return produces two buyer push messages, 'Return {number} received' then 'Return {number} declined', and the bell lists the declined one first",
       "question": "Which push messages does the buyer see on /account/notifications for a return that is submitted and then declined?",
+      "questions": [
+        "What notifications does a buyer get when their return is submitted and then declined?",
+        "/account/notifications 'Return received' 'Return declined' push messages",
+        "Which message is on top of the notification bell after a return is declined?",
+        "What push message title does a partial approval or buyer cancellation of a return produce?",
+        "POST /api/return/{id}/authorize approvedQuantity 0 buyer push message"
+      ],
+      "concepts": [
+        "push-message",
+        "return-decision"
+      ],
       "anchors": [
         "/account/notifications"
       ],
@@ -1813,13 +1908,25 @@
       "path": "entries/KB-26B8BE64.md",
       "subject": "A mission past its EndDate stays on loyaltyMissionProgress as InProgress with daysRemaining 0 until the expiry sweep, for a user with a progress row",
       "question": "Does loyaltyMissionProgress still return a mission whose EndDate has passed, and what does it read?",
+      "questions": [
+        "Does an expired loyalty challenge still show as in progress for the shopper?",
+        "Query.loyaltyMissionProgress mission past EndDate status InProgress daysRemaining 0",
+        "When does a mission's progress row become Expired and drop out of loyaltyMissionProgress?",
+        "Does a user with no progress row see a mission that has already closed?",
+        "What does the /account/missions card show for a mission that ended minutes ago?",
+        "Is a mission ending later today shown as '1 day left' or '0 days left'?"
+      ],
+      "concepts": [
+        "loyalty-mission"
+      ],
       "anchors": [
         "Query.loyaltyMissionProgress",
         "LoyaltyUserMission.daysRemaining",
         "/account/missions"
       ],
       "scope": [
-        "surface=graphql"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1953,13 +2060,25 @@
       "path": "entries/KB-2AEC62B4.md",
       "subject": "Barcode scanner blade: Exact-match mode reveals a 'Fields to match *' checklist; Reset reverts unsaved mode/field changes with no PUT",
       "question": "What does the Admin Barcode scanner blade show in each match mode, and does Reset discard unsaved changes without writing?",
+      "questions": [
+        "What extra options appear in the store barcode scanner settings when exact matching is chosen?",
+        "GET /api/catalog/barcode-search/store/{}/fields Fields to match checklist sorting",
+        "Does Reset on the Barcode scanner blade discard unsaved match-mode changes without a PUT?",
+        "How are built-in fields like GTIN, MPN and SKU labelled in the Fields to match list?",
+        "Which fields carry a MULTI-VALUE badge in the barcode scanner blade?"
+      ],
+      "concepts": [
+        "barcode-settings",
+        "admin-validation"
+      ],
       "anchors": [
         "GET /api/catalog/barcode-search/store/{}",
         "GET /api/catalog/barcode-search/store/{}/fields"
       ],
       "scope": [
         "blade=store-barcode-scanner",
-        "surface=admin-spa"
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2239,12 +2358,21 @@
       "path": "entries/KB-306AC615.md",
       "subject": "Per-mission DELETE of loyalty missions succeeded after their accounts placed orders",
       "question": "Can DELETE /api/loyalty-missions remove a mission whose bound account has placed orders?",
+      "questions": [
+        "Can I delete a loyalty challenge after the bound shoppers have placed orders?",
+        "DELETE /api/loyalty-missions?ids= mission with orders 2xx",
+        "Does deleting a mission also remove its rows from /api/loyalty-mission-progress/search?",
+        "Does a successful mission delete prove there is no RESTRICT foreign key on mission transactions?"
+      ],
+      "concepts": [
+        "loyalty-mission"
+      ],
       "anchors": [
         "/api/loyalty-missions",
         "/api/loyalty-mission-progress/search"
       ],
       "scope": [
-        "surface=platform-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2394,6 +2522,17 @@
       "path": "entries/KB-33B89BDD.md",
       "subject": "OTP request for an unregistered email returns succeeded:false with code user_not_found (DetailedErrors on); a 255-char email is refused 400 by MaxLength(254) while the storefront form lets it through",
       "question": "What does POST /api/otp/request return for an unknown email or an over-long email, and which layer rejects the length?",
+      "questions": [
+        "Does the sign-in-by-code request reveal that an email address has no account?",
+        "POST /api/otp/request user_not_found succeeded false unknown email",
+        "What is the maximum email length accepted by the OTP request endpoint?",
+        "Does the storefront sign-in form block a 255-character email before sending the code request?",
+        "What 400 message does POST /api/otp/request return for an invalid email like john@?"
+      ],
+      "concepts": [
+        "otp",
+        "api-error"
+      ],
       "anchors": [
         "POST /api/otp/request",
         "/sign-in"
@@ -2401,7 +2540,8 @@
       "scope": [
         "feature=otp-email-sign-in",
         "setting=detailederrors-on",
-        "surface=api"
+        "surface=rest",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2618,6 +2758,15 @@
       "path": "entries/KB-3B0D8460.md",
       "subject": "Push Messages builder: a comma in a text value silently removes the wildcard operators",
       "question": "In the Push Messages audience builder, why do 'starts with' / 'ends with' / 'contains' disappear from the operator dropdown on a text field?",
+      "questions": [
+        "Why did the 'contains' option disappear from the push notification audience filter?",
+        "Push Messages builder comma in value wildcard operators starts with ends with contains removed",
+        "Which operators are offered for a Name or Email condition whose value contains a comma?",
+        "Is the selected operator changed when the comma removes wildcard operators?"
+      ],
+      "concepts": [
+        "push-audience"
+      ],
       "anchors": [
         "GET /api/push-message"
       ],
@@ -2662,6 +2811,17 @@
       "path": "entries/KB-3C7B6A36.md",
       "subject": "Storefront VcModal scrollable body has no scroll-edge cue; SKU mission modal estimate hint can straddle the fold",
       "question": "Does the storefront VcModal scrollable body show any cue that more content is below, and where does the SKU mission modal put its subtotal estimate hint?",
+      "questions": [
+        "Is there any visual hint that a storefront popup has more content below the fold?",
+        "/account/missions sku-mission-modal estimate alert cut by fold scroll",
+        "Does VcModal's scrollable body have a shadow or mask scroll cue?",
+        "Where is the 'Totals and cart subtotal are estimates' hint placed in the SKU mission modal?",
+        "Is the estimate alert covered by the modal footer when the body overflows?"
+      ],
+      "concepts": [
+        "loyalty-mission",
+        "accessibility"
+      ],
       "anchors": [
         "/account/missions"
       ],
@@ -2678,11 +2838,22 @@
       "path": "entries/KB-3D3B8531.md",
       "subject": "Admin Returns screens are fully translated in French (menu, list, blade, Line items, store settings)",
       "question": "Admin SPA Returns module in French: are the menu entry, Return list, return blade, Line items blade toolbar and Return store settings translated?",
+      "questions": [
+        "Is the back office returns section translated when the admin switches to French?",
+        "/workspace/Return French translation Retours Liste des retours",
+        "Which Return module labels stay in English with the admin language set to Francais?",
+        "What is the Line items blade Approve / decline toolbar called in French?",
+        "Are there raw translation keys in the Return store settings in French?"
+      ],
+      "concepts": [
+        "return",
+        "localization"
+      ],
       "anchors": [
         "/workspace/Return"
       ],
       "scope": [
-        "surface=admin-spa"
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2694,12 +2865,21 @@
       "path": "entries/KB-3E408000.md",
       "subject": "Two active tax providers on one store: tax evaluation returns nothing",
       "question": "What tax does a cart get when a store has both AvaTaxRateProvider and FixedRateTaxProvider active?",
+      "questions": [
+        "Why does the basket show zero tax when the store has two tax providers turned on?",
+        "POST /api/taxes/{storeId}/evaluate empty array AvaTaxRateProvider FixedRateTaxProvider both active",
+        "What does tax evaluation return when AvaTax and fixed-rate providers are both active on one store?",
+        "Does taxTotal become 0 on storefront carts with two active tax providers?"
+      ],
+      "concepts": [
+        "tax"
+      ],
       "anchors": [
         "/api/taxes/{storeId}/evaluate",
         "/api/taxes/search"
       ],
       "scope": [
-        "surface=platform-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2711,6 +2891,17 @@
       "path": "entries/KB-3EA119C5.md",
       "subject": "The storefront category page header banner loads the ORIGINAL category image (no _md/_sm thumbnail suffix) and crops it to a wide banner, while product cards on the same page load _md thumbnails.",
       "question": "which image size does the storefront category page request for the category's own image, and does it use image-tools thumbnails",
+      "questions": [
+        "Does the category page banner download a resized thumbnail or the full original image?",
+        "category page header image _md thumbnail suffix original asset Query.category",
+        "Why is a square category image cropped to a thin strip on the storefront category page?",
+        "Do image-tools thumbnails change what the category header banner loads?",
+        "What aspect ratio does the storefront category banner render the category image at?"
+      ],
+      "concepts": [
+        "catalog",
+        "asset"
+      ],
       "anchors": [
         "POST /api/catalog/categories",
         "Query.category"
@@ -2970,6 +3161,17 @@
       "path": "entries/KB-41DDD2A9.md",
       "subject": "Push Messages builder: typing into the Registered date field surfaces a raw RangeError stack trace",
       "question": "What happens if a user types a date into the Registered condition's date input in the Push Messages audience builder instead of picking it from the calendar?",
+      "questions": [
+        "What happens if I type a date into the push notification audience 'Registered' filter?",
+        "Push Messages Registered condition 'Invalid time value' RangeError stack trace banner",
+        "Does the Invalid time value error banner go away after picking the date from the calendar?",
+        "What query does picking a Registered date from the calendar produce?"
+      ],
+      "concepts": [
+        "push-audience",
+        "admin-validation",
+        "date-range-picker"
+      ],
       "anchors": [
         "GET /api/push-message"
       ],
@@ -2987,6 +3189,17 @@
       "path": "entries/KB-42230B0A.md",
       "subject": "Wishlist sharing targets: write response order differs from read order; legacy sharedWithId follows it",
       "question": "In what order does SharingSettingType.targets come back, and which target does the deprecated sharedWithId report?",
+      "questions": [
+        "Why does the order of people a shopping list is shared with change after saving?",
+        "SharingSettingType.targets order changeWishlist response vs wishlist read",
+        "Which target does the deprecated sharedWithId report on a multi-target list?",
+        "Why is a legacy sharedWithId write refused INVALID_OPERATION on a list with several targets?",
+        "Is a legacy sharedWithId ignored when no scope is sent?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "wishlist"
+      ],
       "anchors": [
         "SharingSettingType.targets",
         "SharingSettingType.sharedWithId",
@@ -3166,12 +3379,23 @@
       "path": "entries/KB-49F6B6EF.md",
       "subject": "roles search returns every role with an empty permissions array; only GET roles/{name} carries them",
       "question": "Does POST /api/platform/security/roles/search return the permissions of each role?",
+      "questions": [
+        "Why does the role search show no permissions for roles that have them?",
+        "POST /api/platform/security/roles/search permissions empty array",
+        "Which endpoint returns a role's full permissions list?",
+        "Why does a role seeder report permission drift that does not exist?",
+        "Does PUT /api/platform/security/roles with a stable id upsert the role?"
+      ],
+      "concepts": [
+        "platform-role",
+        "permission"
+      ],
       "anchors": [
         "POST /api/platform/security/roles/search",
         "GET /api/platform/security/roles/{}"
       ],
       "scope": [
-        "surface=platform-rest"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3311,6 +3535,16 @@
       "path": "entries/KB-4BFCE2B2.md",
       "subject": "Push Messages audience builder: field to member-index phrase mapping",
       "question": "In the Push Messages back-office audience builder (Match by conditions, Custom conditions), what phrase does each field+operator emit into PushMessage.MemberQuery?",
+      "questions": [
+        "What query text does each condition in the push notification audience builder generate?",
+        "PushMessage.MemberQuery field tokens roleid parentorganizations createddate emails login",
+        "Does the Role or Company condition emit the name or the id into the member query?",
+        "How do starts with, contains and on or after operators look in the generated query?",
+        "When is a value double-quoted in the Push Messages generated query?"
+      ],
+      "concepts": [
+        "push-audience"
+      ],
       "anchors": [
         "GET /api/push-message"
       ],
@@ -3578,6 +3812,18 @@
       "path": "entries/KB-4E1FD1E8.md",
       "subject": "The impersonate OAuth grant gates on the operator's loginOnBehalf permission but applies NO guard on the target user (existence only) and mints the token from the target's identity, so impersonating an Administrator yields a token carrying the target's Administrator role",
       "question": "Can a non-admin operator with loginOnBehalf impersonate an Administrator via the impersonate grant on /connect/token, and does the token carry admin rights?",
+      "questions": [
+        "Can a non-admin user with login-on-behalf rights log in as the administrator?",
+        "/connect/token grant_type=impersonate target Administrator guard AuthorizationController.Exchange",
+        "Does the impersonation token carry the target's Administrator role?",
+        "Is the Login on behalf button enabled on the Administrator user record for an Organization maintainer?",
+        "What does the impersonate grant check on the target user besides existence?"
+      ],
+      "concepts": [
+        "impersonation",
+        "permission",
+        "access-token"
+      ],
       "anchors": [
         "/connect/token",
         "/account/impersonate/{userId}",
@@ -3585,8 +3831,8 @@
       ],
       "scope": [
         "grant=impersonate",
-        "surface=admin-spa",
-        "surface=platform-oauth",
+        "surface=admin-ui",
+        "surface=rest",
         "target=administrator"
       ],
       "plane": "experiential",
@@ -3627,6 +3873,18 @@
       "path": "entries/KB-4EDC989E.md",
       "subject": "xAPI resolves a contact's current organization from contact.organizations, not from the OrganizationMembership entity",
       "question": "Why does Query.me return contact.organizationId null for a user who has an Approved OrganizationMembership?",
+      "questions": [
+        "Why does a user with an approved company membership show no company on the storefront?",
+        "Query.me contact.organizationId null Approved OrganizationMembership",
+        "Does xAPI read the current organization from contact.organizations or OrganizationMembership?",
+        "What happens to organizationId for a locked membership with the organization in contact.organizations?",
+        "Why do organization-mode loyalty balances fall back to personal scope for a seeded member?"
+      ],
+      "concepts": [
+        "organization-membership",
+        "organization",
+        "contact"
+      ],
       "anchors": [
         "Query.me",
         "GET /api/members/{id}",
@@ -3635,6 +3893,7 @@
       ],
       "scope": [
         "module=customer",
+        "surface=rest",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -3678,6 +3937,17 @@
       "path": "entries/KB-509D70C4.md",
       "subject": "Wishlist share target ids are case-insensitive; the 1000-id cap applies to addSharedWithIds only",
       "question": "How does changeWishlist treat id case, duplicates and the size of addSharedWithIds/removeSharedWithIds?",
+      "questions": [
+        "Can I share a list with more than 1000 companies at once?",
+        "Mutation.changeWishlist addSharedWithIds 1000 cap INVALID_OPERATION",
+        "Are share target ids case-insensitive when adding or removing them on a wishlist?",
+        "Is removeSharedWithIds limited to 1000 ids like addSharedWithIds?",
+        "What error does changeWishlist give for an id that is not an existing organization?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "wishlist"
+      ],
       "anchors": [
         "Mutation.changeWishlist",
         "InputChangeWishlistType.addSharedWithIds",
@@ -3725,12 +3995,24 @@
       "path": "entries/KB-50D03D62.md",
       "subject": "A member of two organizations reads a rep's Customer share only while the targeted org is active",
       "question": "Does sharedWishlist(sharingKey) access for a contact in several organizations follow the active organization or any membership?",
+      "questions": [
+        "Can a buyer in two companies open a list shared with only one of them?",
+        "Query.sharedWishlist sharingKey Access denied active organization token",
+        "Does sharedWishlist access follow the token's active organization or any membership?",
+        "How many notifications does a contact in both organizations get from sendCustomerCommunication with both org ids?",
+        "Does the sending sales rep receive their own customer communication push or email?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "multi-organization",
+        "customer-communication"
+      ],
       "anchors": [
         "Query.sharedWishlist",
         "Mutation.sendCustomerCommunication"
       ],
       "scope": [
-        "surface=graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4131,6 +4413,17 @@
       "path": "entries/KB-58A94337.md",
       "subject": "Return /edit route on a Cancelled return names the status instead of a generic error",
       "question": "What does /account/returns/{id}/edit show for a Cancelled return?",
+      "questions": [
+        "Can a buyer still edit a product return after it was cancelled?",
+        "/account/returns/{id}/edit Cancelled return message no form",
+        "What message does the return edit page show when the return status is Cancelled?",
+        "Does the storefront return edit route show a generic error or name the status for a non-editable return?",
+        "Which heading is shown on /account/returns/{id}/edit for a cancelled RMA?"
+      ],
+      "concepts": [
+        "return",
+        "return-status"
+      ],
       "anchors": [
         "/account/returns/{}/edit"
       ],
@@ -4564,12 +4857,25 @@
       "path": "entries/KB-62D97984.md",
       "subject": "POST /api/punchout/cxml answers HTTP 200 with a cXML Status for every rejection, and checks the user mapping BEFORE the store checks",
       "question": "What does the Punchout cXML endpoint return for a bad secret, bad return URL or unmapped identity, and in what order are the checks done?",
+      "questions": [
+        "What HTTP status does the punchout endpoint return when the shared secret is wrong?",
+        "POST /api/punchout/cxml rejection Status codes 401 450 500 HTTP 200",
+        "Can you tell a wrong SharedSecret from an unmapped Sender Identity in the cXML punchout response?",
+        "Is the Punchout user-mapping check done before or after the store checks?",
+        "Why does a cXML return URL 'https://host' fail the AllowedReturnUrls entry 'https://host/*'?",
+        "What does GET /api/punchout/cxml return?"
+      ],
+      "concepts": [
+        "rest-api",
+        "api-error",
+        "sign-in"
+      ],
       "anchors": [
         "POST /api/punchout/cxml"
       ],
       "scope": [
         "module=virtocommerce.punchout",
-        "surface=platform-rest"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4607,6 +4913,16 @@
       "path": "entries/KB-6323ED21.md",
       "subject": "Storefront return wizard clamps a typed return quantity above Returnable down to the returnable maximum",
       "question": "What happens on /account/returns/new/{orderId} when the buyer types a return quantity larger than the line's Returnable value?",
+      "questions": [
+        "What happens if a buyer types more items to return than they are allowed to?",
+        "/account/returns/new/{orderId} quantity above Returnable clamp spinbutton",
+        "Does the return wizard show a validation error for an over-return quantity or silently reset it?",
+        "After typing 4 with Returnable 3 on Select items to return, is Continue enabled?"
+      ],
+      "concepts": [
+        "return",
+        "returnable-quantity"
+      ],
       "anchors": [
         "/account/returns/new/{orderId}"
       ],
@@ -4836,6 +5152,19 @@
       "path": "entries/KB-68D63D8C.md",
       "subject": "organization.assignableRoles(storeId) returns [] when the store's MembershipRolesWhitelist override is empty",
       "question": "Why does organization assignableRoles return an empty list on the storefront Invite member / Edit role dialogs?",
+      "questions": [
+        "Why can't I pick any role when inviting a colleague to my company on the storefront?",
+        "Organization.assignableRoles storeId empty list MembershipRolesWhitelist",
+        "What does the storefront show when assignableRoles returns []: 'There are no roles available'?",
+        "Why does the Admin SPA still offer roles while the storefront Invite member dialog offers none?",
+        "Which default roles does assignableRoles return without a storeId argument?",
+        "Does an empty store-level override of Customer.MembershipRolesWhitelist mean no restriction or no roles?"
+      ],
+      "concepts": [
+        "organization-role",
+        "organization-invitation",
+        "store"
+      ],
       "anchors": [
         "Organization.assignableRoles",
         "/company/members",
@@ -5076,6 +5405,17 @@
       "path": "entries/KB-6CDB7E6F.md",
       "subject": "Storefront return details page shows 'Return' title placeholder while GetReturn loads",
       "question": "What does /account/returns/{id} show as title and breadcrumb while the return is loading?",
+      "questions": [
+        "Why does the return details page briefly show just 'Return' as the title?",
+        "/account/returns/{id} GetReturn loading h1 breadcrumb placeholder",
+        "How long does the 'Return' title placeholder last before the return number appears?",
+        "How tall are the return-quantity inputs on the return wizard and edit pages?",
+        "What happens to a return quantity field when a value above the returnable quantity is typed on /account/returns/{id}/edit?"
+      ],
+      "concepts": [
+        "return",
+        "returnable-quantity"
+      ],
       "anchors": [
         "/account/returns/{id}",
         "/account/returns/new/{orderId}"
@@ -5129,6 +5469,18 @@
       "path": "entries/KB-6D7B2ED7.md",
       "subject": "Storefront OTP sign-in form posts to the storefront origin /api/otp/request, which the storefront ingress answers 405; the form shows an inline generic error plus a global server-error toast",
       "question": "What happens when a guest clicks Continue on the storefront OTP email sign-in form?",
+      "questions": [
+        "Why does the email code login fail with 'Something went wrong' on the storefront?",
+        "POST /api/otp/request 405 storefront origin ingress Cloudflare",
+        "Does the OTP request from /sign-in reach the platform or is it blocked at the storefront ingress?",
+        "Which errors appear together when the one-time code Continue fails: inline alert and server-error toast?",
+        "What validation message does the OTP email field show for 'john@' or an empty email?"
+      ],
+      "concepts": [
+        "otp",
+        "sign-in",
+        "api-error"
+      ],
       "anchors": [
         "POST /api/otp/request",
         "/sign-in"
@@ -5411,13 +5763,25 @@
       "path": "entries/KB-735DF4D1.md",
       "subject": "Whether an incomplete Push Messages condition row raises a hint and holds Save depends on there already being a complete condition in the rule.",
       "question": "Does an incomplete condition row in the Push Messages audience builder always show a hint and hold Save?",
+      "questions": [
+        "Why is Save still enabled when my push notification audience condition has no value?",
+        "POST /api/push-message/preview-recipients incomplete condition hint Save disabled",
+        "When does 'This condition has no value.' appear in the Push Messages audience builder?",
+        "Does the blank row created by the 'Custom conditions' starter chip block Save?",
+        "How do I test the held-Save guard for an incomplete push message condition?"
+      ],
+      "concepts": [
+        "push-message",
+        "push-audience",
+        "admin-validation"
+      ],
       "anchors": [
         "POST /api/push-message",
         "POST /api/push-message/preview-recipients"
       ],
       "scope": [
         "module=virtocommerce.pushmessages",
-        "surface=admin-spa",
+        "surface=admin-ui",
         "version=3.1006.0-pr-28"
       ],
       "plane": "experiential",
@@ -5458,11 +5822,23 @@
       "path": "entries/KB-747FEC71.md",
       "subject": "Admin Returns: a decided line keeps its Price editable and the Line items Save persists it",
       "question": "Admin SPA Returns Line items blade: after Approve / decline, can the line price still be edited and saved, and are quantity/decision locked?",
+      "questions": [
+        "Can an admin still change the price of a return line after approving or declining it?",
+        "/api/return Line items blade decided line Price editable Save",
+        "After Approve / decline, which fields of a return line are locked in the Admin SPA?",
+        "Does saving an edited price on a Rejected return change approvedQuantity or rejectReason?",
+        "Is the return-blade Save enabled after editing a decided line's price?"
+      ],
+      "concepts": [
+        "return-decision",
+        "return"
+      ],
       "anchors": [
         "/api/return"
       ],
       "scope": [
-        "surface=admin-spa"
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -5474,12 +5850,26 @@
       "path": "entries/KB-74D9B9B0.md",
       "subject": "Saving a localizable dictionary setting 500s when stored translations collide case-insensitively",
       "question": "Why does POST /api/platform/localizable-settings/{name}/dictionary-items return 500 'An item with the same key has already been added. Key: <lang>' even for an unchanged payload?",
+      "questions": [
+        "Why can't I save the translations of order statuses in the admin - it always gives a server error?",
+        "POST /api/platform/localizable-settings/{name}/dictionary-items 500 same key already been added",
+        "What causes 'An item with the same key has already been added. Key: en-US' on a localizable dictionary setting save?",
+        "Why doesn't GET /api/platform/localizable-settings show the offending localized row?",
+        "How is a localizable setting save failure from case-colliding aliases ('new' vs 'New') recovered?",
+        "Which platform versions showed the Order.Status localizable settings save 500?"
+      ],
+      "concepts": [
+        "platform-settings",
+        "localization",
+        "api-error"
+      ],
       "anchors": [
         "POST /api/platform/localizable-settings/{name}/dictionary-items",
         "GET /api/platform/localizable-settings"
       ],
       "scope": [
-        "surface=admin-api"
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6108,12 +6498,24 @@
       "path": "entries/KB-813DD6AC.md",
       "subject": "loyaltyMissionProgress daysRemaining reads ceil of days to EndDate on the server clock",
       "question": "How is loyaltyMissionProgress daysRemaining computed and which value does a mission N days out read?",
+      "questions": [
+        "How many days left does a loyalty challenge show when it ends in 20 minutes?",
+        "Query.loyaltyMissionProgress daysRemaining ceil EndDate UtcNow",
+        "Is loyalty mission daysRemaining stored or computed per request?",
+        "What does daysRemaining return for a mission without an EndDate?",
+        "How should EndDate be set so a mission reads exactly N days remaining?"
+      ],
+      "concepts": [
+        "loyalty-mission",
+        "timestamp",
+        "graphql-api"
+      ],
       "anchors": [
         "Query.loyaltyMissionProgress",
         "LoyaltyUserMission.daysRemaining"
       ],
       "scope": [
-        "surface=graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6152,11 +6554,22 @@
       "path": "entries/KB-8246C473.md",
       "subject": "An organization address of type BillingAndShipping cannot be marked default",
       "question": "Can POST /api/members create an organization whose address is BillingAndShipping with isDefault true?",
+      "questions": [
+        "Can a company have one default address used for both billing and shipping?",
+        "POST /api/members BillingAndShipping isDefault 400",
+        "What error does creating an organization with a default BillingAndShipping address return?",
+        "How do I create an organization with default billing and default shipping addresses via the API?"
+      ],
+      "concepts": [
+        "address",
+        "organization",
+        "api-error"
+      ],
       "anchors": [
         "POST /api/members"
       ],
       "scope": [
-        "surface=admin-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6222,13 +6635,25 @@
       "path": "entries/KB-843D0515.md",
       "subject": "Deleting an org a Sales Rep serves leaves it in the rep record; a PUT /api/sales-rep that echoes it back 500s",
       "question": "What happens to a Sales Rep's served organizations when one of those organizations is deleted via DELETE /api/members?",
+      "questions": [
+        "If a company served by a sales rep is deleted, does it disappear from the rep's customers?",
+        "PUT /api/sales-rep 500 FK_MemberRelation_Member_AncestorId deleted organization",
+        "Does DELETE /api/members on an organization remove its OrganizationMembership rows?",
+        "Why does a read-modify-write PUT /api/sales-rep fail after one served org was deleted?",
+        "Does removing an org from organizations[] in PUT /api/sales-rep delete the rep's membership?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "organization",
+        "member-deletion"
+      ],
       "anchors": [
         "PUT /api/sales-rep",
         "DELETE /api/members",
         "GET /api/sales-rep/{id}"
       ],
       "scope": [
-        "surface=admin-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6295,11 +6720,23 @@
       "path": "entries/KB-85F02FDB.md",
       "subject": "Admin Return blade field set and Line items columns for an admin-created return",
       "question": "Which fields does the Admin SPA Return blade and its Line items blade show for a return created via Add new return?",
+      "questions": [
+        "What fields does an admin see when creating a product return in the back office?",
+        "/api/return Add new return blade fields Line items columns",
+        "Which statuses does the Status dropdown offer for a New return in the Admin SPA?",
+        "Is Buyer's reference filled for a return created via Returns > Add new return?",
+        "Is the Approved column pre-filled on an admin-created return's Line items blade?"
+      ],
+      "concepts": [
+        "return",
+        "return-status",
+        "admin-order-screen"
+      ],
       "anchors": [
         "/api/return"
       ],
       "scope": [
-        "surface=admin-spa"
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6374,6 +6811,17 @@
       "path": "entries/KB-8A2F58EA.md",
       "subject": "xAPI returnableItems caps returnableQuantity at deliveredQuantity, computed per line",
       "question": "Is returnableItems returnableQuantity capped by deliveredQuantity or orderedQuantity, and is it per line?",
+      "questions": [
+        "Can a buyer return items that were ordered but not yet delivered?",
+        "Query.returnableItems returnableQuantity deliveredQuantity orderedQuantity",
+        "With orderedQuantity 10 and deliveredQuantity 4, what returnableQuantity does xAPI return?",
+        "Is returnableQuantity reported per order line or as one value per return?"
+      ],
+      "concepts": [
+        "returnable-quantity",
+        "return",
+        "order-line-item"
+      ],
       "anchors": [
         "Query.returnableItems"
       ],
@@ -6588,13 +7036,27 @@
       "path": "entries/KB-8F61528A.md",
       "subject": "Sharing targets of an unserved or deleted organization, as the list owner sees them",
       "question": "What happens to a rep's Customer share when a targeted organization stops being served or is deleted?",
+      "questions": [
+        "What happens to a shared shopping list when the customer company is deleted or no longer served by the rep?",
+        "Mutation.changeWishlist sharing targets unserved organization Access denied",
+        "Why does the storefront Share dialog show a raw GUID as a recipient?",
+        "Can a rep add an organization they no longer serve to a list's sharing targets?",
+        "Does a member token minted before the organization delete keep Read on a shared list?",
+        "Does salesRepCustomers include a deleted organization?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "sales-rep",
+        "member-deletion"
+      ],
       "anchors": [
         "Mutation.changeWishlist",
         "PUT /api/sales-rep",
         "DELETE /api/members"
       ],
       "scope": [
-        "surface=graphql"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6719,6 +7181,18 @@
       "path": "entries/KB-91DF8883.md",
       "subject": "Share-list dialog: 'Change who can access?' confirm on every scope swap, including widening to Anyone with link",
       "question": "Which confirmation does the storefront Share list dialog show for each scope transition, and is its copy accurate?",
+      "questions": [
+        "Does the storefront warn me that changing a shared list to 'Anyone with link' makes it public?",
+        "/account/lists Share dialog 'Change who can access?' confirmation scope swap",
+        "Which confirmation appears when switching a shared list back to Private?",
+        "Is there any confirmation when removing a customer from a Specific customers share?",
+        "Does Private to Anyone with link reuse the old sharing key?",
+        "Does Esc on the share-scope confirmation close the whole Share dialog?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "wishlist"
+      ],
       "anchors": [
         "/account/lists",
         "/shared-list",
@@ -6726,7 +7200,8 @@
         "Query.sharedWishlist"
       ],
       "scope": [
-        "surface=storefront-ui"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6849,6 +7324,16 @@
       "path": "entries/KB-93FFCC74.md",
       "subject": "Storefront return wizard rejects a disallowed attachment extension client-side, without calling the upload endpoint",
       "question": "What happens on /account/returns/{id}/edit when the buyer attaches a .xlsx file?",
+      "questions": [
+        "Can a buyer attach an Excel file as a photo when returning products?",
+        "/account/returns/{id}/edit .xlsx 'File format is not allowed' return-attachments",
+        "Is a disallowed return attachment rejected client-side or by /api/files/return-attachments?",
+        "Which file types and size limit are allowed for return wizard attachments?"
+      ],
+      "concepts": [
+        "return",
+        "asset"
+      ],
       "anchors": [
         "/account/returns/{}/edit"
       ],
@@ -7129,6 +7614,18 @@
       "path": "entries/KB-9AF5645D.md",
       "subject": "With PasswordLogin DetailedErrors off, the storefront OTP flow does not reveal whether an email has an account: an unknown address gets \"Check your email\", no email is sent, and a wrong code returns the same invalid_code as for a real account",
       "question": "Does the storefront OTP sign-in disclose whether an email is registered when DetailedErrors is off?",
+      "questions": [
+        "Can someone find out whether an email is registered by using the email code login?",
+        "POST /api/otp/request unregistered email DetailedErrors off maskedEmail succeeded",
+        "Is an OTP email sent for an unknown address when DetailedErrors is off?",
+        "Is the 'count' in the POST /connect/token invalid_code response a per-user failed-attempt counter?",
+        "What does OTP request return for an unknown email when DetailedErrors is on?"
+      ],
+      "concepts": [
+        "otp",
+        "sign-in",
+        "platform-settings"
+      ],
       "anchors": [
         "POST /api/otp/request",
         "POST /connect/token",
@@ -7137,6 +7634,7 @@
       "scope": [
         "feature=otp-email-sign-in",
         "setting=detailederrors-off",
+        "surface=rest",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -7454,6 +7952,18 @@
       "path": "entries/KB-A240F961.md",
       "subject": "Sales Rep customer-orders list: card layout below 1024px, order link opens buyer order details",
       "question": "At what viewport does the Sales Rep customer orders list switch from mobile cards to a table, and where does the order-number link go?",
+      "questions": [
+        "At what screen width does the sales rep's customer orders list stop showing cards?",
+        "/company/customer-orders 1024px table mobile cards breakpoint",
+        "Where does the order number link go from /company/my-customers/:organizationId/orders?",
+        "Which columns are sortable in the Sales Rep customer orders table?",
+        "Do long order numbers overflow the card on the Sales Rep orders widget?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "mobile-layout",
+        "customer-order"
+      ],
       "anchors": [
         "/company/my-customers",
         "/company/customer-orders",
@@ -7588,6 +8098,17 @@
       "path": "entries/KB-A424AB94.md",
       "subject": "The storefront sign-in page does not remember the password-view choice or the typed email: reload and every view switch return to an empty one-time-code view",
       "question": "Does the storefront /sign-in page keep the password view or the typed email when switching views or reloading?",
+      "questions": [
+        "Does the login page remember that I chose to sign in with a password after reload?",
+        "/sign-in password view email field empty one-time code view switch",
+        "Is the typed email carried over when switching from the code view to the password view?",
+        "Does the password sign-in on /sign-in honour returnUrl?",
+        "What happens when a signed-in user opens /sign-in?"
+      ],
+      "concepts": [
+        "sign-in",
+        "otp"
+      ],
       "anchors": [
         "/sign-in"
       ],
@@ -7627,12 +8148,23 @@
       "path": "entries/KB-A4ABEFEA.md",
       "subject": "Notification journal search returns full email bodies; keyword matches the recipient",
       "question": "How do I read the sent email body for a recipient from POST /api/notifications/journal?",
+      "questions": [
+        "How can a tester read the email that was sent to a customer?",
+        "POST /api/notifications/journal keyword recipient body",
+        "Does the notification journal search response include the email body, or is GET /api/notifications/journal/{id} needed?",
+        "What does keyword match in the notification journal search?",
+        "Is the email body stored when SMTP is not configured and the journal status is Error?"
+      ],
+      "concepts": [
+        "notification",
+        "rest-api"
+      ],
       "anchors": [
         "POST /api/notifications/journal",
         "GET /api/notifications/journal/{id}"
       ],
       "scope": [
-        "surface=admin-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7728,6 +8260,18 @@
       "path": "entries/KB-A8067930.md",
       "subject": "A vc-shell embedded app renders its own environment badge inside the platform iframe even though the shell knows it is embedded, so the badge appears twice.",
       "question": "Why does the environment badge (e.g. \"QA\") appear twice on an admin workspace/embedded-app page, and does every embedded app do it?",
+      "questions": [
+        "Why does the 'QA' label appear twice on the admin push messages page?",
+        "/apps/push-messages vc-environment-banner EmbeddedMode duplicate badge",
+        "Which embedded apps double the environment badge and which do not?",
+        "How is the environment badge text derived in vc-shell: hostname, env var or setting?",
+        "Is the doubled environment banner a per-module or a vc-shell framework version behaviour?"
+      ],
+      "concepts": [
+        "vendor-portal",
+        "push-message",
+        "platform-version"
+      ],
       "anchors": [
         "/apps/push-messages",
         "/apps/vc-sales-rep",
@@ -7738,7 +8282,7 @@
       "scope": [
         "component=vc-shell-framework",
         "feature=environment-banner",
-        "surface=admin-spa"
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7960,6 +8504,18 @@
       "path": "entries/KB-AA7CCB07.md",
       "subject": "Draft quote request: Save changes after a line quantity edit keeps catalog prices",
       "question": "Does saving a quantity edit on a draft quote request (RFQ) zero the line prices?",
+      "questions": [
+        "Does changing the quantity in a draft request for quote reset the prices to zero?",
+        "Mutation.changeQuoteItemQuantity Draft quote Save changes listPrice",
+        "Which mutations does Save changes send on a draft quote request edit page?",
+        "Why is a gift line at 0.00 in a quote created from the cart?",
+        "Do quote totals recompute after a quantity change on a draft RFQ?"
+      ],
+      "concepts": [
+        "quote",
+        "price",
+        "totals"
+      ],
       "anchors": [
         "Mutation.changeQuoteItemQuantity",
         "Query.quote",
@@ -7967,7 +8523,8 @@
       ],
       "scope": [
         "module=virtocommerce.quote",
-        "surface=storefront-ui"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8009,11 +8566,22 @@
       "path": "entries/KB-ABB5F450.md",
       "subject": "Admin Notification list search matches the notification type key, not the localized display name",
       "question": "does the Admin SPA Notifications > Notification list keyword search match the localized (e.g. German) display name",
+      "questions": [
+        "Why can't I find notifications by their German name in the admin?",
+        "/workspace/notifications search keyword localized display name",
+        "Does the Notification list search match the type key or the translated name?",
+        "Searching 'Rück' vs 'Return' in Notifications list with German admin UI"
+      ],
+      "concepts": [
+        "notification",
+        "localization",
+        "member-search"
+      ],
       "anchors": [
         "/workspace/notifications"
       ],
       "scope": [
-        "surface=admin-spa"
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8025,13 +8593,24 @@
       "path": "entries/KB-AC05FCD4.md",
       "subject": "The Push Messages audience-builder mode shown when a saved message is reopened is derived from the stored recipients query, not persisted alongside it.",
       "question": "Does a push message saved in 'Advanced query' mode reopen in that mode?",
+      "questions": [
+        "Why does my push notification saved with an advanced query reopen as conditions?",
+        "/api/push-message Advanced query mode reopen Match by conditions",
+        "Is the audience-builder mode stored with a push message draft?",
+        "Which phrase should a test use to assert an 'Advanced query' round-trip?",
+        "When does the 'Back to conditions' link appear in the Push Messages audience section?"
+      ],
+      "concepts": [
+        "push-message",
+        "push-audience"
+      ],
       "anchors": [
         "/api/push-message",
         "POST /api/push-message/preview-recipients"
       ],
       "scope": [
         "module=virtocommerce.pushmessages",
-        "surface=admin-spa",
+        "surface=admin-ui",
         "version=3.1006.0-pr-28"
       ],
       "plane": "experiential",
@@ -8044,6 +8623,18 @@
       "path": "entries/KB-ACC12F26.md",
       "subject": "A punchout user mapping accepts an unvalidated userId (incl. an administrator account), yielding a privilege-escalation sign-in via the anonymous cXML + punchout grant chain",
       "question": "Does POST /api/punchout-user-mappings validate userId against the contact, and can a punchout mapping bind an administrator account to escalate privilege?",
+      "questions": [
+        "Can someone who is only allowed to create punchout mappings end up signed in as an administrator?",
+        "POST /api/punchout-user-mappings userId validation administrator account",
+        "Does the punchout grant on /connect/token issue a token with role __administrator when the mapping points at an admin user?",
+        "Which identity does a punchout sign-in use: the mapping's userId or its memberId contact?",
+        "Does PunchoutGrantTypeHandler reject administrator or mismatched-contact users before issuing a token?"
+      ],
+      "concepts": [
+        "access-token",
+        "permission",
+        "sign-in"
+      ],
       "anchors": [
         "POST /api/punchout-user-mappings",
         "POST /connect/token",
@@ -8051,7 +8642,7 @@
       ],
       "scope": [
         "module=virtocommerce.punchout",
-        "surface=platform-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8240,6 +8831,18 @@
       "path": "entries/KB-AF607E75.md",
       "subject": "With DetailedErrors on, the storefront OTP form tells an unknown email \"User not found. Ensure you've entered the correct information\" and stays on the email step, while a known email gets \"Check your email\"",
       "question": "Does the storefront OTP sign-in form show the same screen for an unregistered email as for a registered one?",
+      "questions": [
+        "Does the email-code login screen reveal whether an email address has an account?",
+        "POST /api/otp/request user_not_found unknown email DetailedErrors",
+        "What message does /sign-in show for an unregistered email in one-time password sign-in?",
+        "Does the OTP 'User not found' alert clear when the user edits the email field?",
+        "Is account existence disclosed on the storefront OTP form when DetailedErrors is on?"
+      ],
+      "concepts": [
+        "otp",
+        "sign-in",
+        "api-error"
+      ],
       "anchors": [
         "/sign-in",
         "POST /api/otp/request"
@@ -8392,11 +8995,23 @@
       "path": "entries/KB-B59A1F9D.md",
       "subject": "Organization-scope wishlist: any Write member who sends changeWishlist with a scope becomes the list owner",
       "question": "Can a non-owner org member with Write access change a wishlist's sharing scope via changeWishlist, and what happens to ownership?",
+      "questions": [
+        "Can a colleague with edit rights on a company shopping list take it over from the person who made it?",
+        "Mutation.changeWishlist scope Organization Write member ownership customerId",
+        "Does calling changeWishlist with an unchanged Organization scope transfer list ownership to the caller?",
+        "After a non-owner switches an organization list to Private, can the original owner still open it?",
+        "Does a rename-only changeWishlist by a Write member change who owns the list?"
+      ],
+      "concepts": [
+        "wishlist",
+        "list-sharing",
+        "organization-member"
+      ],
       "anchors": [
         "Mutation.changeWishlist"
       ],
       "scope": [
-        "surface=graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8771,12 +9386,23 @@
       "path": "entries/KB-BDCD3057.md",
       "subject": "Admin 'Add new return' creates a return in status New that the buyer sees on /account/returns",
       "question": "what status does a return created from the Admin SPA Returns 'Add new return' blade get, and does the buyer see it",
+      "questions": [
+        "If an admin creates a product return for a customer in the back office, does the customer see it in their account?",
+        "/workspace/Return Add new return status New legacy",
+        "What statuses does the status dropdown offer on a return created through Admin 'Add new return'?",
+        "Does an admin-created return appear on /account/returns next to Requested and Partially approved returns?"
+      ],
+      "concepts": [
+        "return",
+        "return-status"
+      ],
       "anchors": [
         "/workspace/Return",
         "/account/returns"
       ],
       "scope": [
-        "surface=admin-spa"
+        "surface=admin-ui",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8788,6 +9414,17 @@
       "path": "entries/KB-BE7DF8DA.md",
       "subject": "Customer share switched to AnyoneAnonymous: targets and message cleared, key kept",
       "question": "What happens to a Customer-scope wishlist share when changeWishlist sets scope AnyoneAnonymous?",
+      "questions": [
+        "When a list shared with specific customers is switched to 'anyone with the link', what happens to the people it was shared with and the message?",
+        "Mutation.changeWishlist AnyoneAnonymous targets message cleared sharingSetting.id",
+        "Can a former target organization member still read a list by listId after it is switched to AnyoneAnonymous?",
+        "Why does switching a list back to Customer scope fail with INVALID_OPERATION?",
+        "Is the sharing key kept when a Customer-scope share changes to AnyoneAnonymous?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "wishlist"
+      ],
       "anchors": [
         "Mutation.changeWishlist",
         "Query.sharedWishlist"
@@ -8920,11 +9557,24 @@
       "path": "entries/KB-C239652A.md",
       "subject": "Punchout PunchOutSetupRequest returns StartPage that signs the mapped user in",
       "question": "What does POST /api/punchout/cxml return for a valid PunchOutSetupRequest and what happens when the StartPage is opened?",
+      "questions": [
+        "How does a procurement system's punchout setup request log a buyer into the store?",
+        "POST /api/punchout/cxml PunchOutSetupRequest StartPage URL token",
+        "What does the storefront show after opening a punchout StartPage URL: which user, organization and header label?",
+        "What store setting and mapping are required for a cXML PunchOutSetupRequest to return Status 200 OK?",
+        "What is the format of the punchout StartPage URL returned in PunchOutSetupResponse?"
+      ],
+      "concepts": [
+        "sign-in",
+        "organization",
+        "site-header"
+      ],
       "anchors": [
         "/api/punchout/cxml",
         "/punchout"
       ],
       "scope": [
+        "surface=rest",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -8937,6 +9587,18 @@
       "path": "entries/KB-C298769B.md",
       "subject": "Header search box follows the results page: empty during a barcode lookup, shows q only when the page ran a keyword search",
       "question": "What does the storefront header search box show on /search when the URL has both barcode and q?",
+      "questions": [
+        "Why is the top search box empty after scanning a barcode even though the address has a search term?",
+        "/search barcode q header search box value",
+        "Which of barcode and q wins when both are in the /search URL and the first barcode value is empty or whitespace?",
+        "Does pressing Enter in an empty header search box show all products?",
+        "Does a search submitted while already on /search push a new history entry or replace it?"
+      ],
+      "concepts": [
+        "barcode-search",
+        "product-search",
+        "site-header"
+      ],
       "anchors": [
         "/search"
       ],
@@ -9038,6 +9700,16 @@
       "path": "entries/KB-C4597892.md",
       "subject": "/account/missions renders no skeleton for the mission-card grid; the footer jumps ~1.2k px when the cards arrive (CLS ~0.115)",
       "question": "Does the /account/missions card grid show a skeleton while loading, and does the page shift when mission cards resolve?",
+      "questions": [
+        "Does the missions page jump around while the mission cards load?",
+        "/account/missions skeleton CLS footer layout shift",
+        "What CLS value was measured on /account/missions and what element dominates it?",
+        "Does the .missions__cards grid render skeleton placeholders before the mission cards arrive?"
+      ],
+      "concepts": [
+        "layout-shift",
+        "loyalty-mission"
+      ],
       "anchors": [
         "/account/missions"
       ],
@@ -9280,13 +9952,24 @@
       "path": "entries/KB-C992D3B8.md",
       "subject": "Adding PerSku mission targets to the cart does not move mission progress",
       "question": "Does adding a PerSku mission's target product to the cart (or removing it) change loyaltyMissionProgress?",
+      "questions": [
+        "If I put a mission's product in my basket, does my challenge progress go up?",
+        "Query.loyaltyMissionProgress PerSku add to cart currentQuantity",
+        "Does removing a PerSku target line from the cart change mission percentage?",
+        "What action actually accrues progress on a PerSku loyalty mission?"
+      ],
+      "concepts": [
+        "loyalty-mission",
+        "add-to-cart"
+      ],
       "anchors": [
         "/account/missions",
         "Query.loyaltyMissionProgress",
         "Mutation.updateCartQuantity"
       ],
       "scope": [
-        "surface=storefront-ui"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9298,12 +9981,24 @@
       "path": "entries/KB-CA2AE929.md",
       "subject": "An invalid /punchout/&lt;token&gt; start page silently lands the visitor on the anonymous homepage; the grant answers 400 login_failed",
       "question": "What does a buyer see when the punchout start-page token is invalid or expired?",
+      "questions": [
+        "What does a buyer see if the punchout link from their purchasing system has expired?",
+        "/punchout/:sessionToken invalid token POST /connect/token grant_type=punchout login_failed",
+        "Does an invalid punchout start page token show an error message on the storefront?",
+        "What does the punchout grant return when session_token is missing?"
+      ],
+      "concepts": [
+        "sign-in",
+        "access-token",
+        "api-error"
+      ],
       "anchors": [
         "/punchout/:sessionToken",
         "POST /connect/token"
       ],
       "scope": [
         "module=virtocommerce.punchout",
+        "surface=rest",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -9497,6 +10192,17 @@
       "path": "entries/KB-CE2F9A45.md",
       "subject": "Missions SKU modal at 375px: footer is visually Add to cart above Close but the DOM/tab order is Close then Add to cart; stepper buttons sit 1 px from the quantity input",
       "question": "What are the tab order and target gaps in the missions SKU modal on mobile?",
+      "questions": [
+        "On a phone, does tabbing through the mission product popup go in the order the buttons appear?",
+        "/account/missions SKU modal 375 tab order Close Add to cart DOM order",
+        "How large is the gap between the quantity stepper buttons and the input in the missions SKU modal?",
+        "How do cart subtotal and Total units render when zero in the missions SKU modal?"
+      ],
+      "concepts": [
+        "accessibility",
+        "mobile-layout",
+        "loyalty-mission"
+      ],
       "anchors": [
         "/account/missions"
       ],
@@ -9652,6 +10358,16 @@
       "path": "entries/KB-D12432BD.md",
       "subject": "loyaltyMissionProgress reports tracked stock as availableQuantity on a PerSku target",
       "question": "Does loyaltyMissionProgress items[].product.availabilityData carry a stock quantity for a PerSku target?",
+      "questions": [
+        "Does the mission progress response tell me how many of a target product are in stock?",
+        "Query.loyaltyMissionProgress items product availabilityData availableQuantity PerSku",
+        "Does availableQuantity in loyaltyMissionProgress equal the inventory inStockQuantity at the main fulfillment center?",
+        "With trackInventory true and stock 5, what isInStock/isBuyable flags does a PerSku target return?"
+      ],
+      "concepts": [
+        "loyalty-mission",
+        "inventory"
+      ],
       "anchors": [
         "Query.loyaltyMissionProgress",
         "PUT /api/inventory/plenty"
@@ -9761,6 +10477,18 @@
       "path": "entries/KB-D3328AFF.md",
       "subject": "Wishlist sharing deprecation shape: no plural sharingSettings, singular sharingSetting not deprecated, sharedWithId deprecated",
       "question": "Is WishlistType.sharingSetting or SharingSettingType.sharedWithId deprecated in the multi-target sharing build, and is there a plural sharingSettings field?",
+      "questions": [
+        "Which wishlist sharing fields are being phased out in the new multi-recipient sharing build?",
+        "WishlistType.sharingSetting SharingSettingType.sharedWithId isDeprecated introspection",
+        "Is there a plural sharingSettings field on WishlistType?",
+        "What replaces SharingSettingType.sharedWithId and what fields does SharingTargetType have?",
+        "Do InputChangeWishlistType and InputCreateWishlistType still accept sharedWithId?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "wishlist",
+        "graphql-api"
+      ],
       "anchors": [
         "WishlistType.sharingSetting",
         "SharingSettingType.sharedWithId"
@@ -9979,6 +10707,17 @@
       "path": "entries/KB-D84CA5F2.md",
       "subject": "Push Messages builder: 'is any of' cannot build a multi-value phrase on an enum field",
       "question": "In the Push Messages audience builder, does the 'is any of' operator on a dropdown-backed field (Customer type, Status) produce a comma-separated multi-value phrase?",
+      "questions": [
+        "Can I target push notifications at several customer types at once using 'is any of'?",
+        "Push Messages audience builder is any of Customer type Status single-select membertype",
+        "Why is the 'is any of' phrase identical to the 'is' phrase for an enum field in the push audience builder?",
+        "Which push audience fields do accumulate multiple values under 'is any of'?",
+        "Why does the push audience value control show a raw JSON array like [ \"Contact\" ]?"
+      ],
+      "concepts": [
+        "push-audience",
+        "push-message"
+      ],
       "anchors": [
         "GET /api/push-message"
       ],
@@ -10093,6 +10832,16 @@
       "path": "entries/KB-D9DF8E54.md",
       "subject": "The storefront serves its index HTML with cache-control max-age=7200, so after a theme deploy a returning browser keeps loading the previous bundle for up to 2 hours",
       "question": "Why does a storefront still show the old theme build after a successful theme deploy?",
+      "questions": [
+        "Why do I still see the old storefront version after the new theme was deployed?",
+        "/sign-in cache-control max-age=7200 index HTML theme deploy",
+        "How long can a returning browser keep loading the previous theme bundle after a deploy?",
+        "How should a tester verify that a new theme build is actually live?"
+      ],
+      "concepts": [
+        "theme",
+        "platform-version"
+      ],
       "anchors": [
         "/sign-in"
       ],
@@ -10522,6 +11271,17 @@
       "path": "entries/KB-E423C32F.md",
       "subject": "Page Builder Designer actions menus: clipboard is read on Paste click, not on menu open (PR-165 build)",
       "question": "Does the Page Builder Designer section/page actions menu need clipboard-read permission to render, and when is the clipboard payload validated?",
+      "questions": [
+        "Does the page editor need clipboard permission just to open its section menu?",
+        "page-builder-designer section actions Paste clipboard readText permission",
+        "What happens when Paste is clicked in the Page Builder Designer with clipboard permission denied?",
+        "What message appears when pasting invalid clipboard data into the Page Builder Designer?",
+        "Are Paste entries disabled in the Designer actions menu when clipboard-read is denied?"
+      ],
+      "concepts": [
+        "content-page",
+        "permission"
+      ],
       "anchors": [
         "/Modules/$(VirtoCommerce.PageBuilderModule)/Content/page-builder-designer/index.html"
       ],
@@ -10566,13 +11326,23 @@
       "path": "entries/KB-E7007F44.md",
       "subject": "loyaltyMissionProgress returns items[].product null for a PerSku target whose product was deleted; an inactive product still returns flags",
       "question": "When does loyaltyMissionProgress items[].product come back without availabilityData?",
+      "questions": [
+        "What happens to a mission's product row if the product is deleted from the catalog?",
+        "Query.loyaltyMissionProgress LoyaltyMissionProgressItem.product null deleted product",
+        "Does an inactive PerSku target product come back null or with all availability flags false?",
+        "Does deleting a catalog product remove its loyalty mission goal item?"
+      ],
+      "concepts": [
+        "loyalty-mission",
+        "product"
+      ],
       "anchors": [
         "Query.loyaltyMissionProgress",
         "LoyaltyMissionProgressItem.product",
         "POST /api/loyalty-mission-goal-items"
       ],
       "scope": [
-        "surface=graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -10646,6 +11416,16 @@
       "path": "entries/KB-E8234FA0.md",
       "subject": "Never-shared wishlist: sharingSetting.id is a fresh random id on every read; first share keeps a client-sent sharingKey",
       "question": "What does wishlist.sharingSetting.id return for a list that was never shared, and which key does the first share persist?",
+      "questions": [
+        "Why does the share id of a list I never shared change every time I load it?",
+        "WishlistType.sharingSetting.id never shared random GUID sharedWishlist null",
+        "Which sharingKey is persisted on the first changeWishlist that shares a list?",
+        "Is the sharingSetting.id of an unshared wishlist usable as an anonymous sharing key?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "wishlist"
+      ],
       "anchors": [
         "WishlistType.sharingSetting",
         "Mutation.changeWishlist"
@@ -10902,6 +11682,16 @@
       "path": "entries/KB-EC1EDCE2.md",
       "subject": "GET loyalty balance/organization/{id} returns 200 with a balance for an organization id that no longer exists; the ledger outlives the organization",
       "question": "What does the loyalty organization balance REST route return when the organization has been deleted?",
+      "questions": [
+        "Do a company's loyalty points still exist after the company is deleted?",
+        "GET /api/loyalty-program-operation-log/balance/organization/{organizationId} deleted organization 200",
+        "Does the loyalty organization balance route validate that the organization exists?",
+        "What does a storefront customer whose organization was deleted see as loyalty balance?"
+      ],
+      "concepts": [
+        "loyalty",
+        "organization"
+      ],
       "anchors": [
         "GET /api/loyalty-program-operation-log/balance/organization/{organizationId}",
         "GET /api/loyalty-program-operation-log/balance/user/{userId}"
@@ -10909,7 +11699,7 @@
       "scope": [
         "mode=customer",
         "module=loyalty",
-        "surface=admin-rest"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11095,11 +11885,22 @@
       "path": "entries/KB-EDF22BE8.md",
       "subject": "Shared Components workspace: Escape closes Component details and Rename dialog",
       "question": "page-builder-shared-components Component details Rename: does Escape close them and where does focus go?",
+      "questions": [
+        "Can I close the shared component details panel with the Escape key?",
+        "page-builder-shared-components Escape Component details Rename dialog focus",
+        "Where does focus go after Escape cancels the Rename shared component dialog?",
+        "At 375px does a floating button overlap the Rename button in the Shared Components workspace?"
+      ],
+      "concepts": [
+        "accessibility",
+        "content-page",
+        "mobile-layout"
+      ],
       "anchors": [
         "/page-builder-shell/page-builder-shared-components"
       ],
       "scope": [
-        "surface=admin-spa"
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11287,6 +12088,17 @@
       "path": "entries/KB-EFFB28BE.md",
       "subject": "Member addresses carry separate name and description fields; the storefront address Description column reads description",
       "question": "Why is the Description column empty in the storefront select-address table when the organization address has a name set?",
+      "questions": [
+        "Why is the Description column blank when choosing a company address at checkout?",
+        "POST /api/members address name description Query.me organization addresses",
+        "Which address field does the storefront select-address Description column read?",
+        "Are a member address's name and description stored as separate fields?"
+      ],
+      "concepts": [
+        "address",
+        "organization",
+        "checkout"
+      ],
       "anchors": [
         "POST /api/members",
         "Query.me",
@@ -11294,6 +12106,7 @@
       ],
       "scope": [
         "module=customer",
+        "surface=storefront-ui",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -11626,6 +12439,17 @@
       "path": "entries/KB-F6F89D31.md",
       "subject": "Picking a company in the Push Messages audience expands recursively into its sub-companies, counts only members holding a login, and that previewed count equals what is delivered.",
       "question": "Does picking a company as a push audience include the companies under it, and does the previewed count match the delivered count?",
+      "questions": [
+        "If I send a push notification to a parent company, do people in its sub-companies get it too?",
+        "POST /api/push-message/preview-recipients company recursive sub-companies count",
+        "Are contacts without a login counted in the push message recipient estimate?",
+        "Does the previewed push recipient count equal the Recipients count after sending?"
+      ],
+      "concepts": [
+        "push-audience",
+        "push-message",
+        "organization"
+      ],
       "anchors": [
         "POST /api/push-message/preview-recipients",
         "POST /api/push-message/search-recipients",
@@ -11633,7 +12457,8 @@
       ],
       "scope": [
         "module=virtocommerce.pushmessages",
-        "surface=admin-spa",
+        "surface=admin-ui",
+        "surface=rest",
         "version=3.1006.0-pr-28"
       ],
       "plane": "experiential",
@@ -11735,11 +12560,21 @@
       "path": "entries/KB-F7E4DB8E.md",
       "subject": "customerOrders/search keyword is a prefix match, results newest first",
       "question": "Does POST /api/order/customerOrders/search with keyword=<order number> return only that order?",
+      "questions": [
+        "Searching orders by an order number returns several orders - why?",
+        "POST /api/order/customerOrders/search keyword prefix match order number",
+        "In what order does customerOrders/search return results and how can a small take miss the exact order?",
+        "How do I reliably find one order by exact number via customerOrders/search?"
+      ],
+      "concepts": [
+        "customer-order",
+        "order-number"
+      ],
       "anchors": [
         "POST /api/order/customerOrders/search"
       ],
       "scope": [
-        "surface=rest-api"
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11889,11 +12724,22 @@
       "path": "entries/KB-FA3338C3.md",
       "subject": "Page Builder Designer section tree is keyboard operable (PageBuilderModule 3.1030 pr-165)",
       "question": "page-builder-designer section tree keyboard: can Tab reach section rows and can sections be reordered by keyboard?",
+      "questions": [
+        "Can I rearrange page sections in the page editor without a mouse?",
+        "page-builder-designer section tree Tab Move section ArrowUp ArrowDown aria-live",
+        "What is the Tab order through a section row in the Page Builder Designer?",
+        "What does the aria-live region announce when a section is moved by keyboard?",
+        "Where does focus return when Escape closes the Add block panel?"
+      ],
+      "concepts": [
+        "accessibility",
+        "content-page"
+      ],
       "anchors": [
         "/page-builder-designer/pages"
       ],
       "scope": [
-        "surface=admin-spa"
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",

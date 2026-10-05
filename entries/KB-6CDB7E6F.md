@@ -3,6 +3,15 @@ id: KB-6CDB7E6F
 subject: Storefront return details page shows 'Return' title placeholder while GetReturn loads
 plane: experiential
 question: What does /account/returns/{id} show as title and breadcrumb while the return is loading?
+questions:
+  - text: Why does the return details page briefly show just 'Return' as the title?
+  - text: /account/returns/{id} GetReturn loading h1 breadcrumb placeholder
+  - text: How long does the 'Return' title placeholder last before the return number appears?
+  - text: How tall are the return-quantity inputs on the return wizard and edit pages?
+  - text: What happens to a return quantity field when a value above the returnable quantity is typed on /account/returns/{id}/edit?
+concepts:
+  - id: return
+  - id: returnable-quantity
 status: active
 appliesTo:
   - axis: surface

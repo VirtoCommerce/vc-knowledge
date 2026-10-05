@@ -3,6 +3,14 @@ id: KB-93FFCC74
 subject: Storefront return wizard rejects a disallowed attachment extension client-side, without calling the upload endpoint
 plane: experiential
 question: What happens on /account/returns/{id}/edit when the buyer attaches a .xlsx file?
+questions:
+  - text: Can a buyer attach an Excel file as a photo when returning products?
+  - text: /account/returns/{id}/edit .xlsx 'File format is not allowed' return-attachments
+  - text: Is a disallowed return attachment rejected client-side or by /api/files/return-attachments?
+  - text: Which file types and size limit are allowed for return wizard attachments?
+concepts:
+  - id: return
+  - id: asset
 status: active
 appliesTo:
   - axis: surface

@@ -3,12 +3,21 @@ id: KB-CE2F9A45
 subject: "Missions SKU modal at 375px: footer is visually Add to cart above Close but the DOM/tab order is Close then Add to cart; stepper buttons sit 1 px from the quantity input"
 plane: experiential
 question: What are the tab order and target gaps in the missions SKU modal on mobile?
+questions:
+  - text: On a phone, does tabbing through the mission product popup go in the order the buttons appear?
+  - text: /account/missions SKU modal 375 tab order Close Add to cart DOM order
+  - text: How large is the gap between the quantity stepper buttons and the input in the missions SKU modal?
+  - text: How do cart subtotal and Total units render when zero in the missions SKU modal?
+concepts:
+  - id: accessibility
+  - id: mobile-layout
+  - id: loyalty-mission
 status: active
 appliesTo:
-  - axis: surface
-    value: storefront-ui
   - axis: viewport
     value: 375
+  - axis: surface
+    value: storefront-ui
 anchors:
   - coordinate: /account/missions
 evidence:

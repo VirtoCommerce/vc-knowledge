@@ -3,6 +3,15 @@ id: KB-33B89BDD
 subject: OTP request for an unregistered email returns succeeded:false with code user_not_found (DetailedErrors on); a 255-char email is refused 400 by MaxLength(254) while the storefront form lets it through
 plane: experiential
 question: What does POST /api/otp/request return for an unknown email or an over-long email, and which layer rejects the length?
+questions:
+  - text: Does the sign-in-by-code request reveal that an email address has no account?
+  - text: POST /api/otp/request user_not_found succeeded false unknown email
+  - text: What is the maximum email length accepted by the OTP request endpoint?
+  - text: Does the storefront sign-in form block a 255-character email before sending the code request?
+  - text: What 400 message does POST /api/otp/request return for an invalid email like john@?
+concepts:
+  - id: otp
+  - id: api-error
 status: active
 appliesTo:
   - axis: feature
@@ -10,7 +19,9 @@ appliesTo:
   - axis: setting
     value: detailederrors-on
   - axis: surface
-    value: api
+    value: rest
+  - axis: surface
+    value: storefront-ui
 anchors:
   - coordinate: POST /api/otp/request
   - coordinate: /sign-in

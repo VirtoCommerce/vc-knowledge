@@ -3,6 +3,15 @@ id: KB-41DDD2A9
 subject: "Push Messages builder: typing into the Registered date field surfaces a raw RangeError stack trace"
 plane: experiential
 question: What happens if a user types a date into the Registered condition's date input in the Push Messages audience builder instead of picking it from the calendar?
+questions:
+  - text: What happens if I type a date into the push notification audience 'Registered' filter?
+  - text: Push Messages Registered condition 'Invalid time value' RangeError stack trace banner
+  - text: Does the Invalid time value error banner go away after picking the date from the calendar?
+  - text: What query does picking a Registered date from the calendar produce?
+concepts:
+  - id: push-audience
+  - id: admin-validation
+  - id: date-range-picker
 status: active
 appliesTo:
   - axis: module

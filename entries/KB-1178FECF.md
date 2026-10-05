@@ -3,12 +3,24 @@ id: KB-1178FECF
 subject: Push Messages audience resolution survives an ElasticAppSearch to ElasticSearch8 provider switch; only text-matched counts move
 plane: experiential
 question: Does switching the search provider to ElasticSearch8 and rebuilding the member index change the Push Messages audience-builder recipient counts?
+questions:
+  - text: Do push notification recipient counts change after switching the search engine to ElasticSearch8 and reindexing?
+  - text: /api/push-message/preview-recipients ElasticSearch8 reindex audience count
+  - text: Which Push Messages audience counts are provider-independent and which must be re-measured after a reindex?
+  - text: How does the audience preview dialog page a 146-recipient audience?
+  - text: What happens to Save and Send when a Push Messages advanced query phrase is malformed?
+  - text: Does preview-recipients return HTTP 400 for an invalid member query phrase?
+concepts:
+  - id: push-audience
+  - id: search-index
 status: active
 appliesTo:
   - axis: module
     value: virtocommerce.pushmessages
   - axis: surface
-    value: admin-spa
+    value: admin-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: /api/push-message/preview-recipients
   - coordinate: /api/push-message

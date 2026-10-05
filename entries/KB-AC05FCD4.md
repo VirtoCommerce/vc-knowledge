@@ -3,14 +3,23 @@ id: KB-AC05FCD4
 subject: The Push Messages audience-builder mode shown when a saved message is reopened is derived from the stored recipients query, not persisted alongside it.
 plane: experiential
 question: Does a push message saved in 'Advanced query' mode reopen in that mode?
+questions:
+  - text: Why does my push notification saved with an advanced query reopen as conditions?
+  - text: /api/push-message Advanced query mode reopen Match by conditions
+  - text: Is the audience-builder mode stored with a push message draft?
+  - text: Which phrase should a test use to assert an 'Advanced query' round-trip?
+  - text: When does the 'Back to conditions' link appear in the Push Messages audience section?
+concepts:
+  - id: push-message
+  - id: push-audience
 status: active
 appliesTo:
   - axis: module
     value: virtocommerce.pushmessages
-  - axis: surface
-    value: admin-spa
   - axis: version
     value: 3.1006.0-pr-28
+  - axis: surface
+    value: admin-ui
 anchors:
   - coordinate: /api/push-message
   - coordinate: POST /api/push-message/preview-recipients
