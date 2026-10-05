@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T16:25:53.218Z",
-  "count": 385,
+  "generated": "2026-10-05T16:49:26.860Z",
+  "count": 386,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -809,6 +809,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-1E03BE5A",
+      "path": "entries/KB-1E03BE5A.md",
+      "subject": "The storefront Barcode scan control sits inside the desktop header search input at 1920 px, but at 390 px it is reachable only after \"Toggle search bar\"",
+      "question": "where is the Barcode scan entry point in the storefront header at desktop vs mobile width",
+      "anchors": [
+        "client-app/shared/layout/components/header/_internal/search-bar/search-bar.vue",
+        "client-app/shared/layout/components/header/_internal/mobile-search-bar.vue"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=390,1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1E9580BB",
       "path": "entries/KB-1E9580BB.md",
       "subject": "A push message POSTed as Sent with an empty memberIds list is accepted and stays Sent with zero recipients",
@@ -1115,7 +1133,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
