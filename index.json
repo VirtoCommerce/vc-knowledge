@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T15:26:54.317Z",
-  "count": 382,
+  "generated": "2026-10-05T15:59:39.696Z",
+  "count": 384,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2190,7 +2190,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -3975,6 +3975,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-95FBC464",
+      "path": "entries/KB-95FBC464.md",
+      "subject": "For a corporate (organization) storefront user the header Ship-to selection is stored server-side on Contact.selectedAddressId (plus the cart shipment delivery address), so it is shared across storefront origins and sessions rather than kept in browser storage",
+      "question": "where does the storefront header Ship to selector keep the selected address for an organization member",
+      "anchors": [
+        "Mutation.updateContact",
+        "Mutation.addOrUpdateCartShipment",
+        "/ (header ship-to selector)"
+      ],
+      "scope": [
+        "frontend=2.59.x",
+        "surface=storefront-ui",
+        "user=organization-member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-969D7E09",
       "path": "entries/KB-969D7E09.md",
       "subject": "POSTing an unmodified GET /api/catalog/products/{id} body back to POST /api/catalog/products fails 500 (PK_Item duplicate key) when the product has variations; omitting variations[] succeeds and keeps them",
@@ -4257,6 +4277,25 @@
       "scope": [
         "feature=otp-email-sign-in",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A46DF150",
+      "path": "entries/KB-A46DF150.md",
+      "subject": "The storefront desktop top utility bar (h-10 header row with language, currency, ship-to, call us, dashboard, account) renders only at viewport ≥1024px; the account org/user names inside it render only at ≥1280px (xl), and below 1024px a separate 90px mobile header is shown instead",
+      "question": "at which viewport widths does the storefront top utility bar and the account org/user name label render",
+      "anchors": [
+        "/ (top-header.vue utility bar)",
+        "/catalog"
+      ],
+      "scope": [
+        "frontend=2.59.x",
+        "surface=storefront-ui",
+        "theme=coffee"
       ],
       "plane": "experiential",
       "status": "active",
