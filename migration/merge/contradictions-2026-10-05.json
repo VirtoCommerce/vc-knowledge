@@ -5,7 +5,8 @@
    "KB-E8234FA0"
   ],
   "fact": "Whether a never-shared (Private-from-creation) wishlist has a stored sharing row with a stable key",
-  "why": "KB-7A9D4927 says the row and its key exist from creation and a never-shown key starts working once shared; KB-E8234FA0 says no row is stored, sharingSetting.id is a fresh random GUID on every read, and the first share persists the client-sent or a newly minted key."
+  "why": "KB-7A9D4927 says the row and its key exist from creation and a never-shown key starts working once shared; KB-E8234FA0 says no row is stored, sharingSetting.id is a fresh random GUID on every read, and the first share persists the client-sent or a newly minted key.",
+  "resolution": "live 2026-10-05 vcst_qa: KB-E8234FA0 holds (no stored row, fresh id per read); KB-7A9D4927 disputed"
  },
  {
   "ids": [
@@ -13,7 +14,8 @@
    "KB-F2FA8EBD"
   ],
   "fact": "Body text of the 'Change who can access?' confirmation when swapping between shared scopes on theme 2.59.0-pr-2476",
-  "why": "KB-91DF8883 quotes 'The link stays the same. Some users may lose access.'; KB-F2FA8EBD quotes 'Everyone the list is shared with now will lose access.'."
+  "why": "KB-91DF8883 quotes 'The link stays the same. Some users may lose access.'; KB-F2FA8EBD quotes 'Everyone the list is shared with now will lose access.'.",
+  "resolution": "open: needs a UI / HAR check"
  },
  {
   "ids": [
@@ -21,7 +23,8 @@
    "KB-EFD1A7FD"
   ],
   "fact": "How many sendCustomerCommunication calls a Share save issues for several newly added organizations",
-  "why": "KB-5AB85ADC says one call per newly added organization with organizationIds=[that org]; KB-EFD1A7FD (and KB-50D03D62, organizationIds:[both]) say one call carrying all newly added orgs."
+  "why": "KB-5AB85ADC says one call per newly added organization with organizationIds=[that org]; KB-EFD1A7FD (and KB-50D03D62, organizationIds:[both]) say one call carrying all newly added orgs.",
+  "resolution": "open: needs a UI / HAR check"
  },
  {
   "ids": [
@@ -29,7 +32,8 @@
    "KB-BFB83695"
   ],
   "fact": "What each option in the Push Messages 'Add specific recipients' picker shows before selection",
-  "why": "KB-BBC75DEA says bare display name only with no type badge or email; KB-BFB83695 says a Person/Company badge plus name plus account email."
+  "why": "KB-BBC75DEA says bare display name only with no type badge or email; KB-BFB83695 says a Person/Company badge plus name plus account email.",
+  "resolution": "open: needs a UI / HAR check"
  },
  {
   "ids": [
@@ -38,7 +42,8 @@
    "KB-DA14E8B7"
   ],
   "fact": "What the storefront 'Block user' action (lockOrganizationContact) writes",
-  "why": "KB-97170665 observes it writes the membership lock only, leaving contact status Approved (isLockedInOrganization=true), while KB-06409954 and KB-DA14E8B7 say it sets the contact's own status to Locked; possibly build-dependent (KB-97170665 pins a PR storefront build), needs a live check."
+  "why": "KB-97170665 observes it writes the membership lock only, leaving contact status Approved (isLockedInOrganization=true), while KB-06409954 and KB-DA14E8B7 say it sets the contact's own status to Locked; possibly build-dependent (KB-97170665 pins a PR storefront build), needs a live check.",
+  "resolution": "open: needs a UI / HAR check"
  },
  {
   "ids": [
@@ -46,7 +51,8 @@
    "KB-EB70C1F9"
   ],
   "fact": "In the Push Messages conditions builder, a second, value-empty condition row added next to a complete condition: does it show 'This condition has no value.' and disable Save, or is it silently dropped with no validation and Save (POST 200) persisting the query without it?",
-  "why": "735DF4D1 observes the hint and a held Save once a complete condition exists; EB70C1F9 observes no message and a successful save dropping the empty AND-row in that same shape (Customer type is Contact + Name is empty); possibly different builds, needs a live check."
+  "why": "735DF4D1 observes the hint and a held Save once a complete condition exists; EB70C1F9 observes no message and a successful save dropping the empty AND-row in that same shape (Customer type is Contact + Name is empty); possibly different builds, needs a live check.",
+  "resolution": "open: needs a UI / HAR check"
  },
  {
   "ids": [
@@ -54,7 +60,8 @@
    "KB-D9F48037"
   ],
   "fact": "After Save and reopen, does the Push Messages audience caption for a condition plus a picked person still name the condition, or collapse to 'Sending to <person>.'?",
-  "why": "C5B17CE2 observes the caption omitting the condition after save/reopen; D9F48037 (PushMessages 3.1006.0-pr-28-21fe, vc-shell 2.6.1) observes the same caption surviving save and reopen; possibly fixed between builds, needs a live check."
+  "why": "C5B17CE2 observes the caption omitting the condition after save/reopen; D9F48037 (PushMessages 3.1006.0-pr-28-21fe, vc-shell 2.6.1) observes the same caption surviving save and reopen; possibly fixed between builds, needs a live check.",
+  "resolution": "open: needs a UI / HAR check"
  },
  {
   "ids": [
@@ -62,7 +69,8 @@
    "KB-A3004A3B"
   ],
   "fact": "whether xAPI coupon validation/application matches codes case-sensitively",
-  "why": "KB-35F20D97 says validateCoupon matching is case-sensitive (wrong case returns false); KB-A3004A3B says validation and application are case-insensitive."
+  "why": "KB-35F20D97 says validateCoupon matching is case-sensitive (wrong case returns false); KB-A3004A3B says validation and application are case-insensitive.",
+  "resolution": "live 2026-10-05 vcst_qa: case-insensitive; KB-A3004A3B confirmed, KB-35F20D97 disputed"
  },
  {
   "ids": [
@@ -70,7 +78,8 @@
    "KB-59E4B5FC"
   ],
   "fact": "which fields the storefront GraphQL OrderConfigurationItemType exposes",
-  "why": "KB-133FD544 observed 15 fields including sectionId/productId/sku/quantity on XOrder 3.1011.0; KB-59E4B5FC (absorbing KB-E1E2716F) observed five fields with those refused; likely version-bound, needs a live check per build."
+  "why": "KB-133FD544 observed 15 fields including sectionId/productId/sku/quantity on XOrder 3.1011.0; KB-59E4B5FC (absorbing KB-E1E2716F) observed five fields with those refused; likely version-bound, needs a live check per build.",
+  "resolution": "live 2026-10-05 vcst_qa XOrder 3.1013.0: 15 fields; KB-133FD544 confirmed, KB-59E4B5FC disputed"
  },
  {
   "ids": [
@@ -78,7 +87,8 @@
    "KB-59E4B5FC"
   ],
   "fact": "whether sectionId is lost when a cart configuration item becomes an order configuration item",
-  "why": "KB-4105EEBE saw sectionId and sectionName on stored orders on Orders 3.1015.0; KB-59E4B5FC (absorbing KB-9DB54091) says sectionId is the one field that does not cross; likely version-bound."
+  "why": "KB-4105EEBE saw sectionId and sectionName on stored orders on Orders 3.1015.0; KB-59E4B5FC (absorbing KB-9DB54091) says sectionId is the one field that does not cross; likely version-bound.",
+  "resolution": "live 2026-10-05 vcst_qa Orders 3.1016.0: sectionId kept; KB-4105EEBE confirmed, KB-59E4B5FC disputed"
  },
  {
   "ids": [
@@ -86,7 +96,8 @@
    "KB-D8FDFA6F"
   ],
   "fact": "what status a pending-invitee 'Invite sent' row shows on /company/members",
-  "why": "KB-BBBC4225 states status 'Invited'; KB-D8FDFA6F observed the green Active badge because statusInOrganization resolves to Approved; differs by build."
+  "why": "KB-BBBC4225 states status 'Invited'; KB-D8FDFA6F observed the green Active badge because statusInOrganization resolves to Approved; differs by build.",
+  "resolution": "live 2026-10-05 vcst_qa (API only): pending invitee reads Invited/Invited; KB-BBBC4225 confirmed, KB-D8FDFA6F disputed; UI badge not checked"
  },
  {
   "ids": [
@@ -94,7 +105,8 @@
    "KB-C075BDF9"
   ],
   "fact": "where a list's share link/sharing is configured on /account/lists",
-  "why": "KB-799D20A6 says only in the Settings dialog (view-only from detail page); KB-C075BDF9 says on theme 2.59.0-pr-2476 sharing lives in a separate Share dialog and the view-only settings dialog is gone; build-dependent."
+  "why": "KB-799D20A6 says only in the Settings dialog (view-only from detail page); KB-C075BDF9 says on theme 2.59.0-pr-2476 sharing lives in a separate Share dialog and the view-only settings dialog is gone; build-dependent.",
+  "resolution": "open: needs a UI / HAR check"
  },
  {
   "ids": [
@@ -102,6 +114,7 @@
    "KB-3E408000"
   ],
   "fact": "Which tax providers are active on vcst B2B-store, and what evaluation does when more than one is active",
-  "why": "KB-1B18B821 found no active provider and reads the source as taking the first active one (FirstOrDefault), while KB-3E408000 lists two active providers yet gets an empty evaluation, which that mechanism would not predict; needs a live re-check."
+  "why": "KB-1B18B821 found no active provider and reads the source as taking the first active one (FirstOrDefault), while KB-3E408000 lists two active providers yet gets an empty evaluation, which that mechanism would not predict; needs a live re-check.",
+  "resolution": "live 2026-10-05 vcst_qa: two active providers, evaluate []; KB-3E408000 confirmed, KB-1B18B821 disputed"
  }
 ]

@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-05T09:53:45.721Z",
+  "generated": "2026-10-05T10:07:31.853Z",
   "count": 454,
   "entries": [
     {
@@ -981,7 +981,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -1465,7 +1465,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-1C28E89D",
@@ -2673,7 +2673,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-35F25BEE",
@@ -2883,7 +2883,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3126,7 +3126,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -4473,7 +4473,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 2
+      "disputed": 3
     },
     {
       "id": "KB-5A0C4200",
@@ -6273,7 +6273,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-7AB0B13E",
@@ -8029,7 +8029,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9266,7 +9266,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 4
     },
     {
@@ -10764,7 +10764,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-D992AF44",
@@ -11435,7 +11435,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
