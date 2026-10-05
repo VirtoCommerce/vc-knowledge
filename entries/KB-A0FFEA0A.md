@@ -13,7 +13,8 @@ concepts:
   - id: list-sharing
   - id: wishlist
   - id: sales-rep
-status: active
+status: superseded
+supersededBy: KB-2F64A447
 appliesTo:
   - axis: surface
     value: xapi

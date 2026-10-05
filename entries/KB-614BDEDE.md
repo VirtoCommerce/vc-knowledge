@@ -1,6 +1,6 @@
 ---
 id: KB-614BDEDE
-subject: changeWishlist silently ignores message when scope is omitted
+subject: changeWishlist without scope silently drops a sharing message change
 plane: experiential
 question: Does changeWishlist save a new sharing message if the command carries message but no scope?
 questions:

@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-05T08:12:40.794Z",
+  "generated": "2026-10-05T09:09:57.716Z",
   "count": 454,
   "entries": [
     {
@@ -218,7 +218,10 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-31802239"
+      ],
       "trust": 1,
       "disputed": 0
     },
@@ -248,7 +251,7 @@
     {
       "id": "KB-055845A3",
       "path": "entries/KB-055845A3.md",
-      "subject": "a cart line can serve a unit price that is in neither the configuration nor the line's history",
+      "subject": "A cart line's unit price can go stale and disagree with the product page; re-reading does not fix it, a cart mutation does",
       "question": "If pricing changes while a shopper's cart is open, what price does the cart show?",
       "questions": [
         "Why is the price in my basket different from the price on the product page right now?",
@@ -434,7 +437,7 @@
     {
       "id": "KB-097CB5D6",
       "path": "entries/KB-097CB5D6.md",
-      "subject": "the mobile and tablet header notifications badge wraps a two-digit unread count onto two lines over the bell",
+      "subject": "mobile/tablet header bell badge wraps a two-digit unread count onto two lines; tapping opens the Notifications popup",
       "question": "How does the storefront mobile header render a two-digit notifications unread count, and what does tapping the bell do?",
       "questions": [
         "On my phone the notification counter shows its digits stacked on top of each other - is that expected?",
@@ -546,7 +549,7 @@
     {
       "id": "KB-0BC18481",
       "path": "entries/KB-0BC18481.md",
-      "subject": "Wishlist sharing message normalisation, 1024 limit and opaque over-limit error",
+      "subject": "Wishlist sharing message: blank/whitespace stored as null, trimmed, 1024-unit limit with an atomic opaque refusal",
       "question": "How does changeWishlist/createWishlist store the Customer-scope sharing message: blanks, whitespace, length limit, error?",
       "questions": [
         "How long can the note be when a sales rep shares a list with a customer?",
@@ -734,14 +737,17 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-24B83B02"
+      ],
       "trust": 5,
       "disputed": 0
     },
     {
       "id": "KB-110E0652",
       "path": "entries/KB-110E0652.md",
-      "subject": "products(filter barcode:) expands to OR of configured fields and honours * and ? wildcards",
+      "subject": "products(filter barcode:) expands to an OR of the configured barcode fields and runs * and ? as wildcards, also in exact mode (VCST-6094)",
       "question": "What does the xAPI products filter term barcode:\"<value>\" do?",
       "questions": [
         "If I type part of a barcode with an asterisk, will the search find the product?",
@@ -749,7 +755,12 @@
         "Is barcode lookup case-sensitive, prefix-matching or sensitive to surrounding spaces?",
         "Why does a barcode filter return nothing when no barcode search fields are set on the store?",
         "Does a barcode filter include variations, and does turning off the scanner stop the field expansion?",
-        "How do two barcode terms or comma-separated values in one term combine?"
+        "How do two barcode terms or comma-separated values in one term combine?",
+        "If I scan a code with a star at the end, will the shop still open a product page?",
+        "Does exact barcode matching treat asterisk and question mark as wildcards instead of literal characters?",
+        "Why does a truncated GTIN followed by * return the full product in exact barcode mode?",
+        "Can the products query's barcode filter escape wildcard characters, or does every * become a wildcard query?",
+        "Why does a barcode filter of just * return every product that has a GTIN?"
       ],
       "concepts": [
         "barcode-search",
@@ -757,14 +768,15 @@
         "product-filter"
       ],
       "anchors": [
-        "Query.products"
+        "Query.products",
+        "/search"
       ],
       "scope": [
         "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1090,7 +1102,7 @@
     {
       "id": "KB-17555498",
       "path": "entries/KB-17555498.md",
-      "subject": "Return status notifications: one email + one push per status change via Hangfire; a job can succeed and send nothing (requeue sends it)",
+      "subject": "Return status notifications: one email + one push (topic = return number) per status change, incl. submitReturn, via Hangfire; a job can succeed and send nothing (requeue sends it)",
       "question": "How are buyer notifications sent when a return status changes, and can one be lost?",
       "questions": [
         "Will I get an email or an app notification each time the status of my return changes?",
@@ -1098,23 +1110,31 @@
         "Can a return decision report success while the buyer's email and push are never sent, and does requeueing the background job recover it?",
         "In which language is a return status notification sent when the return culture is empty or has no localized template?",
         "Does writing the Return.SendNotifications store setting through the settings API disable return emails?",
-        "Which scheduled jobs and journal records does a return status change produce for the email and the push message?"
+        "Which scheduled jobs and journal records does a return status change produce for the email and the push message?",
+        "After I submit a return request, what messages should I receive?",
+        "How do I verify in the back office that a return submission raised its email and in-app notification?",
+        "Which notification types and push texts are raised when a return is approved partly or declined?",
+        "Why is the registered-return email journal row in Error status, and does that mean it was not raised?",
+        "How is a return's push message identified in the push message search results?"
       ],
       "concepts": [
         "return",
         "notification",
-        "background-job"
+        "background-job",
+        "push-message"
       ],
       "anchors": [
         "POST /api/notifications/journal",
-        "/hangfire/jobs"
+        "/hangfire/jobs",
+        "Mutation.submitReturn",
+        "POST /api/push-message/search"
       ],
       "scope": [
         "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1336,7 +1356,7 @@
     {
       "id": "KB-1B18B821",
       "path": "entries/KB-1B18B821.md",
-      "subject": "tax is provider-driven and silently zero without an active provider",
+      "subject": "Tax is provider-driven: without TaxCalculationEnabled and an active store tax provider every tax field is silently zero",
       "question": "how is tax calculated on orders in this deployment",
       "questions": [
         "Why is there no sales tax on my cart total at all?",
@@ -1710,17 +1730,24 @@
         "My account manager said they left me a note with a shared list -- why can't I see it on the list page?",
         "Where does the recipient of a shared list read the sales rep's accompanying message?",
         "Does the sharedWishlist request on the shared-list page ask for the sharing message at all?",
-        "How is the rep's share message delivered -- in the notification inbox with a link, or on the list itself?"
+        "How is the rep's share message delivered -- in the notification inbox with a link, or on the list itself?",
+        "My sales representative shared a list with me - where do I see it and their note?",
+        "Can a buyer in the target company open a rep's shared list from the link, and add items to cart?",
+        "Why doesn't a list shared by the rep appear among the buyer's own lists?",
+        "What sharing access and owner flag does the shared wishlist query return to a target-organization member?",
+        "Where is the rep's share message shown to the recipient, if not on the shared-list page?"
       ],
       "concepts": [
         "list-sharing",
         "customer-communication",
-        "push-message"
+        "push-message",
+        "sales-rep"
       ],
       "anchors": [
         "/shared-list/:sharingKey",
         "Query.sharedWishlist",
-        "/account/notifications"
+        "/account/notifications",
+        "/shared-list/{}"
       ],
       "scope": [
         "surface=storefront-ui",
@@ -1728,7 +1755,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 9,
       "disputed": 0
     },
     {
@@ -1788,14 +1815,15 @@
       "question": "Does loyaltyMissionProgress still return a mission whose EndDate has passed, and what does it read?",
       "anchors": [
         "Query.loyaltyMissionProgress",
-        "LoyaltyUserMission.daysRemaining"
+        "LoyaltyUserMission.daysRemaining",
+        "/account/missions"
       ],
       "scope": [
         "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1808,7 +1836,11 @@
         "Does blocking a member in the organization change the status shown in the storefront members roster?",
         "Does locking a platform user account or setting the contact status to Locked show up in the company members list?",
         "Which fields of the organization contacts query drive the member status badge on the roster page?",
-        "Where should an admin check whether an invited or locked colleague can actually sign in?"
+        "Where should an admin check whether an invited or locked colleague can actually sign in?",
+        "My teammate shows as Active in our company members list but can't log in - why?",
+        "Can an organization maintainer trust the Active column on the members page as sign-in status?",
+        "Does a lockout set in the back office show up as Blocked on the storefront roster?",
+        "Do block and unblock on the members page write the same lockout flag the admin account blade reads?"
       ],
       "concepts": [
         "membership-status",
@@ -1818,7 +1850,10 @@
       "anchors": [
         "GET /company/members",
         "Organization.contacts",
-        "ContactType.status"
+        "ContactType.status",
+        "/company/members",
+        "Mutations.lockOrganizationContact",
+        "Mutations.unlockOrganizationContact"
       ],
       "scope": [
         "surface=storefront-ui",
@@ -1826,7 +1861,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 11,
       "disputed": 1
     },
     {
@@ -1906,7 +1941,10 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-2F64A447"
+      ],
       "trust": 1,
       "disputed": 4
     },
@@ -2124,31 +2162,48 @@
     {
       "id": "KB-2F64A447",
       "path": "entries/KB-2F64A447.md",
-      "subject": "Target-org member reads a Customer share only through sharedWishlist(sharingKey)",
+      "subject": "Target-org member reads a Customer-scope share only through sharedWishlist(sharingKey); wishlist(listId) is Forbidden and wishlists() omits it",
       "question": "Which read paths return a Customer-scope wishlist to a member of the target organization?",
       "questions": [
         "Someone shared a list with my company -- why isn't it in my own lists?",
         "Which query lets a member of the target organization read a customer-scope shared list?",
         "Does wishlist(listId) return a list shared with my organization or answer Forbidden?",
-        "Can a shared list's recipient see its targets, and what does a non-target member get from sharedWishlist?"
+        "Can a shared list's recipient see its targets, and what does a non-target member get from sharedWishlist?",
+        "Why does a list my sales rep shared with my company not show up in my account lists?",
+        "Opening a rep-shared list by its id returns access denied - is that expected for a company buyer?",
+        "Does wishlist(listId) return Forbidden for a member of the organization a Customer-scope list targets?",
+        "Is a Customer-scope share listed in the recipient's wishlists query results?",
+        "My sales rep shared a list with my company, so why is it missing from my Lists page?",
+        "Can a member of a targeted organization open a customer-scoped shared list any way other than the share link?",
+        "What does a member of a served but not targeted organization get when opening a rep's shared list?",
+        "For a Customer-scope list, how do sharedWishlist, wishlist by id and wishlists differ for a target member versus an anonymous caller?",
+        "Which owner-only fields come back empty when a recipient reads a shared list by its sharing key?",
+        "How do I open a product list my sales representative recommended to my company?",
+        "Does a member of a targeted company get read access to a Customer-scope list via its share link?",
+        "What does sharedWishlist(sharingKey) return for a Customer-scope list read by a target organization member?",
+        "What happens to a shared-list link for a member whose organization was removed from the targets?",
+        "Can a member's own lists include non-owner lists shared at organization scope?"
       ],
       "concepts": [
         "list-sharing",
         "wishlist",
-        "permission"
+        "permission",
+        "sales-rep"
       ],
       "anchors": [
         "Query.sharedWishlist",
         "Query.wishlist",
-        "Query.wishlists"
+        "Query.wishlists",
+        "Mutation.changeWishlist",
+        "/shared-list/:sharingKey"
       ],
       "scope": [
         "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
-      "disputed": 0
+      "trust": 10,
+      "disputed": 8
     },
     {
       "id": "KB-306353A9",
@@ -2257,7 +2312,12 @@
         "How do I purge search-index documents of deleted products when event-based indexation is switched off?",
         "Does reindexing with documentIds of deleted products remove their ghost index documents?",
         "How does a startDate/endDate indexing window use the change log to turn deletions into index removals?",
-        "How can I cheaply check how many deleted product ids still have an index document?"
+        "How can I cheaply check how many deleted product ids still have an index document?",
+        "Why does a filter show more matching items than the search actually returns?",
+        "After deleting and recreating catalog products, why are facet bucket counts doubled?",
+        "Do stale index documents linger when event-based indexation is switched off?",
+        "Why does the admin product search total exceed the number of items returned?",
+        "My product edit did not show up in search after the scheduled indexing job - how do I force a reindex of one document?"
       ],
       "concepts": [
         "search-index",
@@ -2278,7 +2338,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2375,7 +2435,10 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-110E0652"
+      ],
       "trust": 1,
       "disputed": 0
     },
@@ -2709,7 +2772,10 @@
         "surface=rest"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-6D5E2CD1"
+      ],
       "trust": 1,
       "disputed": 0
     },
@@ -3028,7 +3094,10 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-D7F08A26"
+      ],
       "trust": 2,
       "disputed": 0
     },
@@ -3230,7 +3299,10 @@
         "surface=storefront-ui"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-27B4CD10"
+      ],
       "trust": 5,
       "disputed": 0
     },
@@ -3364,7 +3436,10 @@
         "surface=rest"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-ADA91F7B"
+      ],
       "trust": 3,
       "disputed": 0
     },
@@ -3750,7 +3825,10 @@
         "surface=storefront-ui"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-DA14E8B7"
+      ],
       "trust": 2,
       "disputed": 4
     },
@@ -4067,14 +4145,22 @@
     {
       "id": "KB-59E4B5FC",
       "path": "entries/KB-59E4B5FC.md",
-      "subject": "a configured product as an order line item",
+      "subject": "a configured product as an order line item: stored order loses only sectionId, storefront GraphQL order item exposes five fields",
       "question": "how does a configurable product become a line item on an order",
       "questions": [
         "When I order a customized product, does the order remember which options I picked?",
         "Does a configurable product become one order line with its options nested, or separate lines per option?",
         "Which configuration item field is lost when a cart line becomes an order line - is sectionId dropped?",
         "Why does the storefront order configuration item type reject productId, sku and quantity while the REST order has them?",
-        "Is an order line for a configurable product with an empty configuration items array a data fault?"
+        "Is an order line for a configurable product with an empty configuration items array a data fault?",
+        "After I order a custom-built item, does the shop still know exactly which parts and how many I chose?",
+        "Can a back-office integration reconcile a configured order line to catalog products from the order record?",
+        "Which configuration item field is lost when a cart becomes an order in the REST model?",
+        "Does the order REST endpoint return productId and quantity for Product-type configuration items?",
+        "In my order history, can the shop tell which product I picked for each configuration option?",
+        "Why can't a storefront order query return the product and quantity chosen in a configurable item?",
+        "Which fields does the GraphQL order configuration item type lack compared with the cart configuration item type?",
+        "Does selecting productId or quantity on an order's configuration items fail schema validation?"
       ],
       "concepts": [
         "configured-line-item",
@@ -4084,7 +4170,8 @@
       "anchors": [
         "OrderLineItemType.configurationItems",
         "OrderConfigurationItemType",
-        "GET /api/order/customerOrders/{id}"
+        "GET /api/order/customerOrders/{id}",
+        "CartConfigurationItemType"
       ],
       "scope": [
         "surface=rest",
@@ -4092,8 +4179,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0
+      "trust": 3,
+      "disputed": 2
     },
     {
       "id": "KB-5A0C4200",
@@ -4135,7 +4222,10 @@
         "surface=storefront-ui"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-26B8BE64"
+      ],
       "trust": 1,
       "disputed": 0
     },
@@ -4351,7 +4441,10 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-D7F08A26"
+      ],
       "trust": 4,
       "disputed": 0
     },
@@ -4412,7 +4505,7 @@
     {
       "id": "KB-614BDEDE",
       "path": "entries/KB-614BDEDE.md",
-      "subject": "changeWishlist silently ignores message when scope is omitted",
+      "subject": "changeWishlist without scope silently drops a sharing message change",
       "question": "Does changeWishlist save a new sharing message if the command carries message but no scope?",
       "questions": [
         "I changed the note on a list I had already shared, but customers still see the old one - why?",
@@ -4445,7 +4538,11 @@
         "How many products in our shop can actually be configured by buyers?",
         "Does the configurations search endpoint count deactivated configurations when the criteria body is empty?",
         "Which criteria give a reliable count of configurable products via the REST configurations search?",
-        "Why does the configurations totalCount stay higher after a configuration is deactivated?"
+        "Why does the configurations totalCount stay higher after a configuration is deactivated?",
+        "How many products in the catalog can a shopper actually customise today?",
+        "Why does a merchandising report of configurable products keep growing even after options were switched off?",
+        "Which criteria should a configurations search send so switched-off configurations are not counted?",
+        "Can a product configuration be deleted, or does a deactivated one remain in search results forever?"
       ],
       "concepts": [
         "configurable-product",
@@ -4459,7 +4556,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 1
     },
     {
@@ -4645,7 +4742,10 @@
         "surface=admin-ui"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-97A675C1"
+      ],
       "trust": 3,
       "disputed": 0
     },
@@ -4946,7 +5046,7 @@
     {
       "id": "KB-6CC1EFE6",
       "path": "entries/KB-6CC1EFE6.md",
-      "subject": "deleting a security account leaves the contact behind",
+      "subject": "Deleting a security account leaves its contact (and vice versa); an invited contact may be missing from member keyword search",
       "question": "How do I fully remove a test member, and why can I not find the leftover afterwards?",
       "questions": [
         "How do I completely remove a test user so neither their login nor their contact record remains?",
@@ -4999,7 +5099,10 @@
         "Should a price list assignment be scoped to the store or to the catalog when the store uses a virtual catalog?",
         "Does the price list priority or the assignment priority decide which price wins?",
         "Why does a price list full of prices never show on the storefront?",
-        "Which conditions on a pricelist assignment - dates, eligible shoppers, scope - gate whether it applies?"
+        "Which conditions on a pricelist assignment - dates, eligible shoppers, scope - gate whether it applies?",
+        "Two price lists apply to the same store -- how do I choose which one shoppers get?",
+        "Does raising a pricing assignment's priority change which price list wins in price evaluation?",
+        "Can I change only the priority of a price list assignment with a GET-then-PUT round trip?"
       ],
       "concepts": [
         "price-list",
@@ -5008,7 +5111,8 @@
       "anchors": [
         "GET /api/pricing/assignments",
         "PricelistAssignment.storeId",
-        "PricelistAssignment.dynamicExpression"
+        "PricelistAssignment.dynamicExpression",
+        "PUT /api/pricing/assignments"
       ],
       "scope": [
         "surface=admin-ui",
@@ -5017,7 +5121,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5441,7 +5545,7 @@
     {
       "id": "KB-75B67E06",
       "path": "entries/KB-75B67E06.md",
-      "subject": "The reworked storefront share dialog saves the share message on the wishlist and shows it on reopen",
+      "subject": "Storefront Share dialog persists the share message (250-char maxlength) and shows it after reload",
       "question": "Does the reworked storefront Share dialog persist the share message and show it again on reopen?",
       "questions": [
         "After I share a list with a message, will I see that message again when I reopen the share window?",
@@ -5752,7 +5856,7 @@
     {
       "id": "KB-7A9D4927",
       "path": "entries/KB-7A9D4927.md",
-      "subject": "revoking a wishlist share link: re-scoping suspends, deleting revokes",
+      "subject": "Switching a shared wishlist to Private only suspends its link; removeWishlist is the only revocation",
       "question": "If I make a shared list private again, does the old share link stop working for good?",
       "questions": [
         "If I stop sharing my list, will the old link work again if I share it later?",
@@ -5973,7 +6077,7 @@
     {
       "id": "KB-809EA119",
       "path": "entries/KB-809EA119.md",
-      "subject": "A return's releasable quantity after a partial-approval decision equals ordered minus approved (not requested minus approved) -- units never requested in the first decision stay independently returnable alongside the released unapproved units",
+      "subject": "After a partial approval, returnableQuantity is ordered minus approved: never-requested and released-unapproved units form one returnable pool",
       "question": "After a partial approval (ordered 500, requested 240, approved 200 on line A), what does returnableItems.returnableQuantity report for the buyer's next return -- just the 40 unapproved-and-released units, or does it include the 260 units never touched by the first return too?",
       "questions": [
         "After my return was only partly approved, how many more units of that line can I send back?",
@@ -6338,14 +6442,18 @@
     {
       "id": "KB-8C3E463D",
       "path": "entries/KB-8C3E463D.md",
-      "subject": "which clock an Admin timestamp is in",
+      "subject": "Admin renders order timestamps in the operator's profile timezone (UI.TimeZone), not the browser's",
       "question": "the Admin order screen says the order was created hours away from what the API returns - which is right?",
       "questions": [
         "The back office says my order was created hours away from what the API returns; which time is correct?",
         "Why do two operators see different creation times on the same order in the admin orders grid?",
         "Which profile setting returned by the current-user endpoint decides the timezone Admin renders order dates in?",
         "Why does the indexation widget on the order blade show a time in UTC while the order date above it does not?",
-        "Why does an order blade opened by a cold deep link fall back to the browser's timezone and a foreign date pattern?"
+        "Why does an order blade opened by a cold deep link fall back to the browser's timezone and a foreign date pattern?",
+        "Is the back-office order time shown in my computer's clock zone or in a zone saved on my user profile?",
+        "Why do two operators looking at the same order in Admin see different creation times?",
+        "Which setting decides the timezone Admin uses when it formats an order's created date?",
+        "Why does an Admin order blade opened from a cold deep link print a different time format than when navigated to?"
       ],
       "concepts": [
         "timestamp",
@@ -6361,8 +6469,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0
+      "trust": 3,
+      "disputed": 1
     },
     {
       "id": "KB-8C530141",
@@ -6441,7 +6549,10 @@
         "surface=rest"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-6161BC89"
+      ],
       "trust": 1,
       "disputed": 0
     },
@@ -6835,7 +6946,7 @@
     {
       "id": "KB-97170665",
       "path": "entries/KB-97170665.md",
-      "subject": "A membership lock shows on the storefront members list as a red \"Blocked\" badge, and in xAPI only as Contact.isLockedInOrganization — the status fields stay \"Approved\".",
+      "subject": "A membership lock is carried in xAPI only by Contact.isLockedInOrganization (status and statusInOrganization stay Approved) and shows on the members list as a red Blocked badge",
       "question": "When an organization member is blocked from Admin, what does the storefront company members list show for them and what does the API return?",
       "questions": [
         "When my company admin blocks me, what does the team page show next to my name?",
@@ -6903,21 +7014,27 @@
         "Once the store approves or declines my return, am I told by email right away?",
         "Does clicking Approve / decline on a requested return ask for confirmation before committing?",
         "Which return statuses and notification journal entries does the approve / decline action write?",
-        "When is the decline reason field enabled on the return line items blade, and what becomes read-only after deciding?"
+        "When is the decline reason field enabled on the return line items blade, and what becomes read-only after deciding?",
+        "When the store approves or declines my return, am I notified by email?",
+        "Does Approve / decline in the back-office return line items blade ask for confirmation before committing?",
+        "Which email notification is journaled for an approved, partially approved or rejected return decision?",
+        "When does the decline reason field become editable, and what blocks the decision button after a quantity edit?",
+        "What happens in the return blade if the approved quantity exceeds the requested quantity?"
       ],
       "concepts": [
         "return-decision",
         "notification"
       ],
       "anchors": [
-        "PUT /api/return"
+        "PUT /api/return",
+        "/workspace/Return"
       ],
       "scope": [
         "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 8,
       "disputed": 0
     },
     {
@@ -7054,7 +7171,10 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-17555498"
+      ],
       "trust": 1,
       "disputed": 0
     },
@@ -7132,7 +7252,10 @@
         "surface=rest"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-59E4B5FC"
+      ],
       "trust": 1,
       "disputed": 1
     },
@@ -7262,7 +7385,10 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-2F64A447"
+      ],
       "trust": 1,
       "disputed": 4
     },
@@ -7935,7 +8061,7 @@
     {
       "id": "KB-AD1FA66B",
       "path": "entries/KB-AD1FA66B.md",
-      "subject": "where a cart's money lives, and which copy goes stale",
+      "subject": "Stored cart (GET /api/carts/{id}) keeps the last mutation's promotion snapshot while Query.cart recomputes promotions on every read",
       "question": "if a promotion changes while a shopper's cart is alive, does the cart still hold the old discount?",
       "questions": [
         "If a sale ends while items sit in my basket, will I still get the old discount?",
@@ -7993,13 +8119,17 @@
     {
       "id": "KB-ADA91F7B",
       "path": "entries/KB-ADA91F7B.md",
-      "subject": "cancelling an order cancels its payment on a background job but never its shipment",
+      "subject": "Cancelling an order cancels its payment on a background job and releases stock, but never its shipment or line items",
       "question": "What happens to an order's shipment and payment when the order is cancelled?",
       "questions": [
         "If I cancel my order, is the delivery also called off?",
         "Why do cancelled orders still show open shipments in the fulfilment queue?",
         "How long after an order is cancelled does its payment become cancelled, and by what mechanism?",
-        "Which order change handler cascades cancellation, and why does it skip shipments?"
+        "Which order change handler cascades cancellation, and why does it skip shipments?",
+        "If the shop cancels my order, is my reserved stock put back?",
+        "When an operator cancels an order document, are its shipment and line items cancelled too?",
+        "Why does an order look unchanged right after clicking Cancel document in the back office?",
+        "Does order cancellation cascade to the incoming payment, and which cancellation field stays Undefined?"
       ],
       "concepts": [
         "order-cancellation",
@@ -8007,14 +8137,15 @@
         "order-payment"
       ],
       "anchors": [
-        "GET /api/order/customerOrders/{id}"
+        "GET /api/order/customerOrders/{id}",
+        "CustomerOrder.isCancelled"
       ],
       "scope": [
         "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 8,
       "disputed": 0
     },
     {
@@ -8147,7 +8278,10 @@
         "surface=ucp"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-DAD0D552"
+      ],
       "trust": 1,
       "disputed": 0
     },
@@ -8203,7 +8337,7 @@
     {
       "id": "KB-B4377884",
       "path": "entries/KB-B4377884.md",
-      "subject": "changeWishlist sharing deltas without scope are silently ignored; sharing refusals carry a generic message",
+      "subject": "changeWishlist without scope silently drops addSharedWithIds/removeSharedWithIds; sharing refusals return a generic INVALID_OPERATION text",
       "question": "What does Mutation.changeWishlist do with addSharedWithIds/removeSharedWithIds when scope is omitted, and what error text do sharing refusals return?",
       "questions": [
         "Why did adding companies to my list share do nothing and show no error?",
@@ -8751,7 +8885,7 @@
     {
       "id": "KB-C1024558",
       "path": "entries/KB-C1024558.md",
-      "subject": "telling a coupon-driven discount from an automatic one on a cart",
+      "subject": "DiscountType.coupon is the only field that tells a coupon-unlocked discount from an automatic one",
       "question": "given only the cart, can I tell whether a discount came from a coupon or applied by itself?",
       "questions": [
         "On my basket, can I see which of my promo codes gave me which reduction?",
@@ -8920,7 +9054,7 @@
     {
       "id": "KB-C466AD5C",
       "path": "entries/KB-C466AD5C.md",
-      "subject": "Barcode scanner blade without BrowseFilters:Read shows the scanner as off",
+      "subject": "Barcode scanner blade by permission: without BrowseFilters:Read it shows Error 403 and a false OFF; with Read but not Update it shows the stored state read-only",
       "question": "What does the Store > Search configuration > Barcode scanner blade show to a user without catalog:BrowseFilters:Read?",
       "questions": [
         "Why does the store's barcode scanner look switched off for me when a colleague says it is on?",
@@ -9586,7 +9720,10 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-2F64A447"
+      ],
       "trust": 2,
       "disputed": 0
     },
@@ -9750,19 +9887,35 @@
     {
       "id": "KB-D7F08A26",
       "path": "entries/KB-D7F08A26.md",
-      "subject": "Customer-scope wishlist share: stop sharing deletes the target rows, re-share grants only the new orgs, key kept",
+      "subject": "Customer-scope wishlist share: Stop sharing deletes targets and message, the Private key returns null without error, re-share keeps the key with only the new orgs",
       "question": "When a Customer-scope wishlist share is switched to Private and later re-enabled with a different organization, does the former target keep or regain any access, and does the deactivated row keep its SharedWithId?",
+      "questions": [
+        "What does someone see when opening a list I shared and then made private again?",
+        "Does un-sharing a list return a forbidden error to the former recipient?",
+        "What does sharedWishlist return for a sharing key after the list is set to Private?",
+        "Does re-sharing a list create a new sharing key or revive the old one?",
+        "If I stop sharing a list and share it again, do my customers get a new link?",
+        "After a sales rep stops sharing a list and re-shares it, are the old recipients and message restored?",
+        "What does the shared wishlist query return to a reader after sharing is stopped versus after their organization is removed?",
+        "Which share scopes show a toast on save and which save silently?",
+        "Does the list Rename dialog show any sharing details?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "wishlist"
+      ],
       "anchors": [
         "Mutation.changeWishlist",
         "Query.sharedWishlist",
-        "/api/carts/{id}"
+        "/api/carts/{id}",
+        "/account/lists"
       ],
       "scope": [
         "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 7,
       "disputed": 0
     },
     {
@@ -9981,19 +10134,24 @@
     {
       "id": "KB-DA14E8B7",
       "path": "entries/KB-DA14E8B7.md",
-      "subject": "block on an un-accepted invitation is irreversible",
+      "subject": "Block then Unblock on a pending invitee irreversibly ends the invitation: contact status Invited -> Locked -> Approved and the roster shows Active with no registration",
       "question": "What happens to a pending organization invitation if the maintainer blocks and then unblocks that row?",
       "questions": [
         "If I block and then unblock someone I invited but who never joined, can they still accept the invitation?",
         "As a company maintainer, can I undo blocking a pending invitee, or re-invite the same email afterwards?",
         "Why does an unblocked invitee show as Active on the roster though they never registered?",
         "What do lockOrganizationContact and unlockOrganizationContact write to contact status and account lockoutEnd for an invited contact?",
-        "Does deleting a blocked invitee from the organization free the email address for a new invitation?"
+        "Does deleting a blocked invitee from the organization free the email address for a new invitation?",
+        "Our test site can't send emails - can an invited colleague still be activated?",
+        "Does blocking and then unblocking an invited member turn them into an active member?",
+        "What happens to contact status and lockoutEnd when a pending invitee is blocked and unblocked?",
+        "Why does passwordHash look null on one user endpoint but populated on the members endpoint?"
       ],
       "concepts": [
         "member-block",
         "organization-invitation",
-        "membership-status"
+        "membership-status",
+        "account-lockout"
       ],
       "anchors": [
         "GET /company/members",
@@ -10008,8 +10166,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0
+      "trust": 3,
+      "disputed": 4
     },
     {
       "id": "KB-DAD0D552",
@@ -10021,12 +10179,17 @@
         "Which error codes distinguish partial stock, zero stock and an unmeetable minimum order quantity for agent cart calls?",
         "Does a refused over-stock cart update roll back, or can the over-stock quantity persist on the line?",
         "Do checkout and handoff tools refuse a cart with inventory errors, and is a continue_url returned?",
-        "What fields are in the details of an MCP inventory refusal, and which codes are retryable?"
+        "What fields are in the details of an MCP inventory refusal, and which codes are retryable?",
+        "If an agent tries to put more items than are in stock in my cart, what quantity stays in it?",
+        "Is a refused cart update over stock atomic, or does the over-stock quantity persist?",
+        "After update_cart fails with insufficient_stock, what does get_cart report per line?",
+        "Why does checkout handoff give no continue URL after an out-of-stock cart update?"
       ],
       "concepts": [
         "ucp",
         "inventory",
-        "api-error"
+        "api-error",
+        "cart-validation"
       ],
       "anchors": [
         "/ucp/mcp",
@@ -10034,14 +10197,16 @@
         "PUT /ucp/v1/carts/{cartId}",
         "POST /ucp/v1/checkouts",
         "POST /ucp/v1/checkouts/{checkoutId}/handoff",
-        "POST /ucp/v1/internal/handoff/restore"
+        "POST /ucp/v1/internal/handoff/restore",
+        "POST /ucp/mcp",
+        "POST /ucp/v1/checkouts/{id}/handoff"
       ],
       "scope": [
         "surface=ucp"
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10322,7 +10487,10 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-59E4B5FC"
+      ],
       "trust": 1,
       "disputed": 1
     },
@@ -10414,7 +10582,7 @@
     {
       "id": "KB-E7790BF6",
       "path": "entries/KB-E7790BF6.md",
-      "subject": "where an applied coupon and its reward live on a cart",
+      "subject": "an applied coupon is two records on a cart: the code in cart.coupons, the reward in cart.discounts, joined only by the code string",
       "question": "when a coupon is applied to a cart, where is the code and where is the money?",
       "questions": [
         "After I enter a promo code, where does the cart show how much that code saved me?",
@@ -10588,7 +10756,7 @@
     {
       "id": "KB-EA337811",
       "path": "entries/KB-EA337811.md",
-      "subject": "Reopening an existing Customer share pre-fills the saved message and recipients",
+      "subject": "Share dialog reopen pre-fills the saved message and recipients; it starts empty after Stop sharing and re-share",
       "question": "What does the list Share dialog show when reopening an existing Customer share?",
       "questions": [
         "When I open the share window again for a list I already shared, is my previous note still there?",
@@ -11210,21 +11378,31 @@
     {
       "id": "KB-F1542157",
       "path": "entries/KB-F1542157.md",
-      "subject": "an order-level discount is not allocated to the line items",
+      "subject": "An order-level promotion is recorded only in the order's discounts collection, not on line items, so the Admin Line items header shows the undiscounted sum",
       "question": "why does the Admin Line items blade show a different discount and total from the order header",
       "questions": [
         "Why does my order show a discount in the total but not on the individual items?",
         "Why does the Line items blade header show zero discount while the order header shows one?",
         "Is an order-level promotion reward distributed across line item discountAmount values?",
-        "Which total should QA read in the back office to check an order-level discount?"
+        "Which total should QA read in the back office to check an order-level discount?",
+        "Where does a whole-basket percentage discount appear on my placed order?",
+        "Is a cart subtotal percentage reward spread onto line items or shipments on the resulting order?",
+        "Why is subTotalDiscount zero on an order that received a percentage-off-subtotal promotion?",
+        "Which order fields carry the reduction from an order-wide percentage promotion?"
       ],
       "concepts": [
         "discount",
         "order-line-item",
-        "admin-order-screen"
+        "admin-order-screen",
+        "promotion-reward",
+        "customer-order"
       ],
       "anchors": [
-        "OrderLineItemType.discountAmount"
+        "OrderLineItemType.discountAmount",
+        "CustomerOrder.discounts",
+        "CustomerOrder.subTotalDiscount",
+        "OrderLineItemType.discountTotal",
+        "GET /api/order/customerOrders/{id}"
       ],
       "scope": [
         "surface=admin-ui",
@@ -11232,7 +11410,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -11361,7 +11539,10 @@
         "surface=admin-ui"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-8C3E463D"
+      ],
       "trust": 2,
       "disputed": 1
     },
@@ -11743,7 +11924,7 @@
     {
       "id": "KB-FB8014EB",
       "path": "entries/KB-FB8014EB.md",
-      "subject": "security-user deletion takes names, and a wrong parameter returns a vacuous success",
+      "subject": "DELETE /api/platform/security/users takes 'names'; a wrong parameter returns succeeded:true and deletes nothing",
       "question": "Which query parameter does DELETE /api/platform/security/users take, and which lookup reliably finds a user?",
       "questions": [
         "I removed a back-office user and got a success message, so why do they still exist?",
@@ -11796,7 +11977,10 @@
         "surface=xapi"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-F1542157"
+      ],
       "trust": 2,
       "disputed": 0
     },

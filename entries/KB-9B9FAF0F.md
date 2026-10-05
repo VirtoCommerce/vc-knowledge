@@ -13,7 +13,8 @@ concepts:
   - id: return
   - id: notification
   - id: push-message
-status: active
+status: superseded
+supersededBy: KB-17555498
 appliesTo:
   - axis: surface
     value: xapi

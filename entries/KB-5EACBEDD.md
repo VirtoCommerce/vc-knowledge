@@ -12,7 +12,8 @@ questions:
 concepts:
   - id: list-sharing
   - id: wishlist
-status: active
+status: superseded
+supersededBy: KB-D7F08A26
 appliesTo:
   - axis: surface
     value: storefront-ui

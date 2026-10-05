@@ -9,7 +9,8 @@ questions:
   - text: Can I change only the priority of a price list assignment with a GET-then-PUT round trip?
 concepts:
   - id: price-list
-status: active
+status: superseded
+supersededBy: KB-6D5E2CD1
 appliesTo:
   - axis: surface
     value: rest

@@ -1,6 +1,6 @@
 ---
 id: KB-FB8014EB
-subject: security-user deletion takes names, and a wrong parameter returns a vacuous success
+subject: DELETE /api/platform/security/users takes 'names'; a wrong parameter returns succeeded:true and deletes nothing
 plane: experiential
 question: Which query parameter does DELETE /api/platform/security/users take, and which lookup reliably finds a user?
 questions:

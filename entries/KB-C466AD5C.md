@@ -1,6 +1,6 @@
 ---
 id: KB-C466AD5C
-subject: Barcode scanner blade without BrowseFilters:Read shows the scanner as off
+subject: "Barcode scanner blade by permission: without BrowseFilters:Read it shows Error 403 and a false OFF; with Read but not Update it shows the stored state read-only"
 plane: experiential
 question: What does the Store > Search configuration > Barcode scanner blade show to a user without catalog:BrowseFilters:Read?
 questions:
