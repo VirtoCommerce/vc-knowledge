@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-05T10:07:31.853Z",
-  "count": 454,
+  "generated": "2026-10-05T10:54:30.709Z",
+  "count": 457,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -893,6 +893,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-11E3EE30",
+      "path": "entries/KB-11E3EE30.md",
+      "subject": "admin product search carries order-quantity limits and honours sort",
+      "question": "Does POST /api/catalog/search/products with responseGroup ItemInfo return minQuantity/maxQuantity, and can its page order be made deterministic?",
+      "anchors": [
+        "POST /api/catalog/search/products",
+        "GET /api/catalog/products"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3043,6 +3060,22 @@
       ],
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-40B9AEF4",
+      "path": "entries/KB-40B9AEF4.md",
+      "subject": "member keyword search misses hyphenated organization names",
+      "question": "Does POST /api/members/search with keyword find an organization named like AGENT-TEST-Org-Kingsbridge-Imports-20260514?",
+      "anchors": [
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-40CBB0C5",
@@ -7235,7 +7268,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -9151,6 +9184,22 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B85A6FC2",
+      "path": "entries/KB-B85A6FC2.md",
+      "subject": "coupons/add updates an existing coupon in place when its id is sent",
+      "question": "Can an existing coupon's expiration date be changed without deleting and re-adding it?",
+      "anchors": [
+        "POST /api/marketing/promotions/coupons/add"
+      ],
+      "scope": [
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
