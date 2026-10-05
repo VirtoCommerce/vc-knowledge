@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T20:06:36.591Z",
-  "count": 389,
+  "generated": "2026-10-05T20:21:38.415Z",
+  "count": 391,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1628,7 +1628,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-40CBB0C5",
@@ -3905,6 +3905,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-90635C64",
+      "path": "entries/KB-90635C64.md",
+      "subject": "The two-role docs-writer sales rep fixture carries sales-rep-documents:read, so it sees the Document library widget",
+      "question": "Does a sales rep with Sales Representative + Sales Rep Documents Manager roles see the Document library widget and nav entry?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/documents"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-90B0D8F5",
       "path": "entries/KB-90B0D8F5.md",
       "subject": "Setting a contact's Status to \"Locked\" in Admin leaves the storefront members roster showing that member as \"Active\" — the membership status masks it.",
@@ -4640,6 +4657,23 @@
       "scope": [
         "surface=graphql",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AB719187",
+      "path": "entries/KB-AB719187.md",
+      "subject": "me.contact.organizations searchPhrase goes through the Member search index, so an unindexed organization never matches",
+      "question": "Why does me.contact.organizations with a searchPhrase return 0 when the user has organizations?",
+      "anchors": [
+        "me.contact.organizations",
+        "/api/members/search"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
