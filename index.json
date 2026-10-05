@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T15:59:39.696Z",
-  "count": 384,
+  "generated": "2026-10-05T16:25:53.218Z",
+  "count": 385,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2960,7 +2960,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3687,6 +3687,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8A1B3406",
+      "path": "entries/KB-8A1B3406.md",
+      "subject": "Header search dropdown pushes one view_item_list search_bar per open with a phrase; Escape clears the box and a reopen with it empty shows the previous phrase's results and pushes nothing",
+      "question": "How many search_bar view_item_list impressions does the header search dropdown push per open, and what does Escape do to the phrase?",
+      "anchors": [
+        "/search"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
