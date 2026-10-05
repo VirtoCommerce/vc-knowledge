@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T13:08:39.827Z",
-  "count": 376,
+  "generated": "2026-10-05T13:38:28.979Z",
+  "count": 379,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1116,6 +1116,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2BCFC8A6",
+      "path": "entries/KB-2BCFC8A6.md",
+      "subject": "Quote Approve converts to an order in one step; no Accepted status",
+      "question": "What quote status does the storefront need to offer Accept/Approve, and is there an Accepted state before conversion to order?",
+      "anchors": [
+        "Mutation.approveQuoteRequest",
+        "Mutation.declineQuoteRequest",
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3600,6 +3618,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-874B24DD",
+      "path": "entries/KB-874B24DD.md",
+      "subject": "Buyer quote list filters by login id AND current organization",
+      "question": "Which quotes does the storefront /account/quotes list (xAPI quotes query) show to a B2B buyer?",
+      "anchors": [
+        "Query.quotes",
+        "/account/quotes",
+        "POST /api/quote/requests"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8793DFE7",
       "path": "entries/KB-8793DFE7.md",
       "subject": "An order header's shippingTaxTotal reads 0 even when shipping is taxed, contradicting the header's own shippingTotalWithTax",
@@ -3960,6 +3996,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-97C03EB4",
+      "path": "entries/KB-97C03EB4.md",
+      "subject": "A quote without languageCode is listed by xAPI quotes but quote(id) fails ARGUMENT_NULL",
+      "question": "Why does a quote created via POST /api/quote/requests show in the buyer's quote list but fail to open (Something went wrong)?",
+      "anchors": [
+        "POST /api/quote/requests",
+        "Query.quote",
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
