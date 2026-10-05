@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T20:21:38.415Z",
-  "count": 391,
+  "generated": "2026-10-05T20:24:13.958Z",
+  "count": 397,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -328,6 +328,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-0AFC2A50",
+      "path": "entries/KB-0AFC2A50.md",
+      "subject": "A shipping-reward coupon is rejected as not valid when Pickup is selected",
+      "question": "What happens when a free-shipping coupon is applied to a cart with Pickup delivery?",
+      "anchors": [
+        "/cart",
+        "Mutations.addCoupon"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0B27E984",
       "path": "entries/KB-0B27E984.md",
       "subject": "The \"+ Add a gift\" section on the cart page is pre-checked by default and silently puts a $0.00 auto-promotion gift line into the placed order, without appearing in the cart's product table, item count or subtotal.",
@@ -519,6 +536,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1187CB14",
+      "path": "entries/KB-1187CB14.md",
+      "subject": "Order page hides Request return when nothing is returnable, with no message",
+      "question": "What does the order detail page show for an order whose return window has expired?",
+      "anchors": [
+        "/account/orders/{}",
+        "Query.returnableItems"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -2303,6 +2337,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-563D7FE5",
+      "path": "entries/KB-563D7FE5.md",
+      "subject": "Storefront quote detail shows list price per item while line total uses the proposed price",
+      "question": "What unit price does the storefront quote detail page show for a quote line with an admin proposal price?",
+      "anchors": [
+        "/account/quotes/{}",
+        "Query.quote"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-56979CB9",
       "path": "entries/KB-56979CB9.md",
       "subject": "The storefront's GA4 purchase event sets transaction_id to the order GUID (order.id), not the displayed order number",
@@ -2731,7 +2782,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2926,6 +2977,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6D20A8C3",
+      "path": "entries/KB-6D20A8C3.md",
+      "subject": "Checkout with no saved addresses opens the New address form directly",
+      "question": "What opens when a user with no saved addresses clicks select a shipping address in the cart?",
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3203,6 +3270,23 @@
       ],
       "scope": [
         "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-77B581F3",
+      "path": "entries/KB-77B581F3.md",
+      "subject": "Storefront quote Decline is one click, with no reason and no confirmation",
+      "question": "Does declining a quote in the storefront ask for a reason or a confirmation?",
+      "anchors": [
+        "/account/quotes/{}",
+        "Mutations.declineQuoteRequest"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6073,6 +6157,23 @@
       "disputed": 1
     },
     {
+      "id": "KB-DE341132",
+      "path": "entries/KB-DE341132.md",
+      "subject": "A loyalty mission with OrderCountGoal count 0 never completes",
+      "question": "Does a loyalty mission with an order count target of 0 complete and grant its reward after an order?",
+      "anchors": [
+        "/api/loyalty-mission-progress/search",
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=backend"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DF432371",
       "path": "entries/KB-DF432371.md",
       "subject": "A non-admin (__customer) platform token is refused SettingQuery-gated /api/platform/settings routes with 403, but can read two ungated routes: /values/{name} (no permission attribute) and /ui/customization (AllowAnonymous).",
@@ -6530,7 +6631,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {

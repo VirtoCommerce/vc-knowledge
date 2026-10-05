@@ -21,5 +21,11 @@ evidence:
     at: 2026-10-01T19:55:44.242Z
     by: session:0cfc9f97
     who: kutasinaelena
+  - method: observation
+    deployment: vcst
+    at: 2026-10-05T20:22:43.397Z
+    by: session:51fcfb97
+    who: kutasinaelena
+    note: "REG-2026-10-05-1752 ORD-037 on theme 2.59.0-pr-2524: RET261005-00005 created with reason FaultyOnArrival; return detail shows no reason. return-item-summary.vue renders only reasonComment."
 ---
 On theme 2.59 (pr-2500) the buyer's return detail page renders, per line, the product name, SKU, reasonComment (if any), the per-line decline reason and attachments. It does not render reasonCode (a buyer line with reasonCode NoLongerNeeded and no comment shows no reason) and does not render the legacy free-text 'reason' that admin-created returns carry (an admin-created return with reason 'AGENT-TEST admin-created return' shows no reason). The xAPI ReturnLineItemType selected by GetReturn has reasonCode and reasonComment but no legacy reason field.
