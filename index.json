@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-05T17:14:16.213Z",
+  "generated": "2026-10-05T17:15:20.795Z",
   "count": 475,
   "entries": [
     {
@@ -1583,6 +1583,18 @@
       "path": "entries/KB-1E03BE5A.md",
       "subject": "The storefront Barcode scan control sits inside the desktop header search input at 1920 px, but at 390 px it is reachable only after \"Toggle search bar\"",
       "question": "where is the Barcode scan entry point in the storefront header at desktop vs mobile width",
+      "questions": [
+        "Where is the barcode scan button in the storefront header on desktop and on mobile?",
+        "search-bar.vue mobile-search-bar.vue Barcode scan control location desktop 1920 vs 390",
+        "Why can't I find the Barcode scan control in the header at 390 px width?",
+        "Does the barcode scanner appear only after tapping Toggle search bar on mobile?",
+        "Is the Barcode scan dialog opened directly from the desktop header search input at 1920x1080?"
+      ],
+      "concepts": [
+        "barcode-scanner",
+        "mobile-layout",
+        "site-header"
+      ],
       "anchors": [
         "client-app/shared/layout/components/header/_internal/search-bar/search-bar.vue",
         "client-app/shared/layout/components/header/_internal/mobile-search-bar.vue"
@@ -1736,6 +1748,18 @@
       "path": "entries/KB-20F8350F.md",
       "subject": "sendCustomerCommunication to a served org whose only member is the sending rep returns succeeded:false, pushSent:false, emailSent:false, warnings[0]=NoRecipients, errors[] empty",
       "question": "What does sendCustomerCommunication return when the target organization's only member is the sending sales rep?",
+      "questions": [
+        "What happens when a sales rep sends a message to a customer company where they are the only member?",
+        "Mutation.sendCustomerCommunication /graphql/sales-rep NoRecipients warning succeeded false",
+        "Is the sending sales rep excluded from the recipients of sendCustomerCommunication?",
+        "How do I get a reliable zero-recipient target for sendCustomerCommunication?",
+        "Does sendCustomerCommunication return errors or warnings when there are no recipients (pushSent false, emailSent false)?"
+      ],
+      "concepts": [
+        "customer-communication",
+        "sales-rep",
+        "organization-membership"
+      ],
       "anchors": [
         "Mutation.sendCustomerCommunication",
         "PUT /api/sales-rep",
@@ -2183,13 +2207,25 @@
       "path": "entries/KB-2BCFC8A6.md",
       "subject": "Quote Approve converts to an order in one step; no Accepted status",
       "question": "What quote status does the storefront need to offer Accept/Approve, and is there an Accepted state before conversion to order?",
+      "questions": [
+        "When does the storefront show Approve and Decline buttons on a quote?",
+        "Mutation.approveQuoteRequest Proposal sent status converts quote to order Ordered",
+        "Is there an Accepted quote status before the quote becomes an order?",
+        "Does approving a quote place the order immediately or require a separate checkout?",
+        "Which Quotes.Status values are allowed and what does declineQuoteRequest set the status to?"
+      ],
+      "concepts": [
+        "quote",
+        "customer-order"
+      ],
       "anchors": [
         "Mutation.approveQuoteRequest",
         "Mutation.declineQuoteRequest",
         "/account/quotes"
       ],
       "scope": [
-        "surface=storefront-ui"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2636,6 +2672,17 @@
       "path": "entries/KB-3483ADA3.md",
       "subject": "xAPI removeWishlist returns a Boolean scalar, so selecting { id } on it fails validation",
       "question": "What does the removeWishlist GraphQL mutation return?",
+      "questions": [
+        "Why does deleting a list through GraphQL fail with a sub-selection error?",
+        "Mutation.removeWishlist return type Boolean SCALAR_LEAFS { id }",
+        "What does the removeWishlist mutation return?",
+        "Is the list removed when removeWishlist is called with a selection set like { id }?"
+      ],
+      "concepts": [
+        "wishlist",
+        "graphql-api",
+        "api-error"
+      ],
       "anchors": [
         "Mutation.removeWishlist"
       ],
@@ -3970,6 +4017,18 @@
       "path": "entries/KB-4E1FF232.md",
       "subject": "returnableItems reports NOT_DELIVERED for a Completed order whose shipment has no DeliveryDate",
       "question": "Why does returnableItems say NOT_DELIVERED / deliveredQuantity 0 on a Completed order?",
+      "questions": [
+        "Why is there no Request return button on my completed order?",
+        "Query.returnableItems NOT_DELIVERED deliveredQuantity 0 Completed order",
+        "Does returnableItems need a shipment DeliveryDate to count a line as delivered?",
+        "What makes an order line returnable: shipment items, DeliveryDate within Return.WindowDays, allowed order status?",
+        "Which ineligibility reason does a Shipped order get from returnableItems (ORDER_STATUS_NOT_ALLOWED)?"
+      ],
+      "concepts": [
+        "returnable-quantity",
+        "shipment",
+        "return"
+      ],
       "anchors": [
         "Query.returnableItems",
         "PUT /api/order/customerOrders"
@@ -4287,6 +4346,18 @@
       "path": "entries/KB-5196FCE9.md",
       "subject": "When the store's anonymousUsersAllowed setting is false, the storefront sends every anonymous visitor to /sign-in, so an 'Anyone with link' list link cannot be opened without signing in",
       "question": "Can an anonymous visitor open an 'Anyone with link' shared list when the store does not allow anonymous users?",
+      "questions": [
+        "Why does an anonymous visitor get sent to the sign-in page when opening a shared list link?",
+        "/shared-list/{key} redirect /sign-in returnUrl anonymousUsersAllowed false",
+        "Can an 'Anyone with link' list be opened without signing in when the store disallows anonymous users?",
+        "How do I check whether a store allows anonymous users before treating a shared-list denial as a bug (Query.pageContext)?",
+        "Is the anonymous redirect to /sign-in specific to shared lists or store-wide?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "store",
+        "sign-in"
+      ],
       "anchors": [
         "/shared-list/{}",
         "/sign-in",
@@ -4935,12 +5006,24 @@
       "path": "entries/KB-5FA94169.md",
       "subject": "Customer-scope list switched to Organization: targets cleared, former target orgs denied, owner's active-org members get Write",
       "question": "What happens to access when a Specific-customers wishlist share is changed to My organization?",
+      "questions": [
+        "Who loses and who gains access when a list shared with specific customers is switched to My organization?",
+        "Mutation.changeWishlist scope Organization from Customer targets cleared sharedWishlist Forbidden",
+        "Does a member of a former target organization keep access after the list scope changes to Organization?",
+        "Does the sharing key stay the same when a Customer-scope wishlist is changed to Organization scope?",
+        "What access level do members of the owner's active organization get after the switch (Write)?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "wishlist",
+        "permission"
+      ],
       "anchors": [
         "Mutation.changeWishlist",
         "Query.sharedWishlist"
       ],
       "scope": [
-        "surface=xapi-graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -5677,6 +5760,18 @@
       "path": "entries/KB-6E56FB4B.md",
       "subject": "Organization-scope wishlist: only the owner may change scope/sharing or remove the list; members keep rename and item edits",
       "question": "Can a non-owner member of an Organization-scope wishlist change its scope, share it, or delete it?",
+      "questions": [
+        "Can a colleague who is not the list owner delete or re-share an organization list?",
+        "Mutation.changeWishlist Mutation.removeWishlist non-owner Organization scope Access denied Forbidden",
+        "Which edits can a non-owner Write member make on an Organization-scope wishlist (rename, item edits)?",
+        "Can a platform administrator remove another user's organization list via xAPI removeWishlist?",
+        "What do anonymous and other-organization callers get on sharedWishlist for an Organization-scope list?"
+      ],
+      "concepts": [
+        "wishlist",
+        "list-sharing",
+        "permission"
+      ],
       "anchors": [
         "Mutation.changeWishlist",
         "Mutation.removeWishlist",
@@ -5684,7 +5779,7 @@
       ],
       "scope": [
         "module=x-cart",
-        "surface=xapi-graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6862,11 +6957,23 @@
       "path": "entries/KB-84773559.md",
       "subject": "Return 3.1003.0 release: return-attachments file scope not registered, submitReturn works without attachments",
       "question": "Can a buyer upload return attachments / submit a return without them on Return 3.1003.0?",
+      "questions": [
+        "Can a buyer attach files to a return request on Return 3.1003.0?",
+        "POST /api/files/return-attachments INVALID_SCOPE Unknown scope",
+        "Can submitReturn succeed without attachments when Return.AttachmentsRequired is false?",
+        "Why does uploading a return attachment return 200 with succeeded false?"
+      ],
+      "concepts": [
+        "return",
+        "asset",
+        "api-error"
+      ],
       "anchors": [
         "POST /api/files/return-attachments",
         "Mutation.submitReturn"
       ],
       "scope": [
+        "surface=rest",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -6993,12 +7100,24 @@
       "path": "entries/KB-874B24DD.md",
       "subject": "Buyer quote list filters by login id AND current organization",
       "question": "Which quotes does the storefront /account/quotes list (xAPI quotes query) show to a B2B buyer?",
+      "questions": [
+        "Why doesn't a quote I created through the API show up in the buyer's quotes list?",
+        "Query.quotes /account/quotes CustomerId login id OrganizationId filter",
+        "Does the xAPI quotes query filter by contact id or by user login id?",
+        "Is a quote with a null organizationId listed for the buyer?",
+        "Who may open a quote by id under QuoteAuthorizationHandler (xapi:my_organization:edit)?"
+      ],
+      "concepts": [
+        "quote",
+        "organization"
+      ],
       "anchors": [
         "Query.quotes",
         "/account/quotes",
         "POST /api/quote/requests"
       ],
       "scope": [
+        "surface=storefront-ui",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -7043,6 +7162,18 @@
       "path": "entries/KB-8A1B3406.md",
       "subject": "Header search dropdown pushes one view_item_list search_bar per open with a phrase; Escape clears the box and a reopen with it empty shows the previous phrase's results and pushes nothing",
       "question": "How many search_bar view_item_list impressions does the header search dropdown push per open, and what does Escape do to the phrase?",
+      "questions": [
+        "How many analytics events does the header search dropdown send each time it is opened?",
+        "/search view_item_list item_list_id search_bar impression dataLayer",
+        "Does pressing Escape in the header search box clear the phrase?",
+        "Does reopening the empty search box show the previous phrase's results and push a new impression?",
+        "Is a search_bar impression pushed when the mobile search overlay opens at 390 px?"
+      ],
+      "concepts": [
+        "analytics",
+        "product-search",
+        "search-history"
+      ],
       "anchors": [
         "/search"
       ],
@@ -7653,6 +7784,18 @@
       "path": "entries/KB-95FBC464.md",
       "subject": "For a corporate (organization) storefront user the header Ship-to selection is stored server-side on Contact.selectedAddressId (plus the cart shipment delivery address), so it is shared across storefront origins and sessions rather than kept in browser storage",
       "question": "where does the storefront header Ship to selector keep the selected address for an organization member",
+      "questions": [
+        "Why does the selected Ship to address carry over to another storefront for the same company user?",
+        "Mutation.updateContact selectedAddressId addOrUpdateCartShipment header ship-to selector",
+        "Is the header Ship to selection for an organization member stored in localStorage or on the server?",
+        "When does the storefront use local_ship_to_addresses in localStorage instead of Contact.selectedAddressId?",
+        "Can selecting a ship-to address in one session change what other sessions and storefronts show?"
+      ],
+      "concepts": [
+        "address",
+        "contact",
+        "site-header"
+      ],
       "anchors": [
         "Mutation.updateContact",
         "Mutation.addOrUpdateCartShipment",
@@ -7661,6 +7804,7 @@
       "scope": [
         "frontend=2.59.x",
         "surface=storefront-ui",
+        "surface=xapi",
         "user=organization-member"
       ],
       "plane": "experiential",
@@ -7796,12 +7940,24 @@
       "path": "entries/KB-97C03EB4.md",
       "subject": "A quote without languageCode is listed by xAPI quotes but quote(id) fails ARGUMENT_NULL",
       "question": "Why does a quote created via POST /api/quote/requests show in the buyer's quote list but fail to open (Something went wrong)?",
+      "questions": [
+        "Why does a quote show in the list but the quote page says Something went wrong?",
+        "POST /api/quote/requests languageCode missing Query.quote ARGUMENT_NULL",
+        "Does quote(id) fail when the QuoteRequest has no languageCode?",
+        "Do storefront-created quotes hit the ARGUMENT_NULL error or only API-created ones?"
+      ],
+      "concepts": [
+        "quote",
+        "localization",
+        "api-error"
+      ],
       "anchors": [
         "POST /api/quote/requests",
         "Query.quote",
         "/account/quotes"
       ],
       "scope": [
+        "surface=rest",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -8413,6 +8569,17 @@
       "path": "entries/KB-A46DF150.md",
       "subject": "The storefront desktop top utility bar (h-10 header row with language, currency, ship-to, call us, dashboard, account) renders only at viewport ≥1024px; the account org/user names inside it render only at ≥1280px (xl), and below 1024px a separate 90px mobile header is shown instead",
       "question": "at which viewport widths does the storefront top utility bar and the account org/user name label render",
+      "questions": [
+        "At what screen width does the top bar with language, currency and account appear?",
+        "top-header.vue utility bar account-button organization-name-label breakpoint 1024 1280",
+        "From which viewport width are the organization and user names shown in the account button?",
+        "What header is shown below 1024 px (90px mobile header)?",
+        "What max-width caps the org and user name labels at 1280-1499 vs 1500 px and above?"
+      ],
+      "concepts": [
+        "site-header",
+        "mobile-layout"
+      ],
       "anchors": [
         "/ (top-header.vue utility bar)",
         "/catalog"
@@ -8960,6 +9127,18 @@
       "path": "entries/KB-ACDF81BB.md",
       "subject": "On theme 2.59.0-pr-2476 a non-owner member of an Organization-scope list is offered only Rename — no Share, no Remove list — on the card menu and the list page",
       "question": "which list actions does /account/lists offer a non-owner member of an Organization-scope list",
+      "questions": [
+        "What actions can a colleague see on a company list they don't own?",
+        "/account/lists card Actions menu non-owner Organization scope Rename only",
+        "Is Share or Remove list offered to a non-owner member of an Organization-scope list?",
+        "Can a non-owner organization member rename the list, change quantities and add to cart?",
+        "Which actions does the owner see on their own Private list card menu?"
+      ],
+      "concepts": [
+        "wishlist",
+        "list-sharing",
+        "organization-member"
+      ],
       "anchors": [
         "/account/lists",
         "/account/lists/{id}",
@@ -9322,11 +9501,22 @@
       "path": "entries/KB-B540D063.md",
       "subject": "changeWishlist with message (or other sharing fields) but no scope is a silent no-op, even for the owner",
       "question": "Does changeWishlist persist a message sent without scope?",
+      "questions": [
+        "Why isn't the share message saved when I update a list?",
+        "Mutation.changeWishlist message without scope silent no-op",
+        "Does changeWishlist persist a message if scope is not sent, even for the owner?",
+        "Does a non-owner member's message-only changeWishlist get Forbidden or a 200 no-op?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "wishlist",
+        "api-error"
+      ],
       "anchors": [
         "Mutation.changeWishlist"
       ],
       "scope": [
-        "surface=xapi-graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -10125,11 +10315,24 @@
       "path": "entries/KB-C4DC8774.md",
       "subject": "me.contact.addresses default order is not insertion order and changes when addresses are re-created",
       "question": "In what order does xAPI me.contact.addresses return a customer's addresses by default?",
+      "questions": [
+        "In what order are a customer's saved addresses returned by default?",
+        "me.contact.addresses default order not insertion order GET /api/members/{id}",
+        "Does the default address order change when addresses are deleted and re-created?",
+        "How does REST GET /api/members/{id} order contact addresses (by address key GUID)?",
+        "Can a sort test assume the default address order equals the order data was written in?"
+      ],
+      "concepts": [
+        "address",
+        "contact",
+        "sort"
+      ],
       "anchors": [
         "me.contact.addresses",
         "GET /api/members/{}"
       ],
       "scope": [
+        "surface=rest",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -11712,6 +11915,17 @@
       "path": "entries/KB-E6436922.md",
       "subject": "Share-list dialog on theme 2.59.0-pr-2476-0abb warns only when access can be lost: widening to Anyone with link saves directly, narrowing and removing a recipient show 'Change who can access?'",
       "question": "Which Share-dialog changes on /account/lists show a confirmation before Mutation.changeWishlist runs, and which save directly?",
+      "questions": [
+        "When does the share list dialog ask me to confirm before saving?",
+        "/account/lists Share dialog Mutation.changeWishlist 'Change who can access?' confirmation",
+        "Does widening a list to Anyone with link save without confirmation?",
+        "What confirmation appears when switching a shared list to Private ('Stop sharing this list?')?",
+        "Does the sharing key change when sharing scope changes, and can anonymous users read it after widening?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "wishlist"
+      ],
       "anchors": [
         "/account/lists",
         "Mutation.changeWishlist",
@@ -11721,6 +11935,7 @@
       "scope": [
         "actor=sales-rep",
         "surface=storefront-ui",
+        "surface=xapi",
         "theme=2.59.0-pr-2476-0abb"
       ],
       "plane": "experiential",
