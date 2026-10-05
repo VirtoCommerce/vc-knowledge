@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-05T10:09:47.487Z",
-  "count": 368,
+  "generated": "2026-10-05T11:33:52.278Z",
+  "count": 370,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1270,6 +1270,22 @@
         "feature=otp-email-sign-in",
         "setting=detailederrors-on",
         "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3483ADA3",
+      "path": "entries/KB-3483ADA3.md",
+      "subject": "xAPI removeWishlist returns a Boolean scalar, so selecting { id } on it fails validation",
+      "question": "What does the removeWishlist GraphQL mutation return?",
+      "anchors": [
+        "Mutation.removeWishlist"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4980,6 +4996,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C4DC8774",
+      "path": "entries/KB-C4DC8774.md",
+      "subject": "me.contact.addresses default order is not insertion order and changes when addresses are re-created",
+      "question": "In what order does xAPI me.contact.addresses return a customer's addresses by default?",
+      "anchors": [
+        "me.contact.addresses",
+        "GET /api/members/{}"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
