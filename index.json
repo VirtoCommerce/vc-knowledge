@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-05T17:15:20.795Z",
-  "count": 475,
+  "generated": "2026-10-06T05:49:51.189Z",
+  "count": 495,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -553,6 +553,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-0AFC2A50",
+      "path": "entries/KB-0AFC2A50.md",
+      "subject": "A shipping-reward coupon is rejected as not valid when Pickup is selected",
+      "question": "What happens when a free-shipping coupon is applied to a cart with Pickup delivery?",
+      "anchors": [
+        "/cart",
+        "Mutations.addCoupon"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0B27E984",
       "path": "entries/KB-0B27E984.md",
       "subject": "The \"+ Add a gift\" section on the cart page is pre-checked by default and silently puts a $0.00 auto-promotion gift line into the placed order, without appearing in the cart's product table, item count or subtotal.",
@@ -633,7 +650,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -653,7 +670,7 @@
         "KB-ADA91F7B",
         "KB-6E63AFF4"
       ],
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -896,6 +913,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-1187CB14",
+      "path": "entries/KB-1187CB14.md",
+      "subject": "Order page hides Request return when nothing is returnable, with no message",
+      "question": "What does the order detail page show for an order whose return window has expired?",
+      "anchors": [
+        "/account/orders/{}",
+        "Query.returnableItems"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-11E3EE30",
       "path": "entries/KB-11E3EE30.md",
       "subject": "admin product search carries order-quantity limits and honours sort",
@@ -949,7 +983,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1462,7 +1496,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1771,7 +1805,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2440,7 +2474,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 9,
+      "trust": 11,
       "disputed": 8
     },
     {
@@ -2519,6 +2553,26 @@
       ],
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-31224A5E",
+      "path": "entries/KB-31224A5E.md",
+      "subject": "The storefront orders list differs by role: org maintainer gets All orders / My orders tabs (and the All tab replaces the Purchase order column with Buyer name), an org employee gets no tabs at all",
+      "question": "What does /account/orders show an org maintainer versus an org employee, and what changes between the All orders and My orders tabs?",
+      "anchors": [
+        "/account/orders",
+        "/account/orders/{id}",
+        "/403",
+        "Query.organizationOrders"
+      ],
+      "scope": [
+        "role=org-maintainer-vs-employee",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-316B2DDB",
@@ -2756,7 +2810,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -2973,6 +3027,24 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3D0750BD",
+      "path": "entries/KB-3D0750BD.md",
+      "subject": "Members without an email give the EmailNoRecipients warning; push still goes, and an email-only send to them returns succeeded false",
+      "question": "what does sendCustomerCommunication return when the targeted members have no email address",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3214,7 +3286,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-40CBB0C5",
@@ -3383,7 +3455,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 1
+      "disputed": 3
     },
     {
       "id": "KB-432D02EF",
@@ -3456,6 +3528,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4593FC41",
+      "path": "entries/KB-4593FC41.md",
+      "subject": "vc-shell framework 2.6.1 never leaves focus on <body> after sign-in, blade open, maximize/restore (button or mod+\\), save, popup close or sign-out — each lands on a defined element",
+      "question": "where does keyboard focus go in a vc-shell app after sign-in, blade open, maximize/restore, save and sign-out",
+      "anchors": [
+        "/apps/vendor-portal/#/products",
+        "/apps/vendor-portal/#/login"
+      ],
+      "scope": [
+        "browser=chrome",
+        "framework=@vc-shell/framework@2.6.1",
+        "surface=vc-shell-vendor-portal"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3544,6 +3635,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-49D2315C",
+      "path": "entries/KB-49D2315C.md",
+      "subject": "A wishlist share target whose organization was deleted stays in sharingSetting.targets with its id and a null name, and the list keeps working",
+      "question": "What does a wishlist sharing target look like after its organization is deleted?",
+      "anchors": [
+        "Query.wishlist",
+        "Query.wishlists",
+        "Mutation.changeWishlist",
+        "SharingSettingType.targets"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "module=x-cart",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3815,6 +3927,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4C919BA6",
+      "path": "entries/KB-4C919BA6.md",
+      "subject": "sendCustomerCommunication with several organizationIds sends one push and one email per distinct contact across all orgs, rep excluded",
+      "question": "does a contact that belongs to two targeted organizations get the sales-rep message twice",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "/graphql/sales-rep",
+        "POST /api/push-message/search",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -4217,7 +4349,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4340,6 +4472,26 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-51888868",
+      "path": "entries/KB-51888868.md",
+      "subject": "A sales rep unassigned from an organization can still remove it from a list's share targets but cannot add it back",
+      "question": "Can a sales rep revoke a wishlist share to an organization after losing the assignment to it (changeWishlist removeSharedWithIds), and can they re-add it?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "PUT /api/sales-rep",
+        "Query.salesRepCustomers"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "feature=wishlist-sharing-customer-scope",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-5196FCE9",
@@ -4505,7 +4657,7 @@
         "KB-F3A9F204",
         "KB-5E5D7065"
       ],
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4533,6 +4685,23 @@
       "status": "active",
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-563D7FE5",
+      "path": "entries/KB-563D7FE5.md",
+      "subject": "Storefront quote detail shows list price per item while line total uses the proposed price",
+      "question": "What unit price does the storefront quote detail page show for a quote line with an admin proposal price?",
+      "anchors": [
+        "/account/quotes/{}",
+        "Query.quote"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-56979CB9",
@@ -4805,7 +4974,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-5ADBFB34",
@@ -4937,7 +5106,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4971,6 +5140,25 @@
         "KB-D7F08A26"
       ],
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5F164230",
+      "path": "entries/KB-5F164230.md",
+      "subject": "Sales-rep hub Send-a-message modal (customer profile quick action and My customers envelope) sends sendCustomerCommunication with organizationIds=[that one org]; a rep-only org shows 'This organization has no contacts to notify.'",
+      "question": "What does the storefront send from the Sales Rep hub Send email modal, and what does it show when the org has no other members?",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "/company/my-customers",
+        "/company/my-customers/:organizationId"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5375,7 +5563,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5690,6 +5878,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-6D20A8C3",
+      "path": "entries/KB-6D20A8C3.md",
+      "subject": "Checkout with no saved addresses opens the New address form directly",
+      "question": "What opens when a user with no saved addresses clicks select a shipping address in the cart?",
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6D5E2CD1",
       "path": "entries/KB-6D5E2CD1.md",
       "subject": "what makes a price list apply to a store, and what the storefront reads it through",
@@ -5810,7 +6014,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -6273,6 +6477,23 @@
       "scope": [
         "surface=rest",
         "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-77B581F3",
+      "path": "entries/KB-77B581F3.md",
+      "subject": "Storefront quote Decline is one click, with no reason and no confirmation",
+      "question": "Does declining a quote in the storefront ask for a reason or a confirmation?",
+      "anchors": [
+        "/account/quotes/{}",
+        "Mutations.declineQuoteRequest"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7440,7 +7661,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -7463,6 +7684,23 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-90635C64",
+      "path": "entries/KB-90635C64.md",
+      "subject": "The two-role docs-writer sales rep fixture carries sales-rep-documents:read, so it sees the Document library widget",
+      "question": "Does a sales rep with Sales Representative + Sales Rep Documents Manager roles see the Document library widget and nav entry?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/documents"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7587,6 +7825,25 @@
       "status": "active",
       "trust": 1,
       "disputed": 2
+    },
+    {
+      "id": "KB-91FDB560",
+      "path": "entries/KB-91FDB560.md",
+      "subject": "A wishlist created without a scope has no persisted sharing setting: sharingSetting.id is a new random GUID on every read and that key resolves nothing",
+      "question": "Is the sharingSetting.id of a wishlist created without a scope a stable sharing key",
+      "anchors": [
+        "Mutation.createWishlist",
+        "Query.wishlist",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "module=x-cart",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-92164C90",
@@ -7989,6 +8246,25 @@
       "scope": [
         "store-type=b2b",
         "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-98A5D804",
+      "path": "entries/KB-98A5D804.md",
+      "subject": "The live xAPI schema has no processOrderPayment mutation; payment on an existing order goes through initializePayment, authorizePayment and addOrUpdateOrderPayment, and changeOrderStatus takes only orderId and status",
+      "question": "Which xAPI order mutations exist (processOrderPayment, changeOrderStatus, initializePayment)?",
+      "anchors": [
+        "Mutation.changeOrderStatus",
+        "Mutation.initializePayment",
+        "Query.orderStatuses",
+        "Query.organizationOrders"
+      ],
+      "scope": [
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -8841,7 +9117,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -9027,6 +9303,23 @@
       ],
       "scope": [
         "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AB719187",
+      "path": "entries/KB-AB719187.md",
+      "subject": "me.contact.organizations searchPhrase goes through the Member search index, so an unindexed organization never matches",
+      "question": "Why does me.contact.organizations with a searchPhrase return 0 when the user has organizations?",
+      "anchors": [
+        "me.contact.organizations",
+        "/api/members/search"
+      ],
+      "scope": [
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -9242,7 +9535,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 8,
+      "trust": 9,
       "disputed": 0
     },
     {
@@ -9468,7 +9761,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -10919,7 +11212,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11029,7 +11322,7 @@
       "supersededBy": [
         "KB-2F64A447"
       ],
-      "trust": 2,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -11573,7 +11866,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-DCE536F0",
@@ -11602,6 +11895,23 @@
       "status": "active",
       "trust": 1,
       "disputed": 3
+    },
+    {
+      "id": "KB-DE341132",
+      "path": "entries/KB-DE341132.md",
+      "subject": "A loyalty mission with OrderCountGoal count 0 never completes",
+      "question": "Does a loyalty mission with an order count target of 0 complete and grant its reward after an order?",
+      "anchors": [
+        "/api/loyalty-mission-progress/search",
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=backend"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DEBE1CED",
@@ -12057,7 +12367,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -12210,6 +12520,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EA7D6125",
+      "path": "entries/KB-EA7D6125.md",
+      "subject": "createWishlist/changeWishlist refuse scopes AnyoneAuthorized, User and unknown values with a generic INVALID_OPERATION and write nothing; scope names are case-insensitive",
+      "question": "What happens when createWishlist or changeWishlist is sent a sharing scope that cannot be applied",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Mutation.createWishlist",
+        "SharingSettingType.scope"
+      ],
+      "scope": [
+        "module=x-cart",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -12471,7 +12800,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -12702,7 +13031,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13005,7 +13334,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13339,7 +13668,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-FA3338C3",
@@ -13474,6 +13803,42 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FFB91770",
+      "path": "entries/KB-FFB91770.md",
+      "subject": "sendCustomerCommunication validates organizations and message before authorization; any unserved or unknown id in the batch is Forbidden and nothing is sent",
+      "question": "what errors does sendCustomerCommunication return for empty, too many, unserved or mixed organization ids, and in which order are they checked",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "/graphql/sales-rep"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FFC67575",
+      "path": "entries/KB-FFC67575.md",
+      "subject": "Query.wishlists(scope) narrows only for Private, Organization and Customer (case-insensitive); every other value returns own plus organization lists",
+      "question": "How does the scope argument of Query.wishlists narrow the returned lists for each sharing scope value",
+      "anchors": [
+        "Query.wishlists",
+        "Mutation.changeWishlist"
+      ],
+      "scope": [
+        "module=x-cart",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",

@@ -79,5 +79,12 @@ evidence:
     at: 2026-09-14T09:02:33.256Z
     by: session:0a2d9431
     mergedFrom: KB-4CCC2DD6
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-05T17:56:56.246Z
+    by: session:4a2a1c78
+    who: Lenajava1
+    note: "Admin order blade of a cancelled B2B-store order: operations tree shows the PaymentIn as Cancelled while the Shipment stays New; same split held on a second cancelled order's storefront view (Cancelled status badge with the cancel-reason text, no shipment status shown)."
+    splitFrom: KB-0C102D97
 ---
 Cancelling an order cascades to the PAYMENT and not to the SHIPMENT or the line items. In Admin, Cancel document on the order blade asks for a reason in a modal - a Bootstrap .modal, not the app's own dialog element - and changes nothing until Confirm is pressed, so a check of the record straight after clicking shows the order still New and looks like the action silently failed. On Confirm the order goes to Cancelled with isCancelled true, cancelledDate set and cancelReason carrying the dialog text; the order's own cancelledState stays Undefined, so it is not the field to test. Its inPayment follows about 1.7 seconds later on a background job, reaching status Cancelled, isCancelled true and cancelledState Completed; its shipment stays at status New with isCancelled false and a modifiedDate still equal to its createdDate, never written again; its line items all stay isCancelled false. Reserved stock IS released - the inventory each line drew down returns to its pre-order figure. The mechanism is that CancelPaymentOrderChangedEventHandler collects changedEntry.NewEntry.InPayments only, and no shipment-cancelling handler exists anywhere in the Orders module. So a cancelled order leaves a live shipment document and line items that individually claim not to be cancelled, and anything counting open shipments or reasoning per line rather than per order - a fulfilment queue, a warehouse worklist - keeps treating them as open; this is why a store used for order testing accumulates New shipments belonging to orders that are all Cancelled. Reproduced independently by three separate runs on 2026-09-15.

@@ -56,5 +56,12 @@ evidence:
     by: session:26f59771
     note: "Seen again on B2B-store order CO260915-00001 (id 1c458e1f): order status Cancelled / isCancelled true / cancelReason set; inPayments[0] PI260915-00001 status Cancelled, isCancelled true, cancelledState Completed; shipments[0] SH260915-00001 status New, isCancelled false, modifiedDate still equal to createdDate (2026-09-15T08:17:18.3098923Z). Read from GET /api/order/customerOrders/{id} on platform 3.1007.27, Orders 3.1000.4."
     splitFrom: KB-0C102D97
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-05T17:56:56.246Z
+    by: session:4a2a1c78
+    who: Lenajava1
+    note: "Admin order blade of a cancelled B2B-store order: operations tree shows the PaymentIn as Cancelled while the Shipment stays New; same split held on a second cancelled order's storefront view (Cancelled status badge with the cancel-reason text, no shipment status shown)."
+    splitFrom: KB-0C102D97
 ---
 Cancelling is NOT the only option. An order CAN be deleted - DELETE /api/order/customerOrders, operation OrderModule_DeleteOrdersByIds, and the Admin orders list carries a Delete control in the toolbar and in every row menu. Confirmed on platform 3.1007.27, Orders 3.1000.4.
