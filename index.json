@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T15:04:39.380Z",
-  "count": 504,
+  "generated": "2026-10-06T15:11:10.420Z",
+  "count": 505,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -549,7 +549,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -1878,6 +1878,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-21C241D2",
+      "path": "entries/KB-21C241D2.md",
+      "subject": "On the sales-rep orders page, activating the chip-row 'Reset filters' button by keyboard drops focus to the document body; calendar Enter/Escape return focus to the date input, not the Open calendar button",
+      "question": "Where does keyboard focus go on /company/customer-orders after picking a day in the Created date calendar, and after pressing Enter on the chip-row Reset filters button?",
+      "anchors": [
+        "/company/customer-orders",
+        "Query.salesRepCustomerOrders"
+      ],
+      "scope": [
+        "layout=desktop-split",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -9342,7 +9361,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13954,7 +13973,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
