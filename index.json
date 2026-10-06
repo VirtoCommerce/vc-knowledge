@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T20:46:14.001Z",
-  "count": 514,
+  "generated": "2026-10-06T22:38:46.780Z",
+  "count": 516,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1970,7 +1970,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-22E1D313",
@@ -8994,6 +8994,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-A14FC761",
+      "path": "entries/KB-A14FC761.md",
+      "subject": "returnableItems.returnableQuantity ignores the return window and ineligibility reasons: an OUTSIDE_RETURN_WINDOW line still reports delivered minus held",
+      "question": "What does returnableItems report for returnableQuantity on a line that is outside the return window or in a disallowed order status?",
+      "anchors": [
+        "Query.returnableItems",
+        "ReturnEligibilityService.GetReturnableItems"
+      ],
+      "scope": [
+        "module=return@3.1004.0",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A1B35892",
       "path": "entries/KB-A1B35892.md",
       "subject": "a configured product as a cart line item",
@@ -14221,6 +14239,23 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-F98049F1",
+      "path": "entries/KB-F98049F1.md",
+      "subject": "returnReasons localizedName is the admin dictionary text per cultureName and falls back to the bare code; without cultureName it is always the code",
+      "question": "Is returnReasons localizedName translated, or always equal to the reason code?",
+      "anchors": [
+        "Query.returnReasons"
+      ],
+      "scope": [
+        "module=return@3.1004.0",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-F9D75EA0",
