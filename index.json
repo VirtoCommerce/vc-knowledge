@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-06T01:22:45.671Z",
-  "count": 404,
+  "generated": "2026-10-06T01:27:59.500Z",
+  "count": 406,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -397,7 +397,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -1237,7 +1237,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 7,
       "disputed": 0
     },
     {
@@ -4163,6 +4163,25 @@
       "disputed": 2
     },
     {
+      "id": "KB-91FDB560",
+      "path": "entries/KB-91FDB560.md",
+      "subject": "A wishlist created without a scope has no persisted sharing setting: sharingSetting.id is a new random GUID on every read and that key resolves nothing",
+      "question": "Is the sharingSetting.id of a wishlist created without a scope a stable sharing key",
+      "anchors": [
+        "Mutation.createWishlist",
+        "Query.wishlist",
+        "Query.sharedWishlist"
+      ],
+      "scope": [
+        "module=x-cart",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-92164C90",
       "path": "entries/KB-92164C90.md",
       "subject": "members are addressed under /api/members, and a deleted member reads 200 with an empty body",
@@ -5079,7 +5098,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -5945,7 +5964,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -6520,7 +6539,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6590,6 +6609,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EA7D6125",
+      "path": "entries/KB-EA7D6125.md",
+      "subject": "createWishlist/changeWishlist refuse scopes AnyoneAuthorized, User and unknown values with a generic INVALID_OPERATION and write nothing; scope names are case-insensitive",
+      "question": "What happens when createWishlist or changeWishlist is sent a sharing scope that cannot be applied",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "Mutation.createWishlist",
+        "SharingSettingType.scope"
+      ],
+      "scope": [
+        "module=x-cart",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
