@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T14:38:23.064Z",
-  "count": 501,
+  "generated": "2026-10-06T14:53:20.960Z",
+  "count": 503,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -549,7 +549,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1963,6 +1963,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-23CBD97B",
+      "path": "entries/KB-23CBD97B.md",
+      "subject": "After an in-session language switch, the sales-rep orders filter drawer shows the raw i18n key sales_rep.customer_orders.filters.custom_date as the selected Created date value",
+      "question": "Does the Created date combobox in the sales-rep orders filter drawer localize after switching the storefront language?",
+      "anchors": [
+        "/company/customer-orders",
+        "/company/my-customers/:organizationId/orders"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-24AA6296",
       "path": "entries/KB-24AA6296.md",
       "subject": "PUT /api/products/prices touches only the price lists present in the payload and keeps a price row when its id is sent",
@@ -2855,7 +2873,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10152,6 +10170,24 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B75AAE47",
+      "path": "entries/KB-B75AAE47.md",
+      "subject": "Removing one chip of an applied date preset on the sales-rep orders page leaves the filter drawer still showing the preset name while the grid filters by the remaining open-ended bound",
+      "question": "After applying a Created date preset (e.g. Last week) on /company/customer-orders and removing its Start chip, what does the request send and what does the Filters drawer show?",
+      "anchors": [
+        "/company/customer-orders",
+        "Query.salesRepCustomerOrders"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
