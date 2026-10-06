@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T06:06:20.568Z",
-  "count": 495,
+  "generated": "2026-10-06T09:37:28.554Z",
+  "count": 496,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6993,6 +6993,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-7C6D6C33",
+      "path": "entries/KB-7C6D6C33.md",
+      "subject": "Sales Rep customer profile Top sellers widget keeps rank, units and revenue on one line (nowrap) while the Product column wraps; sibling Recent orders Total still wraps mid-number in the 2-column layout",
+      "question": "Do numeric cells in the sales-rep customer profile Top sellers and Recent orders widgets wrap when product names or order numbers are long?",
+      "anchors": [
+        "/company/my-customers/{orgId}",
+        "Query.salesRepTopSellers",
+        "Query.salesRepOrders"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7C8B8B8B",
       "path": "entries/KB-7C8B8B8B.md",
       "subject": "storefront 2.59 rep share dialog never writes the message to the list",
@@ -8875,7 +8894,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
