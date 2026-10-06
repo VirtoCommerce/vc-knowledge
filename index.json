@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T17:12:39.194Z",
-  "count": 511,
+  "generated": "2026-10-06T18:09:49.282Z",
+  "count": 512,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6854,6 +6854,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-79949FFE",
+      "path": "entries/KB-79949FFE.md",
+      "subject": "On a configurable product PDP, whitespace-only text in a required Text section reveals its dependent section while the section itself stays required.",
+      "question": "Does whitespace-only text in a required Text section of a configurable product count as a value for revealing dependent sections (dependsOnSectionId)?",
+      "anchors": [
+        "/products-with-options/cfg-parents/agent-test-text-driven-cond",
+        "Query.productConfiguration"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "section-type=text",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
