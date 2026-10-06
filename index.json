@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T15:11:10.420Z",
-  "count": 505,
+  "generated": "2026-10-06T16:39:29.787Z",
+  "count": 507,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -766,6 +766,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0DD129C1",
+      "path": "entries/KB-0DD129C1.md",
+      "subject": "GET configuration by id can return a stale pre-update image right after an upsert, while configurations/search already shows the change",
+      "question": "After POSTing an update to a product configuration (e.g. wiring dependsOnSectionId), is GET /api/catalog/products/configurations/{id} immediately up to date?",
+      "anchors": [
+        "GET /api/catalog/products/configurations/{id}",
+        "POST /api/catalog/products/configurations/search",
+        "POST /api/catalog/products/configurations"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8919,6 +8937,25 @@
       "disputed": 4
     },
     {
+      "id": "KB-A1498A0F",
+      "path": "entries/KB-A1498A0F.md",
+      "subject": "configuration section options have no display order; their returned order follows neither the order sent nor creation order",
+      "question": "Can I control the order in which a configurable product section's options are returned (REST and productConfiguration)?",
+      "anchors": [
+        "POST /api/catalog/products/configurations",
+        "GET /api/catalog/products/configurations/{id}",
+        "Query.productConfiguration"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A1B35892",
       "path": "entries/KB-A1B35892.md",
       "subject": "a configured product as a cart line item",
@@ -11393,7 +11430,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
