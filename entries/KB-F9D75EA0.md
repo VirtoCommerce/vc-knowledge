@@ -31,5 +31,11 @@ evidence:
     who: kutasinaelena
     contradicts: true
     note: "Trigger-name clause only: on 2026-10-02 (Theme 2.59.0-pr-2524, regression case ORD-076, desktop/split layout of /account/orders Filters) both calendar triggers exposed the identical accessible name 'Open calendar', not 'Open calendar: Start date' / 'Open calendar: End date'. vc-frontend dev (2026-10-02) source agrees: vc-date-picker.vue sets :aria-label=\"t('ui_kit.accessibility.open_calendar')\" with no field suffix, used for both Start and End in the split branch of vc-date-range-picker.vue. The Clear-scope part of the entry was not re-checked."
+  - method: observation
+    deployment: vcptcore_qa
+    at: 2026-10-06T15:01:51.380Z
+    by: session:7982e016
+    who: Aleksandra-Mitricheva
+    note: "Split-layout part only (Clear scope not re-checked). On theme 2.59.0-pr-2519 at 1920px, /account/orders Filters: each field opens its own SINGLE-month calendar (one 42-cell grid, Previous/Next year+month, Today/Clear footer), and the triggers ARE named 'Open calendar: Start date' / 'Open calendar: End date' on this build, so whether the trigger name has a suffix depends on the build (the dispute was seen on pr-2524)."
 ---
 In the split layout (two labelled fields, used at sm/640px and wider) each field opens its own calendar, and that calendar's footer Clear empties only its own field; emptying the range needs Clear in both calendars. In the combined layout (one Date range field, below sm) the single calendar's footer Clear empties both dates at once. The split fields carry no in-field clear button; their calendar triggers are named 'Open calendar: Start date' / 'Open calendar: End date', while the combined trigger is named just 'Open calendar'.

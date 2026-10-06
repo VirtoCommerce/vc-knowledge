@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T14:53:20.960Z",
-  "count": 503,
+  "generated": "2026-10-06T15:04:39.380Z",
+  "count": 504,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9329,6 +9329,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-A8573767",
+      "path": "entries/KB-A8573767.md",
+      "subject": "Orders filter date picker: keyboard Enter selects and closes the calendar; Escape on an open calendar closes only the calendar and focuses the date input",
+      "question": "How does keyboard interaction work in the /account/orders Filters date-picker calendar (arrows, Enter, Escape, focus return)?",
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "layout=desktop-split",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A871AA8D",
       "path": "entries/KB-A871AA8D.md",
       "subject": "changeWishlist legacy sharedWithId input becomes a one-element target set",
@@ -14047,7 +14064,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 1
     },
     {
