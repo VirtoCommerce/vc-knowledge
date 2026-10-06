@@ -41,5 +41,11 @@ evidence:
     by: session:caca34e0
     who: Lenajava1
     note: "Theme 2.59.0-pr-2476-43b1: a new Specific-customers share to 2 orgs with a note sent ONE ChangeWishlist (addSharedWithIds both) then ONE SendCustomerCommunication organizationIds=[both], title 'A new list from your sales representative', message note + blank line + /shared-list/<key>; toast 'List shared with 2 customers.' appears after the dialog closes (twice re-observed)."
+  - method: observation
+    deployment: vcptcore_qa
+    at: 2026-10-06T12:30:04.628Z
+    by: session:3d574798
+    who: Lenajava1
+    note: "2026-10-06 theme 2.59.0-pr-2476-43b1: adding one org to an existing share -> SendCustomerCommunication organizationIds=[that org only], sendEmail+sendPush true; message-only edit (599 chars) sent ChangeWishlist only, toast 'List saved. Now shared with 2 customers.'"
 ---
 On save of a Specific-customers share the storefront sends one Mutation.sendCustomerCommunication whose organizationIds are only the orgs added in that save (existing recipients are not re-notified); a save that only changes the message sends no communication. Title is the fixed string 'A new list from your sales representative'; message is the note (or a default 'Hi! I've just shared the list ... with your organization.') plus the /shared-list/<key> link. Neither title nor body names the organization. The reader's push (pushMessages.shortMessage / header bell) is note + link only.

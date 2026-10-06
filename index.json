@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T12:11:17.266Z",
-  "count": 498,
+  "generated": "2026-10-06T12:35:58.090Z",
+  "count": 499,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -663,7 +663,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 7,
       "disputed": 0
     },
     {
@@ -739,7 +739,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 1
     },
     {
@@ -7497,6 +7497,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-8646D07D",
+      "path": "entries/KB-8646D07D.md",
+      "subject": "Storefront list Share dialog pre-fills an over-250 stored message, enables Share once a recipient is added, saves it, then the notification fails when message + separator + link exceeds 1000",
+      "question": "What does the storefront Share dialog (Specific customers) do with a stored list-share message longer than its 250-char input cap, and when does the notification to a newly added organization fail?",
+      "anchors": [
+        "/account/lists",
+        "/account/lists/{id}",
+        "Mutation.changeWishlist",
+        "Mutation.sendCustomerCommunication"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-874B24DD",
       "path": "entries/KB-874B24DD.md",
       "subject": "Buyer quote list filters by login id AND current organization",
@@ -9331,7 +9352,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -13299,7 +13320,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
