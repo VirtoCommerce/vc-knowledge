@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-06T01:01:45.673Z",
-  "count": 402,
+  "generated": "2026-10-06T01:11:34.059Z",
+  "count": 403,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2573,7 +2573,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-5ADBFB34",
@@ -2642,6 +2642,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5F164230",
+      "path": "entries/KB-5F164230.md",
+      "subject": "Sales-rep hub Send-a-message modal (customer profile quick action and My customers envelope) sends sendCustomerCommunication with organizationIds=[that one org]; a rep-only org shows 'This organization has no contacts to notify.'",
+      "question": "What does the storefront send from the Sales Rep hub Send email modal, and what does it show when the org has no other members?",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "/company/my-customers",
+        "/company/my-customers/:organizationId"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -4733,7 +4752,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -6798,7 +6817,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
