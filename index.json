@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T12:51:50.964Z",
-  "count": 500,
+  "generated": "2026-10-06T14:38:23.064Z",
+  "count": 501,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1312,7 +1312,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2836,6 +2836,25 @@
       "supersededBy": [
         "KB-110E0652"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-350797F5",
+      "path": "entries/KB-350797F5.md",
+      "subject": "Sales-rep customer-orders 'Last week' preset is a rolling today-minus-7 local-day window with no time-zone shift, unlike /account/orders",
+      "question": "What createddate range does the Last week preset on /company/customer-orders send, and does it match /account/orders?",
+      "anchors": [
+        "/company/customer-orders",
+        "Query.salesRepCustomerOrders",
+        "/account/orders"
+      ],
+      "scope": [
+        "feature=orders-date-filter",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
