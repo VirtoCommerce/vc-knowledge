@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T05:49:51.189Z",
+  "generated": "2026-10-06T05:51:20.872Z",
   "count": 495,
   "entries": [
     {
@@ -557,12 +557,25 @@
       "path": "entries/KB-0AFC2A50.md",
       "subject": "A shipping-reward coupon is rejected as not valid when Pickup is selected",
       "question": "What happens when a free-shipping coupon is applied to a cart with Pickup delivery?",
+      "questions": [
+        "Why does my free shipping promo code say 'This code is not valid' when I chose pickup in the cart?",
+        "addCoupon /cart free shipping coupon rejected Pickup BuyOnlinePickupInStore",
+        "Is a shipping-reward coupon (RewardShippingGetOfAbsShippingMethod for FixedRate) accepted when the cart delivery is Pickup instead of Shipping?",
+        "Does applying a free-shipping coupon change the totals when the delivery option is pickup and shipping cost is already 0.00?",
+        "Which delivery option must be selected in the cart for a FixedRate shipping discount coupon to be accepted?"
+      ],
+      "concepts": [
+        "coupon",
+        "pickup",
+        "shipping-method"
+      ],
       "anchors": [
         "/cart",
         "Mutations.addCoupon"
       ],
       "scope": [
-        "surface=storefront-ui"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -917,12 +930,25 @@
       "path": "entries/KB-1187CB14.md",
       "subject": "Order page hides Request return when nothing is returnable, with no message",
       "question": "What does the order detail page show for an order whose return window has expired?",
+      "questions": [
+        "Why is there no Request return button on my old order and no message explaining why?",
+        "/account/orders/{id} returnableItems isReturnable Request return button hidden",
+        "When does the storefront order detail page render the Request return button?",
+        "Where does the storefront show the ineligibility reason such as OUTSIDE_RETURN_WINDOW for an item that cannot be returned?",
+        "Does the order page show any message when the return window has expired and no item is returnable?"
+      ],
+      "concepts": [
+        "return",
+        "returnable-quantity",
+        "customer-order"
+      ],
       "anchors": [
         "/account/orders/{}",
         "Query.returnableItems"
       ],
       "scope": [
-        "surface=storefront-ui"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2559,6 +2585,19 @@
       "path": "entries/KB-31224A5E.md",
       "subject": "The storefront orders list differs by role: org maintainer gets All orders / My orders tabs (and the All tab replaces the Purchase order column with Buyer name), an org employee gets no tabs at all",
       "question": "What does /account/orders show an org maintainer versus an org employee, and what changes between the All orders and My orders tabs?",
+      "questions": [
+        "Why does an org maintainer see All orders and My orders tabs but an ordinary company employee sees no tabs on the orders page?",
+        "/account/orders organizationOrders All orders My orders tabs Buyer name column",
+        "Which column replaces Purchase order on the All orders tab of the storefront orders list?",
+        "What does an org employee with no own orders see on /account/orders even when their organization has many orders?",
+        "What happens when an anonymous user opens /account/orders or a signed-in user opens another organization's order id?",
+        "Which filters does the orders list Filters dialog offer and how many orders are shown per page?"
+      ],
+      "concepts": [
+        "organization-order-access",
+        "customer-order",
+        "organization-role"
+      ],
       "anchors": [
         "/account/orders",
         "/account/orders/{id}",
@@ -3038,12 +3077,25 @@
       "path": "entries/KB-3D0750BD.md",
       "subject": "Members without an email give the EmailNoRecipients warning; push still goes, and an email-only send to them returns succeeded false",
       "question": "what does sendCustomerCommunication return when the targeted members have no email address",
+      "questions": [
+        "What happens when a sales rep messages an organization whose contacts have no email address?",
+        "sendCustomerCommunication EmailNoRecipients warning emailSent false pushSent true",
+        "Does sendCustomerCommunication with only sendEmail return succeeded false when no member has an email?",
+        "Does emailSent true from sendCustomerCommunication mean the email was actually delivered, or can the notification journal entry still end in Error?",
+        "Is a push message still created when the email channel has no recipients in a sales rep message?"
+      ],
+      "concepts": [
+        "customer-communication",
+        "notification",
+        "push-message"
+      ],
       "anchors": [
         "Mutation.sendCustomerCommunication",
         "POST /api/notifications/journal"
       ],
       "scope": [
         "module=sales-rep",
+        "surface=rest",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -3535,6 +3587,18 @@
       "path": "entries/KB-4593FC41.md",
       "subject": "vc-shell framework 2.6.1 never leaves focus on <body> after sign-in, blade open, maximize/restore (button or mod+\\), save, popup close or sign-out — each lands on a defined element",
       "question": "where does keyboard focus go in a vc-shell app after sign-in, blade open, maximize/restore, save and sign-out",
+      "questions": [
+        "Where does keyboard focus land in the vendor portal after I sign in, open a blade or sign out?",
+        "/apps/vendor-portal/#/products focus after maximize restore Ctrl+\\ vc-shell 2.6.1",
+        "Does vc-shell framework 2.6.1 ever leave document.activeElement on body after a blade transition?",
+        "Where does focus go after Save as draft on a product blade or after closing a delete dialog with Cancel or Escape?",
+        "Which earlier vc-shell versions left focus on BODY after Ctrl+\\ from the sidebar or the expand control?",
+        "Why is a single Tab press not a reliable check of focus restoration on sidebar paths in vc-shell?"
+      ],
+      "concepts": [
+        "vendor-portal",
+        "accessibility"
+      ],
       "anchors": [
         "/apps/vendor-portal/#/products",
         "/apps/vendor-portal/#/login"
@@ -3542,7 +3606,7 @@
       "scope": [
         "browser=chrome",
         "framework=@vc-shell/framework@2.6.1",
-        "surface=vc-shell-vendor-portal"
+        "surface=vendor-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3642,6 +3706,18 @@
       "path": "entries/KB-49D2315C.md",
       "subject": "A wishlist share target whose organization was deleted stays in sharingSetting.targets with its id and a null name, and the list keeps working",
       "question": "What does a wishlist sharing target look like after its organization is deleted?",
+      "questions": [
+        "What happens to a shared shopping list when one of the organizations it was shared with is deleted?",
+        "wishlist sharingSetting.targets deleted organization null name changeWishlist",
+        "Does a deleted organization stay in SharingSettingType.targets with its id and a null name?",
+        "Is changeWishlist with scope Customer and sharedWithId set to a deleted organization's id a silent no-op?",
+        "Can a list shared to a deleted organization still be renamed and removed with removeWishlist?"
+      ],
+      "concepts": [
+        "wishlist",
+        "list-sharing",
+        "organization"
+      ],
       "anchors": [
         "Query.wishlist",
         "Query.wishlists",
@@ -3651,7 +3727,7 @@
       "scope": [
         "actor=sales-rep",
         "module=x-cart",
-        "surface=xapi-graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3934,6 +4010,18 @@
       "path": "entries/KB-4C919BA6.md",
       "subject": "sendCustomerCommunication with several organizationIds sends one push and one email per distinct contact across all orgs, rep excluded",
       "question": "does a contact that belongs to two targeted organizations get the sales-rep message twice",
+      "questions": [
+        "If a customer belongs to two of the organizations a sales rep messages, do they get the message twice?",
+        "sendCustomerCommunication organizationIds multiple orgs one PushMessage distinct memberIds /graphql/sales-rep",
+        "How many push message records and notification journal entries does sendCustomerCommunication create for several organizations?",
+        "Is the calling sales rep's own contact excluded from the recipients of sendCustomerCommunication?",
+        "Does combining legacy organizationId with an uppercased duplicate in organizationIds create duplicate recipients?"
+      ],
+      "concepts": [
+        "customer-communication",
+        "push-message",
+        "sales-rep"
+      ],
       "anchors": [
         "Mutation.sendCustomerCommunication",
         "/graphql/sales-rep",
@@ -3942,6 +4030,7 @@
       ],
       "scope": [
         "module=sales-rep",
+        "surface=rest",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -4478,6 +4567,18 @@
       "path": "entries/KB-51888868.md",
       "subject": "A sales rep unassigned from an organization can still remove it from a list's share targets but cannot add it back",
       "question": "Can a sales rep revoke a wishlist share to an organization after losing the assignment to it (changeWishlist removeSharedWithIds), and can they re-add it?",
+      "questions": [
+        "Can a sales rep still stop sharing a list with a company after being unassigned from that company?",
+        "changeWishlist removeSharedWithIds addSharedWithIds scope Customer Forbidden unassigned organization",
+        "What error does changeWishlist return when a rep adds an organization they no longer serve as a share target?",
+        "Does revoking a share for an unserved organization leave the other share targets intact?",
+        "After PUT /api/sales-rep removes an organization from the rep, does the rep need a new token before access changes?"
+      ],
+      "concepts": [
+        "list-sharing",
+        "sales-rep",
+        "permission"
+      ],
       "anchors": [
         "Mutation.changeWishlist",
         "PUT /api/sales-rep",
@@ -4486,7 +4587,8 @@
       "scope": [
         "actor=sales-rep",
         "feature=wishlist-sharing-customer-scope",
-        "surface=xapi-graphql"
+        "surface=rest",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4691,6 +4793,18 @@
       "path": "entries/KB-563D7FE5.md",
       "subject": "Storefront quote detail shows list price per item while line total uses the proposed price",
       "question": "What unit price does the storefront quote detail page show for a quote line with an admin proposal price?",
+      "questions": [
+        "Why does the quote page show the original price per item when the line total uses the lower proposed price?",
+        "/account/quotes/{id} Query.quote Price per item listPrice selectedTierPrice",
+        "Which price does the storefront quote detail show in the Price per item column for a line with an admin proposal price?",
+        "How are Subtotal and Discount shown in the quote summary when the proposal is below the list price?",
+        "For a quote line with list 21.00 and proposal 18.90 x 10, what price and total appear?"
+      ],
+      "concepts": [
+        "quote",
+        "price",
+        "totals"
+      ],
       "anchors": [
         "/account/quotes/{}",
         "Query.quote"
@@ -5147,6 +5261,18 @@
       "path": "entries/KB-5F164230.md",
       "subject": "Sales-rep hub Send-a-message modal (customer profile quick action and My customers envelope) sends sendCustomerCommunication with organizationIds=[that one org]; a rep-only org shows 'This organization has no contacts to notify.'",
       "question": "What does the storefront send from the Sales Rep hub Send email modal, and what does it show when the org has no other members?",
+      "questions": [
+        "What does the sales rep Send a message popup send, and what if the company has no one to notify?",
+        "/company/my-customers Send email modal sendCustomerCommunication organizationIds single org",
+        "When is the Send button enabled in the sales rep Send a message modal?",
+        "What message appears when a rep sends to an organization whose only member is the rep?",
+        "Does the Send a message modal keep a stale draft when opened for another customer row after cancel?",
+        "Which arguments does the storefront post to sendCustomerCommunication from the customer profile quick action?"
+      ],
+      "concepts": [
+        "customer-communication",
+        "sales-rep"
+      ],
       "anchors": [
         "Mutation.sendCustomerCommunication",
         "/company/my-customers",
@@ -5154,7 +5280,8 @@
       ],
       "scope": [
         "role=sales-rep",
-        "surface=storefront-ui"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -5882,6 +6009,17 @@
       "path": "entries/KB-6D20A8C3.md",
       "subject": "Checkout with no saved addresses opens the New address form directly",
       "question": "What opens when a user with no saved addresses clicks select a shipping address in the cart?",
+      "questions": [
+        "What happens in the cart when I pick a shipping address but have no saved addresses?",
+        "/cart onDeliveryAddressChange select address popup zero addresses New address form",
+        "Is there an empty-state address selection popup on the cart for a user with no addresses?",
+        "When does the cart open the select-address popup versus the New address form for corporate members?"
+      ],
+      "concepts": [
+        "address",
+        "checkout",
+        "cart"
+      ],
       "anchors": [
         "/cart"
       ],
@@ -6488,12 +6626,22 @@
       "path": "entries/KB-77B581F3.md",
       "subject": "Storefront quote Decline is one click, with no reason and no confirmation",
       "question": "Does declining a quote in the storefront ask for a reason or a confirmation?",
+      "questions": [
+        "Does the storefront ask me why or confirm before I decline a quote?",
+        "/account/quotes/{id} declineQuoteRequest Decline button confirmation reason",
+        "What status does a quote get after clicking Decline on the storefront?",
+        "Does DeclineQuoteCommandType accept a decline reason field?"
+      ],
+      "concepts": [
+        "quote"
+      ],
       "anchors": [
         "/account/quotes/{}",
         "Mutations.declineQuoteRequest"
       ],
       "scope": [
-        "surface=storefront-ui"
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7695,6 +7843,17 @@
       "path": "entries/KB-90635C64.md",
       "subject": "The two-role docs-writer sales rep fixture carries sales-rep-documents:read, so it sees the Document library widget",
       "question": "Does a sales rep with Sales Representative + Sales Rep Documents Manager roles see the Document library widget and nav entry?",
+      "questions": [
+        "Does a sales rep with the Documents Manager role see the Document library on the company dashboard?",
+        "/company/documents Document library widget sales-rep-documents:read token permission",
+        "Which permissions does the Sales Rep Documents Manager role carry as seeded?",
+        "Can the Sales Representative plus Sales Rep Documents Manager fixture be used to test a write-only documents rep?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "permission",
+        "platform-role"
+      ],
       "anchors": [
         "/company/dashboard",
         "/company/documents"
@@ -7831,6 +7990,17 @@
       "path": "entries/KB-91FDB560.md",
       "subject": "A wishlist created without a scope has no persisted sharing setting: sharingSetting.id is a new random GUID on every read and that key resolves nothing",
       "question": "Is the sharingSetting.id of a wishlist created without a scope a stable sharing key",
+      "questions": [
+        "Why does the sharing link id of my list change every time I load it?",
+        "createWishlist without scope sharingSetting.id random GUID sharedWishlist returns null",
+        "Is the sharingSetting.id of a wishlist created without a scope persisted and stable across reads?",
+        "Can organization members read a list created without a scope, or do they get Forbidden?",
+        "What does sharedWishlist return for a Private list's key or a bogus key: null data or Forbidden?"
+      ],
+      "concepts": [
+        "wishlist",
+        "list-sharing"
+      ],
       "anchors": [
         "Mutation.createWishlist",
         "Query.wishlist",
@@ -7838,7 +8008,7 @@
       ],
       "scope": [
         "module=x-cart",
-        "surface=xapi-graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8258,6 +8428,18 @@
       "path": "entries/KB-98A5D804.md",
       "subject": "The live xAPI schema has no processOrderPayment mutation; payment on an existing order goes through initializePayment, authorizePayment and addOrUpdateOrderPayment, and changeOrderStatus takes only orderId and status",
       "question": "Which xAPI order mutations exist (processOrderPayment, changeOrderStatus, initializePayment)?",
+      "questions": [
+        "How do I pay for an existing order through the GraphQL API if processOrderPayment does not exist?",
+        "processOrderPayment changeOrderStatus initializePayment authorizePayment addOrUpdateOrderPayment introspection",
+        "Which arguments does the changeOrderStatus mutation take?",
+        "Which values does the orderStatuses dictionary return, and is Paid an order status?",
+        "What error do anonymous calls to Query.orders and Query.order return?"
+      ],
+      "concepts": [
+        "order-payment",
+        "order-status",
+        "graphql-api"
+      ],
       "anchors": [
         "Mutation.changeOrderStatus",
         "Mutation.initializePayment",
@@ -9315,11 +9497,23 @@
       "path": "entries/KB-AB719187.md",
       "subject": "me.contact.organizations searchPhrase goes through the Member search index, so an unindexed organization never matches",
       "question": "Why does me.contact.organizations with a searchPhrase return 0 when the user has organizations?",
+      "questions": [
+        "Why does searching in the organization switcher say No results found for every name?",
+        "me.contact.organizations searchPhrase totalCount 0 Member search index /api/members/search",
+        "Does quoting the search phrase change the result of me.contact.organizations filtering?",
+        "How should I check whether an organization's Member document is missing from the index before suspecting the code?"
+      ],
+      "concepts": [
+        "multi-organization",
+        "search-index",
+        "member-search"
+      ],
       "anchors": [
         "me.contact.organizations",
         "/api/members/search"
       ],
       "scope": [
+        "surface=rest",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -11901,12 +12095,23 @@
       "path": "entries/KB-DE341132.md",
       "subject": "A loyalty mission with OrderCountGoal count 0 never completes",
       "question": "Does a loyalty mission with an order count target of 0 complete and grant its reward after an order?",
+      "questions": [
+        "Does a loyalty mission with an order target of zero ever complete after placing an order?",
+        "/api/loyalty-mission-progress/search OrderCountGoal 0 targetValue currentValue InProgress",
+        "Is the reward granted for a mission with OrderCountGoal count 0 on Loyalty 3.1009.0?",
+        "What do currentValue and targetValue show in mission progress for an OrderCountGoal 0 mission after one order?"
+      ],
+      "concepts": [
+        "loyalty-mission",
+        "loyalty"
+      ],
       "anchors": [
         "/api/loyalty-mission-progress/search",
         "/account/missions"
       ],
       "scope": [
-        "surface=backend"
+        "surface=rest",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12527,6 +12732,18 @@
       "path": "entries/KB-EA7D6125.md",
       "subject": "createWishlist/changeWishlist refuse scopes AnyoneAuthorized, User and unknown values with a generic INVALID_OPERATION and write nothing; scope names are case-insensitive",
       "question": "What happens when createWishlist or changeWishlist is sent a sharing scope that cannot be applied",
+      "questions": [
+        "What error do I get if I try to share a list with an unsupported sharing option?",
+        "changeWishlist createWishlist scope AnyoneAuthorized User INVALID_OPERATION",
+        "Are wishlist scope names case-insensitive in createWishlist and changeWishlist?",
+        "Does createWishlist with an invalid scope persist a list, and does changeWishlist with scope empty string change anything?",
+        "Why does WishlistScopeType still list AnyoneAuthorized and User if mutations refuse them?"
+      ],
+      "concepts": [
+        "wishlist",
+        "list-sharing",
+        "api-error"
+      ],
       "anchors": [
         "Mutation.changeWishlist",
         "Mutation.createWishlist",
@@ -12534,7 +12751,7 @@
       ],
       "scope": [
         "module=x-cart",
-        "surface=xapi-graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13814,6 +14031,19 @@
       "path": "entries/KB-FFB91770.md",
       "subject": "sendCustomerCommunication validates organizations and message before authorization; any unserved or unknown id in the batch is Forbidden and nothing is sent",
       "question": "what errors does sendCustomerCommunication return for empty, too many, unserved or mixed organization ids, and in which order are they checked",
+      "questions": [
+        "What errors does a sales rep get when messaging no organizations, too many, or ones they don't serve?",
+        "sendCustomerCommunication Organization is required 1000 organizations cap Access denied Forbidden",
+        "Are message and organization validations checked before authorization in sendCustomerCommunication?",
+        "If one organization in the batch is unserved, is anything sent to the served organizations?",
+        "What does sendCustomerCommunication return for a buyer token or an anonymous caller on /graphql/sales-rep?",
+        "Is a whitespace-only organization id treated as missing or as Forbidden?"
+      ],
+      "concepts": [
+        "customer-communication",
+        "api-error",
+        "sales-rep"
+      ],
       "anchors": [
         "Mutation.sendCustomerCommunication",
         "/graphql/sales-rep"
@@ -13832,13 +14062,25 @@
       "path": "entries/KB-FFC67575.md",
       "subject": "Query.wishlists(scope) narrows only for Private, Organization and Customer (case-insensitive); every other value returns own plus organization lists",
       "question": "How does the scope argument of Query.wishlists narrow the returned lists for each sharing scope value",
+      "questions": [
+        "Which lists do I get back when I filter my lists by sharing scope?",
+        "Query.wishlists scope Private Organization Customer narrowing case-insensitive",
+        "Does wishlists(scope: \"Private\") return only Private lists or also AnyoneAnonymous and Customer lists?",
+        "What does wishlists return with no scope argument versus scope Organization?",
+        "Does a member of a Customer share's target organization get that list from wishlists?",
+        "Do unrecognised scope values like AnyoneAuthorized or Foo narrow wishlists or return an error?"
+      ],
+      "concepts": [
+        "wishlist",
+        "list-sharing"
+      ],
       "anchors": [
         "Query.wishlists",
         "Mutation.changeWishlist"
       ],
       "scope": [
         "module=x-cart",
-        "surface=xapi-graphql"
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
