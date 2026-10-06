@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T18:09:49.282Z",
-  "count": 512,
+  "generated": "2026-10-06T20:46:14.001Z",
+  "count": 514,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -765,7 +765,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -4413,6 +4413,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4F18D0C7",
+      "path": "entries/KB-4F18D0C7.md",
+      "subject": "Page Builder Designer init-time capability flags resolve a false selector result to null, not false",
+      "question": "What value does a Page Builder Designer settings.json init request (e.g. canCreateAssets) hold when its selector returns false?",
+      "anchors": [
+        "GET /api/platform/security/currentuser",
+        "/Modules/$(VirtoCommerce.PageBuilderModule)/Content/page-builder-designer/data/settings.json",
+        "POST /api/assets"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-page-builder-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10184,6 +10203,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-B4DC77F0",
+      "path": "entries/KB-B4DC77F0.md",
+      "subject": "Page Builder Designer needs platform:setting:read for a non-admin, else preview path is null and blocks are not editable",
+      "question": "Which permissions does a non-admin need to edit a page in the Page Builder Designer?",
+      "anchors": [
+        "GET /api/platform/settings/VirtoCommerce.PageBuilderModule.General.StorePreviewPath",
+        "POST /connect/token",
+        "POST /api/page-builder-pages/grouped/{groupId}/content"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-page-builder-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B540D063",
       "path": "entries/KB-B540D063.md",
       "subject": "changeWishlist with message (or other sharing fields) but no scope is a silent no-op, even for the owner",
@@ -11601,7 +11639,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
