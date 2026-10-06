@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-06T00:28:58.020Z",
-  "count": 398,
+  "generated": "2026-10-06T01:01:19.792Z",
+  "count": 401,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -943,7 +943,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1563,6 +1563,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-3D0750BD",
+      "path": "entries/KB-3D0750BD.md",
+      "subject": "Members without an email give the EmailNoRecipients warning; push still goes, and an email-only send to them returns succeeded false",
+      "question": "what does sendCustomerCommunication return when the targeted members have no email address",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3D3B8531",
       "path": "entries/KB-3D3B8531.md",
       "subject": "Admin Returns screens are fully translated in French (menu, list, blade, Line items, store settings)",
@@ -2036,6 +2054,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-4C919BA6",
+      "path": "entries/KB-4C919BA6.md",
+      "subject": "sendCustomerCommunication with several organizationIds sends one push and one email per distinct contact across all orgs, rep excluded",
+      "question": "does a contact that belongs to two targeted organizations get the sales-rep message twice",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "/graphql/sales-rep",
+        "POST /api/push-message/search",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4CCC2DD6",
       "path": "entries/KB-4CCC2DD6.md",
       "subject": "what Cancel document on an order actually cancels",
@@ -2263,7 +2301,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4675,7 +4713,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -7059,6 +7097,24 @@
       ],
       "scope": [
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FFB91770",
+      "path": "entries/KB-FFB91770.md",
+      "subject": "sendCustomerCommunication validates organizations and message before authorization; any unserved or unknown id in the batch is Forbidden and nothing is sent",
+      "question": "what errors does sendCustomerCommunication return for empty, too many, unserved or mixed organization ids, and in which order are they checked",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "/graphql/sales-rep"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
