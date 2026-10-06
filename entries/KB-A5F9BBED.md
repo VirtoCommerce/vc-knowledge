@@ -3,12 +3,20 @@ id: KB-A5F9BBED
 subject: Contact.isLockedInOrganization is resolved from the CALLER's JWT organization claim, so a platform-admin token reads false for a genuinely locked member.
 plane: experiential
 question: Why does isLockedInOrganization come back false when I query the organization roster with an admin token?
+questions:
+  - text: Why does a blocked company member look unlocked when I check the roster as an administrator?
+  - text: Which token must I use to assert whether a member is locked in the organization?
+  - text: "What drives isLockedInOrganization: the userId argument or the caller's organization claim?"
+  - text: How can I reliably read a member's lock state without an organization-scoped storefront token?
+concepts:
+  - id: member-block
+  - id: access-token
 status: active
 appliesTo:
   - axis: store
     value: b2b-store
   - axis: surface
-    value: graphql-xapi
+    value: xapi
 anchors:
   - coordinate: Contact.isLockedInOrganization
   - coordinate: Query.organization.contacts

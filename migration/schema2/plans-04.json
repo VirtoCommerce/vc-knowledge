@@ -1,0 +1,677 @@
+[
+ {
+  "id": "KB-4F298EB0",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "I scanned a barcode after switching currency and the store says no products found, but the item exists - why?",
+   "Does a barcode lookup still find a product when it has no price in the shopper's selected currency?",
+   "Is the price filter for the active currency added to the products query on barcode and keyword search routes?",
+   "Why does a known GTIN return nothing on the barcode results page in one currency but three items in another?",
+   "Does the 'No products found for barcode' heading distinguish an unpriced product from a missing one?"
+  ],
+  "concepts": [
+   "barcode-search",
+   "currency",
+   "product-filter"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "24ac4b39f8f54bd8"
+ },
+ {
+  "id": "KB-50CD6A34",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why can't I see my coupon on the coupons page in my account?",
+   "Which promotions does the storefront coupon list include - does it drop inactive, private or expired ones?",
+   "Is the id returned on a public coupon list item the coupon id or the promotion id?",
+   "A private coupon code appears on the public coupons page - is the visibility filter leaking?",
+   "Where do I get real coupon entity ids if the storefront coupon list only carries promotion ids?"
+  ],
+  "concepts": [
+   "public-coupon-list",
+   "coupon"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "6951e80aba9e0c41"
+ },
+ {
+  "id": "KB-512D556A",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why doesn't my company name appear next to my name on the account button at the top of the site?",
+   "Does a buyer belonging to only one organization get the organization prefix and switcher in the header?",
+   "Where does the header show the organization name for a single-company member versus a multi-company user?",
+   "Is the organization switcher listbox rendered only when the signed-in user has more than one organization?",
+   "A personal account with no company - does any organization slot render in the storefront header?"
+  ],
+  "concepts": [
+   "site-header",
+   "multi-organization"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "6f4400ae7a680c10"
+ },
+ {
+  "id": "KB-53D776C2",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "The back-office order tree shows a dash for the shipment amount - is the shipping cost missing?",
+   "Does the admin order document tree render a zero shipment total as an em dash instead of 0.00?",
+   "How do I confirm the real shipment price when the order operations tree prints a dash?",
+   "Is a zero shipping charge on an order normal when fixed-rate shipping is priced per option?"
+  ],
+  "concepts": [
+   "admin-order-screen",
+   "shipment"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "89f8119159766200"
+ },
+ {
+  "id": "KB-54E1A0E6",
+  "action": "split",
+  "why": "(a) the Enter-only row activation is an unrelated accessibility defect noticed while observing the new-tab navigation behaviour",
+  "children": [
+   {
+    "subject": "Clicking a storefront orders or quotes table row opens the detail in a new tab by design",
+    "question": "Why does clicking a row on the orders list open the order in a new browser tab instead of navigating in place?",
+    "anchors": [
+     "/account/orders",
+     "/account/quotes"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "The storefront table component's row click opens the row's detail URL with window.open in a new tab rather than routing in place, BY DESIGN, so the listing tab keeps its position. It applies to /account/orders, the dashboard Latest orders widget and /account/quotes. Ctrl+click or middle-click give the same new tab, and Back does not return to the listing because navigation never happened in that tab.",
+    "fromNotes": false,
+    "questions": [
+     "When I click an order in my order history a new tab opens - is that a bug?",
+     "Why does the Back button not return me to the orders list after I open an order?",
+     "Do rows in the quotes list and the latest-orders dashboard widget also open in a new tab?",
+     "Does the storefront table row handler use window.open rather than in-place router navigation?"
+    ],
+    "concepts": [
+     "customer-order",
+     "quote"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Storefront orders and quotes table rows activate on Enter but not on Space",
+    "question": "Can a keyboard user open an order or quote row with the Space key?",
+    "anchors": [
+     "/account/orders",
+     "/account/quotes"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "The clickable rows of the storefront table component (/account/orders, the dashboard Latest orders widget, /account/quotes) are role=button but activate only on Enter, not Space - that is a real accessibility defect.",
+    "fromNotes": false,
+    "questions": [
+     "I navigate with the keyboard and pressing Space on an order row does nothing - why?",
+     "Do the clickable rows in the orders and quotes tables respond to both Enter and Space as a button should?",
+     "Is a role=button table row that ignores the Space key a WCAG keyboard defect on the account order list?"
+    ],
+    "concepts": [
+     "accessibility"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "54a7f3645a9e5839"
+ },
+ {
+  "id": "KB-56979CB9",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why can't our analytics transactions be matched to the order numbers customers see on the confirmation page?",
+   "Does the GA4 purchase event carry the order GUID or the human-readable order number as transaction_id?",
+   "Should a test assert that the dataLayer purchase transaction_id equals the displayed order number?",
+   "Does refreshing the checkout confirmation page fire a second purchase event into the data layer?"
+  ],
+  "concepts": [
+   "analytics",
+   "order-number"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "151c21128089f0c6"
+ },
+ {
+  "id": "KB-5790A068",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Who edited this marketing promotion and when - is there any history of changes?",
+   "Are promotion edits recorded in the platform change log, or does the changes endpoint return empty?",
+   "Can I tell whether a promotion's reward or its active flag was the thing that changed from its modified date alone?",
+   "Why does the platform changelog query for the Promotion type return an empty array after an edit?"
+  ],
+  "concepts": [
+   "changelog",
+   "promotion"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f66c5dceff56cf80"
+ },
+ {
+  "id": "KB-59E4B5FC",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "When I order a customized product, does the order remember which options I picked?",
+   "Does a configurable product become one order line with its options nested, or separate lines per option?",
+   "Which configuration item field is lost when a cart line becomes an order line - is sectionId dropped?",
+   "Why does the storefront order configuration item type reject productId, sku and quantity while the REST order has them?",
+   "Is an order line for a configurable product with an empty configuration items array a data fault?"
+  ],
+  "concepts": [
+   "configured-line-item",
+   "order-line-item",
+   "configurable-product"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f1f1283ac30bee48"
+ },
+ {
+  "id": "KB-5A0C4200",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Can an account manager's first and last name still be wiped out even though the sales rep form requires them?",
+   "Does the sales rep name validation also guard the generic members update endpoint?",
+   "After a members PUT clears a contact's names, is fullName recomputed or left stale?",
+   "Which contact write paths bypass the sales representative details validator and leave me.contact failing?"
+  ],
+  "concepts": [
+   "sales-rep",
+   "contact"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "cc4b1a628ad93d23"
+ },
+ {
+  "id": "KB-5A6C014E",
+  "action": "split",
+  "why": "(b) a later contradicting note overturns the storefront spinbutton-clamping part while the API draft/submit limit part stands, so they cannot share one trust figure",
+  "children": [
+   {
+    "subject": "The returnable-quantity limit is enforced at submitReturn, not when a return draft is created or updated",
+    "question": "Does createReturn refuse a return quantity above the order line's returnable quantity, or only submitReturn?",
+    "anchors": [
+     "Mutations.createReturn",
+     "Mutations.submitReturn"
+    ],
+    "surface": [
+     "xapi",
+     "storefront-ui"
+    ],
+    "body": "On the Return module (3.1003 pr-27 build) with theme 2.59 pr-2500, the buyer mutation createReturn with an item quantity above the line's returnable quantity (13 of 12, 261 of 260) returned 200 and created a Draft carrying the over-limit quantity. submitReturn on it is refused and the storefront shows 'Some items are no longer available to return in the quantity you asked for. Adjust the quantities and try again.'; the return stays Draft. So the limit is enforced at submit, not at draft create/update. Returnable quantity after a partial approval is ordered minus held, where a decided line holds approvedQuantity: 500 ordered, 240 requested, 200 approved gave 300 returnable.",
+    "fromNotes": false,
+    "questions": [
+     "I tried to send back more items than I bought and got an error only when submitting - why was the draft saved?",
+     "Can a return draft hold a quantity above what is returnable, and at which step is it rejected?",
+     "Do createReturn and updateReturn validate the requested quantity against the returnable limit?",
+     "After a partial approval, how is the remaining returnable quantity of an order line calculated?",
+     "What message does the buyer see when submitting a return whose quantities exceed what can be returned?"
+    ],
+    "concepts": [
+     "returnable-quantity",
+     "return"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The storefront return wizard clamps the saved quantity but can display a quantity above the returnable maximum",
+    "question": "Does the storefront return wizard stop a buyer from entering more than the returnable quantity?",
+    "anchors": [
+     "/account/returns/:id/edit"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "An earlier observation reported that the storefront wizard never lets the buyer type an over-limit quantity: both the select-items step and the details step clamp the spinbutton to the returnable maximum, and a Draft already holding 13 of 12 is shown as '13 of 12 available' with Submit enabled once reason and photo are present. A later observation on theme 2.59 pr-2500 contradicts the display part: on the details step (/account/returns/:id/edit) typing past the max (5 -> End -> '0') leaves the spinbutton displaying '50 of 5 available' after blur, while the saved draft quantity stays 5 (autosave clamps) and Submit becomes enabled once reason+photo exist; a reload shows 5. The select-items step likewise shows '50' in the field while the footer counts 5 items and Continue creates the draft with 5. So the stored value is clamped but the displayed value is not.",
+    "fromNotes": true,
+    "questions": [
+     "The return form shows 50 of 5 available after I typed a big number - will it really return 50?",
+     "Does the return quantity field clamp what is displayed, or only what autosave stores in the draft?",
+     "On the select-items and details steps of a return, can the spinbutton show a value above the maximum?",
+     "How does the storefront render a draft return that already holds more than the returnable quantity?"
+    ],
+    "concepts": [
+     "returnable-quantity",
+     "return"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "041de0fa19e87a47"
+ },
+ {
+  "id": "KB-5AB85ADC",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "What does the message say when my account manager shares a product list with our company?",
+   "Does the list-share notification to a customer organization mention that organization's name?",
+   "If the rep types a note in the share dialog, does it replace the default notification text?",
+   "Is one customer communication mutation sent per newly added organization, with email and push both enabled?",
+   "What happens to a whitespace-only share note - is it sent as-is or trimmed to empty?"
+  ],
+  "concepts": [
+   "customer-communication",
+   "list-sharing"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "893964e0e9d38f20"
+ },
+ {
+  "id": "KB-5ADBFB34",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Two discounts were running but my basket only got one of them - why not both?",
+   "Why did only the larger cart-subtotal promotion apply when neither was marked exclusive?",
+   "Under the BestReward combine policy, is the winning subtotal reward chosen by raw amount or by money value?",
+   "Does promotion priority or the exclusive flag affect which subtotal reward wins under the default policy?",
+   "What setting must change so that two order-level promotions stack on the same cart?"
+  ],
+  "concepts": [
+   "promotion-combination",
+   "promotion-reward"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "d2398ff7a0027ab3"
+ },
+ {
+  "id": "KB-5CEB51A1",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "I cleared everyone from a shared list and pressed Undo - why can't I press Share now?",
+   "After Clear all then Undo in the list share dialog, does Share stay disabled because nothing changed?",
+   "Does cancelling the share dialog after Clear all remove any recipients?",
+   "Which toast text appears when a list share save adds recipients versus only removes them or edits the message?"
+  ],
+  "concepts": [
+   "list-sharing"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "bc18487d1ee81cbd"
+ },
+ {
+  "id": "KB-5D688448",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "I just added a product but it doesn't show up when I search for it - where did it go?",
+   "Why does the catalog products search endpoint not return a product or category created moments ago?",
+   "Can a lookup-then-create seeding step create duplicates because catalog search lags writes or is empty during a reindex?",
+   "Which read gives the database truth for a product and shows whether it is reachable through the store's virtual catalog?"
+  ],
+  "concepts": [
+   "search-index",
+   "product-search"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "93090d3f5308b6c4"
+ },
+ {
+  "id": "KB-5EACBEDD",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "If I stop sharing a list and share it again, do my customers get a new link?",
+   "After a sales rep stops sharing a list and re-shares it, are the old recipients and message restored?",
+   "What does the shared wishlist query return to a reader after sharing is stopped versus after their organization is removed?",
+   "Which share scopes show a toast on save and which save silently?",
+   "Does the list Rename dialog show any sharing details?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "wishlist"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ba35e6b9a7ab4176"
+ },
+ {
+  "id": "KB-5F7C8FC4",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "Why are no taxes being charged in one store while other stores charge them?",
+   "The store's Tax providers widget in the back office is empty - does that mean no tax provider is configured?",
+   "How do I reliably list a store's tax providers when the admin widget renders nothing?",
+   "What console error explains the tax providers grid rendering zero rows for a store?",
+   "Does the order blade's 'AvaTax is not enabled' message mean the store has no tax provider at all?"
+  ],
+  "concepts": [
+   "tax",
+   "store"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "6717e3dc2fe52d39"
+ },
+ {
+  "id": "KB-608F7C05",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Can I remove a loyalty challenge once members have already started earning on it?",
+   "Why does deleting a loyalty mission return a 500 once members have progress on it?",
+   "Does a failed bulk delete of loyalty missions leave the other missions in the batch untouched?",
+   "If a published mission with progress can be neither edited nor deleted, what is the way forward?"
+  ],
+  "concepts": [
+   "loyalty-mission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "0703c5168e97d4f0"
+ },
+ {
+  "id": "KB-614BDEDE",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "I changed the note on a list I had already shared, but customers still see the old one - why?",
+   "Does updating a shared list's message without resending the scope actually save the message?",
+   "Why does changeWishlist return success and bump modifiedDate yet keep sharingSetting.message unchanged?",
+   "Must the sharing scope be sent in the same command for a new list-share message to persist?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "wishlist"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "984463a329c9971c"
+ },
+ {
+  "id": "KB-62EE7AF3",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why can't I find an endpoint in the API documentation even though it clearly works?",
+   "Which platform controllers are hidden from the deployment's OpenAPI document?",
+   "Does an ApiExplorer IgnoreApi attribute keep a live route out of the swagger projection?",
+   "An anchor in a projected namespace resolves to nothing - besides a typo or a missing route, could it be hidden?"
+  ],
+  "concepts": [
+   "openapi-document",
+   "rest-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "32c152dcc44c4313"
+ },
+ {
+  "id": "KB-649D673C",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "My account manager's message showed up with bold text and an image - how is it formatted?",
+   "Is a sales rep's custom share message rendered as markdown or HTML in the customer's notifications?",
+   "Can a push notification message run scripts or keep javascript: links after sanitization?",
+   "Which HTML elements survive DOMPurify in a push notification's short message?"
+  ],
+  "concepts": [
+   "push-message"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "963537f7940599aa"
+ },
+ {
+  "id": "KB-657521DF",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Can a coworker in my company see or cancel a return I requested?",
+   "Is a return visible to other buyers of the same organization, or scoped to the buyer who created it?",
+   "What does cancelReturn answer when a colleague targets another buyer's return - an error code or success?",
+   "In which return statuses is Cancel return disabled for the buyer, and what tooltip explains it?",
+   "Is there a buyer-side mutation to approve or decline a return, and what does availableActions report per status?"
+  ],
+  "concepts": [
+   "return",
+   "organization-order-access"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "49130247d7bf5f1c"
+ },
+ {
+  "id": "KB-66089074",
+  "action": "split",
+  "why": "(a) the server-side guest-to-signed-in cart merge is an unrelated side finding noticed while observing saved-for-later configuration",
+  "children": [
+   {
+    "subject": "Saved-for-later cards omit a configured product's configuration, which returns on move to cart",
+    "question": "Does getSavedForLater return configurationItems for a configurable product, and is the configuration lost?",
+    "anchors": [
+     "Query.getSavedForLater",
+     "Mutation.moveFromSavedForLater"
+    ],
+    "surface": [
+     "storefront-ui",
+     "xapi"
+    ],
+    "body": "A saved-for-later card shows only the product name, price and Move to cart - no configuration detail - because the saved-for-later item projection does not select configurationItems. Rendering configuration on saved cards is not implemented yet; it is a gap, not data loss. After moveFromSavedForLater the restored active-cart line carries configurationItems again (a Text section comes back as name null plus customText), and its Components list shows the chosen values. There is no selectedConfiguration field; configurationItems is the field to read.",
+    "fromNotes": false,
+    "questions": [
+     "I saved a customized product for later and its options disappeared - are they gone?",
+     "Why does a saved-for-later card show no configuration for a configurable product?",
+     "Is the configuration restored on the cart line after moving a saved item back to the cart?",
+     "Which field carries a cart line's chosen configuration - is there a selectedConfiguration field?"
+    ],
+    "concepts": [
+     "saved-for-later",
+     "configured-line-item"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The guest cart is merged into the signed-in cart server-side during sign-in",
+    "question": "Should an explicit mergeCart call appear in the network log when a guest signs in?",
+    "anchors": [
+     "Mutation.moveFromSavedForLater"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "The guest-to-signed-in cart merge happens server-side during sign-in, so no explicit mergeCart call need appear in the network log.",
+    "fromNotes": false,
+    "questions": [
+     "I added items as a guest and then logged in - how do they end up in my cart?",
+     "Is the anonymous cart merged into the customer's cart by the server at sign-in or by a client call?",
+     "Why is there no mergeCart mutation in the network trace after a guest signs in?"
+    ],
+    "concepts": [
+     "cart-merge",
+     "sign-in"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "72e743169d8974cb"
+ },
+ {
+  "id": "KB-66D78761",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "When the store approves or declines my return, am I notified by email?",
+   "Does Approve / decline in the back-office return line items blade ask for confirmation before committing?",
+   "Which email notification is journaled for an approved, partially approved or rejected return decision?",
+   "When does the decline reason field become editable, and what blocks the decision button after a quantity edit?",
+   "What happens in the return blade if the approved quantity exceeds the requested quantity?"
+  ],
+  "concepts": [
+   "return-decision",
+   "notification"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "137de95d925851e3"
+ },
+ {
+  "id": "KB-67A26854",
+  "action": "split",
+  "why": "(b) a contradicting note disputes the over-cap counter behaviour while the reopen pre-fill part is confirmed by two later notes",
+  "children": [
+   {
+    "subject": "Reopening an existing Customer share pre-fills the saved message and recipients",
+    "question": "What does the list Share dialog show when reopening an existing Customer share?",
+    "anchors": [
+     "/account/lists",
+     "Query.wishlist"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "On the vc-frontend#2476 dialog, reopening Share pre-fills Message from sharingSetting.message (latest only) and the recipients from sharingSetting.targets, with Share disabled until something changes. After Stop sharing and re-share the dialog starts empty (0/250, no recipients).",
+    "fromNotes": true,
+    "questions": [
+     "When I open the share window again for a list I already shared, is my previous note still there?",
+     "Does the list share dialog pre-fill the saved message and customer recipients on reopen?",
+     "Which sharing setting fields populate the share dialog, and is only the latest message kept?",
+     "Does the share dialog start empty when a list was unshared and then shared again?"
+    ],
+    "concepts": [
+     "list-sharing"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "The list share message is capped at 250 typed characters, not link-aware, while a longer stored message shows an over-cap counter",
+    "question": "Can a sales rep type or save a list share message longer than 250 characters?",
+    "anchors": [
+     "/account/lists"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "Typing is capped at 250 characters, but a longer stored message is shown in full with a red 'N / 250' counter and no error, and saving is allowed once another change is made. A later observation on theme 2.59.0-pr-2476 disputes the over-cap wording: after filling 250 chars the counter reads 250 / 250 and a further real keystroke is not appended (value stays 250); the cap is flat, not link-aware (the appended link is 87 chars).",
+    "fromNotes": true,
+    "questions": [
+     "How long can the note be when I share a list with a customer?",
+     "What does the share message counter do past 250 characters - does it block typing or just turn red?",
+     "Does the 250-character cap on the share message account for the appended list link?",
+     "Can a stored share message longer than the cap still be saved from the dialog?"
+    ],
+    "concepts": [
+     "list-sharing"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "a542b58eac7ad614"
+ },
+ {
+  "id": "KB-67D0AB31",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "I already asked to return items from an order, but the order page shows nothing about it - where can I see it?",
+   "Does the storefront order detail page display an existing return's status, reference number or returned quantities?",
+   "Does the customer order GraphQL type expose any return or RMA field for the order page?",
+   "Do the return policy and returnable items queries describe existing returns or only what can still be requested?"
+  ],
+  "concepts": [
+   "return",
+   "customer-order"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "e05596094dd6db71"
+ },
+ {
+  "id": "KB-6824BC2B",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "xapi"
+  ],
+  "questions": [
+   "Is there a quick way to try a storefront API query in the browser without writing any code?",
+   "Where is the platform GraphiQL editor served, and can a query be passed in its URL?",
+   "Does platform GraphiQL run as the signed-in admin or as an anonymous caller?",
+   "Why is a GET to the GraphQL endpoint with a query parameter refused with a CSRF protection error?",
+   "Which anonymous lane returns clean JSON from the GraphQL endpoint without the editor?"
+  ],
+  "concepts": [
+   "graphql-api",
+   "access-token"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "734397de55e71258"
+ },
+ {
+  "id": "KB-68F7432D",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "The search box shows a word I didn't search for and the scan button vanished - what's going on?",
+   "When a barcode results URL also carries a keyword, what does the header search field display?",
+   "Why is the Barcode scan button missing from the header during a barcode lookup with a q term?",
+   "Does submitting the header search during a barcode lookup drop the barcode parameter?"
+  ],
+  "concepts": [
+   "barcode-scanner",
+   "site-header"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f393a59ba5889ec0"
+ }
+]

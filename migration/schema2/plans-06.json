@@ -1,0 +1,647 @@
+[
+ {
+  "id": "KB-7DA9B0B7",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "Why does a platform REST cart call answer 401 invalid_token with a bearer token that storefront GraphQL happily accepts?",
+   "As QA, do I need a separate admin token when my test mixes storefront GraphQL calls with platform REST writes?",
+   "Is a 401 from the platform API with an organization-scoped token a missing permission or a token audience mismatch?",
+   "Which kind of access token can update cart line quantities through the platform REST endpoints?",
+   "Does requesting a token with a store id or organization id restrict it to the storefront API only?"
+  ],
+  "concepts": [
+   "access-token",
+   "rest-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ba9c410195ca3e3d"
+ },
+ {
+  "id": "KB-7E35E6BC",
+  "action": "split",
+  "why": "(b) the later contradicting note disputes the attribution of the offset to the viewer's browser, while the same-instant / no-offset-vs-UTC-Z part stands unchallenged, so the two parts can no longer share one trust figure",
+  "children": [
+   {
+    "subject": "An Admin order timestamp and the REST createdDate are the same instant; Admin prints no offset while the API returns UTC with Z",
+    "question": "Why does the order time on the Admin screen differ by hours from the createdDate in the REST payload?",
+    "anchors": [
+     "GET /api/order/customerOrders/{id}"
+    ],
+    "surface": [
+     "admin-ui",
+     "rest"
+    ],
+    "body": "They are the same instant in two timezones. Admin prints an order timestamp with no offset; the API returns UTC with an explicit Z. So comparing a timestamp off a screenshot with one off a payload, without converting, shows a discrepancy of however many hours the reader happens to be from UTC, and it is not a discrepancy. This bites hardest when a screenshot is the evidence in a bug report and the reader is in a different timezone from the person who took it.",
+    "fromNotes": false,
+    "questions": [
+     "My order page in the back office shows a different creation time than the API response; is the order data wrong?",
+     "Should a QA bug report flag an hours-long mismatch between an Admin screenshot time and the payload createdDate?",
+     "Does the orders REST endpoint return createdDate in UTC with a Z suffix while the Admin screen shows no zone offset?",
+     "How do I compare a back-office screenshot time with a JSON order timestamp without inventing a discrepancy?"
+    ],
+    "concepts": [
+     "timestamp",
+     "admin-order-screen"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "Admin order timestamps were attributed to the viewer's browser timezone, and a later observation traces them to the operator's profile timezone",
+    "question": "Does Admin render an order timestamp in the browser's local timezone or in some other timezone?",
+    "anchors": [
+     "GET /api/order/customerOrders/{id}"
+    ],
+    "surface": [
+     "admin-ui"
+    ],
+    "body": "Round one's arm C read Sep 15, 2026 5:51:39 AM on the Admin order screen for the instant the REST payload reports as 2026-09-15T09:51:39.6897076Z - a four-hour offset, that session's browser being at UTC-4. Admin renders in the viewer's local time.\n\n**Disputed.** The offset is not the browser's. Admin renders order timestamps in the timezone stored on the operator's PLATFORM PROFILE: GET /api/platform/profiles/currentuser returns VirtoCommerce.Platform.UI.TimeZone=America/New_York, and the order blade printed Sep 15 2026 4:17:18 AM for a createdDate of 2026-09-15T08:17:18.308Z and Sep 10 2026 3:51:56 PM for 2026-09-10T19:51:56Z - both UTC-4 - while this machine's browser is Asia/Yerevan, UTC+4 (would have been 12:17 PM and 11:51 PM). Proof the browser is not the source: a cold deep link to the same blade, which loads before the profile does, printed the same instant as 2026-09-15 PM12:17:18 in the browser's zone and a ja-JP format. So two operators see different clock times on one order according to a per-user setting, and the same blade also prints its indexation widget in raw UTC (Indexed Sep 15 2026 8:21:52 am against modifiedDate 08:21:51Z).",
+    "fromNotes": true,
+    "questions": [
+     "Is the back-office order time shown in my computer's clock zone or in a zone saved on my user profile?",
+     "Why do two operators looking at the same order in Admin see different creation times?",
+     "Which setting decides the timezone Admin uses when it formats an order's created date?",
+     "Why does an Admin order blade opened from a cold deep link print a different time format than when navigated to?"
+    ],
+    "concepts": [
+     "timestamp",
+     "admin-order-screen"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "f81eb2da1e345a61"
+ },
+ {
+  "id": "KB-7F535D52",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "I paid by card at checkout and my order says payment required instead of processing; will that always happen?",
+   "Why does the same sandbox card order sometimes go straight to Processing and sometimes stay held for review?",
+   "How should a regression case assert the order status after a sandbox card payment from the cart without being flaky?",
+   "Is the held-for-review outcome of the card gateway's fraud screening deterministic per build or decided per transaction?",
+   "Should a test expect createOrderFromCart with a card gateway to end in Processing or in Payment required?"
+  ],
+  "concepts": [
+   "card-payment",
+   "order-status"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c751475d170e02d2"
+ },
+ {
+  "id": "KB-809EA119",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "After my return was only partly approved, how many more units of that line can I send back?",
+   "Does the returnable quantity after a partial approval include units never put on any return, or only the released ones?",
+   "Is returnable quantity computed as ordered minus approved or requested minus approved after a partially approved return?",
+   "Why did a test expecting the returnable balance to reach zero after re-requesting the unapproved units fail?",
+   "Will the return wizard refuse a follow-up request just above the released unapproved quantity as an over-return?"
+  ],
+  "concepts": [
+   "returnable-quantity",
+   "return-decision"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8e4064e7ba282a9f"
+ },
+ {
+  "id": "KB-82111688",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does filtering my company's member list by Blocked show nobody even though a colleague is locked out?",
+   "Can an organization maintainer audit who is shut out by using the Status filter on the members page?",
+   "Why does the Invited status filter return no results while a never-registered account is in the roster?",
+   "Which field does the storefront members Status filter read, and does it carry any authentication or lockout state?",
+   "Why does the row action for a locked account offer Block user rather than Unblock user?"
+  ],
+  "concepts": [
+   "membership-status",
+   "member-block"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3f6895c4a61f0de5"
+ },
+ {
+  "id": "KB-82F52F81",
+  "action": "split",
+  "why": "(a) two different APIs a reader reaches separately: the seoinfos search behaviour and an unrelated side finding on the duplicates endpoint",
+  "children": [
+   {
+    "subject": "POST /api/seoinfos/search needs storeId and matches a permalink path, never the bare slug field",
+    "question": "How do I check with POST /api/seoinfos/search whether a semantic URL is already taken?",
+    "anchors": [
+     "POST /api/seoinfos/search"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "POST /api/seoinfos/search without storeId returns 500 'Store with ID not found'. With storeId and languageCode, the slug field returned no matches even for slugs known to exist; the permalink field works, but it is resolved as a path under the store's SEO link type. With Long links, a category under a top-level category matches only as parent-slug/child-slug, and a product only by its full path. The bare slug of a nested object returns nothing. A freshly written product SEO record is found immediately through its full path, so the search reads the database, not the index.",
+    "fromNotes": false,
+    "questions": [
+     "Before I give a new category a friendly web address, how can I tell whether that address is already used?",
+     "Why does the SEO search return nothing for a slug I can see on an existing product?",
+     "Why does POST /api/seoinfos/search fail with 500 store not found when no storeId is sent?",
+     "With long links enabled, must a nested category's SEO lookup use the parent-slug/child-slug path?",
+     "Does the SEO info search read the database or the search index for a just-saved record?"
+    ],
+    "concepts": [
+     "seo-url"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "GET /api/seoinfos/duplicates returns an empty list even for a slug shared by two categories",
+    "question": "Does GET /api/seoinfos/duplicates report a category whose slug is shared with another category in the same store and language?",
+    "anchors": [
+     "GET /api/seoinfos/duplicates"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "GET /api/seoinfos/duplicates?objectId&objectType returned [] even for a category whose slug is shared with another category in the same store and language.",
+    "fromNotes": false,
+    "questions": [
+     "Two of my categories ended up with the same web address; will the duplicate check point that out?",
+     "Can a catalog admin rely on the SEO duplicates check to find conflicting slugs within one store and language?",
+     "Why does the seoinfos duplicates endpoint return an empty array for an object whose slug collides with another?"
+    ],
+    "concepts": [
+     "seo-url"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "661dcf5f7633d4b8"
+ },
+ {
+  "id": "KB-84E540DD",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "I created a promotion with a promo code in the same request, so why doesn't the code work at checkout?",
+   "How does a marketing admin attach coupon codes to an existing promotion through the API?",
+   "Why is an inline coupons array in the promotion create body silently dropped with hasCoupons staying false?",
+   "Where are coupon usage limits such as maximum uses per user stored, on the promotion or the coupon?",
+   "Which endpoints add, search, delete and import coupons separately from the promotion itself?"
+  ],
+  "concepts": [
+   "coupon",
+   "promotion"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "58ca7271af883fa0"
+ },
+ {
+  "id": "KB-84EA18E3",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Which product attributes can a store use as the code a barcode scanner looks up?",
+   "Why is my catalog-level short-text property missing from the list of selectable barcode fields?",
+   "Does the barcode-search fields endpoint return property names lowercased, and which built-in fields come first?",
+   "After creating or deleting a product short-text property, does the barcode fields list change without a reindex?",
+   "Can sku be saved as a barcode field, or does the settings update reject it?"
+  ],
+  "concepts": [
+   "barcode-settings",
+   "product-property"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c2b332f20f8c4d08"
+ },
+ {
+  "id": "KB-8793DFE7",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "My invoice shows tax on delivery, but the order record says zero shipping tax; which is right?",
+   "Can a finance integration trust the order header's shipping tax figure when reconciling tax charged on delivery?",
+   "Why is CustomerOrder.shippingTaxTotal zero while shippingTotalWithTax exceeds shippingTotal on the same order header?",
+   "Is the order's aggregate taxTotal built from shippingTaxTotal or from the shipments' own tax totals?",
+   "How should a money assertion derive shipping tax on a placed order instead of reading the header field?"
+  ],
+  "concepts": [
+   "tax",
+   "totals",
+   "shipment"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3eb5d2ca7a2dcc6b"
+ },
+ {
+  "id": "KB-8A82CF4D",
+  "action": "split",
+  "why": "(a) two different APIs a reader reaches separately: the isActive switch and its effect on the storefront product, versus a counting trap in the configurations search endpoint",
+  "children": [
+   {
+    "subject": "ProductConfiguration.isActive flips Product.isConfigurable on the next storefront query with no reindex",
+    "question": "How do I turn a product's configurability off, and how soon does the storefront see it?",
+    "anchors": [
+     "ProductConfiguration.isActive",
+     "Product.isConfigurable"
+    ],
+    "surface": [
+     "rest",
+     "xapi"
+    ],
+    "body": "isActive on the ProductConfiguration is the switch, it is honoured immediately, and NO REINDEX is involved. Saving the configuration with isActive false through POST /api/catalog/products/configurations flipped the storefront's Product.isConfigurable from true to false on the very next query, and turning it on had flipped it to true the same way seconds after the configuration was first created -- so isConfigurable is computed from the configuration entity at resolve time, not baked into the search index document, and waiting for or triggering a reindex to make a configurability change visible is wasted work. The product's own index entry is untouched by any of this: price, buyability and stock are unchanged, and the Admin product blade's index timestamp does not move.",
+    "fromNotes": false,
+    "questions": [
+     "If the shop stops offering a build-your-own option on a product, when do shoppers stop seeing the configurator?",
+     "Do I need to rebuild the search index after deactivating a product configuration before retesting the storefront?",
+     "Is Product.isConfigurable resolved from the configuration entity at query time or stored in the index document?",
+     "Does toggling a product configuration's active flag change the product's price, stock or index timestamp?"
+    ],
+    "concepts": [
+     "configurable-product",
+     "search-index"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "An empty-criteria configurations search counts deactivated configurations, not configurable products",
+    "question": "Does POST /api/catalog/products/configurations/search with an empty body count only products a buyer can configure?",
+    "anchors": [
+     "POST /api/catalog/products/configurations/search"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "POST /api/catalog/products/configurations/search with an EMPTY criteria body counts configurations, not CONFIGURABLE PRODUCTS -- it includes deactivated ones. Measured on one product: empty body totalCount 1, {isActive:true} totalCount 0, {isActive:false} totalCount 1, with the product reading isConfigurable false. Since nothing can delete a configuration, a deactivated row is the permanent end state of every configuration anyone ever experiments with, so this gap widens over a store's life and never closes. Ask with {isActive:true} when the question is how many products a buyer can actually configure.",
+    "fromNotes": false,
+    "questions": [
+     "How many products in the catalog can a shopper actually customise today?",
+     "Why does a merchandising report of configurable products keep growing even after options were switched off?",
+     "Which criteria should a configurations search send so switched-off configurations are not counted?",
+     "Can a product configuration be deleted, or does a deactivated one remain in search results forever?"
+    ],
+    "concepts": [
+     "configurable-product"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "be75052d56777560"
+ },
+ {
+  "id": "KB-8BE777BB",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "After I switch to another company in the account menu, why does the top bar no longer say which company I'm buying for?",
+   "Does a multi-organization buyer's header button show the new organization name straight after switching, or only after reload?",
+   "Why does the account menu button lose its text and accessible label after a client-side cart or organization update?",
+   "How does the header organization slot differ between a buyer in one organization and a buyer in several?",
+   "Should an end-to-end case reload the page before asserting the header shows the organization chosen via changeOrganization?"
+  ],
+  "concepts": [
+   "multi-organization",
+   "site-header"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c8c1437420f36d5e"
+ },
+ {
+  "id": "KB-8C3E463D",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "The back office says my order was created hours away from what the API returns; which time is correct?",
+   "Why do two operators see different creation times on the same order in the admin orders grid?",
+   "Which profile setting returned by the current-user endpoint decides the timezone Admin renders order dates in?",
+   "Why does the indexation widget on the order blade show a time in UTC while the order date above it does not?",
+   "Why does an order blade opened by a cold deep link fall back to the browser's timezone and a foreign date pattern?"
+  ],
+  "concepts": [
+   "timestamp",
+   "admin-order-screen"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "859a720d35d7b358"
+ },
+ {
+  "id": "KB-8DA09FE8",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "What does the marketer see when the custom audience rule for an in-app message has a typo?",
+   "Are Save and Send blocked on a push message whose advanced member query is malformed?",
+   "What does preview-recipients return for an invalid member query, and how does the blade show the recipient count?",
+   "Does fixing the advanced audience query re-enable the toolbar buttons and show a valid recipient count again?"
+  ],
+  "concepts": [
+   "push-audience",
+   "admin-validation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7ff031f373b2a0c0"
+ },
+ {
+  "id": "KB-903E980C",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why can't a customer get an email login code on our store when their account belongs to another store?",
+   "Does requesting a one-time code for a contact whose account points at a nonexistent store return an access refusal?",
+   "Are administrators and accounts with no linked contact exempt from the store check when requesting a one-time password?",
+   "What outcome does the OTP request endpoint return for a contact whose account store is not in the trusted group?"
+  ],
+  "concepts": [
+   "otp",
+   "store"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "4cf2d7ffdb17dc3d"
+ },
+ {
+  "id": "KB-90B0D8F5",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi",
+   "rest"
+  ],
+  "questions": [
+   "If the vendor locks my colleague's contact record, will our company members page show them as blocked?",
+   "Does setting a contact's Status to Locked in Admin change the member's badge on the storefront roster?",
+   "Why does organization.contacts return status Locked but statusInOrganization Approved for the same contact?",
+   "How is a member's effective status resolved when both the membership and the contact carry a status?",
+   "Where does a contact-level Locked status from the contact statuses dictionary become visible to organization maintainers?"
+  ],
+  "concepts": [
+   "membership-status",
+   "contact"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "6148ca15ad7320c7"
+ },
+ {
+  "id": "KB-9139A1A3",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "When I sign in, what happens to the items I put in my basket as a guest?",
+   "Which input field names the source cart when merging two carts through GraphQL?",
+   "Why does a mergeCart mutation sent with cartId get rejected by the schema?",
+   "Does a test need an explicit merge call to see a guest cart absorbed into the signed-in user's cart?"
+  ],
+  "concepts": [
+   "cart-merge"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "784d078c0522b0c5"
+ },
+ {
+  "id": "KB-92164C90",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "What is the platform REST path to fetch a company or a contact by its id?",
+   "How can a QA script tell that an organization or contact was really deleted when the read still answers 200?",
+   "Why does DELETE on the members path with an id segment return 405, and how should ids be passed instead?",
+   "Why does the customer members path return 404 for a member that clearly exists?",
+   "What is the reliable absence check for a removed customer record through the admin API?"
+  ],
+  "concepts": [
+   "member-deletion",
+   "contact",
+   "rest-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "0ff2c644292348e3"
+ },
+ {
+  "id": "KB-938D7C06",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why do I only see a few promo codes to click in my basket, and none when I'm not logged in?",
+   "Which public coupons appear as ready-made cards in the cart discount sidebar, and in what order?",
+   "Can a guest shopper still apply a typed coupon code on the cart even though no preset cards render?",
+   "How many promotionCoupons does the cart sidebar request and how are they sorted?",
+   "What does an applied preset coupon card's button change to in the cart sidebar?"
+  ],
+  "concepts": [
+   "coupon",
+   "cart"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "52a2a19ba0694773"
+ },
+ {
+  "id": "KB-94C2ADCC",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Checking out as a guest, why is there no box to type my card details even though card payment is selected?",
+   "Is an unpaid Payment required order placed by a guest through a card gateway evidence of a payment bypass?",
+   "Does the cart-embedded card form of cart-payment gateways render for anonymous users, and does Place order stay enabled?",
+   "What status and approval flag does createOrderFromCart give a guest order paid by card, and is the gateway called?"
+  ],
+  "concepts": [
+   "card-payment",
+   "checkout"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "d9083bae7d4b8146"
+ },
+ {
+  "id": "KB-9560787E",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why can't the admin find my login by my email address in the user list?",
+   "Is an empty back-office user search by email proof that the account does not exist?",
+   "Does the keyword in POST /api/platform/security/users/search match email or only userName?",
+   "How should a provisioning script look up a platform user by email when the username differs?"
+  ],
+  "concepts": [
+   "security-account",
+   "member-search"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f336965bc9ce1c92"
+ },
+ {
+  "id": "KB-969D7E09",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Why does saving back a product exactly as I loaded it through the API throw a server error?",
+   "How should a catalog sync job reconcile a product that has variants without breaking the save?",
+   "Why does a GET-then-POST of a catalog product fail with a PK_Item duplicate key violation?",
+   "If variations[] is omitted from the product save body, are the existing variations kept or detached?"
+  ],
+  "concepts": [
+   "product",
+   "product-variation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ca41c3018c4457e0"
+ },
+ {
+  "id": "KB-97170665",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi",
+   "rest"
+  ],
+  "questions": [
+   "When my company admin blocks me, what does the team page show next to my name?",
+   "Which API field tells a test that an organization member is blocked, given status stays Approved?",
+   "Does the storefront Block user action and Admin's lock in organization hit the same membership lock endpoint?",
+   "How does the members roster map membership lock and statusInOrganization values to Active, Invited, Blocked and Inactive badges?",
+   "Can a reader tell from the red badge whether it came from a membership lock or from a Locked effective status?"
+  ],
+  "concepts": [
+   "member-block",
+   "membership-status",
+   "organization-membership"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "986609e6cc5cad2e"
+ },
+ {
+  "id": "KB-97A675C1",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Once the store approves or declines my return, am I told by email right away?",
+   "Does clicking Approve / decline on a requested return ask for confirmation before committing?",
+   "Which return statuses and notification journal entries does the approve / decline action write?",
+   "When is the decline reason field enabled on the return line items blade, and what becomes read-only after deciding?"
+  ],
+  "concepts": [
+   "return-decision",
+   "notification"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "72f32c552d4cc5ca"
+ },
+ {
+  "id": "KB-98A231B6",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "On the business store product page there's no add-to-basket button; how do I put an item in my basket?",
+   "Why does a cross-layer test expecting addItem never match what the B2B product page stepper sends?",
+   "Which GraphQL mutation does the first quantity increment on a simple product page call on a B2B store?",
+   "Do configurable products on a B2B store keep a real add-to-cart button, unlike simple products?",
+   "Which mutation handles quantity changes made later from the cart line?"
+  ],
+  "concepts": [
+   "add-to-cart",
+   "product-page"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "2eb784ab9b80e2ae"
+ },
+ {
+  "id": "KB-996BDF08",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "My basket total went down with a percentage-off deal, so why don't the individual items show any discount?",
+   "Where should a test read a percent-off-subtotal promotion's discount, on the cart or on its lines?",
+   "Does a RewardCartGetOfRelSubtotal reward populate LineItemType.discounts or only CartType.discounts and discountTotal?",
+   "Why does a storefront reading only line-item discounts show no discount while the cart total is reduced?"
+  ],
+  "concepts": [
+   "promotion-reward",
+   "discount"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "bfdd410a2d014ba6"
+ },
+ {
+  "id": "KB-9D80EE6B",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "If I tick Remember me when signing in, will I stay logged in longer?",
+   "Should QA file a defect because the Remember me checkbox on sign-in changes nothing?",
+   "Does the Remember me option change the token request scope, refresh token or session persistence?"
+  ],
+  "concepts": [
+   "session",
+   "sign-in"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f1db5d0d3adb3a3d"
+ },
+ {
+  "id": "KB-9FDE89B8",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does a category page show subcategories but no products to me as a regular shopper?",
+   "How does a tag on a virtual category hide its products from customers outside that customer group?",
+   "Why are products excluded from search even by exact SKU when their index document has user_groups set instead of __any?",
+   "How do I diagnose a personalization tag inherited by linked subcategories and products from a virtual category?",
+   "Which index field should I compare between a visible and a hidden product to spot a user-group restriction?"
+  ],
+  "concepts": [
+   "personalization",
+   "user-group",
+   "search-index"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c98bf27761b904f6"
+ }
+]

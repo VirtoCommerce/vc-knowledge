@@ -3,10 +3,19 @@ id: KB-49F6B6EF
 subject: roles search returns every role with an empty permissions array; only GET roles/{name} carries them
 plane: experiential
 question: Does POST /api/platform/security/roles/search return the permissions of each role?
+questions:
+  - text: Why does the role search show no permissions for roles that have them?
+  - text: POST /api/platform/security/roles/search permissions empty array
+  - text: Which endpoint returns a role's full permissions list?
+  - text: Why does a role seeder report permission drift that does not exist?
+  - text: Does PUT /api/platform/security/roles with a stable id upsert the role?
+concepts:
+  - id: platform-role
+  - id: permission
 status: active
 appliesTo:
   - axis: surface
-    value: platform-rest
+    value: rest
 anchors:
   - coordinate: POST /api/platform/security/roles/search
   - coordinate: GET /api/platform/security/roles/{}

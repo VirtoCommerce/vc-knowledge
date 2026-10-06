@@ -1,0 +1,244 @@
+[
+ {
+  "survivor": "KB-2F64A447",
+  "absorbed": [
+   "KB-2A9084BA",
+   "KB-D1DF95A5",
+   "KB-A0FFEA0A"
+  ],
+  "body": "subject: Target-org member reads a Customer-scope share only through sharedWishlist(sharingKey); wishlist(listId) is Forbidden and wishlists() omits it\nOnly sharedWishlist(sharingKey), where the key is the list's SharingSettingType.id (the storefront /shared-list/<sharingKey> link): for a member whose active organization is a TARGET of the Customer-scope share it returns the list with access Read, isOwner false, the current sharingSetting.message, and targets [] and sharedWithId null (owner-only fields stay empty). The same member gets errors[Access denied., code Forbidden] with data.wishlist null from wishlist(listId) (observed with a share whose single target was the member's active organization), and the list is absent from that member's wishlists() roster (observed totalCount 0, so the storefront Lists page shows 'You have not created any lists yet'; wishlists() is not necessarily empty or free of non-owner lists, though: it returned an Organization-scope list of the member's own organization with isOwner false while the Customer share was absent). Members of each targeted organization opened /shared-list/<key> and saw the list with 'Recommended by your sales representative'; a removed organization's member got /403. A member of a served organization that is not a target gets Access denied (Forbidden, no message text in the response) from sharedWishlist; a member of a different organization gets the same Access denied from wishlist(listId); an anonymous caller gets Unauthorized. Observed on the multi-target sharing build (sharingSetting.targets[] / addSharedWithIds; x-cart 3.1037.0-pr-141, cart 3.1011.0-pr-194, sales-rep 3.1012.0-pr-21) on a share created through the storefront; the same wishlist(listId) denial was observed on the older single sharedWithId model.",
+  "subject": "Target-org member reads a Customer-scope share only through sharedWishlist(sharingKey); wishlist(listId) is Forbidden and wishlists() omits it",
+  "why": "All four entries state the same read-path fact for a Customer-scope share (sharedWishlist works, wishlist(listId) is Forbidden, wishlists omits it), differing only in detail."
+ },
+ {
+  "survivor": "KB-D7F08A26",
+  "absorbed": [
+   "KB-4895528A",
+   "KB-5EACBEDD"
+  ],
+  "body": "On x-cart 3.1037.0-pr-141 / cart 3.1011.0-pr-194 a list keeps exactly one CartSharingSetting row plus one target row per organization (admin GET /api/carts/{id} shows sharingSettings[0].targets[] with sharedWithId and createdDate, and a legacy sharedWithId on the row equal to the first target). Stop sharing (changeWishlist(scope Private); in the storefront, Share dialog Private + the 'Stop sharing this list?' confirm) deletes the target rows and clears the message: the row stays (same id = the sharing key) with scope Private, targets [] and no sharedWithId. While the list is Private, sharedWishlist(key) for the former target returns data null with an empty errors array, not Forbidden (an org removed from a still-shared list, or a non-target on an active Customer share, gets errors[] 'Access denied.' Forbidden instead). Re-sharing reuses the same sharing key/URL and restores neither the previous recipients nor the message: changeWishlist(scope Customer, addSharedWithIds [other org]) yields targets = only that org, and a member of the former target org is then refused on sharedWishlist(key) and wishlist(listId) with HTTP 200 errors[Forbidden 'Access denied.']. The Rename dialog holds only List name + Description (no sharing details). No toast appears after Stop sharing or after saving Anyone-with-link / My organization, while Specific-customers saves toast 'List shared with N customers.' / 'List saved. Now shared with N customers.' On one test deployment 2026-10-02 none of 36 shared wishlists in storage (420 wishlists) had more than one sharing row, mixed scopes, or a Private row with a target.",
+  "subject": "Customer-scope wishlist share: Stop sharing deletes targets and message, the Private key returns null without error, re-share keeps the key with only the new orgs",
+  "why": "All three state that a share set to Private returns sharedWishlist null with no error and that re-sharing reuses the same key without restoring old recipients."
+ },
+ {
+  "survivor": "KB-24B83B02",
+  "absorbed": [
+   "KB-0E177E02"
+  ],
+  "body": "On storefront theme 2.59 (observed on 2.59.0-pr-2501, on the Cart/XCart build carrying share targets, late Sep 2026), a signed-in member of the target organization opening /shared-list/<sharingKey> for a Customer-scope list sees the list name, a 'Recommended by your sales representative' info badge, the items with Add to cart, and an order summary; sharedWishlist(sharingKey) returns no errors with sharingSetting { scope Customer, access Read, isOwner false, sharedWithId null }. The page's GetSharedWishlist query does not request sharingSetting.message at all (it requests id, scope, access, isOwner, sharedWithId), so the rep's message is never shown on the page. The message reaches the recipient only as push text on /account/notifications, arriving as the message, a blank line, then the full /shared-list/<key> URL, rendered as a paragraph plus a clickable link inside the notification row. The list does not appear on the recipient's /account/lists.",
+  "subject": null,
+  "why": "Both entries state that the recipient opens the Customer-scope list at /shared-list/<key> with Read access and that the rep's message is not rendered there, only in the push feed."
+ },
+ {
+  "survivor": "KB-27B4CD10",
+  "absorbed": [
+   "KB-4B889114"
+  ],
+  "body": "The Active column on the storefront's company members roster is derived from TWO inputs, and the\nsecurity account's state is not one of them. The page renders\n`isLockedInOrganization ? Locked : contact.status` (client-app/pages/company/members.vue) and the\nroster query selects both fields (getOrganizationContactsQuery). So exactly ONE lock axis reaches\nthe column: the per-organization membership lock\n(POST /api/customer/organization-memberships/{id}/lock), which paints the row with a red \"Blocked\"\nbadge and flips back to Active on unlock. Block user and Unblock user on the roster round-trip with Admin: blocking a member there flips the Admin account's 'Locked state' to Locked and unblocking flips it back to Unlocked, so the surfaces agree when the storefront is the one writing it.\n\nTwo other axes never reach it. Locking the security account itself\n(POST /api/platform/security/users/{id}/lock, lockoutEnd 9999-12-31) leaves the row green and\nActive. So does setting the contact-level Status to Locked in Admin. Admin carries two independent\nper-account fields the roster does not project: Status (observed values Approved, Locked,\nPendingApproval) and a derived Locked state (Unlocked/Locked). A contact whose platform account is\nLocked, and a contact still PendingApproval because the invitation was never completed, both keep\ncontact status Approved and therefore both render as Active with the green tick. There is no second indicator anywhere on the page, so a maintainer is shown a colleague as able to sign in when the platform will refuse them.\n\nSo the column answers \"is this member blocked in THIS organization?\", never \"can this colleague sign\nin?\". To learn whether a colleague can actually sign in, read the account blade under\nSecurity > Users > account > Locked state, never the storefront roster.\n\nCORRECTED 2026-09-20. This entry previously claimed the query \"requests NO lock or account-status\nfield at all ... no account state can reach the column by any path\". That was wrong when it was\nwritten, not a build difference: `isLockedInOrganization` entered both the query and the page in\nvc-frontend #2315 (VCST-5028) on 2026-06-19, roughly three months before the earliest observation\nrecorded here. Disputed on vcst_qa 2026-09-19 (session local_3b), upheld from source.",
+  "subject": null,
+  "why": "Both answer whether the storefront members Active column reflects the account's locked state (it does not); the absorbed entry adds only the storefront Block/Unblock round trip to the Admin Locked state."
+ },
+ {
+  "survivor": "KB-DA14E8B7",
+  "absorbed": [
+   "KB-51459ABB"
+  ],
+  "body": "subject: Block then Unblock on a pending invitee irreversibly ends the invitation: contact status Invited -> Locked -> Approved and the roster shows Active with no registration\nOn the B2B storefront roster, Block user / Unblock user write the CONTACT's status field, and an outstanding invitation lives in that same field - so the pair is a one-way door that silently ends the invitation. Completing the registration clears the lockout, but it is not the only way out of the invited state: Block followed by Unblock does it too, without any mailbox. Block (lockOrganizationContact) overwrites contact.status Invited -> Locked and the row stops showing the 'Invite sent' placeholder name, so it no longer reads as an invitation at all. Unblock (unlockOrganizationContact) does not restore what was there: it writes contact.status = Approved and additionally resets the security account's lockoutEnd from the invitation's 9999-12-31 sentinel to 0001-01-01. emailConfirmed stays false - nobody registered - yet the roster now reports the person as Active, which is the roster asserting something the platform does not hold; Admin then shows Locked state Unlocked and Status PendingApproval. The account's passwordHash reads null through GET /api/platform/security/users/{userName}, which strips the field, but is populated through GET /api/members/{id} on the same invited account, so the two endpoints redact differently and a null passwordHash read from the former is not proof that no password exists. Nothing on either surface can put the row back to Invited, and there is no way to start over: Delete only detaches the contact from the organization, the account survives holding the address, and re-inviting that address is refused as a duplicate. So treat Block on an un-accepted invitee as irreversible destruction of the invitation - read the row's status before opening the menu, because the menu looks identical for an invitee and for a colleague who has worked there for a year.",
+  "subject": "Block then Unblock on a pending invitee irreversibly ends the invitation: contact status Invited -> Locked -> Approved and the roster shows Active with no registration",
+  "why": "Both describe the same Block-then-Unblock transition on an invited row (Invited -> Locked -> Approved, lockoutEnd reset, roster Active); the absorbed entry adds the Admin post-state and the passwordHash redaction difference."
+ },
+ {
+  "survivor": "KB-26B8BE64",
+  "absorbed": [
+   "KB-5A3931CE"
+  ],
+  "body": "For a user who has a progress row (an order landed while the window was open), a mission whose EndDate passed about 90 s earlier is still returned by loyaltyMissionProgress with statuses [InProgress, Completed], status InProgress and daysRemaining 0. Once the expiry job runs the progress row's status becomes Expired and the mission drops out of that filter: a mission that ended 19 days earlier had every progress row at status Expired. A user with no progress row on a closed mission does not get it at all. Missions still in their window that have no progress row for the user are returned with isStarted false and 0%. Observed on Loyalty 3.1009.0, vcst, 2026-10-01. A separate observation 21 minutes after a mission's endDate also had loyaltyMissionProgress return status InProgress with daysRemaining 0; the storefront /account/missions card read '0 days left' with a danger dot and an enabled Open mission button, and the order modal showed the same '0 days left' with no ended state. A mission whose endDate falls later the same day reads '1 day left'.",
+  "subject": null,
+  "why": "Both state that an ended but not-yet-swept mission still reads InProgress with daysRemaining 0; the absorbed entry adds how the storefront card and order modal render it."
+ },
+ {
+  "survivor": "KB-6161BC89",
+  "absorbed": [
+   "KB-8E1456B8"
+  ],
+  "body": "POST /api/catalog/products/configurations/search is where configurability is read, but an empty criteria body counts configurations regardless of isActive, so its totalCount is not the number of configurable products on the deployment. After creating one configuration and then deactivating it, the empty body returns totalCount 1, {isActive:false} returns 1 and {isActive:true} returns 0, and the product reads isConfigurable false. Since there is no delete route, deactivated rows are permanent, so the empty-body count drifts upward from the number of genuinely configurable products and never comes back. Use {isActive:true} for the count of products a buyer can actually configure.",
+  "subject": null,
+  "why": "Both state that an empty-criteria configurations search counts deactivated configurations and that {isActive:true} is the correct count; the absorbed entry adds the {isActive:false} observation."
+ },
+ {
+  "survivor": "KB-97A675C1",
+  "absorbed": [
+   "KB-66D78761"
+  ],
+  "body": "Approved is pre-filled with the requested quantity; one click on Approve / decline commits at once with no confirmation dialog, sets return status Approved/PartiallyApproved/Rejected, locks Quantity/Approved/Decline reason read-only, and writes a ReturnApproved/ReturnPartiallyApproved/ReturnRejectedEmailNotification journal entry within ~1s (7 of 7 decisions observed on 2026-09-29; with SMTP failing the entry has status Error). Decline reason input enables only when Approved < Quantity. Approve / decline is disabled while the blade is dirty after a Quantity edit.",
+  "subject": null,
+  "why": "Both entries describe the same one-click, no-confirmation Approve / decline commit and its decision email; the absorbed one adds the dirty-blade disable and the SMTP Error status."
+ },
+ {
+  "survivor": "KB-17555498",
+  "absorbed": [
+   "KB-9B9FAF0F"
+  ],
+  "body": "Observed on Return module 3.1003 (PR builds 3.1003.0-pr-27-51fc among them) with Notifications 3.1014 and PushMessages 3.1006 (3.1006.0-pr-28-2027). Each status change to Requested, Approved, PartiallyApproved, Rejected or Cancelled enqueues two Hangfire jobs (SendNotificationsAsync, SendPushMessagesAsync), producing exactly one email and one push. The email is stored in POST /api/notifications/journal with tenantIdentity {id: returnId, type: Return} (status Error with SentNotificationException when SMTP rejects it, which still proves it was raised); the push is a PushMessage in POST /api/push-message/search with topic = return number, shortMessage = the rendered email subject, memberIds = [the buyer contact id], status Sent. xAPI submitReturn (Draft -> Requested) raises ReturnRegisteredEmailNotification with push text 'Return <number> received'; decisions raise ReturnPartiallyApprovedEmailNotification / ReturnRejectedEmailNotification with push texts 'partly approved' / 'declined'. Draft create/edit/cancel, a return created as New, and PUTs that keep the status send nothing. The decision call returns 200 even though SMTP fails. In one of about ten decisions (a fr-FR return) both jobs finished Succeeded in ~15 ms and produced no email and no push; requeueing the same jobs from the Hangfire dashboard with the same argument produced both, so the first run skipped the send for a reason that had gone by the time of the retry. Language: messages are stored under Return.languageCode (culture at createReturn), null falls back to the store default; with only the shipped template the text is English for every language. Writing Return.SendNotifications=false through POST /api/platform/settings/v2/tenant/Store/{id}/values did not reach the store read by the handler within 10 minutes (GET /api/stores still showed no value, and a submit still sent the email); an empty string for that boolean returns 500 and null does not clear the value.",
+  "subject": "Return status notifications: one email + one push (topic = return number) per status change, incl. submitReturn, via Hangfire; a job can succeed and send nothing (requeue sends it)",
+  "why": "The broader entry already states that the change to Requested raises one email and one push with topic = return number; the submitReturn entry adds the notification type, tenantIdentity, push text, memberIds and status."
+ },
+ {
+  "survivor": "KB-59E4B5FC",
+  "absorbed": [
+   "KB-9DB54091",
+   "KB-E1E2716F"
+  ],
+  "body": "The cart line crosses whole: one order line item on the base product, carrying the rolled-up price and its configurationItems, and the option products still do not become lines of their own. Comparing the two STORED shapes in the modules' own swagger settles what the crossing costs: CartConfigurationItem has 16 fields and OrderConfigurationItem has 15, and the one field that does not cross is sectionId. Everything else is kept -- productId, sku, quantity, imageUrl, catalogId, categoryId, type, customText, files -- and a placed order read back through GET /api/order/customerOrders/{id} showed all of them populated per Product-type option alongside name and type, so the order DOES record which catalog product was chosen and how many were taken. Losing sectionId costs the ability to say which question an answer belonged to: two Product sections yield two indistinguishable Product configuration items, their array order is not stable across surfaces, and a configuration offering the same option product in two sections would be unreconstructable. The bigger loss is not in the record but in one read of it: the storefront GraphQL CartConfigurationItemType has eight fields (id, name, type, customText, files, productId, quantity, sectionId), while OrderConfigurationItemType exposes only five -- id, name, type, customText and files -- and refuses productId, quantity, sectionId, sku, catalogId, categoryId and imageUrl with a validation error. So for a Product section a buyer-facing order page has only the chosen option's display NAME to match on, nothing identifying the product or quantity and not which section it answered, while the same order read over REST has the ids. This is read off the deployment's own schema: diff the two type tables on any deployment to confirm or retire it. Note also that a line whose configurationItems is an empty array is a legitimate order line for a configurable product, not a data fault.",
+  "subject": "a configured product as an order line item: stored order loses only sectionId, storefront GraphQL order item exposes five fields",
+  "why": "KB-9DB54091 (stored shape loses only sectionId) and KB-E1E2716F (five-field GraphQL projection) are both stated explicitly in KB-59E4B5FC; the cart type's eight fields and the imageUrl refusal are added."
+ },
+ {
+  "survivor": "KB-6D5E2CD1",
+  "absorbed": [
+   "KB-3FCB032F"
+  ],
+  "body": "A pricelist reaches a storefront shopper only through a PricelistAssignment, and the assignment is scoped EITHER by catalogId OR by storeId -- both routes work and the Admin blade makes them mutually exclusive (picking a Store greys out Catalog). The store's own catalog is what a catalogId-scoped assignment must match: B2B-store's catalog is a VIRTUAL catalog, and an assignment on it applies to products whose own catalogId is the underlying physical catalog, so do not look for the assignment on the product's catalog. Four things gate an assignment and all four were observed to bite independently: (1) scope match, catalog or store; (2) the date window -- setting endDate to a past instant on an otherwise-matching assignment made the storefront fall straight back to the next-best pricelist, with no other change; (3) the condition tree under 'Eligible shoppers', which on this deployment is in practice a single condition type, UserGroupsContainsCondition; (4) priority, higher wins -- an assignment at priority 20000 beat a matching unconditional one at priority 1 for the same product, and raising an assignment's priority via GET + PUT /api/pricing/assignments with only priority changed made its list win over another unconditional list at the same scope, as seen in POST /api/pricing/evaluate. An assignment with an EMPTY BlockPricingCondition (children: []) is unconditional and matches everybody, which is how the baseline lists here are wired. A pricelist with no assignment at all is invisible to the storefront however many prices it holds. Pricelist.priority exists on the REST model but the Admin price-list blade offers no field for it; the number that decides anything is the ASSIGNMENT's priority.",
+  "subject": null,
+  "why": "KB-3FCB032F's fact (higher assignment priority wins at the same scope) is gate (4) of KB-6D5E2CD1; the GET+PUT route and the evaluate check are added."
+ },
+ {
+  "survivor": "KB-DAD0D552",
+  "absorbed": [
+   "KB-B142F52E"
+  ],
+  "body": "On the UCP build carrying the inventory-error normalization, a cart mutation or checkout call whose quantity exceeds stock returns an MCP tool error (result.isError true, structuredContent.is_error true, status_code 409) with code insufficient_stock when some stock exists, out_of_stock when available is 0, or inventory_unavailable when the minimum order quantity cannot be met from current stock. details carries product_id, requested_quantity, available_quantity (omitted for inventory_unavailable), retryable (true for insufficient_stock, false for the other two), cart_id, operation_rejected true, line_item_id when the line already existed, and a nested errors[] per offending line. The REST routes return HTTP 409 with the same body. create_checkout, update_checkout, checkout_and_handoff, handoff_checkout, the REST checkout handoff route and the internal handoff restore route all refuse such a cart with the same code and no continue_url. The refusal is not a rollback: update_cart can persist the over-stock quantity on an existing line, and get_cart then reports it honestly through cart.inventory_errors and per-line requested_quantity, available_quantity and inventory_status. Observed on UCP 3.1007.0-pr-9-91ca: an update_cart with duplicate entries 4+5 against stock 5 was refused with insufficient_stock (the same error listed twice in details.errors[]), yet get_cart afterwards returned ucp.status success with the line at quantity 9, requested_quantity 9 / available_quantity 5 / inventory_status insufficient_stock, cart.inventory_errors populated and cart messages[] empty; correcting the line to an in-stock quantity cleared inventory_errors and checkout_and_handoff then succeeded. A refused create_cart for a new anonymous buyer leaves an empty cart and its details do not include buyer_id.",
+  "subject": null,
+  "why": "KB-B142F52E is a concrete instance of KB-DAD0D552's non-atomic over-stock refusal; its build, values, empty messages[], duplicated error and recovery path are added."
+ },
+ {
+  "survivor": "KB-110E0652",
+  "absorbed": [
+   "KB-348505EB"
+  ],
+  "body": "XCatalog 3.1022 (PR 113 build, observed on 3.1022.0-pr-113-f4a8 with Catalog 3.1046.0-pr-909-2839 and ElasticSearch8 3.1007.0): when the store has Catalog.Search.BarcodeSearchFields configured, barcode:\"v\" becomes an OR of term filters on those index fields, reported in filters[] with isGenerated:true and no barcode entry (the generated filter carries the raw value, e.g. gtin \"2945100000*\"); default scope widens to product+variation (explicit is:product keeps products only). Matching is case-insensitive but whitespace-sensitive (leading/trailing space -> 0) and not prefix. BUT * and ? are honoured as wildcards, in exact mode too: barcode:\"*\" on [code] returned 4714 products; on [gtin] (exact mode) the full 13-digit GTIN -> 1, \"*\" -> 313 (every product holding a gtin), first 12 digits + \"*\" -> 1, first 12 digits + \"?\" -> 1, first 12 digits without a wildcard -> 0; HTTP 200, no errors[]. The storefront /search?barcode=<10-digit prefix>* therefore redirects to that product's page, because it opens the PDP on a single hit. Cause: EvalBarcodeFilterMiddleware builds a TermFilter from the raw value, and the ElasticSearch8 filters builder turns any single-value term containing * or ? into a WildcardQuery; the filter-syntax grammar has no escape for * or ?. Tracked as VCST-6094. With no fields configured the term is left as a literal field named barcode (0 hits). A second barcode: term stays literal (AND -> 0); comma-separated values in one term OR together. scannerEnabled:false does not stop the expansion.",
+  "subject": "products(filter barcode:) expands to an OR of the configured barcode fields and runs * and ? as wildcards, also in exact mode (VCST-6094)",
+  "why": "KB-348505EB is the exact-mode/gtin instance of the wildcard behaviour that KB-110E0652 already states explicitly; its observed values, cause, versions and ticket were folded in."
+ },
+ {
+  "survivor": "KB-31802239",
+  "absorbed": [
+   "KB-041DF407"
+  ],
+  "body": "On a stand with Catalog.Search.EventBasedIndexation.Enable=false, deleting products via DELETE /api/catalog/products (including products deleted and recreated with new ids) left all their Product index documents in place (ElasticSearch8), still there 50+ minutes later: xAPI Query.products hits and totalCount exclude them, but admin POST /api/catalog/search/products counted them in totalCount while items held only live products (24 for 12 returned items), and xAPI term facets counted them too (a GTIN held by 3 live products showed bucket 6; a bucket reported 2 per product). A facet on createddate shows the old and new docs apart. It does not reproduce on untouched catalog products. An incremental edit was also not picked up by the scheduled indexing job within 10 minutes; a targeted POST /api/search/indexes/index for that document id fixed that one document. POST /api/search/indexes/index with [{documentType:'Product', documentIds:[deleted ids]}] cannot fix the deleted ones: the Search module treats explicit ids as Modified changes, a missing product builds no document, and nothing is removed. POST /api/search/indexes/index with [{documentType:'Product', startDate, endDate}] and NO documentIds replays the catalog change feed for that window, and the Deleted CatalogProduct operation-log entries in it become index removals: 14 ghost documents (12 products + 2 variations) disappeared within ~10 s for a 6-second window around their deletion time. The deletion times come from POST /api/platform/changelog/v2/search {objectType:'CatalogProduct', operationTypes:['Deleted'], objectIds:[...]}; the change log records deletions regardless of the event-indexation setting. Admin search with objectIds:[...] and searchInVariations:true returns totalCount = how many of those ids still have an index document, which is a cheap check that the purge worked. Keep the window narrow: everything else modified inside it is re-indexed as well.",
+  "subject": null,
+  "why": "Both state that with event-based indexation off deleted products keep index documents that inflate facet counts and admin totalCount; KB-041DF407's extra observations were added to the fuller entry."
+ },
+ {
+  "survivor": "KB-ADA91F7B",
+  "absorbed": [
+   "KB-4CCC2DD6"
+  ],
+  "body": "Cancelling an order cascades to the PAYMENT and not to the SHIPMENT or the line items. In Admin, Cancel document on the order blade asks for a reason in a modal - a Bootstrap .modal, not the app's own dialog element - and changes nothing until Confirm is pressed, so a check of the record straight after clicking shows the order still New and looks like the action silently failed. On Confirm the order goes to Cancelled with isCancelled true, cancelledDate set and cancelReason carrying the dialog text; the order's own cancelledState stays Undefined, so it is not the field to test. Its inPayment follows about 1.7 seconds later on a background job, reaching status Cancelled, isCancelled true and cancelledState Completed; its shipment stays at status New with isCancelled false and a modifiedDate still equal to its createdDate, never written again; its line items all stay isCancelled false. Reserved stock IS released - the inventory each line drew down returns to its pre-order figure. The mechanism is that CancelPaymentOrderChangedEventHandler collects changedEntry.NewEntry.InPayments only, and no shipment-cancelling handler exists anywhere in the Orders module. So a cancelled order leaves a live shipment document and line items that individually claim not to be cancelled, and anything counting open shipments or reasoning per line rather than per order - a fulfilment queue, a warehouse worklist - keeps treating them as open; this is why a store used for order testing accumulates New shipments belonging to orders that are all Cancelled. Reproduced independently by three separate runs on 2026-09-15.",
+  "subject": "Cancelling an order cancels its payment on a background job and releases stock, but never its shipment or line items",
+  "why": "Both state the same partial cancel cascade (payment yes, shipment no); KB-4CCC2DD6's line-item, stock, modal and cancelledState details were added."
+ },
+ {
+  "survivor": "KB-F1542157",
+  "absorbed": [
+   "KB-FF7E4D5B"
+  ],
+  "body": "Different scopes, not a disagreement. A promotion whose reward is order-level (e.g. a percentage off the cart subtotal) is recorded on the resulting CustomerOrder as exactly one entry in the order-level discounts collection, and nowhere else: every line item keeps its full placedPrice with an empty discounts array and items[].discountAmount/discountTotal of 0, the shipment discountAmount is 0, and subTotalDiscount is 0.00 as well - only the order-level discountAmount/discountTotal carry the reduction. Round one's arm B read the Admin Line items blade header as Discount 0.00 and Total 1,612.97 while the order header on the same order read Discount 241.95 and Total 1,371.02, the whole 241.95 sitting in the order's own discounts collection. So the Line items header is the untouched sum of the lines and the order header is the sum after the order-level reward, and both are right. Reading the blade header as the order total is the mistake, and it is easy to make because the two screens sit one click apart and neither says which scope it is showing.",
+  "subject": "An order-level promotion is recorded only in the order's discounts collection, not on line items, so the Admin Line items header shows the undiscounted sum",
+  "why": "Both state that an order-level discount is not allocated to line items; KB-FF7E4D5B's field-level detail was added to the entry with more evidence."
+ },
+ {
+  "survivor": "KB-8C3E463D",
+  "absorbed": [
+   "KB-F320B037"
+  ],
+  "body": "subject: Admin renders order timestamps in the operator's profile timezone (UI.TimeZone), not the browser's\nAdmin formats an order timestamp in the timezone stored on the SIGNED-IN OPERATOR'S PROFILE, not the browser's: GET /api/platform/profiles/currentuser carries VirtoCommerce.Platform.UI.TimeZone alongside UI.Language and UI.RegionalFormat, and the order blade and the orders grid both render createdDate through it, printing no offset. Here the profile said America/New_York while the machine running the browser was Asia/Yerevan (UTC+4), so an order created at 2026-09-15T08:17:18Z displayed as Sep 15 2026 4:17:18 AM and one created at 2026-09-10T19:51:56Z as Sep 10 2026 3:51:56 PM - both UTC-4, eight hours from the viewer's own wall clock (would have been 12:17 PM and 11:51 PM). An earlier reading (Sep 15 2026 5:51:39 AM for 09:51:39Z, browser at UTC-4) had attributed the offset to the browser's timezone; that attribution is disputed by this observation. The consequence is that two operators looking at one order see two different clock times according to a per-user setting neither of them is looking at, and neither reading matches the API. Do not reconcile a screen time with a payload time by assuming the reader's timezone; open the profile first. Two more traps on the same blade. The indexation widget at the bottom prints the SAME KIND of value in raw UTC instead (Indexed Sep 15 2026 8:21:52 am against modifiedDate 08:21:51Z), so one blade shows two clocks four hours apart and labels neither. And a blade reached by a cold deep link, before the profile has loaded, falls back to the BROWSER's timezone and a ja-JP date pattern (2026-09-15 PM12:17:18), so the same order can print two different creation times in the same session depending on how the blade was opened.\n\n**Anchor corrected.** `CustomerOrder.createdDate` → `GET /api/order/customerOrders/{id}` — The REST DTO field name is not a coordinate this base projects; the route that serves the UTC value the claim compares against is.",
+  "subject": "Admin renders order timestamps in the operator's profile timezone (UI.TimeZone), not the browser's",
+  "why": "KB-F320B037's own dispute restates KB-8C3E463D's fact; its second example and widget value were folded in and its disputed browser-timezone claim is kept only as a superseded reading."
+ },
+ {
+  "id": "KB-7A9D4927",
+  "subject": "Switching a shared wishlist to Private only suspends its link; removeWishlist is the only revocation",
+  "why": "Distinguishes the suspension-vs-deletion fact from KB-D7F08A26's target-row and re-share behaviour."
+ },
+ {
+  "id": "KB-614BDEDE",
+  "subject": "changeWishlist without scope silently drops a sharing message change",
+  "why": "Easy to confuse with KB-B4377884, which covers target deltas without scope."
+ },
+ {
+  "id": "KB-B4377884",
+  "subject": "changeWishlist without scope silently drops addSharedWithIds/removeSharedWithIds; sharing refusals return a generic INVALID_OPERATION text",
+  "why": "Easy to confuse with KB-614BDEDE (message without scope) and KB-0BC18481 (message limits)."
+ },
+ {
+  "id": "KB-0BC18481",
+  "subject": "Wishlist sharing message: blank/whitespace stored as null, trimmed, 1024-unit limit with an atomic opaque refusal",
+  "why": "Separates the server-side message-storage rules from the storefront dialog's 250-char cap in KB-75B67E06."
+ },
+ {
+  "id": "KB-75B67E06",
+  "subject": "Storefront Share dialog persists the share message (250-char maxlength) and shows it after reload",
+  "why": "Separates the storefront persistence/cap fact from the server-side limits in KB-0BC18481 and the reopen pre-fill in KB-EA337811."
+ },
+ {
+  "id": "KB-EA337811",
+  "subject": "Share dialog reopen pre-fills the saved message and recipients; it starts empty after Stop sharing and re-share",
+  "why": "Easy to confuse with KB-75B67E06, which is about whether the message persists."
+ },
+ {
+  "id": "KB-97170665",
+  "subject": "A membership lock is carried in xAPI only by Contact.isLockedInOrganization (status and statusInOrganization stay Approved) and shows on the members list as a red Blocked badge",
+  "why": "Separates this API-field fact from KB-27B4CD10, which is about which lock axes the Active column ignores."
+ },
+ {
+  "id": "KB-809EA119",
+  "subject": "After a partial approval, returnableQuantity is ordered minus approved: never-requested and released-unapproved units form one returnable pool",
+  "why": "Separates the returnable-quantity formula from KB-F97CFAF6, whose fact is where the limit is enforced (submitReturn)."
+ },
+ {
+  "id": "KB-AD1FA66B",
+  "subject": "Stored cart (GET /api/carts/{id}) keeps the last mutation's promotion snapshot while Query.cart recomputes promotions on every read",
+  "why": "Separates it from KB-055845A3, which is about the line unit price going stale, not promotions."
+ },
+ {
+  "id": "KB-055845A3",
+  "subject": "A cart line's unit price can go stale and disagree with the product page; re-reading does not fix it, a cart mutation does",
+  "why": "Separates it from KB-AD1FA66B, which is about promotion discounts on the stored cart."
+ },
+ {
+  "id": "KB-6CC1EFE6",
+  "subject": "Deleting a security account leaves its contact (and vice versa); an invited contact may be missing from member keyword search",
+  "why": "Separates the admin-UI two-record deletion fact from KB-FB8014EB's REST parameter fact."
+ },
+ {
+  "id": "KB-FB8014EB",
+  "subject": "DELETE /api/platform/security/users takes 'names'; a wrong parameter returns succeeded:true and deletes nothing",
+  "why": "Names its own REST-parameter fact so it is not confused with KB-6CC1EFE6."
+ },
+ {
+  "id": "KB-C1024558",
+  "subject": "DiscountType.coupon is the only field that tells a coupon-unlocked discount from an automatic one",
+  "why": "Easy to confuse with KB-E7790BF6, which describes where a coupon's code and reward are stored on a cart."
+ },
+ {
+  "id": "KB-E7790BF6",
+  "subject": "an applied coupon is two records on a cart: the code in cart.coupons, the reward in cart.discounts, joined only by the code string",
+  "why": "Names its own fact (storage split and one-way join) versus KB-C1024558's coupon-vs-automatic discriminator."
+ },
+ {
+  "id": "KB-097CB5D6",
+  "subject": "mobile/tablet header bell badge wraps a two-digit unread count onto two lines; tapping opens the Notifications popup",
+  "why": "Distinguishes visual rendering from KB-4C2EF958's accessible-name fact on the same control."
+ },
+ {
+  "id": "KB-C466AD5C",
+  "subject": "Barcode scanner blade by permission: without BrowseFilters:Read it shows Error 403 and a false OFF; with Read but not Update it shows the stored state read-only",
+  "why": "Distinguishes the permission-specific entry from KB-AA610EE3, which generalises the false OFF state to any failure of the fields call."
+ },
+ {
+  "id": "KB-1B18B821",
+  "subject": "Tax is provider-driven: without TaxCalculationEnabled and an active store tax provider every tax field is silently zero",
+  "why": "Separates the no-provider mechanism from KB-3E408000's two-active-providers observation."
+ }
+]

@@ -3,6 +3,16 @@ id: KB-F78ED1CC
 subject: On vcst-qa a configurable product's PDP has a real Add to cart button, while simple and variation PDPs add via the quantity stepper.
 plane: experiential
 question: what is the add-to-cart control on a storefront product page, and does it differ by product type
+questions:
+  - text: Why is there no Add to cart button on most product pages, only a plus and minus control?
+  - text: Which product types show an explicit Add to cart button versus a quantity stepper on the product detail page?
+  - text: What does a parent product with variants show in the add control before options are selected?
+  - text: How can a category card tell a tester whether a product is configurable, a master or directly purchasable?
+  - text: Does the add-to-cart control on product pages depend on the theme version or deployment?
+concepts:
+  - id: add-to-cart
+  - id: product-page
+  - id: configurable-product
 status: active
 appliesTo:
   - axis: store

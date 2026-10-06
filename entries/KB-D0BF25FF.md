@@ -3,7 +3,10 @@ id: KB-D0BF25FF
 subject: Barcode scanner blade keeps field order fixed while editing and asks before closing with unsaved changes
 plane: experiential
 question: How does the Admin SPA Barcode scanner blade order fields and guard unsaved changes?
-status: active
+status: superseded
+supersededBy:
+  - id: KB-515D41EC
+  - id: KB-7568B90C
 appliesTo:
   - axis: surface
     value: admin-spa

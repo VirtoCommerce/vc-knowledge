@@ -3,12 +3,24 @@ id: KB-A3CE7FBA
 subject: recovering a percentage rate from a discount amount
 plane: experiential
 question: can I divide a cart-level discount amount by the subtotal to recover the percentage
+questions:
+  - text: My order shows a discount amount; can I work out what percent off it was?
+  - text: Why does dividing the cart discount by the subtotal not give back the configured percentage?
+  - text: What base is a percentage-off-subtotal reward computed on when item-level rewards also apply?
+  - text: Where does an item-level discount show up, and why is it missing from the discounts collection?
+  - text: Which surfaces serve the unrounded discount amount needed to reverse-engineer a rate?
+concepts:
+  - id: promotion-reward
+  - id: discount
+  - id: totals
 status: active
 appliesTo:
-  - axis: surface
-    value: storefront-xapi
   - axis: reward
     value: percentage-off-cart-subtotal
+  - axis: surface
+    value: xapi
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: CartType.subTotal
   - coordinate: LineItemType.discountTotal

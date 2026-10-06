@@ -3,12 +3,22 @@ id: KB-6E56FB4B
 subject: "Organization-scope wishlist: only the owner may change scope/sharing or remove the list; members keep rename and item edits"
 plane: experiential
 question: Can a non-owner member of an Organization-scope wishlist change its scope, share it, or delete it?
+questions:
+  - text: Can a colleague who is not the list owner delete or re-share an organization list?
+  - text: Mutation.changeWishlist Mutation.removeWishlist non-owner Organization scope Access denied Forbidden
+  - text: Which edits can a non-owner Write member make on an Organization-scope wishlist (rename, item edits)?
+  - text: Can a platform administrator remove another user's organization list via xAPI removeWishlist?
+  - text: What do anonymous and other-organization callers get on sharedWishlist for an Organization-scope list?
+concepts:
+  - id: wishlist
+  - id: list-sharing
+  - id: permission
 status: active
 appliesTo:
   - axis: module
     value: x-cart
   - axis: surface
-    value: xapi-graphql
+    value: xapi
 anchors:
   - coordinate: Mutation.changeWishlist
   - coordinate: Mutation.removeWishlist

@@ -3,7 +3,10 @@ id: KB-F6EDA2F4
 subject: the Vendor Portal authenticates by HttpOnly cookies, so local-storage tampering does not end the session
 plane: experiential
 question: How is a Vendor Portal session at /apps/vendor-portal authenticated, and can session expiry be triggered client-side?
-status: active
+status: superseded
+supersededBy:
+  - id: KB-53665E23
+  - id: KB-66A126E3
 appliesTo:
   - axis: surface
     value: vendor-portal-ui

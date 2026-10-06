@@ -3,12 +3,23 @@ id: KB-2AEC62B4
 subject: "Barcode scanner blade: Exact-match mode reveals a 'Fields to match *' checklist; Reset reverts unsaved mode/field changes with no PUT"
 plane: experiential
 question: What does the Admin Barcode scanner blade show in each match mode, and does Reset discard unsaved changes without writing?
+questions:
+  - text: What extra options appear in the store barcode scanner settings when exact matching is chosen?
+  - text: GET /api/catalog/barcode-search/store/{}/fields Fields to match checklist sorting
+  - text: Does Reset on the Barcode scanner blade discard unsaved match-mode changes without a PUT?
+  - text: How are built-in fields like GTIN, MPN and SKU labelled in the Fields to match list?
+  - text: Which fields carry a MULTI-VALUE badge in the barcode scanner blade?
+concepts:
+  - id: barcode-settings
+  - id: admin-validation
 status: active
 appliesTo:
   - axis: blade
     value: store-barcode-scanner
   - axis: surface
-    value: admin-spa
+    value: admin-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: GET /api/catalog/barcode-search/store/{}
   - coordinate: GET /api/catalog/barcode-search/store/{}/fields

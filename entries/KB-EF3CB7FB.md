@@ -3,12 +3,23 @@ id: KB-EF3CB7FB
 subject: Login on behalf is authorized on the storefront not in Admin
 plane: experiential
 question: How do I get a second storefront identity without a second password, and why did Login on behalf fail?
+questions:
+  - text: Why does clicking the button to shop as this customer in the back office do nothing?
+  - text: Whose authorization is checked when an admin uses Login on behalf for a storefront customer?
+  - text: Which grant type and token does the impersonate storefront route send to the token endpoint?
+  - text: Which permission must the signed-in storefront user hold for impersonation to succeed rather than 403?
+  - text: Can I get a second storefront identity for testing without knowing that user's password?
+concepts:
+  - id: impersonation
+  - id: permission
 status: active
 appliesTo:
   - axis: surface
     value: admin-ui
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: POST /connect/token
   - coordinate: GET /account/impersonate/:userId

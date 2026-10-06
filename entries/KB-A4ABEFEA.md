@@ -3,10 +3,19 @@ id: KB-A4ABEFEA
 subject: Notification journal search returns full email bodies; keyword matches the recipient
 plane: experiential
 question: How do I read the sent email body for a recipient from POST /api/notifications/journal?
+questions:
+  - text: How can a tester read the email that was sent to a customer?
+  - text: POST /api/notifications/journal keyword recipient body
+  - text: Does the notification journal search response include the email body, or is GET /api/notifications/journal/{id} needed?
+  - text: What does keyword match in the notification journal search?
+  - text: Is the email body stored when SMTP is not configured and the journal status is Error?
+concepts:
+  - id: notification
+  - id: rest-api
 status: active
 appliesTo:
   - axis: surface
-    value: admin-api
+    value: rest
 anchors:
   - coordinate: POST /api/notifications/journal
   - coordinate: GET /api/notifications/journal/{id}

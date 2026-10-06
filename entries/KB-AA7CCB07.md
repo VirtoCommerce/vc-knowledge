@@ -3,12 +3,24 @@ id: KB-AA7CCB07
 subject: "Draft quote request: Save changes after a line quantity edit keeps catalog prices"
 plane: experiential
 question: Does saving a quantity edit on a draft quote request (RFQ) zero the line prices?
+questions:
+  - text: Does changing the quantity in a draft request for quote reset the prices to zero?
+  - text: Mutation.changeQuoteItemQuantity Draft quote Save changes listPrice
+  - text: Which mutations does Save changes send on a draft quote request edit page?
+  - text: Why is a gift line at 0.00 in a quote created from the cart?
+  - text: Do quote totals recompute after a quantity change on a draft RFQ?
+concepts:
+  - id: quote
+  - id: price
+  - id: totals
 status: active
 appliesTo:
   - axis: module
     value: virtocommerce.quote
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: Mutation.changeQuoteItemQuantity
   - coordinate: Query.quote

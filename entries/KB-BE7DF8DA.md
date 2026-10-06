@@ -3,6 +3,15 @@ id: KB-BE7DF8DA
 subject: "Customer share switched to AnyoneAnonymous: targets and message cleared, key kept"
 plane: experiential
 question: What happens to a Customer-scope wishlist share when changeWishlist sets scope AnyoneAnonymous?
+questions:
+  - text: When a list shared with specific customers is switched to 'anyone with the link', what happens to the people it was shared with and the message?
+  - text: Mutation.changeWishlist AnyoneAnonymous targets message cleared sharingSetting.id
+  - text: Can a former target organization member still read a list by listId after it is switched to AnyoneAnonymous?
+  - text: Why does switching a list back to Customer scope fail with INVALID_OPERATION?
+  - text: Is the sharing key kept when a Customer-scope share changes to AnyoneAnonymous?
+concepts:
+  - id: list-sharing
+  - id: wishlist
 status: active
 appliesTo:
   - axis: surface

@@ -3,6 +3,13 @@ id: KB-9D80EE6B
 subject: the Remember me checkbox on /sign-in has no effect on the session
 plane: experiential
 question: Does ticking Remember me on /sign-in change how long the storefront session lasts?
+questions:
+  - text: If I tick Remember me when signing in, will I stay logged in longer?
+  - text: Should QA file a defect because the Remember me checkbox on sign-in changes nothing?
+  - text: Does the Remember me option change the token request scope, refresh token or session persistence?
+concepts:
+  - id: session
+  - id: sign-in
 status: active
 appliesTo:
   - axis: surface

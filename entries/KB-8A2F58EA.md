@@ -3,6 +3,15 @@ id: KB-8A2F58EA
 subject: xAPI returnableItems caps returnableQuantity at deliveredQuantity, computed per line
 plane: experiential
 question: Is returnableItems returnableQuantity capped by deliveredQuantity or orderedQuantity, and is it per line?
+questions:
+  - text: Can a buyer return items that were ordered but not yet delivered?
+  - text: Query.returnableItems returnableQuantity deliveredQuantity orderedQuantity
+  - text: With orderedQuantity 10 and deliveredQuantity 4, what returnableQuantity does xAPI return?
+  - text: Is returnableQuantity reported per order line or as one value per return?
+concepts:
+  - id: returnable-quantity
+  - id: return
+  - id: order-line-item
 status: active
 appliesTo:
   - axis: surface

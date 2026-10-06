@@ -3,10 +3,18 @@ id: KB-AA610EE3
 subject: Barcode scanner blade shows the scanner OFF with no match mode whenever GET .../fields fails, not only on 403
 plane: experiential
 question: What does the Admin SPA Barcode scanner blade show when api/catalog/barcode-search/store/{id}/fields fails?
+questions:
+  - text: Why does the barcode scanner setting look switched off in the store settings when it is actually on?
+  - text: What does the Barcode scanner blade render when loading its field list fails?
+  - text: Is the false off state of the scanner blade caused only by missing permission or by any fields request failure?
+  - text: Does reopening the barcode scanner blade after a network error show the stored settings again?
+concepts:
+  - id: barcode-settings
+  - id: blade-navigation
 status: active
 appliesTo:
   - axis: surface
-    value: admin-spa
+    value: admin-ui
 anchors:
   - coordinate: GET /api/catalog/barcode-search/store/{id}/fields
 evidence:

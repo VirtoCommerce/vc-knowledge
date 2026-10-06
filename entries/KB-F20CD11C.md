@@ -3,7 +3,10 @@ id: KB-F20CD11C
 subject: On Orders 3.1015.0 the order's configuration items DO carry sectionId and sectionName, so the section a choice answered is recoverable
 plane: experiential
 question: does a configurable product's order line record which configuration section each chosen option answered
-status: active
+status: superseded
+supersededBy:
+  - id: KB-4105EEBE
+  - id: KB-CFBD95B7
 appliesTo:
   - axis: entity
     value: configurable-product-order-line

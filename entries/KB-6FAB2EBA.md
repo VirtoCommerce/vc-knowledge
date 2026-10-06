@@ -3,6 +3,14 @@ id: KB-6FAB2EBA
 subject: addItem rejects a line quantity of one million or more through validationErrors, not errors
 plane: experiential
 question: What does addItem return when the requested quantity exceeds the store's line item limit?
+questions:
+  - text: I typed a huge quantity and the item silently was not added to my basket - why no error?
+  - text: What happens on add to cart when a buyer requests a quantity above the store's per-line limit?
+  - text: Does addItem report an over-limit quantity in GraphQL errors or in the cart's validationErrors?
+  - text: Why does an automated add-to-cart check pass on HTTP 200 while the line was never added?
+concepts:
+  - id: cart-validation
+  - id: add-to-cart
 status: active
 appliesTo:
   - axis: surface

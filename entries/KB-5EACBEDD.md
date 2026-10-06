@@ -3,10 +3,22 @@ id: KB-5EACBEDD
 subject: "Sales-rep list: Stop sharing keeps the link key; re-share does not restore recipients"
 plane: experiential
 question: After a sales rep stops sharing a list (scope Private) and shares it again, is the link the same and are old recipients restored?
-status: active
+questions:
+  - text: If I stop sharing a list and share it again, do my customers get a new link?
+  - text: After a sales rep stops sharing a list and re-shares it, are the old recipients and message restored?
+  - text: What does the shared wishlist query return to a reader after sharing is stopped versus after their organization is removed?
+  - text: Which share scopes show a toast on save and which save silently?
+  - text: Does the list Rename dialog show any sharing details?
+concepts:
+  - id: list-sharing
+  - id: wishlist
+status: superseded
+supersededBy: KB-D7F08A26
 appliesTo:
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: Mutation.changeWishlist
   - coordinate: Query.sharedWishlist

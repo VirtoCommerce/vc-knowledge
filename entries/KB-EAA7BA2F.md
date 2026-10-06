@@ -3,10 +3,21 @@ id: KB-EAA7BA2F
 subject: storefront Lists page is an owner-only roster
 plane: experiential
 question: Will a list a colleague scoped to the organization show up on my Lists page?
+questions:
+  - text: Why can't I see the list my colleague shared with our company on my Lists page?
+  - text: Does switching the active organization change which lists appear on a buyer's account lists screen?
+  - text: Does the storefront lists query send the scope argument, or only the signed-in user's id?
+  - text: How does a recipient of a customer-scoped shared list actually open it from the storefront?
+  - text: Is organization visibility of wish lists ever exercised by the shipped storefront UI?
+concepts:
+  - id: wishlist
+  - id: list-sharing
 status: active
 appliesTo:
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: Query.wishlists
   - coordinate: GET /account/lists
@@ -53,5 +64,4 @@ evidence:
     contradicts: true
     note: "Theme 2.59.0-pr-2476-0abb: a list created by a sales rep (org context = the buyer's org) and set to scope Organization via changeWishlist appears on /account/lists AND in the sidebar for a different member of that organization (buyer, not the owner), with a 'Shared' badge, and opens at /account/lists/<id>. So an Organization-scope list belonging to someone else DOES reach the Lists roster; the 'owner-only' statement holds for Customer-scope shares, not for Organization scope."
 ---
-
 Not by that page. The storefront's Lists screen issues GetWishlists, and that document passes storeId, userId, currencyCode, cultureName, first, after and sort - it does NOT pass the scope argument the schema offers on Query.wishlists, and userId is always the signed-in user. So the roster is defined as lists you own, and an organization-scoped list belonging to someone else cannot reach it by any path, however the platform resolves organization visibility. The only storefront route that reaches a list you do not own is /shared-list/<sharingKey>, which needs the link. Read this as a surface gap rather than a permission answer: the schema exposes a scope filter that the shipped UI never exercises, so what Query.wishlists does with scope is untested from the storefront and must be settled with a direct call.

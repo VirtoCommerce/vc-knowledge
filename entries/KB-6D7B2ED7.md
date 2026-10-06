@@ -3,6 +3,16 @@ id: KB-6D7B2ED7
 subject: Storefront OTP sign-in form posts to the storefront origin /api/otp/request, which the storefront ingress answers 405; the form shows an inline generic error plus a global server-error toast
 plane: experiential
 question: What happens when a guest clicks Continue on the storefront OTP email sign-in form?
+questions:
+  - text: Why does the email code login fail with 'Something went wrong' on the storefront?
+  - text: POST /api/otp/request 405 storefront origin ingress Cloudflare
+  - text: Does the OTP request from /sign-in reach the platform or is it blocked at the storefront ingress?
+  - text: "Which errors appear together when the one-time code Continue fails: inline alert and server-error toast?"
+  - text: What validation message does the OTP email field show for 'john@' or an empty email?
+concepts:
+  - id: otp
+  - id: sign-in
+  - id: api-error
 status: active
 appliesTo:
   - axis: feature

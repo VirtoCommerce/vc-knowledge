@@ -3,12 +3,21 @@ id: KB-BBC75DEA
 subject: Push Messages recipient picker renders same-named people and companies with no discriminator
 plane: experiential
 question: Does the Push Messages 'Add specific recipients' picker distinguish options that share a display name?
+questions:
+  - text: When I pick push notification recipients, how do I tell apart two people with the same name?
+  - text: In the back office push message audience, do dropdown options show email, type or company before selection?
+  - text: Does the search-recipients picker render only the display name for each option, without a discriminator?
+  - text: When does the Person or Company badge and recipient count appear on a picked push recipient?
+  - text: Can duplicate-named companies be distinguished in the specific recipients combobox of a push message?
+concepts:
+  - id: push-audience
+  - id: push-message
 status: active
 appliesTo:
   - axis: module
     value: virtocommerce.pushmessages
   - axis: surface
-    value: admin-spa
+    value: admin-ui
 anchors:
   - coordinate: POST /api/push-message/search-recipients
 evidence:

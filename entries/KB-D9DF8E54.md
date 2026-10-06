@@ -3,6 +3,14 @@ id: KB-D9DF8E54
 subject: The storefront serves its index HTML with cache-control max-age=7200, so after a theme deploy a returning browser keeps loading the previous bundle for up to 2 hours
 plane: experiential
 question: Why does a storefront still show the old theme build after a successful theme deploy?
+questions:
+  - text: Why do I still see the old storefront version after the new theme was deployed?
+  - text: /sign-in cache-control max-age=7200 index HTML theme deploy
+  - text: How long can a returning browser keep loading the previous theme bundle after a deploy?
+  - text: How should a tester verify that a new theme build is actually live?
+concepts:
+  - id: theme
+  - id: platform-version
 status: active
 appliesTo:
   - axis: layer

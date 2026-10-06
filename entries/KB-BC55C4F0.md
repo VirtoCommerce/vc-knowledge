@@ -3,10 +3,19 @@ id: KB-BC55C4F0
 subject: barcode-search endpoints are gated by catalog:BrowseFilters:Read (GET) and :Update (PUT)
 plane: experiential
 question: What permissions do the barcode-search settings endpoints require?
+questions:
+  - text: Which permission lets a back-office manager view the store's barcode scanning settings?
+  - text: What does a read-only admin role get when trying to save barcode search configuration over the API?
+  - text: Which catalog permissions gate GET and PUT on the barcode-search store endpoints?
+  - text: Do store access or catalog access permissions alone allow reading barcode search settings?
+  - text: What status does an anonymous caller receive from the barcode search settings endpoints?
+concepts:
+  - id: barcode-settings
+  - id: permission
 status: active
 appliesTo:
   - axis: surface
-    value: admin-api
+    value: rest
 anchors:
   - coordinate: PUT /api/catalog/barcode-search/store/{storeId}
   - coordinate: GET /api/catalog/barcode-search/store/{storeId}

@@ -3,10 +3,18 @@ id: KB-F7E4DB8E
 subject: customerOrders/search keyword is a prefix match, results newest first
 plane: experiential
 question: Does POST /api/order/customerOrders/search with keyword=<order number> return only that order?
+questions:
+  - text: Searching orders by an order number returns several orders - why?
+  - text: POST /api/order/customerOrders/search keyword prefix match order number
+  - text: In what order does customerOrders/search return results and how can a small take miss the exact order?
+  - text: How do I reliably find one order by exact number via customerOrders/search?
+concepts:
+  - id: customer-order
+  - id: order-number
 status: active
 appliesTo:
   - axis: surface
-    value: rest-api
+    value: rest
 anchors:
   - coordinate: POST /api/order/customerOrders/search
 evidence:

@@ -3,10 +3,21 @@ id: KB-5F7C8FC4
 subject: an empty Tax providers widget is not evidence that a store has no tax provider
 plane: experiential
 question: how do I find out whether a store has a tax provider, and why does the Admin widget show nothing
+questions:
+  - text: Why are no taxes being charged in one store while other stores charge them?
+  - text: The store's Tax providers widget in the back office is empty - does that mean no tax provider is configured?
+  - text: How do I reliably list a store's tax providers when the admin widget renders nothing?
+  - text: What console error explains the tax providers grid rendering zero rows for a store?
+  - text: Does the order blade's 'AvaTax is not enabled' message mean the store has no tax provider at all?
+concepts:
+  - id: tax
+  - id: store
 status: active
 appliesTo:
   - axis: surface
     value: admin-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: POST /api/taxes/search
 arrivesAt:

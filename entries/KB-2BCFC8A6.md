@@ -3,10 +3,21 @@ id: KB-2BCFC8A6
 subject: Quote Approve converts to an order in one step; no Accepted status
 plane: experiential
 question: What quote status does the storefront need to offer Accept/Approve, and is there an Accepted state before conversion to order?
+questions:
+  - text: When does the storefront show Approve and Decline buttons on a quote?
+  - text: Mutation.approveQuoteRequest Proposal sent status converts quote to order Ordered
+  - text: Is there an Accepted quote status before the quote becomes an order?
+  - text: Does approving a quote place the order immediately or require a separate checkout?
+  - text: Which Quotes.Status values are allowed and what does declineQuoteRequest set the status to?
+concepts:
+  - id: quote
+  - id: customer-order
 status: active
 appliesTo:
   - axis: surface
     value: storefront-ui
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: Mutation.approveQuoteRequest
   - coordinate: Mutation.declineQuoteRequest

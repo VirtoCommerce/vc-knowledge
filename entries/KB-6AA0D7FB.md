@@ -3,6 +3,15 @@ id: KB-6AA0D7FB
 subject: fixed rate shipping method option pricing
 plane: experiential
 question: why does choosing a different delivery method not change the shipping cost?
+questions:
+  - text: Why is shipping still free when I switch from ground to air delivery at checkout?
+  - text: A store offers two fixed-rate delivery options that both cost zero - is that a bug or missing configuration?
+  - text: Where are per-option fixed rate shipping prices configured, and what value applies when the setting was never set?
+  - text: Does the placed order still record which fixed-rate delivery option the buyer chose even when its price is zero?
+  - text: How do shipment price, shippingSubTotal and shippingTotal relate on an order with a single shipment?
+concepts:
+  - id: shipping-method
+  - id: shipment
 status: active
 appliesTo:
   - axis: surface

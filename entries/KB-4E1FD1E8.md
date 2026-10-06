@@ -3,16 +3,26 @@ id: KB-4E1FD1E8
 subject: The impersonate OAuth grant gates on the operator's loginOnBehalf permission but applies NO guard on the target user (existence only) and mints the token from the target's identity, so impersonating an Administrator yields a token carrying the target's Administrator role
 plane: experiential
 question: Can a non-admin operator with loginOnBehalf impersonate an Administrator via the impersonate grant on /connect/token, and does the token carry admin rights?
+questions:
+  - text: Can a non-admin user with login-on-behalf rights log in as the administrator?
+  - text: /connect/token grant_type=impersonate target Administrator guard AuthorizationController.Exchange
+  - text: Does the impersonation token carry the target's Administrator role?
+  - text: Is the Login on behalf button enabled on the Administrator user record for an Organization maintainer?
+  - text: What does the impersonate grant check on the target user besides existence?
+concepts:
+  - id: impersonation
+  - id: permission
+  - id: access-token
 status: active
 appliesTo:
   - axis: grant
     value: impersonate
-  - axis: surface
-    value: admin-spa
-  - axis: surface
-    value: platform-oauth
   - axis: target
     value: administrator
+  - axis: surface
+    value: admin-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: /connect/token
   - coordinate: /account/impersonate/{userId}

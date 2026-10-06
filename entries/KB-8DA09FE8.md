@@ -3,10 +3,20 @@ id: KB-8DA09FE8
 subject: "Push Messages advanced query: a malformed member query is rejected in the UI and holds Save/Send"
 plane: experiential
 question: What does the Push Messages admin blade show when an Advanced query is malformed, and are Save and Send held?
+questions:
+  - text: What does the marketer see when the custom audience rule for an in-app message has a typo?
+  - text: Are Save and Send blocked on a push message whose advanced member query is malformed?
+  - text: What does preview-recipients return for an invalid member query, and how does the blade show the recipient count?
+  - text: Does fixing the advanced audience query re-enable the toolbar buttons and show a valid recipient count again?
+concepts:
+  - id: push-audience
+  - id: admin-validation
 status: active
 appliesTo:
   - axis: surface
-    value: admin-spa
+    value: admin-ui
+  - axis: surface
+    value: rest
 anchors:
   - coordinate: POST /api/push-message/preview-recipients
   - coordinate: /workspace/embedded-app/push-messages

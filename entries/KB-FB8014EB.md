@@ -1,12 +1,20 @@
 ---
 id: KB-FB8014EB
-subject: security-user deletion takes names, and a wrong parameter returns a vacuous success
+subject: DELETE /api/platform/security/users takes 'names'; a wrong parameter returns succeeded:true and deletes nothing
 plane: experiential
 question: Which query parameter does DELETE /api/platform/security/users take, and which lookup reliably finds a user?
+questions:
+  - text: I removed a back-office user and got a success message, so why do they still exist?
+  - text: Which query parameter does the platform user delete endpoint expect for the user names?
+  - text: Why does fetching a platform user by id return null?
+  - text: What is the reliable way to check that a platform user exists and which roles it has?
+concepts:
+  - id: security-account
+  - id: rest-api
 status: active
 appliesTo:
   - axis: surface
-    value: rest-api
+    value: rest
 anchors:
   - coordinate: DELETE /api/platform/security/users
   - coordinate: POST /api/platform/security/users/search

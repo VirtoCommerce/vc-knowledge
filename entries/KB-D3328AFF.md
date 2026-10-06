@@ -3,6 +3,16 @@ id: KB-D3328AFF
 subject: "Wishlist sharing deprecation shape: no plural sharingSettings, singular sharingSetting not deprecated, sharedWithId deprecated"
 plane: experiential
 question: Is WishlistType.sharingSetting or SharingSettingType.sharedWithId deprecated in the multi-target sharing build, and is there a plural sharingSettings field?
+questions:
+  - text: Which wishlist sharing fields are being phased out in the new multi-recipient sharing build?
+  - text: WishlistType.sharingSetting SharingSettingType.sharedWithId isDeprecated introspection
+  - text: Is there a plural sharingSettings field on WishlistType?
+  - text: What replaces SharingSettingType.sharedWithId and what fields does SharingTargetType have?
+  - text: Do InputChangeWishlistType and InputCreateWishlistType still accept sharedWithId?
+concepts:
+  - id: list-sharing
+  - id: wishlist
+  - id: graphql-api
 status: active
 appliesTo:
   - axis: surface

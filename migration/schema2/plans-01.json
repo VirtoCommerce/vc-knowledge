@@ -1,0 +1,750 @@
+[
+ {
+  "id": "KB-00DB63A4",
+  "action": "split",
+  "why": "(a) the duplicate-address behaviour is an unrelated side finding on a different page (/account/addresses write path) from the checkout address-search facets",
+  "children": [
+   {
+    "subject": "address keyword search and location facets are offered only in the checkout shipping address popup",
+    "question": "Where can a shopper search their addresses and filter them by country, state or city?",
+    "anchors": [
+     "Query.currentCustomerAddresses",
+     "Query.currentOrganizationAddresses",
+     "/account/addresses"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "The keyword search and the country / state / city facet dropdowns backed by currentCustomerAddresses and currentOrganizationAddresses are wired only into the checkout shipping address-selection popup on /cart. The /account/addresses page and the header ship-to popover call the same queries but show only the plain list with Add/Edit/Delete - that scope is intentional. The State/Province facet appears only when the listed addresses include US or Canadian ones: other countries carry no region, so the facet request returns an empty term list and the facet is hidden, BY DESIGN.",
+    "fromNotes": false,
+    "questions": [
+     "Why can I search my saved addresses at checkout but not on my account address book page?",
+     "Is the missing address filter on the company address list a defect or intended scope for B2B buyers?",
+     "Which storefront surfaces use the country, state and city facets of the customer and organization address queries?",
+     "Why does the state or province filter disappear from the checkout address picker for some address lists?",
+     "Does the header ship-to selector offer address keyword search like the checkout popup does?"
+    ],
+    "concepts": [
+     "address",
+     "checkout",
+     "facet"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "the server silently drops a duplicate address added from the account addresses page",
+    "question": "What happens when a shopper adds an address that already exists from the account addresses page?",
+    "anchors": [
+     "/account/addresses"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "Adding a duplicate from /account/addresses is not pre-checked in the UI; the server silently drops the duplicate.",
+    "fromNotes": false,
+    "questions": [
+     "I saved the same address twice in my account and only one shows up - where did the second go?",
+     "Does the storefront warn a buyer before they add an address identical to one already in their address book?",
+     "Is duplicate-address rejection enforced client-side or server-side when adding from the account address page?",
+     "Why does adding a duplicate address report no error yet create nothing?"
+    ],
+    "concepts": [
+     "address"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "64e53241fbba9bb0"
+ },
+ {
+  "id": "KB-02238DE5",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "As a regular company employee, why can I see the members page but not invite or edit anyone?",
+   "Does a lower organization role hide the Corporate menu, or only the management buttons inside it?",
+   "Why does an employee only see their own orders with no All orders / My orders switch?",
+   "For a permission test, should I assert that a navigation section is hidden or that specific controls are absent?",
+   "Which storefront controls on the company members roster are removed for a member without an admin organization role?"
+  ],
+  "concepts": [
+   "organization-role",
+   "permission",
+   "organization-order-access"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ae7dbd3076d7108b"
+ },
+ {
+  "id": "KB-032FBB96",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does the same shared list say I can edit it while someone else opening the link gets read-only?",
+   "Is the wishlist sharing access value stored on the list or computed for whoever asks?",
+   "Can I cache the sharing access and owner flags of a list across different users?",
+   "Why does a list owner get no edit or delete controls on the shared-list page despite having write access?",
+   "Does the sharing setting id change between the owner's and a link holder's view of the same list?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "wishlist",
+   "permission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "bf2dc4378a103855"
+ },
+ {
+  "id": "KB-0407F36E",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "rest"
+  ],
+  "questions": [
+   "What request goes out when I press Sign in on the storefront?",
+   "Is storefront login a GraphQL mutation or an OAuth token call?",
+   "What does the token endpoint return for a wrong password, and what does the count field mean?",
+   "How does a failed storefront login response differ from one for a locked-out account?",
+   "For a login test, which endpoint and error code should I intercept to detect bad credentials?"
+  ],
+  "concepts": [
+   "sign-in",
+   "access-token",
+   "account-lockout"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "c781488ef45400e4"
+ },
+ {
+  "id": "KB-041DF407",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "rest"
+  ],
+  "questions": [
+   "Why does a filter show more matching items than the search actually returns?",
+   "After deleting and recreating catalog products, why are facet bucket counts doubled?",
+   "Do stale index documents linger when event-based indexation is switched off?",
+   "Why does the admin product search total exceed the number of items returned?",
+   "My product edit did not show up in search after the scheduled indexing job - how do I force a reindex of one document?"
+  ],
+  "concepts": [
+   "search-index",
+   "facet"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3399dd72e6c1d667"
+ },
+ {
+  "id": "KB-048CB22A",
+  "action": "split",
+  "why": "(a) the bell button's accessible name being only the count is an accessibility defect noticed while observing the badge rendering and popup behaviour",
+  "children": [
+   {
+    "subject": "the mobile and tablet header notifications badge wraps a two-digit unread count onto two lines over the bell",
+    "question": "How does the storefront mobile header render a two-digit notifications unread count, and what does tapping the bell do?",
+    "anchors": [
+     "/account/notifications",
+     "/account/returns"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "On theme 2.59 pr-2500 at 375 and 768 wide, with 70-71 unread push messages, the header bell badge shows '7' above '1' (or '7'/'0') inside an enlarged circle overlapping the bell icon. Tapping it opens the Notifications popup listing return events ('Return RET... received/approved/partly approved/declined'); tapping an entry marks it read but does not navigate.",
+    "fromNotes": false,
+    "questions": [
+     "On my phone the notification counter shows its digits stacked on top of each other - is that expected?",
+     "Why does the unread badge grow and cover the bell icon on small screens when there are many notifications?",
+     "Does tapping a return event in the mobile notifications popup open the return, or only mark it read?",
+     "How does the header bell badge lay out a two-digit count at tablet and phone widths?"
+    ],
+    "concepts": [
+     "push-message",
+     "site-header",
+     "mobile-layout"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "the mobile header bell button's accessible name is only the unread count",
+    "question": "What accessible name does the storefront mobile header give the notifications bell button?",
+    "anchors": [
+     "/account/notifications"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "At 375 and 768 wide, with 70-71 unread push messages, the accessibility tree names the header bell button '71' (desktop header names it 'Notifications').",
+    "fromNotes": false,
+    "questions": [
+     "What does a screen reader announce for the notifications bell on the mobile storefront?",
+     "Why is the bell button labelled with just a number instead of Notifications on small screens?",
+     "For an accessibility audit, does the mobile header notifications control have a meaningful accessible name?",
+     "Does the notification button's accessible name differ between the desktop and mobile headers?"
+    ],
+    "concepts": [
+     "accessibility",
+     "site-header",
+     "mobile-layout"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "e0249252014b46a7"
+ },
+ {
+  "id": "KB-055845A3",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "Why is the price in my basket different from the price on the product page right now?",
+   "A buyer and an operator quote different prices for the same item - which number should I trust?",
+   "Does reloading the cart refresh a stale unit price after a price list assignment changes?",
+   "Is a cart line's list price frozen at add time, recomputed on read, or served from a cache?",
+   "What action forces a cart line to pick up the current price after pricing changed?"
+  ],
+  "concepts": [
+   "cart-line-item",
+   "price",
+   "price-list"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "0fee5badcff28bef"
+ },
+ {
+  "id": "KB-057A596A",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "admin-ui"
+  ],
+  "questions": [
+   "Which file types can I attach when configuring a product, and how big can they be?",
+   "Why is Add to cart disabled after I uploaded a file to a configuration step?",
+   "Is the accepted file-type list set per configuration section or fixed by the platform?",
+   "Where do uploaded configuration files and texts show up in the cart, the order and the back-office order line?",
+   "What error text does the configurator show for an unsupported file extension?"
+  ],
+  "concepts": [
+   "configurable-product",
+   "configured-line-item"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "2d6a16f50b0230e3"
+ },
+ {
+  "id": "KB-06409954",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "admin-ui"
+  ],
+  "questions": [
+   "I blocked a colleague in the company members page - why does the back office still show their account as Approved?",
+   "Where is an organization member's blocked state stored, and do storefront and admin write the same field?",
+   "Why does the storefront roster still show a member as active after an admin locked their account?",
+   "Which of contact status, account status and lockout actually governs whether a member can sign in?",
+   "What does the lock organization contact mutation change, and what does it leave untouched?"
+  ],
+  "concepts": [
+   "member-block",
+   "membership-status",
+   "account-lockout"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "f6906614fa32f82f"
+ },
+ {
+  "id": "KB-068517DF",
+  "action": "keep",
+  "surface": [
+   "admin-ui"
+  ],
+  "questions": [
+   "Someone sent me a link to an order in the back office and a different order is on screen - why?",
+   "Why does an order opened from a direct link show a masked discount and a strange date format?",
+   "Can I rely on the orderId in the orders workspace URL to switch the open order blade?",
+   "What console errors appear when an order blade is cold-loaded from a deep link before localization finishes?",
+   "Which order fields are wrong on a deep-linked admin order blade, and how do I read them reliably?"
+  ],
+  "concepts": [
+   "admin-order-screen",
+   "blade-navigation",
+   "timestamp"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "67d290b18655739d"
+ },
+ {
+  "id": "KB-06FE6C8D",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Can I sign in again with the same one-time code from my email?",
+   "Is the email one-time password single-use, or does it stay valid until it expires?",
+   "Does a successful OTP sign-in invalidate the code, or only a security stamp change?",
+   "Why does replaying the same otp_email grant return a fresh token instead of invalid_code?",
+   "Which mechanism generates and verifies OTP codes, and why is it not consumed after use?"
+  ],
+  "concepts": [
+   "otp",
+   "access-token"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "0e3a496a7f7fff1d"
+ },
+ {
+  "id": "KB-09CEE315",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "When I pick start and end dates on my customer's orders, which days are included?",
+   "How does the sales rep view of a customer's orders turn a date range into a filter?",
+   "Are the order date filter bounds computed in the browser's timezone or in UTC?",
+   "What happens to the date filter when only the end date is set, or when a chip is removed?",
+   "What validation appears if the end date is earlier than the start date on the rep's customer orders page?"
+  ],
+  "concepts": [
+   "sales-rep",
+   "date-range-picker",
+   "timestamp"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "733f5ff9d3d9832c"
+ },
+ {
+  "id": "KB-0B6067F8",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "How can the company members page tell whether a colleague's login is actually locked?",
+   "Is contact status a reliable indicator that an organization member can sign in?",
+   "Which GraphQL field on a contact's security accounts reports the locked state?",
+   "What lockout-related fields does the user type expose through the storefront schema?"
+  ],
+  "concepts": [
+   "account-lockout",
+   "security-account",
+   "organization-member"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "cda7fc14cc3e8303"
+ },
+ {
+  "id": "KB-0BC18481",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "How long can the note be when a sales rep shares a list with a customer?",
+   "What happens to the sharing message when I send it blank, padded with spaces, or omit it?",
+   "What error comes back when the share message exceeds the length limit, and is anything saved?",
+   "Can a rep remove the last organization a list is shared with, or share with one they do not serve?",
+   "Does stopping sharing and re-sharing a list restore the previous message?",
+   "Is the sharing message length counted in characters or UTF-16 code units?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "api-error",
+   "sales-rep"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "001037aad8be9fd7"
+ },
+ {
+  "id": "KB-0C102D97",
+  "action": "split",
+  "why": "(a) the correction that orders can be deleted is about a different API (DELETE /api/order/customerOrders) and Admin orders-list controls, separate from the cancel cascade",
+  "children": [
+   {
+    "subject": "cancelling an order cancels its payment on a background job but never its shipment",
+    "question": "What happens to an order's shipment and payment when the order is cancelled?",
+    "anchors": [
+     "GET /api/order/customerOrders/{id}"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "Cancelling an order cascades to the PAYMENT and not to the SHIPMENT. The order goes to Cancelled with isCancelled true, cancelledDate set and cancelReason carrying the dialog text; its inPayment follows about 1.7 seconds later on a background job, reaching status Cancelled, isCancelled true and cancelledState Completed; its shipment stays at status New with isCancelled false and a modifiedDate still equal to its createdDate, never written again. The mechanism is that CancelPaymentOrderChangedEventHandler collects changedEntry.NewEntry.InPayments only, and no shipment-cancelling handler exists anywhere in the Orders module. So a cancelled order leaves a live shipment document behind, and anything counting open shipments - a fulfilment queue, a warehouse worklist - keeps seeing it; this is why a store used for order testing accumulates New shipments belonging to orders that are all Cancelled. Reproduced independently by three separate runs on 2026-09-15.",
+    "fromNotes": false,
+    "questions": [
+     "If I cancel my order, is the delivery also called off?",
+     "Why do cancelled orders still show open shipments in the fulfilment queue?",
+     "How long after an order is cancelled does its payment become cancelled, and by what mechanism?",
+     "Which order change handler cascades cancellation, and why does it skip shipments?"
+    ],
+    "concepts": [
+     "order-cancellation",
+     "shipment",
+     "order-payment"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "an order can be deleted, not only cancelled",
+    "question": "Can an order be deleted outright, or is cancelling the only option?",
+    "anchors": [
+     "GET /api/order/customerOrders/{id}"
+    ],
+    "surface": [
+     "rest",
+     "admin-ui"
+    ],
+    "body": "Cancelling is NOT the only option. An order CAN be deleted - DELETE /api/order/customerOrders, operation OrderModule_DeleteOrdersByIds, and the Admin orders list carries a Delete control in the toolbar and in every row menu. Confirmed on platform 3.1007.27, Orders 3.1000.4.",
+    "fromNotes": false,
+    "questions": [
+     "Can a back-office user remove an order completely instead of cancelling it?",
+     "Where is the Delete control for orders in the admin orders list?",
+     "Which REST endpoint deletes customer orders by id?",
+     "Is order deletion supported by the platform, or only cancellation?"
+    ],
+    "concepts": [
+     "order-deletion",
+     "customer-order"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "bcd66e6a6a7f88f9"
+ },
+ {
+  "id": "KB-0C163966",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does the price on a product page keep going up as I pick options?",
+   "Where is the Add to cart button for a configurable product on the storefront?",
+   "Can a configurable product with only optional sections be ordered with no configuration at all?",
+   "Is the configurator selection saved server-side, or lost when the page reloads?",
+   "What controls does each configuration section type render - product option, text, file?",
+   "What blocks adding a configurable product when a section is required?"
+  ],
+  "concepts": [
+   "configurable-product",
+   "product-page",
+   "add-to-cart"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "1f031ce2baa8bb8e"
+ },
+ {
+  "id": "KB-0D8C1133",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "How do I upload an image or file to the platform's asset storage?",
+   "Which REST endpoint stores an uploaded file, and which query parameter picks the folder?",
+   "Why does the platform assets upload path return 404?",
+   "What endpoint does the notification layout editor call when an image is dropped or pasted?"
+  ],
+  "concepts": [
+   "asset"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "634ef800256cbc17"
+ },
+ {
+  "id": "KB-0DD47BD1",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "admin-ui",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does the back office say payment subtotal is zero for an order I paid?",
+   "Do the storefront checkout summary and the admin order blade show the same order totals?",
+   "Which payment field holds the amount the payment is for, and which hold the method's fee?",
+   "Why does every pay-later order look unpaid when reconciling by payment total?",
+   "How should I reconcile an order's incoming payment against the amount owed?"
+  ],
+  "concepts": [
+   "order-payment",
+   "totals",
+   "manual-payment"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "9ebc5dcf1db587e5"
+ },
+ {
+  "id": "KB-0E177E02",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "My sales representative shared a list with me - where do I see it and their note?",
+   "Can a buyer in the target company open a rep's shared list from the link, and add items to cart?",
+   "Why doesn't a list shared by the rep appear among the buyer's own lists?",
+   "What sharing access and owner flag does the shared wishlist query return to a target-organization member?",
+   "Where is the rep's share message shown to the recipient, if not on the shared-list page?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "sales-rep",
+   "push-message"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "96acd228ecb1f9dd"
+ },
+ {
+  "id": "KB-110E0652",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "If I type part of a barcode with an asterisk, will the search find the product?",
+   "Which index fields does a barcode filter search, and where is that configured?",
+   "Is barcode lookup case-sensitive, prefix-matching or sensitive to surrounding spaces?",
+   "Why does a barcode filter return nothing when no barcode search fields are set on the store?",
+   "Does a barcode filter include variations, and does turning off the scanner stop the field expansion?",
+   "How do two barcode terms or comma-separated values in one term combine?"
+  ],
+  "concepts": [
+   "barcode-search",
+   "barcode-settings",
+   "product-filter"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "73903f984976aed2"
+ },
+ {
+  "id": "KB-1144B33E",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "What URL should my integration post storefront GraphQL queries to?",
+   "Is the xAPI endpoint at /xapi/graphql, or has that path been retired?",
+   "Where is the interactive GraphiQL editor served on the platform host?",
+   "Do some modules expose their own separately scoped GraphQL schema under the main endpoint?"
+  ],
+  "concepts": [
+   "graphql-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "02c3d6d67105f7e2"
+ },
+ {
+  "id": "KB-1205B62A",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Where can I find the tracking number for my shipped order?",
+   "Does the storefront order details page show a tracking link even when the platform stores one?",
+   "Is missing shipment tracking on the storefront an API gap or a UI gap?",
+   "Why does a Shipped order show its status chip without colour or an icon?",
+   "Which order statuses have configured status chip styling in the theme?"
+  ],
+  "concepts": [
+   "shipment",
+   "order-status"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "45d4e097fefd50d2"
+ },
+ {
+  "id": "KB-132A40B3",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "admin-ui"
+  ],
+  "questions": [
+   "A user says they cannot log in, but their account looks fine - can the last login date tell me whether they ever tried?",
+   "Does an empty last login date mean the person never attempted to sign in?",
+   "Does a failed sign-in attempt update the account's last login timestamp?",
+   "Can I tell a never-used account from one with only failed attempts through the platform security API?"
+  ],
+  "concepts": [
+   "security-account",
+   "sign-in"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "166a2d625222b79e"
+ },
+ {
+  "id": "KB-133FD544",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Can my order page show which configuration step each selected option came from?",
+   "Does the GraphQL order configuration item expose section id, product id, SKU and quantity, or only a display name?",
+   "Do I need REST to verify configured order lines, or is GraphQL enough?",
+   "Which configuration fields does the REST order record have that the GraphQL type lacks?",
+   "Is it safe to match configured options between REST and GraphQL by array position?"
+  ],
+  "concepts": [
+   "configured-line-item",
+   "graphql-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "b236260dd627af8f"
+ },
+ {
+  "id": "KB-13B32D5F",
+  "action": "split",
+  "why": "(a) the platform-wide scope of the combine-policy setting is reached through a different API (platform settings) from the promotion's own store/candidacy rules",
+  "children": [
+   {
+    "subject": "an empty promotion store list means the promotion applies in every store",
+    "question": "This promotion has no store on it - does that mean it applies nowhere, or everywhere?",
+    "anchors": [
+     "GET /api/marketing/promotions/{id}"
+    ],
+    "surface": [
+     "admin-ui",
+     "rest"
+    ],
+    "body": "Everywhere. A promotion's store axis is a LIST (storeIds, rendered on the blade as 'Stores' with the caption 'Stores where this promotion applies'), and an EMPTY list means every store, not no store - established the hard way: a promotion whose storeIds is [] produced the discount row on an order placed in a specific store, while a promotion in the same list naming one other store could not reach it. So candidacy is gated by four independent things, none of which the promotions grid shows together: the isActive flag, the store list (empty = all), the start and expiration dates, and the conditions (the blade offers customer criteria - first time buyer, user group - then catalog conditions, then cart conditions). The grid's Active column is the isActive flag ALONE: a promotion can sit there as Active with an expiration date years in the past and a store list that excludes the store you are testing, and nothing on that screen says so. Priority is a field on the promotion and is not what breaks a tie between two cart-subtotal rewards.",
+    "fromNotes": false,
+    "questions": [
+     "Why did I get a discount in this shop when the promotion doesn't list any store?",
+     "The promotions grid says Active - why is the promotion still not applying to my order?",
+     "What conditions together decide whether a promotion is a candidate for a given store?",
+     "Does promotion priority break a tie between two cart subtotal rewards?",
+     "Does an empty storeIds list on a marketing promotion mean all stores or none?"
+    ],
+    "concepts": [
+     "promotion",
+     "store"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "the promotion combine policy setting is platform-wide, not per store",
+    "question": "Is the setting that decides whether promotion rewards stack configured per store or for the whole platform?",
+    "anchors": [
+     "GET /api/platform/settings/{name}"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "Marketing.Promotion.CombinePolicy, the setting that decides whether rewards stack, is PLATFORM-WIDE on this deployment - GET /api/platform/settings/Marketing.Promotion.CombinePolicy returns objectId null, objectType null, groupName Marketing|General, and it is absent from the store's own settings collection - so changing it changes every store at once.",
+    "fromNotes": false,
+    "questions": [
+     "If I change whether discounts stack for one shop, does it affect my other shops too?",
+     "Where do I find the promotion stacking policy - in store settings or platform settings?",
+     "Why is the combine policy missing from the store's settings collection?",
+     "What scope does the platform settings API report for the promotion combine policy?"
+    ],
+    "concepts": [
+     "promotion-combination",
+     "platform-settings"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "4b6738c50e9d2414"
+ },
+ {
+  "id": "KB-1564BA07",
+  "action": "split",
+  "why": "(a) the attachment upload path (POST /api/files/return-attachments, updateReturn) is a separate API a reader reaches separately from the notifications a return submission raises",
+  "children": [
+   {
+    "subject": "submitting a return raises one registered-return email notification and one push message whose topic is the return number",
+    "question": "What notifications does submitting a return produce, and how do I find them in the notification journal and push message search?",
+    "anchors": [
+     "Mutation.submitReturn",
+     "POST /api/notifications/journal",
+     "POST /api/push-message/search"
+    ],
+    "surface": [
+     "xapi",
+     "rest"
+    ],
+    "body": "Each xAPI submitReturn (Draft -> Requested) produced exactly one ReturnRegisteredEmailNotification row in POST /api/notifications/journal with tenantIdentity {id: returnId, type: Return} - status Error on a deployment without SMTP (SentNotificationException), which still proves it was raised - and exactly one push message in POST /api/push-message/search with topic = the return number, shortMessage 'Return <number> received', memberIds = [the buyer contact id], status Sent. Decisions raise ReturnPartiallyApprovedEmailNotification / ReturnRejectedEmailNotification with push texts 'partly approved' / 'declined'. Observed on VirtoCommerce.Return 3.1003.0-pr-27-51fc, PushMessages 3.1006.0-pr-28-2027.",
+    "fromNotes": false,
+    "questions": [
+     "After I submit a return request, what messages should I receive?",
+     "How do I verify in the back office that a return submission raised its email and in-app notification?",
+     "Which notification types and push texts are raised when a return is approved partly or declined?",
+     "Why is the registered-return email journal row in Error status, and does that mean it was not raised?",
+     "How is a return's push message identified in the push message search results?"
+    ],
+    "concepts": [
+     "return",
+     "notification",
+     "push-message"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "return attachments are uploaded with the buyer token and passed as attachment URLs on updateReturn",
+    "question": "How are files attached to a return when attachments are required?",
+    "anchors": [
+     "POST /api/files/return-attachments"
+    ],
+    "surface": [
+     "rest",
+     "xapi"
+    ],
+    "body": "With Return.AttachmentsRequired=true, files were uploaded with the BUYER storefront token to POST /api/files/return-attachments and passed as attachmentUrls on updateReturn; createReturn accepted lines without attachments.",
+    "fromNotes": false,
+    "questions": [
+     "How do I add photos or documents to my return request?",
+     "When a store requires return attachments, where are the files uploaded and with whose token?",
+     "Does creating a return reject lines without attachments when attachments are required?",
+     "Which mutation carries the uploaded attachment URLs onto a return?"
+    ],
+    "concepts": [
+     "return",
+     "asset"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "2940b54938185552"
+ },
+ {
+  "id": "KB-16AEF0C2",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "My order and shipment numbers match - can I always find one from the other?",
+   "Is a shipment or payment number the order number with a different prefix?",
+   "How are order, shipment and incoming payment numbers generated, and is the counter per prefix?",
+   "Why is a shipment's parentOperationId null when the admin tree shows it under the order?",
+   "Which fields reliably link a shipment or payment back to its customer order?"
+  ],
+  "concepts": [
+   "order-number",
+   "shipment",
+   "admin-order-screen"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "4d6cb5896f000f36"
+ }
+]

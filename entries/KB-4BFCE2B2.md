@@ -3,6 +3,14 @@ id: KB-4BFCE2B2
 subject: "Push Messages audience builder: field to member-index phrase mapping"
 plane: experiential
 question: In the Push Messages back-office audience builder (Match by conditions, Custom conditions), what phrase does each field+operator emit into PushMessage.MemberQuery?
+questions:
+  - text: What query text does each condition in the push notification audience builder generate?
+  - text: PushMessage.MemberQuery field tokens roleid parentorganizations createddate emails login
+  - text: Does the Role or Company condition emit the name or the id into the member query?
+  - text: How do starts with, contains and on or after operators look in the generated query?
+  - text: When is a value double-quoted in the Push Messages generated query?
+concepts:
+  - id: push-audience
 status: active
 appliesTo:
   - axis: module

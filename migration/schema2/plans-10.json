@@ -1,0 +1,678 @@
+[
+ {
+  "id": "KB-EA467E9B",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why does My customers send me back to the dashboard even though I am a sales representative?",
+   "Can a rep be given the sales-rep permission without being assigned any customer companies?",
+   "Does an empty salesRepCustomers result prove that the caller is a sales rep?",
+   "Is the sales-rep customers query gated on the permission or only on being authenticated?",
+   "Where is the sales-rep module's GraphQL schema served?"
+  ],
+  "concepts": [
+   "sales-rep",
+   "organization-membership",
+   "permission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "ec0fdaa79e51066f"
+ },
+ {
+  "id": "KB-EAA7BA2F",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "Why can't I see the list my colleague shared with our company on my Lists page?",
+   "Does switching the active organization change which lists appear on a buyer's account lists screen?",
+   "Does the storefront lists query send the scope argument, or only the signed-in user's id?",
+   "How does a recipient of a customer-scoped shared list actually open it from the storefront?",
+   "Is organization visibility of wish lists ever exercised by the shipped storefront UI?"
+  ],
+  "concepts": [
+   "wishlist",
+   "list-sharing"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "d90201c99c6439ef"
+ },
+ {
+  "id": "KB-EB70C1F9",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "If I leave a condition value blank when targeting a push message, who ends up receiving it?",
+   "Does the push message audience builder warn about a condition row with no value before saving?",
+   "What member query is stored when a match-all condition row has an empty value?",
+   "Can an admin still save or send a push campaign while one audience condition is incomplete?",
+   "Why is the recipient estimate identical with and without an empty custom condition?"
+  ],
+  "concepts": [
+   "push-audience",
+   "admin-validation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "6d341977cebeedd6"
+ },
+ {
+  "id": "KB-EB991080",
+  "action": "keep",
+  "surface": [
+   "xapi"
+  ],
+  "questions": [
+   "Why is a customization step empty on the storefront when the product setup in the back office lists choices?",
+   "Can a required configuration section be served with zero options that no buyer can satisfy?",
+   "Does productConfiguration drop options whose products the storefront cannot resolve, and does it report that?",
+   "How do I find which option product is being silently filtered out of a configuration section?",
+   "Is linking an option product into the store catalog enough for it to appear as a configuration choice?"
+  ],
+  "concepts": [
+   "configurable-product"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "864dd9719e6374f9"
+ },
+ {
+  "id": "KB-EC76F588",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Which field on a placed order tells me how the customer paid?",
+   "Why is there no paymentMethodCode on an order's incoming payment when shipments have shipmentMethodCode?",
+   "Is the missing payment method code a null property or a property that does not exist on PaymentIn?",
+   "Where does an order payment's gateway code come from when the cart becomes an order?"
+  ],
+  "concepts": [
+   "order-payment",
+   "shipment",
+   "payment-method"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "795c901c5a4b2a41"
+ },
+ {
+  "id": "KB-ECCE0632",
+  "action": "keep",
+  "surface": [
+   "xapi",
+   "storefront-ui"
+  ],
+  "questions": [
+   "Can I pick a ready-made engraving text that is longer than the character limit on a custom item?",
+   "Is a Text section's maximum length enforced on preset options or only on free text typed by the shopper?",
+   "How does the server tell a preset option from custom text when validating a configured cart line?",
+   "Why does updating a configured item with too-long custom text appear to do nothing?",
+   "Can two preset options with identical labels in one text section be distinguished?"
+  ],
+  "concepts": [
+   "configured-line-item",
+   "cart-validation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "57d47a2eee4cd078"
+ },
+ {
+  "id": "KB-ED01C2A4",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "Why does my company account say I lack permission to edit the organization right after signing in?",
+   "How do I request a storefront token scoped to one of a user's organizations?",
+   "Which permissions does me return when the token request omits organization_id?",
+   "Does the organization_id parameter on the token endpoint work in camelCase as well?",
+   "Why do organization mutations fail with a missing my_organization edit permission for a valid user?"
+  ],
+  "concepts": [
+   "access-token",
+   "organization-role",
+   "permission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "9bcdb87c6b685884"
+ },
+ {
+  "id": "KB-ED76FF4B",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "Will I see the reason I chose for returning each item on my return details page?",
+   "Does the buyer's return detail page display the reason code or only the free-text comment?",
+   "Why doesn't a return created by an admin show its reason to the customer on the storefront?",
+   "Does the return line type in GraphQL expose the legacy free-text reason field?"
+  ],
+  "concepts": [
+   "return"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "e37c7b9e348bb7a8"
+ },
+ {
+  "id": "KB-EDDBBE75",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "Can support zero out my rewards points balance if it is wrong?",
+   "Is there an endpoint to set, correct or delete a member's loyalty points balance?",
+   "What happens to a customer's loyalty balance if their user account is deleted and recreated?",
+   "Why is the balance change an unreliable check when an order both earns and redeems points?",
+   "Which operation log rows should a test assert on to verify earn and redeem?"
+  ],
+  "concepts": [
+   "loyalty",
+   "loyalty-history"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3f1005f13d3ed5f3"
+ },
+ {
+  "id": "KB-EF3CB7FB",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "storefront-ui",
+   "rest"
+  ],
+  "questions": [
+   "Why does clicking the button to shop as this customer in the back office do nothing?",
+   "Whose authorization is checked when an admin uses Login on behalf for a storefront customer?",
+   "Which grant type and token does the impersonate storefront route send to the token endpoint?",
+   "Which permission must the signed-in storefront user hold for impersonation to succeed rather than 403?",
+   "Can I get a second storefront identity for testing without knowing that user's password?"
+  ],
+  "concepts": [
+   "impersonation",
+   "permission"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "b0c02df9512e4fe7"
+ },
+ {
+  "id": "KB-EF925925",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Could I be charged more than the total my basket page showed when I placed the order?",
+   "Does the cart summary refresh itself when a promotion is changed in the back office while the page is open?",
+   "Is the order total compared against what the checkout page displayed before the order is created?",
+   "Which shopper actions trigger a server refetch of cart totals before placing an order?",
+   "Why does an expired discount sometimes vanish only on the order page after checkout?"
+  ],
+  "concepts": [
+   "checkout",
+   "totals",
+   "discount"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3c46e0deac27b50f"
+ },
+ {
+  "id": "KB-EFD1A7FD",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "xapi"
+  ],
+  "questions": [
+   "What notification does my company get when our account manager shares a product list with us?",
+   "If a rep adds another company to an existing list share, are earlier recipients notified again?",
+   "Does editing only the note of a shared list send a new customer communication?",
+   "Which organizationIds does the storefront pass to sendCustomerCommunication when a list share is saved?",
+   "Does the push text about a rep-shared list name the receiving organization?"
+  ],
+  "concepts": [
+   "list-sharing",
+   "customer-communication",
+   "push-message"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "db193e7e23947047"
+ },
+ {
+  "id": "KB-F027283D",
+  "action": "split",
+  "why": "(a) the evidence note adds an unrelated side finding on the order page -- the operator's cancellation reason printed under the order status -- separate from the promotion-description label",
+  "children": [
+   {
+    "subject": "a discount row's label is the promotion description verbatim and is not kept in step with the reward",
+    "question": "if I change a promotion's reward, does the label the shopper reads change with it?",
+    "anchors": [
+     "DiscountType.description",
+     "PUT /api/marketing/promotions",
+     "/cart"
+    ],
+    "surface": [
+     "storefront-ui",
+     "xapi",
+     "admin-ui",
+     "rest"
+    ],
+    "body": "No. The label on a cart's or an order's discount row is the promotion's DESCRIPTION field verbatim -- free text an operator types once -- and nothing derives it from the reward or checks it against one. Editing the reward rewrites the money and leaves the sentence alone, in the same row: after taking one promotion from 10 percent to 20 percent and changing nothing else, the cart's expanded Discount breakdown read 'KB-LAB run12 (disposable): 10% off the cart subtotal.' beside -63.80, which is 20 percent of the 319.00 subtotal. The two came from one live read, so this is not a stale page -- it is two fields of one record that are allowed to disagree. The description is also OPTIONAL: a promotion saved with a null description renders a discount row with an EMPTY label and only an amount, so the shopper is shown money off and no reason at all (seen on a pre-existing promotion giving a flat 50.00). Since the storefront can reach the promotion's NAME nowhere -- DiscountType carries description and promotionId but no name -- the description is the ONLY human-readable thing a shopper is ever shown about a promotion, on the cart and, snapshotted, on the order forever. The shopper reads it verbatim: on an order page the Discount line expands to an internal note written by whoever created the promotion, and the same string is in the order REST payload as discounts[0].description. Treat it as a published price claim: change a reward and you must change the sentence in the same save, and never leave it empty.",
+    "fromNotes": true,
+    "questions": [
+     "Why does my basket say ten percent off when the amount taken off is twenty percent?",
+     "Where does the text on a cart discount row come from, and is it regenerated when the reward changes?",
+     "What does a shopper see on a discount line when the promotion has no description?",
+     "Can the storefront show a promotion's name, or only its description, through DiscountType?",
+     "Can an internal note typed into a promotion's description leak to customers on their order page?"
+    ],
+    "concepts": [
+     "discount",
+     "promotion"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "the operator's free-text cancellation reason is printed to the shopper under the order status",
+    "question": "does the storefront order page show the reason an operator typed when cancelling the order?",
+    "anchors": [
+     "/cart"
+    ],
+    "surface": [
+     "storefront-ui"
+    ],
+    "body": "The operator free-text cancellation reason is printed under the order status on the storefront order page.",
+    "fromNotes": true,
+    "questions": [
+     "Will I see the note staff wrote when they cancelled my order?",
+     "Is an admin's cancellation comment shown to the buyer on the order details page?",
+     "Where on the storefront order page does the cancel reason text appear?"
+    ],
+    "concepts": [
+     "order-cancellation",
+     "order-status"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "f09e49284332ebfb"
+ },
+ {
+  "id": "KB-F1542157",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "Why does my order show a discount in the total but not on the individual items?",
+   "Why does the Line items blade header show zero discount while the order header shows one?",
+   "Is an order-level promotion reward distributed across line item discountAmount values?",
+   "Which total should QA read in the back office to check an order-level discount?"
+  ],
+  "concepts": [
+   "discount",
+   "order-line-item",
+   "admin-order-screen"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "abd5e52103f2c48e"
+ },
+ {
+  "id": "KB-F20CD11C",
+  "action": "split",
+  "why": "(a) the sku synthesis and rolled-up price of the configurable order line are a separately observed side finding on the same order, unrelated to whether configuration items keep their section id",
+  "children": [
+   {
+    "subject": "order configuration items carry sectionId and sectionName on newer Orders module versions",
+    "question": "does a configurable product's order line record which configuration section each chosen option answered",
+    "anchors": [
+     "GET /api/order/customerOrders/{id}",
+     "POST /api/catalog/products/configurations/search"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "Read a real placed order on vcst-qa (VirtoCommerce.Orders 3.1015.0, Catalog 3.1044.0) via GET /api/order/customerOrders/{id}. Each element of the configurable line's configurationItems[] carried BOTH sectionId and sectionName alongside productId, sku, name, quantity, price, salePrice, extendedPrice, imageUrl, catalogId, categoryId, type, customText and files. The sectionIds matched exactly the section ids returned by POST /api/catalog/products/configurations/search for that product, and each chosen productId was a declared option of its own section -- so the full configuration was reconstructable from the order alone, with no ambiguity between two same-typed Product sections. Text-section customText survived byte-identical. This refines the DISPUTED entry KB-360127D0 and KB-59E4B5FC, both observed on vcptcore_stable, which state that sectionId is the one field lost when a cart configuration item crosses to the order. On this deployment it is not lost, and sectionName is additionally present. The likely explanation is a module-version difference, so the 'sectionId is lost' claim should be read as version-bound rather than general; check the Orders module version before relying on either shape.",
+    "fromNotes": true,
+    "questions": [
+     "Can I see on my placed order which option I picked for each customization step?",
+     "Is the configuration section id preserved on order configuration items, or lost when the cart becomes an order?",
+     "Can an order's configuration be fully reconstructed without the cart, including custom text?",
+     "Does the shape of order configurationItems depend on the Orders module version?"
+    ],
+    "concepts": [
+     "configured-line-item",
+     "order-line-item"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "a configurable order line's sku is synthesized from the catalog code and its price rolls up the options",
+    "question": "why doesn't a configurable order line's sku match the product's catalog code, and how is its price composed?",
+    "anchors": [
+     "GET /api/order/customerOrders/{id}"
+    ],
+    "surface": [
+     "rest"
+    ],
+    "body": "The configurable line's own sku is synthesized as 'Configuration-' + the catalog product code (order line sku 'Configuration-AGENT-TEST-CFG-013' vs catalog code 'AGENT-TEST-CFG-013'), so matching an order line sku against a catalog code fails for configurable lines; and the line's price is the rolled-up base + options (999 + 150 + 100 = 1249) with isConfigured=true and no separate lines for the option products.",
+    "fromNotes": false,
+    "questions": [
+     "Why does the item code on my customized product order differ from the one in the catalog?",
+     "Why does matching order line skus against catalog codes fail for configurable products?",
+     "Is a configured line's price the base plus the options, or are options ordered as separate lines?",
+     "What prefix does the order add to a configurable line's sku?"
+    ],
+    "concepts": [
+     "product-identifier",
+     "configured-line-item"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "1805302d720e3fd1"
+ },
+ {
+  "id": "KB-F2FA8EBD",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "What happens when I open a shared list link after the owner stopped sharing it with me?",
+   "Which confirmation dialog appears when a list's sharing moves from specific customers to my organization or private?",
+   "Does the Share dialog warn that access will be lost even when the change actually widens access?",
+   "Is the same sharing key reused after re-sharing, and what does a former recipient get then?",
+   "When is Save disabled in the list Share dialog, and is there a confirmation on first share?"
+  ],
+  "concepts": [
+   "list-sharing"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "3b2e2d93818f4a6a"
+ },
+ {
+  "id": "KB-F3B1E987",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Can a screen reader user tell what the search button does in the phone-size search panel?",
+   "Which controls in the mobile search overlay have missing or untranslated accessible names?",
+   "Does the Cancel button in the small-screen search overlay meet the minimum touch target size?",
+   "Why is the overlay backdrop close button announced with a raw locale key?"
+  ],
+  "concepts": [
+   "accessibility",
+   "mobile-layout"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "e3b4b5dac31eb214"
+ },
+ {
+  "id": "KB-F6EDA2F4",
+  "action": "split",
+  "why": "(a) the footer-versus-console version note is an unrelated side finding next to the cookie-based session authentication",
+  "children": [
+   {
+    "subject": "the Vendor Portal session lives in HttpOnly cookies, so clearing local storage does not end it",
+    "question": "How is a Vendor Portal session authenticated, and can session expiry be triggered client-side?",
+    "anchors": [
+     "/apps/vendor-portal",
+     "/connect/authorize"
+    ],
+    "surface": [
+     "vendor-ui"
+    ],
+    "body": "The Vendor Portal's API calls are authenticated by HttpOnly identity cookies, not only by the bearer data it keeps in local storage: document.cookie reads empty, corrupting the local-storage auth entry changes nothing and calls still return 200, and only clearing the cookies produces 401. No client-side change produces a 403, and /Account/Login, /account/login and /Account/AccessDenied return 404 while /connect/authorize returns 400, so session-expiry paths cannot be reached naturally.",
+    "fromNotes": false,
+    "questions": [
+     "Why am I still signed in to the supplier portal after clearing its saved login data in the browser?",
+     "Does corrupting the vendor portal's local storage token force a 401 or a sign-out?",
+     "Is vendor portal API authentication cookie-based or bearer-token based?",
+     "How can QA reach the vendor portal's session-expired or access-denied states?"
+    ],
+    "concepts": [
+     "vendor-portal",
+     "session"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "the Vendor Portal login footer shows the app version, not the vc-shell framework version",
+    "question": "Why does the version in the Vendor Portal login footer differ from the one in the console banner?",
+    "anchors": [
+     "/apps/vendor-portal"
+    ],
+    "surface": [
+     "vendor-ui"
+    ],
+    "body": "The version shown in the Vendor Portal login footer is the app's own version; the vc-shell framework version appears in a console banner, and the two differing is normal.",
+    "fromNotes": false,
+    "questions": [
+     "Which version number is printed at the bottom of the supplier portal sign-in page?",
+     "Is it a defect when the vendor portal footer version and the console banner version disagree?",
+     "Where can I find the vc-shell framework version a vendor portal build runs on?"
+    ],
+    "concepts": [
+     "vendor-portal",
+     "platform-version"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "1d9a74e5b6f91d7a"
+ },
+ {
+  "id": "KB-F7449926",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "How do I look up which companies a user belongs to and whether they are locked there?",
+   "Are organization memberships over REST keyed by the contact id or the security-account user id?",
+   "What shape do roles take in the organization-memberships REST payload?",
+   "Which organization do lockOrganizationContact and changeOrganizationContactRole act on, and which id do they take?",
+   "Which lock, unlock and lookup routes exist for organization memberships?"
+  ],
+  "concepts": [
+   "organization-membership",
+   "member-block",
+   "organization-role"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "8554abce5e3b20f9"
+ },
+ {
+  "id": "KB-F78ED1CC",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "Why is there no Add to cart button on most product pages, only a plus and minus control?",
+   "Which product types show an explicit Add to cart button versus a quantity stepper on the product detail page?",
+   "What does a parent product with variants show in the add control before options are selected?",
+   "How can a category card tell a tester whether a product is configurable, a master or directly purchasable?",
+   "Does the add-to-cart control on product pages depend on the theme version or deployment?"
+  ],
+  "concepts": [
+   "add-to-cart",
+   "product-page",
+   "configurable-product"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "45ef258ce847e823"
+ },
+ {
+  "id": "KB-F8707174",
+  "action": "keep",
+  "surface": [
+   "storefront-ui",
+   "admin-ui",
+   "xapi"
+  ],
+  "questions": [
+   "Will the customer read the reason I type when I cancel their order?",
+   "Is the text entered in the admin Cancel document dialog kept internal or shown to the buyer?",
+   "Is there a separate customer-safe cancellation reason field on a customer order?",
+   "Does the storefront order type expose cancelReason to the shopper?"
+  ],
+  "concepts": [
+   "order-cancellation"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7836e64119bd1f0e"
+ },
+ {
+  "id": "KB-F9D75EA0",
+  "action": "keep",
+  "surface": [
+   "storefront-ui"
+  ],
+  "questions": [
+   "How do I clear both dates in the order history date filter?",
+   "Does the calendar footer Clear reset the whole range or only one field in the date range picker?",
+   "Why does the date range filter behave differently when clearing on a narrow screen?",
+   "What accessible names do the calendar triggers have in the split and combined date range layouts?"
+  ],
+  "concepts": [
+   "date-range-picker",
+   "mobile-layout"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "dfa52bafa36e7c0b"
+ },
+ {
+  "id": "KB-FA724D31",
+  "action": "split",
+  "why": "(b) a later note confirms what storefront Delete member does but contradicts the remedy of deleting the account under Security > Users",
+  "children": [
+   {
+    "subject": "storefront Delete member only detaches the contact from the organization and leaves the account and its role",
+    "question": "What does deleting a member from the storefront company members list actually delete?",
+    "anchors": [
+     "Mutations.removeMemberFromOrganization"
+    ],
+    "surface": [
+     "storefront-ui",
+     "admin-ui"
+    ],
+    "body": "It deletes nothing. The storefront's Delete member action calls removeMemberFromOrganization and removes the organization membership and nothing else: the row leaves the roster, but in Admin the contact still exists with its status unchanged, its security account still exists, is still Locked or Unlocked exactly as before, and STILL HOLDS the organization role it was given - an org-scoped role now assigned to an account that belongs to no organization. On the contact blade the only thing that changed is that 'Member of company(ies)' and 'Default company' are empty. Two consequences. First, removal-from-organization is invisible from the storefront, because the only representation of it is the row's absence; there is no removed state to display and no way to see a former member. Second, the email address stays taken by the surviving account, so re-inviting the same address later is not the clean slate it looks like. The storefront cannot delete the account or the contact, which means a maintainer cannot create the deleted state at all - only the detached one.",
+    "fromNotes": false,
+    "questions": [
+     "If our company admin removes me from the team, is my login deleted too?",
+     "Does removing a member on the storefront delete their contact and security account in the back office?",
+     "Why can't a removed member's email address be re-invited as a fresh user?",
+     "Does a detached account keep its organization-scoped role after removeMemberFromOrganization?",
+     "Can a company maintainer see former members after deleting them from the roster?"
+    ],
+    "concepts": [
+     "member-deletion",
+     "organization-membership"
+    ],
+    "proposedConcepts": []
+   },
+   {
+    "subject": "deleting a detached member's account under Security > Users is not always possible",
+    "question": "After a storefront member deletion, can the surviving account always be deleted under Security > Users?",
+    "anchors": [
+     "Mutations.removeMemberFromOrganization"
+    ],
+    "surface": [
+     "admin-ui",
+     "rest"
+    ],
+    "body": "To actually delete someone, delete the account under Security > Users and the contact under Contacts. That remedy is not always available: after an un-accepted invitation was walked through Edit role, Block, Unblock and Delete, the surviving account could not be deleted under Security > Users - it is absent from POST /api/platform/security/users/search by keyword, by memberId and unfiltered, so the grid cannot show it at all, and DELETE /api/platform/security/users?names= fails with ConcurrencyFailure on every attempt. Control accounts in the same store behave normally; see KB-4A8606CA.",
+    "fromNotes": true,
+    "questions": [
+     "How do I fully get rid of a person after removing them from a company on the storefront?",
+     "Why is a removed invitee's account missing from the Security Users grid and user search?",
+     "Why does deleting a detached security user by name fail with ConcurrencyFailure?"
+    ],
+    "concepts": [
+     "security-account",
+     "member-deletion"
+    ],
+    "proposedConcepts": []
+   }
+  ],
+  "basedOn": "6e18f320923efadb"
+ },
+ {
+  "id": "KB-FB8014EB",
+  "action": "keep",
+  "surface": [
+   "rest"
+  ],
+  "questions": [
+   "I removed a back-office user and got a success message, so why do they still exist?",
+   "Which query parameter does the platform user delete endpoint expect for the user names?",
+   "Why does fetching a platform user by id return null?",
+   "What is the reliable way to check that a platform user exists and which roles it has?"
+  ],
+  "concepts": [
+   "security-account",
+   "rest-api"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "fa4ff85ec13c8bd3"
+ },
+ {
+  "id": "KB-FF7E4D5B",
+  "action": "keep",
+  "surface": [
+   "rest",
+   "xapi"
+  ],
+  "questions": [
+   "Where does a whole-basket percentage discount appear on my placed order?",
+   "Is a cart subtotal percentage reward spread onto line items or shipments on the resulting order?",
+   "Why is subTotalDiscount zero on an order that received a percentage-off-subtotal promotion?",
+   "Which order fields carry the reduction from an order-wide percentage promotion?"
+  ],
+  "concepts": [
+   "promotion-reward",
+   "discount",
+   "customer-order"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "87cf35e6b0055ab1"
+ },
+ {
+  "id": "KB-FFB3268E",
+  "action": "keep",
+  "surface": [
+   "admin-ui",
+   "rest"
+  ],
+  "questions": [
+   "Where do pictures I paste into an email layout in the back office get stored?",
+   "Does dropping, pasting or using the toolbar image button in the notification layout editor upload the file once?",
+   "Which assets folder does the notification layout editor upload images to, and what is inserted into the template?",
+   "Why does a pasted image's file name contain the weekday number instead of the day of month?"
+  ],
+  "concepts": [
+   "notification-template",
+   "html-editor",
+   "asset"
+  ],
+  "proposedConcepts": [],
+  "basedOn": "7c294d110d1fd8be"
+ }
+]

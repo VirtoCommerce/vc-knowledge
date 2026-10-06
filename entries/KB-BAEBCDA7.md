@@ -3,14 +3,27 @@ id: KB-BAEBCDA7
 subject: an organization invitation cannot be cancelled or resent
 plane: experiential
 question: How does an invited person complete registration into a B2B organization, and can a maintainer resend or cancel the invitation?
+questions:
+  - text: I invited a colleague to the wrong email address - can I cancel or resend that invitation?
+  - text: Why does inviting the same address again fail with a duplicate user name and email error?
+  - text: Does deleting an invited member from the company roster free the email address for a new invitation?
+  - text: How can an admin confirm the invitation email actually left the system when nobody can read the mailbox?
+  - text: Does the Resend link on the account blade resend the organization invitation or the email confirmation?
+  - text: Does inviteUser provision a real account immediately, before the invited person completes registration?
+concepts:
+  - id: organization-invitation
+  - id: member-deletion
+  - id: notification
 status: active
 appliesTo:
+  - axis: principal
+    value: org-maintainer
   - axis: surface
     value: storefront-ui
   - axis: surface
     value: admin-ui
-  - axis: principal
-    value: org-maintainer
+  - axis: surface
+    value: xapi
 anchors:
   - coordinate: GET /company/members
   - coordinate: Mutations.inviteUser

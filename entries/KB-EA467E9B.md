@@ -3,10 +3,22 @@ id: KB-EA467E9B
 subject: a per-organization sales-rep membership is the served-customer relationship itself
 plane: experiential
 question: Can a sales rep hold sales-rep:access and serve no customers, and what does salesRepCustomers return then?
+questions:
+  - text: Why does My customers send me back to the dashboard even though I am a sales representative?
+  - text: Can a rep be given the sales-rep permission without being assigned any customer companies?
+  - text: Does an empty salesRepCustomers result prove that the caller is a sales rep?
+  - text: Is the sales-rep customers query gated on the permission or only on being authenticated?
+  - text: Where is the sales-rep module's GraphQL schema served?
+concepts:
+  - id: sales-rep
+  - id: organization-membership
+  - id: permission
 status: active
 appliesTo:
   - axis: surface
     value: xapi
+  - axis: surface
+    value: storefront-ui
 anchors:
   - coordinate: Query.salesRepCustomers
   - coordinate: /company/my-customers

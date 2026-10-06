@@ -3,6 +3,15 @@ id: KB-D84CA5F2
 subject: "Push Messages builder: 'is any of' cannot build a multi-value phrase on an enum field"
 plane: experiential
 question: In the Push Messages audience builder, does the 'is any of' operator on a dropdown-backed field (Customer type, Status) produce a comma-separated multi-value phrase?
+questions:
+  - text: Can I target push notifications at several customer types at once using 'is any of'?
+  - text: Push Messages audience builder is any of Customer type Status single-select membertype
+  - text: Why is the 'is any of' phrase identical to the 'is' phrase for an enum field in the push audience builder?
+  - text: Which push audience fields do accumulate multiple values under 'is any of'?
+  - text: Why does the push audience value control show a raw JSON array like [ "Contact" ]?
+concepts:
+  - id: push-audience
+  - id: push-message
 status: active
 appliesTo:
   - axis: module

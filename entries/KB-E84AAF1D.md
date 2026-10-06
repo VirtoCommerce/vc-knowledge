@@ -3,7 +3,10 @@ id: KB-E84AAF1D
 subject: Admin loyalty mission blade never shows server-side validation messages
 plane: experiential
 question: What does the Admin SPA loyalty mission blade show when POST or PUT /api/loyalty-missions returns 400 with validation errors?
-status: active
+status: superseded
+supersededBy:
+  - id: KB-D64B1613
+  - id: KB-DCE536F0
 appliesTo:
   - axis: surface
     value: admin-spa

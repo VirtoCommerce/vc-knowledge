@@ -3,6 +3,15 @@ id: KB-C075BDF9
 subject: "reworked Lists menu: Rename edits name and description only; Share is its own dialog"
 plane: experiential
 question: where is list sharing configured on /account/lists after the sharing rework
+questions:
+  - text: Where do I go to share one of my saved product lists with a colleague?
+  - text: After the lists rework, which actions does a list card's menu offer on the account lists page?
+  - text: Does renaming a list change or reset its sharing scope, targets or message?
+  - text: Does the rename dialog send only listId, listName and description in the wishlist change mutation?
+  - text: Is there still a separate list settings dialog, or is sharing only in its own Share dialog?
+concepts:
+  - id: list-sharing
+  - id: wishlist
 status: active
 appliesTo:
   - axis: surface

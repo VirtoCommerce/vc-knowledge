@@ -3,6 +3,16 @@ id: KB-DF8D085C
 subject: a page missing the requested culture falls back to the default-language content, not a 404
 plane: experiential
 question: What does the storefront serve at /{culture}/{permalink} when the page exists but has no version in that language?
+questions:
+  - text: If I switch the store to another language and a page is not translated, do I get an error page?
+  - text: Is serving the default-language body for an untranslated content page expected behaviour or a defect?
+  - text: What does a localized content page URL return when the page has no version in that culture?
+  - text: "In which order does the storefront resolve the locale: URL, pinned locale, contact culture, store default?"
+  - text: Do draft or archived content pages render the not-found view or fall back to another language?
+concepts:
+  - id: localization
+  - id: content-page
+  - id: page-not-found
 status: active
 appliesTo:
   - axis: surface

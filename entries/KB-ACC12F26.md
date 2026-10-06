@@ -3,12 +3,22 @@ id: KB-ACC12F26
 subject: A punchout user mapping accepts an unvalidated userId (incl. an administrator account), yielding a privilege-escalation sign-in via the anonymous cXML + punchout grant chain
 plane: experiential
 question: Does POST /api/punchout-user-mappings validate userId against the contact, and can a punchout mapping bind an administrator account to escalate privilege?
+questions:
+  - text: Can someone who is only allowed to create punchout mappings end up signed in as an administrator?
+  - text: POST /api/punchout-user-mappings userId validation administrator account
+  - text: Does the punchout grant on /connect/token issue a token with role __administrator when the mapping points at an admin user?
+  - text: "Which identity does a punchout sign-in use: the mapping's userId or its memberId contact?"
+  - text: Does PunchoutGrantTypeHandler reject administrator or mismatched-contact users before issuing a token?
+concepts:
+  - id: access-token
+  - id: permission
+  - id: sign-in
 status: active
 appliesTo:
   - axis: module
     value: virtocommerce.punchout
   - axis: surface
-    value: platform-api
+    value: rest
 anchors:
   - coordinate: POST /api/punchout-user-mappings
   - coordinate: POST /connect/token

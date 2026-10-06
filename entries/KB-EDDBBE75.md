@@ -3,10 +3,19 @@ id: KB-EDDBBE75
 subject: a loyalty balance has no write API and cannot be reset
 plane: experiential
 question: Can a loyalty member's points balance be set or reset to zero through /api/loyalty-program-operation-log?
+questions:
+  - text: Can support zero out my rewards points balance if it is wrong?
+  - text: Is there an endpoint to set, correct or delete a member's loyalty points balance?
+  - text: What happens to a customer's loyalty balance if their user account is deleted and recreated?
+  - text: Why is the balance change an unreliable check when an order both earns and redeems points?
+  - text: Which operation log rows should a test assert on to verify earn and redeem?
+concepts:
+  - id: loyalty
+  - id: loyalty-history
 status: active
 appliesTo:
   - axis: surface
-    value: rest-api
+    value: rest
 anchors:
   - coordinate: /api/loyalty-program-operation-log/balance/{userId}
   - coordinate: /api/loyalty-program-operation-log/search

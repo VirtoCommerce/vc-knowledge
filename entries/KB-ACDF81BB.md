@@ -3,16 +3,26 @@ id: KB-ACDF81BB
 subject: On theme 2.59.0-pr-2476 a non-owner member of an Organization-scope list is offered only Rename — no Share, no Remove list — on the card menu and the list page
 plane: experiential
 question: which list actions does /account/lists offer a non-owner member of an Organization-scope list
+questions:
+  - text: What actions can a colleague see on a company list they don't own?
+  - text: /account/lists card Actions menu non-owner Organization scope Rename only
+  - text: Is Share or Remove list offered to a non-owner member of an Organization-scope list?
+  - text: Can a non-owner organization member rename the list, change quantities and add to cart?
+  - text: Which actions does the owner see on their own Private list card menu?
+concepts:
+  - id: wishlist
+  - id: list-sharing
+  - id: organization-member
 status: active
 appliesTo:
   - axis: actor
     value: non-owner-org-member
   - axis: list-scope
     value: organization
-  - axis: surface
-    value: storefront-ui
   - axis: theme
     value: 2.59.0-pr-2476
+  - axis: surface
+    value: storefront-ui
 anchors:
   - coordinate: /account/lists
   - coordinate: /account/lists/{id}

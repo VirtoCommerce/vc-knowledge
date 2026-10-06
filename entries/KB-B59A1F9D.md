@@ -3,10 +3,20 @@ id: KB-B59A1F9D
 subject: "Organization-scope wishlist: any Write member who sends changeWishlist with a scope becomes the list owner"
 plane: experiential
 question: Can a non-owner org member with Write access change a wishlist's sharing scope via changeWishlist, and what happens to ownership?
+questions:
+  - text: Can a colleague with edit rights on a company shopping list take it over from the person who made it?
+  - text: Mutation.changeWishlist scope Organization Write member ownership customerId
+  - text: Does calling changeWishlist with an unchanged Organization scope transfer list ownership to the caller?
+  - text: After a non-owner switches an organization list to Private, can the original owner still open it?
+  - text: Does a rename-only changeWishlist by a Write member change who owns the list?
+concepts:
+  - id: wishlist
+  - id: list-sharing
+  - id: organization-member
 status: active
 appliesTo:
   - axis: surface
-    value: graphql
+    value: xapi
 anchors:
   - coordinate: Mutation.changeWishlist
 evidence:

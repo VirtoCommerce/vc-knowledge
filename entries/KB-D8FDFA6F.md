@@ -3,6 +3,16 @@ id: KB-D8FDFA6F
 subject: On /company/members a contact whose contact-level status is null has its NAME cell replaced by the literal text "Invite sent", while the Active column still shows a green "Active" tick.
 plane: experiential
 question: Why does the storefront company members list show "Invite sent" where a member's name should be, and why is that row still Active?
+questions:
+  - text: Why does my company members page say Invite sent instead of a colleague's name?
+  - text: As a company maintainer, why does a row with no contact status still show a green Active tick?
+  - text: Which field does the storefront members roster use for the Active badge, status or statusInOrganization?
+  - text: What does the members roster render in the Name column when the contact's own status is null though the API returns the full name?
+  - text: How is a null contact status resolved to an effective organization status before it reaches the roster?
+concepts:
+  - id: organization-member
+  - id: membership-status
+  - id: organization-invitation
 status: active
 appliesTo:
   - axis: build
@@ -14,7 +24,7 @@ appliesTo:
   - axis: surface
     value: storefront-ui
   - axis: surface
-    value: storefront-xapi
+    value: xapi
 anchors:
   - coordinate: /company/members
   - coordinate: Query.organization.contacts
@@ -26,6 +36,13 @@ evidence:
     deployment: vcst_qa
     at: 2026-09-22T08:33:33.895Z
     by: session:0d74f522
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-05T10:07:31.572Z
+    by: session:8dcbfefd
+    who: Dan-BV
+    contradicts: true
+    note: "2026-10-05 Customer 3.1026.0: pending invitees read statusInOrganization Invited, not Approved, and contact status Invited, not null. The UI badge was not checked (API only)."
 ---
 Observed read-only on vcst_qa 2026-09-22, storefront build 2.58.0-pr-2467-89a3-89a38239, org AGENT-TEST-Org-AcmeCorp-20260310 (105c2c4e-23be-4258-8691-568a0ff190be), signed in as the org maintainer acme_store_maintainer_1@acme.com. One of the 16 roster rows renders its Name cell as the literal string "Invite sent" rather than a person's name. The GraphQL response for that same row (operationName GetOrganizationContacts) returns id 584bf5d5-f0f1-45ab-9630-d0faa6eca0d5, name "Sam Store", firstName "Sam", lastName "Store", fullName "Sam Store", emails ["agent-test-sr-secondstore@example.com"], status NULL, statusInOrganization "Approved", isLockedInOrganization false, and a populated securityAccounts entry (83317df7-980b-40ff-bdf0-cdac94285868). So the contact HAS a name and the API returns it in four separate fields; the page substitutes "Invite sent" for all of them. The discriminator is contact.status being null - every other row in the roster carried status "Approved" and rendered its real name. Consequence for a reader: the member's identity is not displayed at all on this row, only their email, so a maintainer auditing the roster cannot tell who the pending person is from the Name column, and any test asserting the rendered name against the API name will fail for this class of contact.
 
