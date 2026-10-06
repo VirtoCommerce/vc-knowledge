@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated": "2026-10-06T01:01:19.792Z",
-  "count": 401,
+  "generated": "2026-10-06T01:01:45.673Z",
+  "count": 402,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -806,7 +806,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2341,6 +2341,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-51888868",
+      "path": "entries/KB-51888868.md",
+      "subject": "A sales rep unassigned from an organization can still remove it from a list's share targets but cannot add it back",
+      "question": "Can a sales rep revoke a wishlist share to an organization after losing the assignment to it (changeWishlist removeSharedWithIds), and can they re-add it?",
+      "anchors": [
+        "Mutation.changeWishlist",
+        "PUT /api/sales-rep",
+        "Query.salesRepCustomers"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "feature=wishlist-sharing-customer-scope",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5040,7 +5060,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -5906,7 +5926,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
