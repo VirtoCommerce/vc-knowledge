@@ -1,2 +1,3 @@
 {"at":"2026-10-06T07:27:16.981Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
 {"at":"2026-10-06T11:47:49.003Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
+{"at":"2026-10-06T11:50:23.803Z","kind":"ask","q":"/sales-rep customer orders page SalesRepCustomerOrders status filter chip label localization","verdict":"ambiguous","p":0.37,"f":{"idfCoverage":0.5,"sentenceStrength":0.15,"sentenceMargin":-0.09,"margin":0.03},"shown":["KB-09CEE315","KB-D080C209","KB-D839801A"],"state":"ambiguous","ms":2914,"rank":"verdict-1","via":"mcp","call":"toolu_015KbCAeud3WMUsCRdjqgcQL","topic":"sales rep customer orders filters","deployment":"vcptcore_qa1","who":"kutasinaelena","agent":"qa-frontend-expert"}
