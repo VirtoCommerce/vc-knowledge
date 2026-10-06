@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T09:38:06.716Z",
-  "count": 496,
+  "generated": "2026-10-06T11:38:48.114Z",
+  "count": 497,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5285,7 +5285,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11694,6 +11694,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-D61EEFF8",
+      "path": "entries/KB-D61EEFF8.md",
+      "subject": "On vcptcore_qa B2B-store the storefront has no Returns entry and /account/returns renders 404 although the Return module is installed",
+      "question": "Is the storefront Returns page reachable on the vcptcore_qa B2B-store, e.g. to check the Returns icon?",
+      "anchors": [
+        "/account/returns",
+        "/account/orders"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D64B1613",
       "path": "entries/KB-D64B1613.md",
       "subject": "Loyalty mission create and update endpoints reject invalid input with 400 and a raw FluentValidation array, persisting nothing",
@@ -13280,7 +13299,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
