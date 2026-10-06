@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-06T11:38:48.114Z",
-  "count": 497,
+  "generated": "2026-10-06T12:11:17.266Z",
+  "count": 498,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -549,7 +549,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13822,6 +13822,24 @@
         "surface=admin-ui",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F8BF115A",
+      "path": "entries/KB-F8BF115A.md",
+      "subject": "salesRepCustomerOrders returns an empty term_facets array when the filter matches zero orders, so the storefront must keep its own status labels for filter chips",
+      "question": "What does the SalesRepCustomerOrders status facet return when a search or date filter yields zero orders, and what does the status filter chip show then?",
+      "anchors": [
+        "/company/my-customers/{orgId}/orders",
+        "Query.salesRepCustomerOrders"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
