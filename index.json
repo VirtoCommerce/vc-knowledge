@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T11:51:03.342Z",
-  "count": 520,
+  "generated": "2026-10-07T11:55:24.239Z",
+  "count": 522,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2245,6 +2245,25 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-2A7CB639",
+      "path": "entries/KB-2A7CB639.md",
+      "subject": "TaskManagement REST POST /api/task-management accepts dueDate null and the owning sales rep lists the dateless task",
+      "question": "Can a sales-rep task exist with no due date, and how is one created when createSalesRepTask requires dueDate?",
+      "anchors": [
+        "POST /api/task-management",
+        "Query.salesRepTasks",
+        "Mutation.createSalesRepTask"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-2A9084BA",
@@ -11635,7 +11654,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-CF3FAD18",
@@ -13168,6 +13187,26 @@
       "status": "active",
       "trust": 6,
       "disputed": 1
+    },
+    {
+      "id": "KB-EAD1674C",
+      "path": "entries/KB-EAD1674C.md",
+      "subject": "TaskManagement REST finish with completed=false closes a task as isActive=false, completed=false, and the owning sales rep still lists it and can delete it",
+      "question": "How do I cancel (close without completing) a sales-rep task through the platform API, and does the rep still see it?",
+      "anchors": [
+        "POST /api/task-management/finish",
+        "POST /api/task-management/search",
+        "Query.salesRepTasks",
+        "Mutation.deleteSalesRepTask"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-EB70C1F9",
