@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T12:43:03.583Z",
-  "count": 527,
+  "generated": "2026-10-07T13:05:03.780Z",
+  "count": 529,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -852,6 +852,42 @@
       "disputed": 0
     },
     {
+      "id": "KB-0F0C239A",
+      "path": "entries/KB-0F0C239A.md",
+      "subject": "On /company/tasks, closing the date chip always returns to the Today scope, even when the day was picked from the All or a status tab",
+      "question": "Which scope does /company/tasks show after closing the date chip (x) when the day was picked while All or Upcoming was selected?",
+      "anchors": [
+        "/company/tasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1007ADDE",
+      "path": "entries/KB-1007ADDE.md",
+      "subject": "The /company/tasks Today list and counts send a period of browser-local midnight to +24h-1ms in UTC, with today equal to the period start",
+      "question": "What today and period values does /company/tasks send in Query.salesRepTasks and Query.salesRepTaskCounts for the Today scope?",
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTasks",
+        "Query.salesRepTaskCounts"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-110E0652",
       "path": "entries/KB-110E0652.md",
       "subject": "products(filter barcode:) expands to an OR of the configured barcode fields and runs * and ? as wildcards, also in exact mode (VCST-6094)",
@@ -1516,7 +1552,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9601,7 +9637,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11728,7 +11764,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 2
+      "disputed": 3
     },
     {
       "id": "KB-CF3FAD18",

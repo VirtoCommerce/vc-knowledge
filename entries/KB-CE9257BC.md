@@ -32,5 +32,12 @@ evidence:
     who: Lenajava1
     contradicts: true
     note: "Independent re-check on a second seeded canceled task (isActive:false, completed:false, due +2 days): opening Edit task on /company/tasks and saving unchanged sent Mutation.updateSalesRepTask, HTTP 200, data returned, no errors[]. The task stayed isActive:false, completed:false, kept no row action, and the counts and list refetched. Saving a canceled task succeeds."
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-07T12:59:38.030Z
+    by: session:5e2a1103
+    who: Lenajava1
+    contradicts: true
+    note: "Freshly seeded canceled task (isActive:false, completed:false, past due): Edit task unchanged Save sent Mutation.updateSalesRepTask, HTTP 200, data returned with isActive:false completed:false, no errors[], toast 'Task saved'; a second save re-dating it +20 days also succeeded and the task stayed canceled with no row action."
 ---
 On /company/tasks (storefront theme 2.59.0-pr-2536 against SalesRep 3.1012.0 / TaskManagement 3.1005.0), a canceled task (isActive:false, completed:false) still renders a clickable title that opens the Edit task modal with every field editable and Save enabled. Saving it unchanged sends Mutation.updateSalesRepTask with the task id; the response is HTTP 200 with errors[{message:"Task not found."}] and data.updateSalesRepTask null. The storefront shows the generic toast "Something went wrong. Please try again later." and the modal stays open. The same unchanged save on a completed task (isActive:false, completed:true) succeeds with no errors, so the server rejects only the canceled state. The row itself offers no Mark as complete / Reopen action for canceled.
