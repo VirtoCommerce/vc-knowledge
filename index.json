@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T18:38:08.818Z",
-  "count": 589,
+  "generated": "2026-10-07T18:47:44.283Z",
+  "count": 591,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6411,6 +6411,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-6880ED54",
+      "path": "entries/KB-6880ED54.md",
+      "subject": "Cold Google Analytics reads behind the sales-rep activity queries can take 30-80 s and intermittently fail at about 60 s with isAnalyticsAvailable false and zeroed GA counts; the failure is not cached",
+      "question": "What happens when a sales-rep activity or insights query hits a cold Google Analytics read?",
+      "anchors": [
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerInsights",
+        "Query.salesRepCustomerActivitySummary"
+      ],
+      "scope": [
+        "build=salesrep 3.1013.0-pr-15",
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-68D63D8C",
       "path": "entries/KB-68D63D8C.md",
       "subject": "organization.assignableRoles(storeId) returns [] when the store's MembershipRolesWhitelist override is empty",
@@ -7440,7 +7460,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11264,6 +11284,26 @@
       ],
       "scope": [
         "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B7076554",
+      "path": "entries/KB-B7076554.md",
+      "subject": "salesRepActivities categoryCounts count GA hour-bucket rows (not events), are invariant to the categories filter, take clamps at 50 and skip>500 returns no rows with counts unchanged",
+      "question": "How do salesRepActivities categoryCounts, take and skip behave on the scoped sales-rep xAPI?",
+      "anchors": [
+        "Query.salesRepActivities",
+        "POST /graphql/sales-rep",
+        "Query.salesRepCustomerInsights"
+      ],
+      "scope": [
+        "build=salesrep 3.1013.0-pr-15",
+        "module=sales-rep",
         "surface=xapi"
       ],
       "plane": "experiential",
