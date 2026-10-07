@@ -1,7 +1,7 @@
 # vc-knowledge
 
 The knowledge base the agentic-QA tooling in
-[`vc-mcp-testing-module`](https://github.com/VirtoCommerce/vc-mcp-testing-module) reads and writes.
+[`ai-tools`](https://github.com/VirtoCommerce/ai-tools) reads and writes.
 
 One base, at the root of this repository. See *What used to be here* below.
 
