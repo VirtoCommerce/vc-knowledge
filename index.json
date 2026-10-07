@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T15:39:00.160Z",
-  "count": 586,
+  "generated": "2026-10-07T17:24:56.399Z",
+  "count": 587,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2131,7 +2131,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4461,7 +4461,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4579,6 +4579,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4D953F8A",
+      "path": "entries/KB-4D953F8A.md",
+      "subject": "Debug SEO links Candidates blade maps each explain reason code to a fixed English sentence; NoSeoPath is added beside StoreMismatch and LanguageMismatch when that record is the only candidate",
+      "question": "What rejection-reason text does the Admin Debug SEO links Candidates blade show for each explain reason code?",
+      "anchors": [
+        "GET /api/seoinfos/explain"
+      ],
+      "scope": [
+        "admin-language=en",
+        "build=seo-3.1006-pr22",
+        "module=seo",
+        "surface=admin-spa",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5690,7 +5710,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8159,7 +8179,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12872,7 +12892,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
