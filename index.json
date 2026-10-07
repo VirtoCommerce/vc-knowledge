@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T07:39:32.664Z",
-  "count": 516,
+  "generated": "2026-10-07T09:31:13.948Z",
+  "count": 517,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11549,6 +11549,22 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CE053374",
+      "path": "entries/KB-CE053374.md",
+      "subject": "GET /api/catalog/products?ids=… (respGroup=ItemInfo) returns minQuantity/maxQuantity as 0 — never null — when a product sets no order-quantity limit",
+      "question": "What do minQuantity / maxQuantity hold in GET /api/catalog/products?ids= when a product has no order-quantity limit?",
+      "anchors": [
+        "GET /api/catalog/products"
+      ],
+      "scope": [
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
