@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T14:45:54.156Z",
-  "count": 581,
+  "generated": "2026-10-07T14:55:11.839Z",
+  "count": 582,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10848,6 +10848,26 @@
         "principal=org-member",
         "surface=admin-ui",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AEE0570E",
+      "path": "entries/KB-AEE0570E.md",
+      "subject": "createOrderFromCart and createQuoteFromCart share one cached CartAggregate per cart, so validation results cached by a failed order or quote attempt are reused by the next attempt until the cart is saved",
+      "question": "Does Mutation.createOrderFromCart reuse a cached CartAggregate validation result from an earlier createQuoteFromCart or createOrderFromCart call on the same cart?",
+      "anchors": [
+        "Mutation.createOrderFromCart",
+        "Mutation.createQuoteFromCart",
+        "Query.cart"
+      ],
+      "scope": [
+        "module=x-cart",
+        "store=b2b-store",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
