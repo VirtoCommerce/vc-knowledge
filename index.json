@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T17:24:56.399Z",
-  "count": 587,
+  "generated": "2026-10-07T18:38:08.818Z",
+  "count": 589,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3490,6 +3490,24 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3D7DE8D4",
+      "path": "entries/KB-3D7DE8D4.md",
+      "subject": "Password sign-in on the storefront sends no GA4 login hit; the page reloads before it is delivered, and identity user properties are only applied on the reloaded page",
+      "question": "Does the storefront GA4 login event reach Google Analytics with the member's organization_id after a password sign-in?",
+      "anchors": [
+        "/sign-in",
+        "/company/activities"
+      ],
+      "scope": [
+        "feature=google-analytics-user-properties",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -15202,6 +15220,26 @@
         "role=sales-rep",
         "surface=storefront-ui",
         "theme=2.59.0-pr-2536"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F615F682",
+      "path": "entries/KB-F615F682.md",
+      "subject": "Sales-rep GA activity reads filter only session_kind=self and organization_id, so the rep's own storefront browsing under a served organization is counted as that customer's activity",
+      "question": "Is a sales rep's own storefront browsing excluded from the customer activity shown on /company/activities and the Customer activity widget?",
+      "anchors": [
+        "/company/activities",
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerActivitySummary"
+      ],
+      "scope": [
+        "feature=customer-activity",
+        "module=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
