@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T13:05:03.780Z",
-  "count": 529,
+  "generated": "2026-10-07T13:16:51.559Z",
+  "count": 531,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9087,6 +9087,27 @@
       "disputed": 4
     },
     {
+      "id": "KB-A1076CA1",
+      "path": "entries/KB-A1076CA1.md",
+      "subject": "Sales Rep hub dashboard rule queries (order-status and top-seller filter/sort rules) are served from Apollo cache on SPA remount; the three statistics queries and list queries refire",
+      "question": "When a sales rep navigates away from /company/dashboard and back via in-app navigation, which GraphQL operations refire and which are served from cache?",
+      "anchors": [
+        "/company/dashboard",
+        "Query.salesRepOrderFilterRules",
+        "Query.salesRepTopSellerFilterRules",
+        "Query.salesRepCustomerOrderStatistics"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "theme=2.59.0-pr-2536"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A1498A0F",
       "path": "entries/KB-A1498A0F.md",
       "subject": "configuration section options have no display order; their returned order follows neither the order sent nor creation order",
@@ -14179,6 +14200,25 @@
       "scope": [
         "provider=filesystemassets",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F5901D4D",
+      "path": "entries/KB-F5901D4D.md",
+      "subject": "Sales Rep dashboard Active carts tile renders salesRepCustomerCartStatistics activeCarts.selectedItemQuantity as value, unselectedItemQuantity as 'not for checkout', itemsThisWeek.selectedItemQuantity as 'items this week'",
+      "question": "Which fields of SalesRepCustomerCartStatistics feed the value, sub-value and delta of the Active carts tile on /company/dashboard?",
+      "anchors": [
+        "/company/dashboard",
+        "Query.salesRepCustomerCartStatistics"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "theme=2.59.0-pr-2536"
       ],
       "plane": "experiential",
       "status": "active",
