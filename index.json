@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T14:07:50.127Z",
-  "count": 578,
+  "generated": "2026-10-07T14:25:01.344Z",
+  "count": 579,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5141,7 +5141,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5740,6 +5740,26 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5DEDBAA9",
+      "path": "entries/KB-5DEDBAA9.md",
+      "subject": "Sales Rep hub surfaces with every block hidden render an \"All blocks are hidden\" empty state; Restore default layout issues one SaveSalesRepLayout carrying registry defaults (incl. maxRows) and does not enter edit mode",
+      "question": "What does the Sales Rep hub dashboard / customer profile show when every block is hidden, and what does Restore default layout send?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/my-customers/{orgId}",
+        "Mutation.saveSalesRepLayout",
+        "Query.salesRepLayout"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
