@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T14:55:11.839Z",
-  "count": 582,
+  "generated": "2026-10-07T15:16:36.150Z",
+  "count": 585,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3317,6 +3317,25 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-394E015A",
+      "path": "entries/KB-394E015A.md",
+      "subject": "createOrderFromCart keeps the same cart id and empties it after the order instead of deleting the cart",
+      "question": "After placing an order from /cart, does the next cart query return a new cart or the same cart id emptied?",
+      "anchors": [
+        "Mutation.createOrderFromCart",
+        "Query.cart",
+        "/cart"
+      ],
+      "scope": [
+        "module=xorder",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6676,7 +6695,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8301,6 +8320,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-89822898",
+      "path": "entries/KB-89822898.md",
+      "subject": "A cart line quantity above stock is accepted into the cart but flagged, and Place order stays disabled on /cart until it is lowered",
+      "question": "What does /cart do when a line quantity is set above the available stock?",
+      "anchors": [
+        "/cart",
+        "Mutation.changeCartItemsQuantity"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -13642,6 +13679,24 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E11E747B",
+      "path": "entries/KB-E11E747B.md",
+      "subject": "Bulk order with a nonexistent SKU adds the valid lines and reports the bad SKU as CART_INVALID_PRODUCT, shown as 'Invalid product' in an 'Add to cart SKU errors' dialog",
+      "question": "What happens on /bulk-order when the pasted list contains one valid SKU and one SKU that does not exist?",
+      "anchors": [
+        "/bulk-order",
+        "Mutation.addBulkItemsCart"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
