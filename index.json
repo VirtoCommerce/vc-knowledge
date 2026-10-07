@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T11:55:24.239Z",
-  "count": 522,
+  "generated": "2026-10-07T12:22:03.421Z",
+  "count": 525,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1493,6 +1493,25 @@
         "/account/addresses"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1AC3D57E",
+      "path": "entries/KB-1AC3D57E.md",
+      "subject": "On /company/tasks, keyboard focus drops to the document body after a row action (Mark as complete / Reopen), after Edit task Save and after Delete; Escape on Edit task returns focus to the task title",
+      "question": "Where does keyboard focus go on /company/tasks after Mark as complete, Reopen, Edit task Save, Delete, or Escape from Edit task?",
+      "anchors": [
+        "/company/tasks",
+        "Mutation.changeSalesRepTaskStatus",
+        "Mutation.updateSalesRepTask"
+      ],
+      "scope": [
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -9550,6 +9569,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-A915AA45",
+      "path": "entries/KB-A915AA45.md",
+      "subject": "For a sales rep with zero tasks, /company/tasks hides the Upcoming/Overdue/Completed tabs, normalises any ?filter to Today, and shows 'Nothing due on this day' (Today/day) or 'No tasks in this tab' (All)",
+      "question": "What does /company/tasks render for a sales rep who has no tasks at all, including with a ?filter deep link?",
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A98E467C",
       "path": "entries/KB-A98E467C.md",
       "subject": "sendCustomerCommunication caps the message at 1000 characters and pushes it verbatim",
@@ -10988,6 +11025,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-C34E7A94",
+      "path": "entries/KB-C34E7A94.md",
+      "subject": "A dateless sales-rep task marked complete on /company/tasks is counted and listed in the Completed tab; Reopen returns it to dateless open (dueDate null)",
+      "question": "What happens on /company/tasks when Mark as complete is used on a task with no due date, and what does Reopen do to it?",
+      "anchors": [
+        "/company/tasks",
+        "Mutation.changeSalesRepTaskStatus",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C3945D5C",
       "path": "entries/KB-C3945D5C.md",
       "subject": "api/catalog/barcode-search PUT validates fields, GET returns defaults for unknown stores",
@@ -11654,7 +11710,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-CF3FAD18",
