@@ -31,5 +31,11 @@ evidence:
     at: 2026-10-03T04:54:06.106Z
     by: session:51fcfb97
     who: kutasinaelena
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-07T10:44:11.137Z
+    by: session:2f09dbd5
+    who: Lenajava1
+    note: "2026-10-07: Save changes after editing one line sent ChangeQuoteItemQuantity (quoteId, lineItemId, quantity) and then refetched the quote; remaining lines kept selectedTierPrice (quantity follows line quantity)."
 ---
 On a Draft quote request created from the cart, the storefront edit page's Save changes sends ChangeQuoteItemQuantity (quoteId, lineItemId, quantity) per edited line, plus ChangeQuoteComment / UpdateQuoteAttachments / address updates when those changed, then refetches GetQuote. The refetched quote keeps each line's listPrice and selectedTierPrice (tier quantity follows the new quantity), imageUrl and product, and totals recompute (e.g. 2 to 5 units at 59.99 gives 299.95). Not reproduced: prices dropping to 0.00 on save, across 3 saves and 2 B2B buyers. An auto-added free gift line enters the quote at 0.00 by design. A zero-price state seen once on a quote AFTER Submit (status Processing) was not exercised here.

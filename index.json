@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T09:31:13.948Z",
-  "count": 517,
+  "generated": "2026-10-07T10:49:18.767Z",
+  "count": 519,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -998,7 +998,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8364,6 +8364,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-95270CC3",
+      "path": "entries/KB-95270CC3.md",
+      "subject": "Saving a draft quote request line at quantity 0 deletes the line, and the storefront lets the user save it",
+      "question": "What happens when a buyer sets a draft quote request line to 0 and clicks Save changes?",
+      "anchors": [
+        "Mutation.changeQuoteItemQuantity",
+        "Query.quote",
+        "/account/quotes"
+      ],
+      "scope": [
+        "module=virtocommerce.quote",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9560787E",
       "path": "entries/KB-9560787E.md",
       "subject": "security users search keyword matches userName, not email",
@@ -9696,7 +9716,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13804,6 +13824,27 @@
         "KB-CFBD95B7"
       ],
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F2C1F699",
+      "path": "entries/KB-F2C1F699.md",
+      "subject": "changeCartItemsQuantity below a product's minimum or off its pack size commits the typed quantity and reports it only through validationErrors",
+      "question": "What does changeCartItemsQuantity return when the new line quantity is below minQuantity or not a multiple of packSize — is the quantity committed and which validation codes appear?",
+      "anchors": [
+        "Mutation.changeCartItemsQuantity",
+        "LineItemType.validationErrors",
+        "CartType.validationErrors",
+        "/cart"
+      ],
+      "scope": [
+        "module=virtocommerce.xcart",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
