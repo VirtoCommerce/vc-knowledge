@@ -1,2 +1,2 @@
-{"at":"2026-10-07T11:12:45.208Z","kind":"session","session":"0f7a7bd5","tools":77,"turns":1,"touchAt":[6],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-06T13:40:15.763Z","lastAt":"2026-10-07T11:12:45.085Z","who":"Dan-BV"}
+{"at":"2026-10-07T12:10:03.972Z","kind":"session","session":"0f7a7bd5","tools":97,"turns":6,"touchAt":[6],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-06T13:40:15.763Z","lastAt":"2026-10-07T12:10:03.866Z","who":"Dan-BV"}
 {"at":"2026-10-06T17:37:31.666Z","kind":"restart","why":"transcript-moved","priorTools":34,"who":"Dan-BV"}
