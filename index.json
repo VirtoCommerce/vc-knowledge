@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T12:37:41.077Z",
-  "count": 525,
+  "generated": "2026-10-07T12:43:03.583Z",
+  "count": 527,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3337,6 +3337,24 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3F9205B1",
+      "path": "entries/KB-3F9205B1.md",
+      "subject": "Below 640px the sales-rep orders date range is one 'Date range' field holding two 19px-tall text inputs and one 'Open calendar' button",
+      "question": "What does the Created date range control look like and measure on /company/customer-orders below 640px?",
+      "anchors": [
+        "/company/customer-orders"
+      ],
+      "scope": [
+        "layout=mobile-combined",
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12909,6 +12927,24 @@
         "surface=storefront-ui",
         "surface=xapi",
         "theme=2.59.0-pr-2476-0abb"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E6944628",
+      "path": "entries/KB-E6944628.md",
+      "subject": "On /company/my-customers the filter-chip row is not rendered when salesRepCustomerFilterRules returns only the 'All' rule",
+      "question": "Does the My customers page show filter chips when the backend offers only the baseline All rule?",
+      "anchors": [
+        "/company/my-customers",
+        "Query.salesRepCustomerFilterRules"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
