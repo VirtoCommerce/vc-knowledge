@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T14:41:07.136Z",
-  "count": 580,
+  "generated": "2026-10-07T14:45:54.156Z",
+  "count": 581,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5141,7 +5141,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -7766,6 +7766,25 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7DB10B1F",
+      "path": "entries/KB-7DB10B1F.md",
+      "subject": "On storefront cultures with no theme locale file (nl-NL, nl-BL) the whole Sales Rep hub, including the layout empty state, renders English strings with no raw i18n keys",
+      "question": "What do Sales Rep hub pages (/company/dashboard) show when the storefront language is Dutch (nl-NL / nl-BL)?",
+      "anchors": [
+        "/company/dashboard",
+        "/nl-NL/company/dashboard"
+      ],
+      "scope": [
+        "feature=sales-rep-hub",
+        "locale=nl",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
