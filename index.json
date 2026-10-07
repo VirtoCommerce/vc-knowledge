@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T13:35:04.106Z",
-  "count": 540,
+  "generated": "2026-10-07T14:07:50.127Z",
+  "count": 578,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -534,6 +534,23 @@
         "surface=storefront-ui",
         "theme=2.59",
         "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-09C378C0",
+      "path": "entries/KB-09C378C0.md",
+      "subject": "The Admin Return list has a sortable Organization column; POST /api/return/search with organizationId + excludeDrafts equals organizationReturns",
+      "question": "How does the back office show and filter returns by organization?",
+      "anchors": [
+        "POST /api/return/search"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1144,6 +1161,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-13A8C5E1",
+      "path": "entries/KB-13A8C5E1.md",
+      "subject": "Changing the language in Admin 'Manage profile' auto-saves only VirtoCommerce.Platform.UI.Language; unset RegionalFormat and TimeZone stay null, so a flip and restore leaves the profile as it was",
+      "question": "How do I switch an admin user's UI language and restore it without side effects?",
+      "anchors": [
+        "GET /api/platform/profiles/currentuser",
+        "POST /api/platform/profiles/currentuser"
+      ],
+      "scope": [
+        "module=platform",
+        "setting=virtocommerce.platform.ui.language",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-13B32D5F",
       "path": "entries/KB-13B32D5F.md",
       "subject": "what makes a promotion reach a given store",
@@ -1218,7 +1254,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -1241,6 +1277,25 @@
         "KB-9B9FAF0F",
         "KB-F1E057A8"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-160CE93F",
+      "path": "entries/KB-160CE93F.md",
+      "subject": "Stores.SeoLinksType has four values (None, Short, Collapsed, Long) with default Collapsed; the Admin label is \"SEO links\" and xAPI exposes it as store.settings.seoLinkType",
+      "question": "What values does the store SEO link type take, what is the default and where does the storefront read it?",
+      "anchors": [
+        "Stores.SeoLinksType",
+        "Query.store",
+        "GET /api/platform/settings/v2/tenant/Store/{storeId}/values"
+      ],
+      "scope": [
+        "module=virtocommerce.store",
+        "surface=platform-settings"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -1331,6 +1386,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-17232A1F",
+      "path": "entries/KB-17232A1F.md",
+      "subject": "organizationReturns lists every buyer's non-draft returns of the order's organization, the caller's own included; a draft cancelled without submit is listed too",
+      "question": "Which returns does the organization returns list contain?",
+      "anchors": [
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-17555498",
       "path": "entries/KB-17555498.md",
       "subject": "Return status notifications: one email + one push (topic = return number) per status change, incl. submitReturn, via Hangfire; a job can succeed and send nothing (requeue sends it)",
@@ -1365,7 +1436,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1882,7 +1953,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2045,6 +2116,25 @@
       "disputed": 3
     },
     {
+      "id": "KB-2289BD9F",
+      "path": "entries/KB-2289BD9F.md",
+      "subject": "Explain adds NoSeoPath to a StoreMismatch or LanguageMismatch record that is the object's only record, but an object's only INACTIVE record gets Inactive alone",
+      "question": "Which rejection reasons does explain combine for an object's only SEO record?",
+      "anchors": [
+        "GET /api/seoinfos/explain"
+      ],
+      "scope": [
+        "build=catalog-pr910",
+        "module=catalog",
+        "surface=admin-spa",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-22E1D313",
       "path": "entries/KB-22E1D313.md",
       "subject": "A declined return produces two buyer push messages, 'Return {number} received' then 'Return {number} declined', and the bell lists the declined one first",
@@ -2174,6 +2264,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-25682485",
+      "path": "entries/KB-25682485.md",
+      "subject": "A holder reads a colleague's non-draft return read-only through Query.return; every mutation stays owner-only",
+      "question": "What can an organization holder do with a colleague's return via xAPI?",
+      "anchors": [
+        "Query.return",
+        "Mutation.cancelReturn"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -2595,6 +2702,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-2E8CAC3D",
+      "path": "entries/KB-2E8CAC3D.md",
+      "subject": "A slugInfo/pageContext request for a permalink no SEO resolver returns creates a broken-link record, and every later request for it bumps its HitCount",
+      "question": "Which requests create or bump broken-link records, and is it synchronous?",
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageContext",
+        "POST /api/seo/broken-links/search",
+        "POST /api/seoinfos/search"
+      ],
+      "scope": [
+        "build=pr-vcst-5989",
+        "module=virtocommerce.seo",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-2EDC661F",
       "path": "entries/KB-2EDC661F.md",
       "subject": "Query.cart without a cart name returns the most recently touched cart, not the default one",
@@ -2771,6 +2899,26 @@
       "scope": [
         "role=org-maintainer-vs-employee",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-315E1B18",
+      "path": "entries/KB-315E1B18.md",
+      "subject": "Explain for a path under a parent that does not exist rejects the slug's records as PermalinkMismatch (the store's link), not ParentNotResolved",
+      "question": "What reason does Debug SEO / explain give when the permalink's parent path does not resolve?",
+      "anchors": [
+        "GET /api/seoinfos/explain"
+      ],
+      "scope": [
+        "build=catalog-pr910",
+        "module=catalog",
+        "seo-links-type=long",
+        "surface=admin-spa",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3256,6 +3404,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-3CE0311C",
+      "path": "entries/KB-3CE0311C.md",
+      "subject": "A store setting changed through the full-body PUT /api/stores reaches the return notification handler within seconds",
+      "question": "How do I flip a store setting so the return notification handler sees it?",
+      "anchors": [
+        "PUT /api/stores"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3D0750BD",
       "path": "entries/KB-3D0750BD.md",
       "subject": "Members without an email give the EmailNoRecipients warning; push still goes, and an email-only send to them returns succeeded false",
@@ -3362,6 +3526,27 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=desktop-1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3EBB904D",
+      "path": "entries/KB-3EBB904D.md",
+      "subject": "On a Long-link-type store a storefront hard load resolves category, parent/child category, category/product and content-page paths through one pageContext call whose permalink has no leading slash",
+      "question": "How does the storefront resolve a hard-loaded SEO URL, and what does pageContext return for category, nested category, product and content page paths?",
+      "anchors": [
+        "Query.pageContext",
+        "/{category}/{subcategory}",
+        "/{category}/{product}",
+        "POST /api/seo/broken-links/search"
+      ],
+      "scope": [
+        "identity=anonymous",
+        "seolinktype=long",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3540,6 +3725,23 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-40BBC91A",
+      "path": "entries/KB-40BBC91A.md",
+      "subject": "With Return.NotifyOrganizationEmail on, every buyer return email is copied to the organization's first email unless that address is the buyer's To",
+      "question": "Who receives return emails when the organization copy setting is on?",
+      "anchors": [
+        "Return.NotifyOrganizationEmail",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "surface=notifications"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-40CBB0C5",
@@ -3869,6 +4071,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-48CBEB82",
+      "path": "entries/KB-48CBEB82.md",
+      "subject": "Query.slugInfo resolves no Virto Page while the store setting VirtoPages.Enable is false, although Query.pageDocuments still lists the page",
+      "question": "Why does a Virto Page that pageDocuments lists return entityInfo null from slugInfo?",
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageDocuments",
+        "store setting VirtoPages.Enable"
+      ],
+      "scope": [
+        "module=pages",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -4204,6 +4425,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4C86ED98",
+      "path": "entries/KB-4C86ED98.md",
+      "subject": "GET /api/seoinfos/explain on the VCST-5989 PR build starts with a Candidates stage and lists rejected records with reason codes",
+      "question": "What does the Debug SEO links endpoint return now, and how does it differ from the six-stage description?",
+      "anchors": [
+        "GET /api/seoinfos/explain"
+      ],
+      "scope": [
+        "build=pr-vcst-5989",
+        "module=virtocommerce.seo",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5226,7 +5465,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -5413,6 +5652,44 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5B2C8995",
+      "path": "entries/KB-5B2C8995.md",
+      "subject": "With the admin profile language set to German, Debug SEO links renders Stage 0, the Candidates blade, its columns, footnote and the catalog rejection reasons in German, with no raw keys or codes",
+      "question": "Are the Debug SEO links Stage 0 / Candidates texts and rejection reasons localized in the Admin UI?",
+      "anchors": [
+        "GET /api/seoinfos/explain",
+        "GET /api/platform/localization"
+      ],
+      "scope": [
+        "admin-language=de",
+        "build=seo-3.1006-pr22",
+        "module=seo",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5B2E99AB",
+      "path": "entries/KB-5B2E99AB.md",
+      "subject": "/account/returns shows a second tab named after the selected organization to holders of xapi:my_organization:return:view",
+      "question": "What does the storefront Returns page show an organization maintainer who may view the organization's returns?",
+      "anchors": [
+        "/account/returns",
+        "/account/returns?scope=organization",
+        "/account/returns/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5834,6 +6111,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-64BDD566",
+      "path": "entries/KB-64BDD566.md",
+      "subject": "For catalog objects slugInfo returns the same entityInfo for anonymous, personal, organization and admin callers, and a language with no record falls back to the store default language",
+      "question": "Does slug resolution depend on who is signed in or on the requested culture?",
+      "anchors": [
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "module=virtocommerce.catalog",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-657521DF",
       "path": "entries/KB-657521DF.md",
       "subject": "Returns are owner-scoped in xAPI: a same-organization colleague gets return(id)=null and RETURN_NOT_FOUND on cancel/update",
@@ -5860,7 +6154,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -6019,6 +6313,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-68718937",
+      "path": "entries/KB-68718937.md",
+      "subject": "Storefront 2.58.0 shows a transient 'incompatible backend' alert naming each installed module that is older than the theme requires",
+      "question": "What does the storefront show when an installed module is older than the theme requires, and does it block the page?",
+      "anchors": [
+        "Query.store",
+        "GET /api/platform/modules"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=2.58.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -6243,6 +6555,24 @@
         "KB-EF478346",
         "KB-2EDC661F"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6C437F53",
+      "path": "entries/KB-6C437F53.md",
+      "subject": "GET /api/seoinfos/explain strips one leading slash only, compares the store path case-sensitively, and 500s on a missing or empty permalink",
+      "question": "How does GET /api/seoinfos/explain treat leading/trailing slashes, case, spaces, an empty storeDefaultLanguage, an organizationId and a missing permalink?",
+      "anchors": [
+        "GET /api/seoinfos/explain"
+      ],
+      "scope": [
+        "build=seo-pr-vcst-5989",
+        "module=seo",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -6517,7 +6847,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -7389,7 +7719,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -7696,7 +8026,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7752,6 +8082,44 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-85780059",
+      "path": "entries/KB-85780059.md",
+      "subject": "Admin Debug SEO links (GET /api/seoinfos/explain) writes no broken-link record, even for a permalink nothing resolves",
+      "question": "Does running Debug SEO links or GET /api/seoinfos/explain on an unresolved permalink record a broken link?",
+      "anchors": [
+        "GET /api/seoinfos/explain",
+        "POST /api/seo/broken-links/search"
+      ],
+      "scope": [
+        "build=seo-3.1006-pr22",
+        "module=seo",
+        "surface=admin-spa",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-85E9DB78",
+      "path": "entries/KB-85E9DB78.md",
+      "subject": "Double-clicking Debug in the Admin Debug SEO links blade opens the store under the pointer and closes the Debug blades",
+      "question": "What happens when the Debug button of Stores › store › Debug SEO links is double-clicked while a result blade is open?",
+      "anchors": [
+        "/workspace/store",
+        "GET /api/seoinfos/explain"
+      ],
+      "scope": [
+        "module=seo",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8463,6 +8831,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-936B54EF",
+      "path": "entries/KB-936B54EF.md",
+      "subject": "Background jobs carrying an order with in-payments fail to deserialize the abstract PaymentMethod and fail all retries",
+      "question": "Why do Hangfire jobs fail with Could not create an instance of type PaymentMethod?",
+      "anchors": [
+        "/hangfire/jobs/failed",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=background-jobs"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-93804F07",
       "path": "entries/KB-93804F07.md",
       "subject": "PUT /api/return on a decided return discards decision changes with a 200",
@@ -8611,6 +8996,24 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-95FA5EFB",
+      "path": "entries/KB-95FA5EFB.md",
+      "subject": "xAPI category(id, storeId) returns null, with no error, for a category outside the store's catalog",
+      "question": "What does the GraphQL category query return for a category that is not in the store's catalog?",
+      "anchors": [
+        "Query.category",
+        "GET /api/seoinfos/explain"
+      ],
+      "scope": [
+        "module=xcatalog",
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8922,6 +9325,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-99C50912",
+      "path": "entries/KB-99C50912.md",
+      "subject": "Query.brands lists the term values of the store's Brand property, so a non-brand property such as a price gives totalCount 0 even with brands enabled",
+      "question": "Why does Query.brands return totalCount 0 for a store with brand settings enabled?",
+      "anchors": [
+        "Query.brands"
+      ],
+      "scope": [
+        "module=x-catalog",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9AF5645D",
       "path": "entries/KB-9AF5645D.md",
       "subject": "With PasswordLogin DetailedErrors off, the storefront OTP flow does not reveal whether an email has an account: an unknown address gets \"Check your email\", no email is sent, and a wrong code returns the same invalid_code as for a real account",
@@ -9070,6 +9490,22 @@
       "disputed": 1
     },
     {
+      "id": "KB-9E0ED0F4",
+      "path": "entries/KB-9E0ED0F4.md",
+      "subject": "Query.organizationReturns lists an organization's returns only for an active member holding xapi:my_organization:return:view; everyone else gets one uniform Forbidden",
+      "question": "Who can list an organization's returns with organizationReturns, and what do others get?",
+      "anchors": [
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9E7315D1",
       "path": "entries/KB-9E7315D1.md",
       "subject": "an empty promotion store list means the promotion applies in every store",
@@ -9122,6 +9558,25 @@
         "surface=rest",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A06A680C",
+      "path": "entries/KB-A06A680C.md",
+      "subject": "Debug SEO links Stages rows (including Stage 0: Candidates) are click-only: ng-click on a non-focusable div, never reachable by Tab",
+      "question": "Can the Stages blade rows of the Admin Debug SEO links tool be opened from the keyboard?",
+      "anchors": [
+        "/workspace/store",
+        "virtoCommerce.seo.seoExplainResultController"
+      ],
+      "scope": [
+        "input=keyboard",
+        "module=seo",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9403,6 +9858,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-A3744332",
+      "path": "entries/KB-A3744332.md",
+      "subject": "xAPI SeoInfo declares id, semanticUrl, objectId, objectType and isActive non-null, but items with no applicable SEO record get a fallback SeoInfo, so selecting seoInfo{id} or seoInfo{objectType} errors on those items",
+      "question": "Why does a categories or products query fail on seoInfo.id or seoInfo.objectType for some stores only?",
+      "anchors": [
+        "Query.categories",
+        "Query.category",
+        "Query.product"
+      ],
+      "scope": [
+        "module=virtocommerce.xcatalog",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A38254C8",
       "path": "entries/KB-A38254C8.md",
       "subject": "a product's configurability is a separate entity keyed by productId, not a field on the product record",
@@ -9565,6 +10039,24 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A4C7D7A2",
+      "path": "entries/KB-A4C7D7A2.md",
+      "subject": "Admin SPA ui-grid blades carry three axe-core critical violations as a platform baseline (aria-required-parent, aria-required-children, button-name on blade-nav maximize/close), independent of any module change",
+      "question": "What does axe-core report on an Admin SPA blade that hosts a ui-grid, and is it caused by the module that owns the blade?",
+      "anchors": [
+        "/workspace/store"
+      ],
+      "scope": [
+        "layer=platform-blade-chrome",
+        "scanner=axe-core-4.10.2",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -10386,6 +10878,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-B2BA7561",
+      "path": "entries/KB-B2BA7561.md",
+      "subject": "Admin SPA \"Debug SEO links Candidates\" blade (Stage 0) renders an 8-column ui-grid; only the Rejection reasons cells carry a hover title, Object ID is never fully visible even maximized",
+      "question": "What does the Admin Debug SEO links Candidates blade (Stage 0) show and how does it handle long values?",
+      "anchors": [
+        "/workspace/store",
+        "virtoCommerce.seo.seoExplainCandidatesController"
+      ],
+      "scope": [
+        "module=seo",
+        "surface=admin-spa",
+        "viewport=1920-1280-1024"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B38AEE58",
       "path": "entries/KB-B38AEE58.md",
       "subject": "The lists page badge collapses organization-scoped and world-readable lists into one Shared state",
@@ -10411,6 +10922,24 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-B3EEBA10",
+      "path": "entries/KB-B3EEBA10.md",
+      "subject": "Admin SPA grid boolean cells (`i.table-ico.fa.fa-check`) are icon-only, painted #a6a6a6 (about 2.2-2.4:1), and expose nothing to the accessibility tree",
+      "question": "How are boolean flags rendered in Admin SPA ui-grid cells and are they accessible (contrast, text alternative)?",
+      "anchors": [
+        "/workspace/store"
+      ],
+      "scope": [
+        "layer=platform-grid-style",
+        "surface=admin-spa",
+        "wcag=1.4.11-1.1.1"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-B41CE06E",
@@ -10824,6 +11353,25 @@
         "surface=admin-ui",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BB0DC07F",
+      "path": "entries/KB-BB0DC07F.md",
+      "subject": "On a Collapsed store sharing a virtual catalog, explain rejects a linked category's store-less record with NoSeoPath while the Long-links store resolves it",
+      "question": "Why does a linked category not resolve on a store with Collapsed links, and what does explain say?",
+      "anchors": [
+        "GET /api/seoinfos/explain",
+        "Query.categories"
+      ],
+      "scope": [
+        "build=catalog-pr-910",
+        "module=catalog",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12007,7 +12555,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12111,7 +12659,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12149,6 +12697,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-D245B911",
+      "path": "entries/KB-D245B911.md",
+      "subject": "A Virto Page listed by xAPI pageDocuments with a leading-slash permalink can fail to resolve through slugInfo, and the storefront then shows its 404 page with HTTP 200",
+      "question": "Why does a page that pageDocuments lists render the 404 page on the storefront?",
+      "anchors": [
+        "Query.pageDocuments",
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D24EDC70",
       "path": "entries/KB-D24EDC70.md",
       "subject": "what refuses a never-registered account at sign-in was not established, and here is where the looking stopped",
@@ -12171,6 +12737,25 @@
       "scope": [
         "surface=rest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D2620142",
+      "path": "entries/KB-D2620142.md",
+      "subject": "Debug SEO links shows Stage 0 Candidates (resolved and rejected records with reasons) in a dedicated blade; Debug stays disabled until a permalink is typed",
+      "question": "What does the Admin Debug SEO links tool show on the VCST-5989 build?",
+      "anchors": [
+        "GET /api/seoinfos/explain"
+      ],
+      "scope": [
+        "admin-language=en",
+        "build=seo-3.1006-pr22",
+        "module=seo",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12701,6 +13286,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-DB156EF1",
+      "path": "entries/KB-DB156EF1.md",
+      "subject": "A storefront hard load of an unknown path is a soft 404 and records one broken link per permalink whose HitCount rises by one per unresolved request",
+      "question": "Does a storefront miss record a broken link, and how does its HitCount change on repeat visits or xAPI slugInfo calls?",
+      "anchors": [
+        "POST /api/seo/broken-links/search",
+        "Query.pageContext",
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "identity=anonymous",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DB7B6317",
       "path": "entries/KB-DB7B6317.md",
       "subject": "the Admin order Status dropdown settables differ from the statuses orders display",
@@ -12727,6 +13331,24 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-DC2F1BF0",
+      "path": "entries/KB-DC2F1BF0.md",
+      "subject": "POST /api/seoinfos/search with storeId and only slug (no permalink) returns [] and adds a hit to the store's newest Active broken link",
+      "question": "What happens when POST /api/seoinfos/search is called with a storeId but no permalink?",
+      "anchors": [
+        "POST /api/seoinfos/search",
+        "POST /api/seo/broken-links/search"
+      ],
+      "scope": [
+        "module=seo",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DCE536F0",
@@ -12757,6 +13379,25 @@
       "disputed": 3
     },
     {
+      "id": "KB-DD67E1FA",
+      "path": "entries/KB-DD67E1FA.md",
+      "subject": "With Return.ReturnEnabled off the storefront has no Returns page, but the returns queries still answer",
+      "question": "What does Return.ReturnEnabled off change on the storefront and in xAPI?",
+      "anchors": [
+        "Return.ReturnEnabled",
+        "/account/returns",
+        "Query.returnableItems"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DE341132",
       "path": "entries/KB-DE341132.md",
       "subject": "A loyalty mission with OrderCountGoal count 0 never completes",
@@ -12778,6 +13419,25 @@
       "scope": [
         "surface=rest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DE349A6C",
+      "path": "entries/KB-DE349A6C.md",
+      "subject": "A Static redirect rule whose inbound starts with '/' never matches slugInfo for the slash-less permalink; it matches only when the permalink itself carries the slash",
+      "question": "Does a Static redirect rule with inbound '/path' redirect the storefront permalink 'path'?",
+      "anchors": [
+        "Query.slugInfo",
+        "POST /api/seo/redirect-rules"
+      ],
+      "scope": [
+        "module=seo",
+        "redirect-rule-type=static",
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13682,7 +14342,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-ED3A631C",
@@ -13740,7 +14400,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -14312,7 +14972,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -14795,6 +15455,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-FBDCC7A5",
+      "path": "entries/KB-FBDCC7A5.md",
+      "subject": "On the deployed storefront theme the product and category pages build og:url from an escaped template literal, so the string is not the page URL",
+      "question": "What does the product or category page put in og:url?",
+      "anchors": [
+        "Query.slugInfo",
+        "Query.product"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=2.58.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-FD4363C6",
       "path": "entries/KB-FD4363C6.md",
       "subject": "In the combined Date range field on the sales-rep orders filter, only the 19px-tall Start/End inputs take a click; the rest of the 44px bordered box does not focus either input",
@@ -14806,6 +15484,25 @@
         "role=sales-rep",
         "surface=storefront-ui",
         "viewport=mobile-375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FF5F4867",
+      "path": "entries/KB-FF5F4867.md",
+      "subject": "The store's Active broken links list is dominated by valid storefront application routes, not by missing slugs",
+      "question": "What do the records in the Admin Active broken links widget actually contain?",
+      "anchors": [
+        "POST /api/seo/broken-links/search",
+        "Query.pageContext"
+      ],
+      "scope": [
+        "module=virtocommerce.seo",
+        "surface=admin-ui",
+        "theme=2.58.0"
       ],
       "plane": "experiential",
       "status": "active",

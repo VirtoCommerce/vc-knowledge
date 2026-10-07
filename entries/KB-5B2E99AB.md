@@ -1,0 +1,20 @@
+---
+id: KB-5B2E99AB
+subject: /account/returns shows a second tab named after the selected organization to holders of xapi:my_organization:return:view
+plane: experiential
+question: What does the storefront Returns page show an organization maintainer who may view the organization's returns?
+status: active
+appliesTo:
+  - axis: surface
+    value: storefront-ui
+anchors:
+  - coordinate: /account/returns
+  - coordinate: /account/returns?scope=organization
+  - coordinate: /account/returns/{id}
+evidence:
+  - method: observation
+    deployment: vcptcore_dev
+    at: 2026-10-06T17:53:23.327Z
+    by: session:b6bd53fc
+---
+On theme 2.59.0-pr-2523, /account/returns shows "My returns" plus a tab named after the selected organization (?scope=organization) when the token carries xapi:my_organization:return:view; the tab adds a sortable Buyer name column and an organization search placeholder. A colleague's return opens read-only with a "Requested by" row and no Cancel or Edit. Without the permission there is no tab and ?scope=organization silently shows the own list (client-side, no request). The tab follows the organization switcher. After a revoke the tab stays, even across a reload, until a new access token, and opening it routes to /403. At 375 px the organization label truncates with an ellipsis (about 108 px) and the full name is in title and the accessible name.

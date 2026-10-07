@@ -28,5 +28,11 @@ evidence:
     at: 2026-09-25T11:16:30.039Z
     by: session:memimpor
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_dev
+    at: 2026-10-06T17:53:15.335Z
+    by: session:b6bd53fc
+    contradicts: true
+    note: "On vcptcore_dev (2026-10-06) tokens minted WITHOUT organization_id for an Organization maintainer, an Organization manager and another organization's maintainer carried 11, 10 and 12 permissions including xapi:my_organization:edit / order:view / user:invite — not only the two view permissions. Organization-scoped tokens behaved as the entry says (a two-organization user got 12 vs 2). Not separated: whether these accounts hold the role globally or per membership, which may explain the difference."
 ---
 Passing organization_id together with storeId on the storefront token request scopes the token to that organization, and me.permissions then returns that membership's role permissions (a maintainer and an employee of two organizations got different sets). On the current platform build organization_id works in either casing; an older claim that camelCase was ignored no longer holds. Omitting it entirely still mints a token (200) but with only two permissions, storefront:organization:view and storefront:user:view, so organization-scoped mutations fail with a missing xapi:my_organization:edit permission that reads like a broken account.
