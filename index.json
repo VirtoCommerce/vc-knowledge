@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T14:25:01.344Z",
-  "count": 579,
+  "generated": "2026-10-07T14:41:07.136Z",
+  "count": 580,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13737,6 +13737,25 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E4699C30",
+      "path": "entries/KB-E4699C30.md",
+      "subject": "The platform marks a module with a load error when any installed dependency has a lower MINOR version than the module declares (same major required; patch and prerelease ignored), so pinning an older-minor PR build of a module disables every module that declares the newer minor.",
+      "question": "Will a PR build of a module whose version is a lower minor than the installed one still let its dependents load?",
+      "anchors": [
+        "GET /api/platform/modules",
+        "LocalStorageModuleCatalog.Validate",
+        "SemanticVersion.IsCompatibleWithBySemVer"
+      ],
+      "scope": [
+        "concern=module-loading",
+        "surface=platform-backend"
       ],
       "plane": "experiential",
       "status": "active",
