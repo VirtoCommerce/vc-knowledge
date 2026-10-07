@@ -25,3 +25,5 @@
 {"at":"2026-10-07T12:20:50.518Z","kind":"show","id":"KB-C34E7A94","state":"miss","via":"cli","who":"Lenajava1"}
 {"at":"2026-10-07T12:20:51.080Z","kind":"show","id":"KB-A915AA45","state":"miss","via":"cli","who":"Lenajava1"}
 {"at":"2026-10-07T12:20:51.694Z","kind":"show","id":"KB-CE9257BC","state":"answer","via":"cli","who":"Lenajava1","call":"toolu_01VgKfjvw6YgbJ9MnMfmayEf","agent":"main"}
+{"at":"2026-10-07T12:25:54.926Z","kind":"ask","q":"/company/my-customers salesRepCustomerFilterRules returns only the All rule so the filter chip row is not rendered","verdict":"ambiguous","p":0.26,"f":{"idfCoverage":0.33,"sentenceStrength":0.2,"sentenceMargin":0.24,"margin":0.19},"shown":["KB-09CEE315","KB-5F164230","KB-F9D75EA0"],"state":"ambiguous","ms":1477,"rank":"verdict-1","via":"mcp","call":"toolu_01MUZbfPcHB848A9hMsfBi9J","topic":"sales rep storefront regression","deployment":"vcst_qa","who":"Lenajava1","agent":"qa-frontend-expert"}
+{"at":"2026-10-07T12:25:58.484Z","kind":"none","after":"2026-10-07T12:25:54.926Z","via":"mcp","call":"toolu_01Qqp4ysicorZtwCpFKgC5NG","topic":"sales rep storefront regression","who":"Lenajava1","agent":"qa-frontend-expert"}
