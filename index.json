@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T13:16:51.559Z",
-  "count": 531,
+  "generated": "2026-10-07T13:35:04.106Z",
+  "count": 540,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -195,6 +195,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0404EB02",
+      "path": "entries/KB-0404EB02.md",
+      "subject": "On the pre-redesign /company/calendar page, toggling a task's completion checkbox, saving Edit task and deleting a task all leave keyboard focus on the document body",
+      "question": "Where does keyboard focus go on /company/calendar after toggling a task checkbox, saving Edit task, or deleting a task?",
+      "anchors": [
+        "/company/calendar"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -865,7 +882,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1552,7 +1569,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1969,7 +1986,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4508,6 +4525,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-4EF50E94",
+      "path": "entries/KB-4EF50E94.md",
+      "subject": "With the coffee preset, primary #f99e24 gives 2.11:1 for white text on solid-primary buttons and for primary text on outline-primary buttons, on 2.59.0 and on 2.59.0-pr-2536",
+      "question": "Do primary buttons with text meet WCAG 1.4.3 contrast in the coffee light preset on /company/tasks, /company/calendar and /account/lists?",
+      "anchors": [
+        "/company/tasks",
+        "/company/calendar",
+        "/account/lists"
+      ],
+      "scope": [
+        "mode=light",
+        "preset=coffee",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4F18D0C7",
       "path": "entries/KB-4F18D0C7.md",
       "subject": "Page Builder Designer init-time capability flags resolve a false selector result to null, not false",
@@ -4580,6 +4617,25 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-509E3E22",
+      "path": "entries/KB-509E3E22.md",
+      "subject": "On /company/tasks (theme 2.59.0-pr-2536) the ru status chips are ellipsized in the 144px Status column because the chip now carries an icon; the old /company/calendar pill fit",
+      "question": "Do the status chips on /company/tasks fit their column in the ru locale at 1920px, and did the old /company/calendar status pill?",
+      "anchors": [
+        "/ru/company/tasks",
+        "/ru/company/calendar"
+      ],
+      "scope": [
+        "locale=ru-ru",
+        "surface=storefront-ui",
+        "viewport=1920"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4822,6 +4878,26 @@
       ],
       "scope": [
         "actor=anonymous",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-52188DBA",
+      "path": "entries/KB-52188DBA.md",
+      "subject": "Sales Rep hub pages Tasks, Calendar, Dashboard and My customers leave document.title at the default 'Virto Commerce', while Customer orders and account pages set '<store> & <page>'",
+      "question": "What browser tab title (document.title) do the Sales Rep hub pages show?",
+      "anchors": [
+        "/company/tasks",
+        "/company/dashboard",
+        "/company/my-customers",
+        "/company/calendar"
+      ],
+      "scope": [
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -5151,6 +5227,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-590935DA",
+      "path": "entries/KB-590935DA.md",
+      "subject": "The Notes textarea in the sales-rep New task / Edit task modal has no accessible name: its 'Notes' label renders as a div and aria-labelledby points to the textarea itself",
+      "question": "What accessible name does the Notes field in the New task / Edit task modal on /company/tasks have?",
+      "anchors": [
+        "/company/tasks",
+        "/company/calendar",
+        "Mutation.updateSalesRepTask"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7904,6 +7999,27 @@
       "scope": [
         "actor=multi-org-buyer",
         "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8C054BAE",
+      "path": "entries/KB-8C054BAE.md",
+      "subject": "In the pt (pt-PT) storefront locale, VcCalendar weekday headers render full words (domingo, segunda...) that overflow and overlap their cells, on every calendar instance",
+      "question": "Do the VcCalendar weekday header labels fit their cells in the pt locale on the sales-rep calendar/tasks, dashboard Tasks widget and customer-orders date picker?",
+      "anchors": [
+        "/pt/company/calendar",
+        "/pt/company/tasks",
+        "/pt/company/dashboard",
+        "/pt/company/customer-orders"
+      ],
+      "scope": [
+        "component=vccalendar",
+        "locale=pt-pt",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -12527,6 +12643,24 @@
       "disputed": 4
     },
     {
+      "id": "KB-DA88761E",
+      "path": "entries/KB-DA88761E.md",
+      "subject": "In dark mode the dashboard Tasks widget overdue link is #bb1616 on #0a090b (3.06:1), on 2.59.0 and on 2.59.0-pr-2536",
+      "question": "Does the 'N overdue tasks' link in the /company/dashboard Tasks widget meet contrast in dark mode?",
+      "anchors": [
+        "/company/dashboard"
+      ],
+      "scope": [
+        "mode=dark",
+        "preset=coffee",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DAD0D552",
       "path": "entries/KB-DAD0D552.md",
       "subject": "UCP refuses over-stock cart and checkout calls with isError, a stable inventory code and structured quantities",
@@ -13275,6 +13409,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EA4DA051",
+      "path": "entries/KB-EA4DA051.md",
+      "subject": "On /company/tasks (theme 2.59.0-pr-2536) the es and ru row action label 'Mark as complete' wraps to two centred lines in a 208px button at both 1440 and 1920px",
+      "question": "Does the Mark as complete row action on /company/tasks fit on one line in es and ru?",
+      "anchors": [
+        "/es/company/tasks",
+        "/ru/company/tasks",
+        "/es/company/calendar"
+      ],
+      "scope": [
+        "locale=es-es,ru-ru",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -14635,6 +14788,24 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FD4363C6",
+      "path": "entries/KB-FD4363C6.md",
+      "subject": "In the combined Date range field on the sales-rep orders filter, only the 19px-tall Start/End inputs take a click; the rest of the 44px bordered box does not focus either input",
+      "question": "On /company/customer-orders at 375px, does clicking anywhere in the Date range field box focus the Start or End date input?",
+      "anchors": [
+        "/company/customer-orders"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "viewport=mobile-375"
       ],
       "plane": "experiential",
       "status": "active",
