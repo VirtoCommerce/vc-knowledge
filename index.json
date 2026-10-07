@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T15:16:36.150Z",
-  "count": 585,
+  "generated": "2026-10-07T15:39:00.160Z",
+  "count": 586,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9876,6 +9876,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A26C2976",
+      "path": "entries/KB-A26C2976.md",
+      "subject": "A store-bound customer account gets login_failed from /connect/token password grant unless the request also carries storeId",
+      "question": "Why does a password-grant token request for a storefront customer fail with login_failed when the password is correct?",
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=platform-auth",
+        "user-type=customer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
