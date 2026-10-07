@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T19:06:43.812Z",
-  "count": 591,
+  "generated": "2026-10-07T19:40:28.062Z",
+  "count": 593,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2131,7 +2131,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2719,7 +2719,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4479,7 +4479,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4616,7 +4616,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4640,6 +4640,27 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4DDC303D",
+      "path": "entries/KB-4DDC303D.md",
+      "subject": "POST /api/stores accepts settings:[{name:\"Stores.SeoLinksType\",value:\"Long\"}] in the create body and the store honours it; Seo.BrokenLinkDetection.Enabled reads value null with defaultValue true when unset",
+      "question": "Can a store be created with SEO links = Long through POST /api/stores, and how do I read whether broken-link detection is on?",
+      "anchors": [
+        "POST /api/stores",
+        "DELETE /api/stores",
+        "GET /api/platform/settings/Seo.BrokenLinkDetection.Enabled",
+        "DELETE /api/seo/broken-links"
+      ],
+      "scope": [
+        "module=seo",
+        "module=store",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8217,7 +8238,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -12951,6 +12972,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D2EBDDB1",
+      "path": "entries/KB-D2EBDDB1.md",
+      "subject": "Catalog REST: categories are created AND updated with POST /api/catalog/categories (PUT is 405), and DELETE /api/catalog/categories needs repeated ids= params; a comma list returns 204 and deletes nothing",
+      "question": "How do I update or bulk-delete categories through the Catalog REST API?",
+      "anchors": [
+        "POST /api/catalog/categories",
+        "DELETE /api/catalog/categories",
+        "DELETE /api/catalog/catalogs/{id}"
+      ],
+      "scope": [
+        "module=catalog",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

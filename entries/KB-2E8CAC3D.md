@@ -21,5 +21,11 @@ evidence:
     deployment: vcptcore_dev
     at: 2026-10-05T20:10:43.828Z
     by: session:f9a8159e
+  - method: observation
+    deployment: vcptcore_qa1
+    at: 2026-10-07T19:39:07.481Z
+    by: session:ed63bd34
+    who: kutasinaelena
+    note: slugInfo on a resolving category permalink wrote nothing; on an unknown permalink it created a record (hitCount 1) within 10 s.
 ---
 On vcptcore_dev (Seo 3.1006.0 PR build), an anonymous xAPI slugInfo(permalink, storeId, cultureName) for an existing Virto Page permalink that returned entityInfo null made the store's broken-link count go 70 to 71; the new record (status Active, HitCount 1, createdBy http:anonymous) was written about 150 ms after the request, i.e. through the background job, not the request thread. Hard-loading the storefront path and three further slugInfo calls as other identities each raised HitCount by 1 without adding records. Permalinks that resolve (category, product, content page, home) changed nothing. Source agrees: CompositeSeoResolver.FindSeoAsync publishes SeoInfoNotFoundEvent when no resolver returns a record, SeoInfoNotFoundEventHandler enqueues SaveBrokenLinkJob when Seo.BrokenLinkDetection.Enabled (default true). Consequence for any test or probe: calling slugInfo or POST /api/seoinfos/search with a permalink that does not resolve is a WRITE.
