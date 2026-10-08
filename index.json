@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:16.925Z",
+  "generated": "2026-10-08T12:22:17.470Z",
   "count": 612,
   "entries": [
     {
@@ -6635,7 +6635,7 @@
     {
       "id": "KB-68F7432D",
       "path": "entries/KB-68F7432D.md",
-      "subject": "During /search?barcode=<v>&q=<term> the header search box shows the ignored term and hides the Barcode scan button",
+      "subject": "During /search?barcode=<v>&q=<term> the header search box: on an early 2.59 barcode build it showed the ignored term and hid the Barcode scan button; on the released theme 2.59.0 it is empty with the button visible",
       "question": "What does the header search bar show while a barcode lookup URL also carries a q keyword?",
       "questions": [
         "The search box shows a word I didn't search for and the scan button vanished - what's going on?",
@@ -6656,8 +6656,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-6A20B0AF",
@@ -7459,8 +7460,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-75B67E06",
