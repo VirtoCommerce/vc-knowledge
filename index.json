@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T09:18:39.741Z",
-  "count": 608,
+  "generated": "2026-10-08T09:21:10.858Z",
+  "count": 609,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13300,6 +13300,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D4FE7962",
+      "path": "entries/KB-D4FE7962.md",
+      "subject": "Opening an existing page in Admin Content > Pages calls GET /api/pagebuilder/git/legacy-draft, which returns 404 when the store is not on the git content flow",
+      "question": "Why does GET /api/pagebuilder/git/legacy-draft return 404 when an existing CMS page is opened in the Admin page blade?",
+      "anchors": [
+        "GET /api/pagebuilder/git/legacy-draft"
+      ],
+      "scope": [
+        "store-content-flow=blob",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
