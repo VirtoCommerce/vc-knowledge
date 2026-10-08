@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T02:08:16.185Z",
-  "count": 595,
+  "generated": "2026-10-08T02:33:56.546Z",
+  "count": 597,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2087,6 +2087,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-21EE2EB6",
+      "path": "entries/KB-21EE2EB6.md",
+      "subject": "Storefront sign-out does not reset GA4 user properties; anonymous hits after logout reuse the same GA client and session and carry no up.* override",
+      "question": "After a member signs out of the storefront, are the GA4 organization_id / contact_id / session_kind user properties cleared for that browser?",
+      "anchors": [
+        "/sign-in",
+        "/search"
+      ],
+      "scope": [
+        "feature=google-analytics-user-properties",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-21F4F161",
       "path": "entries/KB-21F4F161.md",
       "subject": "Return available-statuses offers both Canceled and Cancelled, mirrored in the admin status dropdown",
@@ -3511,7 +3529,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4019,7 +4037,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4069,7 +4087,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11949,6 +11967,23 @@
         "reward=percentage-off-cart-subtotal",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C1304D9F",
+      "path": "entries/KB-C1304D9F.md",
+      "subject": "Opening /search?q=<term> as a full page load sends view_search_results twice for one search",
+      "question": "How many GA4 view_search_results hits does a direct /search?q= page load send?",
+      "anchors": [
+        "/search"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
