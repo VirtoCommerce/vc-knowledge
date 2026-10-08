@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T15:42:54.241Z",
-  "count": 630,
+  "generated": "2026-10-08T15:43:58.647Z",
+  "count": 632,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3372,6 +3372,26 @@
       "disputed": 1
     },
     {
+      "id": "KB-375CEF71",
+      "path": "entries/KB-375CEF71.md",
+      "subject": "The Page Builder shell's impersonated access token was rejected 401 about 5 minutes after issue although expires_in was 1799 s, and the shell fell back to its own login screen",
+      "question": "Why does the Page Builder shell suddenly redirect to its login page a few minutes into a session?",
+      "anchors": [
+        "/apps/page-builder-shell",
+        "POST /connect/token",
+        "GET /api/page-builder-pages/grouped/{id}"
+      ],
+      "scope": [
+        "module=page-builder",
+        "role=administrator",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-37B8E605",
       "path": "entries/KB-37B8E605.md",
       "subject": "customer address records use ISO-3 country codes and carry a region only for the US and Canada",
@@ -6727,6 +6747,25 @@
         "build=salesrep 3.1013.0-pr-15",
         "module=sales-rep",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-68B18ADF",
+      "path": "entries/KB-68B18ADF.md",
+      "subject": "Page Builder shell Archive confirmation Cancel sends no request, shows no toast and leaves the page unchanged",
+      "question": "What happens when you cancel the Archive confirmation in the Page Builder shell page-details blade?",
+      "anchors": [
+        "/apps/page-builder-shell",
+        "POST /api/page-builder-pages/grouped/archive"
+      ],
+      "scope": [
+        "module=page-builder",
+        "role=administrator",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11530,7 +11569,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-B38AEE58",
@@ -15373,7 +15412,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
