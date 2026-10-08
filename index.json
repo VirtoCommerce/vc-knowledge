@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T09:47:51.882Z",
+  "generated": "2026-10-08T12:22:14.098Z",
   "count": 612,
   "entries": [
     {
@@ -2387,8 +2387,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 8,
-      "disputed": 1
+      "trust": 10,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-29037452",
@@ -9459,8 +9460,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 4
+      "trust": 4,
+      "disputed": 1,
+      "resolved": 3
     },
     {
       "id": "KB-97A675C1",
@@ -11830,8 +11832,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 4
+      "trust": 5,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-BBC75DEA",
@@ -13560,7 +13563,7 @@
     {
       "id": "KB-D8FDFA6F",
       "path": "entries/KB-D8FDFA6F.md",
-      "subject": "On /company/members a contact whose contact-level status is null has its NAME cell replaced by the literal text \"Invite sent\", while the Active column still shows a green \"Active\" tick.",
+      "subject": "On /company/members a contact whose contact-level status is null has its NAME cell replaced by the literal text \"Invite sent\"; its status badge reads Active from theme 2.55 and Inactive before",
       "question": "Why does the storefront company members list show \"Invite sent\" where a member's name should be, and why is that row still Active?",
       "questions": [
         "Why does my company members page say Invite sent instead of a colleague's name?",
@@ -13582,7 +13585,6 @@
         "ContactType.fullName"
       ],
       "scope": [
-        "build=2.58.0-pr-2467",
         "principal=org-maintainer",
         "store=b2b-store",
         "surface=storefront-ui",
@@ -13590,8 +13592,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-D992AF44",
@@ -13710,7 +13713,7 @@
     {
       "id": "KB-DA14E8B7",
       "path": "entries/KB-DA14E8B7.md",
-      "subject": "Block then Unblock on a pending invitee irreversibly ends the invitation: contact status Invited -> Locked -> Approved and the roster shows Active with no registration",
+      "subject": "Block then Unblock on a pending invitee: on builds up to PEA 3.1007 it irreversibly ends the invitation (Invited -> Locked -> Approved); from PEA 3.1008 it only locks the organization membership",
       "question": "What happens to a pending organization invitation if the maintainer blocks and then unblocks that row?",
       "questions": [
         "If I block and then unblock someone I invited but who never joined, can they still accept the invitation?",
@@ -13742,8 +13745,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 4
+      "trust": 5,
+      "disputed": 2,
+      "resolved": 2
     },
     {
       "id": "KB-DA88761E",

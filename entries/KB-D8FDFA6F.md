@@ -1,6 +1,6 @@
 ---
 id: KB-D8FDFA6F
-subject: On /company/members a contact whose contact-level status is null has its NAME cell replaced by the literal text "Invite sent", while the Active column still shows a green "Active" tick.
+subject: On /company/members a contact whose contact-level status is null has its NAME cell replaced by the literal text "Invite sent"; its status badge reads Active from theme 2.55 and Inactive before
 plane: experiential
 question: Why does the storefront company members list show "Invite sent" where a member's name should be, and why is that row still Active?
 questions:
@@ -15,8 +15,6 @@ concepts:
   - id: organization-invitation
 status: active
 appliesTo:
-  - axis: build
-    value: 2.58.0-pr-2467
   - axis: principal
     value: org-maintainer
   - axis: store
@@ -43,9 +41,26 @@ evidence:
     who: Dan-BV
     contradicts: true
     note: "2026-10-05 Customer 3.1026.0: pending invitees read statusInOrganization Invited, not Approved, and contact status Invited, not null. The UI badge was not checked (API only)."
+    resolved: dispute-wrong
+    resolvedAt: 2026-10-08T10:18:31.955Z
+    resolvedBy: session:d3bcc6b6
+    resolvedIn: judge/invitations-20261008
+    resolution: It checked pending invitees (status Invited); this entry is about contacts whose status is null, which still render Invite sent (live G2, G3 2026-10-08); the badge is now scoped by theme.
+  - method: observation
+    deployment: vcptcore_stable
+    conditions: platform=3.1039.12; module:VirtoCommerce.Customer=3.1011.1; module:VirtoCommerce.ProfileExperienceApiModule=3.1009.1; module:VirtoCommerce.Xapi=3.1012.3; theme=2.51.2; store=B2B-store; role=Organization maintainer
+    at: 2026-10-08T10:18:02.466Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "Contact created over REST with a name and status null, 2026-10-08: Name cell \"Invite sent\", badge Inactive (theme 2.51.2 badge reads contact.status). A named contact with status Invited also shows \"Invite sent\"."
+  - method: observation
+    deployment: vcst_qa
+    conditions: platform=3.1076.0; module:VirtoCommerce.Customer=3.1029.0; module:VirtoCommerce.ProfileExperienceApiModule=3.1020.0; module:VirtoCommerce.Xapi=3.1026.0; theme=2.59.0; store=B2B-store; role=Organization maintainer
+    at: 2026-10-08T10:18:03.256Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "Contact created over REST with a name and status null, 2026-10-08: Name cell \"Invite sent\", badge Active; xAPI statusInOrganization Approved with membership status null. A named contact with status Invited also shows \"Invite sent\"."
 ---
-Observed read-only on vcst_qa 2026-09-22, storefront build 2.58.0-pr-2467-89a3-89a38239, org AGENT-TEST-Org-AcmeCorp-20260310 (105c2c4e-23be-4258-8691-568a0ff190be), signed in as the org maintainer acme_store_maintainer_1@acme.com. One of the 16 roster rows renders its Name cell as the literal string "Invite sent" rather than a person's name. The GraphQL response for that same row (operationName GetOrganizationContacts) returns id 584bf5d5-f0f1-45ab-9630-d0faa6eca0d5, name "Sam Store", firstName "Sam", lastName "Store", fullName "Sam Store", emails ["agent-test-sr-secondstore@example.com"], status NULL, statusInOrganization "Approved", isLockedInOrganization false, and a populated securityAccounts entry (83317df7-980b-40ff-bdf0-cdac94285868). So the contact HAS a name and the API returns it in four separate fields; the page substitutes "Invite sent" for all of them. The discriminator is contact.status being null - every other row in the roster carried status "Approved" and rendered its real name. Consequence for a reader: the member's identity is not displayed at all on this row, only their email, so a maintainer auditing the roster cannot tell who the pending person is from the Name column, and any test asserting the rendered name against the API name will fail for this class of contact.
+The storefront roster replaces a contact's name with the literal "Invite sent" whenever the contact's status is empty OR Invited - the rule is convertToExtendedContact in vc-frontend (unchanged since #929, 2024). So a contact whose status is null renders "Invite sent" even though the API returns its name in name, firstName, lastName and fullName; a maintainer auditing the roster sees only the email for that row, and a test asserting the rendered name against the API name fails for this class of contact. Such a contact is usually one created over REST or by a seeder without a status, not a pending invitation (a real invitee's status is Invited, see KB-BBBC4225).
 
-Second, independent half of the same row: despite status being null, the Active column renders the GREEN tick with img alt "Active". This is not the badge rule misfiring - it is BL-B2B-013's three-tier fallback applied server-side. The effective status is resolved before it reaches the page (membership.Status ?? contact.Status ?? Approved), so the null contact status is materialised as statusInOrganization "Approved" in the xAPI payload, and the page maps that to Active. A model that predicts the badge from the raw contact.status field will therefore mispredict this row as "Inactive"; the field the badge actually consumes is statusInOrganization.
-
-Not established by this pass: which exact condition the page tests for "Invite sent" (status === null vs an invite-pending notion), because that needs the vc-frontend source rather than the live stand; and whether the substitution also suppresses the name in the Filters or search-by-name control.
+The status badge of that row differs by theme. From theme 2.55 the badge is isLockedInOrganization ? Blocked : (statusInOrganization ?? status), and xAPI resolves statusInOrganization to Approved when neither the membership nor the contact carries a status, so the row shows the green Active tick. Up to theme 2.54 the badge reads contact.status only, so the same contact shows Inactive. A model predicting the badge from the raw contact.status is right on theme <= 2.54 and wrong from 2.55. Observed live 2026-10-08 on both (theme 2.59.0 and 2.51.2).
