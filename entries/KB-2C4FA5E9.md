@@ -27,5 +27,11 @@ evidence:
     at: 2026-09-19T14:07:54.272Z
     by: session:local_3b
     splitFrom: KB-B9D1132A
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-08T16:00:49.637Z
+    by: session:62b7421e
+    who: Lenajava1
+    note: "Fresh 2026-10-08: lock by user id succeeded:true; unlock left lockoutEnd at 0001-01-01T00:00:00+00:00 (was null before); sign-in worked again."
 ---
 Measured on vcst-qa 2026-09-19. POST /api/platform/security/users/{userName}/lock returns HTTP 200 with body {"succeeded":false,"errors":[]} and changes nothing — an empty errors array, so there is no message to act on. The same call with the account's GUID id in place of the userName returns {"succeeded":true,"errors":[]} and sets lockoutEnd to 9999-12-31T23:59:59.9999999+00:00. The matching /unlock also takes the id. Note that unlock does not restore lockoutEnd to null: it becomes 0001-01-01T00:00:00+00:00, and a PUT /api/platform/security/users carrying lockoutEnd:null is accepted (succeeded:true) but normalized back to 0001-01-01, so null is not reachable again once an account has been locked. Functionally the min date is unlocked.

@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T15:43:58.647Z",
-  "count": 632,
+  "generated": "2026-10-08T16:03:43.606Z",
+  "count": 635,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1417,7 +1417,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2338,7 +2338,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2648,7 +2648,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5049,7 +5049,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -6754,6 +6754,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-6897B86A",
+      "path": "entries/KB-6897B86A.md",
+      "subject": "createReturn takes the store from the order, not from the token's storeId",
+      "question": "Which storeId does a return created through Mutation.createReturn get?",
+      "anchors": [
+        "Mutation.createReturn",
+        "PUT /api/return"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-68B18ADF",
       "path": "entries/KB-68B18ADF.md",
       "subject": "Page Builder shell Archive confirmation Cancel sends no request, shows no toast and leaves the page unchanged",
@@ -7474,7 +7491,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7911,6 +7928,23 @@
       "status": "active",
       "trust": 2,
       "disputed": 2
+    },
+    {
+      "id": "KB-79B30FDE",
+      "path": "entries/KB-79B30FDE.md",
+      "subject": "organizationReturns checks the view permission live on each request: removing the grant refuses an already-issued token at once, and re-granting answers a token minted while the grant was gone",
+      "question": "Does a role-grant change apply to organizationReturns before the member signs in again?",
+      "anchors": [
+        "Query.organizationReturns",
+        "PUT /api/organizations"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-79DB4E17",
@@ -8792,7 +8826,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9496,6 +9530,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-94700769",
+      "path": "entries/KB-94700769.md",
+      "subject": "A password-expired account's existing token still answers every return query and mutation; only an account lock yields UserLocked",
+      "question": "What do return queries and mutations answer for a token whose account was set passwordExpired after sign-in?",
+      "anchors": [
+        "PUT /api/platform/security/users",
+        "Mutation.submitReturn",
+        "Query.returns"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-94C2ADCC",
       "path": "entries/KB-94C2ADCC.md",
       "subject": "a guest on /cart gets no card form for cart-payment gateways and the order is booked unpaid",
@@ -10069,7 +10121,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
