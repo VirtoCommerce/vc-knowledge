@@ -45,6 +45,11 @@ evidence:
     contradicts: true
     note: "A quoted term is not a pure exact match: * and ? inside the quotes are honoured as wildcards. gtin:\"2945100000*\" -> 1 hit, gtin:\"*\" -> 318, code:\"QA-BC-2945-00?\" -> 8 (Query.products, storeId AGENT-TEST store on B2B-mixed, Elasticsearch8). A strict prefix WITHOUT a wildcard does return 0, as the entry says."
     splitFrom: KB-A0B3940F
+    resolved: split
+    resolvedAt: 2026-10-08T11:34:58.963Z
+    resolvedBy: session:d3bcc6b6
+    resolvedIn: judge/catalog-xapi-20261008
+    resolution: Copied here; it is about wildcards in quoted terms (KB-916CDCA1). The variation-scope clauses re-observed live on three stands.
   - method: observation
     deployment: vcst
     at: 2026-09-28T18:21:48.490Z
@@ -53,5 +58,31 @@ evidence:
     contradicts: true
     note: Through the storefront barcode expansion, the quoted term gtin:"2945100000*" (and the same term on code, manufacturerPartNumber and a short-text property) matched 1 product, so * inside the quotes is honoured as a wildcard and the quoted term is not a pure whole-value match
     splitFrom: KB-A0B3940F
+    resolved: split
+    resolvedAt: 2026-10-08T11:34:59.806Z
+    resolvedBy: session:d3bcc6b6
+    resolvedIn: judge/catalog-xapi-20261008
+    resolution: Copied here; it is about wildcards through the barcode expansion (KB-916CDCA1), not variation scope.
+  - method: observation
+    deployment: vcst_qa
+    conditions: platform=3.1076.0; module:VirtoCommerce.Catalog=3.1048.0; module:VirtoCommerce.XCatalog=3.1023.0; module:VirtoCommerce.Inventory=3.1010.0; module:VirtoCommerce.Seo=3.1005.0; module:VirtoCommerce.ElasticSearch8=3.1011.0; store=B2B-store; setting:Catalog.Search.BarcodeSearchFields=[]
+    at: 2026-10-08T11:34:44.816Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "2026-10-08, fresh products: code:\"<exact>\" 1; strict prefix without wildcard 0 (code and gtin); code:\"<prefix>*\" honoured; ? inside quotes honoured; lower- and upper-cased values match; an escaped double quote matches. Default scope is products only: a variation code/gtin returns 0 without is:variation and 1 with it; an mpn held only by a variation is found with is:product,variation."
+  - method: observation
+    deployment: vcptcore_qa1
+    conditions: platform=3.1077.0-pr-3123-6664; module:VirtoCommerce.Catalog=3.1049.0-pr-910-04a5; module:VirtoCommerce.XCatalog=3.1023.0; module:VirtoCommerce.Inventory=3.1010.0; module:VirtoCommerce.Seo=3.1006.0-pr-22-7ef9; module:VirtoCommerce.ElasticSearch8=3.1011.0; store=B2B-store
+    at: 2026-10-08T11:34:46.540Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "2026-10-08, fresh products: code:\"<exact>\" 1; strict prefix without wildcard 0 (code and gtin); code:\"<prefix>*\" honoured; ? inside quotes honoured; lower- and upper-cased values match; an escaped double quote matches. Default scope is products only: a variation code/gtin returns 0 without is:variation and 1 with it; an mpn held only by a variation is found with is:product,variation."
+  - method: observation
+    deployment: vcptcore_stable
+    conditions: platform=3.1039.12; module:VirtoCommerce.Catalog=3.1029.6; module:VirtoCommerce.XCatalog=3.1007.4; module:VirtoCommerce.Inventory=3.1003.0; module:VirtoCommerce.Seo=3.1004.0; module:VirtoCommerce.ElasticSearch8=3.1007.0; store=B2B-store
+    at: 2026-10-08T11:34:48.168Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "2026-10-08, fresh products: code:\"<exact>\" 1; strict prefix without wildcard 0 (code and gtin); code:\"<prefix>*\" honoured; ? inside quotes honoured; lower- and upper-cased values match; an escaped double quote matches. Default scope is products only: a variation code/gtin returns 0 without is:variation and 1 with it; an mpn held only by a variation is found with is:product,variation."
 ---
 In xAPI products(storeId, filter) the default scope is products only: a variation is found with is:variation code:"...", and a manufacturerPartNumber held only by a variation is found with is:product,variation manufacturerPartNumber:"..." (1 hit; the parent does not match).

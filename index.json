@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:18.554Z",
+  "generated": "2026-10-08T12:22:19.120Z",
   "count": 612,
   "entries": [
     {
@@ -5886,7 +5886,7 @@
     {
       "id": "KB-5B2C8995",
       "path": "entries/KB-5B2C8995.md",
-      "subject": "With the admin profile language set to German, Debug SEO links renders Stage 0, the Candidates blade, its columns, footnote and the catalog rejection reasons in German, with no raw keys or codes",
+      "subject": "With the admin profile language set to German, Debug SEO links renders Stage 0, the Candidates blade, its columns, footnote and the catalog rejection reasons in German; the store label reads 'Geschäft' on Seo 3.1006.0-alpha.101 and the released 3.1004-3.1005, 'Shop' on 3.1006.0-pr-22",
       "question": "Are the Debug SEO links Stage 0 / Candidates texts and rejection reasons localized in the Admin UI?",
       "anchors": [
         "GET /api/seoinfos/explain",
@@ -5900,8 +5900,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-5B2E99AB",
@@ -6249,8 +6250,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 5,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-62D97984",
@@ -9040,8 +9042,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 2
+      "trust": 6,
+      "disputed": 1,
+      "resolved": 1
     },
     {
       "id": "KB-91DF8883",
@@ -10267,8 +10270,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-A3CE7FBA",
@@ -15057,7 +15061,7 @@
     {
       "id": "KB-EE6A5543",
       "path": "entries/KB-EE6A5543.md",
-      "subject": "Fulfillment-center search returns centers in arbitrary order and its projection omits code",
+      "subject": "Fulfillment-center search returns centers ordered by name, so its first result is not necessarily the store's own center; a fulfillment center has no code at all",
       "question": "Can I rely on the order or the code field of fulfillment-center search results?",
       "questions": [
         "When seeding stock, is it safe to pick the first warehouse the search returns?",
@@ -15076,8 +15080,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-EEE4C4BB",
@@ -15512,8 +15517,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 2
+      "trust": 6,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-F320B037",
