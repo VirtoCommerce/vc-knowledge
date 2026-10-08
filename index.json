@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T11:41:29.791Z",
-  "count": 615,
+  "generated": "2026-10-08T12:22:40.334Z",
+  "count": 616,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2122,7 +2122,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3568,7 +3568,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -5367,7 +5367,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -8730,7 +8730,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-8C054BAE",
@@ -11289,6 +11289,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-B1E9DA93",
+      "path": "entries/KB-B1E9DA93.md",
+      "subject": "The sales-rep hub dashboard \"My activity\" widget stays on skeleton placeholders for over 20 s after /company/dashboard opens, while /company/activities shows its badge counts within about 3 s",
+      "question": "How long does the My activity widget on the sales-rep dashboard take to load compared with the My activity page?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/activities"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=sales-rep-advanced",
+        "viewport=desktop-1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B2BA7561",
       "path": "entries/KB-B2BA7561.md",
       "subject": "Admin SPA \"Debug SEO links Candidates\" blade (Stage 0) renders an 8-column ui-grid; only the Rejection reasons cells carry a hover title, Object ID is never fully visible even maximized",
@@ -11740,7 +11759,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-B9C8ECD3",
@@ -15688,7 +15707,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
