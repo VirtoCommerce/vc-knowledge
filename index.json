@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:18.006Z",
+  "generated": "2026-10-08T12:22:18.554Z",
   "count": 612,
   "entries": [
     {
@@ -2422,7 +2422,7 @@
     {
       "id": "KB-29A75D95",
       "path": "entries/KB-29A75D95.md",
-      "subject": "storefront theme presets are bundled light/dark pairs and dark mode comes only from a dark preset",
+      "subject": "Storefront theme presets are bundled light/dark pairs; dark mode is available whenever the active preset has a dark pair, follows the OS in auto mode and is switchable by any shopper",
       "question": "How does the storefront get into dark mode, and why does /assets/presets/{name}.json return 404?",
       "questions": [
         "My computer is in dark mode -- why does the shop still look light?",
@@ -2443,8 +2443,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-2A7CB639",
@@ -3833,7 +3834,7 @@
     {
       "id": "KB-40B9AEF4",
       "path": "entries/KB-40B9AEF4.md",
-      "subject": "member keyword search misses hyphenated organization names",
+      "subject": "Member keyword search misses an organization only when its Member document is absent from the search index; hyphenated names are found normally",
       "question": "Does POST /api/members/search with keyword find an organization named like AGENT-TEST-Org-Kingsbridge-Imports-20260514?",
       "questions": [
         "Why can't I find an organization by its full name in the members search?",
@@ -3853,8 +3854,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-40BBC91A",
@@ -8759,7 +8761,7 @@
     {
       "id": "KB-8C530141",
       "path": "entries/KB-8C530141.md",
-      "subject": "A store's stock is read from its main fulfillment center, and stock elsewhere leaves the product at zero",
+      "subject": "A store's stock counts on its main AND additional fulfillment centers; stock on a fulfillment center not assigned to the store leaves the product at zero",
       "question": "Which fulfillment centers' stock counts toward a store's product availability?",
       "questions": [
         "Why does the shop say out of stock when the warehouse clearly has units?",
@@ -8781,8 +8783,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8DA09FE8",
