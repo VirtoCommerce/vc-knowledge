@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:14.098Z",
+  "generated": "2026-10-08T12:22:14.688Z",
   "count": 612,
   "entries": [
     {
@@ -13439,8 +13439,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 3
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 3
     },
     {
       "id": "KB-D7F08A26",
@@ -13875,7 +13876,7 @@
     {
       "id": "KB-DCE536F0",
       "path": "entries/KB-DCE536F0.md",
-      "subject": "Admin loyalty mission blade hides server validation messages and blanks the mission tree after a failed save",
+      "subject": "Admin loyalty mission blade: up to Loyalty 3.1008 it hid server validation messages and blanked the mission tree after a failed save; from Loyalty 3.1009 with platform 3.1074 it shows the message and keeps the form",
       "question": "What does the Admin loyalty mission blade show when a save is rejected with validation errors?",
       "questions": [
         "Why does the loyalty mission screen just say Bad request without telling me what is wrong?",
@@ -13897,8 +13898,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 3
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 3
     },
     {
       "id": "KB-DD67E1FA",
