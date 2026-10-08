@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T13:41:05.910Z",
-  "count": 621,
+  "generated": "2026-10-08T13:47:57.689Z",
+  "count": 622,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1143,7 +1143,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5180,6 +5180,26 @@
         "locale=ru-ru",
         "surface=storefront-ui",
         "viewport=1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-50B4A5C1",
+      "path": "entries/KB-50B4A5C1.md",
+      "subject": "On a stale save (HTTP 412) the Page Builder Designer shows a transient red error toast, keeps the author's unsaved edit on screen and leaves Save enabled",
+      "question": "What does the Page Builder Designer show when a save is rejected because another author saved the page first?",
+      "anchors": [
+        "POST /api/page-builder-pages/grouped/{groupId}/content",
+        "GET /api/page-builder-pages/grouped/{groupId}/content",
+        "/Modules/$(VirtoCommerce.PageBuilderModule)/Content/page-builder-designer/index.html"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "role=administrator",
+        "surface=admin-designer"
       ],
       "plane": "experiential",
       "status": "active",
