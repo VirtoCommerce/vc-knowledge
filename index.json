@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:40.334Z",
-  "count": 616,
+  "generated": "2026-10-08T13:18:05.741Z",
+  "count": 618,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3396,7 +3396,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4176,6 +4176,26 @@
         "browser=chrome",
         "framework=@vc-shell/framework@2.6.1",
         "surface=vendor-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-45F13A37",
+      "path": "entries/KB-45F13A37.md",
+      "subject": "An order-owned configuration file is readable by the order's buyer and admin, refused for any other buyer and anonymous",
+      "question": "Who can read GET /api/files/{id} for a product-configuration file after the cart is converted with createOrderFromCart?",
+      "anchors": [
+        "GET /api/files/{id}",
+        "Mutation.createOrderFromCart",
+        "Query.order"
+      ],
+      "scope": [
+        "file-scope=product-configuration",
+        "surface=rest",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13610,6 +13630,25 @@
       "scope": [
         "module=virtocommerce.pushmessages",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D85D01D0",
+      "path": "entries/KB-D85D01D0.md",
+      "subject": "An unattached product-configuration file is readable anonymously by its id URL, before and after the VCST-5995 fix",
+      "question": "Can anonymous or another user read GET /api/files/{id} for an unattached file uploaded to the product-configuration scope?",
+      "anchors": [
+        "GET /api/files/{id}",
+        "POST /api/files/product-configuration"
+      ],
+      "scope": [
+        "file-scope=product-configuration",
+        "owner=empty",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
