@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T17:26:55.022Z",
-  "count": 641,
+  "generated": "2026-10-08T17:32:55.075Z",
+  "count": 643,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1244,6 +1244,23 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1450B943",
+      "path": "entries/KB-1450B943.md",
+      "subject": "At 768-799 px the organization returns table breaks RMA, Date and Status values mid-word (e.g. 'Reques/ted', '10/8/20/26')",
+      "question": "Do the returns table cells on /account/returns?scope=organization break dates and statuses mid-word at tablet width?",
+      "anchors": [
+        "/account/returns?scope=organization"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=768-799"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4366,6 +4383,23 @@
       "scope": [
         "module=pages",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4902A732",
+      "path": "entries/KB-4902A732.md",
+      "subject": "Return details show the 'Purchase order reference' row only when the return has a customerReference; with none set the row is absent",
+      "question": "Is the \"Purchase order reference\" row shown on /account/returns/{id} when the return has no customer reference?",
+      "anchors": [
+        "/account/returns/{id}",
+        "Mutation.createReturn"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
