@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T09:41:51.844Z",
-  "count": 611,
+  "generated": "2026-10-08T09:47:51.882Z",
+  "count": 612,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -8658,7 +8658,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14719,6 +14719,24 @@
       "scope": [
         "module=taskmanagement",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EAE167D3",
+      "path": "entries/KB-EAE167D3.md",
+      "subject": "At 375px /company/tasks renders each task as a stacked mobile card with the row action (Mark as complete / Reopen) on its own line; canceled tasks get no row action at any width",
+      "question": "How does /company/tasks lay out a task row and its action at a 375px phone viewport, and which tasks have no row action?",
+      "anchors": [
+        "/company/tasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "viewport=375"
       ],
       "plane": "experiential",
       "status": "active",
