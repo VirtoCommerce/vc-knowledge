@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T09:16:03.873Z",
-  "count": 606,
+  "generated": "2026-10-08T09:18:39.741Z",
+  "count": 608,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4084,6 +4084,24 @@
         "KB-C7E16C35"
       ],
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-452D7913",
+      "path": "entries/KB-452D7913.md",
+      "subject": "Opening an existing CMS page in Admin Content > Pages calls GET /api/pagebuilder/git/legacy-draft, gets 404 and raises a '404: Not found' error toast",
+      "question": "What happens in the Admin SPA when an existing published page is opened from Content > Pages on the PageBuilder 3.1033.0-pr-170 build?",
+      "anchors": [
+        "GET /api/pagebuilder/git/legacy-draft",
+        "/workspace/content"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule@3.1033.0-pr-170-236e",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -15750,6 +15768,23 @@
         "surface=admin-ui",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F87110BF",
+      "path": "entries/KB-F87110BF.md",
+      "subject": "GET /api/members/search is not a search route: it returns 200 with an empty body; member search is POST /api/members/search",
+      "question": "Does GET /api/members/search?memberType=Contact&take=10 return member search results?",
+      "anchors": [
+        "GET /api/members/search",
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
