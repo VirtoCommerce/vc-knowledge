@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T14:56:53.854Z",
-  "count": 624,
+  "generated": "2026-10-08T15:29:15.520Z",
+  "count": 626,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1417,7 +1417,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2338,7 +2338,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3907,7 +3907,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7480,6 +7480,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-74682777",
+      "path": "entries/KB-74682777.md",
+      "subject": "A platform administrator's storefront-grant token carries role __administrator and no xapi:my_organization permission claims; organizationReturns refuses an administrator who is not a member",
+      "question": "What permission claims does an administrator's token carry, and does an administrator reach an organization's returns?",
+      "anchors": [
+        "POST /connect/token",
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-747FEC71",
       "path": "entries/KB-747FEC71.md",
       "subject": "Admin Returns: a decided line keeps its Price editable and the Line items Save persists it",
@@ -8700,6 +8717,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-890E6A04",
+      "path": "entries/KB-890E6A04.md",
+      "subject": "Query.return and organizationReturns do not compare the store: a holder signed in to one store reads, and can list by passing another storeId, the organization's returns of another store",
+      "question": "Can an organization-returns holder read a return their organization raised in a different store?",
+      "anchors": [
+        "Query.return",
+        "Query.organizationReturns",
+        "/account/returns/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
