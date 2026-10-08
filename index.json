@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:19.120Z",
+  "generated": "2026-10-08T12:22:19.706Z",
   "count": 612,
   "entries": [
     {
@@ -1733,7 +1733,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 1
     },
     {
@@ -3282,8 +3282,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-35F25BEE",
@@ -5511,7 +5512,7 @@
     {
       "id": "KB-55D8DE51",
       "path": "entries/KB-55D8DE51.md",
-      "subject": "deleting a detached member's account under Security > Users is not always possible",
+      "subject": "Deleting a detached member's account under Security > Users: failed with ConcurrencyFailure on the September vcptcore_stable build after an invitation walk-through; works on current builds",
       "question": "After a storefront member deletion, can the surviving account always be deleted under Security > Users?",
       "questions": [
         "How do I fully get rid of a person after removing them from a company on the storefront?",
@@ -5531,8 +5532,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-563D7FE5",
@@ -9606,7 +9608,7 @@
     {
       "id": "KB-9912A219",
       "path": "entries/KB-9912A219.md",
-      "subject": "storefront Delete member only detaches the contact from the organization and leaves the account and its role",
+      "subject": "Storefront Delete member (removeMemberFromOrganization) deletes no account or contact; on current builds it marks the membership Deleted and the contact still lists the organization",
       "question": "What does deleting a member from the storefront company members list actually delete?",
       "questions": [
         "If our company admin removes me from the team, is my login deleted too?",
@@ -9628,8 +9630,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-996BDF08",
@@ -12429,7 +12432,7 @@
     {
       "id": "KB-C4DC8774",
       "path": "entries/KB-C4DC8774.md",
-      "subject": "me.contact.addresses default order is not insertion order and changes when addresses are re-created",
+      "subject": "me.contact.addresses default order is name ascending; addresses without a name come first, ordered by address id, so re-creating them reorders them",
       "question": "In what order does xAPI me.contact.addresses return a customer's addresses by default?",
       "questions": [
         "In what order are a customer's saved addresses returned by default?",
@@ -12453,8 +12456,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-C55BBF2E",
@@ -14917,7 +14921,7 @@
     {
       "id": "KB-ED01C2A4",
       "path": "entries/KB-ED01C2A4.md",
-      "subject": "a storefront token without organization_id carries only view permissions",
+      "subject": "A storefront token without organization_id takes the role of the contact's first stored organization; organization_id (either casing) picks the membership",
       "question": "How do I get an organization-scoped storefront token from /connect/token so me.permissions reflects that organization's role?",
       "questions": [
         "Why does my company account say I lack permission to edit the organization right after signing in?",
@@ -14941,8 +14945,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-ED3A631C",
