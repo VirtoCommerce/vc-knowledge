@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T14:08:30.006Z",
-  "count": 623,
+  "generated": "2026-10-08T14:56:53.854Z",
+  "count": 624,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5016,6 +5016,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-4E9C8D27",
+      "path": "entries/KB-4E9C8D27.md",
+      "subject": "On Return 3.1005.0-pr-28, pre-existing admin-created returns keep storeId, customerId and customerName null even where organizationId/organizationName were backfilled from the order",
+      "question": "After the ReturnOrganization migration, which snapshot fields do legacy returns carry, and does the migration fill storeId?",
+      "anchors": [
+        "POST /api/return/search",
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "surface=admin-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4EDC989E",
       "path": "entries/KB-4EDC989E.md",
       "subject": "xAPI resolves a contact's current organization from contact.organizations, not from the OrganizationMembership entity",
@@ -6032,7 +6049,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9959,7 +9976,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {

@@ -16,5 +16,11 @@ evidence:
     deployment: vcptcore_dev
     at: 2026-10-06T17:53:23.327Z
     by: session:b6bd53fc
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-08T14:50:56.073Z
+    by: session:62b7421e
+    who: Lenajava1
+    note: Theme 2.60.0-pr-2523-9e4e (merge of dev into the PR branch; returns files differ from 3f1b9c6 only by VCST-6107 contrast classes). A non-holder org member opening /account/returns?scope=organization saw no tab and the own list ("There are no returns yet"); console 0 errors.
 ---
 On theme 2.59.0-pr-2523, /account/returns shows "My returns" plus a tab named after the selected organization (?scope=organization) when the token carries xapi:my_organization:return:view; the tab adds a sortable Buyer name column and an organization search placeholder. A colleague's return opens read-only with a "Requested by" row and no Cancel or Edit. Without the permission there is no tab and ?scope=organization silently shows the own list (client-side, no request). The tab follows the organization switcher. After a revoke the tab stays, even across a reload, until a new access token, and opening it routes to /403. At 375 px the organization label truncates with an ellipsis (about 108 px) and the full name is in title and the accessible name.
