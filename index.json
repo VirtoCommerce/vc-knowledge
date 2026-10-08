@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T22:02:14.229Z",
-  "count": 651,
+  "generated": "2026-10-08T22:15:36.416Z",
+  "count": 652,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2328,6 +2328,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 9,
+      "disputed": 0
+    },
+    {
+      "id": "KB-25184C11",
+      "path": "entries/KB-25184C11.md",
+      "subject": "The Admin Settings blade labels a setting from the localization key settings.<name>.title, else the descriptor displayName, else the raw setting name; the help text shows the raw key settings.<name>.description when that key is missing",
+      "question": "Where does the Admin Settings blade take a setting's title and help text from, and what does it show when the module ships no localization for that setting?",
+      "anchors": [
+        "GET /api/platform/localization",
+        "GET /api/platform/settings/v2/global/schema",
+        "/workspace/settings"
+      ],
+      "scope": [
+        "locale=en",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10955,7 +10974,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
