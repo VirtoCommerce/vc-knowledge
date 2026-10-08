@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T02:33:56.546Z",
-  "count": 597,
+  "generated": "2026-10-08T07:49:03.364Z",
+  "count": 599,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3609,6 +3609,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-3F58D8D5",
+      "path": "entries/KB-3F58D8D5.md",
+      "subject": "Shared Component create resolves storeId case-insensitively but stores it as sent — \"b2b-store\" is accepted (201) and saved lowercase, yet stays reachable from the canonical store",
+      "question": "Does POST /api/page-builder-shared-components accept a storeId that differs only in letter case from a real store, and is the component reachable afterwards?",
+      "anchors": [
+        "POST /api/page-builder-shared-components",
+        "POST /api/page-builder-shared-components/search"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3F7C78F6",
       "path": "entries/KB-3F7C78F6.md",
       "subject": "wishlists have no REST and no Admin surface",
@@ -5393,6 +5411,24 @@
         "KB-5E5D7065"
       ],
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-54E50A50",
+      "path": "entries/KB-54E50A50.md",
+      "subject": "POST /api/page-builder-shared-components rejects a storeId that does not exist with 400 \"Store '<id>' does not exist.\" and persists nothing; the store-scope 403 is evaluated before that lookup",
+      "question": "What does POST /api/page-builder-shared-components return for a storeId that does not exist, and is anything persisted?",
+      "anchors": [
+        "POST /api/page-builder-shared-components",
+        "POST /api/page-builder-shared-components/search"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
