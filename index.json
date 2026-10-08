@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T07:49:03.364Z",
-  "count": 599,
+  "generated": "2026-10-08T08:50:03.663Z",
+  "count": 602,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -799,7 +799,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -3746,6 +3746,24 @@
       "scope": [
         "surface=admin-ui",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-405D18BB",
+      "path": "entries/KB-405D18BB.md",
+      "subject": "Page Builder image URLs picked from the Asset Library are stored with a raw space in the 'Page Builder' folder segment but a percent-encoded file name",
+      "question": "How is an Asset Library image URL encoded when the Designer picker stores it in page content?",
+      "anchors": [
+        "POST /api/page-builder-pages/grouped/{groupId}/content",
+        "Query.pageDocument"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=page-builder-designer"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11162,6 +11180,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-B2E4D4A5",
+      "path": "entries/KB-B2E4D4A5.md",
+      "subject": "Page Builder shell Publish, Unpublish and Archive complete without any success toast, while Save, Save content and Load content do show one",
+      "question": "Does the Page Builder shell show a success notification after Publish, Unpublish or Archive of a page?",
+      "anchors": [
+        "/apps/page-builder-shell",
+        "POST /api/page-builder-pages/grouped/publishing/{groupId}",
+        "POST /api/page-builder-pages/grouped/archive"
+      ],
+      "scope": [
+        "module=page-builder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B38AEE58",
       "path": "entries/KB-B38AEE58.md",
       "subject": "The lists page badge collapses organization-scoped and world-readable lists into one Shared state",
@@ -12125,6 +12162,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-C3D589EA",
+      "path": "entries/KB-C3D589EA.md",
+      "subject": "Page Builder Clone names the copy '<name> (copy)' / '<permalink>-copy' and increments to '(copy N)' / '-copy-N' when cloning a copy, but cloning the original twice yields duplicate '(copy)' names and permalinks",
+      "question": "How does Page Builder name and permalink a cloned page, and what happens on a second clone?",
+      "anchors": [
+        "/apps/page-builder-shell",
+        "POST /api/page-builder-pages/grouped",
+        "POST /api/page-builder-pages/grouped/{targetGroupId}/content/{sourceGroupId}"
+      ],
+      "scope": [
+        "module=page-builder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C4346EB2",
       "path": "entries/KB-C4346EB2.md",
       "subject": "A pre-checked auto-promotion gift on the cart page silently becomes a zero-price line of the placed order without showing in the cart table, count or subtotal",
@@ -12846,7 +12902,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
