@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-07T19:40:28.062Z",
-  "count": 593,
+  "generated": "2026-10-08T02:08:16.185Z",
+  "count": 595,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3511,7 +3511,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4047,6 +4047,25 @@
         "browser=chrome",
         "framework=@vc-shell/framework@2.6.1",
         "surface=vendor-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-47727A18",
+      "path": "entries/KB-47727A18.md",
+      "subject": "Switching organization from the storefront account menu exchanges the token and fully reloads every open storefront tab; the first GA4 hit of each reloaded page carries the new organization_id, and a product page that was open re-sends view_item under the new organization.",
+      "question": "After a multi-org member switches organization in the header account menu, which organization_id do subsequent GA4 hits carry, and does the page reload?",
+      "anchors": [
+        "/connect/token",
+        "/company/activities"
+      ],
+      "scope": [
+        "feature=google-analytics-user-properties",
+        "surface=storefront-ui",
+        "user=multi-organization-member"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11479,6 +11498,25 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B8602F6B",
+      "path": "entries/KB-B8602F6B.md",
+      "subject": "On a cold (full) load of a product detail page the storefront header Account menu button renders empty for a multi-org member — no organization name and no user name — while home and catalog cold loads show \"Org / Name\".",
+      "question": "Why is the header account button blank (no org / user name) on a product page after a reload?",
+      "anchors": [
+        "/books/notebook-red-panda-a5-45-sheets",
+        "/homes/apartments/18e481-st-kilda-road-for-sale"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=multi-organization-member",
+        "viewport=desktop-1920"
       ],
       "plane": "experiential",
       "status": "active",
