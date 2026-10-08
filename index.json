@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T21:13:19.562Z",
-  "count": 643,
+  "generated": "2026-10-08T22:02:14.229Z",
+  "count": 651,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2657,6 +2657,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-2C04A4E6",
+      "path": "entries/KB-2C04A4E6.md",
+      "subject": "Sales Rep cart statistics item quantities and top-seller units include auto-added gift lines",
+      "question": "Does salesRepCustomerCartStatistics selectedItemQuantity (and salesRepTopSellers units) count gift line items that a promotion adds to the cart or order?",
+      "anchors": [
+        "Query.salesRepCustomerCartStatistics",
+        "Query.salesRepTopSellers",
+        "GET /api/carts/{id}"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-2C4FA5E9",
       "path": "entries/KB-2C4FA5E9.md",
       "subject": "Platform account lock and unlock succeed only when called with the user id, and unlock leaves lockoutEnd at the minimum date",
@@ -3488,7 +3506,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4624,6 +4642,24 @@
         "KB-27B4CD10"
       ],
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4BC33F51",
+      "path": "entries/KB-4BC33F51.md",
+      "subject": "A changed SalesRep.Statistics setting is returned by GET /api/platform/settings/{name} on every instance within about two seconds, with no instance seen serving the old value",
+      "question": "After a module setting is changed, do all backend instances return the new value from GET /api/platform/settings/{name}, and how quickly?",
+      "anchors": [
+        "GET /api/platform/settings/{name}",
+        "PUT /api/platform/settings"
+      ],
+      "scope": [
+        "layer=platform-settings-cache",
+        "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7078,6 +7114,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-6B6030B5",
+      "path": "entries/KB-6B6030B5.md",
+      "subject": "vcst_qa serves the scoped sales-rep GraphQL endpoint from at least two backend instances with independent in-memory caches, and cookie-less requests spread across them",
+      "question": "Does vcst_qa run more than one backend instance, and do cookie-less requests to /graphql/sales-rep reach different instances' memory caches?",
+      "anchors": [
+        "POST /graphql/sales-rep",
+        "Query.salesRepTopSellers"
+      ],
+      "scope": [
+        "layer=platform-cache",
+        "module=sales-rep",
+        "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6C3FA2B7",
       "path": "entries/KB-6C3FA2B7.md",
       "subject": "Storefront cart keeps its applied coupon across sign-out / sign-in",
@@ -7472,6 +7527,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7056B9DA",
+      "path": "entries/KB-7056B9DA.md",
+      "subject": "POST /api/platform/settings silently ignores a null value, so a stored module setting cannot be returned to unset through the REST API",
+      "question": "Can POST /api/platform/settings (or POST /api/platform/settings/v2/global/values) with value null return a stored global setting to unset / its default?",
+      "anchors": [
+        "POST /api/platform/settings",
+        "POST /api/platform/settings/v2/global/values",
+        "GET /api/platform/settings/{name}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -9349,6 +9422,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-912C89CE",
+      "path": "entries/KB-912C89CE.md",
+      "subject": "Sales Rep statistics cache evictions reach the other backend replica before the next read: no stale read on any pod after a rep cart, checkout or admin order change",
+      "question": "After a rep's cart edit, checkout or an admin order status change, does a cached sales-rep statistic (salesRepCustomerCartStatistics, salesRepCustomerOrderStatistics, salesRepCustomerCounts, salesRepCustomers, salesRepTopSellers, the filter-rule vocabularies) read fresh on the OTHER backend replica?",
+      "anchors": [
+        "Query.salesRepCustomerCartStatistics",
+        "Query.salesRepCustomerOrderStatistics",
+        "Query.salesRepCustomerCounts",
+        "Query.salesRepCustomers",
+        "Query.salesRepTopSellers",
+        "Mutation.createOrderFromCart"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9139A1A3",
       "path": "entries/KB-9139A1A3.md",
       "subject": "mergeCart takes the source cart as secondCartId, not cartId",
@@ -10841,6 +10935,23 @@
       "scope": [
         "principal=admin",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A5A6CA94",
+      "path": "entries/KB-A5A6CA94.md",
+      "subject": "The eight SalesRep.Statistics settings are edited only in the platform Settings blade (Sales Rep > Statistics), shown by their raw names; the store Settings blade has Sales Rep > General only",
+      "question": "Where in the Admin can an operator change the SalesRep.Statistics cache TTL and InvalidateOnChange settings, and are they available per store?",
+      "anchors": [
+        "GET /api/platform/settings/v2/global/schema",
+        "GET /api/platform/settings/v2/tenant/Store/schema"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14167,6 +14278,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-D9D1A006",
+      "path": "entries/KB-D9D1A006.md",
+      "subject": "The backend serves from two replicas with independent in-memory caches, and the INGRESSCOOKIE affinity cookie pins a request to one replica",
+      "question": "How many backend replicas serve /graphql, /graphql/sales-rep and /api requests, and does re-sending the INGRESSCOOKIE pin a request to one pod?",
+      "anchors": [
+        "POST /graphql/sales-rep",
+        "Query.salesRepCustomerCartStatistics",
+        "POST /graphql"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D9DF8E54",
       "path": "entries/KB-D9DF8E54.md",
       "subject": "The storefront serves its index HTML with cache-control max-age=7200, so after a theme deploy a returning browser keeps loading the previous bundle for up to 2 hours",
@@ -16363,6 +16492,30 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F85ADC2B",
+      "path": "entries/KB-F85ADC2B.md",
+      "subject": "A rep's own cart or order change in a served organization makes every org-scoped sales-rep statistic fresh on every instance from the first read after the mutation returns, including cancel, clearCart and removeCart",
+      "question": "After a sales rep changes a cart or an order in a served organization, how soon do the cached statistics on /graphql/sales-rep reflect it on every backend instance?",
+      "anchors": [
+        "POST /graphql/sales-rep",
+        "Query.salesRepCustomerCartStatistics",
+        "Query.salesRepCustomerOrderStatistics",
+        "Mutation.clearCart",
+        "Mutation.removeCart",
+        "PUT /api/order/customerOrders"
+      ],
+      "scope": [
+        "layer=platform-cache",
+        "module=sales-rep",
+        "surface=api",
+        "version=salesrep 3.1013.0-pr-18"
       ],
       "plane": "experiential",
       "status": "active",
