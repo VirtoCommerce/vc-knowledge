@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T13:38:29.094Z",
-  "count": 619,
+  "generated": "2026-10-08T13:41:05.910Z",
+  "count": 621,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4787,6 +4787,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-4D5C890A",
+      "path": "entries/KB-4D5C890A.md",
+      "subject": "A quote-attachments file is readable by anyone until attached to a quote, then by the quote's buyer and admin only",
+      "question": "Who can read GET /api/files/{id} for a file in the quote-attachments scope before and after Mutation.addQuoteAttachments?",
+      "anchors": [
+        "GET /api/files/{id}",
+        "POST /api/files/quote-attachments",
+        "Mutation.addQuoteAttachments"
+      ],
+      "scope": [
+        "file-scope=quote-attachments",
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4D953F8A",
       "path": "entries/KB-4D953F8A.md",
       "subject": "Debug SEO links Candidates blade maps each explain reason code to a fixed English sentence; NoSeoPath is added beside StoreMismatch and LanguageMismatch when that record is the only candidate",
@@ -5091,6 +5111,26 @@
       "scope": [
         "element=barcode-currency-price-filter",
         "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4F996EA3",
+      "path": "entries/KB-4F996EA3.md",
+      "subject": "createQuoteFromCart keeps the configuration file readable: the quote owns the cart's same file url, while clearCart alone still deletes it",
+      "question": "After Mutation.createQuoteFromCart, can the quote's configuration file url still be read with GET /api/files/{id}, and does clearCart still delete cart-owned configuration files?",
+      "anchors": [
+        "Mutation.createQuoteFromCart",
+        "GET /api/files/{id}",
+        "Mutation.clearCart"
+      ],
+      "scope": [
+        "file-scope=product-configuration",
+        "surface=rest",
         "surface=xapi"
       ],
       "plane": "experiential",
