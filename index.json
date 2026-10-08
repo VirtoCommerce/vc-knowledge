@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T15:29:15.520Z",
-  "count": 626,
+  "generated": "2026-10-08T15:42:54.241Z",
+  "count": 630,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4405,7 +4405,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5029,7 +5029,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7414,6 +7414,24 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-735C7B46",
+      "path": "entries/KB-735C7B46.md",
+      "subject": "An org-scoped token for a member whose only membership is blocked: locked gives 200 with no organization and no permissions; Invited, Rejected or Deleted give 400 invalid_grant",
+      "question": "What does POST /connect/token return, and which permission claims does the token carry, when the member's only organization membership is locked or has status Invited, Rejected or Deleted?",
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/customer/organization-memberships/{id}/lock"
+      ],
+      "scope": [
+        "grant=password",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -10037,6 +10055,23 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9EAB5507",
+      "path": "entries/KB-9EAB5507.md",
+      "subject": "A return with null storeId/customerId/customerName cannot be created through REST: every save fills them from the order, and an order-less return is refused",
+      "question": "Can an admin create a return in the legacy shape (storeId, customerId, customerName null) through PUT /api/return?",
+      "anchors": [
+        "PUT /api/return",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=admin-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13504,6 +13539,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-D4914072",
+      "path": "entries/KB-D4914072.md",
+      "subject": "POST /api/platform/security/users/create refuses a customer account without an email, and an update cannot remove it",
+      "question": "Can a customer security account be created or kept without an email address?",
+      "anchors": [
+        "POST /api/platform/security/users/create",
+        "PUT /api/platform/security/users"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D4A064A5",
       "path": "entries/KB-D4A064A5.md",
       "subject": "promotion discount rounding on the cart",
@@ -15061,6 +15113,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-EC27E231",
+      "path": "entries/KB-EC27E231.md",
+      "subject": "An organization-level role is inherited by every member and its permissions land in each member's org-scoped token, even a member with no membership role",
+      "question": "Does a member with no membership role receive an organization-level role's permissions in the /connect/token permission claims?",
+      "anchors": [
+        "PUT /api/organizations",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "grant=password",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EC76F588",
       "path": "entries/KB-EC76F588.md",
       "subject": "there is no paymentMethodCode on an order payment, and shipment spells its sibling differently",
@@ -15145,7 +15215,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-ED3A631C",
