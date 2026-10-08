@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:15.259Z",
+  "generated": "2026-10-08T12:22:15.816Z",
   "count": 612,
   "entries": [
     {
@@ -5715,7 +5715,7 @@
     {
       "id": "KB-59E4B5FC",
       "path": "entries/KB-59E4B5FC.md",
-      "subject": "a configured product as an order line item: stored order loses only sectionId, storefront GraphQL order item exposes five fields",
+      "subject": "A configured product as an order line item: one line with configurationItems; on the 3.1000.x support line the stored order drops sectionId and storefront GraphQL exposes five fields, from XOrder 3.1005 the ids are exposed and from 3.1013 sectionId and sectionName cross",
       "question": "how does a configurable product become a line item on an order",
       "questions": [
         "When I order a customized product, does the order remember which options I picked?",
@@ -5749,8 +5749,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 3
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 3
     },
     {
       "id": "KB-5A0C4200",

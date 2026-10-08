@@ -1,6 +1,6 @@
 ---
 id: KB-59E4B5FC
-subject: "a configured product as an order line item: stored order loses only sectionId, storefront GraphQL order item exposes five fields"
+subject: "A configured product as an order line item: one line with configurationItems; on the 3.1000.x support line the stored order drops sectionId and storefront GraphQL exposes five fields, from XOrder 3.1005 the ids are exposed and from 3.1013 sectionId and sectionName cross"
 plane: experiential
 question: how does a configurable product become a line item on an order
 questions:
@@ -54,6 +54,11 @@ evidence:
     note: "Checked against a real placed order (the entry says it was read off the schema, and that is where it goes wrong). The SCHEMA DIFF it reports is right and the conclusion drawn from it is not. The stored order keeps the product and the quantity: GET /api/order/customerOrders/{id} returned, per Product-type configuration item, productId, sku, quantity, imageUrl, catalogId and categoryId alongside name and type -- so the order does identify the catalog product that was chosen and how many were taken. Comparing the two stored shapes in the modules' own swagger, CartConfigurationItem carries 16 fields and OrderConfigurationItem 15, and the ONLY field the crossing loses is sectionId. What the entry actually describes is the storefront GraphQL projection of an order: OrderConfigurationItemType exposes 5 fields and refuses productId, quantity, sectionId, sku, catalogId, categoryId and imageUrl by validation error. So the loss is in one read surface, not in the record."
     splitFrom: KB-360127D0
     mergedFrom: KB-9DB54091
+    resolved: claim-amended
+    resolvedAt: 2026-10-08T10:55:43.672Z
+    resolvedBy: session:d3bcc6b6
+    resolvedIn: judge/configured-line-item-20261008
+    resolution: "The body states it: the record keeps the product and quantity and drops only sectionId on that build; the September order re-read live 2026-10-08 shows exactly that."
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-13T14:07:00.315Z
@@ -70,6 +75,11 @@ evidence:
     note: "Checked against a real placed order (the entry says it was read off the schema, and that is where it goes wrong). The SCHEMA DIFF it reports is right and the conclusion drawn from it is not. The stored order keeps the product and the quantity: GET /api/order/customerOrders/{id} returned, per Product-type configuration item, productId, sku, quantity, imageUrl, catalogId and categoryId alongside name and type -- so the order does identify the catalog product that was chosen and how many were taken. Comparing the two stored shapes in the modules' own swagger, CartConfigurationItem carries 16 fields and OrderConfigurationItem 15, and the ONLY field the crossing loses is sectionId. What the entry actually describes is the storefront GraphQL projection of an order: OrderConfigurationItemType exposes 5 fields and refuses productId, quantity, sectionId, sku, catalogId, categoryId and imageUrl by validation error. So the loss is in one read surface, not in the record."
     splitFrom: KB-360127D0
     mergedFrom: KB-E1E2716F
+    resolved: claim-amended
+    resolvedAt: 2026-10-08T10:56:14.685Z
+    resolvedBy: session:d3bcc6b6
+    resolvedIn: judge/configured-line-item-20261008
+    resolution: "The body states it: the record keeps the product and quantity and drops only sectionId on that build; the September order re-read live 2026-10-08 shows exactly that."
   - method: observation
     deployment: vcst_qa
     at: 2026-10-05T10:07:31.572Z
@@ -77,5 +87,32 @@ evidence:
     who: Dan-BV
     contradicts: true
     note: "2026-10-05 vcst_qa (XOrder 3.1013.0, Orders 3.1016.0): OrderConfigurationItemType exposes 15 fields including sectionId/productId/sku/quantity, not five; and stored orders DO keep sectionId and sectionName. Both version-bound claims fail on this build; they may still describe another deployment."
+    resolved: version-scoped
+    resolvedAt: 2026-10-08T10:55:44.494Z
+    resolvedBy: session:d3bcc6b6
+    resolvedIn: judge/configured-line-item-20261008
+    resolution: True from XOrder 3.1013 / Orders 3.1016 (live on 3.1014 / 3.1018 2026-10-08); the five-field projection and the missing sectionId belong to the 3.1000.x support line. Body scoped by build.
+  - method: observation
+    deployment: vcptcore_stable
+    conditions: platform=3.1039.12; module:VirtoCommerce.Orders=3.1009.0; module:VirtoCommerce.XOrder=3.1005.0; module:VirtoCommerce.Cart=3.1006.1; module:VirtoCommerce.XCart=3.1021.2; theme=2.51.2; store=B2B-store; role=Administrator; state:order=written 2026-09-14 on Orders 3.1000.4
+    at: 2026-10-08T10:55:42.101Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "Order CO260914-00003 (placed on the September build) read 2026-10-08: one configured line per configured product, no option lines; stored items keep productId, sku, quantity, imageUrl, catalogId, categoryId, sectionId null. GraphQL OrderConfigurationItemType has 14 fields incl. productId, sku, quantity and sectionId String!; selecting sectionId on this order fails \"Cannot return null for a non-null type\"."
+  - method: observation
+    deployment: vcst_qa
+    conditions: platform=3.1076.0; module:VirtoCommerce.Orders=3.1018.0; module:VirtoCommerce.XOrder=3.1014.0; module:VirtoCommerce.Cart=3.1012.0; module:VirtoCommerce.XCart=3.1039.0; theme=2.59.0; store=B2B-store; role=Customer (owner) / Administrator
+    at: 2026-10-08T10:55:42.893Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "Fresh configured order 2026-10-08 (3 sections: Product, Product, Text): one configured line on the base product, extendedPrice rolled up, no option lines; stored items keep sectionId and sectionName matching the chosen sections plus productId, sku, quantity, prices, catalogId, categoryId; GraphQL order(id) returns all 15 OrderConfigurationItemType fields with the same values as REST."
 ---
-The cart line crosses whole: one order line item on the base product, carrying the rolled-up price and its configurationItems, and the option products still do not become lines of their own. Comparing the two STORED shapes in the modules' own swagger settles what the crossing costs: CartConfigurationItem has 16 fields and OrderConfigurationItem has 15, and the one field that does not cross is sectionId. Everything else is kept -- productId, sku, quantity, imageUrl, catalogId, categoryId, type, customText, files -- and a placed order read back through GET /api/order/customerOrders/{id} showed all of them populated per Product-type option alongside name and type, so the order DOES record which catalog product was chosen and how many were taken. Losing sectionId costs the ability to say which question an answer belonged to: two Product sections yield two indistinguishable Product configuration items, their array order is not stable across surfaces, and a configuration offering the same option product in two sections would be unreconstructable. The bigger loss is not in the record but in one read of it: the storefront GraphQL CartConfigurationItemType has eight fields (id, name, type, customText, files, productId, quantity, sectionId), while OrderConfigurationItemType exposes only five -- id, name, type, customText and files -- and refuses productId, quantity, sectionId, sku, catalogId, categoryId and imageUrl with a validation error. So for a Product section a buyer-facing order page has only the chosen option's display NAME to match on, nothing identifying the product or quantity and not which section it answered, while the same order read over REST has the ids. This is read off the deployment's own schema: diff the two type tables on any deployment to confirm or retire it. Note also that a line whose configurationItems is an empty array is a legitimate order line for a configurable product, not a data fault.
+The cart line crosses whole on every build checked: one order line item on the base product, carrying the rolled-up price and its configurationItems, and the option products do not become lines of their own (observed live 2026-10-08 on a fresh order on vcst_qa, and on a September order on vcptcore_stable). A line whose configurationItems is an empty array also exists on a configurable product's order (seen on vcptcore_stable).
+
+What crosses with each configuration item, and what the storefront can read back, depends on the build:
+
+- 3.1000.x support line (vcptcore_stable in September: Orders 3.1000.4, XOrder 3.1000.1): the stored order keeps productId, sku, quantity, imageUrl, catalogId, categoryId, type, customText and files per item, but NOT sectionId - an order written then reads back today with sectionId null on every item. Losing sectionId means two Product sections give two indistinguishable Product items whose array order is not stable across surfaces. The storefront GraphQL OrderConfigurationItemType exposed only id, name, type, customText and files and refused productId, quantity, sectionId, sku, catalogId, categoryId and imageUrl, so a buyer-facing order page had only the option's display name.
+- From XOrder 3.1005.0 (vc-module-x-order #39): OrderConfigurationItemType exposes id, sectionId (non-null String!), name, productId, sku, imageUrl, quantity, type, customText, price, salePrice, extendedPrice, files and product. Observed live 2026-10-08 on XOrder 3.1005.0 / Orders 3.1009.0. Querying sectionId on an order written by the older build, whose stored sectionId is null, fails with "Cannot return null for a non-null type" and nulls every configuration item of that order.
+- From XOrder 3.1013.0 (#44) with Orders 3.1016+: the stored order keeps sectionId and sectionName, each matching the section it was chosen in, and GraphQL adds sectionName (15 fields). Observed live 2026-10-08 on a fresh order on XOrder 3.1014.0 / Orders 3.1018.0. The REST array order of the items can differ from the cart's.
+
+catalogId and categoryId are on the stored order but not on OrderConfigurationItemType on any of these builds.
