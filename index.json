@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T22:15:36.416Z",
-  "count": 652,
+  "generated": "2026-10-08T22:21:36.193Z",
+  "count": 654,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2690,7 +2690,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2992,6 +2992,25 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-30814F3D",
+      "path": "entries/KB-30814F3D.md",
+      "subject": "A cart change in one organization does not evict another organization's cached Sales Rep cart statistics on either backend replica (eviction is per organization, no over-eviction)",
+      "question": "Does a cart change in organization A evict the cached salesRepCustomerCartStatistics of organization B, on the pod that handled the change or on the other pod?",
+      "anchors": [
+        "Query.salesRepCustomerCartStatistics",
+        "Mutation.addItem",
+        "Mutation.changeCartItemQuantity"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8082,6 +8101,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-799A2F5B",
+      "path": "entries/KB-799A2F5B.md",
+      "subject": "A non-rep buyer's cart change in an organization evicts the sales rep's cached cart statistics for that organization on both backend replicas, even though the rep's figure does not change",
+      "question": "Does a cart change by a non-rep buyer of an organization evict the sales rep's cached salesRepCustomerCartStatistics for that organization, including on the other pod?",
+      "anchors": [
+        "Query.salesRepCustomerCartStatistics",
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "actor=non-rep-buyer",
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-799D20A6",
       "path": "entries/KB-799D20A6.md",
       "subject": "a list's share link lives only in the list Settings dialog, editable from the card and view-only from the detail page",
@@ -9458,7 +9496,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14311,7 +14349,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
