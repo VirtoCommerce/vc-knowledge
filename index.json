@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:16.367Z",
+  "generated": "2026-10-08T12:22:16.925Z",
   "count": 612,
   "entries": [
     {
@@ -482,7 +482,7 @@
     {
       "id": "KB-08CC76A3",
       "path": "entries/KB-08CC76A3.md",
-      "subject": "Storefront OTP code step: digits only, auto-submit at 6, 7-digit input cut to the first 6, spaced paste accepted; wrong code shows one message and keeps the digits; Resend clears field+error and says \"New code sent.\"",
+      "subject": "Storefront OTP code step: digits only, auto-submit at 6, 7-digit input cut to the first 6, spaced paste accepted; a wrong code shows one message and, from theme 2.59.0-pr-2477, clears the field; Resend clears field and error and says \"New code sent.\"",
       "question": "How does the storefront OTP code input behave for malformed codes, a wrong code, Resend and Use a different email?",
       "questions": [
         "What happens if I type letters or seven digits into the emailed sign-in code field?",
@@ -507,8 +507,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-097CB5D6",
@@ -6964,7 +6965,7 @@
     {
       "id": "KB-6D7B2ED7",
       "path": "entries/KB-6D7B2ED7.md",
-      "subject": "Storefront OTP sign-in form posts to the storefront origin /api/otp/request, which the storefront ingress answers 405; the form shows an inline generic error plus a global server-error toast",
+      "subject": "Storefront OTP sign-in form posts to the storefront origin /api/otp/request; where the storefront ingress has no route for it the answer is a 405 HTML page and the form shows a generic error",
       "question": "What happens when a guest clicks Continue on the storefront OTP email sign-in form?",
       "questions": [
         "Why does the email code login fail with 'Something went wrong' on the storefront?",
@@ -6988,8 +6989,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-6E56FB4B",
@@ -7765,7 +7767,7 @@
     {
       "id": "KB-7A4C260E",
       "path": "entries/KB-7A4C260E.md",
-      "subject": "user_cannot_login_in_store: storeId must be camelCase and Administrator-type users always get it",
+      "subject": "user_cannot_login_in_store: a customer password grant needs a camelCase storeId of an existing store, checked before the password; Administrator-type users are not refused",
       "question": "What makes /connect/token return user_cannot_login_in_store, and how is it told apart from a wrong credential?",
       "questions": [
         "Why can a back-office administrator not sign in to the online store with the same login?",
@@ -7788,8 +7790,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-7A613BE4",
