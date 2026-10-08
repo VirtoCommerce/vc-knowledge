@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:20.273Z",
-  "count": 612,
+  "generated": "2026-10-08T12:22:59.075Z",
+  "count": 616,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1959,6 +1959,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-1FFA684C",
+      "path": "entries/KB-1FFA684C.md",
+      "subject": "salesRepActivities, salesRepCustomerActivitySummary and salesRepCustomerInsights return data null (no errors) for a caller without sales-rep:access, on both /graphql/sales-rep and the main /graphql, even for the caller's own organization",
+      "question": "What do the sales-rep activity queries return to a non-rep customer member, including for their own organization?",
+      "anchors": [
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerActivitySummary",
+        "Query.salesRepCustomerInsights",
+        "POST /graphql/sales-rep",
+        "POST /api/sales-rep/analytics-diagnostics"
+      ],
+      "scope": [
+        "actor=non-rep-member",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-2073D7AD",
       "path": "entries/KB-2073D7AD.md",
       "subject": "The storefront return wizard clamps the saved quantity but can display a quantity above the returnable maximum",
@@ -2103,7 +2124,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3553,7 +3574,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -5353,7 +5374,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -8503,6 +8524,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-866853C8",
+      "path": "entries/KB-866853C8.md",
+      "subject": "sales-rep activity queries return null for an organization whose rep membership is locked, for a storeId the user cannot sign in to, and for an unknown storeId; a rep in a store-trusted group gets data for the other store",
+      "question": "How do the sales-rep activity queries treat a locked per-organization membership and the storeId argument?",
+      "anchors": [
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerActivitySummary",
+        "/company/activities"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-874B24DD",
       "path": "entries/KB-874B24DD.md",
       "subject": "Buyer quote list filters by login id AND current organization",
@@ -8708,7 +8748,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-8C054BAE",
@@ -11274,6 +11314,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-B1E9DA93",
+      "path": "entries/KB-B1E9DA93.md",
+      "subject": "The sales-rep hub dashboard \"My activity\" widget stays on skeleton placeholders for over 20 s after /company/dashboard opens, while /company/activities shows its badge counts within about 3 s",
+      "question": "How long does the My activity widget on the sales-rep dashboard take to load compared with the My activity page?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/activities"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=sales-rep-advanced",
+        "viewport=desktop-1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B2BA7561",
       "path": "entries/KB-B2BA7561.md",
       "subject": "Admin SPA \"Debug SEO links Candidates\" blade (Stage 0) renders an 8-column ui-grid; only the Rejection reasons cells carry a hover title, Object ID is never fully visible even maximized",
@@ -11726,7 +11785,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-B9C8ECD3",
@@ -15457,6 +15516,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-F2B23200",
+      "path": "entries/KB-F2B23200.md",
+      "subject": "a sales-rep hub widget hidden via the layout editor issues no GraphQL query; hide, move and Reset persist through saveSalesRepLayout per scope",
+      "question": "Does a hidden Sales Rep hub widget still fetch its data, and how is the hub layout persisted?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/activities",
+        "Mutation.saveSalesRepLayout",
+        "Query.salesRepActivities"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F2C1F699",
       "path": "entries/KB-F2C1F699.md",
       "subject": "changeCartItemsQuantity below a product's minimum or off its pack size commits the typed quantity and reports it only through validationErrors",
@@ -15667,7 +15746,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
