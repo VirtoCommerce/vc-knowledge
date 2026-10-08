@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T13:47:57.689Z",
-  "count": 622,
+  "generated": "2026-10-08T14:08:30.006Z",
+  "count": 623,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11441,7 +11441,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -15232,6 +15232,26 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-EEB448C8",
+      "path": "entries/KB-EEB448C8.md",
+      "subject": "Designer toolbar Publish and Unpublish give no toast; while a saved draft differs from the published page, Unpublish is disabled in the Designer and hidden in the shell blade",
+      "question": "What feedback does the Page Builder Designer toolbar give for Publish and Unpublish, and can a page whose draft has unpublished changes be unpublished from the UI?",
+      "anchors": [
+        "POST /api/page-builder-pages/grouped/publishing/{groupId}",
+        "/Modules/$(VirtoCommerce.PageBuilderModule)/Content/page-builder-designer/index.html",
+        "/apps/page-builder-shell"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "role=administrator",
+        "surface=admin-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-EEE4C4BB",
