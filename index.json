@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T09:21:10.858Z",
-  "count": 609,
+  "generated": "2026-10-08T09:41:51.844Z",
+  "count": 611,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5346,7 +5346,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -8640,6 +8640,24 @@
         "KB-1D885AE7",
         "KB-8E1456B8"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8B7F9409",
+      "path": "entries/KB-8B7F9409.md",
+      "subject": "On /company/tasks the day heading and the per-row due date stay in en-US format (\"Oct 8, 2026\") in ru, es, fr, it, pl, pt and sv; only de renders a localized date (\"8. Okt. 2026\")",
+      "question": "Are the dates on the sales-rep Tasks page (/company/tasks day heading and row due line) localized to the storefront language?",
+      "anchors": [
+        "/company/tasks",
+        "/account/orders"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -16058,6 +16076,23 @@
         "role=sales-rep",
         "surface=storefront-ui",
         "viewport=mobile-375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FE02F89F",
+      "path": "entries/KB-FE02F89F.md",
+      "subject": "The All filter on /company/tasks paginates at 15 rows per page (22 tasks -> page 1 of 2) and the filter selection is not reflected in the URL",
+      "question": "How many rows does the All view on /company/tasks show per page, and does the selected filter tab survive navigation?",
+      "anchors": [
+        "/company/tasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
