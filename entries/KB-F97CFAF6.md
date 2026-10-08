@@ -36,5 +36,24 @@ evidence:
     contradicts: true
     note: "Theme 2.59 pr-2500: on the details step (/account/returns/:id/edit) typing past the max (5 -> End -> '0') leaves the spinbutton DISPLAYING '50 of 5 available' after blur, while the saved draft quantity stays 5 (autosave clamps) and Submit becomes enabled once reason+photo exist; a reload shows 5. The select-items step likewise shows '50' in the field while the footer counts 5 items and Continue creates the draft with 5. So the stored value is clamped but the displayed value is not."
     splitFrom: KB-5A6C014E
+    resolved: split
+    resolvedAt: 2026-10-08T10:55:47.196Z
+    resolvedBy: session:d3bcc6b6
+    resolvedIn: judge/returns-limit-20261008
+    resolution: Copied here by a split; it is about what the return wizard displays (KB-2073D7AD). It agrees with this entry that the stored draft is limited only at submit, re-observed live 2026-10-08.
+  - method: observation
+    deployment: vcptcore_qa1
+    conditions: platform=3.1077.0-pr-3123-6664; module:VirtoCommerce.Return=3.1004.0; module:VirtoCommerce.Orders=3.1018.0; module:VirtoCommerce.XOrder=3.1014.0; theme=2.59.0-pr-2506-bb0f; store=B2B-store; setting:Return.AllowedShipmentStatuses=Sent; role=Organization maintainer
+    at: 2026-10-08T10:55:45.583Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "Fresh order 2026-10-08 (lines of 5 and 12): createReturn above the returnable quantity (6/5, 60/5) returns 200 and stores a Draft with the over-limit quantity; updateReturn to 9/5 and 13/12 also 200 and stored; Drafts do not consume returnable quantity; submitReturn is refused with errors RETURN_QUANTITY_UNAVAILABLE \"asked for 9, 5 available\" (first offending line only) and the return stays Draft; within-limit submits go to Requested. After a partial authorize returnable = ordered - approvedQuantity on the decided line - quantities still Requested."
+  - method: observation
+    deployment: vcst_qa
+    conditions: platform=3.1076.0; module:VirtoCommerce.Return=3.1004.0; module:VirtoCommerce.Orders=3.1018.0; module:VirtoCommerce.XOrder=3.1014.0; theme=2.59.0; store=B2B-store; role=Organization maintainer
+    at: 2026-10-08T10:55:46.365Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "Fresh order 2026-10-08 (lines of 5 and 12): createReturn above the returnable quantity (6/5, 60/5) returns 200 and stores a Draft with the over-limit quantity; updateReturn to 9/5 and 13/12 also 200 and stored; Drafts do not consume returnable quantity; submitReturn is refused with errors RETURN_QUANTITY_UNAVAILABLE \"asked for 9, 5 available\" (first offending line only) and the return stays Draft; within-limit submits go to Requested. After a partial authorize returnable = ordered - approvedQuantity on the decided line - quantities still Requested."
 ---
 On the Return module (3.1003 pr-27 build) with theme 2.59 pr-2500, the buyer mutation createReturn with an item quantity above the line's returnable quantity (13 of 12, 261 of 260) returned 200 and created a Draft carrying the over-limit quantity. submitReturn on it is refused and the storefront shows 'Some items are no longer available to return in the quantity you asked for. Adjust the quantities and try again.'; the return stays Draft. So the limit is enforced at submit, not at draft create/update. Returnable quantity after a partial approval is ordered minus held, where a decided line holds approvedQuantity: 500 ordered, 240 requested, 200 approved gave 300 returnable.
