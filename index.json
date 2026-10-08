@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T08:50:03.663Z",
-  "count": 602,
+  "generated": "2026-10-08T09:09:03.772Z",
+  "count": 604,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3533,6 +3533,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-3E1ED222",
+      "path": "entries/KB-3E1ED222.md",
+      "subject": "The designer's top 'Pages' dropdown lists legacy Content pages, and choosing one does not load that page — the designer keeps the current page-builder page's sections",
+      "question": "What happens when a page is selected from the Page Builder designer's top 'Pages' dropdown?",
+      "anchors": [
+        "GET /api/pagebuilder/search",
+        "/Modules/$(VirtoCommerce.PageBuilderModule)/Content/page-builder-designer/index.html#/pages"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3E408000",
       "path": "entries/KB-3E408000.md",
       "subject": "Two active tax providers on one store: tax evaluation returns nothing",
@@ -4788,7 +4806,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11987,6 +12005,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-C066D45F",
+      "path": "entries/KB-C066D45F.md",
+      "subject": "In the Page Builder shell details blade, changing only the Scheduling Start date does not mark the form dirty — Save stays disabled and the new date is discarded",
+      "question": "Can an admin change a page's Scheduling start date from the Page Builder shell page details blade and save it?",
+      "anchors": [
+        "/apps/page-builder-shell/#/page-builder-active/details/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C075BDF9",
       "path": "entries/KB-C075BDF9.md",
       "subject": "reworked Lists menu: Rename edits name and description only; Share is its own dialog",
@@ -13926,7 +13961,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14134,7 +14169,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
