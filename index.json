@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T16:25:25.092Z",
-  "count": 638,
+  "generated": "2026-10-08T17:07:54.904Z",
+  "count": 640,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -554,7 +554,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6522,6 +6522,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-6352B756",
+      "path": "entries/KB-6352B756.md",
+      "subject": "Admin Return list has nine columns incl. a sortable Organization column, and the last header 'Item count' is clipped by the grid-options button at 1920 px",
+      "question": "Which columns does the Admin SPA Return list show, which are sortable, and does the header row fit at 1920 px?",
+      "anchors": [
+        "/workspace/Return",
+        "POST /api/return/search"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-649D673C",
       "path": "entries/KB-649D673C.md",
       "subject": "push message text is rendered as sanitized markdown/HTML",
@@ -11572,6 +11589,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-AFF6282A",
+      "path": "entries/KB-AFF6282A.md",
+      "subject": "Admin Return list shows Create date / Modify date as relative time for recent returns and as 'Mon d, yyyy h:mm:ss am/pm' for older ones",
+      "question": "What format do the Create date and Modify date cells of the Admin SPA Return list use?",
+      "anchors": [
+        "/workspace/Return",
+        "POST /api/return/search"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B142F52E",
       "path": "entries/KB-B142F52E.md",
       "subject": "Rejected UCP update_cart over stock leaves the over-stock quantity in the cart; checkout paths refuse it",
@@ -12361,7 +12395,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
