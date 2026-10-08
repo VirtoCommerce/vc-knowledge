@@ -1,6 +1,6 @@
 ---
 id: KB-C5B17CE2
-subject: Push Messages audience caption omits the condition when the blade is rendered from saved state
+subject: "Push Messages audience caption: on the 2026-09-28 build it collapsed to the picked recipients when the blade was rendered from saved state; from PushMessages 3.1006.0-pr-28 it keeps the condition"
 plane: experiential
 question: Does the Push Messages audience caption name the condition when a message combines a condition with a picked recipient?
 questions:
@@ -33,5 +33,28 @@ evidence:
     who: kutasinaelena
     contradicts: true
     note: On PushMessages 3.1006.0-pr-28-21fe / vc-shell 2.6.1 the caption no longer collapses. With a Custom condition 'Customer type is Employee' plus a picked company, the caption read 'Customers where Customer type is Employee, plus AGENT-TEST-PUSH-PARENT (whole company).' while editing, and after Save + reopening the draft from the Drafts list it still read exactly that, with the headline still 4 recipients and the company chip intact. No 'Sending to X.' collapse, and no need to touch a condition control to re-derive it. Looks fixed since the 2026-09-28 build this entry was taken on; superseded by KB-D9F48037.
+    resolved: version-scoped
+    resolvedAt: 2026-10-08T11:15:39.331Z
+    resolvedBy: session:d3bcc6b6
+    resolvedIn: judge/push-messages-20261008
+    resolution: No collapse from 3.1006.0-pr-28, live on 3.1008.0 on two stands including a full reload; the collapse belonged to the 2026-09-28 build.
+  - method: observation
+    deployment: vcptcore_qa1
+    conditions: platform=3.1077.0-pr-3123-6664; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1028.0; vc-shell=2.6.1; role=Administrator
+    at: 2026-10-08T11:15:35.122Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "2026-10-08: Employee condition plus a picked person saved as Draft (memberQuery membertype:Employee + memberIds); caption \"Customers where Customer type is Employee, plus <name>.\" after Save, after reopening from Drafts and All messages, and after a full reload via deep link."
+  - method: observation
+    deployment: vcst_qa
+    conditions: platform=3.1076.0; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1029.0; vc-shell=2.6.1; role=Administrator
+    at: 2026-10-08T11:15:35.971Z
+    by: session:d3bcc6b6
+    who: Dan-BV
+    note: "2026-10-08: same after a full reload via deep link."
 ---
-Blade: Push Messages > Audience > estimate panel. With BOTH a condition and an explicitly picked person, the one-line audience caption is correct only while the audience is being edited. Built live it reads 'Customers where Customer type is Employee, plus John Mitchell.'; after Save, and again after closing and reopening the message from the list, the SAME audience renders as 'Sending to John Mitchell.' — the condition is omitted although the condition row is visibly present and the headline reads 2 recipients / members matched 3 / people in scope 2. Touching any condition control re-derives the caption and it becomes correct again. Stored data and 'Show generated query' are correct throughout (membertype:Employee + 'Plus 1 explicitly selected in MemberIds. The send job unions the two sets.'). The caption understates the audience — a display-only defect whose error direction is permissive.
+With a custom condition plus a picked recipient (e.g. "Customer type is Employee" plus a person), the audience caption reads "Customers where Customer type is Employee, plus <name>." while editing.
+
+On the build observed 2026-09-28, once the blade was rendered from saved state (after Save, or reopening the draft) the caption collapsed to "Sending to <name>." and omitted the condition until a condition control was touched.
+
+From PushMessages 3.1006.0-pr-28 (and on the released 3.1008.0) it does not collapse: the saved draft (memberQuery "membertype:Employee" plus memberIds) re-renders with the full caption, the same recipient headline and the chip intact - right after Save, after closing and reopening from Drafts or All messages, and after a full page reload via a deep link to the details page - without touching any condition control. Observed live 2026-10-08 on PushMessages 3.1008.0 (vc-shell 2.6.1) on vcptcore_qa1 and vcst_qa.

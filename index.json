@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:17.470Z",
+  "generated": "2026-10-08T12:22:18.006Z",
   "count": 612,
   "entries": [
     {
@@ -11849,7 +11849,7 @@
     {
       "id": "KB-BBC75DEA",
       "path": "entries/KB-BBC75DEA.md",
-      "subject": "Push Messages recipient picker renders same-named people and companies with no discriminator",
+      "subject": "Push Messages recipient picker: same-named people and companies are indistinguishable; from PushMessages 3.1006.0-pr-28 options carry a Person / Company badge and the email, but nothing tells duplicates apart",
       "question": "Does the Push Messages 'Add specific recipients' picker distinguish options that share a display name?",
       "questions": [
         "When I pick push notification recipients, how do I tell apart two people with the same name?",
@@ -11871,8 +11871,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-BC55C4F0",
@@ -12482,7 +12483,7 @@
     {
       "id": "KB-C5B17CE2",
       "path": "entries/KB-C5B17CE2.md",
-      "subject": "Push Messages audience caption omits the condition when the blade is rendered from saved state",
+      "subject": "Push Messages audience caption: on the 2026-09-28 build it collapsed to the picked recipients when the blade was rendered from saved state; from PushMessages 3.1006.0-pr-28 it keeps the condition",
       "question": "Does the Push Messages audience caption name the condition when a message combines a condition with a picked recipient?",
       "questions": [
         "After I saved a push message, why does the audience summary only mention the one person I picked?",
@@ -12504,8 +12505,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-C60BA776",
@@ -14763,7 +14765,7 @@
     {
       "id": "KB-EB70C1F9",
       "path": "entries/KB-EB70C1F9.md",
-      "subject": "Push Messages conditions builder drops an incomplete condition row without validation",
+      "subject": "Push Messages conditions builder: an incomplete condition row was dropped silently on the 2026-09-28 build; from PushMessages 3.1006.0-pr-28 it shows \"This condition has no value.\" and holds Save and Send",
       "question": "In the Push Messages admin blade (Match by conditions), what happens to a condition row whose value is left empty?",
       "questions": [
         "If I leave a condition value blank when targeting a push message, who ends up receiving it?",
@@ -14786,8 +14788,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-EB991080",
