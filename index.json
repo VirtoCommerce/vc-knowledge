@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:14.688Z",
+  "generated": "2026-10-08T12:22:15.259Z",
   "count": 612,
   "entries": [
     {
@@ -1509,7 +1509,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 2
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-18991381",
@@ -7678,7 +7679,7 @@
     {
       "id": "KB-799D20A6",
       "path": "entries/KB-799D20A6.md",
-      "subject": "a list's share link lives only in the list Settings dialog, editable from the card and view-only from the detail page",
+      "subject": "Where a list's share link lives on /account/lists: inside the List settings dialog before the sharing rework, in a dedicated Share dialog from theme 2.59.0",
       "question": "Where is a list's share link on /account/lists?",
       "questions": [
         "How do I get a link to send my shopping list to a colleague?",
@@ -7699,8 +7700,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 2
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-79DB4E17",
@@ -7844,8 +7846,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
-      "disputed": 2
+      "trust": 8,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-7AB0B13E",
@@ -11457,7 +11460,7 @@
     {
       "id": "KB-B59A1F9D",
       "path": "entries/KB-B59A1F9D.md",
-      "subject": "Organization-scope wishlist: any Write member who sends changeWishlist with a scope becomes the list owner",
+      "subject": "Organization-scope wishlist: up to XCart 3.1037 a non-owner member who sends changeWishlist with a scope becomes the list owner; from XCart 3.1038 it is Forbidden",
       "question": "Can a non-owner org member with Write access change a wishlist's sharing scope via changeWishlist, and what happens to ownership?",
       "questions": [
         "Can a colleague with edit rights on a company shopping list take it over from the person who made it?",
@@ -11479,8 +11482,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-B5B57F41",
@@ -14685,7 +14689,7 @@
     {
       "id": "KB-EAA7BA2F",
       "path": "entries/KB-EAA7BA2F.md",
-      "subject": "storefront Lists page is an owner-only roster",
+      "subject": "The storefront Lists page shows your own lists plus your organization's Organization-scope lists; a Customer-scope share reaches its recipient only through its link",
       "question": "Will a list a colleague scoped to the organization show up on my Lists page?",
       "questions": [
         "Why can't I see the list my colleague shared with our company on my Lists page?",
@@ -14708,8 +14712,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
-      "disputed": 1
+      "trust": 8,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-EAD1674C",
@@ -15893,8 +15898,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-F91252E5",
