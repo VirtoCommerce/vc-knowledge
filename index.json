@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T16:03:43.606Z",
-  "count": 635,
+  "generated": "2026-10-08T16:17:16.747Z",
+  "count": 637,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1374,6 +1374,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-16A03137",
+      "path": "entries/KB-16A03137.md",
+      "subject": "The storefront returns status filter offers only the Query.returnStatuses dictionary (on vcst_qa: Approved, Canceled, Completed, New, Processing), so Requested returns cannot be filtered from the UI although the server accepts status=Requested",
+      "question": "Which statuses does the /account/returns status filter offer, and can a buyer or holder filter Requested returns?",
+      "anchors": [
+        "/account/returns",
+        "/account/returns?scope=organization",
+        "Query.returnStatuses"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-16AEF0C2",
       "path": "entries/KB-16AEF0C2.md",
       "subject": "order operation numbering and parentage",
@@ -1417,7 +1435,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -6069,7 +6087,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -11622,6 +11640,24 @@
       "status": "active",
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-B36F3F94",
+      "path": "entries/KB-B36F3F94.md",
+      "subject": "A negative ?page= on /account/returns is sent as a negative cursor and the returns query fails with a SQL error, which the page shows as a generic toast plus 'There are no returns yet'",
+      "question": "What happens when /account/returns is opened with a negative page number?",
+      "anchors": [
+        "/account/returns?scope=organization",
+        "/account/returns",
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-B38AEE58",
