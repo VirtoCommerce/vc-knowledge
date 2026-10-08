@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T22:21:36.193Z",
-  "count": 654,
+  "generated": "2026-10-08T22:29:45.547Z",
+  "count": 655,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -12395,6 +12395,24 @@
         "KB-2C4FA5E9",
         "KB-92A03E82"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BABFCC8C",
+      "path": "entries/KB-BABFCC8C.md",
+      "subject": "A BuyOnlinePickupInStore addOrUpdateCartShipment that carries a deliveryAddress but no pickupLocationId fails with DB_UPDATE/SQL and leaves the address stored as the user's last pickup location, so later pickup calls without a pickupLocationId fail too until a valid location is sent once",
+      "question": "What happens when addOrUpdateCartShipment is called with the BuyOnlinePickupInStore (Pickup) method, a deliveryAddress and no pickupLocationId?",
+      "anchors": [
+        "Mutation.addOrUpdateCartShipment",
+        "POST /api/customer-preferences/search"
+      ],
+      "scope": [
+        "shipment=buyonlinepickupinstore",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
