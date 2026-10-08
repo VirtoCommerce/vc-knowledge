@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T09:47:51.882Z",
-  "count": 612,
+  "generated": "2026-10-08T11:41:29.791Z",
+  "count": 615,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1954,6 +1954,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1FFA684C",
+      "path": "entries/KB-1FFA684C.md",
+      "subject": "salesRepActivities, salesRepCustomerActivitySummary and salesRepCustomerInsights return data null (no errors) for a caller without sales-rep:access, on both /graphql/sales-rep and the main /graphql, even for the caller's own organization",
+      "question": "What do the sales-rep activity queries return to a non-rep customer member, including for their own organization?",
+      "anchors": [
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerActivitySummary",
+        "Query.salesRepCustomerInsights",
+        "POST /graphql/sales-rep",
+        "POST /api/sales-rep/analytics-diagnostics"
+      ],
+      "scope": [
+        "actor=non-rep-member",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8477,6 +8498,25 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-866853C8",
+      "path": "entries/KB-866853C8.md",
+      "subject": "sales-rep activity queries return null for an organization whose rep membership is locked, for a storeId the user cannot sign in to, and for an unknown storeId; a rep in a store-trusted group gets data for the other store",
+      "question": "How do the sales-rep activity queries treat a locked per-organization membership and the storeId argument?",
+      "anchors": [
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerActivitySummary",
+        "/company/activities"
+      ],
+      "scope": [
+        "actor=sales-rep",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -15416,6 +15456,26 @@
         "KB-CFBD95B7"
       ],
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F2B23200",
+      "path": "entries/KB-F2B23200.md",
+      "subject": "a sales-rep hub widget hidden via the layout editor issues no GraphQL query; hide, move and Reset persist through saveSalesRepLayout per scope",
+      "question": "Does a hidden Sales Rep hub widget still fetch its data, and how is the hub layout persisted?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/activities",
+        "Mutation.saveSalesRepLayout",
+        "Query.salesRepActivities"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
