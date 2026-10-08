@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T09:09:03.772Z",
-  "count": 604,
+  "generated": "2026-10-08T09:16:03.873Z",
+  "count": 606,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2605,6 +2605,24 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2C75B17E",
+      "path": "entries/KB-2C75B17E.md",
+      "subject": "Page Builder stores a page permalink verbatim (spaces, &, ?, #, Cyrillic) with no sanitising or validation; a permalink containing ? or # is unreachable at its natural URL",
+      "question": "Does Page Builder sanitise or reject special characters in a page permalink, and can the storefront open such a page?",
+      "anchors": [
+        "POST /api/page-builder-pages/grouped",
+        "/apps/page-builder-shell/#/page-builder-draft/details/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9829,6 +9847,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-A0595602",
+      "path": "entries/KB-A0595602.md",
+      "subject": "GET /api/pricing/pricelists/{id} for a deleted price list returns 200 with body null, not 404",
+      "question": "What does GET /api/pricing/pricelists/{id} return after the price list is deleted?",
+      "anchors": [
+        "GET /api/pricing/pricelists/{id}"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A06A680C",
       "path": "entries/KB-A06A680C.md",
       "subject": "Debug SEO links Stages rows (including Stage 0: Candidates) are click-only: ng-click on a non-focusable div, never reachable by Tab",
@@ -12018,7 +12052,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
