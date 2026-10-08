@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T12:22:19.706Z",
+  "generated": "2026-10-08T12:22:20.273Z",
   "count": 612,
   "entries": [
     {
@@ -2109,7 +2109,7 @@
     {
       "id": "KB-21F4F161",
       "path": "entries/KB-21F4F161.md",
-      "subject": "Return available-statuses offers both Canceled and Cancelled, mirrored in the admin status dropdown",
+      "subject": "Return available-statuses: on the Return 3.1003 PR build it offered both Canceled and Cancelled; from Return 3.1004.0 it offers one spelling, the one in the stand's Return.Status dictionary",
       "question": "Which statuses does GET /api/return/{id}/available-statuses offer for each return status?",
       "questions": [
         "Why does the return status dropdown show two cancel options that look identical?",
@@ -2132,8 +2132,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
-      "disputed": 3
+      "trust": 6,
+      "disputed": 0,
+      "resolved": 3
     },
     {
       "id": "KB-2289BD9F",
@@ -6022,8 +6023,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-5E5D7065",
@@ -8759,8 +8761,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 1
+      "trust": 6,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8C530141",
@@ -9186,7 +9189,7 @@
     {
       "id": "KB-93804F07",
       "path": "entries/KB-93804F07.md",
-      "subject": "PUT /api/return on a decided return discards decision changes with a 200",
+      "subject": "PUT /api/return on a decided return: decision fields are discarded with a 200, while a line quantity, a line add/remove or a status move is refused with a 400",
       "question": "What happens to decision fields sent in a PUT /api/return on an already decided return?",
       "questions": [
         "If support edits my return after it was approved, can they change what was approved?",
@@ -9207,8 +9210,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
-      "disputed": 1
+      "trust": 6,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-938D7C06",
@@ -13853,7 +13857,7 @@
     {
       "id": "KB-DB7B6317",
       "path": "entries/KB-DB7B6317.md",
-      "subject": "the Admin order Status dropdown settables differ from the statuses orders display",
+      "subject": "The Admin order Status dropdown offers exactly the stand's Order.Status dictionary, Processing included; a Completed order's Status is read-only",
       "question": "Which order statuses can be set in the Admin SPA order Status dropdown, and how do they map to storefront labels?",
       "questions": [
         "Why does my order show a status name that is different from what the store back office calls it?",
@@ -13875,8 +13879,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-DC2F1BF0",
