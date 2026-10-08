@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T17:20:54.970Z",
-  "count": 640,
+  "generated": "2026-10-08T17:26:55.022Z",
+  "count": 641,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11294,6 +11294,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AC128A86",
+      "path": "entries/KB-AC128A86.md",
+      "subject": "The 'Returns' breadcrumb on a return details page opened from the organization tab links to /account/returns (My returns), dropping ?scope=organization",
+      "question": "Which tab does the Returns breadcrumb on /account/returns/{id} open when the details were reached from the organization tab?",
+      "anchors": [
+        "/account/returns/{id}",
+        "/account/returns?scope=organization"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
