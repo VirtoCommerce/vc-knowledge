@@ -63,5 +63,11 @@ evidence:
     who: Lenajava1
     note: "Admin order blade of a cancelled B2B-store order: operations tree shows the PaymentIn as Cancelled while the Shipment stays New; same split held on a second cancelled order's storefront view (Cancelled status badge with the cancel-reason text, no shipment status shown)."
     splitFrom: KB-0C102D97
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-08T22:41:56.217Z
+    by: session:391bbdbb
+    who: yuskithedeveloper
+    note: "2026-10-08, platform 3.1076.0, Orders 3.1018.0: DELETE /api/order/customerOrders?ids=<10 ids> (admin token) returned 204, and each GET /api/order/customerOrders/{id} afterwards returned 404, including 5 orders that had been cancelled first."
 ---
 Cancelling is NOT the only option. An order CAN be deleted - DELETE /api/order/customerOrders, operation OrderModule_DeleteOrdersByIds, and the Admin orders list carries a Delete control in the toolbar and in every row menu. Confirmed on platform 3.1007.27, Orders 3.1000.4.

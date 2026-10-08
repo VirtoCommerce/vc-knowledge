@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T22:29:45.547Z",
-  "count": 655,
+  "generated": "2026-10-08T22:42:33.411Z",
+  "count": 656,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -415,6 +415,24 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-06C789D7",
+      "path": "entries/KB-06C789D7.md",
+      "subject": "An admin can delete a customer's stored preference rows (e.g. CartShipmentLastAddress.*) by id with DELETE /api/customer-preferences?ids=…",
+      "question": "Can an admin delete a customer's stored preference rows (such as the CartShipmentLastAddress entries xCart writes) by id, e.g. for test-data teardown?",
+      "anchors": [
+        "DELETE /api/customer-preferences",
+        "POST /api/customer-preferences/search"
+      ],
+      "scope": [
+        "actor=admin",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7416,7 +7434,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 7,
       "disputed": 0
     },
     {
