@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-08T13:18:05.741Z",
-  "count": 618,
+  "generated": "2026-10-08T13:38:29.094Z",
+  "count": 619,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1120,6 +1120,25 @@
       ],
       "scope": [
         "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1336804F",
+      "path": "entries/KB-1336804F.md",
+      "subject": "Page Builder grouped-page content save needs the strong version token; behind the stand's edge proxy the ETag HEADER arrives weak and is rejected 400, so clients must use the includeVersion=true body token",
+      "question": "How does a client save Page Builder grouped page content without losing another author's edit — which version token does it send, and what does the endpoint answer when the token is missing, stale, weak or malformed?",
+      "anchors": [
+        "GET /api/page-builder-pages/grouped/{groupId}/content",
+        "POST /api/page-builder-pages/grouped/{groupId}/content",
+        "POST /api/page-builder-pages/grouped/{groupId}/content-json"
+      ],
+      "scope": [
+        "build=pagebuildermodule 3.1034.0-pr-167-0ed1",
         "surface=rest"
       ],
       "plane": "experiential",
