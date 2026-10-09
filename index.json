@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T15:50:29.673Z",
-  "count": 688,
+  "generated": "2026-10-09T16:07:04.268Z",
+  "count": 690,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -605,6 +605,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-0AB32990",
+      "path": "entries/KB-0AB32990.md",
+      "subject": "The Admin price-list item grid will not save a LIST price of 0 (Save stays disabled; 0.01 enables it), but it does save a SALE price of 0",
+      "question": "Can an admin set a product's list price to 0.00 through the Pricing module price-list item grid?",
+      "anchors": [
+        "/workspace/pricing"
+      ],
+      "scope": [
+        "module=pricing",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0AFC2A50",
       "path": "entries/KB-0AFC2A50.md",
       "subject": "A shipping-reward coupon is rejected as not valid when Pickup is selected",
@@ -956,7 +973,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1150,6 +1167,28 @@
         "input=keyboard",
         "page=list-details",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1328216A",
+      "path": "entries/KB-1328216A.md",
+      "subject": "A cart line whose effective (sale) price becomes 0 is flagged CART_PRODUCT_UNAVAILABLE on the next place-order attempt, and the stored line price stays stale until then",
+      "question": "What do the storefront cart and Query.cart show when a product's price is set to 0 in the pricing module while the product is already in the cart?",
+      "anchors": [
+        "Query.cart",
+        "Mutation.createOrderFromCart",
+        "Mutation.addOrUpdateCartPayment",
+        "/cart"
+      ],
+      "scope": [
+        "module=x-cart",
+        "store=b2b-store",
+        "surface=storefront-ui",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
