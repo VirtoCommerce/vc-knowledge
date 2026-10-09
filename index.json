@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T11:32:18.417Z",
-  "count": 674,
+  "generated": "2026-10-09T11:44:57.549Z",
+  "count": 676,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6601,6 +6601,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-60E718B6",
+      "path": "entries/KB-60E718B6.md",
+      "subject": "On upstream vc-frontend 2.59.0-pr-2458 a zero-hit /search?barcode= lookup shifts layout on load (signed in: CLS 0.724 at 1920px, 0.798 at 375px), and at 375px it usually flickers empty view to skeletons to empty view (CLS 2.28)",
+      "question": "Does the zero-hit barcode lookup empty state on /search?barcode= shift layout on upstream vc-frontend, and how large?",
+      "anchors": [
+        "/search?barcode=",
+        "Query.products"
+      ],
+      "scope": [
+        "aspect=layout-stability",
+        "auth=signed-in",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-614BDEDE",
       "path": "entries/KB-614BDEDE.md",
       "subject": "changeWishlist without scope silently drops a sharing message change",
@@ -8558,6 +8577,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-7CE03201",
+      "path": "entries/KB-7CE03201.md",
+      "subject": "On upstream vc-frontend 2.59.0-pr-2458 a zero-hit /search?q= shifts layout on load (signed in: CLS 0.644 at 1920px, 0.810 at 375px) — the same skeleton/sidebar-to-empty-view collapse as vc-frontend-next",
+      "question": "Does the zero-hit keyword search empty state on /search?q= shift layout on upstream vc-frontend (not the new theme), and how large?",
+      "anchors": [
+        "/search?q=",
+        "Query.products"
+      ],
+      "scope": [
+        "aspect=layout-stability",
+        "auth=signed-in",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7DA9B0B7",
       "path": "entries/KB-7DA9B0B7.md",
       "subject": "platform REST APIs reject a store- or organization-scoped token with 401",
@@ -8858,7 +8896,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9465,7 +9503,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-8E1456B8",
