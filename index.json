@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T21:21:10.182Z",
-  "count": 708,
+  "generated": "2026-10-09T21:32:15.013Z",
+  "count": 711,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2287,7 +2287,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5644,6 +5644,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-4FBD30E2",
+      "path": "entries/KB-4FBD30E2.md",
+      "subject": "On Firefox every sorted Admin SPA ui-grid header shows an ellipsis instead of the sort arrow, whatever the column width; Chromium shows the arrow",
+      "question": "Admin SPA ui-grid sortable column headers (e.g. Orders list blade /workspace/orders) on Firefox: is the sort arrow shown after sorting, or is it lost to the header label ellipsis (platform ui-grid header pattern)?",
+      "anchors": [
+        "/workspace/orders",
+        "/workspace/Return",
+        "POST /api/order/customerOrders/search"
+      ],
+      "scope": [
+        "browser=firefox",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-509D70C4",
       "path": "entries/KB-509D70C4.md",
       "subject": "Wishlist share target ids are case-insensitive; the 1000-id cap applies to addSharedWithIds only",
@@ -6226,6 +6245,23 @@
         "event=purchase",
         "module=googleecommerceanalytics",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-57033144",
+      "path": "entries/KB-57033144.md",
+      "subject": "Returns list (My returns and the organization tab) cold-load CLS is 0.015-0.031 at 1920x1080 and 0.040 at 375x812, within the 0.1 budget",
+      "question": "Does /account/returns shift layout on load, on both tabs?",
+      "anchors": [
+        "/account/returns"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=1920x1080-and-375x812"
       ],
       "plane": "experiential",
       "status": "active",
@@ -17460,6 +17496,23 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F775D651",
+      "path": "entries/KB-F775D651.md",
+      "subject": "Return details page at 375x812 shifts 0.24-0.28 CLS on load even for a 1-line return: the loading shell is replaced by content taller than the viewport and the visible footer is pushed below the fold",
+      "question": "Does /account/returns/:id shift layout on load at a mobile viewport, and is it the same shift as on desktop?",
+      "anchors": [
+        "/account/returns/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=375x812"
       ],
       "plane": "experiential",
       "status": "active",
