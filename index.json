@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T16:07:04.268Z",
-  "count": 690,
+  "generated": "2026-10-09T20:29:54.649Z",
+  "count": 694,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1548,7 +1548,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-17555498",
@@ -2301,7 +2301,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
-      "disputed": 3
+      "disputed": 4
     },
     {
       "id": "KB-2289BD9F",
@@ -2343,6 +2343,25 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-22E486F9",
+      "path": "entries/KB-22E486F9.md",
+      "subject": "Returns submitted and then cancelled before the SubmittedDate migration have no submittedDate, so organization holders lose them for good although the organization mailbox holds their received and cancelled copies",
+      "question": "What happens to organization visibility of returns that were submitted and then cancelled before the SubmittedDate migration ran?",
+      "anchors": [
+        "Query.return",
+        "Query.organizationReturns",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9390,7 +9409,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -10779,7 +10798,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -11131,6 +11150,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A241C915",
+      "path": "entries/KB-A241C915.md",
+      "subject": "organizationReturns membership comes only from the contact's own organizations list: an associated organization or a bare membership row is refused; with no membership row the contact's status decides (Rejected/Invited refused, null or Locked answered)",
+      "question": "Which kinds of organization link let a holder of xapi:my_organization:return:view list that organization's returns, and what decides when the contact has no membership row?",
+      "anchors": [
+        "Query.organizationReturns",
+        "POST /api/customer/organization-memberships",
+        "PUT /api/members"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -13293,6 +13331,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-BFD13716",
+      "path": "entries/KB-BFD13716.md",
+      "subject": "A return's submittedDate (organization visibility) is stamped when an admin creates it in New, survives an admin edit to Cancelled or Canceled, is never set for a return created Canceled, and no REST or xAPI edit can move a Draft or a cancelled draft out to a visible status",
+      "question": "Which admin and buyer write paths make a return visible to organization holders after the SubmittedDate change, and can a cancelled draft become visible again?",
+      "anchors": [
+        "PUT /api/return",
+        "GET /api/return/{id}/available-statuses",
+        "Query.organizationReturns",
+        "Mutation.submitReturn"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C066D45F",
       "path": "entries/KB-C066D45F.md",
       "subject": "In the Page Builder shell details blade, changing only the Scheduling Start date does not mark the form dirty — Save stays disabled and the new date is discarded",
@@ -13639,6 +13697,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C482EE8A",
+      "path": "entries/KB-C482EE8A.md",
+      "subject": "Storefront return details treat the owner as a colleague when the stored customerId differs from the user id only in letter case: \"Requested by\" is shown and Cancel return is hidden, while the server still offers cancel",
+      "question": "What does the owner see on /account/returns/{id} when the return's customerId differs from their user id only in letter case?",
+      "anchors": [
+        "/account/returns/{id}",
+        "Query.return",
+        "PUT /api/return"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
