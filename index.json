@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T21:47:01.042Z",
-  "count": 716,
+  "generated": "2026-10-09T21:54:55.345Z",
+  "count": 717,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6019,6 +6019,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-518BE8BE",
+      "path": "entries/KB-518BE8BE.md",
+      "subject": "Admin SPA ui-grid Grid Menu button floats over the header row and covers any header label that scrolls beneath it",
+      "question": "In an Admin SPA list grid that scrolls horizontally, does the floating grid-options (Grid Menu) button cover the header label under it, and is that specific to one module's grid?",
+      "anchors": [
+        "/workspace/Return",
+        "/workspace/security"
+      ],
+      "scope": [
+        "component=ui-grid-header",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5196FCE9",
       "path": "entries/KB-5196FCE9.md",
       "subject": "When the store's anonymousUsersAllowed setting is false, the storefront sends every anonymous visitor to /sign-in, so an 'Anyone with link' list link cannot be opened without signing in",
@@ -7137,7 +7155,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 2
+      "disputed": 3
     },
     {
       "id": "KB-649D673C",
