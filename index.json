@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T13:27:52.288Z",
-  "count": 679,
+  "generated": "2026-10-09T13:35:11.116Z",
+  "count": 681,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4571,6 +4571,27 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4971F946",
+      "path": "entries/KB-4971F946.md",
+      "subject": "On category-to-category navigation the search-bar scope loader resizes to the new chip label width before the loader-to-chip swap, so the search input shifts sideways while the loader is shown",
+      "question": "Does the header search input move horizontally when the category scope loader is replaced by the new category chip?",
+      "anchors": [
+        "/printers",
+        "/printers/multifunction-printers",
+        "/category/{id}",
+        "Query.category (GetCategory)"
+      ],
+      "scope": [
+        "component=header-search-bar",
+        "surface=storefront-ui",
+        "viewport=desktop"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9268,7 +9289,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9384,6 +9405,24 @@
         "KB-1D885AE7",
         "KB-8E1456B8"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8ABAE9B8",
+      "path": "entries/KB-8ABAE9B8.md",
+      "subject": "Removing the header search scope chip (mouse or keyboard Enter) drops document focus to BODY",
+      "question": "Where does keyboard focus go after the search-bar category scope chip is removed?",
+      "anchors": [
+        "/printers"
+      ],
+      "scope": [
+        "component=header-search-bar",
+        "surface=storefront-ui",
+        "viewport=desktop"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
