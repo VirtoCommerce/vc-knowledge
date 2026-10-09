@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T14:35:52.626Z",
-  "count": 683,
+  "generated": "2026-10-09T15:19:35.290Z",
+  "count": 684,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11424,6 +11424,24 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A768A5D6",
+      "path": "entries/KB-A768A5D6.md",
+      "subject": "The /connect/token password grant accepts either the account's user name or its email address as `username`",
+      "question": "POST /connect/token password grant: does the username parameter accept the account user name (non-email login), or only the email?",
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "grant_type=password",
+        "surface=api",
+        "usertype=customer"
       ],
       "plane": "experiential",
       "status": "active",
