@@ -24,5 +24,11 @@ evidence:
     at: 2026-09-25T11:18:14.694Z
     by: session:memimpor
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_dev
+    at: 2026-10-09T21:20:02.643Z
+    by: session:61a7b05a
+    who: yuskithedeveloper
+    note: "Observed the 'names' half on platform 3.1079.0-alpha.13411 (2026-10-09). DELETE /api/platform/security/users?names=<userName> answered 200 succeeded:true and really deleted the user. The user then read back null via GET /api/platform/security/users/{userName} and via GET /api/platform/security/users/id/{id} (the /id/ route resolves by id: it returned the user before the delete). POST /api/platform/security/users/search with the userName as keyword found 0 matches. The wrong-parameter (userNames) half was not re-tested."
 ---
 DELETE /api/platform/security/users takes the user names in the names parameter. Sending userNames instead binds an empty list and returns succeeded true while deleting nothing, so a success reply is not proof of deletion. GET /api/platform/security/users/{id} resolves by user name only, so an id returns null, and GET by user name can return a stale or empty body. POST /api/platform/security/users/search with a keyword is the reliable existence and role check (its results include roles).

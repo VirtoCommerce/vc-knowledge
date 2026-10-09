@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T21:02:54.883Z",
-  "count": 706,
+  "generated": "2026-10-09T21:21:10.182Z",
+  "count": 708,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10363,7 +10363,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-94C2ADCC",
@@ -14103,6 +14103,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-C856B61A",
+      "path": "entries/KB-C856B61A.md",
+      "subject": "A deleted user's still-valid access token gets HTTP 200 + errors[].code Unauthorized on returns, organizationReturns and return(id); returnStatuses still answers",
+      "question": "What do the return queries answer for an access token whose user account was deleted after the token was issued?",
+      "anchors": [
+        "Query.returns",
+        "Query.organizationReturns",
+        "Query.return",
+        "Query.returnStatuses",
+        "DELETE /api/platform/security/users"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C923D0DB",
       "path": "entries/KB-C923D0DB.md",
       "subject": "the email confirmation link works without a session and does not sign the user in",
@@ -16172,6 +16192,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-E9FD2A2F",
+      "path": "entries/KB-E9FD2A2F.md",
+      "subject": "The password grant issues a token to an account whose passwordExpired is true; the expiry is enforced downstream, as xAPI errors[].code PasswordExpired",
+      "question": "What does POST /connect/token answer for an account whose password has expired (passwordExpired=true), and does a token minted before the expiry keep working?",
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/platform/security/users/{userName}/resetpassword"
+      ],
+      "scope": [
+        "grant_type=password",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EA337811",
       "path": "entries/KB-EA337811.md",
       "subject": "Share dialog reopen pre-fills the saved message and recipients; it starts empty after Stop sharing and re-share",
@@ -17817,7 +17855,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
