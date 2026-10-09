@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T10:55:49.841Z",
-  "count": 656,
+  "generated": "2026-10-09T10:59:32.765Z",
+  "count": 662,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5722,6 +5722,24 @@
       ],
       "scope": [
         "surface=vendor-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-53968801",
+      "path": "entries/KB-53968801.md",
+      "subject": "Signed-out /oauth/authorize redirects to /sign-in?returnUrl=/oauth/authorize; signing in there without OAuth parameters lands on a \"We could not continue sign-in\" page",
+      "question": "What does the storefront do when /oauth/authorize is opened while signed out?",
+      "anchors": [
+        "/oauth/authorize",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=oauth-authorize",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11826,6 +11844,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-AF957CC2",
+      "path": "entries/KB-AF957CC2.md",
+      "subject": "Storefront return: Continue on select-items creates a draft with a RET number, Submit return sets Requested, Cancel return (optional reason) sets Cancelled and releases the returnable quantity",
+      "question": "What happens across the storefront create-return flow from an order through submit and cancel?",
+      "anchors": [
+        "/account/returns/new/{orderId}",
+        "/account/returns/{id}",
+        "Mutation.createReturn",
+        "Mutation.submitReturn",
+        "Mutation.cancelReturn"
+      ],
+      "scope": [
+        "feature=returns",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AFF6282A",
       "path": "entries/KB-AFF6282A.md",
       "subject": "Admin Return list shows Create date / Modify date as relative time for recent returns and as 'Mon d, yyyy h:mm:ss am/pm' for older ones",
@@ -12417,6 +12456,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-B9FD04A3",
+      "path": "entries/KB-B9FD04A3.md",
+      "subject": "/forgot-password sends Mutation sendPasswordResetEmail and shows 'We sent you a reset password link to your inbox'; a ResetPasswordEmailNotification is journaled",
+      "question": "What does the storefront forgot-password form call and show for a registered email?",
+      "anchors": [
+        "/forgot-password",
+        "Mutation.sendPasswordResetEmail",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "feature=password-reset",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BABFCC8C",
       "path": "entries/KB-BABFCC8C.md",
       "subject": "A BuyOnlinePickupInStore addOrUpdateCartShipment that carries a deliveryAddress but no pickupLocationId fails with DB_UPDATE/SQL and leaves the address stored as the user's last pickup location, so later pickup calls without a pickupLocationId fail too until a valid location is sent once",
@@ -12904,6 +12962,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C2DE7D28",
+      "path": "entries/KB-C2DE7D28.md",
+      "subject": "Sales-rep dashboard 'My recent orders' widget has status filter buttons (All plus one per status present) that narrow the table to that status",
+      "question": "How do the status filters on the sales-rep dashboard recent-orders widget behave?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/my-customers"
+      ],
+      "scope": [
+        "feature=sales-rep-hub",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -14697,6 +14773,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-DE6BB786",
+      "path": "entries/KB-DE6BB786.md",
+      "subject": "/account/missions shows a loyalty balance banner (balance + Points history link) and a Redeem your points banner whose Rewards catalog link opens /loyalty-catalog",
+      "question": "What banners does the storefront Missions & challenges page show above the mission cards for a member with a loyalty balance?",
+      "anchors": [
+        "/account/missions",
+        "/account/points-history",
+        "/loyalty-catalog"
+      ],
+      "scope": [
+        "feature=loyalty-missions",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DEBE1CED",
       "path": "entries/KB-DEBE1CED.md",
       "subject": "A master product page's variant picker never makes it purchasable, even with every option chosen",
@@ -15807,6 +15902,24 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-EE6B32FD",
+      "path": "entries/KB-EE6B32FD.md",
+      "subject": "On vc-frontend-next the language picker switches locale from both the desktop preferences menu and the 375px menu; the mobile list shows bare language names, so en-GB and en-US both read 'English'",
+      "question": "How does language switching behave in the vc-frontend-next header preferences menu and mobile menu?",
+      "anchors": [
+        "/catalog",
+        "/de/catalog"
+      ],
+      "scope": [
+        "feature=language-selector",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-EEB448C8",
