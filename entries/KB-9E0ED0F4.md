@@ -32,5 +32,11 @@ evidence:
     by: session:61a7b05a
     who: yuskithedeveloper
     note: "Return 3.1005.0-pr-28-fb4f, 2026-10-09: same uniform Forbidden (data null) for a contact holding the permission through a global role but only ASSOCIATED with the organization (unscoped and organization-scoped token), for a contact with an Approved membership row but without the organization in its own organizations list, and for a member with no membership row whose contact status is Rejected or Invited (old and fresh token). The same member with contact status null or Locked was answered."
+  - method: observation
+    deployment: vcptcore_dev
+    at: 2026-10-09T20:33:54.969Z
+    by: session:61a7b05a
+    who: yuskithedeveloper
+    note: "Return 3.1005.0-pr-28-fb4f, lane B 2026-10-09: an employee without the permission (organization-scoped and unscoped token) and another organization's holder both got errors[] Forbidden \"The organization's returns are not available to this contact.\" with data null; anonymous got Unauthorized for organizationReturns and for return(id)."
 ---
 On Return 3.1005.0-pr-28-62f9, organizationReturns(storeId, organizationId) answered for a member of that organization whose roles include xapi:my_organization:return:view, whether granted through a global role, the membership role or a role on the organization itself. A member without it (purchasing agent, employee, an Organization manager holding the other xapi:my_organization grants), a holder from another organization, an administrator who is not a member, an empty or unknown organizationId all got errors[] Forbidden "The organization's returns are not available to this contact." with data null, never an empty list; anonymous got Unauthorized. The requested organizationId decides, whatever organization the token is scoped to. A locked, Invited or Rejected membership is refused; a locked account gets UserLocked on every return operation. On this deployment no role held the permission until an admin granted it.

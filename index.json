@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T20:29:54.649Z",
-  "count": 694,
+  "generated": "2026-10-09T20:38:13.934Z",
+  "count": 698,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -573,7 +573,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-09CEE315",
@@ -1316,6 +1316,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-1441262D",
+      "path": "entries/KB-1441262D.md",
+      "subject": "Query.returns has no scope argument; the organization view of returns is the separate organizationReturns query",
+      "question": "Does Query.returns take a scope argument (Own / Organization), or is the organization's view of returns a separate query?",
+      "anchors": [
+        "Query.returns",
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1447353E",
       "path": "entries/KB-1447353E.md",
       "subject": "address keyword search and location facets are offered only in the checkout shipping address popup",
@@ -1548,7 +1565,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-17555498",
@@ -2102,7 +2119,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2365,7 +2382,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2506,7 +2523,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -4234,7 +4251,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -6840,6 +6857,26 @@
       "disputed": 1
     },
     {
+      "id": "KB-62BF1335",
+      "path": "entries/KB-62BF1335.md",
+      "subject": "A return's submittedDate is stamped once at its first save outside Draft/Cancelled (buyer submit or admin create as New) and is never changed by cancel or by a REST PUT body",
+      "question": "When is a return's submittedDate set (submitReturn, admin create as New, REST PUT /api/return with a date in the body) and does cancelling change it?",
+      "anchors": [
+        "GET /api/return/{id}",
+        "PUT /api/return",
+        "Mutation.submitReturn",
+        "Mutation.cancelReturn"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-62D97984",
       "path": "entries/KB-62D97984.md",
       "subject": "POST /api/punchout/cxml answers HTTP 200 with a cXML Status for every rejection, and checks the user mapping BEFORE the store checks",
@@ -6936,7 +6973,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-649D673C",
@@ -7007,7 +7044,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -9376,6 +9413,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-87EC0A28",
+      "path": "entries/KB-87EC0A28.md",
+      "subject": "PUT /api/platform/security/users silently keeps passwordExpired (and the other protected user fields) from the database while answering succeeded:true",
+      "question": "Can PUT /api/platform/security/users set passwordExpired=true on an account, and what does it answer when it does not?",
+      "anchors": [
+        "PUT /api/platform/security/users",
+        "GET /api/platform/security/users/{userName}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-883F1015",
       "path": "entries/KB-883F1015.md",
       "subject": "A header search submitted while the category scope is still loading runs unscoped on /search with the store catalog filter, never the previous category",
@@ -10798,7 +10852,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -13226,7 +13280,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -13347,7 +13401,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16339,6 +16393,23 @@
       "status": "active",
       "trust": 1,
       "disputed": 2
+    },
+    {
+      "id": "KB-ED1C55C0",
+      "path": "entries/KB-ED1C55C0.md",
+      "subject": "organizationReturns and returns answer a negative after cursor with an errors[] code SQL and data null; the server does not clamp it",
+      "question": "What do the xAPI queries organizationReturns and returns answer for a negative after cursor such as \"-20\"?",
+      "anchors": [
+        "Query.organizationReturns",
+        "Query.returns"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-ED3A631C",

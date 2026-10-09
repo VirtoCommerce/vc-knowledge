@@ -44,5 +44,11 @@ evidence:
     by: session:62b7421e
     who: Lenajava1
     note: "Admin SPA 3.1076.0: Add new return on AGENT-TEST-ORD-RET-ADM073 created RET261008-00082 at status New immediately; dropdown offers Completed, New, Canceled, Processing (label and stored status spelled 'Canceled', REST status 'Canceled', not 'Cancelled')."
+  - method: observation
+    deployment: vcptcore_dev
+    at: 2026-10-09T20:33:54.990Z
+    by: session:61a7b05a
+    who: yuskithedeveloper
+    note: "Admin SPA platform 3.1079.0-alpha.13411, Return 3.1005.0-pr-28-fb4f: Add new return > order > tick the line > Make return (PUT /api/return 200) created the return in status New at once; the buyer's xAPI returns lists it as New (the storefront page itself was not opened by this lane); no email or push."
 ---
 In VirtoCommerce.Return 3.1003.0-pr-27, Admin SPA Returns > Add new return > pick order > select line > Make return creates the return with status New (legacy status). Its status dropdown offers New, Completed, Cancelled, Processing. The return shows up for the order's buyer on storefront /account/returns with status 'New', next to new-flow returns (Requested/Partially approved).
