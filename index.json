@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T20:44:05.675Z",
-  "count": 703,
+  "generated": "2026-10-09T21:02:54.883Z",
+  "count": 706,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1394,7 +1394,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-14F26013",
@@ -3707,6 +3707,24 @@
       ],
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-3712D4C4",
+      "path": "entries/KB-3712D4C4.md",
+      "subject": "Returns list switches from stacked cards to the table at exactly 1024 px on both tabs, with fixed column widths Date 112, Buyer name 128 (160 from 1280), Status 144",
+      "question": "At which viewport width does /account/returns change between cards and the table, and how wide are the columns?",
+      "anchors": [
+        "/account/returns",
+        "/account/returns?scope=organization"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=320-1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-375CEF71",
@@ -7007,7 +7025,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-649D673C",
@@ -7992,7 +8010,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10063,6 +10081,24 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-914909D8",
+      "path": "entries/KB-914909D8.md",
+      "subject": "Cancel return dialog: the Reason textarea is named 'Reason (optional)' by a label for/id, focus is trapped in the dialog, and Escape or Keep return hands focus back to the Cancel return button",
+      "question": "What is the accessible name of the Reason box in the storefront Cancel return dialog and how does the dialog handle keyboard focus?",
+      "anchors": [
+        "/account/returns/:id"
+      ],
+      "scope": [
+        "component=cancel-return-dialog",
+        "surface=storefront-ui",
+        "viewport=1920"
       ],
       "plane": "experiential",
       "status": "active",
@@ -15829,6 +15865,24 @@
       ],
       "scope": [
         "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E50C6246",
+      "path": "entries/KB-E50C6246.md",
+      "subject": "Return details page: the 'Requested by' label is the same neutral-600 grey (7.81:1) as Status, Date and Order number, and a colleague's return shows no Cancel or other control",
+      "question": "What colour and contrast does the 'Requested by' label have on a colleague's return, and does the page offer Cancel?",
+      "anchors": [
+        "/account/returns/:id"
+      ],
+      "scope": [
+        "role=organization-maintainer",
+        "surface=storefront-ui",
+        "viewport=375-1920"
       ],
       "plane": "experiential",
       "status": "active",
