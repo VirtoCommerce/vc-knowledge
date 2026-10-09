@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T10:59:32.765Z",
-  "count": 662,
+  "generated": "2026-10-09T11:05:57.300Z",
+  "count": 663,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9367,6 +9367,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-8F2FDFD2",
+      "path": "entries/KB-8F2FDFD2.md",
+      "subject": "On theme 3.0.0-alpha.2685 in Dark appearance, the Sales Rep dashboard Edit layout bar text is legible and the hidden-stats drop zone shows a subtle two-tone diagonal stripe, not a solid block",
+      "question": "In dark mode, is the /company/dashboard Edit layout chrome (edit bar text, hidden-stats striped zone, keyboard-grabbed card) legible on the 3.0 theme?",
+      "anchors": [
+        "/company/dashboard"
+      ],
+      "scope": [
+        "appearance=dark",
+        "surface=storefront-ui",
+        "theme=vc-frontend-next-3.0.0-alpha"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8F33647E",
       "path": "entries/KB-8F33647E.md",
       "subject": "UCP create_cart duplicate grouping is case-insensitive but keeps the first spelling; product id lookup is case-sensitive",
@@ -15918,7 +15936,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
