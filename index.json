@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T11:26:34.866Z",
-  "count": 672,
+  "generated": "2026-10-09T11:30:06.556Z",
+  "count": 673,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1116,6 +1116,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-12A9F375",
+      "path": "entries/KB-12A9F375.md",
+      "subject": "On /account/lists/{id} ArrowUp in the line quantity input does not change the value for a product with maxQuantity 0, while the PDP input steps normally",
+      "question": "Can a keyboard user step the quantity with arrow keys on the list details page /account/lists/{id}?",
+      "anchors": [
+        "/account/lists/{id}"
+      ],
+      "scope": [
+        "input=keyboard",
+        "page=list-details",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
