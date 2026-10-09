@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T21:54:55.345Z",
-  "count": 717,
+  "generated": "2026-10-09T22:08:55.393Z",
+  "count": 719,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6963,6 +6963,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-60B37626",
+      "path": "entries/KB-60B37626.md",
+      "subject": "The storefront account sidebar breaks the 'Coupons & promotions' label inside the word ('Coupons & promoti' / 'ons') at viewports 768-1279 px on Firefox and Chrome; from 1280 px it fits on one line",
+      "question": "Does the storefront account sidebar wrap its link labels at a word boundary or mid-word at tablet and small-laptop widths (768-1279 px)?",
+      "anchors": [
+        "/account/returns",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "component=account-sidebar",
+        "locale=en",
+        "surface=storefront-ui",
+        "viewport=768-1279"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-60E718B6",
       "path": "entries/KB-60E718B6.md",
       "subject": "On upstream vc-frontend 2.59.0-pr-2458 a zero-hit /search?barcode= lookup shifts layout on load (signed in: CLS 0.724 at 1920px, 0.798 at 375px), and at 375px it usually flickers empty view to skeletons to empty view (CLS 2.28)",
@@ -11780,6 +11800,22 @@
       "scope": [
         "principal=admin",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A588334E",
+      "path": "entries/KB-A588334E.md",
+      "subject": "Admin SPA Add new return Line items blade: a row click only highlights the line; only its 13 px checkbox selects it and enables Make return",
+      "question": "In the Admin SPA Return module, Add new return > order > Line items blade (GET /api/return/available-quantities/{orderId}), does clicking a line's row select it for Make return, or only its checkbox?",
+      "anchors": [
+        "GET /api/return/available-quantities/{orderId}"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
