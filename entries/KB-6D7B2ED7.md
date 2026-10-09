@@ -41,5 +41,12 @@ evidence:
     by: session:df9d131f
     who: Lenajava1
     note: "Same ingress gap present on vcst_qa 2026-10-09 (theme vc-frontend-next 3.0.0-alpha.2685, OTP module 3.1000.0, OtpSignIn.Enabled temporarily on): POST {storefront}/api/otp/request -> 405 nginx HTML, form shows inline 'Something went wrong. Please try again later.'; the identical body POSTed to the platform host returned 200 succeeded:true and the OtpSignInEmailNotification was journaled. GET {storefront}/api/otp/request returns the SPA index, while {storefront}/api/files/* is proxied - the storefront proxy whitelists paths and lacks /api/otp. Deployment-specific, not product behaviour."
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-09T13:56:24.196Z
+    by: session:df9d131f
+    who: Lenajava1
+    contradicts: true
+    note: "Superseded on vcst_qa 2026-10-09 ~13:53 UTC once the storefront ingress gained a /api/otp route to the platform (theme vc-frontend-next 3.0.0-alpha.2685, OtpSignIn.Enabled on): clicking Continue on /sign-in sent POST {storefront}/api/otp/request {email, storeId} -> 200 application/json {succeeded:true, error:null, maskedEmail, lockoutSecondsRemaining:null} in ~0.5s, the form moved to the \"Check your email\" code step with the masked address, the OtpSignInEmailNotification was journaled and sent, and entering the code auto-submitted POST {storefront}/connect/token grant_type=otp_email -> 200 and signed the user in. As on vcptcore_qa1, the 405 was a deployment ingress gap; with the route present the flow works end to end."
 ---
 On vcptcore_qa1 (theme 2.59.0-pr-2477-ff59, OTP module 3.1000.0-pr-1-11d6, 2026-10-01) the /sign-in page defaults to the one-time-code view. Clicking Continue with a valid address issues POST /api/otp/request relative to the storefront origin; the storefront ingress returns 405 (text/html, Cloudflare), so the request never reaches the platform. The form stays on the email step and shows an inline alert "Something went wrong. Please try again later." and, at the same time, the app-wide toast "Apologies for the inconvenience. Our server is currently experiencing technical issues..." with a Report a problem button. The same request sent directly to the platform host is answered normally, so the gap is ingress routing of /api/otp, not the module. Empty email shows "This field is required"; john@ and an address with an inner space show "Enter a valid email address, e.g. johndoe@gmail.com" and send nothing.

@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T13:35:11.116Z",
-  "count": 681,
+  "generated": "2026-10-09T14:00:58.686Z",
+  "count": 682,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -525,7 +525,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 1
     },
     {
@@ -7550,7 +7550,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-6E56FB4B",
@@ -16282,6 +16282,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EED5F6AC",
+      "path": "entries/KB-EED5F6AC.md",
+      "subject": "On vcst_qa the storefront requests /firebase-messaging-sw.js on sign-out and the storefront answers 404, logging a console error \"A bad HTTP response code (404) was received when fetching the script.\"",
+      "question": "Does the storefront web-push service worker script /firebase-messaging-sw.js resolve on vcst_qa, and what shows up when it does not?",
+      "anchors": [
+        "GET /firebase-messaging-sw.js",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=web-push-notifications",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
