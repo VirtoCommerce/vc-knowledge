@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T21:35:41.351Z",
-  "count": 712,
+  "generated": "2026-10-09T21:47:01.042Z",
+  "count": 716,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -468,6 +468,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-06DDFA67",
+      "path": "entries/KB-06DDFA67.md",
+      "subject": "The storefront returns list sends a status code from ?status= in whatever letter case the link has; the chip shows the raw code and the Filters checkbox stays unticked, while the list itself filters (on a SqlServer stand)",
+      "question": "What does /account/returns do with a status code in a non-canonical letter case in the link (e.g. ?status=requested)?",
+      "anchors": [
+        "/account/returns",
+        "/account/returns?scope=organization",
+        "Query.organizationReturns",
+        "Query.returns",
+        "Query.returnStatuses"
+      ],
+      "scope": [
+        "db-provider=sqlserver",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-06FE6C8D",
       "path": "entries/KB-06FE6C8D.md",
       "subject": "POST /connect/token grant_type=otp_email accepts the SAME code twice, issuing a fresh valid access token both times — the OTP is not invalidated after a successful sign-in (matches ECL-4.3 \"same OTP reused multiple times\")",
@@ -602,6 +623,41 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-09CF881B",
+      "path": "entries/KB-09CF881B.md",
+      "subject": "The storefront returns page opens the organization tab only for ?scope=organization in exactly that case; ?scope=Organization shows My returns even to a permission holder",
+      "question": "Does /account/returns?scope=Organization (capitalised) open the organization returns tab for a holder of xapi:my_organization:return:view?",
+      "anchors": [
+        "/account/returns?scope=organization",
+        "/account/returns"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0A9364D0",
+      "path": "entries/KB-0A9364D0.md",
+      "subject": "On Firefox at 375 px the /account/orders mobile cards keep the order number on one line (nowrap plus ellipsis) despite the VcTable mobile break-word",
+      "question": "Does the order number on the /account/orders mobile cards wrap mid-token on Firefox at 375 px?",
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "browser=firefox",
+        "surface=storefront-ui",
+        "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1288,7 +1344,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3744,7 +3800,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-375CEF71",
@@ -10712,6 +10768,25 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-986C1D33",
+      "path": "entries/KB-986C1D33.md",
+      "subject": "On Firefox the /account/returns mobile cards split the 15-character RMA mid-token at viewports up to 385 px; it is whole from 386 px",
+      "question": "Why does the RMA on the /account/returns mobile cards break mid-number on Firefox at narrow widths, and from which viewport width is it whole?",
+      "anchors": [
+        "/account/returns",
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "browser=firefox",
+        "surface=storefront-ui",
+        "viewport=360-386"
       ],
       "plane": "experiential",
       "status": "active",
