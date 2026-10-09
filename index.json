@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T14:00:58.686Z",
-  "count": 682,
+  "generated": "2026-10-09T14:35:52.626Z",
+  "count": 683,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -12129,6 +12129,24 @@
         "principal=org-member",
         "surface=admin-ui",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AE610B71",
+      "path": "entries/KB-AE610B71.md",
+      "subject": "The storefront return wizard's item table (Select items to return) has row hover but no selected-row state: choosing a line sets its Return qty, it never marks the row selected",
+      "question": "On the storefront return wizard /account/returns/new/{orderId}, how is a line selected, and does a selected row look different from an unselected or hovered row?",
+      "anchors": [
+        "/account/returns/new/{orderId}"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=paprika",
+        "viewport=desktop"
       ],
       "plane": "experiential",
       "status": "active",
