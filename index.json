@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T15:42:13.784Z",
-  "count": 687,
+  "generated": "2026-10-09T15:50:29.673Z",
+  "count": 688,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3038,6 +3038,29 @@
       "status": "active",
       "trust": 11,
       "disputed": 8
+    },
+    {
+      "id": "KB-303CC514",
+      "path": "entries/KB-303CC514.md",
+      "subject": "createQuoteFromCart copies the cart's persisted line prices, so a cart line stored at 0 becomes a 0.00 quote line even though the xAPI cart shows the catalog price",
+      "question": "Where do quote line prices come from after Mutation.createQuoteFromCart, and why can an RFQ show 0.00 for lines the cart showed priced?",
+      "anchors": [
+        "Mutation.createQuoteFromCart",
+        "Query.quote",
+        "Query.cart",
+        "POST /api/carts/search",
+        "/account/quotes"
+      ],
+      "scope": [
+        "module=virtocommerce.quote",
+        "module=virtocommerce.xcart",
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-306353A9",
