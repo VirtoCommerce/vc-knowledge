@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T11:44:57.549Z",
-  "count": 676,
+  "generated": "2026-10-09T13:13:02.421Z",
+  "count": 678,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2476,6 +2476,26 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-27A5DF40",
+      "path": "entries/KB-27A5DF40.md",
+      "subject": "Leaving a category page before its GetCategory response arrives makes the storefront rewrite the address bar back to that category slug while the new page stays rendered",
+      "question": "What happens to the URL if the user navigates away from a category page while its GetCategory query is still in flight?",
+      "anchors": [
+        "Query.category (GetCategory)",
+        "/cart",
+        "/search",
+        "client-app/shared/catalog/components/category.vue"
+      ],
+      "scope": [
+        "layer=vc-frontend",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9210,6 +9230,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-883F1015",
+      "path": "entries/KB-883F1015.md",
+      "subject": "A header search submitted while the category scope is still loading runs unscoped on /search with the store catalog filter, never the previous category",
+      "question": "Which scope does a header search use if submitted while the search-bar category scope loader is showing?",
+      "anchors": [
+        "Query.products",
+        "/search"
+      ],
+      "scope": [
+        "layer=vc-frontend",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
