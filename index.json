@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T21:32:15.013Z",
-  "count": 711,
+  "generated": "2026-10-09T21:35:41.351Z",
+  "count": 712,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3266,6 +3266,26 @@
       ],
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-311DE5A4",
+      "path": "entries/KB-311DE5A4.md",
+      "subject": "A buyer-created return (Mutation.createReturn) copies customerId from the order as stored, letter case included, so an order written with the buyer's id in UPPERCASE yields a self-filed return that the storefront details page shows as a colleague's (no Cancel return)",
+      "question": "Where does the customerId of a return created through Mutation.createReturn come from, and what happens when the order's customerId differs from the buyer's user id only in letter case?",
+      "anchors": [
+        "Mutation.createReturn",
+        "Query.returnableItems",
+        "/account/returns/{id}",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-31224A5E",
@@ -13930,7 +13950,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
