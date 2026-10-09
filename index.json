@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T11:21:36.026Z",
-  "count": 667,
+  "generated": "2026-10-09T11:26:34.866Z",
+  "count": 672,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3582,7 +3582,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -4294,6 +4294,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-44C12AAC",
+      "path": "entries/KB-44C12AAC.md",
+      "subject": "On /account/lists/{id} the line quantity input renders max=\"0\" and is exposed as invalid on an untouched render when the product has no maximum quantity; cart and PDP inputs do not",
+      "question": "What min/max does the quantity input on the list details page /account/lists/{id} get, and is it reported invalid, for a product whose maxQuantity is 0 (no limit)?",
+      "anchors": [
+        "/account/lists/{id}",
+        "Query.wishlist"
+      ],
+      "scope": [
+        "page=list-details",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-452D7913",
       "path": "entries/KB-452D7913.md",
       "subject": "Opening an existing CMS page in Admin Content > Pages calls GET /api/pagebuilder/git/legacy-draft, gets 404 and raises a '404: Not found' error toast",
@@ -4687,6 +4705,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-4B6BF7A0",
+      "path": "entries/KB-4B6BF7A0.md",
+      "subject": "xAPI wishlist items carry product.maxQuantity = 0 (not null) for a product with no maximum order quantity",
+      "question": "What does Query.wishlist (GetWishlist) return in items.product.maxQuantity for a product that sets no maximum order quantity?",
+      "anchors": [
+        "Query.wishlist",
+        "/account/lists/{id}"
+      ],
+      "scope": [
+        "operation=getwishlist",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4B889114",
       "path": "entries/KB-4B889114.md",
       "subject": "company members Active column vs account locked state",
@@ -4820,7 +4856,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8573,6 +8609,25 @@
       "disputed": 1
     },
     {
+      "id": "KB-7E840CCE",
+      "path": "entries/KB-7E840CCE.md",
+      "subject": "On the vc-frontend-next 3.0 storefront the mobile header bell button's accessible name is only the unread count; desktop reads '<count> Alerts'",
+      "question": "What accessible name does the vc-frontend-next storefront mobile header give the push-notifications bell button?",
+      "anchors": [
+        "/account/notifications",
+        "push-messages-mobile.vue"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next-3.0",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7F535D52",
       "path": "entries/KB-7F535D52.md",
       "subject": "CyberSource sandbox authorization on the storefront cart is non-deterministic between runs on one build: the same card and amount can authorize cleanly to Processing, or be held for review and leave the order at Payment required.",
@@ -9917,6 +9972,25 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-94C78DB7",
+      "path": "entries/KB-94C78DB7.md",
+      "subject": "Mutation.createOrderFromCart for a one-line cart (FixedRate/Ground + DefaultManualPaymentMethod) takes 0.7 to 9.0 s client-side on vcst_qa, median about 3 s, with no warm-up pattern, while the `me` query stays at 130 to 160 ms",
+      "question": "How long does Mutation.createOrderFromCart take on xAPI for a simple one-line cart, and is the first call slow?",
+      "anchors": [
+        "Mutation.createOrderFromCart",
+        "POST /graphql"
+      ],
+      "scope": [
+        "auth=storefront-buyer",
+        "cart=single-line-manual-payment",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -17011,6 +17085,25 @@
       "status": "active",
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-FA0604AD",
+      "path": "entries/KB-FA0604AD.md",
+      "subject": "Mutation.createOrderFromCart for a one-line cart (FixedRate/Ground + DefaultManualPaymentMethod) takes 0.5 to 3.6 s client-side on vcptcore_qa with released XOrder 3.1014.0 / XCart 3.1039.0, median about 1.2 s",
+      "question": "How long does Mutation.createOrderFromCart take on a stand running the released XOrder and XCart modules?",
+      "anchors": [
+        "Mutation.createOrderFromCart",
+        "POST /graphql"
+      ],
+      "scope": [
+        "auth=storefront-buyer",
+        "cart=single-line-manual-payment",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-FA3338C3",
