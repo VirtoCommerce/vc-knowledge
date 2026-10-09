@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T15:34:29.596Z",
-  "count": 686,
+  "generated": "2026-10-09T15:42:13.784Z",
+  "count": 687,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9037,7 +9037,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -15786,6 +15786,25 @@
         "KB-54D11D0D",
         "KB-4E0175CF"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E91989D9",
+      "path": "entries/KB-E91989D9.md",
+      "subject": "On vcst_qa (Return 3.1005.0-pr-28-62f9, FileExperienceApi 3.1007.0-pr-25-ff70), uploading to the return-attachments file scope is refused as an unknown scope with HTTP 200",
+      "question": "Does POST /api/files/return-attachments accept a buyer's return evidence upload?",
+      "anchors": [
+        "POST /api/files/return-attachments",
+        "Mutation.updateReturn"
+      ],
+      "scope": [
+        "feature=returns",
+        "module=fileexperienceapi",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
