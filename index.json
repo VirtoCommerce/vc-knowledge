@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T11:30:06.556Z",
-  "count": 673,
+  "generated": "2026-10-09T11:32:18.417Z",
+  "count": 674,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2571,7 +2571,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-2A7CB639",
@@ -10603,6 +10603,27 @@
       ],
       "scope": [
         "surface=admin-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9F5ED18C",
+      "path": "entries/KB-9F5ED18C.md",
+      "subject": "With the paprika light preset, white text on solid-primary buttons and primary badges is #ffffff on #e5451c = 4.04:1, below the 4.5:1 WCAG 1.4.3 floor; the paprika dark preset uses black on #e17853 = 7.01:1",
+      "question": "Do solid-primary buttons and the header cart badge meet WCAG 1.4.3 contrast in the paprika preset, light and dark?",
+      "anchors": [
+        "/cart",
+        "/sign-in",
+        "/product/{id}"
+      ],
+      "scope": [
+        "mode=dark",
+        "mode=light",
+        "preset=paprika",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
