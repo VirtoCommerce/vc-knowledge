@@ -35,5 +35,11 @@ evidence:
     who: kutasinaelena
     contradicts: true
     note: "Superseded the same day once the ingress route was added: POST {storefront}/api/otp/request now returns 200 {succeeded:true, error:null, maskedEmail:\"t•••0@test-agent.com\"} and the form moves to the \"Check your email\" step (\"We sent a code to t•••0@...\"). The 405 was a deployment ingress gap, not product behaviour; the client-side validation part of the entry still holds."
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-09T10:55:45.492Z
+    by: session:df9d131f
+    who: Lenajava1
+    note: "Same ingress gap present on vcst_qa 2026-10-09 (theme vc-frontend-next 3.0.0-alpha.2685, OTP module 3.1000.0, OtpSignIn.Enabled temporarily on): POST {storefront}/api/otp/request -> 405 nginx HTML, form shows inline 'Something went wrong. Please try again later.'; the identical body POSTed to the platform host returned 200 succeeded:true and the OtpSignInEmailNotification was journaled. GET {storefront}/api/otp/request returns the SPA index, while {storefront}/api/files/* is proxied - the storefront proxy whitelists paths and lacks /api/otp. Deployment-specific, not product behaviour."
 ---
 On vcptcore_qa1 (theme 2.59.0-pr-2477-ff59, OTP module 3.1000.0-pr-1-11d6, 2026-10-01) the /sign-in page defaults to the one-time-code view. Clicking Continue with a valid address issues POST /api/otp/request relative to the storefront origin; the storefront ingress returns 405 (text/html, Cloudflare), so the request never reaches the platform. The form stays on the email step and shows an inline alert "Something went wrong. Please try again later." and, at the same time, the app-wide toast "Apologies for the inconvenience. Our server is currently experiencing technical issues..." with a Report a problem button. The same request sent directly to the platform host is answered normally, so the gap is ingress routing of /api/otp, not the module. Empty email shows "This field is required"; john@ and an address with an inner space show "Enter a valid email address, e.g. johndoe@gmail.com" and send nothing.
