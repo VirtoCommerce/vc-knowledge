@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T11:05:57.300Z",
-  "count": 663,
+  "generated": "2026-10-09T11:21:36.026Z",
+  "count": 667,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2709,6 +2709,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2C150D2A",
+      "path": "entries/KB-2C150D2A.md",
+      "subject": "On upstream vc-frontend 2.59 at 375px the full-screen mobile menu neither takes nor contains focus, ignores Escape, and its unnamed close button drops focus to body",
+      "question": "How does keyboard focus behave in the upstream vc-frontend mobile main menu at 375px?",
+      "anchors": [
+        "/sign-in",
+        "nav.mobile-menu"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend",
+        "user=guest",
+        "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8751,6 +8771,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-830B9FB0",
+      "path": "entries/KB-830B9FB0.md",
+      "subject": "A zero-hit /search?barcode= lookup shifts layout on load (CLS ~0.41 at 1920px, ~0.76 at 375px): the controls row and skeleton cards collapse into the barcode empty view in one frame",
+      "question": "Does the storefront /search?barcode= zero-hit empty state cause a layout shift on load, and how large?",
+      "anchors": [
+        "/search?barcode=",
+        "Query.products"
+      ],
+      "scope": [
+        "aspect=layout-stability",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-843D0515",
       "path": "entries/KB-843D0515.md",
       "subject": "Deleting an org a Sales Rep serves leaves it in the rep record; a PUT /api/sales-rep that echoes it back 500s",
@@ -9336,6 +9374,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8DDFC7BA",
+      "path": "entries/KB-8DDFC7BA.md",
+      "subject": "A zero-hit keyword search on /search?q= shifts layout heavily on load (CLS ~0.47 at 1920px, ~0.81 at 375px): sidebar, controls and skeleton cards collapse in one frame into the empty view",
+      "question": "Does the storefront /search?q= zero-hit (no results) empty state cause a layout shift on load, and how large?",
+      "anchors": [
+        "/search?q=",
+        "Query.products"
+      ],
+      "scope": [
+        "aspect=layout-stability",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11631,6 +11687,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AD1902B5",
+      "path": "entries/KB-AD1902B5.md",
+      "subject": "At 375px the open mobile main menu does not contain focus: Tab past its last item and Shift+Tab before its first move focus to page controls hidden under the panel",
+      "question": "Does the storefront mobile main menu keep keyboard focus inside itself while open at 375px?",
+      "anchors": [
+        "/catalog",
+        "nav.mobile-menu__panel"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next",
+        "user=guest",
+        "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
