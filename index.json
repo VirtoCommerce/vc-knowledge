@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T13:13:02.421Z",
-  "count": 678,
+  "generated": "2026-10-09T13:26:34.765Z",
+  "count": 679,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3643,6 +3643,27 @@
       "scope": [
         "module=virtocommerce.pushmessages",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3BF93B85",
+      "path": "entries/KB-3BF93B85.md",
+      "subject": "Removing the header search bar category scope chip ('Remove: <category>') drops document.activeElement to <body>; no focus is restored to the search input",
+      "question": "Where does keyboard focus go after the category scope chip in the storefront header search bar is removed (click or Enter)?",
+      "anchors": [
+        "/printers",
+        "client-app/shared/layout/components/header/_internal/search-bar/search-bar.vue#onScopeItemClick",
+        "client-app/shared/layout/composables/useSearchScore.ts#removeScopeItemById"
+      ],
+      "scope": [
+        "browser=firefox",
+        "component=header-search-bar",
+        "surface=storefront-ui",
+        "viewport=desktop"
       ],
       "plane": "experiential",
       "status": "active",
