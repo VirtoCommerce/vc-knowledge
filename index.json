@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T15:19:35.290Z",
-  "count": 684,
+  "generated": "2026-10-09T15:26:59.736Z",
+  "count": 686,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -933,6 +933,26 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1007F9F2",
+      "path": "entries/KB-1007F9F2.md",
+      "subject": "createOrderFromCart and createQuoteFromCart reject an invalid cart with one generic \"The cart has validation errors\" error whose extensions carry only code ValidationError, with no per-rule codes",
+      "question": "When Mutation.createOrderFromCart or Mutation.createQuoteFromCart rejects a cart that has validation errors, which error codes does errors[].extensions carry?",
+      "anchors": [
+        "Mutation.createOrderFromCart",
+        "Mutation.createQuoteFromCart"
+      ],
+      "scope": [
+        "module=quote",
+        "module=x-order",
+        "store=b2b-store",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11893,6 +11913,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-AC877AA9",
+      "path": "entries/KB-AC877AA9.md",
+      "subject": "A cart line whose product was deleted is flagged CART_PRODUCT_UNAVAILABLE under validationErrors ruleSet \"*\" but not under ruleSet \"default\"",
+      "question": "Does Query.cart validationErrors(ruleSet:\"default\") report a line item whose product was deleted, or only ruleSet \"*\"?",
+      "anchors": [
+        "Query.cart",
+        "Mutation.createQuoteFromCart"
+      ],
+      "scope": [
+        "module=x-cart",
+        "store=b2b-store",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-ACC12F26",
       "path": "entries/KB-ACC12F26.md",
       "subject": "A punchout user mapping accepts an unvalidated userId (incl. an administrator account), yielding a privilege-escalation sign-in via the anonymous cXML + punchout grant chain",
@@ -12188,7 +12227,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
