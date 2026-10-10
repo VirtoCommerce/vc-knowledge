@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-09T22:08:55.393Z",
-  "count": 719,
+  "generated": "2026-10-10T01:11:30.754Z",
+  "count": 721,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9154,6 +9154,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-7F926BA1",
+      "path": "entries/KB-7F926BA1.md",
+      "subject": "Opening a return from the storefront Returns list at 375 px shifts the layout, but CLS scores it only when GetReturn lands more than 500 ms after the click",
+      "question": "/account/returns list to /account/returns/{id} in-app click navigation at 375 px: are the loading-shell layout shifts scored by CLS or excluded by hadRecentInput, and does network speed change it",
+      "anchors": [
+        "/account/returns",
+        "/account/returns/{id}",
+        "Query.return"
+      ],
+      "scope": [
+        "engine=chromium",
+        "surface=storefront-ui",
+        "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-809EA119",
       "path": "entries/KB-809EA119.md",
       "subject": "After a partial approval, returnableQuantity is ordered minus approved: never-requested and released-unapproved units form one returnable pool",
@@ -14784,6 +14804,24 @@
       ],
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-D0C7A7B3",
+      "path": "entries/KB-D0C7A7B3.md",
+      "subject": "The storefront's 15 s \"incompatible backend\" toast collapses its notifications host when it expires, which adds an unrelated layout shift to CLS on account pages",
+      "question": "storefront app start shows an \"incompatible backend\" outdated modules toast for 15 s; does its expiry cause a layout shift that confounds CLS measurements on account pages at 375 px",
+      "anchors": [
+        "/account/returns"
+      ],
+      "scope": [
+        "engine=chromium",
+        "surface=storefront-ui",
+        "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D12432BD",
