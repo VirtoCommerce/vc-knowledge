@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-10T01:11:30.754Z",
-  "count": 721,
+  "generated": "2026-10-10T10:49:00.014Z",
+  "count": 722,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11050,6 +11050,25 @@
       "supersededBy": [
         "KB-17555498"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9C06E390",
+      "path": "entries/KB-9C06E390.md",
+      "subject": "After saving a category's images via POST /api/catalog/categories and indexing it by documentIds, xAPI Query.categories returns the sortOrder-0 image as imgSrc, including for physical categories linked into the store's virtual catalog.",
+      "question": "which image does xAPI Category.imgSrc return, and does a linked category in a virtual catalog show an image set on its source category",
+      "anchors": [
+        "POST /api/catalog/categories",
+        "POST /api/search/indexes/index",
+        "Query.categories"
+      ],
+      "scope": [
+        "entity=category",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
