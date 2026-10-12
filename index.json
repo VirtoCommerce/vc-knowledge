@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T18:06:26.911Z",
+  "generated": "2026-10-12T18:22:00.196Z",
   "count": 771,
   "entries": [
     {
@@ -2502,9 +2502,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
-      "disputed": 2,
-      "resolved": 3
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 5
     },
     {
       "id": "KB-2289BD9F",
@@ -17708,7 +17708,7 @@
     {
       "id": "KB-ED01C2A4",
       "path": "entries/KB-ED01C2A4.md",
-      "subject": "A storefront token without organization_id takes the role of the contact's first stored organization; organization_id (either casing) picks the membership",
+      "subject": "A storefront token without organization_id takes the contact's current (last-used) organization; organization_id picks the membership, organizationId is ignored",
       "question": "How do I get an organization-scoped storefront token from /connect/token so me.permissions reflects that organization's role?",
       "questions": [
         "Why does my company account say I lack permission to edit the organization right after signing in?",
@@ -17733,8 +17733,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1,
-      "resolved": 1
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-ED1C55C0",
