@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T10:57:50.777Z",
-  "count": 741,
+  "generated": "2026-10-12T11:17:06.297Z",
+  "count": 742,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -993,6 +993,24 @@
         "KB-24B83B02"
       ],
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0ECE802D",
+      "path": "entries/KB-0ECE802D.md",
+      "subject": "Every order email (created, cancelled, status/payment/shipment changed, paid, sent) goes To the first non-empty order address email; the customer's contact/account email is only the fallback",
+      "question": "Which address do order emails such as OrderCreateEmailNotification go To — the order address email or the customer's contact/account email?",
+      "anchors": [
+        "POST /api/order/customerOrders",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "module=order",
+        "surface=notifications"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
