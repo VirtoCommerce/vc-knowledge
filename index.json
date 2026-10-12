@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T10:34:15.153Z",
-  "count": 739,
+  "generated": "2026-10-12T10:48:17.548Z",
+  "count": 741,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -8036,6 +8036,25 @@
       "status": "active",
       "trust": 2,
       "disputed": 2
+    },
+    {
+      "id": "KB-6E4F5067",
+      "path": "entries/KB-6E4F5067.md",
+      "subject": "POST /api/order/customerOrders/search filters exactly by organizationId",
+      "question": "Does POST /api/order/customerOrders/search with organizationId return only that organization's orders?",
+      "anchors": [
+        "POST /api/order/customerOrders/search",
+        "POST /api/return/search",
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "actor=admin",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-6E56FB4B",
@@ -16256,6 +16275,24 @@
       "scope": [
         "store=b2b-store",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E129A8EF",
+      "path": "entries/KB-E129A8EF.md",
+      "subject": "PUT /api/organizations is a full replace: omitting status and description sets them to null; memberships survive",
+      "question": "Does a rename through PUT /api/organizations with only id, memberType, name and emails keep the organization's other fields?",
+      "anchors": [
+        "PUT /api/organizations",
+        "GET /api/organizations/{id}"
+      ],
+      "scope": [
+        "actor=admin",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
