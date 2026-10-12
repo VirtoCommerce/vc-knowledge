@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T08:58:53.678Z",
-  "count": 730,
+  "generated": "2026-10-12T09:02:59.446Z",
+  "count": 733,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1363,7 +1363,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -1609,7 +1609,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4991,6 +4991,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-4A717175",
+      "path": "entries/KB-4A717175.md",
+      "subject": "On the organization returns tab a draft cancelled before submit stays private, while a return submitted and then cancelled stays listed as Cancelled and opens read-only",
+      "question": "After the SubmittedDate change, does /account/returns?scope=organization list a colleague's draft that was cancelled without being submitted, and a return that was submitted and then cancelled?",
+      "anchors": [
+        "/account/returns?scope=organization",
+        "/account/returns/:id",
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4A8606CA",
       "path": "entries/KB-4A8606CA.md",
       "subject": "an abandoned invitation can leave an account nothing can delete",
@@ -6758,7 +6776,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -8720,6 +8738,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-78DC2D91",
+      "path": "entries/KB-78DC2D91.md",
+      "subject": "After a holder submits or cancels their own return, both the My returns and the organization tab show the new state on in-app navigation without a page reload",
+      "question": "Do /account/returns lists that were already loaded refresh after a return is submitted or cancelled in the same storefront session, without reloading the page?",
+      "anchors": [
+        "/account/returns",
+        "/account/returns?scope=organization",
+        "/account/returns/:id"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-79949FFE",
       "path": "entries/KB-79949FFE.md",
       "subject": "On a configurable product PDP, whitespace-only text in a required Text section reveals its dependent section while the section itself stays required.",
@@ -9614,7 +9650,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9811,6 +9847,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-88DFA29B",
+      "path": "entries/KB-88DFA29B.md",
+      "subject": "The returns list clamps an out-of-range page query parameter: -1, 0 and non-numeric show page 1, a page past the last is rewritten to the last page, on both the My returns and the organization tab",
+      "question": "What does /account/returns show for page=-1, page=0, page=abc or a page number past the last page, on My returns and on the organization tab?",
+      "anchors": [
+        "/account/returns",
+        "/account/returns?scope=organization"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -17684,7 +17737,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
