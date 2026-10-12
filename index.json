@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T12:04:20.675Z",
-  "count": 744,
+  "generated": "2026-10-12T12:25:50.585Z",
+  "count": 745,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3856,6 +3856,27 @@
       ],
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-36B307D8",
+      "path": "entries/KB-36B307D8.md",
+      "subject": "When a SQL Queries command times out, the API returns 500 with message \"Unknown error 258\" instead of the SqlClient \"Execution Timeout Expired\" text (Linux platform container).",
+      "question": "What error does the SQL Queries API return when a query exceeds the command timeout?",
+      "anchors": [
+        "POST /api/sql-queries/execute-preview",
+        "POST /api/sql-queries/execute-query/{id}",
+        "POST /api/sql-queries/execute/{id}/{format}"
+      ],
+      "scope": [
+        "db=sqlserver",
+        "host-os=linux",
+        "module=virtocommerce.sqlqueries",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-3712D4C4",
