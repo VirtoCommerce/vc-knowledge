@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T09:57:22.815Z",
-  "count": 737,
+  "generated": "2026-10-12T10:03:26.902Z",
+  "count": 738,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4915,7 +4915,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-4982C91F",
@@ -9865,7 +9865,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -10920,6 +10920,25 @@
         "entity=product-with-variations",
         "module=catalog",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-96D80B8E",
+      "path": "entries/KB-96D80B8E.md",
+      "subject": "The 375px mobile header search panel shows no category scope chip on a category page, and a submit from it runs a global /search?q= search",
+      "question": "Does the mobile search panel carry the category search scope when opened on a category page?",
+      "anchors": [
+        "/printers/multifunction-printers",
+        "/search"
+      ],
+      "scope": [
+        "component=header-search-bar",
+        "surface=storefront-ui",
+        "viewport=mobile"
       ],
       "plane": "experiential",
       "status": "active",
