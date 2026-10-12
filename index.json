@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T08:34:12.432Z",
-  "count": 726,
+  "generated": "2026-10-12T08:41:50.056Z",
+  "count": 727,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1363,7 +1363,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1609,7 +1609,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8936,7 +8936,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9539,6 +9539,24 @@
       "scope": [
         "module=seo",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-85EA02F6",
+      "path": "entries/KB-85EA02F6.md",
+      "subject": "The organization returns list is ordered and dated by createdDate; a return created early and submitted late ranks below one created later, and sort by submittedDate is not honoured",
+      "question": "Does Query.organizationReturns (and the /account/returns?scope=organization list) order and date returns by createdDate or by submittedDate?",
+      "anchors": [
+        "Query.organizationReturns",
+        "/account/returns?scope=organization"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12448,7 +12466,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
