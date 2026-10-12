@@ -30,5 +30,11 @@ evidence:
     at: 2026-10-06T17:53:08.943Z
     by: session:b6bd53fc
     note: "Still no email or push for a PUT-created New return on Return 3.1005.0-pr-28-62f9; new: its organizationId and organizationName are filled from the order."
+  - method: observation
+    deployment: vcptcore_dev
+    at: 2026-10-09T20:33:55.010Z
+    by: session:61a7b05a
+    who: yuskithedeveloper
+    note: "Return 3.1005.0-pr-28-fb4f: PUT /api/return without id answered 200 {id}; with status New (the Admin SPA Make return) the return landed New with 0 emails and 0 push after about 3 minutes; with status Cancelled it was stored Cancelled. organizationId and organizationName were filled from the order in both cases."
 ---
 The Return module REST controller has no POST create; PUT /api/return with a body that has no id upserts a new return (200, returns the created id; number from Return.ReturnNewNumberTemplate). Body used: storeId, customerId, customerName, orderId, orderNumber, customerReference, status New, lineItems[] with orderLineItemId, productId, sku, name, measureUnit, orderedQuantity, price, quantity, reason. The return lands in status New (not Requested), it DOES hold its quantity against returnableItems (ordered 4, returned 3 -> returnableQuantity 1), languageCode is filled from the order (en-US), and NO ReturnRegisteredEmailNotification and NO push message are raised - those come only from xAPI submitReturn. Observed on VirtoCommerce.Return 3.1003.0-pr-27-51fc.

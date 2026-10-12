@@ -30,5 +30,11 @@ evidence:
     at: 2026-10-06T17:53:07.364Z
     by: session:b6bd53fc
     note: POST /api/notifications/journal with objectIds + objectType Return returned to / cc / bcc and bodies for the buyer email and the organization copy.
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-09T10:55:45.507Z
+    by: session:df9d131f
+    who: Lenajava1
+    note: POST /api/notifications/journal with keyword=<recipient email>, sort createdDate:desc returned ResetPasswordEmailNotification and OtpSignInEmailNotification rows for that recipient with status Sent and the rendered body.
 ---
 POST /api/notifications/journal with {notificationType, keyword: <recipient email>, sort: 'createdDate:desc'} returns EmailNotificationMessage rows that already include from, to, cc, subject, body and tenantIdentity, so GET /api/notifications/journal/{id} is not needed for the body. keyword matched the to field (all hits had that recipient when combined with notificationType); keyword alone matched far more rows, so filter to client-side. On a deployment without SMTP the row is stored with status Error but the rendered body is present. to can hold several recipients separated by '; '.

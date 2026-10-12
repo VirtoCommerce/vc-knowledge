@@ -54,6 +54,19 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: POST {storefront}/api/otp/request -> 405 text/html \"405 Not Allowed\" (nginx behind Cloudflare); the same POST to the platform host -> 200 JSON error otp_disabled. The storefront shows only the password form because OTP is off for the store."
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-09T10:55:45.492Z
+    by: session:df9d131f
+    who: Lenajava1
+    note: "Same ingress gap present on vcst_qa 2026-10-09 (theme vc-frontend-next 3.0.0-alpha.2685, OTP module 3.1000.0, OtpSignIn.Enabled temporarily on): POST {storefront}/api/otp/request -> 405 nginx HTML, form shows inline 'Something went wrong. Please try again later.'; the identical body POSTed to the platform host returned 200 succeeded:true and the OtpSignInEmailNotification was journaled. GET {storefront}/api/otp/request returns the SPA index, while {storefront}/api/files/* is proxied - the storefront proxy whitelists paths and lacks /api/otp. Deployment-specific, not product behaviour."
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-09T13:56:24.196Z
+    by: session:df9d131f
+    who: Lenajava1
+    contradicts: true
+    note: "Superseded on vcst_qa 2026-10-09 ~13:53 UTC once the storefront ingress gained a /api/otp route to the platform (theme vc-frontend-next 3.0.0-alpha.2685, OtpSignIn.Enabled on): clicking Continue on /sign-in sent POST {storefront}/api/otp/request {email, storeId} -> 200 application/json {succeeded:true, error:null, maskedEmail, lockoutSecondsRemaining:null} in ~0.5s, the form moved to the \"Check your email\" code step with the masked address, the OtpSignInEmailNotification was journaled and sent, and entering the code auto-submitted POST {storefront}/connect/token grant_type=otp_email -> 200 and signed the user in. As on vcptcore_qa1, the 405 was a deployment ingress gap; with the route present the flow works end to end."
 ---
 With OtpSignIn.Enabled on the store, /sign-in opens on the one-time-code view ("We'll email you a code. No password needed.", Email, Continue, "Sign in with a password instead"). Continue validates the email client-side - empty: "This field is required"; "john@" or an address with a space: "Enter a valid email address, e.g. johndoe@gmail.com" - and sends nothing until it is valid. Then it POSTs /api/otp/request RELATIVE TO THE STOREFRONT ORIGIN, so it only reaches the platform if the storefront's ingress routes /api/otp to it.
 

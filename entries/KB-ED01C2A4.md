@@ -53,6 +53,13 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: same rules; maintainer set has 8 permissions here."
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-08T15:37:34.811Z
+    by: session:62b7421e
+    who: Lenajava1
+    contradicts: true
+    note: "vcst_qa 2026-10-08: a token WITHOUT organization_id is scoped to an organization the platform picks and carries THAT membership's permissions, not a fixed two-permission view set. A member whose only role grants xapi:my_organization:return:view got exactly [return:view] (1 permission); an org-employee member got the 2 view permissions only because that is what org-employee holds. For a contact in two organizations the picked organization changed between two seeds (once the first, once the second), so omitting organization_id is non-deterministic, not view-only."
 ---
 Passing organization_id (or organizationId - either casing works) together with storeId on the storefront password grant scopes the token to that organization, and me.permissions returns that membership's role: one user who was maintainer of A and employee of B got 11 permissions for A and 2 (storefront:organization:view, storefront:user:view) for B on vcst_qa, 8 and 2 on vcptcore_stable.
 
