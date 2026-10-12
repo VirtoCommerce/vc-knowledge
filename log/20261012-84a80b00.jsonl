@@ -1,1 +1,2 @@
-{"at":"2026-10-12T08:33:59.923Z","kind":"session","session":"84a80b00","tools":14,"turns":2,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-12T07:49:38.248Z","lastAt":"2026-10-12T07:56:04.856Z","who":"Dan-BV"}
+{"at":"2026-10-12T08:51:39.680Z","kind":"session","session":"84a80b00","tools":21,"turns":1,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-12T07:49:38.248Z","lastAt":"2026-10-12T08:51:39.533Z","who":"Dan-BV"}
+{"at":"2026-10-12T08:51:39.533Z","kind":"restart","why":"state-dropped","who":"Dan-BV"}
