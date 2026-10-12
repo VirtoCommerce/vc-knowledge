@@ -24,5 +24,11 @@ evidence:
     at: 2026-10-01T19:06:48.635Z
     by: session:0cfc9f97
     who: kutasinaelena
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-12T08:33:18.855Z
+    by: session:573e5582
+    who: Lenajava1
+    note: "2026-10-12: fresh orders with two fully delivered lines (40 and 25) report returnableQuantity 40 and 25, one row per line."
 ---
 The xAPI returnableItems(orderId) query returns one row per order line; returnableQuantity equals the line's deliveredQuantity (an order line with orderedQuantity 10 and deliveredQuantity 4 reports returnableQuantity 4, isReturnable true), and two eligible lines on one order each carry their own returnableQuantity (5 and 3), not a single per-return value.
