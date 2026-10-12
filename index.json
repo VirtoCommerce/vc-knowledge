@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T14:36:34.967Z",
-  "count": 759,
+  "generated": "2026-10-12T14:46:05.069Z",
+  "count": 760,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14219,6 +14219,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BD846528",
+      "path": "entries/KB-BD846528.md",
+      "subject": "The modules API reports a PR prerelease module by its full build string, not its base version",
+      "question": "GET /api/platform/modules — what version string does a module installed from a PR prerelease build report?",
+      "anchors": [
+        "GET /api/platform/modules"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
