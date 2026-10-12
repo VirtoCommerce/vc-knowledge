@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T17:24:46.763Z",
-  "count": 767,
+  "generated": "2026-10-12T17:30:07.674Z",
+  "count": 771,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4958,6 +4958,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-4803E670",
+      "path": "entries/KB-4803E670.md",
+      "subject": "On vcst_qa two Hangfire recurring jobs fail every day: AbandonedCartReminderJob.Process (notification validation errors) and PruneExpiredTokensJob (abstract class instantiation), accumulating 339 failed jobs",
+      "question": "Why does the Hangfire dashboard show hundreds of failed jobs, and which recurring jobs fail?",
+      "anchors": [
+        "/hangfire/jobs/failed",
+        "/hangfire/recurring"
+      ],
+      "scope": [
+        "account=admin",
+        "surface=hangfire-dashboard"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4895528A",
       "path": "entries/KB-4895528A.md",
       "subject": "sharedWishlist on a list that is now Private returns data null with no error",
@@ -5027,6 +5045,25 @@
       "scope": [
         "module=pages",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-48F03E42",
+      "path": "entries/KB-48F03E42.md",
+      "subject": "POST /api/catalog/search returns 404; product search is POST /api/catalog/search/products, and roles are searched with POST /api/platform/security/roles/search (GET roles is 405)",
+      "question": "Which REST routes search catalog products and security roles on the platform, and what do the older routes return?",
+      "anchors": [
+        "POST /api/catalog/search",
+        "POST /api/catalog/search/products",
+        "POST /api/platform/security/roles/search"
+      ],
+      "scope": [
+        "account=admin",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -10194,6 +10231,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-8904E1E8",
+      "path": "entries/KB-8904E1E8.md",
+      "subject": "The Admin SPA login page requests the WidgetColorMarkers setting before authentication, gets 401, and logs a 'Possibly unhandled rejection' console error",
+      "question": "Does the Admin SPA log console errors on the login page before the user signs in?",
+      "anchors": [
+        "GET /api/platform/settings/VirtoCommerce.Platform.UI.WidgetColorMarkers"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-890E6A04",
       "path": "entries/KB-890E6A04.md",
       "subject": "Query.return and organizationReturns do not compare the store: a holder signed in to one store reads, and can list by passing another storeId, the organization's returns of another store",
@@ -14001,6 +14055,23 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B97A6436",
+      "path": "entries/KB-B97A6436.md",
+      "subject": "GET /api/platform/settings ignores the group and keyword query parameters and returns every setting; no lockout setting exists in it",
+      "question": "Can GET /api/platform/settings be filtered by ?group= or ?keyword=, and are user lockout options exposed as platform settings?",
+      "anchors": [
+        "GET /api/platform/settings"
+      ],
+      "scope": [
+        "account=admin",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
