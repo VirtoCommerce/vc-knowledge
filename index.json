@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T10:03:26.902Z",
-  "count": 738,
+  "generated": "2026-10-12T10:07:42.789Z",
+  "count": 739,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5953,6 +5953,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-50E37D3B",
+      "path": "entries/KB-50E37D3B.md",
+      "subject": "Admin return details blade keeps the pre-save Modified date after Save; only Refresh shows the server-stamped modifiedDate",
+      "question": "After Save on the Admin SPA return details blade, does the blade's Modified date update to the new modifiedDate the server stamped?",
+      "anchors": [
+        "PUT /api/return",
+        "GET /api/return/{id}"
+      ],
+      "scope": [
+        "module=return",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
