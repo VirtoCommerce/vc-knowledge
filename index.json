@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T06:38:36.565Z",
-  "count": 723,
+  "generated": "2026-10-12T08:01:42.770Z",
+  "count": 725,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -548,6 +548,25 @@
       "status": "active",
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-08FAC65C",
+      "path": "entries/KB-08FAC65C.md",
+      "subject": "salesRepCustomers sort my-last-orders ranks by the last NON-cancelled rep order, while the row's lastOrder can be a cancelled order, so a row showing the newest order date can sort last",
+      "question": "Does salesRepCustomers sorted by my-last-orders use the same order as the lastOrder field it displays, when the rep's newest order in that organization is cancelled?",
+      "anchors": [
+        "Query.salesRepCustomers",
+        "POST /graphql/sales-rep",
+        "PUT /api/order/customerOrders"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-097CB5D6",
@@ -3298,7 +3317,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10228,7 +10247,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -10413,6 +10432,25 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-93561B6C",
+      "path": "entries/KB-93561B6C.md",
+      "subject": "Setting a Sales Rep statistics family's CacheExpirationMinutes to 0 does not bypass or flush entries already cached: a stale key keeps being served; only keys first computed under TTL 0 recompute on every read",
+      "question": "When SalesRep.Statistics.CartCacheExpirationMinutes is set to 0 at runtime, do statistics keys cached earlier under a longer TTL keep being served stale, or does every read recompute?",
+      "anchors": [
+        "Query.salesRepCustomerCartStatistics",
+        "POST /api/platform/settings"
+      ],
+      "scope": [
+        "layer=platform-cache",
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -15478,7 +15516,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -17849,7 +17887,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
