@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T16:29:34.732Z",
-  "count": 763,
+  "generated": "2026-10-12T16:29:56.853Z",
+  "count": 765,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6724,6 +6724,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-5752EEB7",
+      "path": "entries/KB-5752EEB7.md",
+      "subject": "On /compare a single-product category tab shows the All/Differences switch as disabled only visually; the Differences button stays keyboard-focusable and Enter activates it",
+      "question": "On /compare with one product in the category tab, is the Differences toggle really disabled or only styled disabled?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "auth=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5790A068",
       "path": "entries/KB-5790A068.md",
       "subject": "marketing promotions are not change-tracked on this deployment",
@@ -11153,6 +11170,23 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-95685F89",
+      "path": "entries/KB-95685F89.md",
+      "subject": "On /compare the Availability cell's accessible name is the stock label (\"In stock\") and omits the visible quantity",
+      "question": "What does a screen reader get as the name of an Availability cell on /compare?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "auth=guest",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
