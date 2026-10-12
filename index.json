@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T15:09:19.757Z",
-  "count": 761,
+  "generated": "2026-10-12T16:10:00.637Z",
+  "count": 762,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14861,6 +14861,23 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-C5E27085",
+      "path": "entries/KB-C5E27085.md",
+      "subject": "On /compare a page only ~300px taller than the viewport cannot be wheel-scrolled past the sticky-header threshold: scroll position oscillates instead of advancing",
+      "question": "What happens on /compare when the page is only slightly taller than the viewport and the user scrolls toward the sticky compact-header threshold?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "browser=firefox",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-C60BA776",
