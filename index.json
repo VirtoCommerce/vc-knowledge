@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T08:01:42.770Z",
-  "count": 725,
+  "generated": "2026-10-12T08:20:12.677Z",
+  "count": 726,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -613,7 +613,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-09CEE315",
@@ -1828,6 +1828,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-18D61DE9",
+      "path": "entries/KB-18D61DE9.md",
+      "subject": "On vcst the Return.Status dictionary stores only Completed, New, Canceled, Processing, Approved, so a Cancelled return's available-statuses offers only Canceled and the status filter has no Requested, Rejected or PartiallyApproved",
+      "question": "What does GET /api/platform/settings/Return.Status hold on vcst and what does GET /api/return/{id}/available-statuses offer for a Cancelled return there?",
+      "anchors": [
+        "GET /api/platform/settings/Return.Status",
+        "GET /api/return/{id}/available-statuses"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-191B1B4C",
       "path": "entries/KB-191B1B4C.md",
       "subject": "the master product is a row in its own variations list",
@@ -2474,7 +2491,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
