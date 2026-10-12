@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T18:56:20.555Z",
+  "generated": "2026-10-12T19:04:28.212Z",
   "count": 771,
   "entries": [
     {
@@ -1512,7 +1512,7 @@
     {
       "id": "KB-1450B943",
       "path": "entries/KB-1450B943.md",
-      "subject": "At 768-799 px the organization returns table breaks RMA, Date and Status values mid-word (e.g. 'Reques/ted', '10/8/20/26')",
+      "subject": "Up to theme 2.60.0-pr-2523-9e4e, at 768-799 px the organization returns table breaks RMA, Date and Status values mid-word (e.g. Reques/ted, 10/8/20/26)",
       "question": "Do the returns table cells on /account/returns?scope=organization break dates and statuses mid-word at tablet width?",
       "anchors": [
         "/account/returns?scope=organization"
@@ -1523,8 +1523,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 2
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-14F26013",
@@ -4000,7 +4001,7 @@
     {
       "id": "KB-3712D4C4",
       "path": "entries/KB-3712D4C4.md",
-      "subject": "Returns list switches from stacked cards to the table at exactly 1024 px on both tabs, with fixed column widths Date 112, Buyer name 128 (160 from 1280), Status 144",
+      "subject": "Returns list switches from stacked cards to the table at exactly 1024 px on both tabs, with fixed column widths Date 112, Buyer name 128 (160 from 1280), Status 144; long buyer names wrap mid-word inside the cell",
       "question": "At which viewport width does /account/returns change between cards and the table, and how wide are the columns?",
       "anchors": [
         "/account/returns",
@@ -4013,7 +4014,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 2
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-375CEF71",
