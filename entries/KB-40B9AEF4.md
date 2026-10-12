@@ -35,6 +35,7 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/theme-search-stock-20261008
     resolution: Hyphenated names are found normally on two stands (live 2026-10-08); the misses are Member documents absent from the index - 2 still missing on vcst_qa. Subject and body corrected.
+    amendedFrom: c182a12a45e0
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; theme=2.59.0; module:VirtoCommerce.WhiteLabeling=3.1005.0; module:VirtoCommerce.Customer=3.1029.0; module:VirtoCommerce.ElasticSearch8=3.1011.0; module:VirtoCommerce.Inventory=3.1010.0; module:VirtoCommerce.Store=3.1009.0; store=B2B-store; preset=Mercury
@@ -42,6 +43,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: fresh hyphenated org found by full name and by a token 1.5 s after creation; 40/40 recent hyphenated orgs found; of the 13 previously missed, 11 now found, 2 (created 2026-09-19, never modified) still missed by every keyword while keyword-less listing and objectIds return them."
+    investigation: true
   - method: observation
     deployment: vcptcore_qa1
     conditions: platform=3.1077.0-pr-3123-6664; theme=2.59.0-pr-2506-bb0f; module:VirtoCommerce.WhiteLabeling=3.1005.0; module:VirtoCommerce.Customer=3.1028.0; module:VirtoCommerce.ElasticSearch8=3.1011.0; module:VirtoCommerce.Inventory=3.1010.0; module:VirtoCommerce.Store=3.1009.0; store=B2B-store; preset=Red
@@ -49,6 +51,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: fresh hyphenated org found in under 1 s; the same seed batch (15 orgs) all found; 22/22 sweep found."
+    investigation: true
 ---
 A hyphen in an organization's name does not stop POST /api/members/search {memberType:'Organization', keyword} from finding it: fresh organizations named like AGENT-TEST-JUDGE-Org-Kingsbridge-Imports-<stamp> were found by the full name and by a single token within 1-2 s of creation on vcst_qa and vcptcore_qa1 (2026-10-08), and so were 40 of 40 recent hyphenated organizations on vcst_qa.
 

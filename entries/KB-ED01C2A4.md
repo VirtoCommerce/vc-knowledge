@@ -39,6 +39,7 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/storefront-batch-20261008
     resolution: Without organization_id the token takes the first stored organization role, so a maintainer keeps the full set - live on vcst_qa and vcptcore_stable 2026-10-08 (vcptcore_dev not reachable). Subject and body corrected.
+    amendedFrom: 31606bfc5c74
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; theme=2.59.0; module:VirtoCommerce.Xapi=3.1026.0; module:VirtoCommerce.XCart=3.1039.0; module:VirtoCommerce.Marketing=3.1009.0; module:VirtoCommerce.MarketingExperienceApi=3.1004.0; module:VirtoCommerce.Customer=3.1029.0; module:VirtoCommerce.ProfileExperienceApiModule=3.1020.0; module:VirtoCommerce.Tax=3.1007.0; store=B2B-store; setting:Stores.TaxCalculationEnabled=true
@@ -46,6 +47,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: organization_id and organizationId scope the token to that membership (11 vs 2 permissions); without it, the token takes the role of the first stored organization of the contact: single-org maintainer 11, single-org employee 2, two-org user the first stored org role; global vs membership role made no difference."
+    investigation: true
   - method: observation
     deployment: vcptcore_stable
     conditions: platform=3.1039.12; theme=2.51.2; module:VirtoCommerce.Xapi=3.1012.3; module:VirtoCommerce.XCart=3.1021.2; module:VirtoCommerce.Marketing=3.1005.0; module:VirtoCommerce.Customer=3.1011.1; module:VirtoCommerce.ProfileExperienceApiModule=3.1009.1; module:VirtoCommerce.Tax=3.1003.0; store=B2B-store; setting:Stores.TaxCalculationEnabled=true
@@ -53,6 +55,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: same rules; maintainer set has 8 permissions here."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     at: 2026-10-08T15:37:34.811Z

@@ -68,6 +68,7 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/wishlist-owner-part-20261008
     resolution: An Organization-scope list of a colleague reaches /account/lists on theme 2.51.2 and 2.59.0 alike (live 2026-10-08); the owner-only claim held only for Customer-scope shares. Subject and body corrected.
+    amendedFrom: 8b44e511dc78
   - method: observation
     deployment: vcptcore_stable
     conditions: platform=3.1039.12; module:VirtoCommerce.XCart=3.1021.2; module:VirtoCommerce.Cart=3.1006.1; module:VirtoCommerce.Xapi=3.1012.3; theme=2.51.2; store=B2B-store; role=Purchasing agent
@@ -75,6 +76,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: member A set a list to Organization; it appears on member B /account/lists with badge Shared and opens at /account/lists/<id>; B GetWishlists passes no scope argument."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.XCart=3.1039.0; module:VirtoCommerce.Cart=3.1012.0; module:VirtoCommerce.Xapi=3.1026.0; theme=2.59.0; store=B2B-store; role=Organization maintainer (owner) / Purchasing agent (member)
@@ -82,6 +84,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: same - A Organization list on B /account/lists (Shared badge, sidebar), opens for B, customerId A, isOwner false, access Write; after A set Private it left B roster and wishlist(listId) was Forbidden for B."
+    investigation: true
 ---
 The storefront's Lists screen issues GetWishlists with storeId, userId (the signed-in user), cultureName, currencyCode, first, after and sort - no scope argument - and the platform answers with the user's own lists PLUS every list another member of the user's organization has set to scope Organization. Observed live 2026-10-08 on theme 2.51.2 (XCart 3.1021.2) and theme 2.59.0 (XCart 3.1039.0): a list member A set to Organization appears on member B's /account/lists with the 'Shared' badge and in the sidebar, opens at /account/lists/<id>, and reads with customerId = A, isOwner false, access Write; once A sets it back to Private it leaves B's roster and wishlist(listId) is Forbidden for B.
 

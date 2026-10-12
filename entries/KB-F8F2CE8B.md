@@ -46,6 +46,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: List settings Sharing options Private / Anyone (readonly) / Organization persist as scope Private / AnyoneAnonymous / Organization."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.XCart=3.1039.0; module:VirtoCommerce.Cart=3.1012.0; module:VirtoCommerce.Xapi=3.1026.0; theme=2.59.0; store=B2B-store; role=Organization maintainer (owner) / Purchasing agent (member)
@@ -53,5 +54,6 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: Share dialog Private / Anyone with link / My organization persist as scope Private / AnyoneAnonymous / Organization; WishlistScopeType enum: Private, AnyoneAnonymous, AnyoneAuthorized, Organization, User, Customer."
+    investigation: true
 ---
 Three scope values persist from the storefront, not the two the schema's doc string names. InputCreateWishlistType.scope is documented 'List scope (private or organization)', but an ordinary organization member's sharing control offers three options that persist as scope Private, AnyoneAnonymous and Organization: before the sharing rework (theme 2.51.2) the List settings dropdown labels them Private, 'Anyone (readonly)' and Organization; from theme 2.59.0 the Share dialog labels them Private, 'Anyone with link' and 'My organization'. Observed live on both 2026-10-08. The schema's WishlistScopeType enum lists more (Private, AnyoneAnonymous, AnyoneAuthorized, Organization, User, Customer; Customer is the sales-rep share). AnyoneAnonymous is the value that exposes a list to callers with no account, and no documentation string names it. Treat the gloss on that field as incomplete and read the value back after writing it.

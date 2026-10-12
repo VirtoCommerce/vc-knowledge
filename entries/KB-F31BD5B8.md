@@ -70,6 +70,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08, fresh products: code:\"<exact>\" 1; strict prefix without wildcard 0 (code and gtin); code:\"<prefix>*\" honoured; ? inside quotes honoured; lower- and upper-cased values match; an escaped double quote matches. Default scope is products only: a variation code/gtin returns 0 without is:variation and 1 with it; an mpn held only by a variation is found with is:product,variation."
+    investigation: true
   - method: observation
     deployment: vcptcore_qa1
     conditions: platform=3.1077.0-pr-3123-6664; module:VirtoCommerce.Catalog=3.1049.0-pr-910-04a5; module:VirtoCommerce.XCatalog=3.1023.0; module:VirtoCommerce.Inventory=3.1010.0; module:VirtoCommerce.Seo=3.1006.0-pr-22-7ef9; module:VirtoCommerce.ElasticSearch8=3.1011.0; store=B2B-store
@@ -77,6 +78,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08, fresh products: code:\"<exact>\" 1; strict prefix without wildcard 0 (code and gtin); code:\"<prefix>*\" honoured; ? inside quotes honoured; lower- and upper-cased values match; an escaped double quote matches. Default scope is products only: a variation code/gtin returns 0 without is:variation and 1 with it; an mpn held only by a variation is found with is:product,variation."
+    investigation: true
   - method: observation
     deployment: vcptcore_stable
     conditions: platform=3.1039.12; module:VirtoCommerce.Catalog=3.1029.6; module:VirtoCommerce.XCatalog=3.1007.4; module:VirtoCommerce.Inventory=3.1003.0; module:VirtoCommerce.Seo=3.1004.0; module:VirtoCommerce.ElasticSearch8=3.1007.0; store=B2B-store
@@ -84,5 +86,6 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08, fresh products: code:\"<exact>\" 1; strict prefix without wildcard 0 (code and gtin); code:\"<prefix>*\" honoured; ? inside quotes honoured; lower- and upper-cased values match; an escaped double quote matches. Default scope is products only: a variation code/gtin returns 0 without is:variation and 1 with it; an mpn held only by a variation is found with is:product,variation."
+    investigation: true
 ---
 In xAPI products(storeId, filter) the default scope is products only: a variation is found with is:variation code:"...", and a manufacturerPartNumber held only by a variation is found with is:product,variation manufacturerPartNumber:"..." (1 hit; the parent does not match).

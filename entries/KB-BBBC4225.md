@@ -90,6 +90,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "Fresh invitee row 2026-10-08: Name \"Invite sent\", Role Purchasing agent, badge Invited; xAPI status Invited, name empty."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.Customer=3.1029.0; module:VirtoCommerce.ProfileExperienceApiModule=3.1020.0; module:VirtoCommerce.Xapi=3.1026.0; theme=2.59.0; store=B2B-store; role=Organization maintainer
@@ -97,6 +98,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "Fresh invitee row 2026-10-08: Name \"Invite sent\", Role Organization employee, badge Invited; xAPI status Invited, statusInOrganization Invited. The previously disputed \"Sam Store\" row is a seeded contact (status null, email confirmed, password set, created by admin), not an invitee."
+    investigation: true
 ---
 On the storefront company members roster (/company/members) the row of a pending invitee shows the literal name 'Invite sent' - the invitee's contact has an empty name - with the chosen role, the email, and the status badge 'Invited', so the status column has a value beyond Active and Blocked. Observed live 2026-10-08 on two builds.
 

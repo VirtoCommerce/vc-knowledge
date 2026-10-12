@@ -47,6 +47,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: complete condition plus an empty-value row -> hint \"This condition has no value.\", Save and Send disabled, no POST; value typed -> enabled; cleared -> held again; row removed -> Save enabled. Starter row alone: no hint, Save enabled, Send disabled."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1029.0; vc-shell=2.6.1; role=Administrator
@@ -54,6 +55,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: same as vcptcore_qa1."
+    investigation: true
 ---
 What the audience conditions builder ("Match by conditions" > Custom conditions) does with a row that has no value depends on the build.
 

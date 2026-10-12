@@ -45,6 +45,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: Employee condition plus a picked person saved as Draft (memberQuery membertype:Employee + memberIds); caption \"Customers where Customer type is Employee, plus <name>.\" after Save, after reopening from Drafts and All messages, and after a full reload via deep link."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1029.0; vc-shell=2.6.1; role=Administrator
@@ -52,6 +53,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: same after a full reload via deep link."
+    investigation: true
 ---
 With a custom condition plus a picked recipient (e.g. "Customer type is Employee" plus a person), the audience caption reads "Customers where Customer type is Employee, plus <name>." while editing.
 

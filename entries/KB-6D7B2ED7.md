@@ -47,6 +47,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: /sign-in opens on the code view; empty and malformed emails are refused client-side with no request; Continue POSTs {storefront}/api/otp/request -> 200 JSON succeeded:true, maskedEmail a•••1@example.com, and the form shows Check your email; the same POST to the platform host answers identically."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.OTP=3.1000.0; module:VirtoCommerce.Store=3.1009.0; theme=2.59.0; store=B2B-store; setting:OtpSignIn.Enabled=false; ingress:/api/otp=not routed
@@ -54,6 +55,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: POST {storefront}/api/otp/request -> 405 text/html \"405 Not Allowed\" (nginx behind Cloudflare); the same POST to the platform host -> 200 JSON error otp_disabled. The storefront shows only the password form because OTP is off for the store."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     at: 2026-10-09T10:55:45.492Z

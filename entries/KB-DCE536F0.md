@@ -72,6 +72,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "Admin blade 2026-10-08, create with a negative reward, create with a negative order-count goal, edit with a negative reward, edit with a negative order-count goal: the blade header shows the server errorMessage with View details / Dismiss, View details shows the same text, the expression tree and entered values stay rendered, OK and Dismiss neither re-request /api/loyalty-missions/new nor clear the form, and the console logs only the 400 resource line (no setError \"reading join\" TypeError). A negative OrderValue goal cannot be sent at all: the input has a min validator and Save disables."
+    investigation: true
 ---
 What the Admin SPA loyalty mission details blade shows after POST or PUT /api/loyalty-missions is rejected with validation errors (the API's answer itself is KB-D64B1613) depends on two builds: the Loyalty module and the platform.
 

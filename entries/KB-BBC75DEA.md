@@ -45,6 +45,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: options carry Person/Company badge and email; two same-named people with the same email and four same-named companies render as identical rows; no org/parent/account shown, no tooltip, count only after selection; picker calls POST /api/members/search."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1029.0; vc-shell=2.6.1; role=Administrator
@@ -52,6 +53,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: badge and email on every option; no duplicate entities on this stand to compare."
+    investigation: true
 ---
 The picker "Also add specific recipients (people or whole companies)" searches POST /api/members/search (keyword, deepSearch, objectType Member, sort MemberType:desc;Name).
 

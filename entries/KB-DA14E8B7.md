@@ -77,6 +77,7 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/invitations-20261008
     resolution: "Body states it: the users endpoint always returns passwordHash null, /api/members/{id} shows the real value; re-observed live on G2 2026-10-08."
+    amendedFrom: 1856273dbdc8
   - method: observation
     deployment: vcst_qa
     at: 2026-09-22T08:34:09.138Z
@@ -97,6 +98,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "Fresh invitee, Block then Unblock from the roster, 2026-10-08: contact status stayed Invited throughout; only isLockedInOrganization toggled (true then false); account lockoutEnd 9999-12-31 unchanged; membership role kept. GET /api/platform/security/users/{name} returned passwordHash null for every account, /api/members/{id} reflected the real value."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.Customer=3.1029.0; module:VirtoCommerce.ProfileExperienceApiModule=3.1020.0; module:VirtoCommerce.Xapi=3.1026.0; theme=2.59.0; store=B2B-store; role=Organization maintainer
@@ -104,6 +106,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "Fresh invitee, 2026-10-08: the roster menu of an Invited row offers Resend invite / Revoke invite and no Block user; locked via the same LockOrganizationContact the roster sends, then unblocked from the roster: contact status stayed Invited, membership isLocked toggled, account lockoutEnd unchanged, membership role kept; the row returned to Invited."
+    investigation: true
 ---
 What Block user / Unblock user do to a pending invitee depends on the build. Which build a stand runs decides this. G1 = ProfileExperienceApi (PEA) <= 3.1007, Customer 3.1000.x, theme <= 2.51.0 (vcptcore_stable until 2026-10-07). G2 = PEA 3.1008-3.1014, Customer 3.1010-3.1020, theme 2.51.2-2.54. G3 = PEA >= 3.1015, Customer >= 3.1021, theme >= 2.55.
 

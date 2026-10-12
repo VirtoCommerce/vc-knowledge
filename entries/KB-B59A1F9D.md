@@ -44,6 +44,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: on A Organization lists, B changeWishlist with scope Private / AnyoneAnonymous / the unchanged Organization (the payload the List settings Save sends) succeeded and moved customerId to B; A lost the list; rename-only kept ownership; B removeWishlist succeeded."
+    investigation: true
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.XCart=3.1039.0; module:VirtoCommerce.Cart=3.1012.0; module:VirtoCommerce.Xapi=3.1026.0; theme=2.59.0; store=B2B-store; role=Organization maintainer (owner) / Purchasing agent (member)
@@ -51,6 +52,7 @@ evidence:
     by: session:d3bcc6b6
     who: Dan-BV
     note: "2026-10-08: B changeWishlist with scope AnyoneAnonymous / Private / unchanged Organization, with and without sharingKey: errors[Forbidden Access denied.], nothing changed; rename-only succeeded with customerId and scope unchanged; B removeWishlist Forbidden."
+    investigation: true
 ---
 What a non-owner organization member (access Write, isOwner false) can do to a colleague's Organization-scope list through changeWishlist depends on the XCart build.
 
