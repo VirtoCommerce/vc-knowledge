@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T09:35:50.367Z",
-  "count": 736,
+  "generated": "2026-10-12T09:48:50.380Z",
+  "count": 737,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1609,7 +1609,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -7285,7 +7285,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 3
+      "disputed": 4
     },
     {
       "id": "KB-649D673C",
@@ -10302,6 +10302,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-8FE28238",
+      "path": "entries/KB-8FE28238.md",
+      "subject": "An admin legacy return set to Canceled (single-l spelling) releases its units: the Add new return Line items blade offers the line's full quantity again",
+      "question": "After an admin-created legacy return is saved with status Canceled (single l), are its units returnable again on the order line?",
+      "anchors": [
+        "GET /api/return/available-quantities/{orderId}",
+        "PUT /api/return",
+        "/workspace/Return"
+      ],
+      "scope": [
+        "surface=admin-spa",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-903E980C",
       "path": "entries/KB-903E980C.md",
       "subject": "OTP request outcome for a contact whose account storeId names no existing store",
@@ -12996,7 +13015,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
