@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T21:39:08.471Z",
-  "count": 774,
+  "generated": "2026-10-12T22:49:48.297Z",
+  "count": 776,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4394,6 +4394,22 @@
         "identity=anonymous",
         "seolinktype=long",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3F1DBB6E",
+      "path": "entries/KB-3F1DBB6E.md",
+      "subject": "Admin product search returns imgSrc only when responseGroup includes ItemAssets; ItemInfo alone omits imgSrc and images",
+      "question": "Does POST /api/catalog/search/products with responseGroup ItemInfo return the product's imgSrc?",
+      "anchors": [
+        "POST /api/catalog/search/products"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13446,6 +13462,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AF059013",
+      "path": "entries/KB-AF059013.md",
+      "subject": "Order line item imageUrl is persisted on order create but silently ignored on order update (PUT returns 200, value unchanged)",
+      "question": "Can an existing customer order's line item imageUrl be set or changed via PUT /api/order/customerOrders?",
+      "anchors": [
+        "PUT /api/order/customerOrders",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
