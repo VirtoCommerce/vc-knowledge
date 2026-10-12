@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-10T10:49:00.014Z",
-  "count": 722,
+  "generated": "2026-10-12T06:38:36.565Z",
+  "count": 723,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14260,6 +14260,25 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C7677739",
+      "path": "entries/KB-C7677739.md",
+      "subject": "On VC Cloud QA stands, SQL Queries execute-preview fails before running any SQL: the cloud-provisioned read-only connection string SqlQueries.VirtoCommerce cannot log in.",
+      "question": "Can SQL Queries (execute-preview / execute-query / report export) run any query on the VC Cloud QA stands?",
+      "anchors": [
+        "POST /api/sql-queries/execute-preview",
+        "GET /api/sql-queries/database-information"
+      ],
+      "scope": [
+        "hosting=vc-cloud",
+        "module=virtocommerce.sqlqueries",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
