@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T11:47:30.974Z",
-  "count": 743,
+  "generated": "2026-10-12T11:55:51.018Z",
+  "count": 744,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5042,7 +5042,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -6607,7 +6607,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -16468,6 +16468,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E4660E34",
+      "path": "entries/KB-E4660E34.md",
+      "subject": "For an organization holder, the /edit route of a colleague's draft that was cancelled before submit renders 'This return was not found' under a generic 'Add return details' heading, with no RMA, comment or line reason",
+      "question": "What does /account/returns/:id/edit show to an organization holder for a colleague's return that was cancelled without ever being submitted?",
+      "anchors": [
+        "/account/returns/:id/edit",
+        "Query.return"
+      ],
+      "scope": [
+        "actor=organization-returns-holder",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
