@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T14:46:05.069Z",
-  "count": 760,
+  "generated": "2026-10-12T14:50:31.294Z",
+  "count": 761,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6459,6 +6459,23 @@
       ],
       "scope": [
         "feature=oauth-authorize",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-53AE7807",
+      "path": "entries/KB-53AE7807.md",
+      "subject": "Storefront file upload errors render their {0} parameter empty",
+      "question": "On the storefront, does a file upload error (POST /api/files/{scope} INVALID_SCOPE, client-side INVALID_SIZE) show its parameter, e.g. the scope name or the size limit?",
+      "anchors": [
+        "POST /api/files/product-configuration",
+        "/products-with-options/cfg-parents/agent-test-config-fileupload"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
