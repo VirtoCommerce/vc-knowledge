@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T18:34:30.494Z",
+  "generated": "2026-10-12T18:56:20.555Z",
   "count": 771,
   "entries": [
     {
@@ -1701,7 +1701,7 @@
     {
       "id": "KB-17232A1F",
       "path": "entries/KB-17232A1F.md",
-      "subject": "organizationReturns lists every buyer's non-draft returns of the order's organization, the caller's own included; a draft cancelled without submit is listed too",
+      "subject": "organizationReturns lists the organization's returns by status up to Return pr-28-62f9 (a draft cancelled without submit included); from pr-28-fb4f only returns ever submitted",
       "question": "Which returns does the organization returns list contain?",
       "anchors": [
         "Query.organizationReturns"
@@ -1711,8 +1711,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
-      "disputed": 4
+      "trust": 6,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-17555498",
@@ -2698,7 +2699,7 @@
     {
       "id": "KB-25682485",
       "path": "entries/KB-25682485.md",
-      "subject": "A holder reads a colleague's non-draft return read-only through Query.return; every mutation stays owner-only",
+      "subject": "A holder reads a colleague's return read-only through Query.return (non-draft up to Return pr-28-62f9, ever-submitted from pr-28-fb4f); every mutation stays owner-only",
       "question": "What can an organization holder do with a colleague's return via xAPI?",
       "anchors": [
         "Query.return",
@@ -2709,8 +2710,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
-      "disputed": 2
+      "trust": 5,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-25829330",
