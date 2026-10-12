@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T09:02:59.446Z",
-  "count": 733,
+  "generated": "2026-10-12T09:04:37.195Z",
+  "count": 735,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10925,6 +10925,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-971BC129",
+      "path": "entries/KB-971BC129.md",
+      "subject": "POST /api/order/customerOrders ignores a createdDate in the body; the server stamps the creation instant",
+      "question": "Can a customer order be back-dated by sending createdDate on POST /api/order/customerOrders?",
+      "anchors": [
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-972CF223",
       "path": "entries/KB-972CF223.md",
       "subject": "Inviting a member immediately provisions a contact and a locked account that Admin shows with an empty Status",
@@ -14546,6 +14563,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-C8D613FA",
+      "path": "entries/KB-C8D613FA.md",
+      "subject": "POST /api/sales-rep ignores the sent fullName and derives it from firstName + lastName",
+      "question": "Does POST /api/sales-rep keep the fullName in the request body?",
+      "anchors": [
+        "POST /api/sales-rep",
+        "PUT /api/sales-rep",
+        "POST /api/sales-rep/search"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C923D0DB",
       "path": "entries/KB-C923D0DB.md",
       "subject": "the email confirmation link works without a session and does not sign the user in",
@@ -18005,7 +18041,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
