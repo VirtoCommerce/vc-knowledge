@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T09:04:37.195Z",
-  "count": 735,
+  "generated": "2026-10-12T09:11:41.092Z",
+  "count": 736,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3549,6 +3549,25 @@
       "disputed": 2
     },
     {
+      "id": "KB-3320D7D3",
+      "path": "entries/KB-3320D7D3.md",
+      "subject": "Account sidebar items 'Missions & challenges' and 'Coupons & promotions' break mid-word at viewports 768-1279 px on every /account/* page",
+      "question": "Does the My account sidebar wrap its Marketing menu labels mid-word at tablet and small desktop widths?",
+      "anchors": [
+        "/account/orders",
+        "/account/returns"
+      ],
+      "scope": [
+        "browser=chromium",
+        "surface=storefront-ui",
+        "viewport=768-1279"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-33B89BDD",
       "path": "entries/KB-33B89BDD.md",
       "subject": "OTP request for an unregistered email returns succeeded:false with code user_not_found (DetailedErrors on); a 255-char email is refused 400 by MaxLength(254) while the storefront form lets it through",
@@ -3836,7 +3855,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-375CEF71",
@@ -16383,7 +16402,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
