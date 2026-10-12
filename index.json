@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T14:14:31.085Z",
-  "count": 755,
+  "generated": "2026-10-12T14:24:03.404Z",
+  "count": 756,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11201,6 +11201,28 @@
         "component=header-search-bar",
         "surface=storefront-ui",
         "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-96E5B287",
+      "path": "entries/KB-96E5B287.md",
+      "subject": "Platform list endpoints for catalogs, fulfillment centers and users are POST .../search; the GET collection forms return 405 or an empty array",
+      "question": "Which REST call lists catalogs, fulfillment centers, users, products, categories or variations on Platform 3.1076?",
+      "anchors": [
+        "GET /api/catalog/catalogs",
+        "POST /api/catalog/catalogs/search",
+        "POST /api/inventory/fulfillmentcenters/search",
+        "POST /api/platform/security/users/search",
+        "GET /api/catalog/products/{id}/variations",
+        "GET /api/pricing/pricelists/{id}/prices"
+      ],
+      "scope": [
+        "platform=3.1076",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
