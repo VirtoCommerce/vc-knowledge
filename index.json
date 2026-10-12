@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T12:25:50.585Z",
+  "generated": "2026-10-12T12:32:26.351Z",
   "count": 745,
   "entries": [
     {
@@ -521,7 +521,7 @@
     {
       "id": "KB-08CC76A3",
       "path": "entries/KB-08CC76A3.md",
-      "subject": "Storefront OTP code step: digits only, auto-submit at 6, 7-digit input cut to the first 6, spaced paste accepted; wrong code shows one message and keeps the digits; Resend clears field+error and says \"New code sent.\"",
+      "subject": "Storefront OTP code step: digits only, auto-submit at 6, 7-digit input cut to the first 6, spaced paste accepted; a wrong code shows one message and, from theme 2.59.0-pr-2477, clears the field; Resend clears field and error and says \"New code sent.\"",
       "question": "How does the storefront OTP code input behave for malformed codes, a wrong code, Resend and Use a different email?",
       "questions": [
         "What happens if I type letters or seven digits into the emailed sign-in code field?",
@@ -546,8 +546,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-08FAC65C",
@@ -1785,7 +1786,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 2
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-18991381",
@@ -2024,7 +2026,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 1
     },
     {
@@ -2421,7 +2423,7 @@
     {
       "id": "KB-21F4F161",
       "path": "entries/KB-21F4F161.md",
-      "subject": "Return available-statuses offers both Canceled and Cancelled, mirrored in the admin status dropdown",
+      "subject": "Return available-statuses: on the Return 3.1003 PR build it offered both Canceled and Cancelled; from Return 3.1004.0 it offers one spelling, the one in the stand's Return.Status dictionary",
       "question": "Which statuses does GET /api/return/{id}/available-statuses offer for each return status?",
       "questions": [
         "Why does the return status dropdown show two cancel options that look identical?",
@@ -2444,8 +2446,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
-      "disputed": 4
+      "trust": 5,
+      "disputed": 1,
+      "resolved": 3
     },
     {
       "id": "KB-2289BD9F",
@@ -2759,8 +2762,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 8,
-      "disputed": 1
+      "trust": 9,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-29037452",
@@ -2791,7 +2795,7 @@
     {
       "id": "KB-29A75D95",
       "path": "entries/KB-29A75D95.md",
-      "subject": "storefront theme presets are bundled light/dark pairs and dark mode comes only from a dark preset",
+      "subject": "Storefront theme presets are bundled light/dark pairs; dark mode is available whenever the active preset has a dark pair, follows the OS in auto mode and is switchable by any shopper",
       "question": "How does the storefront get into dark mode, and why does /assets/presets/{name}.json return 404?",
       "questions": [
         "My computer is in dark mode -- why does the shop still look light?",
@@ -2813,7 +2817,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 2
+      "disputed": 1,
+      "resolved": 1
     },
     {
       "id": "KB-2A7CB639",
@@ -3805,7 +3810,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-35F25BEE",
@@ -4454,7 +4460,7 @@
     {
       "id": "KB-40B9AEF4",
       "path": "entries/KB-40B9AEF4.md",
-      "subject": "member keyword search misses hyphenated organization names",
+      "subject": "Member keyword search misses an organization only when its Member document is absent from the search index; hyphenated names are found normally",
       "question": "Does POST /api/members/search with keyword find an organization named like AGENT-TEST-Org-Kingsbridge-Imports-20260514?",
       "questions": [
         "Why can't I find an organization by its full name in the members search?",
@@ -4475,7 +4481,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-40BBC91A",
@@ -6429,7 +6436,7 @@
     {
       "id": "KB-55D8DE51",
       "path": "entries/KB-55D8DE51.md",
-      "subject": "deleting a detached member's account under Security > Users is not always possible",
+      "subject": "Deleting a detached member's account under Security > Users: failed with ConcurrencyFailure on the September vcptcore_stable build after an invitation walk-through; works on current builds",
       "question": "After a storefront member deletion, can the surviving account always be deleted under Security > Users?",
       "questions": [
         "How do I fully get rid of a person after removing them from a company on the storefront?",
@@ -6449,8 +6456,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-563D7FE5",
@@ -6653,7 +6661,7 @@
     {
       "id": "KB-59E4B5FC",
       "path": "entries/KB-59E4B5FC.md",
-      "subject": "a configured product as an order line item: stored order loses only sectionId, storefront GraphQL order item exposes five fields",
+      "subject": "A configured product as an order line item: one line with configurationItems; on the 3.1000.x support line the stored order drops sectionId and storefront GraphQL exposes five fields, from XOrder 3.1005 the ids are exposed and from 3.1013 sectionId and sectionName cross",
       "question": "how does a configurable product become a line item on an order",
       "questions": [
         "When I order a customized product, does the order remember which options I picked?",
@@ -6687,8 +6695,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 3
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 3
     },
     {
       "id": "KB-5A0C4200",
@@ -6820,7 +6829,7 @@
     {
       "id": "KB-5B2C8995",
       "path": "entries/KB-5B2C8995.md",
-      "subject": "With the admin profile language set to German, Debug SEO links renders Stage 0, the Candidates blade, its columns, footnote and the catalog rejection reasons in German, with no raw keys or codes",
+      "subject": "With the admin profile language set to German, Debug SEO links renders Stage 0, the Candidates blade, its columns, footnote and the catalog rejection reasons in German; the store label reads 'Geschäft' on Seo 3.1006.0-alpha.101 and the released 3.1004-3.1005, 'Shop' on 3.1006.0-pr-22",
       "question": "Are the Debug SEO links Stage 0 / Candidates texts and rejection reasons localized in the Admin UI?",
       "anchors": [
         "GET /api/seoinfos/explain",
@@ -6834,8 +6843,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-5B2E99AB",
@@ -6953,8 +6963,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-5E5D7065",
@@ -7222,8 +7233,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-62BF1335",
@@ -7683,7 +7695,7 @@
     {
       "id": "KB-68F7432D",
       "path": "entries/KB-68F7432D.md",
-      "subject": "During /search?barcode=<v>&q=<term> the header search box shows the ignored term and hides the Barcode scan button",
+      "subject": "During /search?barcode=<v>&q=<term> the header search box: on an early 2.59 barcode build it showed the ignored term and hid the Barcode scan button; on the released theme 2.59.0 it is empty with the button visible",
       "question": "What does the header search bar show while a barcode lookup URL also carries a q keyword?",
       "questions": [
         "The search box shows a word I didn't search for and the scan button vanished - what's going on?",
@@ -7704,8 +7716,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-6A20B0AF",
@@ -8049,7 +8062,7 @@
     {
       "id": "KB-6D7B2ED7",
       "path": "entries/KB-6D7B2ED7.md",
-      "subject": "Storefront OTP sign-in form posts to the storefront origin /api/otp/request, which the storefront ingress answers 405; the form shows an inline generic error plus a global server-error toast",
+      "subject": "Storefront OTP sign-in form posts to the storefront origin /api/otp/request; where the storefront ingress has no route for it the answer is a 405 HTML page and the form shows a generic error",
       "question": "What happens when a guest clicks Continue on the storefront OTP email sign-in form?",
       "questions": [
         "Why does the email code login fail with 'Something went wrong' on the storefront?",
@@ -8073,8 +8086,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 2
+      "trust": 3,
+      "disputed": 1,
+      "resolved": 1
     },
     {
       "id": "KB-6E4F5067",
@@ -8631,8 +8645,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-75B67E06",
@@ -8891,7 +8906,7 @@
     {
       "id": "KB-799D20A6",
       "path": "entries/KB-799D20A6.md",
-      "subject": "a list's share link lives only in the list Settings dialog, editable from the card and view-only from the detail page",
+      "subject": "Where a list's share link lives on /account/lists: inside the List settings dialog before the sharing rework, in a dedicated Share dialog from theme 2.59.0",
       "question": "Where is a list's share link on /account/lists?",
       "questions": [
         "How do I get a link to send my shopping list to a colleague?",
@@ -8912,8 +8927,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 2
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-79B30FDE",
@@ -8992,7 +9008,7 @@
     {
       "id": "KB-7A4C260E",
       "path": "entries/KB-7A4C260E.md",
-      "subject": "user_cannot_login_in_store: storeId must be camelCase and Administrator-type users always get it",
+      "subject": "user_cannot_login_in_store: a customer password grant needs a camelCase storeId of an existing store, checked before the password; Administrator-type users are not refused",
       "question": "What makes /connect/token return user_cannot_login_in_store, and how is it told apart from a wrong credential?",
       "questions": [
         "Why can a back-office administrator not sign in to the online store with the same login?",
@@ -9015,8 +9031,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-7A613BE4",
@@ -9074,8 +9091,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
-      "disputed": 2
+      "trust": 7,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-7AB0B13E",
@@ -10214,13 +10232,14 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 1
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8C530141",
       "path": "entries/KB-8C530141.md",
-      "subject": "A store's stock is read from its main fulfillment center, and stock elsewhere leaves the product at zero",
+      "subject": "A store's stock counts on its main AND additional fulfillment centers; stock on a fulfillment center not assigned to the store leaves the product at zero",
       "question": "Which fulfillment centers' stock counts toward a store's product availability?",
       "questions": [
         "Why does the shop say out of stock when the warehouse clearly has units?",
@@ -10243,7 +10262,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8DA09FE8",
@@ -10592,8 +10612,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 2
+      "trust": 1,
+      "disputed": 1,
+      "resolved": 1
     },
     {
       "id": "KB-91DF8883",
@@ -10752,7 +10773,7 @@
     {
       "id": "KB-93804F07",
       "path": "entries/KB-93804F07.md",
-      "subject": "PUT /api/return on a decided return discards decision changes with a 200",
+      "subject": "PUT /api/return on a decided return: decision fields are discarded with a 200, while a line quantity, a line add/remove or a status move is refused with a 400",
       "question": "What happens to decision fields sent in a PUT /api/return on an already decided return?",
       "questions": [
         "If support edits my return after it was approved, can they change what was approved?",
@@ -10773,8 +10794,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
-      "disputed": 1
+      "trust": 5,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-938D7C06",
@@ -11116,8 +11138,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 4
+      "trust": 3,
+      "disputed": 1,
+      "resolved": 3
     },
     {
       "id": "KB-97A675C1",
@@ -11265,7 +11288,7 @@
     {
       "id": "KB-9912A219",
       "path": "entries/KB-9912A219.md",
-      "subject": "storefront Delete member only detaches the contact from the organization and leaves the account and its role",
+      "subject": "Storefront Delete member (removeMemberFromOrganization) deletes no account or contact; on current builds it marks the membership Deleted and the contact still lists the organization",
       "question": "What does deleting a member from the storefront company members list actually delete?",
       "questions": [
         "If our company admin removes me from the team, is my login deleted too?",
@@ -11287,8 +11310,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-996BDF08",
@@ -12005,8 +12029,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-A3CE7FBA",
@@ -13407,7 +13432,7 @@
     {
       "id": "KB-B59A1F9D",
       "path": "entries/KB-B59A1F9D.md",
-      "subject": "Organization-scope wishlist: any Write member who sends changeWishlist with a scope becomes the list owner",
+      "subject": "Organization-scope wishlist: up to XCart 3.1037 a non-owner member who sends changeWishlist with a scope becomes the list owner; from XCart 3.1038 it is Forbidden",
       "question": "Can a non-owner org member with Write access change a wishlist's sharing scope via changeWishlist, and what happens to ownership?",
       "questions": [
         "Can a colleague with edit rights on a company shopping list take it over from the person who made it?",
@@ -13429,8 +13454,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-B5B57F41",
@@ -13838,13 +13864,14 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 4
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-BBC75DEA",
       "path": "entries/KB-BBC75DEA.md",
-      "subject": "Push Messages recipient picker renders same-named people and companies with no discriminator",
+      "subject": "Push Messages recipient picker: same-named people and companies are indistinguishable; from PushMessages 3.1006.0-pr-28 options carry a Person / Company badge and the email, but nothing tells duplicates apart",
       "question": "Does the Push Messages 'Add specific recipients' picker distinguish options that share a display name?",
       "questions": [
         "When I pick push notification recipients, how do I tell apart two people with the same name?",
@@ -13866,8 +13893,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-BC55C4F0",
@@ -14473,7 +14501,7 @@
     {
       "id": "KB-C4DC8774",
       "path": "entries/KB-C4DC8774.md",
-      "subject": "me.contact.addresses default order is not insertion order and changes when addresses are re-created",
+      "subject": "me.contact.addresses default order is name ascending; addresses without a name come first, ordered by address id, so re-creating them reorders them",
       "question": "In what order does xAPI me.contact.addresses return a customer's addresses by default?",
       "questions": [
         "In what order are a customer's saved addresses returned by default?",
@@ -14498,7 +14526,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-C55BBF2E",
@@ -14534,7 +14563,7 @@
     {
       "id": "KB-C5B17CE2",
       "path": "entries/KB-C5B17CE2.md",
-      "subject": "Push Messages audience caption omits the condition when the blade is rendered from saved state",
+      "subject": "Push Messages audience caption: on the 2026-09-28 build it collapsed to the picked recipients when the blade was rendered from saved state; from PushMessages 3.1006.0-pr-28 it keeps the condition",
       "question": "Does the Push Messages audience caption name the condition when a message combines a condition with a picked recipient?",
       "questions": [
         "After I saved a push message, why does the audience summary only mention the one person I picked?",
@@ -14556,8 +14585,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-C60BA776",
@@ -15594,8 +15624,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 3
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 3
     },
     {
       "id": "KB-D7F08A26",
@@ -15737,7 +15768,7 @@
     {
       "id": "KB-D8FDFA6F",
       "path": "entries/KB-D8FDFA6F.md",
-      "subject": "On /company/members a contact whose contact-level status is null has its NAME cell replaced by the literal text \"Invite sent\", while the Active column still shows a green \"Active\" tick.",
+      "subject": "On /company/members a contact whose contact-level status is null has its NAME cell replaced by the literal text \"Invite sent\"; its status badge reads Active from theme 2.55 and Inactive before",
       "question": "Why does the storefront company members list show \"Invite sent\" where a member's name should be, and why is that row still Active?",
       "questions": [
         "Why does my company members page say Invite sent instead of a colleague's name?",
@@ -15759,7 +15790,6 @@
         "ContactType.fullName"
       ],
       "scope": [
-        "build=2.58.0-pr-2467",
         "principal=org-maintainer",
         "store=b2b-store",
         "surface=storefront-ui",
@@ -15767,8 +15797,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-D992AF44",
@@ -15905,7 +15936,7 @@
     {
       "id": "KB-DA14E8B7",
       "path": "entries/KB-DA14E8B7.md",
-      "subject": "Block then Unblock on a pending invitee irreversibly ends the invitation: contact status Invited -> Locked -> Approved and the roster shows Active with no registration",
+      "subject": "Block then Unblock on a pending invitee: on builds up to PEA 3.1007 it irreversibly ends the invitation (Invited -> Locked -> Approved); from PEA 3.1008 it only locks the organization membership",
       "question": "What happens to a pending organization invitation if the maintainer blocks and then unblocks that row?",
       "questions": [
         "If I block and then unblock someone I invited but who never joined, can they still accept the invitation?",
@@ -15937,8 +15968,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 4
+      "trust": 1,
+      "disputed": 2,
+      "resolved": 2
     },
     {
       "id": "KB-DA88761E",
@@ -16020,7 +16052,7 @@
     {
       "id": "KB-DB7B6317",
       "path": "entries/KB-DB7B6317.md",
-      "subject": "the Admin order Status dropdown settables differ from the statuses orders display",
+      "subject": "The Admin order Status dropdown offers exactly the stand's Order.Status dictionary, Processing included; a Completed order's Status is read-only",
       "question": "Which order statuses can be set in the Admin SPA order Status dropdown, and how do they map to storefront labels?",
       "questions": [
         "Why does my order show a status name that is different from what the store back office calls it?",
@@ -16043,7 +16075,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-DC2F1BF0",
@@ -16066,7 +16099,7 @@
     {
       "id": "KB-DCE536F0",
       "path": "entries/KB-DCE536F0.md",
-      "subject": "Admin loyalty mission blade hides server validation messages and blanks the mission tree after a failed save",
+      "subject": "Admin loyalty mission blade: up to Loyalty 3.1008 it hid server validation messages and blanked the mission tree after a failed save; from Loyalty 3.1009 with platform 3.1074 it shows the message and keeps the form",
       "question": "What does the Admin loyalty mission blade show when a save is rejected with validation errors?",
       "questions": [
         "Why does the loyalty mission screen just say Bad request without telling me what is wrong?",
@@ -16088,8 +16121,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 3
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 3
     },
     {
       "id": "KB-DD67E1FA",
@@ -16984,7 +17018,7 @@
     {
       "id": "KB-EAA7BA2F",
       "path": "entries/KB-EAA7BA2F.md",
-      "subject": "storefront Lists page is an owner-only roster",
+      "subject": "The storefront Lists page shows your own lists plus your organization's Organization-scope lists; a Customer-scope share reaches its recipient only through its link",
       "question": "Will a list a colleague scoped to the organization show up on my Lists page?",
       "questions": [
         "Why can't I see the list my colleague shared with our company on my Lists page?",
@@ -17007,8 +17041,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
-      "disputed": 1
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-EAD1674C",
@@ -17051,7 +17086,7 @@
     {
       "id": "KB-EB70C1F9",
       "path": "entries/KB-EB70C1F9.md",
-      "subject": "Push Messages conditions builder drops an incomplete condition row without validation",
+      "subject": "Push Messages conditions builder: an incomplete condition row was dropped silently on the 2026-09-28 build; from PushMessages 3.1006.0-pr-28 it shows \"This condition has no value.\" and holds Save and Send",
       "question": "In the Push Messages admin blade (Match by conditions), what happens to a condition row whose value is left empty?",
       "questions": [
         "If I leave a condition value blank when targeting a push message, who ends up receiving it?",
@@ -17074,8 +17109,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-EB991080",
@@ -17213,7 +17249,7 @@
     {
       "id": "KB-ED01C2A4",
       "path": "entries/KB-ED01C2A4.md",
-      "subject": "a storefront token without organization_id carries only view permissions",
+      "subject": "A storefront token without organization_id takes the role of the contact's first stored organization; organization_id (either casing) picks the membership",
       "question": "How do I get an organization-scoped storefront token from /connect/token so me.permissions reflects that organization's role?",
       "questions": [
         "Why does my company account say I lack permission to edit the organization right after signing in?",
@@ -17238,7 +17274,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 2
+      "disputed": 1,
+      "resolved": 1
     },
     {
       "id": "KB-ED1C55C0",
@@ -17374,7 +17411,7 @@
     {
       "id": "KB-EE6A5543",
       "path": "entries/KB-EE6A5543.md",
-      "subject": "Fulfillment-center search returns centers in arbitrary order and its projection omits code",
+      "subject": "Fulfillment-center search returns centers ordered by name, so its first result is not necessarily the store's own center; a fulfillment center has no code at all",
       "question": "Can I rely on the order or the code field of fulfillment-center search results?",
       "questions": [
         "When seeding stock, is it safe to pick the first warehouse the search returns?",
@@ -17393,8 +17430,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-EE6B32FD",
@@ -17905,8 +17943,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 2
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-F320B037",
@@ -18344,8 +18383,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-F91252E5",
@@ -18399,8 +18439,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-F98049F1",
