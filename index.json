@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T08:41:50.056Z",
-  "count": 727,
+  "generated": "2026-10-12T08:58:53.678Z",
+  "count": 730,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1841,7 +1841,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3000,7 +3000,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -3903,6 +3903,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3951B671",
+      "path": "entries/KB-3951B671.md",
+      "subject": "POST /api/return/search with a wrongly typed criteria value (take \"x\", submittedOnly \"yes\") answers 500 NullReferenceException, as do order and member search; an unknown property such as excludeDrafts is ignored",
+      "question": "What does POST /api/return/search answer when a criteria field has the wrong JSON type, or an unknown/renamed field like excludeDrafts?",
+      "anchors": [
+        "POST /api/return/search",
+        "POST /api/order/customerOrders/search",
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -6124,6 +6142,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-52A684A6",
+      "path": "entries/KB-52A684A6.md",
+      "subject": "On a stand whose Return.Status dictionary lacks the Cancelled spelling, the Admin return detail blade shows an empty Status select for a buyer-cancelled return, and PUT /api/return accepts changing Cancelled to Canceled",
+      "question": "How does the Admin SPA return blade and PUT /api/return treat a buyer-cancelled return (status Cancelled) when Return.Status only holds Canceled?",
+      "anchors": [
+        "PUT /api/return",
+        "GET /api/return/{id}/available-statuses",
+        "/workspace/Return"
+      ],
+      "scope": [
+        "surface=admin-spa",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-535FF3AC",
       "path": "entries/KB-535FF3AC.md",
       "subject": "The payment methods a B2B cart offers are the store's active payment methods from availablePaymentMethods, and the set differs per deployment",
@@ -7111,7 +7148,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7595,6 +7632,23 @@
       "anchors": [
         "Query.loyaltyMissionProgress",
         "LoyaltyMissionProgressType.description"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6A7DA439",
+      "path": "entries/KB-6A7DA439.md",
+      "subject": "A holder whose organization membership is locked gets a token with no organization and no permission, so organizationReturns answers Forbidden (not UserLocked); returnStatuses still answers",
+      "question": "What does a returns holder whose organization membership is locked (account itself not locked) get from the org-scoped token grant and the return queries?",
+      "anchors": [
+        "Query.organizationReturns",
+        "POST /connect/token"
       ],
       "scope": [
         "surface=xapi"
@@ -9775,7 +9829,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -10605,7 +10659,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 1
     },
     {
@@ -13823,7 +13877,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
