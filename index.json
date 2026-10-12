@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T18:05:26.223Z",
+  "generated": "2026-10-12T18:06:17.350Z",
   "count": 771,
   "entries": [
     {
@@ -15511,7 +15511,7 @@
     {
       "id": "KB-CE9257BC",
       "path": "entries/KB-CE9257BC.md",
-      "subject": "Saving Edit task on a canceled sales-rep task fails: updateSalesRepTask returns errors[] \"Task not found.\" inside HTTP 200",
+      "subject": "Saving Edit task on a canceled sales-rep task succeeds; updateSalesRepTask answers \"Task not found.\" only when the task is gone or not the rep own",
       "question": "What happens when a sales rep opens and saves Edit task on a canceled task on /company/tasks?",
       "anchors": [
         "/company/tasks",
@@ -15524,7 +15524,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 3
+      "disputed": 0,
+      "resolved": 3
     },
     {
       "id": "KB-CF3FAD18",
