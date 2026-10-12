@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T11:17:06.297Z",
-  "count": 742,
+  "generated": "2026-10-12T11:47:30.974Z",
+  "count": 743,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1675,7 +1675,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
-      "disputed": 3
+      "disputed": 4
     },
     {
       "id": "KB-17555498",
@@ -2651,7 +2651,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-25829330",
@@ -5042,7 +5042,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -7221,7 +7221,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -9960,6 +9960,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-892882F8",
+      "path": "entries/KB-892882F8.md",
+      "subject": "The back-office Return list is not gated by submittedDate: a buyer draft cancelled without submit stays listed (Cancelled) and opens in the Admin return blade",
+      "question": "Does the Admin SPA Return list still show a buyer's draft that was cancelled before submit, now that organization holders no longer see it?",
+      "anchors": [
+        "/workspace/Return",
+        "POST /api/return/search",
+        "GET /api/return/{id}"
+      ],
+      "scope": [
+        "surface=admin-spa",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-89822898",
       "path": "entries/KB-89822898.md",
       "subject": "A cart line quantity above stock is accepted into the cart but flagged, and Place order stays disabled on /cart until it is lowered",
@@ -11475,7 +11494,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
