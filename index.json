@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T16:10:00.637Z",
-  "count": 762,
+  "generated": "2026-10-12T16:29:34.732Z",
+  "count": 763,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3770,6 +3770,23 @@
       "supersededBy": [
         "KB-110E0652"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-34C7A8DD",
+      "path": "entries/KB-34C7A8DD.md",
+      "subject": "On /compare the released theme exposes TWO native tables whose header and cell accessible names are noisy concatenations",
+      "question": "how is the compare products table exposed in Chromium's native accessibility tree on /compare, and what are the column header and row header names",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "engine=chromium",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
