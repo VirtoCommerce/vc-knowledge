@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T14:02:21.511Z",
-  "count": 753,
+  "generated": "2026-10-12T14:14:31.085Z",
+  "count": 755,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -856,6 +856,23 @@
       "scope": [
         "principal=customer",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0C1CA988",
+      "path": "entries/KB-0C1CA988.md",
+      "subject": "currentuser for the built-in admin returns isAdministrator true with empty roles and permissions arrays",
+      "question": "Does GET /api/platform/security/currentuser list roles and permissions for the built-in admin account?",
+      "anchors": [
+        "GET /api/platform/security/currentuser"
+      ],
+      "scope": [
+        "account=built-in-admin",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2963,6 +2980,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2B93579A",
+      "path": "entries/KB-2B93579A.md",
+      "subject": "Unauthenticated platform REST calls get 401 with an empty body and no WWW-Authenticate header",
+      "question": "What does a platform REST endpoint return when called without an Authorization header — body, WWW-Authenticate?",
+      "anchors": [
+        "GET /api/platform/modules",
+        "DELETE /api/catalog/products",
+        "DELETE /api/members"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
