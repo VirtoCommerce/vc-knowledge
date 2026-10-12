@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T17:15:22.055Z",
-  "count": 765,
+  "generated": "2026-10-12T17:23:10.615Z",
+  "count": 767,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5891,7 +5891,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7168,6 +7168,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5E82BC11",
+      "path": "entries/KB-5E82BC11.md",
+      "subject": "On /compare (and storefront-wide) outline-primary button text renders #f99e24 on white, 2.11:1 contrast",
+      "question": "What colour and contrast does the \"Clear all\" button text have on /compare, and is the same colour used by other storefront buttons?",
+      "anchors": [
+        "/compare",
+        "/cart"
+      ],
+      "scope": [
+        "auth=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11190,7 +11208,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16690,6 +16708,23 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E0DCEFC0",
+      "path": "entries/KB-E0DCEFC0.md",
+      "subject": "On /compare pinning or unpinning any row that is not already first drops keyboard focus to body",
+      "question": "On /compare, where does keyboard focus go after pressing Enter on a row's Pin / Unpin button?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "auth=guest",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
