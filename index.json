@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T18:22:00.196Z",
+  "generated": "2026-10-12T18:34:01.644Z",
   "count": 771,
   "entries": [
     {
@@ -14849,7 +14849,7 @@
     {
       "id": "KB-C4597892",
       "path": "entries/KB-C4597892.md",
-      "subject": "/account/missions renders no skeleton for the mission-card grid; the footer jumps ~1.2k px when the cards arrive (CLS ~0.115)",
+      "subject": "/account/missions renders no skeleton for the mission-card grid; on a full load the unreserved grid pushes the account-shell background and CLS exceeds 0.1 at 1280x900, while on SPA navigation the shift is input-excluded",
       "question": "Does the /account/missions card grid show a skeleton while loading, and does the page shift when mission cards resolve?",
       "questions": [
         "Does the missions page jump around while the mission cards load?",
@@ -14871,8 +14871,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 0,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-C466AD5C",
@@ -18945,8 +18946,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-FA0604AD",
