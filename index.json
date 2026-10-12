@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T13:55:48.040Z",
-  "count": 750,
+  "generated": "2026-10-12T14:02:21.511Z",
+  "count": 753,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3901,6 +3901,24 @@
       "disputed": 1
     },
     {
+      "id": "KB-36188BC0",
+      "path": "entries/KB-36188BC0.md",
+      "subject": "Storefront thumbnail blobs are served through Cloudflare with cache-control max-age=14400, so a regenerated _md/_sm can stay stale at the edge up to 4 h",
+      "question": "How long can a regenerated product thumbnail be served stale on the storefront?",
+      "anchors": [
+        "/cms-content/assets/catalog",
+        "/search"
+      ],
+      "scope": [
+        "module=virtocommerce.imagetools",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-36B307D8",
       "path": "entries/KB-36B307D8.md",
       "subject": "When a SQL Queries command times out, the API returns 500 with message \"Unknown error 258\" instead of the SqlClient \"Execution Timeout Expired\" text (Linux platform container).",
@@ -6087,6 +6105,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-512045B4",
+      "path": "entries/KB-512045B4.md",
+      "subject": "ImageTools FixedWidth/FixedHeight never upscale (height/width capped at source), while FixedSize scales the source up to fit the canvas",
+      "question": "Does an ImageTools thumbnail option upscale a source smaller than the target size?",
+      "anchors": [
+        "POST /api/image/thumbnails/tasks/run",
+        "POST /api/image/thumbnails/options"
+      ],
+      "scope": [
+        "module=virtocommerce.imagetools",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10319,6 +10355,24 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-8CC2B45E",
+      "path": "entries/KB-8CC2B45E.md",
+      "subject": "A thumbnail task whose run aborted (invalid backgroundColor) keeps lastRun null, so the Admin run dialog keeps \"Process changes\" disabled for it",
+      "question": "Is lastRun set on a thumbnail task when its run fails, and what does the run dialog then offer?",
+      "anchors": [
+        "POST /api/image/thumbnails/tasks/run",
+        "POST /api/image/thumbnails/options"
+      ],
+      "scope": [
+        "module=virtocommerce.imagetools",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-8DA09FE8",
