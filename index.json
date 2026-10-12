@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T12:54:39.698Z",
-  "count": 745,
+  "generated": "2026-10-12T12:57:35.562Z",
+  "count": 747,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1423,6 +1423,23 @@
         "KB-9E7315D1",
         "KB-AA57B0E5"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-14090CF7",
+      "path": "entries/KB-14090CF7.md",
+      "subject": "The storefront mobile main menu (below 1024px) close button is an icon-only button with no accessible name",
+      "question": "What accessible name does the storefront mobile main menu close button have?",
+      "anchors": [
+        "/account/returns"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -13157,6 +13174,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-B13B361A",
+      "path": "entries/KB-B13B361A.md",
+      "subject": "After an organization rename, the /account/returns organization tab label shows the new name after a fresh sign-in, while every return (raised before AND after the rename) keeps the old organizationName snapshot",
+      "question": "After an organization is renamed, which name do the storefront organization returns tab and the returns' organizationName show?",
+      "anchors": [
+        "/account/returns?scope=organization",
+        "POST /api/return/search",
+        "Query.organizationReturns",
+        "PUT /api/organizations"
+      ],
+      "scope": [
+        "actor=org-maintainer",
+        "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B142F52E",
       "path": "entries/KB-B142F52E.md",
       "subject": "Rejected UCP update_cart over stock leaves the over-stock quantity in the cart; checkout paths refuse it",
@@ -16387,7 +16425,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
