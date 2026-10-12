@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T19:04:28.212Z",
+  "generated": "2026-10-12T19:06:16.353Z",
   "count": 771,
   "entries": [
     {
@@ -13587,7 +13587,7 @@
     {
       "id": "KB-B2E4D4A5",
       "path": "entries/KB-B2E4D4A5.md",
-      "subject": "Page Builder shell Publish, Unpublish and Archive complete without any success toast, while Save, Save content and Load content do show one",
+      "subject": "Page Builder shell Publish, Unpublish and Archive complete without any success toast on the released module (through 3.1034.0), while Save, Clone, Load content and saving an imported page do show one",
       "question": "Does the Page Builder shell show a success notification after Publish, Unpublish or Archive of a page?",
       "anchors": [
         "/apps/page-builder-shell",
@@ -13600,8 +13600,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-B33FC328",
