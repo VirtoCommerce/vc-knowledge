@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T13:43:49.864Z",
-  "count": 747,
+  "generated": "2026-10-12T13:55:48.040Z",
+  "count": 750,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2266,6 +2266,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1FE8762E",
+      "path": "entries/KB-1FE8762E.md",
+      "subject": "ImageTools 3.1006.0: thumbnail run notification always reports totalCount 0 / processedCount 0, and an invalid option backgroundColor is saved, then aborts the whole run with a raw stack trace",
+      "question": "What does the thumbnail run result report, and what happens when a thumbnail option has an invalid backgroundColor?",
+      "anchors": [
+        "POST /api/image/thumbnails/tasks/run",
+        "POST /api/image/thumbnails/options",
+        "POST /api/platform/pushnotifications"
+      ],
+      "scope": [
+        "module=virtocommerce.imagetools@3.1006.0",
+        "surface=admin-ui",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8534,6 +8554,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-7454D90C",
+      "path": "entries/KB-7454D90C.md",
+      "subject": "ImageTools 3.1006.0: under the default AllowedImageFormats (JPEG,PNG,Webp,SVG) a .jpg original gets no thumbnails while the identical .jpeg does",
+      "question": "Does a .jpg file get thumbnails under the default ImageTools.Thumbnails.AllowedImageFormats setting?",
+      "anchors": [
+        "POST /api/image/thumbnails/tasks/run",
+        "ImageTools.Thumbnails.AllowedImageFormats"
+      ],
+      "scope": [
+        "module=virtocommerce.imagetools@3.1006.0",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-74682777",
       "path": "entries/KB-74682777.md",
       "subject": "A platform administrator's storefront-grant token carries role __administrator and no xapi:my_organization permission claims; organizationReturns refuses an administrator who is not a member",
@@ -13282,6 +13320,23 @@
       "status": "active",
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-B33FC328",
+      "path": "entries/KB-B33FC328.md",
+      "subject": "ImageTools 3.1006.0: an original whose name contains _<suffix> of any existing thumbnail option (e.g. shoe_smooth.jpeg vs option 'sm') never gets thumbnails",
+      "question": "Does an original image whose file name contains an option suffix like _sm get thumbnails?",
+      "anchors": [
+        "POST /api/image/thumbnails/tasks/run"
+      ],
+      "scope": [
+        "module=virtocommerce.imagetools@3.1006.0",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-B36F3F94",
