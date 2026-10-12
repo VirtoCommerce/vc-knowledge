@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T17:26:02.571Z",
-  "count": 761,
+  "generated": "2026-10-12T17:27:10.208Z",
+  "count": 767,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -877,7 +877,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-0CE38D75",
@@ -2999,7 +2999,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3772,6 +3772,23 @@
       "supersededBy": [
         "KB-110E0652"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-34C7A8DD",
+      "path": "entries/KB-34C7A8DD.md",
+      "subject": "On /compare the released theme exposes TWO native tables whose header and cell accessible names are noisy concatenations",
+      "question": "how is the compare products table exposed in Chromium's native accessibility tree on /compare, and what are the column header and row header names",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "engine=chromium",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -5877,7 +5894,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6710,6 +6727,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-5752EEB7",
+      "path": "entries/KB-5752EEB7.md",
+      "subject": "On /compare a single-product category tab shows the All/Differences switch as disabled only visually; the Differences button stays keyboard-focusable and Enter activates it",
+      "question": "On /compare with one product in the category tab, is the Differences toggle really disabled or only styled disabled?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "auth=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5790A068",
       "path": "entries/KB-5790A068.md",
       "subject": "marketing promotions are not change-tracked on this deployment",
@@ -7138,6 +7172,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5E82BC11",
+      "path": "entries/KB-5E82BC11.md",
+      "subject": "On /compare (and storefront-wide) outline-primary button text renders #f99e24 on white, 2.11:1 contrast",
+      "question": "What colour and contrast does the \"Clear all\" button text have on /compare, and is the same colour used by other storefront buttons?",
+      "anchors": [
+        "/compare",
+        "/cart"
+      ],
+      "scope": [
+        "auth=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10399,8 +10451,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 7,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8C530141",
@@ -11146,6 +11199,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-95685F89",
+      "path": "entries/KB-95685F89.md",
+      "subject": "On /compare the Availability cell's accessible name is the stock label (\"In stock\") and omits the visible quantity",
+      "question": "What does a screen reader get as the name of an Availability cell on /compare?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "auth=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12297,7 +12367,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14870,6 +14940,23 @@
       "resolved": 1
     },
     {
+      "id": "KB-C5E27085",
+      "path": "entries/KB-C5E27085.md",
+      "subject": "On /compare a page only ~300px taller than the viewport cannot be wheel-scrolled past the sticky-header threshold: scroll position oscillates instead of advancing",
+      "question": "What happens on /compare when the page is only slightly taller than the viewport and the user scrolls toward the sticky compact-header threshold?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "browser=firefox",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C60BA776",
       "path": "entries/KB-C60BA776.md",
       "subject": "Sales Rep details blade requires first/last name and caps their length",
@@ -16629,6 +16716,23 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E0DCEFC0",
+      "path": "entries/KB-E0DCEFC0.md",
+      "subject": "On /compare pinning or unpinning any row that is not already first drops keyboard focus to body",
+      "question": "On /compare, where does keyboard focus go after pressing Enter on a row's Pin / Unpin button?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "auth=guest",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
