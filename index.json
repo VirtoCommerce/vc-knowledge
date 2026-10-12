@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T17:56:32.666Z",
+  "generated": "2026-10-12T18:05:26.223Z",
   "count": 771,
   "entries": [
     {
@@ -602,7 +602,7 @@
     {
       "id": "KB-09C378C0",
       "path": "entries/KB-09C378C0.md",
-      "subject": "The Admin Return list has a sortable Organization column; POST /api/return/search with organizationId + excludeDrafts equals organizationReturns",
+      "subject": "The Admin Return list has a sortable Organization column; POST /api/return/search narrows an organization to submitted returns with submittedOnly (excludeDrafts up to pr-28-62f9)",
       "question": "How does the back office show and filter returns by organization?",
       "anchors": [
         "POST /api/return/search"
@@ -613,8 +613,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 2
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-09CEE315",
@@ -7579,7 +7580,7 @@
     {
       "id": "KB-6352B756",
       "path": "entries/KB-6352B756.md",
-      "subject": "Admin Return list has nine columns incl. a sortable Organization column, and the last header 'Item count' is clipped by the grid-options button at 1920 px",
+      "subject": "Admin Return list up to Return 3.1005.0-pr-28-62f9: nine columns incl. a sortable Organization column, and the last header Item count is clipped by the grid-options button at 1920 px",
       "question": "Which columns does the Admin SPA Return list show, which are sortable, and does the header row fit at 1920 px?",
       "anchors": [
         "/workspace/Return",
@@ -7590,8 +7591,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 4
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-649D673C",
