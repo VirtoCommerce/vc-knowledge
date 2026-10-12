@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T12:06:28.279Z",
-  "count": 727,
+  "generated": "2026-10-12T12:07:19.212Z",
+  "count": 744,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -997,6 +997,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-0ECE802D",
+      "path": "entries/KB-0ECE802D.md",
+      "subject": "Every order email (created, cancelled, status/payment/shipment changed, paid, sent) goes To the first non-empty order address email; the customer's contact/account email is only the fallback",
+      "question": "Which address do order emails such as OrderCreateEmailNotification go To — the order address email or the customer's contact/account email?",
+      "anchors": [
+        "POST /api/order/customerOrders",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "module=order",
+        "surface=notifications"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0F0C239A",
       "path": "entries/KB-0F0C239A.md",
       "subject": "On /company/tasks, closing the date chip always returns to the Today scope, even when the day was picked from the All or a status tab",
@@ -1364,7 +1382,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -1610,7 +1628,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -1658,7 +1676,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
-      "disputed": 3
+      "disputed": 4
     },
     {
       "id": "KB-17555498",
@@ -1695,7 +1713,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -1843,8 +1861,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0
+      "trust": 3,
+      "disputed": 1
     },
     {
       "id": "KB-191B1B4C",
@@ -2636,7 +2654,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-25829330",
@@ -3005,7 +3023,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -3242,7 +3260,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3554,6 +3572,25 @@
       "disputed": 2
     },
     {
+      "id": "KB-3320D7D3",
+      "path": "entries/KB-3320D7D3.md",
+      "subject": "Account sidebar items 'Missions & challenges' and 'Coupons & promotions' break mid-word at viewports 768-1279 px on every /account/* page",
+      "question": "Does the My account sidebar wrap its Marketing menu labels mid-word at tablet and small desktop widths?",
+      "anchors": [
+        "/account/orders",
+        "/account/returns"
+      ],
+      "scope": [
+        "browser=chromium",
+        "surface=storefront-ui",
+        "viewport=768-1279"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-33B89BDD",
       "path": "entries/KB-33B89BDD.md",
       "subject": "OTP request for an unregistered email returns succeeded:false with code user_not_found (DetailedErrors on); a 255-char email is refused 400 by MaxLength(254) while the storefront form lets it through",
@@ -3842,7 +3879,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-375CEF71",
@@ -3909,6 +3946,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3951B671",
+      "path": "entries/KB-3951B671.md",
+      "subject": "POST /api/return/search with a wrongly typed criteria value (take \"x\", submittedOnly \"yes\") answers 500 NullReferenceException, as do order and member search; an unknown property such as excludeDrafts is ignored",
+      "question": "What does POST /api/return/search answer when a criteria field has the wrong JSON type, or an unknown/renamed field like excludeDrafts?",
+      "anchors": [
+        "POST /api/return/search",
+        "POST /api/order/customerOrders/search",
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4885,7 +4940,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-4982C91F",
@@ -4976,7 +5031,25 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4A717175",
+      "path": "entries/KB-4A717175.md",
+      "subject": "On the organization returns tab a draft cancelled before submit stays private, while a return submitted and then cancelled stays listed as Cancelled and opens read-only",
+      "question": "After the SubmittedDate change, does /account/returns?scope=organization list a colleague's draft that was cancelled without being submitted, and a return that was submitted and then cancelled?",
+      "anchors": [
+        "/account/returns?scope=organization",
+        "/account/returns/:id",
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -5908,6 +5981,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-50E37D3B",
+      "path": "entries/KB-50E37D3B.md",
+      "subject": "Admin return details blade keeps the pre-save Modified date after Save; only Refresh shows the server-stamped modifiedDate",
+      "question": "After Save on the Admin SPA return details blade, does the blade's Modified date update to the new modifiedDate the server stamped?",
+      "anchors": [
+        "PUT /api/return",
+        "GET /api/return/{id}"
+      ],
+      "scope": [
+        "module=return",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-50EBEEE9",
       "path": "entries/KB-50EBEEE9.md",
       "subject": "Storefront checkout happens on the /cart page itself; there is no separate checkout route until the order completes.",
@@ -6128,6 +6219,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-52A684A6",
+      "path": "entries/KB-52A684A6.md",
+      "subject": "On a stand whose Return.Status dictionary lacks the Cancelled spelling, the Admin return detail blade shows an empty Status select for a buyer-cancelled return, and PUT /api/return accepts changing Cancelled to Canceled",
+      "question": "How does the Admin SPA return blade and PUT /api/return treat a buyer-cancelled return (status Cancelled) when Return.Status only holds Canceled?",
+      "anchors": [
+        "PUT /api/return",
+        "GET /api/return/{id}/available-statuses",
+        "/workspace/Return"
+      ],
+      "scope": [
+        "surface=admin-spa",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6505,7 +6615,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -6731,7 +6841,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -7123,7 +7233,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -7223,7 +7333,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 3
+      "disputed": 4
     },
     {
       "id": "KB-649D673C",
@@ -7618,6 +7728,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-6A7DA439",
+      "path": "entries/KB-6A7DA439.md",
+      "subject": "A holder whose organization membership is locked gets a token with no organization and no permission, so organizationReturns answers Forbidden (not UserLocked); returnStatuses still answers",
+      "question": "What does a returns holder whose organization membership is locked (account itself not locked) get from the org-scoped token grant and the return queries?",
+      "anchors": [
+        "Query.organizationReturns",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6AA0D7FB",
       "path": "entries/KB-6AA0D7FB.md",
       "subject": "fixed rate shipping method option pricing",
@@ -7941,6 +8068,25 @@
       "trust": 3,
       "disputed": 1,
       "resolved": 1
+    },
+    {
+      "id": "KB-6E4F5067",
+      "path": "entries/KB-6E4F5067.md",
+      "subject": "POST /api/order/customerOrders/search filters exactly by organizationId",
+      "question": "Does POST /api/order/customerOrders/search with organizationId return only that organization's orders?",
+      "anchors": [
+        "POST /api/order/customerOrders/search",
+        "POST /api/return/search",
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "actor=admin",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-6E56FB4B",
@@ -8678,6 +8824,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-78DC2D91",
+      "path": "entries/KB-78DC2D91.md",
+      "subject": "After a holder submits or cancels their own return, both the My returns and the organization tab show the new state on in-app navigation without a page reload",
+      "question": "Do /account/returns lists that were already loaded refresh after a return is submitted or cancelled in the same storefront session, without reloading the page?",
+      "anchors": [
+        "/account/returns",
+        "/account/returns?scope=organization",
+        "/account/returns/:id"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -9578,7 +9742,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9774,6 +9938,23 @@
       ],
       "plane": "experiential",
       "status": "active",
+      "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-88DFA29B",
+      "path": "entries/KB-88DFA29B.md",
+      "subject": "The returns list clamps an out-of-range page query parameter: -1, 0 and non-numeric show page 1, a page past the last is rewritten to the last page, on both the My returns and the organization tab",
+      "question": "What does /account/returns show for page=-1, page=0, page=abc or a page number past the last page, on My returns and on the organization tab?",
+      "anchors": [
+        "/account/returns",
+        "/account/returns?scope=organization"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 2,
       "disputed": 0
     },
@@ -9793,7 +9974,26 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-892882F8",
+      "path": "entries/KB-892882F8.md",
+      "subject": "The back-office Return list is not gated by submittedDate: a buyer draft cancelled without submit stays listed (Cancelled) and opens in the Admin return blade",
+      "question": "Does the Admin SPA Return list still show a buyer's draft that was cancelled before submit, now that organization holders no longer see it?",
+      "anchors": [
+        "/workspace/Return",
+        "POST /api/return/search",
+        "GET /api/return/{id}"
+      ],
+      "scope": [
+        "surface=admin-spa",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10193,6 +10393,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8FE28238",
+      "path": "entries/KB-8FE28238.md",
+      "subject": "An admin legacy return set to Canceled (single-l spelling) releases its units: the Add new return Line items blade offers the line's full quantity again",
+      "question": "After an admin-created legacy return is saved with status Canceled (single l), are its units returnable again on the order line?",
+      "anchors": [
+        "GET /api/return/available-quantities/{orderId}",
+        "PUT /api/return",
+        "/workspace/Return"
+      ],
+      "scope": [
+        "surface=admin-spa",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10627,7 +10846,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 1
     },
     {
@@ -10804,6 +11023,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-96D80B8E",
+      "path": "entries/KB-96D80B8E.md",
+      "subject": "The 375px mobile header search panel shows no category scope chip on a category page, and a submit from it runs a global /search?q= search",
+      "question": "Does the mobile search panel carry the category search scope when opened on a category page?",
+      "anchors": [
+        "/printers/multifunction-printers",
+        "/search"
+      ],
+      "scope": [
+        "component=header-search-bar",
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-97170665",
       "path": "entries/KB-97170665.md",
       "subject": "A membership lock is carried in xAPI only by Contact.isLockedInOrganization (status and statusInOrganization stay Approved) and shows on the members list as a red Blocked badge",
@@ -10837,6 +11075,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-971BC129",
+      "path": "entries/KB-971BC129.md",
+      "subject": "POST /api/order/customerOrders ignores a createdDate in the body; the server stamps the creation instant",
+      "question": "Can a customer order be back-dated by sending createdDate on POST /api/order/customerOrders?",
+      "anchors": [
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11263,7 +11518,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -12878,7 +13133,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13851,7 +14106,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -14462,6 +14717,25 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C8D613FA",
+      "path": "entries/KB-C8D613FA.md",
+      "subject": "POST /api/sales-rep ignores the sent fullName and derives it from firstName + lastName",
+      "question": "Does POST /api/sales-rep keep the fullName in the request body?",
+      "anchors": [
+        "POST /api/sales-rep",
+        "PUT /api/sales-rep",
+        "POST /api/sales-rep/search"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16079,6 +16353,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-E129A8EF",
+      "path": "entries/KB-E129A8EF.md",
+      "subject": "PUT /api/organizations is a full replace: omitting status and description sets them to null; memberships survive",
+      "question": "Does a rename through PUT /api/organizations with only id, memberType, name and emails keep the organization's other fields?",
+      "anchors": [
+        "PUT /api/organizations",
+        "GET /api/organizations/{id}"
+      ],
+      "scope": [
+        "actor=admin",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E149ACF0",
       "path": "entries/KB-E149ACF0.md",
       "subject": "vc-shell blade stack keeps the hash route in sync on every close path",
@@ -16213,6 +16505,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-E4660E34",
+      "path": "entries/KB-E4660E34.md",
+      "subject": "For an organization holder, the /edit route of a colleague's draft that was cancelled before submit renders 'This return was not found' under a generic 'Add return details' heading, with no RMA, comment or line reason",
+      "question": "What does /account/returns/:id/edit show to an organization holder for a colleague's return that was cancelled without ever being submitted?",
+      "anchors": [
+        "/account/returns/:id/edit",
+        "Query.return"
+      ],
+      "scope": [
+        "actor=organization-returns-holder",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E4699C30",
       "path": "entries/KB-E4699C30.md",
       "subject": "The platform marks a module with a load error when any installed dependency has a lower MINOR version than the module declares (same major required; patch and prerelease ignored), so pinning an older-minor PR build of a module disables every module that declares the newer minor.",
@@ -16274,7 +16584,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16529,8 +16839,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0
+      "trust": 2,
+      "disputed": 1
     },
     {
       "id": "KB-E9939511",
@@ -17669,7 +17979,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -17937,7 +18247,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
