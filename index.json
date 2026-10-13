@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T17:26:03.929Z",
-  "count": 841,
+  "generated": "2026-10-13T17:27:32.087Z",
+  "count": 842,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -746,6 +746,25 @@
       "scope": [
         "module=pricing",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0AF3B0BB",
+      "path": "entries/KB-0AF3B0BB.md",
+      "subject": "Home-page CLS of about 0.5 at 1920 predates theme PR 2543: the pre-PR build (pr-2485) measures 0.488 signed in, with the same Builder.io block and footer shift geometry as the PR build (0.551)",
+      "question": "Is the high CLS on the storefront home page pre-existing on an older theme build, or introduced by a newer one, and what shifts?",
+      "anchors": [
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "auth=signed-in",
+        "page=home",
+        "surface=storefront-ui",
+        "viewport=1920"
       ],
       "plane": "experiential",
       "status": "active",
