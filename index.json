@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T17:20:59.303Z",
-  "count": 839,
+  "generated": "2026-10-13T17:21:20.543Z",
+  "count": 840,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -16752,6 +16752,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D0AF91D1",
+      "path": "entries/KB-D0AF91D1.md",
+      "subject": "The home-page slider and features blocks have no alt-text field, so their images render without alt whatever the content says",
+      "question": "Is the missing alt on the storefront home-page slider and features images a content gap an admin can fill, or a theme defect?",
+      "anchors": [
+        "Query.page",
+        "/homepage.page"
+      ],
+      "scope": [
+        "page=home",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
