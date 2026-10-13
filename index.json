@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T12:07:13.270Z",
-  "count": 789,
+  "generated": "2026-10-13T12:31:13.389Z",
+  "count": 790,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1894,7 +1894,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -17474,6 +17474,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-E74D7680",
+      "path": "entries/KB-E74D7680.md",
+      "subject": "Multiple files in one configurable File section render in no stable order: the same two files appear upload-order on one surface/render and reversed on another (cart, Order details, quote)",
+      "question": "In what order does the storefront list several files attached to one configurable File section on /cart, Order details and the quote page?",
+      "anchors": [
+        "/cart",
+        "/account/orders/{id}",
+        "/account/quotes/{id}",
+        "Query.orders"
+      ],
+      "scope": [
+        "file-scope=product-configuration",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E7790BF6",
       "path": "entries/KB-E7790BF6.md",
       "subject": "an applied coupon is two records on a cart: the code in cart.coupons, the reward in cart.discounts, joined only by the code string",
@@ -18810,7 +18830,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
