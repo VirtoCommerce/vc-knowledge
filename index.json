@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T19:06:18.789Z",
+  "generated": "2026-10-13T04:02:39.749Z",
   "count": 771,
   "entries": [
     {
@@ -1888,7 +1888,7 @@
     {
       "id": "KB-18D61DE9",
       "path": "entries/KB-18D61DE9.md",
-      "subject": "On vcst the Return.Status dictionary stores only Completed, New, Canceled, Processing, Approved, so a Cancelled return's available-statuses offers only Canceled and the status filter has no Requested, Rejected or PartiallyApproved",
+      "subject": "Until 2026-10-12 the vcst Return.Status dictionary stored only Completed, New, Canceled, Processing, Approved, so a Cancelled return offered only Canceled and Requested/Rejected/Draft offered nothing",
       "question": "What does GET /api/platform/settings/Return.Status hold on vcst and what does GET /api/return/{id}/available-statuses offer for a Cancelled return there?",
       "anchors": [
         "GET /api/platform/settings/Return.Status",
@@ -1899,8 +1899,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-191B1B4C",
@@ -17311,7 +17312,7 @@
     {
       "id": "KB-E91989D9",
       "path": "entries/KB-E91989D9.md",
-      "subject": "On vcst_qa (Return 3.1005.0-pr-28-62f9, FileExperienceApi 3.1007.0-pr-25-ff70), uploading to the return-attachments file scope is refused as an unknown scope with HTTP 200",
+      "subject": "Uploading to the return-attachments file scope is refused as an unknown scope with HTTP 200 wherever the stand has no FileUpload scope configured for it",
       "question": "Does POST /api/files/return-attachments accept a buyer's return evidence upload?",
       "anchors": [
         "POST /api/files/return-attachments",
@@ -17324,8 +17325,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-E9939511",
