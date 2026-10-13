@@ -26,5 +26,11 @@ evidence:
     at: 2026-09-25T11:16:30.692Z
     by: session:memimpor
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_regression
+    at: 2026-10-13T13:14:01.653Z
+    by: session:624d35a1
+    who: kutasinaelena
+    note: Password grant at the storefront /connect/token with storeId=B2B-store and resource={storefront}/ucp/mcp returned 200 for two B2B buyers on UCP 3.1010.0; link_buyer_identity accepted the token.
 ---
 A plain token grant can mint a token UCP accepts, with no authorization-code round trip, if it is requested at the storefront origin with resource set to the storefront's /ucp/mcp; the token then carries that audience and the storefront as issuer. Without resource the token mints but its audience is resource_server, which UCP rejects. Requesting at the back-office origin, or naming a back-office /ucp/mcp resource from either origin, returns 400 invalid_target, because only the storefront resource is registered. Mixing origins between token and call gives 401 invalid_token.

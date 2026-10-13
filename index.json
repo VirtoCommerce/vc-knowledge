@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T13:00:20.111Z",
-  "count": 795,
+  "generated": "2026-10-13T13:16:21.482Z",
+  "count": 797,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6352,7 +6352,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -9599,7 +9599,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12050,6 +12050,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9CEC2AB6",
+      "path": "entries/KB-9CEC2AB6.md",
+      "subject": "Opening a UCP continue_url in a signed-out browser for a token-authenticated buyer redirects to /sign-in, then resumes on /cart/{id}?ucp_handoff=1 after sign-in",
+      "question": "What happens when a UCP checkout_and_handoff continue_url (/checkout?ucp_session=...) minted for an authenticated buyer is opened in a browser without a storefront session?",
+      "anchors": [
+        "/ucp/v1/internal/handoff/restore",
+        "/cart/{id}",
+        "/sign-in"
+      ],
+      "scope": [
+        "buyer=authenticated-b2b",
+        "module=virtocommerce.ucp 3.1010.0",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -15135,6 +15155,26 @@
       "scope": [
         "module=page-builder",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C42CA8D0",
+      "path": "entries/KB-C42CA8D0.md",
+      "subject": "UCP checkout_and_handoff applies the agent's shipping_address to the cart, and the storefront /cart handoff landing shows it as the shipping and billing address",
+      "question": "After a UCP checkout_and_handoff with a shipping_address, which shipping address does the buyer see on /cart/{id}?ucp_handoff=1 — the agent's or the buyer's saved one?",
+      "anchors": [
+        "/ucp/mcp",
+        "/cart/{id}",
+        "/ucp/v1/internal/handoff/restore"
+      ],
+      "scope": [
+        "buyer=authenticated-b2b",
+        "module=virtocommerce.ucp 3.1010.0",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
