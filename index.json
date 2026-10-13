@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T09:26:08.055Z",
-  "count": 783,
+  "generated": "2026-10-13T10:08:07.255Z",
+  "count": 784,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15556,6 +15556,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CB68C2F4",
+      "path": "entries/KB-CB68C2F4.md",
+      "subject": "A Saved-for-later round trip keeps a configurable line's File-section files: same /api/files/{id} urls, still downloadable 200 by the cart owner",
+      "question": "Does moving a configurable line with File-section attachments to Saved for later and back keep the files?",
+      "anchors": [
+        "Mutation.moveToSavedForLater",
+        "Mutation.moveFromSavedForLater",
+        "/cart",
+        "GET /api/files/{id}"
+      ],
+      "scope": [
+        "file-scope=product-configuration",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
