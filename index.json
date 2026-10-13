@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T15:39:08.020Z",
-  "count": 816,
+  "generated": "2026-10-13T15:44:33.873Z",
+  "count": 817,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6874,6 +6874,24 @@
       "scope": [
         "surface=admin-ui",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-54D8DEDA",
+      "path": "entries/KB-54D8DEDA.md",
+      "subject": "Platform REST cart add-item does not evaluate prices: the line item keeps whatever listPrice the request body carries (0 when omitted)",
+      "question": "POST /api/carts/{cartId}/items REST cart: does adding a line item evaluate the price from the pricing module, or is listPrice taken from the request body?",
+      "anchors": [
+        "POST /api/carts/{cartId}/items",
+        "POST /api/pricing/evaluate"
+      ],
+      "scope": [
+        "module=cart",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
