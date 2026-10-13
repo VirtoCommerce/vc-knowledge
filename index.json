@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T17:09:43.810Z",
-  "count": 838,
+  "generated": "2026-10-13T17:13:58.495Z",
+  "count": 839,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5225,6 +5225,25 @@
         "KB-35F25BEE",
         "KB-F1071A5D"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-433D49DD",
+      "path": "entries/KB-433D49DD.md",
+      "subject": "Storefront carousel arrows (ui-kit VcCarousel and the static-content hero slider) are non-focusable divs with no role or name; keyboard users cannot operate them",
+      "question": "Can a keyboard user focus and operate the prev/next arrows of the storefront product carousels and the home hero slider?",
+      "anchors": [
+        "/seed-test-fixtures/agent-test-ga4-related-anchor",
+        "/agent-test-ga4-product-lists"
+      ],
+      "scope": [
+        "component=carousel",
+        "role=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
