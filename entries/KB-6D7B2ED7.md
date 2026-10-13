@@ -69,9 +69,32 @@ evidence:
     who: Lenajava1
     contradicts: true
     note: "Superseded on vcst_qa 2026-10-09 ~13:53 UTC once the storefront ingress gained a /api/otp route to the platform (theme vc-frontend-next 3.0.0-alpha.2685, OtpSignIn.Enabled on): clicking Continue on /sign-in sent POST {storefront}/api/otp/request {email, storeId} -> 200 application/json {succeeded:true, error:null, maskedEmail, lockoutSecondsRemaining:null} in ~0.5s, the form moved to the \"Check your email\" code step with the masked address, the OtpSignInEmailNotification was journaled and sent, and entering the code auto-submitted POST {storefront}/connect/token grant_type=otp_email -> 200 and signed the user in. As on vcptcore_qa1, the 405 was a deployment ingress gap; with the route present the flow works end to end."
+    resolved: conditions-scoped
+    resolvedAt: 2026-10-13T05:50:16.006Z
+    resolvedBy: session:34990ccd
+    resolvedIn: judge/list-sharing-20261012
+    resolution: "Both sides are right under their stand's ingress: vcst routes /api/otp since 2026-10-09 and answers JSON (2026-10-13); vcptcore-qa has no route (nginx 405) and no OTP module; the entry already names the route as the condition."
+  - method: observation
+    deployment: vcst
+    conditions: platform=3.1078.0; module:VirtoCommerce.OTP=3.1000.0; setting:OtpSignIn.Enabled=true; ingress:/api/otp=routed
+    at: 2026-10-13T05:50:09.106Z
+    by: session:34990ccd
+    who: Dan-BV
+    note: "2026-10-13, 2 runs: POST {storefront}/api/otp/request unknown email -> 200 application/json user_not_found, identical to the platform host."
+    investigation: true
+    bodyHash: e517fd4d18a1
+  - method: observation
+    deployment: vcptcore
+    conditions: ingress:/api/otp=not routed; state:otp-module=absent
+    at: 2026-10-13T05:50:10.929Z
+    by: session:34990ccd
+    who: Dan-BV
+    note: "2026-10-13, 2 runs: POST {storefront}/api/otp/request -> 405 text/html nginx; GET -> SPA index; platform host POST/GET -> 404; no VirtoCommerce.OTP in the vcptcore-qa manifest."
+    investigation: true
+    bodyHash: e517fd4d18a1
 ---
 With OtpSignIn.Enabled on the store, /sign-in opens on the one-time-code view ("We'll email you a code. No password needed.", Email, Continue, "Sign in with a password instead"). Continue validates the email client-side - empty: "This field is required"; "john@" or an address with a space: "Enter a valid email address, e.g. johndoe@gmail.com" - and sends nothing until it is valid. Then it POSTs /api/otp/request RELATIVE TO THE STOREFRONT ORIGIN, so it only reaches the platform if the storefront's ingress routes /api/otp to it.
 
 Where it does (vcptcore_qa1 from 2026-10-01; observed live 2026-10-08): 200 {succeeded:true, maskedEmail:"a•••1@example.com"} - the mask keeps the first and last character of the local part - and the form moves to "Check your email". An unknown email gets 200 with error code user_not_found; a store with OTP off gets error code otp_disabled.
 
-Where it does not (vcptcore_qa1 before 2026-10-01; vcst_qa on 2026-10-08): the storefront ingress answers 405 text/html "405 Not Allowed" (nginx) and the request never reaches the platform, while the same POST to the platform's own host answers JSON. On that 405 the form showed an inline "Something went wrong. Please try again later." plus the global server-error toast (observed 2026-09-30). So a 405 here is a deployment's ingress gap, not product behaviour - check the route before reading the form's error as an OTP failure.
+Where it does not (vcptcore_qa1 before 2026-10-01; vcst_qa on 2026-10-08): the storefront ingress answers 405 text/html "405 Not Allowed" (nginx) and the request never reaches the platform, while the same POST to the platform's own host answers JSON. On that 405 the form showed an inline "Something went wrong. Please try again later." plus the global server-error toast (observed 2026-09-30). So a 405 here is a deployment's ingress gap, not product behaviour - check the route before reading the form's error as an OTP failure. Which case a stand is in changes with its ingress: vcst gained a storefront /api/otp route on 2026-10-09 (~13:53Z), and on 2026-10-13 POST {storefront}/api/otp/request answered 200 application/json (an unknown email: error code user_not_found), the same as the platform host, with OtpSignIn.Enabled on for B2B-store. vcptcore-qa on 2026-10-13 had no route (POST {storefront}/api/otp/request -> 405 text/html nginx, GET -> the SPA index) and no OTP module at all (platform host 404; absent from its deploy manifest).

@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T08:45:53.850Z",
+  "generated": "2026-10-13T08:49:33.085Z",
   "count": 780,
   "entries": [
     {
@@ -336,7 +336,7 @@
     {
       "id": "KB-057A596A",
       "path": "entries/KB-057A596A.md",
-      "subject": "a configurable File section accepts a fixed broad list of document and image types",
+      "subject": "A configurable File section takes its size and type limits from the stand's product-configuration upload scope; without one the storefront falls back to 1 MB, 5 files and no type check",
       "question": "Which file types and sizes does a configurable product File section accept in Query.productConfiguration?",
       "questions": [
         "Which file types can I attach when configuring a product, and how big can they be?",
@@ -359,8 +359,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-06409954",
@@ -602,7 +603,7 @@
     {
       "id": "KB-09C378C0",
       "path": "entries/KB-09C378C0.md",
-      "subject": "The Admin Return list has a sortable Organization column; POST /api/return/search with organizationId + excludeDrafts equals organizationReturns",
+      "subject": "The Admin Return list has a sortable Organization column; POST /api/return/search narrows an organization to submitted returns with submittedOnly (excludeDrafts up to pr-28-62f9)",
       "question": "How does the back office show and filter returns by organization?",
       "anchors": [
         "POST /api/return/search"
@@ -613,8 +614,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 2
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-09CEE315",
@@ -865,7 +867,7 @@
     {
       "id": "KB-0C1CA988",
       "path": "entries/KB-0C1CA988.md",
-      "subject": "currentuser for the built-in admin returns isAdministrator true with empty roles and permissions arrays",
+      "subject": "currentuser for the built-in admin returns isAdministrator true, no roles key, and only the permissions of the roles assigned to that account on the stand",
       "question": "Does GET /api/platform/security/currentuser list roles and permissions for the built-in admin account?",
       "anchors": [
         "GET /api/platform/security/currentuser"
@@ -877,7 +879,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-0CE38D75",
@@ -901,8 +904,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-0D8C1133",
@@ -1510,7 +1514,7 @@
     {
       "id": "KB-1450B943",
       "path": "entries/KB-1450B943.md",
-      "subject": "At 768-799 px the organization returns table breaks RMA, Date and Status values mid-word (e.g. 'Reques/ted', '10/8/20/26')",
+      "subject": "Up to theme 2.60.0-pr-2523-9e4e, at 768-799 px the organization returns table breaks RMA, Date and Status values mid-word (e.g. Reques/ted, 10/8/20/26)",
       "question": "Do the returns table cells on /account/returns?scope=organization break dates and statuses mid-word at tablet width?",
       "anchors": [
         "/account/returns?scope=organization"
@@ -1521,8 +1525,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 2
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-14F26013",
@@ -1699,7 +1704,7 @@
     {
       "id": "KB-17232A1F",
       "path": "entries/KB-17232A1F.md",
-      "subject": "organizationReturns lists every buyer's non-draft returns of the order's organization, the caller's own included; a draft cancelled without submit is listed too",
+      "subject": "organizationReturns lists the organization's returns by status up to Return pr-28-62f9 (a draft cancelled without submit included); from pr-28-fb4f only returns ever submitted",
       "question": "Which returns does the organization returns list contain?",
       "anchors": [
         "Query.organizationReturns"
@@ -1709,8 +1714,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
-      "disputed": 4
+      "trust": 6,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-17555498",
@@ -1884,7 +1890,7 @@
     {
       "id": "KB-18D61DE9",
       "path": "entries/KB-18D61DE9.md",
-      "subject": "On vcst the Return.Status dictionary stores only Completed, New, Canceled, Processing, Approved, so a Cancelled return's available-statuses offers only Canceled and the status filter has no Requested, Rejected or PartiallyApproved",
+      "subject": "Until 2026-10-12 the vcst Return.Status dictionary stored only Completed, New, Canceled, Processing, Approved, so a Cancelled return offered only Canceled and Requested/Rejected/Draft offered nothing",
       "question": "What does GET /api/platform/settings/Return.Status hold on vcst and what does GET /api/return/{id}/available-statuses offer for a Cancelled return there?",
       "anchors": [
         "GET /api/platform/settings/Return.Status",
@@ -1895,8 +1901,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-191B1B4C",
@@ -2060,8 +2067,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-1C28E89D",
@@ -2329,7 +2337,7 @@
     {
       "id": "KB-2073D7AD",
       "path": "entries/KB-2073D7AD.md",
-      "subject": "The storefront return wizard clamps the saved quantity but can display a quantity above the returnable maximum",
+      "subject": "The storefront return wizard corrects an over-limit quantity to the returnable maximum on the spot; only pre-merge pr-2500 builds displayed the typed value while saving the clamped one",
       "question": "Does the storefront return wizard stop a buyer from entering more than the returnable quantity?",
       "questions": [
         "The return form shows 50 of 5 available after I typed a big number - will it really return 50?",
@@ -2349,8 +2357,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-20F8350F",
@@ -2500,9 +2509,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
-      "disputed": 2,
-      "resolved": 3
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 5
     },
     {
       "id": "KB-2289BD9F",
@@ -2696,7 +2705,7 @@
     {
       "id": "KB-25682485",
       "path": "entries/KB-25682485.md",
-      "subject": "A holder reads a colleague's non-draft return read-only through Query.return; every mutation stays owner-only",
+      "subject": "A holder reads a colleague's return read-only through Query.return (non-draft up to Return pr-28-62f9, ever-submitted from pr-28-fb4f); every mutation stays owner-only",
       "question": "What can an organization holder do with a colleague's return via xAPI?",
       "anchors": [
         "Query.return",
@@ -2707,8 +2716,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
-      "disputed": 2
+      "trust": 5,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-25829330",
@@ -2870,9 +2880,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1,
-      "resolved": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-2A7CB639",
@@ -3316,8 +3326,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 11,
-      "disputed": 4
+      "trust": 12,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-30153EA8",
@@ -4013,7 +4024,7 @@
     {
       "id": "KB-3712D4C4",
       "path": "entries/KB-3712D4C4.md",
-      "subject": "Returns list switches from stacked cards to the table at exactly 1024 px on both tabs, with fixed column widths Date 112, Buyer name 128 (160 from 1280), Status 144",
+      "subject": "Returns list switches from stacked cards to the table at exactly 1024 px on both tabs, with fixed column widths Date 112, Buyer name 128 (160 from 1280), Status 144; long buyer names wrap mid-word inside the cell",
       "question": "At which viewport width does /account/returns change between cards and the table, and how wide are the columns?",
       "anchors": [
         "/account/returns",
@@ -4026,7 +4037,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 2
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-375CEF71",
@@ -4786,7 +4798,7 @@
     {
       "id": "KB-42230B0A",
       "path": "entries/KB-42230B0A.md",
-      "subject": "Wishlist sharing targets: write response order differs from read order; legacy sharedWithId follows it",
+      "subject": "Wishlist sharing targets come back sorted by organization id on every surface; legacy sharedWithId is the first of them",
       "question": "In what order does SharingSettingType.targets come back, and which target does the deprecated sharedWithId report?",
       "questions": [
         "Why does the order of people a shopping list is shared with change after saving?",
@@ -4809,8 +4821,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 3
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 3
     },
     {
       "id": "KB-432D02EF",
@@ -5124,7 +5137,7 @@
     {
       "id": "KB-4971F946",
       "path": "entries/KB-4971F946.md",
-      "subject": "On category-to-category navigation the search-bar scope loader resizes to the new chip label width before the loader-to-chip swap, so the search input shifts sideways while the loader is shown",
+      "subject": "On category-to-category navigation the search-bar scope chip is replaced by a loader that keeps the old label and width; the search input shifts once, at the loader-to-chip hand-over",
       "question": "Does the header search input move horizontally when the category scope loader is replaced by the new category chip?",
       "anchors": [
         "/printers",
@@ -5140,7 +5153,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-4982C91F",
@@ -6332,7 +6346,7 @@
     {
       "id": "KB-515D41EC",
       "path": "entries/KB-515D41EC.md",
-      "subject": "Barcode scanner blade lists saved fields first in stored order, then the rest by display label",
+      "subject": "Barcode scanner blade lists the saved (checked) fields first, then the rest, each group sorted alphabetically by display label - not in stored order",
       "question": "In what order does the Admin Barcode scanner blade list the saved and unsaved barcode fields?",
       "questions": [
         "When I reopen the barcode scanner settings, why are my chosen fields not shown in the order I saved them?",
@@ -6352,8 +6366,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 0,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-51888868",
@@ -7046,7 +7061,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-5ADBFB34",
@@ -7609,7 +7625,7 @@
     {
       "id": "KB-6352B756",
       "path": "entries/KB-6352B756.md",
-      "subject": "Admin Return list has nine columns incl. a sortable Organization column, and the last header 'Item count' is clipped by the grid-options button at 1920 px",
+      "subject": "Admin Return list up to Return 3.1005.0-pr-28-62f9: nine columns incl. a sortable Organization column, and the last header Item count is clipped by the grid-options button at 1920 px",
       "question": "Which columns does the Admin SPA Return list show, which are sortable, and does the header row fit at 1920 px?",
       "anchors": [
         "/workspace/Return",
@@ -7620,8 +7636,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 4
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-649D673C",
@@ -8370,9 +8387,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 1,
-      "resolved": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-6E4F5067",
@@ -8975,8 +8992,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 2
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-75BD84BE",
@@ -10489,7 +10507,7 @@
     {
       "id": "KB-8BE777BB",
       "path": "entries/KB-8BE777BB.md",
-      "subject": "Switching organization from the storefront account menu BLANKS the header account control instead of relabelling it; the new org name only appears after a full page reload.",
+      "subject": "Switching organization relabels the storefront header account control at once; the control renders empty only on pages where an injected ProductGuide widget hides it",
       "question": "After a multi-org buyer switches organization from the account menu, does the header show the new organization name?",
       "questions": [
         "After I switch to another company in the account menu, why does the top bar no longer say which company I'm buying for?",
@@ -10515,7 +10533,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8C054BAE",
@@ -10568,8 +10587,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 7,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8C530141",
@@ -10649,7 +10669,7 @@
     {
       "id": "KB-8DDFC7BA",
       "path": "entries/KB-8DDFC7BA.md",
-      "subject": "A zero-hit keyword search on /search?q= shifts layout heavily on load (CLS ~0.47 at 1920px, ~0.81 at 375px): sidebar, controls and skeleton cards collapse in one frame into the empty view",
+      "subject": "A zero-hit keyword search on /search?q= shifts layout heavily on load (CLS ~0.47-0.65 at 1920px, ~0.81 at 375px): sidebar, controls and skeleton cards collapse in one frame into the empty view",
       "question": "Does the storefront /search?q= zero-hit (no results) empty state cause a layout shift on load, and how large?",
       "anchors": [
         "/search?q=",
@@ -10662,7 +10682,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8E1456B8",
@@ -10965,14 +10986,14 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1,
-      "resolved": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-91DF8883",
       "path": "entries/KB-91DF8883.md",
-      "subject": "Share-list dialog: 'Change who can access?' confirm on every scope swap, including widening to Anyone with link",
+      "subject": "Share-list dialog up to theme 2.59.0-pr-2476-31b5: 'Change who can access?' confirm on every scope swap, including widening to Anyone with link",
       "question": "Which confirmation does the storefront Share list dialog show for each scope transition, and is its copy accurate?",
       "questions": [
         "Does the storefront warn me that changing a shared list to 'Anyone with link' makes it public?",
@@ -10998,8 +11019,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 2
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-91FDB560",
@@ -11208,7 +11230,7 @@
     {
       "id": "KB-94700769",
       "path": "entries/KB-94700769.md",
-      "subject": "A password-expired account's existing token still answers every return query and mutation; only an account lock yields UserLocked",
+      "subject": "A password-expired account is refused PasswordExpired on buyer-scoped return queries and mutations (reference data still answers); a lock yields UserLocked; PUT /api/platform/security/users does not set passwordExpired",
       "question": "What do return queries and mutations answer for a token whose account was set passwordExpired after sign-in?",
       "anchors": [
         "PUT /api/platform/security/users",
@@ -11220,8 +11242,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-94C2ADCC",
@@ -11530,9 +11553,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 1,
-      "resolved": 3
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-97A675C1",
@@ -13202,7 +13225,7 @@
     {
       "id": "KB-ACC12F26",
       "path": "entries/KB-ACC12F26.md",
-      "subject": "A punchout user mapping accepts an unvalidated userId (incl. an administrator account), yielding a privilege-escalation sign-in via the anonymous cXML + punchout grant chain",
+      "subject": "On Punchout 3.1000.0-pr-1 up to build fbb9 a punchout user mapping accepted an unvalidated userId (privilege-escalation sign-in chain); from the fix commit 12dd178 (build ca33 onward) the mapping endpoint and the punchout grant reject it",
       "question": "Does POST /api/punchout-user-mappings validate userId against the contact, and can a punchout mapping bind an administrator account to escalate privilege?",
       "questions": [
         "Can someone who is only allowed to create punchout mappings end up signed in as an administrator?",
@@ -13228,7 +13251,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-ACDF81BB",
@@ -13696,7 +13720,7 @@
     {
       "id": "KB-B2E4D4A5",
       "path": "entries/KB-B2E4D4A5.md",
-      "subject": "Page Builder shell Publish, Unpublish and Archive complete without any success toast, while Save, Save content and Load content do show one",
+      "subject": "Page Builder shell Publish, Unpublish and Archive complete without any success toast on the released module (through 3.1034.0), while Save, Clone, Load content and saving an imported page do show one",
       "question": "Does the Page Builder shell show a success notification after Publish, Unpublish or Archive of a page?",
       "anchors": [
         "/apps/page-builder-shell",
@@ -13709,8 +13733,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-B33FC328",
@@ -13732,7 +13757,7 @@
     {
       "id": "KB-B36F3F94",
       "path": "entries/KB-B36F3F94.md",
-      "subject": "A negative ?page= on /account/returns is sent as a negative cursor and the returns query fails with a SQL error, which the page shows as a generic toast plus 'There are no returns yet'",
+      "subject": "Up to theme pr-2523-9e4e a negative ?page= on /account/returns was sent as a negative cursor and the returns query failed with a SQL error; from 59a78b57 it reads as page 1",
       "question": "What happens when /account/returns is opened with a negative page number?",
       "anchors": [
         "/account/returns?scope=organization",
@@ -13744,8 +13769,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-B38AEE58",
@@ -13772,7 +13798,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-B3EEBA10",
@@ -14148,7 +14175,7 @@
     {
       "id": "KB-B8602F6B",
       "path": "entries/KB-B8602F6B.md",
-      "subject": "On a cold (full) load of a product detail page the storefront header Account menu button renders empty for a multi-org member — no organization name and no user name — while home and catalog cold loads show \"Org / Name\".",
+      "subject": "On product pages where an injected ProductGuide widget mounts, the storefront header Account menu button renders empty for a multi-org member; other cold loads show Org / Name",
       "question": "Why is the header account button blank (no org / user name) on a product page after a reload?",
       "anchors": [
         "/books/notebook-red-panda-a5-45-sheets",
@@ -14162,7 +14189,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-B96F15A8",
@@ -14979,7 +15007,7 @@
     {
       "id": "KB-C4597892",
       "path": "entries/KB-C4597892.md",
-      "subject": "/account/missions renders no skeleton for the mission-card grid; the footer jumps ~1.2k px when the cards arrive (CLS ~0.115)",
+      "subject": "/account/missions renders no skeleton for the mission-card grid; on a full load the unreserved grid pushes the account-shell background and CLS exceeds 0.1 at 1280x900, while on SPA navigation the shift is input-excluded",
       "question": "Does the /account/missions card grid show a skeleton while loading, and does the page shift when mission cards resolve?",
       "questions": [
         "Does the missions page jump around while the mission cards load?",
@@ -15002,7 +15030,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-C466AD5C",
@@ -15660,7 +15689,7 @@
     {
       "id": "KB-CE9257BC",
       "path": "entries/KB-CE9257BC.md",
-      "subject": "Saving Edit task on a canceled sales-rep task fails: updateSalesRepTask returns errors[] \"Task not found.\" inside HTTP 200",
+      "subject": "Saving Edit task on a canceled sales-rep task succeeds; updateSalesRepTask answers \"Task not found.\" only when the task is gone or not the rep own",
       "question": "What happens when a sales rep opens and saves Edit task on a canceled task on /company/tasks?",
       "anchors": [
         "/company/tasks",
@@ -15673,7 +15702,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 3
+      "disputed": 0,
+      "resolved": 3
     },
     {
       "id": "KB-CF3FAD18",
@@ -16557,9 +16587,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 2,
-      "resolved": 2
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-DA88761E",
@@ -17453,7 +17483,7 @@
     {
       "id": "KB-E91989D9",
       "path": "entries/KB-E91989D9.md",
-      "subject": "On vcst_qa (Return 3.1005.0-pr-28-62f9, FileExperienceApi 3.1007.0-pr-25-ff70), uploading to the return-attachments file scope is refused as an unknown scope with HTTP 200",
+      "subject": "Uploading to the return-attachments file scope is refused as an unknown scope with HTTP 200 wherever the stand has no FileUpload scope configured for it",
       "question": "Does POST /api/files/return-attachments accept a buyer's return evidence upload?",
       "anchors": [
         "POST /api/files/return-attachments",
@@ -17466,8 +17496,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-E9939511",
@@ -17537,8 +17568,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-EA467E9B",
@@ -17855,7 +17887,7 @@
     {
       "id": "KB-ED01C2A4",
       "path": "entries/KB-ED01C2A4.md",
-      "subject": "A storefront token without organization_id takes the role of the contact's first stored organization; organization_id (either casing) picks the membership",
+      "subject": "A storefront token without organization_id takes the contact's current (last-used) organization; organization_id picks the membership, organizationId is ignored",
       "question": "How do I get an organization-scoped storefront token from /connect/token so me.permissions reflects that organization's role?",
       "questions": [
         "Why does my company account say I lack permission to edit the organization right after signing in?",
@@ -17880,8 +17912,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1,
-      "resolved": 1
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-ED1C55C0",
@@ -18123,7 +18155,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 2
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-EF3CB7FB",
@@ -18523,8 +18556,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 2
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-F31BD5B8",
@@ -19090,8 +19124,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-FA0604AD",

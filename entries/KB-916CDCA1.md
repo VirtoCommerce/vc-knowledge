@@ -58,6 +58,11 @@ evidence:
     contradicts: true
     note: Through the storefront barcode expansion, the quoted term gtin:"2945100000*" (and the same term on code, manufacturerPartNumber and a short-text property) matched 1 product, so * inside the quotes is honoured as a wildcard and the quoted term is not a pure whole-value match
     splitFrom: KB-A0B3940F
+    resolved: split
+    resolvedAt: 2026-10-13T06:25:50.776Z
+    resolvedBy: session:34990ccd
+    resolvedIn: judge/list-sharing-20261012
+    resolution: The dispute contradicts the parent KB-A0B3940F's pure whole-value wording, which its split corrected; this child states that * and ? inside quotes are honoured, re-observed through xAPI on vcst (2026-10-13).
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.Catalog=3.1048.0; module:VirtoCommerce.XCatalog=3.1023.0; module:VirtoCommerce.Inventory=3.1010.0; module:VirtoCommerce.Seo=3.1005.0; module:VirtoCommerce.ElasticSearch8=3.1011.0; store=B2B-store; setting:Catalog.Search.BarcodeSearchFields=[]
@@ -82,5 +87,14 @@ evidence:
     who: Dan-BV
     note: "2026-10-08, fresh products: code:\"<exact>\" 1; strict prefix without wildcard 0 (code and gtin); code:\"<prefix>*\" honoured; ? inside quotes honoured; lower- and upper-cased values match; an escaped double quote matches. Default scope is products only: a variation code/gtin returns 0 without is:variation and 1 with it; an mpn held only by a variation is found with is:product,variation."
     investigation: true
+  - method: observation
+    deployment: vcst
+    conditions: platform=3.1078.0; module:VirtoCommerce.XCatalog=3.1023.0; store=B2B-store; role=sales-rep
+    at: 2026-10-13T06:25:49.037Z
+    by: session:34990ccd
+    who: Dan-BV
+    note: "2026-10-13 xAPI products(storeId B2B-store, filter), 2 runs each: code:\"<exact>\" 1; lower-cased exact 1; strict prefix without wildcard 0; code:\"<prefix>*\" 1; code:\"<value minus last char>?\" 1. The storefront barcode expansion path was not re-run (needs a Catalog.Search.BarcodeSearchFields write)."
+    investigation: true
+    bodyHash: 5c16da6988c3
 ---
 In xAPI products(storeId, filter), a quoted term such as code:"ABC-1" or gtin:"<13 digits>" matches the whole value: a strict prefix of an existing product code, without a wildcard, returns 0. A quoted term is not a pure exact match, though: * and ? inside the quotes are honoured as wildcards - gtin:"2945100000*" returned 1 hit, gtin:"*" returned 318 and code:"QA-BC-2945-00?" returned 8 on an Elasticsearch 8 provider, and the same held through the storefront barcode expansion on code, gtin, manufacturerPartNumber and a short-text property. Values are matched case-insensitively on this deployment's search provider. A double quote inside a quoted value can be escaped with a backslash and still matches.

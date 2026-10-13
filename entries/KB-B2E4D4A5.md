@@ -1,6 +1,6 @@
 ---
 id: KB-B2E4D4A5
-subject: Page Builder shell Publish, Unpublish and Archive complete without any success toast, while Save, Save content and Load content do show one
+subject: Page Builder shell Publish, Unpublish and Archive complete without any success toast on the released module (through 3.1034.0), while Save, Clone, Load content and saving an imported page do show one
 plane: experiential
 question: Does the Page Builder shell show a success notification after Publish, Unpublish or Archive of a page?
 status: active
@@ -32,5 +32,20 @@ evidence:
     who: Lenajava1
     contradicts: true
     note: "On PageBuilderModule 3.1034.0-pr-172-5aad (PR #172, admin, Edge), the shell page-details blade shows exactly one success toast for each action: Publish 'Page published successfully' (6/6), Unpublish 'Page unpublished successfully' (3/3), Archive 'Page archived successfully' (10/10, still visible after the blade closes). The toast is a listitem in the top-level notification list with role=status and a 'Dismiss notification' button, and it disappears about 3 s after the click. Two parts of the entry also did not hold on this build. Clone does show 'Page cloned successfully' once: a polling wait caught it right after the blade swapped to the copy, while sampled snapshots taken at about +1 s and +5 s missed it. Saving an imported (Load content) page shows 'Page saved successfully' once. The entry's 'no toast' for publish/unpublish/archive was true for the pre-fix builds 3.1033.0-pr-170 and 3.1034.0-pr-167."
+    resolved: claim-amended
+    resolvedAt: 2026-10-12T19:06:16.341Z
+    resolvedBy: session:34990ccd
+    resolvedIn: judge/list-sharing-20261012
+    resolution: Publish/Unpublish/Archive toasts exist only on the unmerged PR #172 build (released 3.1033.0 shows none, 0/10, tags 3.1033.0/3.1034.0 have no call), and the entry's 'Clone and imported-page toasts not visible' is wrong on the release too (seen 3/3).
+    amendedFrom: 3f83185ea926
+  - method: observation
+    deployment: vcst
+    conditions: platform=3.1078.0; module:VirtoCommerce.PageBuilderModule=3.1033.0; vc-shell=2.6.0; store=B2B-store; role=admin
+    at: 2026-10-12T19:06:14.661Z
+    by: session:34990ccd
+    who: Dan-BV
+    note: "2026-10-12, MutationObserver on the notification list, 8 s per action, own AGENT-TEST pages (all archived): Publish 0/3 toasts, Unpublish 0/3, Archive 0/4 (requests 200/204); Save 'Page saved successfully' (2/2), Clone 'Page cloned successfully' at ~650-820 ms, visible after the swap (2/2), Load content 'Content loaded successfully' (1/1), Save of an imported page 'Page saved successfully' (1/1). Source: PageDetails.vue notification.success only for save/download/clone at tags 3.1033.0 and 3.1034.0."
+    investigation: true
+    bodyHash: cb8083f4a0be
 ---
-On PageBuilderModule 3.1033.0-pr-170-236e (vc-shell framework 2.6.0), as administrator in the page-builder-shell page details blade: Publish (POST /api/page-builder-pages/grouped/publishing/{groupId}?publish=true -> 200), Unpublish (?publish=false -> 200) and Archive (Confirmation -> Confirm) all succeed (status changes in UI and REST) but no notification is rendered (wait 5s, screenshots right after click). Save shows 'Page saved successfully', Save content shows 'Content saved to file successfully', Load content shows 'Content loaded successfully'. Source: the publish/unpublish/delete toolbar handlers in PageDetails.vue have no notification.success call; they were dropped in the @vc-shell 2.0.3 upgrade commit (VCST-5105), although the PUBLISH_SUCCESS/UNPUBLISH_SUCCESS locale keys still exist. Clone and saving an imported page call notification.success but the toast is also not visible after the blade swaps to the new page.
+On released PageBuilderModule builds (observed live on 3.1033.0 with vc-shell 2.6.0 on vcst, 2026-10-12, administrator, page details blade opened from the store's Page Builder widget): Publish (POST /api/page-builder-pages/grouped/publishing/{groupId}?publish=true -> 200, 3 runs), Unpublish (?publish=false -> 200, 3 runs) and Archive (Confirmation 'Are you sure you want to archive this page?' -> Confirm -> POST /grouped/archive?ids= -> 204, 4 runs) all succeed, but no notification is rendered within 8 s; the only signals are the status chip and the Publish/Unpublish button swapping (Archive closes the blade). Save shows 'Page saved successfully', Clone shows 'Page cloned successfully' once and it stays visible after the blade swaps to the copy (2/2), Load content shows 'Content loaded successfully', and saving an imported page shows 'Page saved successfully' (Save stays disabled after an import until a field changes). The toast is a role=status item in the top-level notification list with a 'Dismiss notification' button. Source: PageDetails.vue at tags 3.1033.0 and 3.1034.0 calls notification.success only for SAVE_SUCCESS, DOWNLOAD_SUCCESS and CLONE_SUCCESS; the publish/unpublish/archive handlers have none (dropped in the @vc-shell 2.0.3 upgrade, VCST-5105). The unmerged PR VirtoCommerce/vc-module-pagebuilder#172 (VCST-4973, build 3.1034.0-pr-172-5aad) restores 'Page published successfully', 'Page unpublished successfully' and 'Page archived successfully'.

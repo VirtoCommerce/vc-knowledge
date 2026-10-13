@@ -1,6 +1,6 @@
 ---
 id: KB-ED01C2A4
-subject: A storefront token without organization_id takes the role of the contact's first stored organization; organization_id (either casing) picks the membership
+subject: A storefront token without organization_id takes the contact's current (last-used) organization; organization_id picks the membership, organizationId is ignored
 plane: experiential
 question: How do I get an organization-scoped storefront token from /connect/token so me.permissions reflects that organization's role?
 questions:
@@ -63,7 +63,22 @@ evidence:
     who: Lenajava1
     contradicts: true
     note: "vcst_qa 2026-10-08: a token WITHOUT organization_id is scoped to an organization the platform picks and carries THAT membership's permissions, not a fixed two-permission view set. A member whose only role grants xapi:my_organization:return:view got exactly [return:view] (1 permission); an org-employee member got the 2 view permissions only because that is what org-employee holds. For a contact in two organizations the picked organization changed between two seeds (once the first, once the second), so omitting organization_id is non-deterministic, not view-only."
+    resolved: claim-amended
+    resolvedAt: 2026-10-12T18:22:00.180Z
+    resolvedBy: session:34990ccd
+    resolvedIn: judge/list-sharing-20261012
+    resolution: "The dispute was right that it is not the first stored organization: an unscoped token takes CurrentOrganizationId, the last organization_id the contact signed in with, which explains its two differing runs; camelCase organizationId is ignored (vcst, 2026-10-12, source cited)."
+    amendedFrom: 7db46761cff1
+  - method: observation
+    deployment: vcst
+    conditions: platform=3.1078.0; module:VirtoCommerce.Customer=3.1029.0; module:VirtoCommerce.ProfileExperienceApiModule=3.1021.0; module:VirtoCommerce.Xapi=3.1027.0; store=B2B-store
+    at: 2026-10-12T18:21:58.159Z
+    by: session:34990ccd
+    who: Dan-BV
+    note: "2026-10-12, 12-organization contact: unscoped password-grant mints -> the contact's currentOrganizationId (stored index 5, not the first) 3/3; organization_id=X -> X (12/12) and X becomes currentOrganizationId, after which unscoped mints return X 3/3; camelCase organizationId ignored; a non-member organization_id -> first accessible org, persisted. Source: vc-module-customer 3.1029.0 Constants.cs L5, OrganizationIdClaimProvider L112-139, OrganizationAccessResolver L27-39, CurrentOrganizationIdTokenRequestHandler L22-43. Contact restored to its original current org."
+    investigation: true
+    bodyHash: 3170d75bb5b5
 ---
-Passing organization_id (or organizationId - either casing works) together with storeId on the storefront password grant scopes the token to that organization, and me.permissions returns that membership's role: one user who was maintainer of A and employee of B got 11 permissions for A and 2 (storefront:organization:view, storefront:user:view) for B on vcst_qa, 8 and 2 on vcptcore_stable.
+Passing organization_id together with storeId on the storefront password grant scopes the token to that organization, and me.permissions returns that membership's role: one user who was maintainer of A and employee of B got 11 permissions for A and 2 (storefront:organization:view, storefront:user:view) for B on vcst_qa, 8 and 2 on vcptcore_stable (2026-10-08). Only the snake_case parameter is read (vc-module-customer OpenIddict Constants.Parameters.OrganizationId = "organization_id"): on vcst on 2026-10-12 a camelCase organizationId was ignored and the token kept the current organization. An organization_id the contact is not a member of is silently replaced on the password grant by the first accessible organization (OrganizationIdRequestValidator).
 
-Omitting organization_id does NOT reduce a token to the two view permissions. The token takes the role of the organization that comes first in the contact's organizations array AS STORED (which is not always the order it was written in), and me.contact.organizationId names that organization: a single-organization maintainer gets the full maintainer set, a single-organization employee gets the two view permissions, and a two-organization user gets whichever role the first stored organization gives. Whether the role is held per membership or globally on the account made no difference. Observed live 2026-10-08 on vcst_qa (11 permissions for a maintainer) and vcptcore_stable (8). So a token that "lacks xapi:my_organization:edit" points at the contact's first organization, not at a missing parameter by itself.
+Every token request that carries organization_id is persisted as the member's CurrentOrganizationId (CurrentOrganizationIdTokenRequestHandler; the storefront resends the last-used organization at sign-in). Omitting organization_id does NOT reduce a token to the two view permissions and is not random: the token takes CurrentOrganizationId if the contact can still access it, else DefaultOrganizationId, else the first accessible organization in the contact's organizations as stored (OrganizationAccessResolver), and me.contact.organizationId names it. Observed on vcst 2026-10-12 with a 12-organization contact: three unscoped mints returned the current organization (stored index 5, not the first) 3/3; after a mint with organization_id=X, unscoped mints returned X. So the organization an unscoped token gets changes with the contact's last scoped sign-in, which is why two runs on one contact can disagree.
