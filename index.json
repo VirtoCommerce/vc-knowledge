@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T13:41:17.360Z",
-  "count": 801,
+  "generated": "2026-10-13T13:58:43.226Z",
+  "count": 804,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7279,6 +7279,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-5CDD664E",
+      "path": "entries/KB-5CDD664E.md",
+      "subject": "A plain-HTML product-list whose cards carry only data-product-name/price (no id/sku) re-pushes view_item_list on every unrelated DOM change",
+      "question": "Does a markup product list built from data-product-* attributes without an id or sku send view_item_list once, or again on later DOM mutations?",
+      "anchors": [
+        "/agent-test-ga4-html-product-lists"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5CEB51A1",
       "path": "entries/KB-5CEB51A1.md",
       "subject": "Share dialog: Undo after Clear all restores recipients but Share stays disabled when nothing changed",
@@ -10280,6 +10297,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-85F9B1ED",
+      "path": "entries/KB-85F9B1ED.md",
+      "subject": "Markup-tracked Page Builder product blocks push one view_item_list per block when rendered in the DOM, including blocks far below the fold, with no scroll",
+      "question": "Do Page Builder products, products-carousel and favorite-products blocks send view_item_list on render or only when scrolled into view, and with which list ids?",
+      "anchors": [
+        "/agent-test-ga4-product-lists",
+        "window.dataLayer"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8646A9CB",
       "path": "entries/KB-8646A9CB.md",
       "subject": "five failed storefront sign-ins give a 15-minute temporary lockout code",
@@ -10598,7 +10633,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16429,7 +16464,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19658,6 +19693,25 @@
       ],
       "scope": [
         "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FF2B4381",
+      "path": "entries/KB-FF2B4381.md",
+      "subject": "The gtag config entry carries currency and language always, user_id = platform user GUID when signed in, and a user_id key holding undefined for guests",
+      "question": "What does the storefront's gtag config entry in window.dataLayer carry for a guest versus a signed-in user?",
+      "anchors": [
+        "window.dataLayer",
+        "/snacks",
+        "/g/collect"
+      ],
+      "scope": [
+        "element=google-analytics",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
