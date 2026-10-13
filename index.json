@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T20:41:39.026Z",
-  "count": 868,
+  "generated": "2026-10-13T20:54:05.675Z",
+  "count": 872,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2157,6 +2157,24 @@
       "trust": 4,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-1906CFF2",
+      "path": "entries/KB-1906CFF2.md",
+      "subject": "canLeaveFeedback is per user, not per organization: a colleague in the purchaser's organization sees no review form on the product",
+      "question": "Does a contact in the same organization as a buyer with a Completed order for a product get the review form on that product's PDP?",
+      "anchors": [
+        "Query.canLeaveFeedback",
+        "Query.customerReviews"
+      ],
+      "scope": [
+        "feature=customer-reviews",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-191B1B4C",
@@ -12108,6 +12126,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-92D471EB",
+      "path": "entries/KB-92D471EB.md",
+      "subject": "On the PDP review form, the first mouse click on a star after the star picker received keyboard focus (Tab) does not set the rating; Submit stays disabled until a second click",
+      "question": "Does clicking a star in the review form's interactive rating picker always set the rating?",
+      "anchors": [
+        "Mutation.createCustomerReview",
+        "Query.canLeaveFeedback"
+      ],
+      "scope": [
+        "component=vc-rating",
+        "feature=customer-reviews",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-93561B6C",
       "path": "entries/KB-93561B6C.md",
       "subject": "Setting a Sales Rep statistics family's CacheExpirationMinutes to 0 does not bypass or flush entries already cached: a stale key keeps being served; only keys first computed under TTL 0 recompute on every read",
@@ -12648,6 +12685,24 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-981EDA17",
+      "path": "entries/KB-981EDA17.md",
+      "subject": "Catalog personalization: a product tagged with one user group is absent from anonymous search and category listing and its direct URL renders 404, while an org member whose contact has no groups but whose organization carries the group finds it",
+      "question": "What does the storefront show for a product tagged with a user group, to an anonymous visitor and to a member who gets the group only through their organization?",
+      "anchors": [
+        "Query.products",
+        "POST /api/personalization/search"
+      ],
+      "scope": [
+        "feature=catalog-personalization",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -15080,6 +15135,25 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B5653C0E",
+      "path": "entries/KB-B5653C0E.md",
+      "subject": "Review image upload on the PDP review form is refused with INVALID_SCOPE when the stand has no review-images FileUpload scope; the form shows \"Unknown scope ''.\" per file and a review can still be submitted after removing the files",
+      "question": "Can a buyer attach images to a product review on the storefront PDP, and what happens when the review-images upload scope is not configured?",
+      "anchors": [
+        "POST /api/files/review-images",
+        "Mutation.createCustomerReview"
+      ],
+      "scope": [
+        "feature=customer-reviews",
+        "module=fileexperienceapi",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
