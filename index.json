@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T08:03:32.757Z",
+  "generated": "2026-10-13T08:04:31.687Z",
   "count": 777,
   "entries": [
     {
@@ -11534,9 +11534,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 1,
-      "resolved": 3
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-97A675C1",
