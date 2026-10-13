@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T19:29:21.162Z",
-  "count": 859,
+  "generated": "2026-10-13T19:38:11.436Z",
+  "count": 861,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3575,7 +3575,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -5392,6 +5392,24 @@
       "scope": [
         "page=list-details",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-45276837",
+      "path": "entries/KB-45276837.md",
+      "subject": "Admin store blade: the help icon next to \"Store asset URL\" is a question-mark (fa-question-circle) that expands an inline field description with a \"Hide description\" link, not a popover",
+      "question": "What does the icon next to the Store asset URL label in the Admin store blade look like and what does clicking it show?",
+      "anchors": [
+        "GET /api/stores/{id}",
+        "/workspace/store"
+      ],
+      "scope": [
+        "module=store",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8273,7 +8291,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -17368,6 +17386,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-D510A1DB",
+      "path": "entries/KB-D510A1DB.md",
+      "subject": "Aggregation properties for store facets are read only at GET /api/catalog/aggregationproperties/{storeId}/properties; the bare GET /api/catalog/aggregationproperties is 404",
+      "question": "Which REST endpoint lists a store's facet (aggregation) properties with isSelected?",
+      "anchors": [
+        "GET /api/catalog/aggregationproperties/{storeId}/properties",
+        "PUT /api/catalog/aggregationproperties/{storeId}/properties"
+      ],
+      "scope": [
+        "module=catalog",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D54F3AAB",
       "path": "entries/KB-D54F3AAB.md",
       "subject": "On virtostart the seeded configurable-product fixtures CFG_LAPTOP and CFG_RING do not exist — both /products-with-options/cfg-parents/* URLs return the storefront 404 page.",
@@ -18499,7 +18535,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
