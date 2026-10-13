@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T15:51:53.282Z",
-  "count": 821,
+  "generated": "2026-10-13T15:56:27.303Z",
+  "count": 824,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3325,7 +3325,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -3399,7 +3399,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -3907,6 +3907,23 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3291C1C1",
+      "path": "entries/KB-3291C1C1.md",
+      "subject": "Storefront catalog sidebar renders range facets before term facets, ignoring the facet order value",
+      "question": "In what order does the storefront catalog filter sidebar show facets relative to the configured facet order?",
+      "anchors": [
+        "/catalog",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7986,6 +8003,27 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 4
+    },
+    {
+      "id": "KB-647C63A5",
+      "path": "entries/KB-647C63A5.md",
+      "subject": "Store facet configuration (Catalog.BrowseFilters.FilteredBrowsing) takes effect on Query.products facets immediately, no reindex",
+      "question": "Does changing a store's facets (attribute order, add/remove attribute, price range bounds) need a reindex before storefront filters change?",
+      "anchors": [
+        "Query.products",
+        "GET /api/catalog/aggregationproperties/{storeId}/properties",
+        "Catalog.BrowseFilters.FilteredBrowsing",
+        "/catalog"
+      ],
+      "scope": [
+        "surface=admin-spa",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-649D673C",
@@ -17880,6 +17918,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E5F5442C",
+      "path": "entries/KB-E5F5442C.md",
+      "subject": "Saving the Admin Facets blade rewrites attribute \"Values\": null as [] in Catalog.BrowseFilters.FilteredBrowsing",
+      "question": "Does saving the Admin Store Facets blade without changes keep the FilteredBrowsing setting byte-identical?",
+      "anchors": [
+        "Catalog.BrowseFilters.FilteredBrowsing",
+        "PUT /api/stores"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
