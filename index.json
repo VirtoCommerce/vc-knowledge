@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T12:38:06.631Z",
-  "count": 792,
+  "generated": "2026-10-13T12:40:31.861Z",
+  "count": 793,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11399,6 +11399,24 @@
         "auth=storefront-buyer",
         "cart=single-line-manual-payment",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-94E4A55E",
+      "path": "entries/KB-94E4A55E.md",
+      "subject": "Product Points earn does not happen while the store loyalty setting is disabled",
+      "question": "Does placing a storefront order earn ProductPoints loyalty points when GET /api/loyalty-setting/store/{storeId} reports loyaltyEnabled=false?",
+      "anchors": [
+        "/api/loyalty-setting/store",
+        "/api/loyalty-program-operation-log/balance",
+        "Mutation.createOrderFromCart"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
