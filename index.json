@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T19:59:10.629Z",
-  "count": 865,
+  "generated": "2026-10-13T20:11:42.599Z",
+  "count": 866,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -12455,6 +12455,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-97103279",
+      "path": "entries/KB-97103279.md",
+      "subject": "Catalog category search is POST /api/catalog/search/categories {searchPhrase}; GET /api/catalog/categories/search is 404 and POST on it is 405",
+      "question": "Which REST route searches catalog categories, and what do /api/catalog/categories/search calls return?",
+      "anchors": [
+        "POST /api/catalog/search/categories",
+        "GET /api/catalog/categories/search",
+        "POST /api/catalog/listentries"
+      ],
+      "scope": [
+        "module=catalog",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-97170665",
       "path": "entries/KB-97170665.md",
       "subject": "A membership lock is carried in xAPI only by Contact.isLockedInOrganization (status and statusInOrganization stay Approved) and shows on the members list as a red Blocked badge",
@@ -15102,7 +15121,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -20706,7 +20725,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
