@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T06:25:52.881Z",
+  "generated": "2026-10-13T07:44:41.057Z",
   "count": 776,
   "entries": [
     {
@@ -16512,9 +16512,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 2,
-      "resolved": 2
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 4
     },
     {
       "id": "KB-DA88761E",

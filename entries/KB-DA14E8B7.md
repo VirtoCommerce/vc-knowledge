@@ -54,6 +54,12 @@ evidence:
     note: "The state mapping in this entry held exactly (I confirmed it minutes earlier). The final clause does not: 'a deployment with no reachable mailbox cannot move a member out of this state from the storefront side'. It can, and easily. Block user followed by Unblock user on the roster row moves the pending invitee out of the invited state with no mailbox involved: contact.status goes Invited -> Locked -> Approved, and Unblock resets the account lockoutEnd from 9999-12-31 to 0001-01-01. The account still has passwordHash null and emailConfirmed false, so completing the registration is NOT the only thing that clears the lockout, and the roster afterwards reports the person as Active."
     splitFrom: KB-4D082C89
     mergedFrom: KB-51459ABB
+    resolved: claim-amended
+    resolvedAt: 2026-10-13T07:44:39.266Z
+    resolvedBy: session:34990ccd
+    resolvedIn: judge/list-sharing-20261012
+    resolution: "The dispute holds on G1, re-observed live on a local eb8f35e0 stack (2026-10-13): Block then Unblock moves an invitee Invited -> Locked -> Approved and resets lockoutEnd to 0001-01-01; the body no longer says G1 was not re-observed."
+    amendedFrom: 5db215185aad
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
@@ -63,6 +69,11 @@ evidence:
     note: "Second contradicting observation, 2026-09-15 on platform 3.1007.27. The member this entry was written from now presents in the shape the FIRST dispute predicted, not the shape the body describes: roster name 'Invited User' (a real name, not 'Invite sent'), roster status Active (not Invited), Admin Locked state Unlocked (not Locked), Admin Status PendingApproval (not empty). That is consistent with the Block-then-Unblock cycle the first dispute recorded, so it does NOT show the body wrong about a FRESH invitation - I have not observed one on this version and am not claiming to. What it does contradict outright is 'the account already carries the role chosen in the invite dialog': this account holds ZERO roles and the roster Role cell is blank. Either the Block/Unblock cycle strips the role, or the claim was never right; not established, and worth one experiment on a fresh invite. Practical warning of the entry is untouched and still right: do not read the roster as sign-in state."
     splitFrom: KB-4D082C89
     mergedFrom: KB-51459ABB
+    resolved: dispute-wrong
+    resolvedAt: 2026-10-13T07:44:41.042Z
+    resolvedBy: session:34990ccd
+    resolvedIn: judge/list-sharing-20261012
+    resolution: "The cycle does not strip the role: on a local G1 stack the invite role is an account role present before, during and after Block/Unblock for every invitee, and the PEA 3.1000.2 lock/unlock handlers touch no roles; the zero-role account had another cause."
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
@@ -107,10 +118,19 @@ evidence:
     who: Dan-BV
     note: "Fresh invitee, 2026-10-08: the roster menu of an Invited row offers Resend invite / Revoke invite and no Block user; locked via the same LockOrganizationContact the roster sends, then unblocked from the roster: contact status stayed Invited, membership isLocked toggled, account lockoutEnd unchanged, membership role kept; the row returned to Invited."
     investigation: true
+  - method: observation
+    deployment: local_g1_eb8f35e0
+    conditions: platform=3.1007.27; module:VirtoCommerce.ProfileExperienceApiModule=3.1000.2; module:VirtoCommerce.Customer=3.1000.7; module:VirtoCommerce.Xapi=3.1003.2; state:local-stack-from-vc-deploy-dev@eb8f35e0=true; role=organization-maintainer
+    at: 2026-10-13T07:44:37.420Z
+    by: session:34990ccd
+    who: Dan-BV
+    note: "2026-10-13, 4 fresh invitees via xAPI inviteUser with a role (the email send failed for lack of a template, state already saved): contact Invited, lockoutEnd 9999-12-31, emailConfirmed false, account role present; after lockOrganizationContact: Locked, lockoutEnd unchanged, role present; after unlockOrganizationContact: Approved, lockoutEnd 0001-01-01, emailConfirmed false, role present (REST user, member securityAccounts, xAPI). deleteContact: account survives with role; re-invite same email: DuplicateUserName + DuplicateEmail. Source PEA 3.1000.2 Lock/Unlock handlers L25/L32, InviteUserCommandHandler L139/L170, AccountsService L73/L86-88."
+    investigation: true
+    bodyHash: 5896bf88dabc
 ---
 What Block user / Unblock user do to a pending invitee depends on the build. Which build a stand runs decides this. G1 = ProfileExperienceApi (PEA) <= 3.1007, Customer 3.1000.x, theme <= 2.51.0 (vcptcore_stable until 2026-10-07). G2 = PEA 3.1008-3.1014, Customer 3.1010-3.1020, theme 2.51.2-2.54. G3 = PEA >= 3.1015, Customer >= 3.1021, theme >= 2.55.
 
-On G1 (lockOrganizationContact / unlockOrganizationContact up to PEA 3.1007) the pair writes the CONTACT's status field, where an outstanding invitation also lives, so it is a one-way door that silently ends the invitation. Block overwrites contact.status Invited -> Locked and locks the security account; the row stops showing the 'Invite sent' placeholder. Unblock writes contact.status = Approved and unlocks the account, resetting lockoutEnd from the invitation's 9999-12-31 sentinel to 0001-01-01. emailConfirmed stays false - nobody registered - yet the roster then reports the person as Active, and Admin shows Locked state Unlocked. Nothing on either surface puts the row back to Invited: Delete only detaches the contact, the account survives holding the address, and re-inviting that address is refused as a duplicate. This G1 behaviour is consistent with the G1 source and the September observations; no stand runs G1 any more, so it was not re-observed live.
+On G1 (lockOrganizationContact / unlockOrganizationContact up to PEA 3.1007) the pair writes the CONTACT's status field, where an outstanding invitation also lives, so it is a one-way door that silently ends the invitation. Block overwrites contact.status Invited -> Locked and locks the security account; the row stops showing the 'Invite sent' placeholder. Unblock writes contact.status = Approved and unlocks the account, resetting lockoutEnd from the invitation's 9999-12-31 sentinel to 0001-01-01. emailConfirmed stays false - nobody registered - yet the roster then reports the person as Active, and Admin shows Locked state Unlocked. Nothing on either surface puts the row back to Invited: Delete only detaches the contact, the account survives holding the address, and re-inviting that address is refused as a duplicate. Re-observed live on 2026-10-13 on a local G1 stack built from the vc-deploy-dev@eb8f35e0 manifest (Platform 3.1007.27, PEA 3.1000.2, Customer 3.1000.7), four fresh invitees: after inviteUser the contact is Invited, the account lockoutEnd 9999-12-31 and emailConfirmed false; lockOrganizationContact turns the contact Locked (lockoutEnd unchanged); unlockOrganizationContact turns it Approved and resets lockoutEnd to 0001-01-01; emailConfirmed stays false and nothing returns it to Invited. The invite-dialog role is an ACCOUNT role (InviteUserCommandHandler AddToRolesAsync) and survives the whole cycle on every read path - the lock/unlock handlers touch no roles. deleteContact removes only the contact; the account survives with its email and role, and re-inviting that email is refused with DuplicateUserName and DuplicateEmail.
 
 From PEA 3.1008 (#135, VCST-5028) both mutations lock and unlock only the ORGANIZATION MEMBERSHIP. Observed live 2026-10-08 on G2 and G3: after Block and after Unblock the contact status stays Invited, the account and its lockoutEnd are untouched, the membership keeps its role, and the invitation survives. On G3 the roster's menu for an Invited row offers Resend invite / Revoke invite and no Block user at all.
 
