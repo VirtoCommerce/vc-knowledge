@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-12T22:49:48.297Z",
-  "count": 776,
+  "generated": "2026-10-13T07:29:32.518Z",
+  "count": 777,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10245,6 +10245,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8891459E",
+      "path": "entries/KB-8891459E.md",
+      "subject": "On /compare in Chrome, a scroll that stops where the sticky header row sits at the compact threshold hangs the tab: the row's stuck class toggles without end and renderer memory climbs into gigabytes",
+      "question": "Can scrolling the /compare page freeze or crash the browser tab, and under what geometry?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "browser=chrome",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
