@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T05:54:10.161Z",
+  "generated": "2026-10-13T06:15:03.608Z",
   "count": 776,
   "entries": [
     {
@@ -5136,7 +5136,7 @@
     {
       "id": "KB-4971F946",
       "path": "entries/KB-4971F946.md",
-      "subject": "On category-to-category navigation the search-bar scope loader resizes to the new chip label width before the loader-to-chip swap, so the search input shifts sideways while the loader is shown",
+      "subject": "On category-to-category navigation the search-bar scope chip is replaced by a loader that keeps the old label and width; the search input shifts once, at the loader-to-chip hand-over",
       "question": "Does the header search input move horizontally when the category scope loader is replaced by the new category chip?",
       "anchors": [
         "/printers",
@@ -5152,7 +5152,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-4982C91F",
@@ -10470,7 +10471,7 @@
     {
       "id": "KB-8BE777BB",
       "path": "entries/KB-8BE777BB.md",
-      "subject": "Switching organization from the storefront account menu BLANKS the header account control instead of relabelling it; the new org name only appears after a full page reload.",
+      "subject": "Switching organization relabels the storefront header account control at once; the control renders empty only on pages where an injected ProductGuide widget hides it",
       "question": "After a multi-org buyer switches organization from the account menu, does the header show the new organization name?",
       "questions": [
         "After I switch to another company in the account menu, why does the top bar no longer say which company I'm buying for?",
@@ -10496,7 +10497,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8C054BAE",
@@ -10631,7 +10633,7 @@
     {
       "id": "KB-8DDFC7BA",
       "path": "entries/KB-8DDFC7BA.md",
-      "subject": "A zero-hit keyword search on /search?q= shifts layout heavily on load (CLS ~0.47 at 1920px, ~0.81 at 375px): sidebar, controls and skeleton cards collapse in one frame into the empty view",
+      "subject": "A zero-hit keyword search on /search?q= shifts layout heavily on load (CLS ~0.47-0.65 at 1920px, ~0.81 at 375px): sidebar, controls and skeleton cards collapse in one frame into the empty view",
       "question": "Does the storefront /search?q= zero-hit (no results) empty state cause a layout shift on load, and how large?",
       "anchors": [
         "/search?q=",
@@ -10644,7 +10646,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8E1456B8",
@@ -14115,7 +14118,7 @@
     {
       "id": "KB-B8602F6B",
       "path": "entries/KB-B8602F6B.md",
-      "subject": "On a cold (full) load of a product detail page the storefront header Account menu button renders empty for a multi-org member — no organization name and no user name — while home and catalog cold loads show \"Org / Name\".",
+      "subject": "On product pages where an injected ProductGuide widget mounts, the storefront header Account menu button renders empty for a multi-org member; other cold loads show Org / Name",
       "question": "Why is the header account button blank (no org / user name) on a product page after a reload?",
       "anchors": [
         "/books/notebook-red-panda-a5-45-sheets",
@@ -14129,7 +14132,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-B96F15A8",
