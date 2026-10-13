@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T14:38:25.764Z",
-  "count": 809,
+  "generated": "2026-10-13T14:53:04.510Z",
+  "count": 810,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2288,6 +2288,26 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=390,1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1E269E42",
+      "path": "entries/KB-1E269E42.md",
+      "subject": "With Subscription 3.1006.0-pr-128 the CreateSubscriptionsFromOrdersJob no longer fails deserialization, but fails with a NullReferenceException in SendNotificationsSubscriptionChangedEventHandler after the subscription is saved, so each Hangfire retry creates a duplicate subscription and the order is never linked",
+      "question": "After the OrderIds payload fix (Subscription PR #128), does placing an order for a product with a payment plan create exactly one subscription linked to the order?",
+      "anchors": [
+        "/hangfire/jobs/failed",
+        "POST /api/subscriptions/search",
+        "Mutation.createOrderFromCart"
+      ],
+      "scope": [
+        "module=subscription",
+        "surface=background-jobs",
+        "version=3.1006.0-pr-128"
       ],
       "plane": "experiential",
       "status": "active",
