@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T18:57:28.385Z",
-  "count": 856,
+  "generated": "2026-10-13T19:09:16.845Z",
+  "count": 858,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4750,7 +4750,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -9200,6 +9200,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-6EA87C1F",
+      "path": "entries/KB-6EA87C1F.md",
+      "subject": "Admin dynamic-properties blade does not enforce Required for Dictionary-type properties, and the REST API enforces Required for no type",
+      "question": "Does a Required dictionary dynamic property block OK/Save in the Admin member blade, and does PUT /api/members enforce Required?",
+      "anchors": [
+        "PUT /api/members",
+        "/workspace/customers",
+        "POST /api/platform/dynamic/properties"
+      ],
+      "scope": [
+        "entity=member-dynamic-properties",
+        "surface=admin-spa",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6F0094B3",
       "path": "entries/KB-6F0094B3.md",
       "subject": "Barcode lookups on /search?barcode= send view_search_results with the code as search_term; a single hit that opens the product sends none",
@@ -13323,7 +13343,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19118,6 +19138,24 @@
       "scope": [
         "grant=password",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EC3BEB66",
+      "path": "entries/KB-EC3BEB66.md",
+      "subject": "xAPI categories returns 0 items when the filter carries product-only terms (price.USD:(0 TO), inStock_variations:true); the storefront sends categories a separate subtree-only filter",
+      "question": "Why does Query.categories return nothing when the filter includes price or inStock_variations terms?",
+      "anchors": [
+        "Query.categories",
+        "Query.products"
+      ],
+      "scope": [
+        "module=virtocommerce.xcatalog",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
