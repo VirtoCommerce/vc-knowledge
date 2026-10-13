@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T13:23:32.238Z",
-  "count": 798,
+  "generated": "2026-10-13T13:41:17.360Z",
+  "count": 801,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1721,7 +1721,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 7,
       "disputed": 0
     },
     {
@@ -3085,6 +3085,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-2B1AEAC1",
+      "path": "entries/KB-2B1AEAC1.md",
+      "subject": "Recently browsed products are populated by the pushHistoricalEvent \"click\" mutation, so they can be seeded without a browser",
+      "question": "How is the cart page's Recently browsed products list populated, and can it be set up headlessly?",
+      "anchors": [
+        "Mutation.pushHistoricalEvent",
+        "Query.recentlyBrowsed",
+        "Mutation.moveToSavedForLater"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-2B93579A",
       "path": "entries/KB-2B93579A.md",
       "subject": "Unauthenticated platform REST calls get 401 with an empty body and no WWW-Authenticate header",
@@ -3827,6 +3845,24 @@
       "scope": [
         "module=return",
         "surface=notifications"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3408B6F6",
+      "path": "entries/KB-3408B6F6.md",
+      "subject": "The storefront PDP \"Related products\" widget is fed by catalog product associations of ANY group, not by XRecommend",
+      "question": "Which data does the storefront product page's Related products widget show, and how do you make it render for a product?",
+      "anchors": [
+        "Query.product.associations",
+        "POST /api/catalog/products/associations"
+      ],
+      "scope": [
+        "surface=graphql",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8773,7 +8809,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 7,
       "disputed": 0
     },
     {
@@ -16042,6 +16078,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D0013883",
+      "path": "entries/KB-D0013883.md",
+      "subject": "Page Builder text blocks keep raw HTML with data-* attributes through the content API and the storefront pageDocument",
+      "question": "Can a Page Builder page carry raw HTML with custom data-* attributes that reach the storefront intact?",
+      "anchors": [
+        "POST /api/page-builder-pages/grouped/{groupId}/content",
+        "Query.pageDocument"
+      ],
+      "scope": [
+        "surface=graphql",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
