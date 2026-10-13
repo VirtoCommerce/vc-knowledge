@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T20:29:42.795Z",
-  "count": 866,
+  "generated": "2026-10-13T20:41:39.026Z",
+  "count": 868,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1834,7 +1834,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4769,6 +4769,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3DDFBA81",
+      "path": "entries/KB-3DDFBA81.md",
+      "subject": "A Variation-type configuration section can be created via REST with empty options; createConfiguredLineItem prices it as base + the chosen variation's price",
+      "question": "Can a configurable product have a Variation-type section, and how does createConfiguredLineItem price a variation chosen in it?",
+      "anchors": [
+        "POST /api/catalog/products/configurations",
+        "Query.productConfiguration",
+        "Mutation.createConfiguredLineItem"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "surface=rest-api",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11082,6 +11102,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-87603552",
+      "path": "entries/KB-87603552.md",
+      "subject": "GET /api/products/{id}/prices omits some of a product's price rows; GET /api/catalog/products/{id}/pricelists returns them",
+      "question": "Does GET /api/products/{id}/prices return every price row a product has?",
+      "anchors": [
+        "GET /api/products/{id}/prices",
+        "GET /api/catalog/products/{id}/pricelists",
+        "DELETE /api/pricing/pricelists/{id}/products/prices"
+      ],
+      "scope": [
+        "module=pricing",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8793DFE7",
       "path": "entries/KB-8793DFE7.md",
       "subject": "An order header's shippingTaxTotal reads 0 even when shipping is taxed, contradicting the header's own shippingTotalWithTax",
@@ -13216,7 +13255,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -18980,7 +19019,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
