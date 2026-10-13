@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T13:16:21.482Z",
-  "count": 797,
+  "generated": "2026-10-13T13:23:32.238Z",
+  "count": 798,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -16359,6 +16359,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D48E2629",
+      "path": "entries/KB-D48E2629.md",
+      "subject": "PDP recommended-products view_item_list carries only the cards rendered at the current width and is re-sent each time a resize changes that count",
+      "question": "What does the PDP recommended products block send as view_item_list on different viewport widths and on resize?",
+      "anchors": [
+        "/printers/multifunction-printers/laser-monochrome/canon-imageclass-wifi-mf232w-monochrome-laser-printerscannercopier-color-black"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
