@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T10:25:56.802Z",
-  "count": 785,
+  "generated": "2026-10-13T10:28:17.696Z",
+  "count": 787,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -239,6 +239,25 @@
         "flow=authentication",
         "surface=rest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-040FD11E",
+      "path": "entries/KB-040FD11E.md",
+      "subject": "Back-office bearer tokens carry permissions as JWT claims, so a role permission change reaches REST authorization only on a newly issued token",
+      "question": "After an admin adds or removes a permission on a role, does an already-issued /connect/token bearer token see the change on the next request?",
+      "anchors": [
+        "PUT /api/platform/security/roles",
+        "POST /connect/token",
+        "GET /api/platform/security/currentuser"
+      ],
+      "scope": [
+        "auth=bearer-password-grant",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2120,9 +2139,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 0,
-      "resolved": 1
+      "trust": 4,
+      "disputed": 1
     },
     {
       "id": "KB-1C28E89D",
@@ -6727,6 +6745,26 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-557222F3",
+      "path": "entries/KB-557222F3.md",
+      "subject": "With the VCST-6276 PR builds, Tax, Catalog Personalization and Catalog Publishing REST endpoints return 401 anonymous and 403 without the required permission",
+      "question": "Which permissions gate POST /api/taxes/search, PUT /api/taxes, /api/personalization/* and GET /api/completeness/evaluators, and what does an anonymous caller get?",
+      "anchors": [
+        "POST /api/taxes/search",
+        "PUT /api/taxes",
+        "POST /api/personalization/search",
+        "GET /api/completeness/evaluators"
+      ],
+      "scope": [
+        "build=pr-builds-vcst-6276",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
