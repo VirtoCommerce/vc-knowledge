@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T05:50:16.019Z",
+  "generated": "2026-10-13T05:54:10.161Z",
   "count": 776,
   "entries": [
     {
@@ -13697,7 +13697,7 @@
     {
       "id": "KB-B36F3F94",
       "path": "entries/KB-B36F3F94.md",
-      "subject": "A negative ?page= on /account/returns is sent as a negative cursor and the returns query fails with a SQL error, which the page shows as a generic toast plus 'There are no returns yet'",
+      "subject": "Up to theme pr-2523-9e4e a negative ?page= on /account/returns was sent as a negative cursor and the returns query failed with a SQL error; from 59a78b57 it reads as page 1",
       "question": "What happens when /account/returns is opened with a negative page number?",
       "anchors": [
         "/account/returns?scope=organization",
@@ -13709,8 +13709,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-B38AEE58",
