@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T18:00:22.066Z",
-  "count": 849,
+  "generated": "2026-10-13T18:39:46.359Z",
+  "count": 850,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4500,6 +4500,24 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-38E576ED",
+      "path": "entries/KB-38E576ED.md",
+      "subject": "With Seo 3.1004.2, the Admin seo-list blade enables Delete after Add on an initially empty SEO list and a row is selected",
+      "question": "In the Admin SPA SEO list blade, is the Delete toolbar button enabled after adding a record to an empty list and selecting it?",
+      "anchors": [
+        "PUT /api/stores",
+        "GET /api/stores/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.seo",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
