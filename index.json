@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T17:13:58.495Z",
+  "generated": "2026-10-13T17:17:42.736Z",
   "count": 839,
   "entries": [
     {
@@ -1669,8 +1669,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0
+      "trust": 2,
+      "disputed": 1
     },
     {
       "id": "KB-14F26013",
@@ -7600,7 +7600,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -17010,7 +17010,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -18415,7 +18415,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
