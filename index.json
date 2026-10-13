@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T13:58:54.296Z",
-  "count": 807,
+  "generated": "2026-10-13T14:08:47.523Z",
+  "count": 809,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2848,6 +2848,22 @@
         "KB-58989663"
       ],
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-25AC17FD",
+      "path": "entries/KB-25AC17FD.md",
+      "subject": "addItem below a product's minQuantity succeeds as a mutation but adds no line; the rejection is only in cart.validationErrors (PRODUCT_MIN_QTY)",
+      "question": "Why does Mutation.addItem return no error yet the product never appears in the cart?",
+      "anchors": [
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7488,6 +7504,23 @@
         "KB-D7F08A26"
       ],
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5EE7F47E",
+      "path": "entries/KB-5EE7F47E.md",
+      "subject": "recentlyBrowsed(maxProducts:N) returns the newest N event ROWS de-duplicated after the take, so a product browsed in two sessions makes it return fewer than N products",
+      "question": "Why does Query.recentlyBrowsed(maxProducts: 6) return fewer than 6 products, and how do you seed it deterministically?",
+      "anchors": [
+        "Query.recentlyBrowsed",
+        "Mutation.pushHistoricalEvent"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
