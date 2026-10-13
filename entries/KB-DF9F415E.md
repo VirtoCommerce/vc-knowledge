@@ -23,5 +23,7 @@ evidence:
     at: 2026-09-29T07:02:44.193Z
     by: session:p25028
     who: kutasinaelena
+    build: 4f19df8c0430141c
+    buildFrom: deploy-history
 ---
 With return:access/read/update and no return:authorize, the Return Line items blade shows no Approve / decline toolbar command, the Approved column is plain read-only text (0) and Decline reason has no input; Quantity stays editable and Save enables after a change. The return details Status dropdown for a Requested return offers only Requested. Administrator on the same return sees Approve / decline, an Approved input pre-filled with the requested quantity, and a Decline reason field. Role picker lists return:authorize under Return as 'Approve and decline returns'.

@@ -25,5 +25,7 @@ evidence:
     at: 2026-09-16T17:27:27.519Z
     by: session:26f59771
     splitFrom: KB-13B32D5F
+    build: b1bfa84cd32eb826
+    buildFrom: deploy-history
 ---
 Marketing.Promotion.CombinePolicy, the setting that decides whether rewards stack, is PLATFORM-WIDE on this deployment - GET /api/platform/settings/Marketing.Promotion.CombinePolicy returns objectId null, objectType null, groupName Marketing|General, and it is absent from the store's own settings collection - so changing it changes every store at once.

@@ -19,9 +19,11 @@ anchors:
   - coordinate: POST /api/marketing/promotions/coupons/add
 evidence:
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-10-05T10:09:37.922Z
     by: session:51fcfb97
     who: kutasinaelena
+    build: 59983c56933fe571
+    buildFrom: deploy-history
 ---
 POST /api/marketing/promotions/coupons/add is an upsert by id: posting an existing coupon object with its id and a new expirationDate updates that coupon in place (same id, single row, usage history kept). The code-uniqueness check applies only to coupons sent without an id. There is no separate PUT route for coupons.

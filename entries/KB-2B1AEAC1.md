@@ -18,5 +18,7 @@ evidence:
     at: 2026-10-13T13:36:04.415Z
     by: session:aa76d86f
     who: Lenajava1
+    build: 942f354b4df8bb56
+    buildFrom: deploy-history
 ---
 As a signed-in storefront customer (token from /connect/token with the storeId form field), calling Mutation.pushHistoricalEvent(command: {storeId, productId, eventType: "click"}) for 6 products made Query.recentlyBrowsed(storeId, maxProducts: 6) return exactly those 6 products, in place of the account's earlier history. That is the same event the PDP pushes on view, so any PDP visit by the account rewrites the list. Anonymous calls to recentlyBrowsed and getSavedForLater answer Unauthorized. Saved-for-later items can be set up the same way: addItem, then moveToSavedForLater(lineItemIds).

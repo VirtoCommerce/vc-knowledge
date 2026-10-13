@@ -18,5 +18,7 @@ evidence:
     at: 2026-10-12T14:34:39.629Z
     by: session:624d35a1
     who: kutasinaelena
+    build: b6daa5d65748d7e7
+    buildFrom: deploy-history
 ---
 With an admin bearer token, GET /api/marketing/promotions and GET /api/marketing/promotions?take=10 both returned HTTP 500 with body {message:"Could not create an instance of type 'VirtoCommerce.MarketingModule.Core.Model.PushNotifications.ImportNotification'. Model bound complex types must not be abstract...", stackTrace:null}. There is no GET list endpoint; listing is POST /api/marketing/promotions/search (200, totalCount + results with id/name/isActive). The unsupported GET surfaces a model-binding exception and an internal type name rather than 404/405. Marketing module 3.1009.0.

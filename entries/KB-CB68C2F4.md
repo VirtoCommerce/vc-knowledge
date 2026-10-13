@@ -21,6 +21,8 @@ evidence:
     at: 2026-10-13T10:02:33.048Z
     by: session:a3a809eb
     who: Aleksandra-Mitricheva
+    build: c55c1a124b302d3b
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa
     conditions: module:VirtoCommerce.XCart=3.1041.0; module:VirtoCommerce.FileExperienceApi=3.1008.0; theme=2.60.0-pr-2485-f6cd22b2
@@ -29,5 +31,7 @@ evidence:
     bodyHash: 06b47aeed0b6
     who: Aleksandra-Mitricheva
     note: "Re-observed 2026-10-13 with 2 files (pdf 611 B, txt 30 B) on XCart 3.1041.0: new lineItemId, same urls, download 200 identical bytes; the Saved-for-later card shows no configuration; file display order varied between renders."
+    build: 53e58cea5d396fa8
+    buildFrom: deploy-history
 ---
 2026-10-13 on vcptcore_qa (storefront theme 2.60.0-pr-2485), buyer on B2B-store: a configurable line with 3 files in its File section (pdf 611 B, txt 31 B, txt 2151 B) was moved with Save for later (cart became empty) and back with Move to cart. The line got a new lineItemId (5c98… -> f0a9…), and its configuration still listed the same 3 /api/files/{id} urls; downloading one afterwards returned 200 with identical bytes. The display order of the three files varied between renders (upload order was not kept). The /account/saved-for-later page itself shows no configuration (no Components list) for the line.

@@ -18,5 +18,7 @@ evidence:
     at: 2026-10-06T14:52:30.035Z
     by: session:7982e016
     who: Aleksandra-Mitricheva
+    build: 2077d219738578a0
+    buildFrom: deploy-history
 ---
 Storefront 2.59.0-pr-2519, UTC+3, signed in as a sales rep: Filters -> Created date "Last week" -> Apply sends createddate:["<today-7 local midnight>" TO "<today 23:59:59.999 local>"] and shows Start/End chips. Removing the Start chip sends one SalesRepCustomerOrders request with createddate:[TO "<today 23:59:59.999 local>"] (all historical orders return), but reopening the drawer shows the Created date combobox still reading "Last week", no date fields, and Apply disabled. The drawer never reflects the open-ended filter actually applied. Removing one chip of a Custom date range instead behaves consistently (the drawer shows the remaining bound).

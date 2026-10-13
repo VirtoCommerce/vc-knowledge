@@ -23,11 +23,15 @@ evidence:
     at: 2026-09-11T18:01:08.559Z
     by: session:8df1fb2c
     splitFrom: KB-4D082C89
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-12T08:13:03.274Z
     by: session:f00f5968
     splitFrom: KB-4D082C89
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-12T08:16:29.143Z
@@ -39,6 +43,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/invitations-20261008
     resolution: Copied here by the split of KB-4D082C89; block/unblock is stated in KB-DA14E8B7, not in this entry.
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
@@ -52,6 +58,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/invitations-20261008
     resolution: Copied here by the split of KB-4D082C89; it concerns account roles (KB-972CF223), not the roster row.
+    build: b1bfa84cd32eb826
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
@@ -65,6 +73,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/invitations-20261008
     resolution: Copied here by the split of KB-4D082C89; passwordHash is stated in KB-DA14E8B7, not in this entry.
+    build: b1bfa84cd32eb826
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-09-22T08:34:09.138Z
@@ -77,12 +87,16 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/invitations-20261008
     resolution: The "Invite sent" row it read (Sam Store) is a seeded contact with status null, not a pending invitee; a fresh invitee shows Invite sent and the Invited badge on G2 and G3 (live 2026-10-08).
+    build: ad7ff49fe879a53f
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-05T10:07:31.572Z
     by: session:8dcbfefd
     who: Dan-BV
     note: "2026-10-05 Customer 3.1026.0, ProfileExperienceApiModule 3.1019.0: two pending invitees (account emailConfirmed false, never logged in) read contact.status Invited (REST) and status Invited, statusInOrganization Invited, isLockedInOrganization false (GraphQL organization.contacts)."
+    build: 59983c56933fe571
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     conditions: platform=3.1039.12; module:VirtoCommerce.Customer=3.1011.1; module:VirtoCommerce.ProfileExperienceApiModule=3.1009.1; module:VirtoCommerce.Xapi=3.1012.3; theme=2.51.2; store=B2B-store; role=Organization maintainer
@@ -91,6 +105,8 @@ evidence:
     who: Dan-BV
     note: "Fresh invitee row 2026-10-08: Name \"Invite sent\", Role Purchasing agent, badge Invited; xAPI status Invited, name empty."
     investigation: true
+    build: efc133672faec7fa
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.Customer=3.1029.0; module:VirtoCommerce.ProfileExperienceApiModule=3.1020.0; module:VirtoCommerce.Xapi=3.1026.0; theme=2.59.0; store=B2B-store; role=Organization maintainer
@@ -99,6 +115,8 @@ evidence:
     who: Dan-BV
     note: "Fresh invitee row 2026-10-08: Name \"Invite sent\", Role Organization employee, badge Invited; xAPI status Invited, statusInOrganization Invited. The previously disputed \"Sam Store\" row is a seeded contact (status null, email confirmed, password set, created by admin), not an invitee."
     investigation: true
+    build: c4000d0bea152759
+    buildFrom: deploy-history
 ---
 On the storefront company members roster (/company/members) the row of a pending invitee shows the literal name 'Invite sent' - the invitee's contact has an empty name - with the chosen role, the email, and the status badge 'Invited', so the status column has a value beyond Active and Blocked. Observed live 2026-10-08 on two builds.
 

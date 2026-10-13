@@ -24,9 +24,11 @@ anchors:
   - coordinate: Mutations.addCoupon
 evidence:
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-10-05T20:23:15.386Z
     by: session:51fcfb97
     who: kutasinaelena
+    build: 59983c56933fe571
+    buildFrom: deploy-history
 ---
 On theme 2.59 / vcst, coupon FREESHIP (promotion reward RewardShippingGetOfAbsShippingMethod 999 off, shippingMethod FixedRate) entered in the cart Custom code field shows This code is not valid when Pickup (BuyOnlinePickupInStore) is selected, and is accepted when Shipping is selected. Pickup shipping stays 0.00 and totals do not change.

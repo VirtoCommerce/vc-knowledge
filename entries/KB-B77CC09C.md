@@ -24,17 +24,23 @@ evidence:
     at: 2026-09-28T16:31:20.791Z
     by: session:p30132
     who: Lenajava1
+    build: 452b315ee3a31e8a
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-28T18:22:23.282Z
     by: session:p25764
     who: Lenajava1
     note: "Re-observed on /search?barcode=<shared GTIN> and /search?q=<GTIN>: h1 accessible names 'Your search for barcode <v> returned the following3results' and '...following2results'"
+    build: 452b315ee3a31e8a
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-30T15:35:19.831Z
     by: session:134990b5
     who: Lenajava1
     note: "Re-observed on theme 2.59.0-pr-2501-3a82: barcode heading accessible name 'Your search for barcode <v> returned the following3results'."
+    build: 7b7404aab478a7c7
+    buildFrom: deploy-history
 ---
 On /search?q=<term> with 3 hits the level-1 heading's accessible name was "Your search for <term> returned the following3results": the superscript count node reads "3results". The visual gaps come only from CSS margins (me-1 on the count). The same heading markup serves /search?barcode= lists. Observed on a vc-frontend 2.59 build; the template is unchanged from dev.

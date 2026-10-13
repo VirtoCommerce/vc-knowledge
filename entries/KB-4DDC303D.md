@@ -22,5 +22,7 @@ evidence:
     at: 2026-10-07T19:38:50.991Z
     by: session:ed63bd34
     who: kutasinaelena
+    build: 137666293b156327
+    buildFrom: deploy-history
 ---
 Store 3.1009.0 / Seo 3.1006.0-pr-22. POST /api/stores {id, name, catalog, storeState:"Open", defaultLanguage, languages, defaultCurrency, currencies, settings:[{name:"Stores.SeoLinksType", value:"Long"}]} returns 200; GET /api/stores/{id} lists Stores.SeoLinksType value Long (default Collapsed), and explain on that store produced Long-link PermalinkMismatch paths (parent/child). DELETE /api/stores?ids=<id> returns 204 and a later GET /api/stores/{id} answers 200 with an empty body (not 404). GET /api/platform/settings/Seo.BrokenLinkDetection.Enabled returned value null, defaultValue true, and detection was demonstrably on (an unresolved slugInfo created a broken-link record within 10 s), so a guard must use value ?? defaultValue. Broken-link records can be removed with DELETE /api/seo/broken-links?ids=<id>; POST /api/seo/broken-links/search keyword matches a permalink prefix.

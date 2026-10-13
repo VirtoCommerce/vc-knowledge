@@ -31,5 +31,7 @@ evidence:
     at: 2026-09-30T22:34:59.360Z
     by: session:238f2094
     who: kutasinaelena
+    build: 1212305283171b63
+    buildFrom: deploy-history
 ---
 On vcptcore_qa1 (OTP module 3.1000.0-pr-1-11d6, DetailedErrors on, 2026-10-01) POST /api/otp/request {storeId, email} for a syntactically valid 254-character unregistered address returned 200 {succeeded:false, error:{code:"user_not_found", description:"No user with this email was found."}, maskedEmail:"a•••a@..."} — the response discloses that the address has no account. A 255-character address returned 400 validation problem "The field Email must be a string or array type with a maximum length of '254'."; "john@" returned 400 "The Email field is not a valid e-mail address.". The storefront sign-in form's client validator rejects john@ but has no length limit: both the 254 and 255-character addresses passed it and fired the request.

@@ -29,5 +29,7 @@ evidence:
     at: 2026-09-25T11:14:44.450Z
     by: session:memimpor
     who: Lenajava1
+    build: e7c4faf10f640e7c
+    buildFrom: deploy-history
 ---
 Loyalty cart-validation errors surface pre-emptively on /cart: the message renders inline directly above Place order and Place order is disabled, with no placement attempt needed. LOYALTY_INSUFFICIENT_BALANCE reads like 'Not enough points - needs N, you have M' (errorParameters required and available), and LOYALTY_ONLY_POINT_PRODUCTS_NOT_ALLOWED shows the compact 'Add a regular product to check out.' The errors arrive as cart.validationErrors on the mutation that changes the cart, inside an HTTP 200. The balance check is strict: a points total equal to the balance is allowed, one point more is blocked. An earlier build showed these only as a toast after clicking Place order; that is superseded.

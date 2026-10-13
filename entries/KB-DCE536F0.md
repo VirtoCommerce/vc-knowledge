@@ -21,11 +21,13 @@ anchors:
   - coordinate: PUT /api/loyalty-missions
 evidence:
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-25T15:17:15.429Z
     by: session:p36116
     who: Lenajava1
     splitFrom: KB-E84AAF1D
+    build: e0ebe8aedb62ee39
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-09-25T16:11:11.361Z
@@ -39,8 +41,10 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/loyalty-missions-20261008
     resolution: Loyalty 3.1009.0 (PR #18) shows the server message and keeps the tree; re-observed live on 3.1009.0 2026-10-08. The body now names the builds on each side.
+    build: c25dd40640fb19ef
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-29T13:52:11.707Z
     by: session:vcst6086
     who: Lenajava1
@@ -52,8 +56,10 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/loyalty-missions-20261008
     resolution: The setError TypeError is gone from platform 3.1074.0 (PR #3125); re-observed live on 3.1076.0 2026-10-08. The body now names the builds on each side.
+    build: c63461a741dcd691
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-29T13:43:32.254Z
     by: session:p64772
     who: Lenajava1
@@ -65,6 +71,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/loyalty-missions-20261008
     resolution: On Loyalty 3.1009.0 with platform >= 3.1074.0 the blade shows the message and logs no TypeError; re-observed live 2026-10-08. The body now names the builds.
+    build: c63461a741dcd691
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.Loyalty=3.1009.0; module:VirtoCommerce.Marketing=3.1009.0; store=B2B-store; role=Administrator
@@ -73,6 +81,8 @@ evidence:
     who: Dan-BV
     note: "Admin blade 2026-10-08, create with a negative reward, create with a negative order-count goal, edit with a negative reward, edit with a negative order-count goal: the blade header shows the server errorMessage with View details / Dismiss, View details shows the same text, the expression tree and entered values stay rendered, OK and Dismiss neither re-request /api/loyalty-missions/new nor clear the form, and the console logs only the 400 resource line (no setError \"reading join\" TypeError). A negative OrderValue goal cannot be sent at all: the input has a min validator and Save disables."
     investigation: true
+    build: c4000d0bea152759
+    buildFrom: deploy-history
 ---
 What the Admin SPA loyalty mission details blade shows after POST or PUT /api/loyalty-missions is rejected with validation errors (the API's answer itself is KB-D64B1613) depends on two builds: the Loyalty module and the platform.
 

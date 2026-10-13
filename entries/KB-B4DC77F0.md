@@ -19,5 +19,7 @@ evidence:
     at: 2026-10-06T20:45:01.836Z
     by: session:122efeda
     who: kutasinaelena
+    build: a65915e78a84c8d7
+    buildFrom: deploy-history
 ---
 A Manager-type user with store:access, store:read, builder:access, builder:read, builder:update, platform:asset:access, platform:asset:read could open the Designer but GET /api/platform/settings/VirtoCommerce.PageBuilderModule.General.StorePreviewPath returned 403, previewPath resolved to null, the preview showed the storefront home page and the block buttons in the left tree were disabled. Adding platform:setting:read made previewPath /designer-preview, the page preview loaded and blocks became editable; Select from asset library and Save (POST /api/page-builder-pages/grouped/{id}/content 204) then worked. Separately, for these restricted users the Designer's cookie-to-bearer exchange (POST /connect/token) redirects to /Account/AccessDenied (404) and the Designer shows a "Session expired" sign-in dialog.

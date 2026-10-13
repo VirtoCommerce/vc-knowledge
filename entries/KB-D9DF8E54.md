@@ -25,5 +25,7 @@ evidence:
     at: 2026-10-01T11:58:52.512Z
     by: session:238f2094
     who: kutasinaelena
+    build: 3815979d10435bdd
+    buildFrom: deploy-history
 ---
 On vcptcore_qa1 (2026-10-01) right after a theme update, GET /sign-in in a browser that had visited before loaded the old bundle (footer showed the previous build string, old index-*.js), while the same URL with a fresh query string loaded the new bundle and footer. The HTML response carries cache-control: max-age=7200 (Cloudflare cf-cache-status DYNAMIC), so the browser itself reuses the cached index HTML for 2 hours. Verify a new theme with a cache-busted URL or by the served asset hash, not by a plain revisit.

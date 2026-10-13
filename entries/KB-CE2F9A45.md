@@ -26,5 +26,7 @@ evidence:
     at: 2026-10-01T16:51:52.455Z
     by: session:e04c1f9b
     who: Lenajava1
+    build: e46456da98d72140
+    buildFrom: deploy-history
 ---
 Build 2.59.0-pr-2524, Edge, 375x812, /account/missions, SKU mission modal opened through the card Open mission button. Footer buttons: Add to cart (top 700, 327x44) is rendered above Close (top 752, 327x44) but Close precedes Add to cart in DOM order, so Tab goes bottom-to-top relative to the visual order (WCAG 2.4.3). The quantity stepper Decrease (32x32) / input (56x30) / Increase (32x32) have 1 px gaps (BL-UI-006 asks 8 px; sizes pass the 24 px WCAG 2.5.8 minimum). Cart subtotal and Total units render a bare 0 while the row total renders $0.00.

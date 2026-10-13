@@ -35,18 +35,24 @@ evidence:
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-12T08:24:16.232Z
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-11T18:01:08.559Z
     by: session:8df1fb2c
     splitFrom: KB-4D082C89
     mergedFrom: KB-51459ABB
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-12T08:13:03.274Z
     by: session:f00f5968
     splitFrom: KB-4D082C89
     mergedFrom: KB-51459ABB
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-12T08:16:29.143Z
@@ -60,6 +66,8 @@ evidence:
     resolvedIn: judge/list-sharing-20261012
     resolution: "The dispute holds on G1, re-observed live on a local eb8f35e0 stack (2026-10-13): Block then Unblock moves an invitee Invited -> Locked -> Approved and resets lockoutEnd to 0001-01-01; the body no longer says G1 was not re-observed."
     amendedFrom: 5db215185aad
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
@@ -74,6 +82,8 @@ evidence:
     resolvedBy: session:34990ccd
     resolvedIn: judge/list-sharing-20261012
     resolution: "The cycle does not strip the role: on a local G1 stack the invite role is an account role present before, during and after Block/Unblock for every invitee, and the PEA 3.1000.2 lock/unlock handlers touch no roles; the zero-role account had another cause."
+    build: b1bfa84cd32eb826
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
@@ -89,6 +99,8 @@ evidence:
     resolvedIn: judge/invitations-20261008
     resolution: "Body states it: the users endpoint always returns passwordHash null, /api/members/{id} shows the real value; re-observed live on G2 2026-10-08."
     amendedFrom: 1856273dbdc8
+    build: b1bfa84cd32eb826
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-09-22T08:34:09.138Z
@@ -102,6 +114,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/invitations-20261008
     resolution: About the roster row of a seeded contact (KB-BBBC4225, KB-D8FDFA6F), not about block/unblock.
+    build: ad7ff49fe879a53f
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     conditions: platform=3.1039.12; module:VirtoCommerce.Customer=3.1011.1; module:VirtoCommerce.ProfileExperienceApiModule=3.1009.1; module:VirtoCommerce.Xapi=3.1012.3; theme=2.51.2; store=B2B-store; role=Organization maintainer
@@ -110,6 +124,8 @@ evidence:
     who: Dan-BV
     note: "Fresh invitee, Block then Unblock from the roster, 2026-10-08: contact status stayed Invited throughout; only isLockedInOrganization toggled (true then false); account lockoutEnd 9999-12-31 unchanged; membership role kept. GET /api/platform/security/users/{name} returned passwordHash null for every account, /api/members/{id} reflected the real value."
     investigation: true
+    build: efc133672faec7fa
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.Customer=3.1029.0; module:VirtoCommerce.ProfileExperienceApiModule=3.1020.0; module:VirtoCommerce.Xapi=3.1026.0; theme=2.59.0; store=B2B-store; role=Organization maintainer
@@ -118,9 +134,11 @@ evidence:
     who: Dan-BV
     note: "Fresh invitee, 2026-10-08: the roster menu of an Invited row offers Resend invite / Revoke invite and no Block user; locked via the same LockOrganizationContact the roster sends, then unblocked from the roster: contact status stayed Invited, membership isLocked toggled, account lockoutEnd unchanged, membership role kept; the row returned to Invited."
     investigation: true
+    build: c4000d0bea152759
+    buildFrom: deploy-history
   - method: observation
-    deployment: local_g1_eb8f35e0
-    conditions: platform=3.1007.27; module:VirtoCommerce.ProfileExperienceApiModule=3.1000.2; module:VirtoCommerce.Customer=3.1000.7; module:VirtoCommerce.Xapi=3.1003.2; state:local-stack-from-vc-deploy-dev@eb8f35e0=true; role=organization-maintainer
+    deployment: local
+    conditions: platform=3.1007.27; module:VirtoCommerce.ProfileExperienceApiModule=3.1000.2; module:VirtoCommerce.Customer=3.1000.7; module:VirtoCommerce.Xapi=3.1003.2; state:local-stack-from-vc-deploy-dev@eb8f35e0=true; role=organization-maintainer; local=g1_eb8f35e0
     at: 2026-10-13T07:44:37.420Z
     by: session:34990ccd
     who: Dan-BV

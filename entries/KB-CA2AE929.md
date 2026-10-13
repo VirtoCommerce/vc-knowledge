@@ -29,5 +29,7 @@ evidence:
     at: 2026-10-01T20:50:49.197Z
     by: session:527ae7ed
     who: kutasinaelena
+    build: 3194c6d6a8199217
+    buildFrom: deploy-history
 ---
 On vcptcore_qa1 (vc-frontend 2.59.0-pr-2506) opening /punchout/<43-char unknown token> with Punchout.Enabled true on the store triggered POST /connect/token grant_type=punchout (400 login_failed, 'Login attempt failed. Please check your credentials.') and the browser then ended on '/' (B2B-store Homepage) as an anonymous visitor with no on-page message; the only trace is a failed resource entry in the console. The grant also returns the same 400 login_failed when session_token is absent.

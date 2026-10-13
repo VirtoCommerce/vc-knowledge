@@ -19,5 +19,7 @@ evidence:
     at: 2026-10-08T08:45:04.298Z
     by: session:b1874592
     who: Lenajava1
+    build: c4000d0bea152759
+    buildFrom: deploy-history
 ---
 On PageBuilderModule 3.1033.0-pr-170-236e: Clone of 'X' creates a Draft page 'X (copy)' with permalink '<p>-copy' and identical content (POST /api/page-builder-pages/grouped then content copy). Cloning 'X (copy)' produces 'X (copy 2)' / '-copy-2' (not '(copy) (copy)'); cloning that gives '(copy 3)'. Cloning the original 'X' again while 'X (copy)' exists creates a second 'X (copy)' with the same '-copy' permalink — no collision check, no error, both Drafts coexist. A clone of a Published page is created as Draft. Naming logic: incrementCopyName/incrementCopyPermalink in the shell's usePageBuilderDetails composable, applied to the source's own name only.

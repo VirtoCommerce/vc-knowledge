@@ -24,5 +24,7 @@ evidence:
     at: 2026-09-25T11:18:16.567Z
     by: session:memimpor
     who: Lenajava1
+    build: e7c4faf10f640e7c
+    buildFrom: deploy-history
 ---
 The storefront product route does not resolve a SKU: /product/{sku} renders the client-side 404 Page not found view for any SKU, catalog or seeded. A product page resolves at /product/{product id} or at its SEO slug path. The 404 is soft - the storefront is a single-page app, so the shell returns HTTP 200 and the not-found state is rendered client-side - which means an HTTP status check cannot validate a storefront route; only rendered content can.

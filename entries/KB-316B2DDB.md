@@ -25,6 +25,8 @@ evidence:
     deployment: vcst_qa
     at: 2026-09-18T18:25:17.220Z
     by: session:kbs4demo
+    build: 8169d5e903339ded
+    buildFrom: deploy-history
 ---
 There is no single rule, and the trap is that the failure shape is chosen per ARGUMENT rather than per query — so what you learn from one invalid argument tells you nothing about the next. Five shapes, all answering HTTP 200, all observed anonymously against B2B-store on vcst_qa (4,550 products) and each reproduced in a second pass ~25 minutes later.
 

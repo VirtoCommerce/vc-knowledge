@@ -18,6 +18,8 @@ evidence:
     at: 2026-10-09T21:19:29.029Z
     by: session:61a7b05a
     who: yuskithedeveloper
+    build: d432d886bcd90e4f
+    buildFrom: deploy-history
 ---
 On vcptcore_dev (platform 3.1079.0-alpha.13411, Xapi 3.1027.0-alpha.216, Return 3.1005.0-pr-28-fb4f), 2026-10-09:
 - An admin POST /api/platform/security/users/{userName}/resetpassword {newPassword, forcePasswordChangeOnNextSignIn:true} answered 200 succeeded:true, and the re-read showed passwordExpired=true.

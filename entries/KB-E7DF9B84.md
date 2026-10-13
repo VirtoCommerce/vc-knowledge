@@ -24,5 +24,7 @@ evidence:
     at: 2026-09-25T11:16:04.972Z
     by: session:memimpor
     who: Lenajava1
+    build: e7c4faf10f640e7c
+    buildFrom: deploy-history
 ---
 The storefront footer is two-level: a top-level link-list entry renders as a bold, non-clickable section header (on mobile, the accordion toggle), and only its childItems render as clickable links. A flat footer link list - top-level entries with no children - therefore renders as empty header columns, plain text on desktop and an accordion that reveals nothing on mobile. That is a content-structure issue, not a product defect. Child lists are nested under a header by link-list name, the same mechanism as the main menu, and that name matching is global across lists.

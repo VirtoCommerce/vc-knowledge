@@ -26,8 +26,10 @@ evidence:
     at: 2026-09-13T07:46:06.085Z
     by: session:6341e00a
     splitFrom: KB-E367DA11
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-29T09:39:04.652Z
     by: session:p26336
     who: Lenajava1
@@ -39,6 +41,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/wishlist-owner-part-20261008
     resolution: Copied here by the split of KB-E367DA11; it is about the lists-page badge (KB-B38AEE58), not the scope values, which re-observed live as stated.
+    build: 0d97b54f6d8c4ddd
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     conditions: platform=3.1039.12; module:VirtoCommerce.XCart=3.1021.2; module:VirtoCommerce.Cart=3.1006.1; module:VirtoCommerce.Xapi=3.1012.3; theme=2.51.2; store=B2B-store; role=Purchasing agent
@@ -47,6 +51,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: List settings Sharing options Private / Anyone (readonly) / Organization persist as scope Private / AnyoneAnonymous / Organization."
     investigation: true
+    build: efc133672faec7fa
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.XCart=3.1039.0; module:VirtoCommerce.Cart=3.1012.0; module:VirtoCommerce.Xapi=3.1026.0; theme=2.59.0; store=B2B-store; role=Organization maintainer (owner) / Purchasing agent (member)
@@ -55,5 +61,7 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: Share dialog Private / Anyone with link / My organization persist as scope Private / AnyoneAnonymous / Organization; WishlistScopeType enum: Private, AnyoneAnonymous, AnyoneAuthorized, Organization, User, Customer."
     investigation: true
+    build: c4000d0bea152759
+    buildFrom: deploy-history
 ---
 Three scope values persist from the storefront, not the two the schema's doc string names. InputCreateWishlistType.scope is documented 'List scope (private or organization)', but an ordinary organization member's sharing control offers three options that persist as scope Private, AnyoneAnonymous and Organization: before the sharing rework (theme 2.51.2) the List settings dropdown labels them Private, 'Anyone (readonly)' and Organization; from theme 2.59.0 the Share dialog labels them Private, 'Anyone with link' and 'My organization'. Observed live on both 2026-10-08. The schema's WishlistScopeType enum lists more (Private, AnyoneAnonymous, AnyoneAuthorized, Organization, User, Customer; Customer is the sales-rep share). AnyoneAnonymous is the value that exposes a list to callers with no account, and no documentation string names it. Treat the gloss on that field as incomplete and read the value back after writing it.

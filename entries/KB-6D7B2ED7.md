@@ -28,6 +28,8 @@ evidence:
     at: 2026-09-30T22:34:59.318Z
     by: session:238f2094
     who: kutasinaelena
+    build: 1212305283171b63
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     at: 2026-10-01T06:10:31.424Z
@@ -40,6 +42,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/otp-signin-20261008
     resolution: "The 405 depends on whether the storefront ingress routes /api/otp: routed on vcptcore_qa1 now (200), not routed on vcst_qa (405) - both live 2026-10-08. Subject and body scoped by that condition."
+    build: 1212305283171b63
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     conditions: platform=3.1077.0-pr-3123-6664; module:VirtoCommerce.OTP=3.1000.0; module:VirtoCommerce.Store=3.1009.0; theme=2.59.0-pr-2532-c725; store=B2B-store; setting:OtpSignIn.Enabled=true; ingress:/api/otp=routed
@@ -48,6 +52,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: /sign-in opens on the code view; empty and malformed emails are refused client-side with no request; Continue POSTs {storefront}/api/otp/request -> 200 JSON succeeded:true, maskedEmail a•••1@example.com, and the form shows Check your email; the same POST to the platform host answers identically."
     investigation: true
+    build: 7592346292e2fa35
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.OTP=3.1000.0; module:VirtoCommerce.Store=3.1009.0; theme=2.59.0; store=B2B-store; setting:OtpSignIn.Enabled=false; ingress:/api/otp=not routed
@@ -56,12 +62,16 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: POST {storefront}/api/otp/request -> 405 text/html \"405 Not Allowed\" (nginx behind Cloudflare); the same POST to the platform host -> 200 JSON error otp_disabled. The storefront shows only the password form because OTP is off for the store."
     investigation: true
+    build: c4000d0bea152759
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-09T10:55:45.492Z
     by: session:df9d131f
     who: Lenajava1
     note: "Same ingress gap present on vcst_qa 2026-10-09 (theme vc-frontend-next 3.0.0-alpha.2685, OTP module 3.1000.0, OtpSignIn.Enabled temporarily on): POST {storefront}/api/otp/request -> 405 nginx HTML, form shows inline 'Something went wrong. Please try again later.'; the identical body POSTed to the platform host returned 200 succeeded:true and the OtpSignInEmailNotification was journaled. GET {storefront}/api/otp/request returns the SPA index, while {storefront}/api/files/* is proxied - the storefront proxy whitelists paths and lacks /api/otp. Deployment-specific, not product behaviour."
+    build: a6e179f178104063
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-09T13:56:24.196Z
@@ -74,8 +84,10 @@ evidence:
     resolvedBy: session:34990ccd
     resolvedIn: judge/list-sharing-20261012
     resolution: "Both sides are right under their stand's ingress: vcst routes /api/otp since 2026-10-09 and answers JSON (2026-10-13); vcptcore-qa has no route (nginx 405) and no OTP module; the entry already names the route as the condition."
+    build: a6e179f178104063
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     conditions: platform=3.1078.0; module:VirtoCommerce.OTP=3.1000.0; setting:OtpSignIn.Enabled=true; ingress:/api/otp=routed
     at: 2026-10-13T05:50:09.106Z
     by: session:34990ccd
@@ -83,8 +95,10 @@ evidence:
     note: "2026-10-13, 2 runs: POST {storefront}/api/otp/request unknown email -> 200 application/json user_not_found, identical to the platform host."
     investigation: true
     bodyHash: e517fd4d18a1
+    build: 4ca08b7825765bae
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcptcore
+    deployment: vcptcore_qa
     conditions: ingress:/api/otp=not routed; state:otp-module=absent
     at: 2026-10-13T05:50:10.929Z
     by: session:34990ccd
@@ -92,6 +106,8 @@ evidence:
     note: "2026-10-13, 2 runs: POST {storefront}/api/otp/request -> 405 text/html nginx; GET -> SPA index; platform host POST/GET -> 404; no VirtoCommerce.OTP in the vcptcore-qa manifest."
     investigation: true
     bodyHash: e517fd4d18a1
+    build: c55c1a124b302d3b
+    buildFrom: deploy-history
 ---
 With OtpSignIn.Enabled on the store, /sign-in opens on the one-time-code view ("We'll email you a code. No password needed.", Email, Continue, "Sign in with a password instead"). Continue validates the email client-side - empty: "This field is required"; "john@" or an address with a space: "Enter a valid email address, e.g. johndoe@gmail.com" - and sends nothing until it is valid. Then it POSTs /api/otp/request RELATIVE TO THE STOREFRONT ORIGIN, so it only reaches the platform if the storefront's ingress routes /api/otp to it.
 

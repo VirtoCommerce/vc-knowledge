@@ -27,6 +27,8 @@ evidence:
     platformVersion: 3.1007.26
     at: 2026-09-16T17:27:45.763Z
     by: session:26f59771
+    build: b1bfa84cd32eb826
+    buildFrom: deploy-history
 ---
 
 A cart-subtotal reward is recorded ONCE, as an order-level Discount row, and none of the scoped discount totals is written with it. CustomerOrder declares subTotalDiscount, subTotalDiscountWithTax, shippingDiscountTotal, shippingDiscountTotalWithTax, paymentDiscountTotal and paymentDiscountTotalWithTax, and on orders carrying a percentage-off-cart-subtotal promotion every one of them reads 0.0 while discountTotal carries the rounded amount, discountAmount the unrounded one, and discounts[] the single row with promotionId, name, description and money. The line items are untouched too (items[].discountAmount 0.0). So a report that sums the per-scope fields to explain a discount gets zero and concludes there is none, and the only complete answer is discountTotal plus the discounts collection. The scoped fields are presumably for rewards of those scopes - shipping and payment - which this observation does not cover: what it establishes is that a CART-SUBTOTAL reward does not land in subTotalDiscount, on two orders with two different promotions.

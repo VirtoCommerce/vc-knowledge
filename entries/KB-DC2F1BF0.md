@@ -17,5 +17,7 @@ evidence:
     deployment: vcptcore_dev
     at: 2026-10-05T21:52:16.238Z
     by: session:f9a8159e
+    build: 8db313999cee1432
+    buildFrom: deploy-history
 ---
 With storeId set and a never-used permalink, POST /api/seoinfos/search returned 200 [] and about 15 s later the store had a new Active broken link for that permalink, HitCount 1. Immediately after, with that record the store's newest Active broken link, the same endpoint called with storeId + languageCode + slug (a slug that exists) and no permalink returned 200 [] and the newest record's HitCount went from 1 to 2; no record with an empty permalink was created. So an event without a permalink is attributed to whichever Active broken link is newest.

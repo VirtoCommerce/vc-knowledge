@@ -15,9 +15,10 @@ anchors:
   - coordinate: /printers
 evidence:
   - method: observation
-    deployment: local_vcfrontend_pr2522_on_vcst_qa
+    deployment: local
     at: 2026-10-09T13:29:53.143Z
     by: session:eb40dd6d
     who: Aleksandra-Mitricheva
+    conditions: local=vcfrontend_pr2522_on_vcst_qa
 ---
 On a vc-frontend 2.60 PR build, on a category page the chip "Remove: <category>" button is reachable by Tab (12 presses from page top on /printers). Activating it by mouse click or by Enter clears the scope (placeholder returns to "Search") but document.activeElement becomes BODY, not the search input or any element inside .search-bar, so a keyboard user loses their place.

@@ -24,5 +24,7 @@ evidence:
     at: 2026-09-30T15:03:02.315Z
     by: session:0cfc9f97
     who: kutasinaelena
+    build: b336aebf0395d5ec
+    buildFrom: deploy-history
 ---
 With the Admin UI in German, Notifications > Notification list search 'Rück' returns 0 rows while 'Return' returns the 5 return notifications, whose display names read 'Rückgabe genehmigt', 'Rückgabe storniert', 'Rückgabe teilweise genehmigt', 'Rückgabe registriert', 'Rückgabe abgelehnt'. The keyword is matched against the type/English name, not the localized display name.

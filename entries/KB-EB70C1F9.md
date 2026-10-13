@@ -28,6 +28,8 @@ evidence:
     at: 2026-09-28T14:59:08.297Z
     by: session:p15752
     who: kutasinaelena
+    build: 4c4dc9c31676b3e9
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     at: 2026-09-30T07:22:47.779Z
@@ -40,6 +42,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/push-messages-20261008
     resolution: Hint and held Save/Send from 3.1006.0-pr-28, live on the released 3.1008.0 on two stands; the silent drop belonged to the 2026-09-28 build. Body scoped by build.
+    build: b336aebf0395d5ec
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     conditions: platform=3.1077.0-pr-3123-6664; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1028.0; vc-shell=2.6.1; role=Administrator
@@ -48,6 +52,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: complete condition plus an empty-value row -> hint \"This condition has no value.\", Save and Send disabled, no POST; value typed -> enabled; cleared -> held again; row removed -> Save enabled. Starter row alone: no hint, Save enabled, Send disabled."
     investigation: true
+    build: 7592346292e2fa35
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1029.0; vc-shell=2.6.1; role=Administrator
@@ -56,6 +62,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: same as vcptcore_qa1."
     investigation: true
+    build: 75bed25e7b5f756f
+    buildFrom: deploy-history
 ---
 What the audience conditions builder ("Match by conditions" > Custom conditions) does with a row that has no value depends on the build.
 

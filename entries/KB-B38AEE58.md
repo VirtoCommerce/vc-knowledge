@@ -24,8 +24,10 @@ evidence:
     at: 2026-09-13T07:46:06.085Z
     by: session:6341e00a
     splitFrom: KB-E367DA11
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-29T09:39:04.652Z
     by: session:p26336
     who: Lenajava1
@@ -38,8 +40,10 @@ evidence:
     resolvedIn: judge/list-sharing-20261012
     resolution: "The badge has three texts, not two: a Customer-scope list reads 'Shared with N customer(s)'; organization and Anyone-with-link lists still share 'Shared' and one icon, on vcst and vcptcore."
     amendedFrom: 1683d32e07ee
+    build: 0d97b54f6d8c4ddd
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     conditions: theme=2.60.0-pr-2511-81f1; platform=3.1078.0; module:VirtoCommerce.XCart=3.1041.0; module:VirtoCommerce.Cart=3.1012.0; module:VirtoCommerce.SalesRep=3.1013.0-pr-18-d367; store=B2B-store; role=sales-rep
     at: 2026-10-12T17:25:00.270Z
     by: session:34990ccd
@@ -47,8 +51,10 @@ evidence:
     note: "/account/lists and the Add-to-list dialog, 2026-10-12: 'Private' with a lock icon; 'Shared with 1 customer' / 'Shared with 2 customers' for Specific customers; the same people icon and the same text 'Shared' for My organization and for Anyone with link."
     investigation: true
     bodyHash: 566851c10154
+    build: 4ca08b7825765bae
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcptcore
+    deployment: vcptcore_qa
     conditions: theme=2.60.0-pr-2522-6f90; store=B2B-store; role=sales-rep
     at: 2026-10-12T17:25:01.928Z
     by: session:34990ccd
@@ -56,5 +62,7 @@ evidence:
     note: "/account/lists and the Add-to-list dialog, 2026-10-12: 'Private' with a lock icon; 'Shared with 1 customer' / 'Shared with 2 customers' for Specific customers; the same people icon and the same text 'Shared' for My organization and for Anyone with link."
     investigation: true
     bodyHash: 566851c10154
+    build: c55c1a124b302d3b
+    buildFrom: deploy-history
 ---
 On theme 2.60.0-pr-2511-81f1 (vcst) and 2.60.0-pr-2522-6f90 (vcptcore), 2026-10-12, /account/lists and the Add-to-list dialog show 'Private' (lock icon) for a private list and 'Shared with N customer(s)' for a Specific-customers (Customer-scope) list, but the same people icon and the same 'Shared' text for an organization-scoped list and for an Anyone-with-link list. So an owner cannot tell an organization-shared list from a world-readable one on the page where they would look; the scope is only legible in the Share dialog, one click deeper, or in WishlistType.scope.

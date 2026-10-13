@@ -26,21 +26,29 @@ evidence:
     at: 2026-09-29T07:56:50.466Z
     by: session:p14200
     who: kutasinaelena
+    build: 4f19df8c0430141c
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     at: 2026-10-01T19:55:41.295Z
     by: session:0cfc9f97
     who: kutasinaelena
+    build: df4b8991ac35ca53
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_dev
     at: 2026-10-06T17:52:59.372Z
     by: session:b6bd53fc
     note: "Observed on theme 2.59.0-pr-2523: a draft row opens /edit; the draft's details page has an enabled Cancel with an optional reason."
+    build: 885191398cb25816
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_dev
     at: 2026-10-09T20:39:59.715Z
     by: session:61a7b05a
     who: yuskithedeveloper
     note: "Theme 2.60.0-pr-2523-466f: a Draft card in My returns at 768 px opens /account/returns/{id}/edit (Saved automatically + Submit return, no cancel/discard); Cancel return with an optional reason dialog is on /account/returns/{id}."
+    build: d432d886bcd90e4f
+    buildFrom: deploy-history
 ---
 On theme 2.59 pr-2500, clicking a Draft row in /account/returns navigates to /account/returns/:id/edit ('Add details to return'), which shows details fields, Saved automatically and Submit return but no Cancel/Delete. The draft's /account/returns/:id page (reached by URL) shows an enabled Cancel return button with a confirm dialog. The header Back button on the /edit step is history-back. Draft fields (reason, comment, attachment) persist via autosave. Viewports 375 and 768.

@@ -20,5 +20,7 @@ evidence:
     at: 2026-10-08T15:38:48.223Z
     by: session:f1cfecd7
     who: Lenajava1
+    build: 2f9a5dce907b5872
+    buildFrom: deploy-history
 ---
 On PageBuilderModule 3.1034.0-pr-172-5aad as administrator, in /apps/page-builder-shell page-details blade of a Draft page: toolbar Archive opens a 'Confirmation' dialog ('Are you sure you want to archive this page?', Confirm / Cancel). Cancel closes the dialog; no POST /api/page-builder-pages/grouped/archive is sent (network log unchanged over 6 s), no toast appears, the blade stays open with the 'Draft' chip and the Draft counter is unchanged. Confirm sends POST /api/page-builder-pages/grouped/archive?ids={groupId} -> 204, closes the blade and shows 'Page archived successfully' once.

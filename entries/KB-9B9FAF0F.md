@@ -31,5 +31,7 @@ evidence:
     by: session:p14880
     who: kutasinaelena
     splitFrom: KB-1564BA07
+    build: 4f19df8c0430141c
+    buildFrom: deploy-history
 ---
 Each xAPI submitReturn (Draft -> Requested) produced exactly one ReturnRegisteredEmailNotification row in POST /api/notifications/journal with tenantIdentity {id: returnId, type: Return} - status Error on a deployment without SMTP (SentNotificationException), which still proves it was raised - and exactly one push message in POST /api/push-message/search with topic = the return number, shortMessage 'Return <number> received', memberIds = [the buyer contact id], status Sent. Decisions raise ReturnPartiallyApprovedEmailNotification / ReturnRejectedEmailNotification with push texts 'partly approved' / 'declined'. Observed on VirtoCommerce.Return 3.1003.0-pr-27-51fc, PushMessages 3.1006.0-pr-28-2027.

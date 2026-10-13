@@ -25,5 +25,7 @@ evidence:
     at: 2026-09-25T11:16:31.965Z
     by: session:memimpor
     who: Lenajava1
+    build: e7c4faf10f640e7c
+    buildFrom: deploy-history
 ---
 The Authorize.Net inline card form on /cart masks expiry as MM/YY, like the other inline card forms. Typing a four-digit year is truncated by the mask - 12/2029 becomes 12/20, an expired date - and the form does no client-side expired-date check, so an expired card can be submitted. The Authorize.Net integration is set up for USD only: unavailability or rejection in a non-USD cart is by design, and the constraint does not apply to the other processors.

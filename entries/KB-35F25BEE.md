@@ -27,5 +27,7 @@ evidence:
     by: session:memimpor
     who: Lenajava1
     splitFrom: KB-432D02EF
+    build: 17622bd158a36d4f
+    buildFrom: deploy-history
 ---
 The storefront's /account/purchase-requests is served by the AI document processing module: a buyer uploads order-like documents (PDF, image, even handwritten) and the pipeline turns them into a quote. The xAPI flow is createPurchaseRequestFromDocuments, then extractPurchaseRequestSourcesData (OCR and line extraction), then postProcessPurchaseRequestSources (catalog matching, which sets quoteId), then normal quote acceptance; there is no approve or reject mutation - buyer approval belongs to quote requests at /account/quotes. The module is flagged experimental.

@@ -19,5 +19,7 @@ evidence:
     at: 2026-10-12T09:03:09.457Z
     by: session:c1b20b2e
     who: Aleksandra-Mitricheva
+    build: c55c1a124b302d3b
+    buildFrom: deploy-history
 ---
 Created a sales rep via POST /api/sales-rep with firstName "Perf", lastName "Rep", fullName "<prefix> Rep". GET /api/sales-rep/{id} returned fullName "Perf Rep", so the sent fullName was dropped and rebuilt from the two name parts. A later PUT /api/sales-rep with a changed firstName did update fullName to match. Consequence: a lookup by fullName via POST /api/sales-rep/search misses the rep; look it up by email instead (the search keyword matches the email).

@@ -26,6 +26,8 @@ evidence:
     platformVersion: 3.1007.26
     at: 2026-09-15T13:44:12.679Z
     splitFrom: KB-0C102D97
+    build: b1bfa84cd32eb826
+    buildFrom: deploy-history
   - method: source
     module: VirtoCommerce.Orders
     version: 3.1000.4
@@ -34,6 +36,7 @@ evidence:
     at: 2026-09-16T07:14:24.046Z
     by: claude-opus-5
     splitFrom: KB-0C102D97
+    deployment: VirtoCommerce.Orders@3.1000.4
   - method: observation
     deployment: vcptcore_stable
     platformVersion: 3.1007.27
@@ -41,6 +44,8 @@ evidence:
     by: session:09e39416
     from: C:/_VIRTO/_comparison-logs/round2/arm-B/report.md
     splitFrom: KB-0C102D97
+    build: b1bfa84cd32eb826
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     platformVersion: 3.1007.27
@@ -48,6 +53,8 @@ evidence:
     by: session:09e39416
     from: C:/_VIRTO/_comparison-logs/round2/arm-C/report.md
     splitFrom: KB-0C102D97
+    build: b1bfa84cd32eb826
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
@@ -56,6 +63,8 @@ evidence:
     by: session:26f59771
     note: "Seen again on B2B-store order CO260915-00001 (id 1c458e1f): order status Cancelled / isCancelled true / cancelReason set; inPayments[0] PI260915-00001 status Cancelled, isCancelled true, cancelledState Completed; shipments[0] SH260915-00001 status New, isCancelled false, modifiedDate still equal to createdDate (2026-09-15T08:17:18.3098923Z). Read from GET /api/order/customerOrders/{id} on platform 3.1007.27, Orders 3.1000.4."
     splitFrom: KB-0C102D97
+    build: b1bfa84cd32eb826
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-05T17:56:56.246Z
@@ -63,11 +72,15 @@ evidence:
     who: Lenajava1
     note: "Admin order blade of a cancelled B2B-store order: operations tree shows the PaymentIn as Cancelled while the Shipment stays New; same split held on a second cancelled order's storefront view (Cancelled status badge with the cancel-reason text, no shipment status shown)."
     splitFrom: KB-0C102D97
+    build: 59983c56933fe571
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-08T22:41:56.217Z
     by: session:391bbdbb
     who: yuskithedeveloper
     note: "2026-10-08, platform 3.1076.0, Orders 3.1018.0: DELETE /api/order/customerOrders?ids=<10 ids> (admin token) returned 204, and each GET /api/order/customerOrders/{id} afterwards returned 404, including 5 orders that had been cancelled first."
+    build: bd841d0b7d1d7d53
+    buildFrom: deploy-history
 ---
 Cancelling is NOT the only option. An order CAN be deleted - DELETE /api/order/customerOrders, operation OrderModule_DeleteOrdersByIds, and the Admin orders list carries a Delete control in the toolbar and in every row menu. Confirmed on platform 3.1007.27, Orders 3.1000.4.

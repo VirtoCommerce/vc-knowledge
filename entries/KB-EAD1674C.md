@@ -20,5 +20,7 @@ evidence:
     at: 2026-10-07T11:54:15.978Z
     by: session:5e2a1103
     who: Lenajava1
+    build: 850daf039b204244
+    buildFrom: deploy-history
 ---
 Observed 2026-10-07 with an admin token. POST /api/task-management/finish?id=<id>&completed=false with JSON body {} returns 200 and the WorkTask; a GET then reads isActive:false, completed:false, status:null, dueDate unchanged. The same call with no request body returns HTTP 415 (the endpoint requires a JSON body even though the parameters are in the query). The task's owning sales rep still receives the row from Query.salesRepTasks on /graphql/sales-rep, with isActive:false and completed:false, and Mutation.deleteSalesRepTask as that rep deletes it (returns true). The rep-scoped GraphQL exposes no cancel mutation, so this REST call is the only API path to a closed-but-not-completed task. A task's responsibleId is the rep's CONTACT id, not the security user id: POST /api/task-management/search with responsibleIds=[userId] returns 0 rows, with the contact id it returns the rep's tasks.

@@ -25,5 +25,7 @@ evidence:
     at: 2026-09-30T15:00:08.804Z
     by: session:8402b2ed
     who: kutasinaelena
+    build: b336aebf0395d5ec
+    buildFrom: deploy-history
 ---
 The Custom-conditions builder emits these member-index field tokens: Name -> name, Email -> emails, Username -> login, Customer type -> membertype, Status -> status, Tag -> groups, Business category -> businesscategory, Preferred language -> defaultlanguage, Role -> roleid (the role id, not the name), Company -> parentorganizations (the organization GUID, not the name), Belongs to a company -> hasparentorganizations, Registered -> createddate. Operator shapes: is -> field:value; is not -> !field:value; is any of -> field:a,b; starts with -> field:"a*"; ends with -> field:"*a"; contains -> field:"*a*"; on or after -> field:[YYYY-MM-DD TO]; on or before -> field:[TO YYYY-MM-DD]. A value containing whitespace is double-quoted, a value without whitespace is emitted bare. Read verbatim from the Show generated query dialog.

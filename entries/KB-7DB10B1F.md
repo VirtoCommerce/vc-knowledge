@@ -20,5 +20,7 @@ evidence:
     at: 2026-10-07T14:43:40.922Z
     by: session:89850094
     who: Aleksandra-Mitricheva
+    build: 4cf2388dc319408b
+    buildFrom: deploy-history
 ---
 Theme 2.59.0 PR build 2539, B2B-store whose language switcher lists two entries labelled "Nederlands" (cultures nl-BL and nl-NL) plus two labelled "English" (en-US, en-GB). Selecting either Dutch entry (in-session via switcher, which does a full reload to /nl-NL/... or /nl-BL/...) and cold-loading /nl-NL/company/dashboard both render html lang=nl-*, but every Sales Rep hub string (sidebar 'Sales Rep hub', H1 'Dashboard', the 'All blocks are hidden' empty state and its buttons) is the English text; no raw sales_rep.* keys appear. The same page in de/es/fr/it/ja/pl/pt/ru/zh renders translated strings. So Dutch is an English fallback, consistent across the hub, not a partial translation.

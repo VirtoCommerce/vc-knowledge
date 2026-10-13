@@ -27,5 +27,7 @@ evidence:
     at: 2026-09-25T11:14:21.238Z
     by: session:memimpor
     who: Lenajava1
+    build: e7c4faf10f640e7c
+    buildFrom: deploy-history
 ---
 For a configurable product Text section, maxLength is enforced on the Custom input path (free text the shopper types), both client-side and on the server. A preset option whose label is longer than maxLength is still accepted: the storefront sends the preset as customText equal to the preset label, and the server bypasses maxLength when customText matches a preset option's text; add and update of a configured line apply the same validation. Because presets are matched by label rather than by option id, two presets in one section with identical text cannot be told apart. When the server rejects an over-length custom value on update, the cart-level validation error is not surfaced as a toast, so the update looks like a silent no-op.

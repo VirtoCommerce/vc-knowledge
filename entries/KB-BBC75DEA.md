@@ -26,6 +26,8 @@ evidence:
     at: 2026-09-28T14:59:31.173Z
     by: session:p24252
     who: kutasinaelena
+    build: 4c4dc9c31676b3e9
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     at: 2026-09-30T12:11:10.321Z
@@ -38,6 +40,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/push-messages-20261008
     resolution: Badge and email from 3.1006.0-pr-28, live on 3.1008.0; duplicates still indistinguishable, as the dispute itself said. Body scoped by build.
+    build: b336aebf0395d5ec
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     conditions: platform=3.1077.0-pr-3123-6664; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1028.0; vc-shell=2.6.1; role=Administrator
@@ -46,6 +50,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: options carry Person/Company badge and email; two same-named people with the same email and four same-named companies render as identical rows; no org/parent/account shown, no tooltip, count only after selection; picker calls POST /api/members/search."
     investigation: true
+    build: 7592346292e2fa35
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1029.0; vc-shell=2.6.1; role=Administrator
@@ -54,6 +60,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: badge and email on every option; no duplicate entities on this stand to compare."
     investigation: true
+    build: 75bed25e7b5f756f
+    buildFrom: deploy-history
 ---
 The picker "Also add specific recipients (people or whole companies)" searches POST /api/members/search (keyword, deepSearch, objectType Member, sort MemberType:desc;Name).
 
