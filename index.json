@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T10:08:07.255Z",
-  "count": 784,
+  "generated": "2026-10-13T10:25:56.802Z",
+  "count": 785,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1626,6 +1626,24 @@
       "scope": [
         "module=virtocommerce.store",
         "surface=platform-settings"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-162C534D",
+      "path": "entries/KB-162C534D.md",
+      "subject": "Admin POST /api/catalog/search/products with code:\"<SKU>\" and no catalogId returns matches from every catalog, including physical catalogs not linked to any store's virtual catalog",
+      "question": "Does admin catalog product search by code scope results to the store catalog, or return the same code from all catalogs?",
+      "anchors": [
+        "POST /api/catalog/search/products",
+        "POST /api/catalog/listentries",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=platform-rest-admin"
       ],
       "plane": "experiential",
       "status": "active",
