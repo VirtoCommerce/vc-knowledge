@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T04:02:39.749Z",
+  "generated": "2026-10-13T04:10:33.400Z",
   "count": 771,
   "entries": [
     {
@@ -2334,7 +2334,7 @@
     {
       "id": "KB-2073D7AD",
       "path": "entries/KB-2073D7AD.md",
-      "subject": "The storefront return wizard clamps the saved quantity but can display a quantity above the returnable maximum",
+      "subject": "The storefront return wizard corrects an over-limit quantity to the returnable maximum on the spot; only pre-merge pr-2500 builds displayed the typed value while saving the clamped one",
       "question": "Does the storefront return wizard stop a buyer from entering more than the returnable quantity?",
       "questions": [
         "The return form shows 50 of 5 available after I typed a big number - will it really return 50?",
@@ -2354,8 +2354,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-20F8350F",
@@ -2876,9 +2877,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1,
-      "resolved": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-2A7CB639",
