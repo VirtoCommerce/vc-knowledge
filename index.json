@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T07:44:51.605Z",
+  "generated": "2026-10-13T08:01:53.242Z",
   "count": 777,
   "entries": [
     {
@@ -13205,7 +13205,7 @@
     {
       "id": "KB-ACC12F26",
       "path": "entries/KB-ACC12F26.md",
-      "subject": "A punchout user mapping accepts an unvalidated userId (incl. an administrator account), yielding a privilege-escalation sign-in via the anonymous cXML + punchout grant chain",
+      "subject": "On Punchout 3.1000.0-pr-1 up to build fbb9 a punchout user mapping accepted an unvalidated userId (privilege-escalation sign-in chain); from the fix commit 12dd178 (build ca33 onward) the mapping endpoint and the punchout grant reject it",
       "question": "Does POST /api/punchout-user-mappings validate userId against the contact, and can a punchout mapping bind an administrator account to escalate privilege?",
       "questions": [
         "Can someone who is only allowed to create punchout mappings end up signed in as an administrator?",
@@ -13231,7 +13231,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-ACDF81BB",
