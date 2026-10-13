@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T19:57:40.798Z",
-  "count": 862,
+  "generated": "2026-10-13T19:59:10.629Z",
+  "count": 865,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7036,6 +7036,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-53083E6B",
+      "path": "entries/KB-53083E6B.md",
+      "subject": "Query.orders hides a buyer's own order whose organizationId is null when the buyer has a current organization",
+      "question": "Why does Query.orders not list a Completed order that REST shows for the same customerId?",
+      "anchors": [
+        "Query.orders",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-53157036",
       "path": "entries/KB-53157036.md",
       "subject": "Storefront home page: 6 slider/benefits images have no alt, and CLS at 1920 is about 0.49, mostly from the features block and footer",
@@ -9427,6 +9444,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 7,
+      "disputed": 0
+    },
+    {
+      "id": "KB-71307CF5",
+      "path": "entries/KB-71307CF5.md",
+      "subject": "POST /api/catalog/products takes a single product object; a JSON array body returns 500 NullReference",
+      "question": "Why does POST /api/catalog/products return 500 \"Object reference not set to an instance of an object\"?",
+      "anchors": [
+        "POST /api/catalog/products"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -16361,6 +16394,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C63F1821",
+      "path": "entries/KB-C63F1821.md",
+      "subject": "productConfiguration with configurableProductId \"\" returns the oldest active configuration of an unrelated product",
+      "question": "What does Query.productConfiguration return for an empty configurableProductId?",
+      "anchors": [
+        "Query.productConfiguration",
+        "POST /api/catalog/products/configurations/search"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
