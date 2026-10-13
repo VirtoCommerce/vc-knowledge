@@ -211,3 +211,5 @@
 {"at":"2026-10-13T20:08:32.385Z","kind":"confirm","id":"KB-B6A59402","deployment":"vcptcore_regression","trust":3,"via":"mcp","call":"toolu_01HMjEFdu15sP3gs6zba9iXG","topic":"background jobs regression rerun","who":"kutasinaelena","agent":"qa-backend-expert"}
 {"at":"2026-10-13T20:08:32.470Z","kind":"confirm","id":"KB-FA8E7A5F","deployment":"vcptcore_regression","trust":3,"via":"mcp","call":"toolu_01NwgF7CPhSACfswQWGzzzRn","topic":"background jobs regression rerun","who":"kutasinaelena","agent":"qa-backend-expert"}
 {"at":"2026-10-13T20:09:28.891Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 502 POST /git/blobs — Server Error","reason":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-13T20:13:46.892Z","kind":"show","id":"KB-110E0652","state":"answer","via":"mcp","call":"toolu_01WyCAW1eMaCHQdXMKbyM6gN","topic":"barcode search wildcards","who":"kutasinaelena","agent":"main"}
+{"at":"2026-10-13T20:13:57.707Z","kind":"confirm","id":"KB-110E0652","deployment":"vcptcore_regression","trust":5,"via":"mcp","call":"toolu_01AY8ALKfjHHDJanf4sDcUZu","topic":"barcode search wildcards","who":"kutasinaelena","agent":"main"}
