@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T08:41:19.463Z",
-  "count": 777,
+  "generated": "2026-10-13T08:49:33.085Z",
+  "count": 780,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3689,7 +3689,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7440,7 +7440,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7676,6 +7676,23 @@
       "scope": [
         "module=virtocommerce.catalog",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6552C284",
+      "path": "entries/KB-6552C284.md",
+      "subject": "Data backup blade keeps a disabled Cancel and disabled Select all / Unselect all after ANY finished run (cancelled or completed); Start backup returns only when the blade is reopened",
+      "question": "Admin Backup and restore > Backup: what does the toolbar show after a backup run ends, cancelled or completed?",
+      "anchors": [
+        "/api/platform/export",
+        "/api/platform/exortimport/tasks"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13663,6 +13680,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-B27007B2",
+      "path": "entries/KB-B27007B2.md",
+      "subject": "A storefront session whose account was deleted renders a blank page on every route; GetPageContext returns 200 with NULL_REFERENCE",
+      "question": "What does the storefront show on the next navigation after the signed-in user's account and contact are deleted while their session is open?",
+      "anchors": [
+        "Query.pageContext",
+        "/account/orders",
+        "/api/platform/security/users"
+      ],
+      "scope": [
+        "surface=graphql",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B2BA7561",
       "path": "entries/KB-B2BA7561.md",
       "subject": "Admin SPA \"Debug SEO links Candidates\" blade (Stage 0) renders an 8-column ui-grid; only the Rejection reasons cells carry a hover title, Object ID is never fully visible even maximized",
@@ -14257,6 +14293,24 @@
       "scope": [
         "feature=password-reset",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BAADF9A3",
+      "path": "entries/KB-BAADF9A3.md",
+      "subject": "Admin Sign-in log grid prints the browser's timezone while the Sign-in record card and the user's Last login date use the operator profile timezone",
+      "question": "Admin Security > Sign-in log: why does the same record show different clock times in the grid and on the Sign-in record blade?",
+      "anchors": [
+        "POST /api/platform/security/sign-in-log/search",
+        "GET /api/platform/profiles/currentuser"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
