@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T18:39:46.359Z",
-  "count": 850,
+  "generated": "2026-10-13T18:44:44.629Z",
+  "count": 853,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3805,7 +3805,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3968,7 +3968,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -8565,6 +8565,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-688E2CBC",
+      "path": "entries/KB-688E2CBC.md",
+      "subject": "PATCH /api/catalog/categories/{id} isActive writes exactly one CatalogProduct Modified change-log entry per child, whether or not Catalog.Search.EventBasedIndexation.Enable is on; only the search reflection depends on the flag",
+      "question": "Does a category visibility PATCH re-save its child products, and does that depend on the Catalog event-indexation flag?",
+      "anchors": [
+        "PATCH /api/catalog/categories/{id}",
+        "POST /api/platform/changelog/search",
+        "Query.products"
+      ],
+      "scope": [
+        "module=catalog",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6897B86A",
       "path": "entries/KB-6897B86A.md",
       "subject": "createReturn takes the store from the order, not from the token's storeId",
@@ -8832,6 +8851,22 @@
         "layer=platform-cache",
         "module=sales-rep",
         "surface=api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6BBD0BE5",
+      "path": "entries/KB-6BBD0BE5.md",
+      "subject": "Anonymous Query.products without currencyCode fails with INVALID_OPERATION on a store whose default currency is not inferred",
+      "question": "Does anonymous xAPI products(storeId) work without currencyCode?",
+      "anchors": [
+        "Query.products"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11741,7 +11776,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14907,7 +14942,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14924,6 +14959,25 @@
         "build=salesrep 3.1013.0-pr-15",
         "module=sales-rep",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B70CDB22",
+      "path": "entries/KB-B70CDB22.md",
+      "subject": "UCP rejects an unknown store_id differently per transport: MCP search_products returns a UCP invalid_request isError result, REST /ucp/v1/catalog/search returns HTTP 200 with the XCatalog GraphQL envelope (NULL_REFERENCE)",
+      "question": "What does UCP return for a store_id that does not exist, on the MCP tool versus the REST endpoint?",
+      "anchors": [
+        "POST /ucp/mcp",
+        "POST /ucp/v1/catalog/search"
+      ],
+      "scope": [
+        "module=ucp",
+        "surface=ucp-mcp",
+        "surface=ucp-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -20439,7 +20493,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
