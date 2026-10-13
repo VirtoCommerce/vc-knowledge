@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T04:10:33.400Z",
-  "count": 771,
+  "generated": "2026-10-13T04:10:36.111Z",
+  "count": 776,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3653,6 +3653,24 @@
       "disputed": 2
     },
     {
+      "id": "KB-31E9ECFB",
+      "path": "entries/KB-31E9ECFB.md",
+      "subject": "On theme 2.60.0-pr-2548 /account/missions renders 12 mission-card skeletons while GetLoyaltyMissionProgress is pending (full load and page change); page CLS 0.012 at 1920x1080",
+      "question": "Does the /account/missions card grid show skeleton cards while missions load on the PR-2548 theme, and what CLS remains?",
+      "anchors": [
+        "/account/missions",
+        "Query.loyaltyMissionProgress"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3320D7D3",
       "path": "entries/KB-3320D7D3.md",
       "subject": "Account sidebar items 'Missions & challenges' and 'Coupons & promotions' break mid-word at viewports 768-1279 px on every /account/* page",
@@ -4385,6 +4403,22 @@
         "identity=anonymous",
         "seolinktype=long",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3F1DBB6E",
+      "path": "entries/KB-3F1DBB6E.md",
+      "subject": "Admin product search returns imgSrc only when responseGroup includes ItemAssets; ItemInfo alone omits imgSrc and images",
+      "question": "Does POST /api/catalog/search/products with responseGroup ItemInfo return the product's imgSrc?",
+      "anchors": [
+        "POST /api/catalog/search/products"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12977,6 +13011,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-AA955464",
+      "path": "entries/KB-AA955464.md",
+      "subject": "After a platform start, BackgroundJobs (Hangfire engine) schedules setting-driven recurring jobs with the settings' default cron/enable values, while GET /api/background-jobs/recurring shows the configured values",
+      "question": "Why does /hangfire/recurring show a different cron or a missing job compared with the job's settings and the BackgroundJobs recurring list?",
+      "anchors": [
+        "/hangfire/recurring",
+        "GET /api/background-jobs/recurring",
+        "GET /api/platform/settings"
+      ],
+      "scope": [
+        "surface=background-jobs"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AB35BCDC",
       "path": "entries/KB-AB35BCDC.md",
       "subject": "what an order line item stops carrying once the cart becomes an order",
@@ -13425,6 +13477,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AF059013",
+      "path": "entries/KB-AF059013.md",
+      "subject": "Order line item imageUrl is persisted on order create but silently ignored on order update (PUT returns 200, value unchanged)",
+      "question": "Can an existing customer order's line item imageUrl be set or changed via PUT /api/order/customerOrders?",
+      "anchors": [
+        "PUT /api/order/customerOrders",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -15321,6 +15390,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CA8C7473",
+      "path": "entries/KB-CA8C7473.md",
+      "subject": "The failing PaymentMethod-deserialization background job is Subscription's CreateSubscriptionsFromOrdersJob: its payload embeds whole CustomerOrder objects, so it fails for every new order with an in-payment",
+      "question": "Which handler is the HangfireJobExecutor job that fails with \"Could not create an instance of type PaymentMethod … Orders[0].InPayments[0]\", and can a setting fix it?",
+      "anchors": [
+        "/hangfire/jobs/failed",
+        "POST /api/order/customerOrders",
+        "VirtoCommerce.SubscriptionModule.Data.BackgroundJobs.CreateSubscriptionsFromOrdersJob"
+      ],
+      "scope": [
+        "module=subscription",
+        "surface=background-jobs"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
