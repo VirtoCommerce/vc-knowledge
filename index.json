@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T17:04:25.956Z",
-  "count": 836,
+  "generated": "2026-10-13T17:08:54.515Z",
+  "count": 837,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7564,7 +7564,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10964,6 +10964,23 @@
       "scope": [
         "surface=admin-spa",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-897E75E9",
+      "path": "entries/KB-897E75E9.md",
+      "subject": "On the PR-2543 build, the markup view_item_list re-scan runs on node insertions and removals, not on style-only changes or scrolling; an id-less list re-sends once per such mutation batch",
+      "question": "Which storefront interactions make an id-less markup product list re-send view_item_list on /agent-test-ga4-html-product-lists, and which do not?",
+      "anchors": [
+        "/agent-test-ga4-html-product-lists"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",

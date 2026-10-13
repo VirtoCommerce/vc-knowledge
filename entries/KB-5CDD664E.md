@@ -20,5 +20,13 @@ evidence:
     who: Lenajava1
     build: 942f354b4df8bb56
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    conditions: theme=2.60.0-pr-2543-0127-01276486; browser=edge; role=guest
+    at: 2026-10-13T17:08:22.513Z
+    by: session:aa76d86f
+    bodyHash: 91330187b69b
+    who: Lenajava1
+    note: Reproduced 3/3 on Edge 1920 (guest). The partial list reached 20, 14 and 9 view_item_list events against 1 for the id-carrying list, matched 1:1 by /g/collect hits. The load-time count alone varies from 1 to 7 with no input. Growth stops when idle.
 ---
 Guest, Chrome 1920, a Page Builder HTML page with two data-vc-track product-list containers: one whose cards carry data-product-id/sku/name/price and one whose cards carry only name and price. On load each pushed one view_item_list. Opening and closing the header All products menu and typing a phrase into the header search, then Escape, pushed 12 more view_item_list for the name+price list (13 total, each delivered as its own /g/collect en=view_item_list hit) while the id-carrying list stayed at 1. With no interaction for 10 s the count stayed put, so each DOM mutation triggers one re-send. Partial items carry no item_id key (item_name, affiliation, currency, price only). The PR's engine dedups by entity id (id ?? code); id-less items are fresh objects on each scan so the shallow comparison never matches.
