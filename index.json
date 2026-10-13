@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T15:44:33.873Z",
-  "count": 817,
+  "generated": "2026-10-13T15:51:34.348Z",
+  "count": 820,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4707,6 +4707,23 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3F8696B8",
+      "path": "entries/KB-3F8696B8.md",
+      "subject": "users/create with an existing userName returns HTTP 200 {succeeded:false, errors:[\"Username '<name>' is already taken.\"]} and creates nothing",
+      "question": "POST /api/platform/security/users/create with an existing userName: status code and error message",
+      "anchors": [
+        "POST /api/platform/security/users/create"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14473,6 +14490,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-B6A59402",
+      "path": "entries/KB-B6A59402.md",
+      "subject": "A job enqueued via POST /api/background-jobs/enqueue that throws is retried (3 attempts) and reaches state Failed / completed=true only after ~3 minutes",
+      "question": "Does a failing job enqueued through POST /api/background-jobs/enqueue retry before /api/platform/jobs/{id} reports Failed?",
+      "anchors": [
+        "POST /api/background-jobs/enqueue",
+        "GET /api/platform/jobs/{id}"
+      ],
+      "scope": [
+        "module=background-jobs",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B7076554",
       "path": "entries/KB-B7076554.md",
       "subject": "salesRepActivities categoryCounts count GA hour-bucket rows (not events), are invariant to the categories filter, take clamps at 50 and skip>500 returns no rows with counts unchanged",
@@ -19856,6 +19891,24 @@
       ],
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-FA8E7A5F",
+      "path": "entries/KB-FA8E7A5F.md",
+      "subject": "Sitemaps on-demand download delivers a ZIP archive (sitemap.xml index + sitemap/ folder) at notification.downloadUrl, not a bare XML file",
+      "question": "GET /api/sitemaps/download notification downloadUrl: is the file a zip archive or sitemap XML?",
+      "anchors": [
+        "GET /api/sitemaps/download",
+        "POST /api/platform/pushnotifications"
+      ],
+      "scope": [
+        "module=sitemaps",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-FB8014EB",
