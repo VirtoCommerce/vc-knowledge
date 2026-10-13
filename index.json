@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T19:38:11.436Z",
-  "count": 861,
+  "generated": "2026-10-13T19:49:18.477Z",
+  "count": 862,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5602,7 +5602,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -5697,7 +5697,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7217,7 +7217,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -8024,6 +8024,24 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-60601EDD",
+      "path": "entries/KB-60601EDD.md",
+      "subject": "POST /api/platform/security/users/create returns only {succeeded, errors} - no user id; read the id afterwards with GET /api/platform/security/users/{userName}",
+      "question": "Does POST /api/platform/security/users/create return the new user's id?",
+      "anchors": [
+        "POST /api/platform/security/users/create",
+        "GET /api/platform/security/users/{userName}"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11476,7 +11494,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -20041,7 +20059,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {

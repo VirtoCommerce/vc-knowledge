@@ -18,5 +18,11 @@ evidence:
     at: 2026-10-13T18:52:43.523Z
     by: session:624d35a1
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_regression
+    at: 2026-10-13T19:46:47.521Z
+    by: session:624d35a1
+    who: kutasinaelena
+    note: "Re-observed 2026-10-13: catalog create with languages 200, PATCH by product id 404 / by inventory record id 204, order with customerName + items[].catalogId 200, pricing evaluate with catalogId returns list 20."
 ---
 Stable 16 (platform 3.1076.1). POST /api/catalog/catalogs {name} -> 500 "Value cannot be null. (Parameter 'source')"; adding languages:[{languageCode:'en-US',isDefault:true}] -> 200. A new product has no inventory row: PATCH /api/inventory/{productId} -> 404 both before and after a row exists; create stock with PUT /api/inventory/plenty [{productId, fulfillmentCenterId, inStockQuantity}] and PATCH /api/inventory/{inventoryRecordId} (id from GET /api/inventory/products/{productId}) -> 204. POST /api/order/customerOrders needs number and customerName (400 otherwise) and each line item needs catalogId (missing -> 500 raw SQL 'Cannot insert the value NULL into column CatalogId'). POST /api/pricing/evaluate {storeId, productIds, currency, quantity} returns [] for a price list assigned to a catalog other than the store's; adding catalogId (or pricelistIds) returns the price. GET /api/products/{productId}/prices returns a flat Price array (price id at [0].id).
