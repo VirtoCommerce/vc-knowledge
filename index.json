@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T17:47:58.825Z",
-  "count": 843,
+  "generated": "2026-10-13T17:52:56.260Z",
+  "count": 844,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2548,6 +2548,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1F808A3D",
+      "path": "entries/KB-1F808A3D.md",
+      "subject": "With Store 3.1010.0-pr-186 (VCST-6324 fix), deleting an SEO row in the still-open store SEO list after a store Save marks the store blade dirty and the deletion persists on the next Save",
+      "question": "In Admin SPA store SEO list, can I delete a record and Save without closing the SEO blade after a previous store Save?",
+      "anchors": [
+        "PUT /api/stores",
+        "GET /api/stores/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.store>=3.1010.0-pr-186",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
