@@ -3,3 +3,5 @@
 {"at":"2026-10-13T03:59:33.805Z","kind":"show","id":"KB-29A75D95","state":"answer","verify":true,"via":"mcp","call":"toolu_01QnxjRkbrhhV5VKQewKKajU","topic":"storefront dark mode and return wizard quantity","who":"Dan-BV","agent":"qa-frontend-expert"}
 {"at":"2026-10-13T03:59:34.081Z","kind":"show","id":"KB-2073D7AD","state":"answer","verify":true,"via":"mcp","call":"toolu_01N8HsAHw6mDZZAPR73EjEWG","topic":"storefront dark mode and return wizard quantity","who":"Dan-BV","agent":"qa-frontend-expert"}
 {"at":"2026-10-13T04:10:39.992Z","kind":"reindex","base":"(local checkout)","entries":776,"added":0,"removed":0,"retrusted":0,"problems":0,"who":"Dan-BV"}
+{"at":"2026-10-13T05:46:19.634Z","kind":"show","id":"KB-8BE777BB","state":"answer","verify":true,"via":"mcp","call":"toolu_01TEFJHQLymAYkC6mxdcofau","topic":"kb dispute re-observation storefront header","who":"Dan-BV","agent":"qa-frontend-expert"}
+{"at":"2026-10-13T05:46:19.932Z","kind":"show","id":"KB-4971F946","state":"answer","verify":true,"via":"mcp","call":"toolu_01ESSBJmmpb3tzHKSCKdNHNa","topic":"kb dispute re-observation storefront header","who":"Dan-BV","agent":"qa-frontend-expert"}
