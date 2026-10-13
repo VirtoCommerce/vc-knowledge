@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T12:31:13.389Z",
-  "count": 790,
+  "generated": "2026-10-13T12:31:31.732Z",
+  "count": 791,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9732,7 +9732,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-7DB10B1F",
@@ -12697,7 +12697,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -15266,6 +15266,24 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C56AE583",
+      "path": "entries/KB-C56AE583.md",
+      "subject": "An admin order status change via PUT /api/order/customerOrders writes one /changes entry and sends one NewOrderStatusEmailNotification per transition",
+      "question": "What does a status change saved through PUT /api/order/customerOrders produce in the order change log and the notification journal, and how fast?",
+      "anchors": [
+        "PUT /api/order/customerOrders",
+        "GET /api/order/customerOrders/{id}/changes",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
