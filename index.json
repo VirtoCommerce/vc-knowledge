@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T08:01:53.242Z",
+  "generated": "2026-10-13T08:03:32.757Z",
   "count": 777,
   "entries": [
     {
@@ -6345,7 +6345,7 @@
     {
       "id": "KB-515D41EC",
       "path": "entries/KB-515D41EC.md",
-      "subject": "Barcode scanner blade lists saved fields first in stored order, then the rest by display label",
+      "subject": "Barcode scanner blade lists the saved (checked) fields first, then the rest, each group sorted alphabetically by display label - not in stored order",
       "question": "In what order does the Admin Barcode scanner blade list the saved and unsaved barcode fields?",
       "questions": [
         "When I reopen the barcode scanner settings, why are my chosen fields not shown in the order I saved them?",
@@ -6365,8 +6365,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 0,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-51888868",
