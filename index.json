@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T08:49:33.085Z",
-  "count": 780,
+  "generated": "2026-10-13T09:06:35.048Z",
+  "count": 781,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -362,6 +362,22 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-05F297E6",
+      "path": "entries/KB-05F297E6.md",
+      "subject": "With the Mercury preset in dark mode, the PDP SKU line (text-secondary-900) renders #0d1013 on #121317 = 1.03:1, because the Mercury dark preset leaves secondary 800/900/950 at their light values",
+      "question": "Is the SKU line under the product title on /products/{slug} PDP readable in dark mode with the Mercury preset?",
+      "anchors": [
+        "/products-with-options/cfg-parents/agent-test-config-phone-case"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-06409954",
