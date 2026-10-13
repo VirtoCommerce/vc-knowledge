@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T12:40:31.861Z",
-  "count": 793,
+  "generated": "2026-10-13T12:58:05.071Z",
+  "count": 794,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10357,6 +10357,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-87C33CCC",
+      "path": "entries/KB-87C33CCC.md",
+      "subject": "The storefront's entry bundle (/assets/index-<hash>.js, referenced from the index HTML) inlines the deployed theme version as x=\"<version>\",y={version:x}, readable anonymously",
+      "question": "Where can the deployed storefront theme (vc-frontend) version be read without a browser or admin token?",
+      "anchors": [
+        "/assets/index-*.js",
+        "/sign-in"
+      ],
+      "scope": [
+        "layer=deployment",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
