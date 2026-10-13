@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T15:35:44.631Z",
-  "count": 813,
+  "generated": "2026-10-13T15:39:08.020Z",
+  "count": 816,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -160,6 +160,24 @@
       "scope": [
         "principal=org-member",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-02347FCF",
+      "path": "entries/KB-02347FCF.md",
+      "subject": "Currency midpointRounding ToZero / ToNegativeInfinity act as directed rounding on all values, not only on midpoints",
+      "question": "What does the currency Midpoint rounding = ToZero setting do to a cart line price that is not a midpoint, e.g. 24.9375?",
+      "anchors": [
+        "PUT /api/currencies",
+        "Query.cart"
+      ],
+      "scope": [
+        "module=virtocommerce.core",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -1088,6 +1106,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-0FC6E226",
+      "path": "entries/KB-0FC6E226.md",
+      "subject": "Store Payment/Shipping methods grid \"Is active\" column is display-only; activation is the Is active switch in the method detail blade",
+      "question": "How do you activate or deactivate a payment or shipping method for a store in the Admin SPA?",
+      "anchors": [
+        "POST /api/payment/search",
+        "POST /api/shipping/search",
+        "Query.cart"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1007ADDE",
       "path": "entries/KB-1007ADDE.md",
       "subject": "The /company/tasks Today list and counts send a period of browser-local midnight to +24h-1ms in UTC, with today equal to the period start",
@@ -1665,7 +1701,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9938,6 +9974,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-7EF11A51",
+      "path": "entries/KB-7EF11A51.md",
+      "subject": "Storefront account profile Email field is always disabled in vc-frontend; email cannot be changed from /account/profile",
+      "question": "Can a buyer change their email address on the storefront /account/profile page?",
+      "anchors": [
+        "/account/profile"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7F535D52",
       "path": "entries/KB-7F535D52.md",
       "subject": "CyberSource sandbox authorization on the storefront cart is non-deterministic between runs on one build: the same card and amount can authorize cleanly to Processing, or be held for review and leave the order at Payment required.",
@@ -15413,7 +15465,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
