@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T09:06:35.048Z",
-  "count": 781,
+  "generated": "2026-10-13T09:26:08.055Z",
+  "count": 783,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1105,6 +1105,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-10210674",
+      "path": "entries/KB-10210674.md",
+      "subject": "Configuration files of an order placed before the VCST-5995 fix builds read 403 even for the order's own buyer, and the storefront then navigates to /403",
+      "question": "Can the buyer download a File-section attachment from an order placed before the VCST-5995 fix (GET /api/files/{id} from /account/orders/{id})?",
+      "anchors": [
+        "GET /api/files/{id}",
+        "/account/orders/{id}"
+      ],
+      "scope": [
+        "file-scope=product-configuration",
+        "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -17555,6 +17574,26 @@
       "scope": [
         "grant_type=password",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E9FD99DC",
+      "path": "entries/KB-E9FD99DC.md",
+      "subject": "On vcst_qa 2026-10-13 the product-configuration upload scope is not configured: uploads return INVALID_SCOPE under HTTP 200 and the PDP shows no error",
+      "question": "Can a buyer upload a configurable-product File section file to POST /api/files/product-configuration on vcst_qa right now?",
+      "anchors": [
+        "POST /api/files/product-configuration",
+        "Query.fileUploadOptions"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "module=fileexperienceapi",
+        "surface=rest-api",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
