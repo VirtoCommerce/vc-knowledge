@@ -26,11 +26,15 @@ evidence:
     at: 2026-10-08T21:58:55.530Z
     by: session:391bbdbb
     who: yuskithedeveloper
+    build: bd841d0b7d1d7d53
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa
     at: 2026-10-12T07:58:06.365Z
     by: session:c1b20b2e
     who: Aleksandra-Mitricheva
     note: "pr-18-42c1, TTL 60. Pod-pinned reads, the first one right after the mutation returned, matched the cold twin on both pods: after changeCartItemQuantity, after createOrderFromCart (order ACME 7 to 8 / +1197, YTD the same, cart statistics drop the converted cart), after an admin New to Completed change (the vocabulary gains Completed) and after an admin cancel (the figures return to 7 / 663.2). The cancelled order stays as the row's lastOrder with status Cancelled."
+    build: c55c1a124b302d3b
+    buildFrom: deploy-history
 ---
 SalesRep 3.1013.0-pr-18 (VCST-5755) on vcst_qa, 2026-10-08, statistics TTL 60 min, InvalidateOnChange flags at their defaults (Cart/Order/CustomerCounts true) and TopSeller set true. For a rep serving one organization: each key was warmed with 15-25 cookie-less reads (both instances), then the rep changed data through /graphql (addItem, changeCartItemQuantity, clearCart, removeCart, createOrderFromCart) or an admin cancelled the rep's order (PUT /api/order/customerOrders with isCancelled=true). Reads fired 0 ms after the mutation response (8-10 in parallel) and 20 sequential reads matched a never-read twin key in every case: salesRepCustomerCartStatistics, salesRepCustomerOrderStatistics (period and comparison), salesRepCustomerCounts, salesRepCustomers inline orderStatistics, salesRepOrderFilterRules status vocabulary, salesRepTopSellers, and the all-served keys with organizationId omitted or empty string. A cancelled order drops out of every figure (count and total back to 0) but stays as the row's lastOrder with status Cancelled and keeps 'Cancelled' in the status vocabulary. A read storm DURING a cart mutation (4 loops, ~200 reads) left no stale entry behind. Once in ~14 sequences, 5 of 10 parallel salesRepTopSellers reads finishing 200-270 ms after an order response were stale; all reads from ~700 ms on were fresh: the backplane delay is real but under a second.

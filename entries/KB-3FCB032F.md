@@ -23,5 +23,7 @@ evidence:
     by: session:p26612
     who: Lenajava1
     splitFrom: KB-24AA6296
+    build: 17622bd158a36d4f
+    buildFrom: deploy-history
 ---
 Raising an assignment's priority via GET + PUT /api/pricing/assignments with only priority changed made that list win over another unconditional list at the same scope, as seen in POST /api/pricing/evaluate.

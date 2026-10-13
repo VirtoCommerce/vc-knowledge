@@ -19,5 +19,7 @@ evidence:
     at: 2026-10-09T10:56:17.157Z
     by: session:df9d131f
     who: Lenajava1
+    build: a6e179f178104063
+    buildFrom: deploy-history
 ---
 On theme vc-frontend-next 3.0.0-alpha.2685 (2026-10-09), /forgot-password ('Reset your password', Submit disabled until an email is entered) submitted for a registered B2B-store account sends GraphQL mutation sendPasswordResetEmail(command:{storeId, cultureName, loginOrEmail, urlSuffix:'/reset-password'}) which returned data true with no errors; the page replaced the form with 'We sent you a reset password link to your inbox' and a Home page link. Within a second POST /api/notifications/journal (keyword = the email) listed a ResetPasswordEmailNotification, subject 'Reset password link', status Sent.

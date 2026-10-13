@@ -18,5 +18,7 @@ evidence:
     at: 2026-10-09T10:56:17.138Z
     by: session:df9d131f
     who: Lenajava1
+    build: a6e179f178104063
+    buildFrom: deploy-history
 ---
 On theme vc-frontend-next 3.0.0-alpha.2685 with SalesRep 3.1013.0-pr-18, /company/dashboard for a rep serving 4 orgs shows a 'My recent orders' widget with toggle buttons All (pressed by default), Cancelled, New, Payment required, Processing and a table Order # / Customer / Date / Status / Total. Each button (aria-pressed) narrowed the table to rows of only that status (Cancelled 1, New 5, Payment required 1, Processing 2); no GraphQL errors. On /company/my-customers a non-matching name search shows 'No customers match your search' with a Reset search button.

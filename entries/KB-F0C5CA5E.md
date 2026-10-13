@@ -23,5 +23,7 @@ evidence:
     by: session:memimpor
     who: Lenajava1
     splitFrom: KB-001183CF
+    build: e7c4faf10f640e7c
+    buildFrom: deploy-history
 ---
 The coupon card on /account/coupons forces the code to uppercase in JavaScript, both in the display and in the copied clipboard value - a presentation-only issue, since the uppercased code still applies.

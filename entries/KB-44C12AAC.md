@@ -18,5 +18,7 @@ evidence:
     at: 2026-10-09T11:24:58.526Z
     by: session:df9d131f
     who: Lenajava1
+    build: a6e179f178104063
+    buildFrom: deploy-history
 ---
 2026-10-09, storefront 3.0.0-alpha.2685: list with one in-stock product (xAPI product.minQuantity 1, maxQuantity 0, availableQuantity 1225). Untouched list details page: <input type=number min=1 max=0 value=1 aria-label="Product quantity">; validity.rangeOverflow=true, :invalid matches, Chromium accessibility tree reports spinbutton invalid=true, valuemin=1, valuemax=0, with no visible error text. Typing 5 shows no error and Add to cart works, so the effect is a programmatic invalid state (screen readers announce the field invalid), not a functional block. Same product on /cart renders min=1 max=1225 (invalid=false) and on the PDP min=0 max=1225 (invalid=false). Also reproduced on storefront 2.59.0-pr-2458 (vcptcore_qa), product with maxQuantity 0 / availableQuantity 248: identical min=1 max=0, AX invalid=true.

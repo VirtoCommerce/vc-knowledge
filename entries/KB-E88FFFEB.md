@@ -18,5 +18,7 @@ evidence:
     at: 2026-10-13T13:58:43.265Z
     by: session:aa76d86f
     who: Lenajava1
+    build: 942f354b4df8bb56
+    buildFrom: deploy-history
 ---
 Signed in on /cart with 6 recently browsed and 8 saved-for-later products (disjoint): cold load pushed one view_item_list recently_browsed_products ('Recently browsed') with exactly the 6 RB products and none of the SFL products. Saved-for-later Show more (6 -> 8 cards) pushed no event. A cart line quantity +1 pushed update_cart_item and add_shipping_info but no RB re-send. An SFL card title click pushed one select_item with item_list_id recently_browsed_products (the SFL block reuses that id, manual call); an RB card title click pushed one select_item for that product. Cart-page product links open in a new tab. The RB list is re-sent on resize when the grid's rendered count changes (1920->390->800->1920 gave 6, 4, 6).

@@ -29,5 +29,7 @@ evidence:
     at: 2026-09-25T11:16:59.694Z
     by: session:memimpor
     who: Lenajava1
+    build: e7c4faf10f640e7c
+    buildFrom: deploy-history
 ---
 A sale price is modelled as the list price in the cart subtotal plus a line-level sale discount, not as a lower subtotal: the order summary subtotal shows the list price, the line's placed and extended price show the sale price, and the difference appears as a line discount. The cart's aggregate discountTotal therefore bundles sale and coupon discounts, and a coupon's own effect is its entry in the addCoupon response's discounts. Because tax is recomputed on the discounted base, the grand-total change does not equal the discount; subtotal minus discount plus tax plus shipping equals the grand total.

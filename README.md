@@ -13,10 +13,14 @@ One base, at the root of this repository. See *What used to be here* below.
 | `index.json` | one row per entry — everything needed to RANK an entry, nothing needed to read one. One fetch answers "what does this base hold?" |
 | `entries/KB-XXXXXXXX.md` | one fact each: frontmatter (subject, question, anchors, scope, `evidence[]`) plus the claim in prose |
 | `log/YYYY-MM-DD/*.jsonl` | one file per session: what was asked, what matched, what missed, what was captured or confirmed |
+| `builds/<pin>.json` | one build a stand ran when something was observed on it: platform, theme, module versions. Content-addressed — an evidence item names it as `build: <pin>` |
 
-An entry records something an agent **saw on a deployment** — not something it read in the source, and
-not something it inferred. `evidence[]` carries one item per independent observation, with the
-deployment and the timestamp; the confirmation count and the disputed flag are computed from it and
+An entry records something an agent **saw on a deployment**, or — labelled as such — **read in source
+code** (`method: source`, with the code version it read instead of a stand), and never something it
+inferred. A source-only entry is shown as *from source, not observed live* and never counts as
+corroborated; one live confirmation makes it an ordinary entry. `evidence[]` carries one item per
+independent observation, with the stand (one name per stand), the build that stand ran, and the
+timestamp; the confirmation count and the disputed flag are computed from it and
 never declared, so there is only one copy of how well attested a fact is.
 
 A **dispute never retires anything.** One contradicting observation against four confirmations is a

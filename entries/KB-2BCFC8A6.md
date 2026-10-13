@@ -24,9 +24,11 @@ anchors:
   - coordinate: /account/quotes
 evidence:
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-10-05T13:36:12.324Z
     by: session:51fcfb97
     who: kutasinaelena
+    build: 59983c56933fe571
+    buildFrom: deploy-history
 ---
 The storefront quote detail page shows Approve and Decline only when quote.status === 'Proposal sent' and renders the raw status code as its label (vc-frontend view-quote.vue, settings_data.json quote statuses). The approveQuoteRequest mutation (ApproveQuoteCommandHandler) accepts only 'Proposal sent', then converts the quote to a cart, places the customer order and sets the quote to 'Ordered' in the same call; declineQuoteRequest sets 'Declined'. There is no intermediate 'Accepted' status and no separate checkout step for a quote. On vcst the Quotes.Status allowed values are Processing, On hold, New, Declined, Proposal sent, Ordered; Quotes.DefaultStatus is Draft.

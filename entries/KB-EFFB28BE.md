@@ -26,9 +26,11 @@ anchors:
   - coordinate: /company/info
 evidence:
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-10-05T07:27:09.334Z
     by: session:51fcfb97
     who: kutasinaelena
+    build: 59983c56933fe571
+    buildFrom: deploy-history
 ---
 A customer Address on POST /api/members has both a name and a description field and they are stored independently. An organization address written with only name set reads back with description null, and xAPI Query.me contact.organization.addresses returns both fields separately. The storefront checkout Select-address table and the company info address list show the Description column from description, so such addresses render with an empty Description. Setting description on the address (POST /api/members with the full member) makes xAPI return it immediately.

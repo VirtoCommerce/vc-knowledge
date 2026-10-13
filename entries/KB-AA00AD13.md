@@ -23,5 +23,7 @@ evidence:
     by: session:memimpor
     who: Lenajava1
     splitFrom: KB-C923D0DB
+    build: e7c4faf10f640e7c
+    buildFrom: deploy-history
 ---
 The confirmation email's link points to /account/confirmemail with the user id and an identity token; opened in a fresh browser with no session it renders the Email confirmation success page asking the user to sign in, and does not sign them in. Opening a freshly resent link for an already-confirmed account shows the same success page rather than an error.

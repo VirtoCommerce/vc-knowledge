@@ -28,6 +28,8 @@ evidence:
     by: session:p35464
     who: kutasinaelena
     splitFrom: KB-5A6C014E
+    build: 4f19df8c0430141c
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     at: 2026-09-29T05:46:26.252Z
@@ -41,6 +43,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/returns-limit-20261008
     resolution: Copied here by a split; it is about what the return wizard displays (KB-2073D7AD). It agrees with this entry that the stored draft is limited only at submit, re-observed live 2026-10-08.
+    build: 4f19df8c0430141c
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     conditions: platform=3.1077.0-pr-3123-6664; module:VirtoCommerce.Return=3.1004.0; module:VirtoCommerce.Orders=3.1018.0; module:VirtoCommerce.XOrder=3.1014.0; theme=2.59.0-pr-2506-bb0f; store=B2B-store; setting:Return.AllowedShipmentStatuses=Sent; role=Organization maintainer
@@ -49,6 +53,8 @@ evidence:
     who: Dan-BV
     note: "Fresh order 2026-10-08 (lines of 5 and 12): createReturn above the returnable quantity (6/5, 60/5) returns 200 and stores a Draft with the over-limit quantity; updateReturn to 9/5 and 13/12 also 200 and stored; Drafts do not consume returnable quantity; submitReturn is refused with errors RETURN_QUANTITY_UNAVAILABLE \"asked for 9, 5 available\" (first offending line only) and the return stays Draft; within-limit submits go to Requested. After a partial authorize returnable = ordered - approvedQuantity on the decided line - quantities still Requested."
     investigation: true
+    build: 7592346292e2fa35
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.Return=3.1004.0; module:VirtoCommerce.Orders=3.1018.0; module:VirtoCommerce.XOrder=3.1014.0; theme=2.59.0; store=B2B-store; role=Organization maintainer
@@ -57,5 +63,7 @@ evidence:
     who: Dan-BV
     note: "Fresh order 2026-10-08 (lines of 5 and 12): createReturn above the returnable quantity (6/5, 60/5) returns 200 and stores a Draft with the over-limit quantity; updateReturn to 9/5 and 13/12 also 200 and stored; Drafts do not consume returnable quantity; submitReturn is refused with errors RETURN_QUANTITY_UNAVAILABLE \"asked for 9, 5 available\" (first offending line only) and the return stays Draft; within-limit submits go to Requested. After a partial authorize returnable = ordered - approvedQuantity on the decided line - quantities still Requested."
     investigation: true
+    build: c4000d0bea152759
+    buildFrom: deploy-history
 ---
 On the Return module (3.1003 pr-27 build) with theme 2.59 pr-2500, the buyer mutation createReturn with an item quantity above the line's returnable quantity (13 of 12, 261 of 260) returned 200 and created a Draft carrying the over-limit quantity. submitReturn on it is refused and the storefront shows 'Some items are no longer available to return in the quantity you asked for. Adjust the quantities and try again.'; the return stays Draft. So the limit is enforced at submit, not at draft create/update. Returnable quantity after a partial approval is ordered minus held, where a decided line holds approvedQuantity: 500 ordered, 240 requested, 200 approved gave 300 returnable.

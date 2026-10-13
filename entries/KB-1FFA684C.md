@@ -21,5 +21,7 @@ evidence:
     at: 2026-10-08T11:40:28.201Z
     by: session:b9db3f52
     who: Aleksandra-Mitricheva
+    build: f960736e1109b3de
+    buildFrom: deploy-history
 ---
 Password-grant tokens (storeId=B2B-store) for four non-rep B2B members (Organization employee, maintainer, manager, Purchasing agent; permissions without any sales-rep entry) called Query.salesRepActivities (no organizationId, own org id, an unrelated org id), Query.salesRepCustomerActivitySummary and Query.salesRepCustomerInsights on POST /graphql/sales-rep and on POST /graphql. Every call returned HTTP 200 with the field null and no errors[] - never rows, never an authorization error. The same three queries with a rep token returned identical data on both endpoints; the storefront itself calls them on the main /graphql endpoint. POST /api/sales-rep/analytics-diagnostics returned 403 for both member and rep tokens.

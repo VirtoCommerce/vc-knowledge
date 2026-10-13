@@ -26,5 +26,7 @@ evidence:
     by: session:memimpor
     who: Lenajava1
     splitFrom: KB-C923D0DB
+    build: e7c4faf10f640e7c
+    buildFrom: deploy-history
 ---
 The storefront /sign-in page has no self-service resend link, BY DESIGN; the resend path is the Admin user blade's Resend link, which produces an Email confirmation notification visible in the Admin notification activity feed with a preview of the body.

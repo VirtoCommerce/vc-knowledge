@@ -16,29 +16,39 @@ evidence:
     deployment: vcptcore_dev
     at: 2026-10-06T17:53:23.327Z
     by: session:b6bd53fc
+    build: 885191398cb25816
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-08T14:50:56.073Z
     by: session:62b7421e
     who: Lenajava1
     note: Theme 2.60.0-pr-2523-9e4e (merge of dev into the PR branch; returns files differ from 3f1b9c6 only by VCST-6107 contrast classes). A non-holder org member opening /account/returns?scope=organization saw no tab and the own list ("There are no returns yet"); console 0 errors.
+    build: a4864f7572f52c25
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-08T16:14:37.131Z
     by: session:62b7421e
     who: Lenajava1
     note: "Fresh lane A run on theme 2.60.0-pr-2523-9e4e: tab present for global, membership and organization-level role holders; absent for non-holders and for locked/invited/rejected/deleted memberships; follows the switcher for a two-org contact; after withdrawing the organization-level role the tab survived a reload and opening it routed to /403; a fresh sign-in dropped it; re-granting needed a new sign-in."
+    build: 2f9a5dce907b5872
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_dev
     at: 2026-10-09T20:39:59.663Z
     by: session:61a7b05a
     who: yuskithedeveloper
     note: "Re-observed on theme 2.60.0-pr-2523-466f with Return 3.1005.0-pr-28-fb4f: maintainer sees My returns plus a tab named after the selected organization with a Buyer name column and the '...product or buyer' placeholder; a colleague's return opens read-only (Requested by, no Cancel, no Edit); a member without the permission gets no tab and ?scope=organization shows the own list (only GetReturns sent); a two-organization holder's tab follows the switcher. The org-tab status filter no longer offers Draft."
+    build: d432d886bcd90e4f
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-12T09:01:12.790Z
     by: session:573e5582
     who: Lenajava1
     note: "Theme 2.60.0-pr-2523-4263 / Return 3.1005.0-pr-28-fb4f, 2026-10-12: global-role and membership-role holders see My returns + a tab named after the organization (columns RMA, Date, Buyer name, Status, Qty); colleague returns (Requested and submitted-then-Cancelled) open with 'Requested by' and no Cancel; the holder's own return opened from the organization tab keeps Cancel return. A non-holder buyer at ?scope=organization gets the own list with only GetReturns sent. A two-organization contact holding the permission only in the viewer org: tab present there, absent after switching to the other org (own list, no Buyer name column, URL still ?scope=organization); a return the contact submitted on the other org's order was not found on the viewer org's tab by keyword."
+    build: 0bb1aea0269f4c1b
+    buildFrom: deploy-history
 ---
 On theme 2.59.0-pr-2523, /account/returns shows "My returns" plus a tab named after the selected organization (?scope=organization) when the token carries xapi:my_organization:return:view; the tab adds a sortable Buyer name column and an organization search placeholder. A colleague's return opens read-only with a "Requested by" row and no Cancel or Edit. Without the permission there is no tab and ?scope=organization silently shows the own list (client-side, no request). The tab follows the organization switcher. After a revoke the tab stays, even across a reload, until a new access token, and opening it routes to /403. At 375 px the organization label truncates with an ellipsis (about 108 px) and the full name is in title and the accessible name.

@@ -30,6 +30,8 @@ evidence:
     at: 2026-09-29T12:22:06.233Z
     by: session:p20808
     who: Aleksandra-Mitricheva
+    build: 7f4081223d65d3fa
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa
     at: 2026-10-06T01:06:18.607Z
@@ -43,8 +45,10 @@ evidence:
     resolvedIn: judge/list-sharing-20261012
     resolution: One save sends one sendCustomerCommunication with organizationIds = all newly added orgs (observed on vcst and vcptcore; the storefront code has done so since 2026-09-12), not one call per organization.
     amendedFrom: b1466d2d0ed4
+    build: c84cd38eec6a2c5b
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     conditions: theme=2.60.0-pr-2511-81f1; platform=3.1078.0; module:VirtoCommerce.XCart=3.1041.0; module:VirtoCommerce.Cart=3.1012.0; module:VirtoCommerce.SalesRep=3.1013.0-pr-18-d367; store=B2B-store; role=sales-rep
     at: 2026-10-12T17:25:03.511Z
     by: session:34990ccd
@@ -52,8 +56,10 @@ evidence:
     note: "Two orgs added in one save: ONE SendCustomerCommunication with organizationIds=[both], sendEmail/sendPush true, title 'A new list from your sales representative', message = typed note or the default 'Hi! I've just shared the list ... Take a look:' + blank line + /shared-list URL; no org name. A later single add notifies only that org; removing one sends nothing. Notifications dropdown shows message + link, no title."
     investigation: true
     bodyHash: 491c95939c80
+    build: 4ca08b7825765bae
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcptcore
+    deployment: vcptcore_qa
     conditions: theme=2.60.0-pr-2522-6f90; store=B2B-store; role=sales-rep
     at: 2026-10-12T17:25:05.143Z
     by: session:34990ccd
@@ -61,5 +67,7 @@ evidence:
     note: "Two orgs added in one save: ONE SendCustomerCommunication with organizationIds=[both], sendEmail/sendPush true, title 'A new list from your sales representative', message = typed note or the default 'Hi! I've just shared the list ... Take a look:' + blank line + /shared-list URL; no org name. A later single add notifies only that org; removing one sends nothing. Notifications dropdown shows message + link, no title."
     investigation: true
     bodyHash: 491c95939c80
+    build: c55c1a124b302d3b
+    buildFrom: deploy-history
 ---
 On theme 2.60.0-pr-2511-81f1 (vcst) and 2.60.0-pr-2522-6f90 (vcptcore), 2026-10-12, saving the Share dialog with newly added Customer targets issues ONE Mutation.sendCustomerCommunication per save, with organizationIds = the newly added organizations only (two added at once: one call carrying both ids), sendEmail and sendPush true, title 'A new list from your sales representative', and message either the rep's typed note or, when empty, 'Hi! I've just shared the list "<name>" with your organization. Take a look:', followed by a blank line and the /shared-list/<key> URL. Neither title nor message contains the organization name. Adding one organization later notifies only that organization; removing one, or a scope change other than to Specific customers, sends nothing. The recipient's Notifications dropdown shows the message and the link with a timestamp, without the title. The single organizationIds call has been the storefront rule since 2026-09-12 (vc-frontend wishlist-customer-sharing.vue notifyCustomers(addedIds), design decision 5 of VCST-5707).

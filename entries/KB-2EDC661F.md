@@ -22,9 +22,11 @@ anchors:
   - coordinate: Query.cart
 evidence:
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-19T13:55:48.318Z
     by: session:local_5a
     splitFrom: KB-6C3FA2B7
+    build: 8169d5e903339ded
+    buildFrom: deploy-history
 ---
 Query.cart with no cartName returns the most-recently-touched cart, NOT the one named 'default'.

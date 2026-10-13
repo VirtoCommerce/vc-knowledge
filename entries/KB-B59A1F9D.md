@@ -21,10 +21,12 @@ anchors:
   - coordinate: Mutation.changeWishlist
 evidence:
   - method: observation
-    deployment: vcptcore
+    deployment: vcptcore_qa
     at: 2026-09-30T11:57:56.393Z
     by: session:p11964
     who: Aleksandra-Mitricheva
+    build: 7f4081223d65d3fa
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa
     at: 2026-10-05T12:15:08.373Z
@@ -37,6 +39,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/wishlist-owner-part-20261008
     resolution: Forbidden from XCart 3.1038 (live on released 3.1039.0); the takeover is live on released XCart 3.1021.2, so it is not only a pre-fix PR build. Body scoped by build.
+    build: c84cd38eec6a2c5b
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     conditions: platform=3.1039.12; module:VirtoCommerce.XCart=3.1021.2; module:VirtoCommerce.Cart=3.1006.1; module:VirtoCommerce.Xapi=3.1012.3; theme=2.51.2; store=B2B-store; role=Purchasing agent
@@ -45,6 +49,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: on A Organization lists, B changeWishlist with scope Private / AnyoneAnonymous / the unchanged Organization (the payload the List settings Save sends) succeeded and moved customerId to B; A lost the list; rename-only kept ownership; B removeWishlist succeeded."
     investigation: true
+    build: efc133672faec7fa
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.XCart=3.1039.0; module:VirtoCommerce.Cart=3.1012.0; module:VirtoCommerce.Xapi=3.1026.0; theme=2.59.0; store=B2B-store; role=Organization maintainer (owner) / Purchasing agent (member)
@@ -53,6 +59,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: B changeWishlist with scope AnyoneAnonymous / Private / unchanged Organization, with and without sharingKey: errors[Forbidden Access denied.], nothing changed; rename-only succeeded with customerId and scope unchanged; B removeWishlist Forbidden."
     investigation: true
+    build: c4000d0bea152759
+    buildFrom: deploy-history
 ---
 What a non-owner organization member (access Write, isOwner false) can do to a colleague's Organization-scope list through changeWishlist depends on the XCart build.
 

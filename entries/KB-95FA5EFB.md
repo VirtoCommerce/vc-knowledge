@@ -17,5 +17,7 @@ evidence:
     deployment: vcptcore_dev
     at: 2026-10-05T21:39:54.696Z
     by: session:f9a8159e
+    build: 8db313999cee1432
+    buildFrom: deploy-history
 ---
 Query.category(id, storeId, cultureName) for a category owned by another store's catalog returned data.category null and no errors[]; the same id with the owning store returned the category with its slug and seoInfo. Explain on the first store rejects the same category's record with NotInStoreCatalog, so the catalog membership decides both answers.

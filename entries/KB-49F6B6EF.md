@@ -25,17 +25,23 @@ evidence:
     at: 2026-10-01T21:15:59.860Z
     by: session:527ae7ed
     who: kutasinaelena
+    build: 3194c6d6a8199217
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-08T15:37:34.775Z
     by: session:62b7421e
     who: Lenajava1
     note: "Same on vcst_qa 2026-10-08: roles search returned permissions [] for all 72 roles; GET roles/{name} returned them; GET roles/{id} answered 204 with no body. PUT with a pinned id upserted."
+    build: 2f9a5dce907b5872
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-12T09:30:06.970Z
     by: session:573e5582
     who: Lenajava1
     note: "2026-10-12: GET roles/{name} for 72 roles used to find holders of xapi:my_organization:return:view; search alone would not show them."
+    build: 0bb1aea0269f4c1b
+    buildFrom: deploy-history
 ---
 POST /api/platform/security/roles/search returns matching roles with permissions: [] even when the role holds permissions. GET /api/platform/security/roles/{roleName} returns the same role with its full permissions list. A seeder or check that compares permissions from the search result reports a drift that does not exist (seen 2026-10-02 on roles with customer:access, customer:read, punchout:read that a Manager token then exercised correctly: search 200, DELETE 403). PUT /api/platform/security/roles with a stable id upserts the role.

@@ -20,10 +20,12 @@ anchors:
   - coordinate: /account/orders
 evidence:
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-29T15:28:41.618Z
     by: session:79182e15
     who: Lenajava1
+    build: a7d3cf1036046bf9
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-05T20:05:38.826Z
@@ -36,14 +38,18 @@ evidence:
     resolvedBy: session:34990ccd
     resolvedIn: judge/list-sharing-20261012
     resolution: "Both sides are right on their own build: pr-2524 predates vc-frontend 702d1c1c (#2519), which added the field suffix to the split calendar triggers; builds with it show 'Open calendar: Start date' / 'End date', re-observed on vcst and vcptcore."
+    build: 59983c56933fe571
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa
     at: 2026-10-06T15:01:51.380Z
     by: session:7982e016
     who: Aleksandra-Mitricheva
     note: "Split-layout part only (Clear scope not re-checked). On theme 2.59.0-pr-2519 at 1920px, /account/orders Filters: each field opens its own SINGLE-month calendar (one 42-cell grid, Previous/Next year+month, Today/Clear footer), and the triggers ARE named 'Open calendar: Start date' / 'Open calendar: End date' on this build, so whether the trigger name has a suffix depends on the build (the dispute was seen on pr-2524)."
+    build: 2077d219738578a0
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     conditions: theme=2.60.0-pr-2511-81f1; role=sales-rep
     at: 2026-10-12T18:27:41.563Z
     by: session:34990ccd
@@ -51,8 +57,10 @@ evidence:
     note: "2026-10-12 Filters on /account/orders and /company/my-customers/<id>/orders: split (1920) triggers 'Open calendar: Start date' / 'Open calendar: End date'; combined (375) one 'Open calendar'; split footer Clear empties only its field (both directions), combined Clear empties both; no in-field clear. Source: vc-date-range-picker.vue L28/L49 open_calendar_for, added by 702d1c1c (#2519)."
     investigation: true
     bodyHash: 340571338a00
+    build: 4ca08b7825765bae
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcptcore
+    deployment: vcptcore_qa
     conditions: theme=2.60.0-pr-2522-6f90; role=sales-rep
     at: 2026-10-12T18:27:43.535Z
     by: session:34990ccd
@@ -60,5 +68,7 @@ evidence:
     note: "2026-10-12 Filters on /account/orders and /company/my-customers/<id>/orders: split (1920) triggers 'Open calendar: Start date' / 'Open calendar: End date'; combined (375) one 'Open calendar'; split footer Clear empties only its field (both directions), combined Clear empties both; no in-field clear. Source: vc-date-range-picker.vue L28/L49 open_calendar_for, added by 702d1c1c (#2519)."
     investigation: true
     bodyHash: 340571338a00
+    build: c55c1a124b302d3b
+    buildFrom: deploy-history
 ---
 In the split layout (two labelled fields, used at sm/640px and wider) each field opens its own calendar, and that calendar's footer Clear empties only its own field; emptying the range needs Clear in both calendars. In the combined layout (one Date range field, below sm) the single calendar's footer Clear empties both dates at once. The split fields carry no in-field clear button; their calendar triggers are named 'Open calendar: Start date' / 'Open calendar: End date', while the combined trigger is named just 'Open calendar'. The suffixed split trigger names come from vc-frontend 702d1c1c (VCST-6001, #2519, merged 2026-10-07: calendarButtonAriaLabel + ui_kit.accessibility.open_calendar_for); builds without it, such as 2.59.0-pr-2524 (2026-10-02), name both split triggers just 'Open calendar'. Re-observed 2026-10-12 on themes 2.60.0-pr-2511-81f1 (vcst) and 2.60.0-pr-2522-6f90 (vcptcore), on /account/orders and the sales-rep customer orders Filters (/company/my-customers/<id>/orders): suffixed names in split at 1920 px, one 'Open calendar' in combined at 375 px, split Clear empties only its own field, combined Clear empties both, no in-field clear.

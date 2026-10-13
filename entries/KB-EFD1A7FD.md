@@ -25,27 +25,35 @@ anchors:
   - coordinate: /account/lists
 evidence:
   - method: observation
-    deployment: vcptcore
+    deployment: vcptcore_qa
     at: 2026-09-29T11:44:41.040Z
     by: session:p14892
     who: Aleksandra-Mitricheva
+    build: 7f4081223d65d3fa
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa
     at: 2026-10-06T01:06:18.579Z
     by: session:b04eb8d9
     who: Aleksandra-Mitricheva
     note: "Re-observed on theme 2.59.0-pr-2476-0abb + sales-rep 3.1012.0-pr-21-8964: new share to 2 orgs -> ONE call organizationIds=[both]; adding a 3rd org -> organizationIds=[new org only], earlier orgs got no push; message-only edit and recipient removal send no SendCustomerCommunication; empty note -> default 'Hi! I've just shared the list \"<name>\" with your organization. Take a look:' + link."
+    build: c84cd38eec6a2c5b
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa
     at: 2026-10-06T11:33:11.269Z
     by: session:caca34e0
     who: Lenajava1
     note: "Theme 2.59.0-pr-2476-43b1: a new Specific-customers share to 2 orgs with a note sent ONE ChangeWishlist (addSharedWithIds both) then ONE SendCustomerCommunication organizationIds=[both], title 'A new list from your sales representative', message note + blank line + /shared-list/<key>; toast 'List shared with 2 customers.' appears after the dialog closes (twice re-observed)."
+    build: 7e1a0b2b78fac557
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa
     at: 2026-10-06T12:30:04.628Z
     by: session:3d574798
     who: Lenajava1
     note: "2026-10-06 theme 2.59.0-pr-2476-43b1: adding one org to an existing share -> SendCustomerCommunication organizationIds=[that org only], sendEmail+sendPush true; message-only edit (599 chars) sent ChangeWishlist only, toast 'List saved. Now shared with 2 customers.'"
+    build: 7e1a0b2b78fac557
+    buildFrom: deploy-history
 ---
 On save of a Specific-customers share the storefront sends one Mutation.sendCustomerCommunication whose organizationIds are only the orgs added in that save (existing recipients are not re-notified); a save that only changes the message sends no communication. Title is the fixed string 'A new list from your sales representative'; message is the note (or a default 'Hi! I've just shared the list ... with your organization.') plus the /shared-list/<key> link. Neither title nor body names the organization. The reader's push (pushMessages.shortMessage / header bell) is note + link only.

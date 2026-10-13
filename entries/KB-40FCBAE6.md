@@ -20,14 +20,18 @@ anchors:
   - coordinate: Mutation.sendCustomerCommunication
 evidence:
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-29T10:54:37.063Z
     by: session:p3784
     who: Lenajava1
+    build: e66f7e540eab47f4
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-29T10:54:35.679Z
     by: session:p56416
     who: Lenajava1
+    build: e66f7e540eab47f4
+    buildFrom: deploy-history
 ---
 On the vc-frontend#2476 dialog, when SendCustomerCommunication fails after ChangeWishlist succeeded, the list stays saved, the dialog closes and a warning toast reads 'The list was saved, but the notification could not be sent.'; on reopen there is no way to re-notify that recipient.

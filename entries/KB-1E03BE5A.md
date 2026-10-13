@@ -28,5 +28,7 @@ evidence:
     at: 2026-10-05T16:47:00.136Z
     by: session:2d9f6d8e
     who: Lenajava1
+    build: 59983c56933fe571
+    buildFrom: deploy-history
 ---
 On 2026-10-05 (vc-frontend 2.59 builds, anonymous, Chromium): at 1920x1080 the Barcode scan control is rendered inside the desktop header search input and opens the Barcode scan dialog directly. At 390x844 the header shows a "Toggle search bar" button; the Barcode scan control appears only in the opened mobile search overlay. An earlier note that the entry point was not found at 1920 px was wrong.

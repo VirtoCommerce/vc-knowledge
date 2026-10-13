@@ -19,5 +19,7 @@ evidence:
     deployment: vcptcore_dev
     at: 2026-10-05T21:39:54.105Z
     by: session:f9a8159e
+    build: 8db313999cee1432
+    buildFrom: deploy-history
 ---
 Created two active Static rules on one store via POST /api/seo/redirect-rules: inbound '/<random-a>' -> 'seed-books' and inbound '<random-b>' -> 'seed-books'. GraphQL slugInfo(storeId, cultureName, permalink: '<random-a>') returned entityInfo null and redirectUrl null, and wrote a broken-link record for '<random-a>'; slugInfo for '<random-b>' returned redirectUrl 'seed-books'. slugInfo for '/<random-a>' (with the slash) returned redirectUrl 'seed-books'. RedirectResolver compares the raw permalink (case-insensitive equality), and storefront permalinks carry no leading slash, so the documented examples written as '/abc' never fire for a storefront request.

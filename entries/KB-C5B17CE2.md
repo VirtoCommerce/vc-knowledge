@@ -26,6 +26,8 @@ evidence:
     at: 2026-09-28T14:59:19.522Z
     by: session:p28140
     who: kutasinaelena
+    build: 4c4dc9c31676b3e9
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     at: 2026-09-30T11:51:09.394Z
@@ -38,6 +40,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/push-messages-20261008
     resolution: No collapse from 3.1006.0-pr-28, live on 3.1008.0 on two stands including a full reload; the collapse belonged to the 2026-09-28 build.
+    build: b336aebf0395d5ec
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     conditions: platform=3.1077.0-pr-3123-6664; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1028.0; vc-shell=2.6.1; role=Administrator
@@ -46,6 +50,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: Employee condition plus a picked person saved as Draft (memberQuery membertype:Employee + memberIds); caption \"Customers where Customer type is Employee, plus <name>.\" after Save, after reopening from Drafts and All messages, and after a full reload via deep link."
     investigation: true
+    build: 7592346292e2fa35
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.PushMessages=3.1008.0; module:VirtoCommerce.Customer=3.1029.0; vc-shell=2.6.1; role=Administrator
@@ -54,6 +60,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08: same after a full reload via deep link."
     investigation: true
+    build: 75bed25e7b5f756f
+    buildFrom: deploy-history
 ---
 With a custom condition plus a picked recipient (e.g. "Customer type is Employee" plus a person), the audience caption reads "Customers where Customer type is Employee, plus <name>." while editing.
 

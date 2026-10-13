@@ -17,5 +17,7 @@ evidence:
     at: 2026-10-08T09:36:11.185Z
     by: session:ae74f8af
     who: Lenajava1
+    build: c4000d0bea152759
+    buildFrom: deploy-history
 ---
 Theme 2.60.0-pr-2536 on vcst_qa, sales rep with 22 tasks. Clicking the All filter tab on /company/tasks renders a heading "All / 22 tasks", a desktop table with 15 rows, and Previous / 2 / Next pagination under it. The URL path and query do not change when the filter tab is switched, so reloading or changing the locale prefix returns to the default Today tab.

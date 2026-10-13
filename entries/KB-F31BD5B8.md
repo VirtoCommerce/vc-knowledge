@@ -24,12 +24,16 @@ evidence:
     by: session:p44504
     who: Lenajava1
     splitFrom: KB-A0B3940F
+    build: 452b315ee3a31e8a
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-09-28T13:30:12.971Z
     by: session:p51828
     who: Lenajava1
     splitFrom: KB-A0B3940F
+    build: 452b315ee3a31e8a
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-09-28T14:33:01.019Z
@@ -37,8 +41,10 @@ evidence:
     who: Lenajava1
     note: "Re-observed 2026-09-28 during the barcode seed proof: code:\"<sku>\" matched exactly one product and the strict prefix code:\"QaBc-2945\" matched 0. The two variations resolved only with is:variation, and an MPN held only by a variation needed is:product,variation."
     splitFrom: KB-A0B3940F
+    build: 452b315ee3a31e8a
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-28T14:12:30.336Z
     by: session:p16868
     who: Lenajava1
@@ -50,8 +56,10 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/catalog-xapi-20261008
     resolution: Copied here; it is about wildcards in quoted terms (KB-916CDCA1). The variation-scope clauses re-observed live on three stands.
+    build: 452b315ee3a31e8a
+    buildFrom: deploy-history
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-28T18:21:48.490Z
     by: session:p52508
     who: Lenajava1
@@ -63,6 +71,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/catalog-xapi-20261008
     resolution: Copied here; it is about wildcards through the barcode expansion (KB-916CDCA1), not variation scope.
+    build: 452b315ee3a31e8a
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.Catalog=3.1048.0; module:VirtoCommerce.XCatalog=3.1023.0; module:VirtoCommerce.Inventory=3.1010.0; module:VirtoCommerce.Seo=3.1005.0; module:VirtoCommerce.ElasticSearch8=3.1011.0; store=B2B-store; setting:Catalog.Search.BarcodeSearchFields=[]
@@ -71,6 +81,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08, fresh products: code:\"<exact>\" 1; strict prefix without wildcard 0 (code and gtin); code:\"<prefix>*\" honoured; ? inside quotes honoured; lower- and upper-cased values match; an escaped double quote matches. Default scope is products only: a variation code/gtin returns 0 without is:variation and 1 with it; an mpn held only by a variation is found with is:product,variation."
     investigation: true
+    build: 75bed25e7b5f756f
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_qa1
     conditions: platform=3.1077.0-pr-3123-6664; module:VirtoCommerce.Catalog=3.1049.0-pr-910-04a5; module:VirtoCommerce.XCatalog=3.1023.0; module:VirtoCommerce.Inventory=3.1010.0; module:VirtoCommerce.Seo=3.1006.0-pr-22-7ef9; module:VirtoCommerce.ElasticSearch8=3.1011.0; store=B2B-store
@@ -79,6 +91,8 @@ evidence:
     who: Dan-BV
     note: "2026-10-08, fresh products: code:\"<exact>\" 1; strict prefix without wildcard 0 (code and gtin); code:\"<prefix>*\" honoured; ? inside quotes honoured; lower- and upper-cased values match; an escaped double quote matches. Default scope is products only: a variation code/gtin returns 0 without is:variation and 1 with it; an mpn held only by a variation is found with is:product,variation."
     investigation: true
+    build: 7592346292e2fa35
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     conditions: platform=3.1039.12; module:VirtoCommerce.Catalog=3.1029.6; module:VirtoCommerce.XCatalog=3.1007.4; module:VirtoCommerce.Inventory=3.1003.0; module:VirtoCommerce.Seo=3.1004.0; module:VirtoCommerce.ElasticSearch8=3.1007.0; store=B2B-store
@@ -87,5 +101,7 @@ evidence:
     who: Dan-BV
     note: "2026-10-08, fresh products: code:\"<exact>\" 1; strict prefix without wildcard 0 (code and gtin); code:\"<prefix>*\" honoured; ? inside quotes honoured; lower- and upper-cased values match; an escaped double quote matches. Default scope is products only: a variation code/gtin returns 0 without is:variation and 1 with it; an mpn held only by a variation is found with is:product,variation."
     investigation: true
+    build: efc133672faec7fa
+    buildFrom: deploy-history
 ---
 In xAPI products(storeId, filter) the default scope is products only: a variation is found with is:variation code:"...", and a manufacturerPartNumber held only by a variation is found with is:product,variation manufacturerPartNumber:"..." (1 hit; the parent does not match).

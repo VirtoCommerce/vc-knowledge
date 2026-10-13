@@ -15,5 +15,7 @@ evidence:
     at: 2026-10-12T22:46:16.289Z
     by: session:e201271b
     who: Aleksandra-Mitricheva
+    build: 4ca08b7825765bae
+    buildFrom: deploy-history
 ---
 2026-10-13, admin token, POST /api/catalog/search/products {take:5, sort:'code:asc'}. With responseGroup 'ItemInfo' every item had imgSrc and images absent (undefined). With responseGroup 'ItemInfo,ItemAssets' the same 5 items carried imgSrc (an absolute https URL to the product's primary image) and images[] (1-2 entries, images[0].url == imgSrc). A seeder that needs a product image URL (e.g. to set an order line item's imageUrl) must request ItemAssets.

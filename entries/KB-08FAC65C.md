@@ -19,5 +19,7 @@ evidence:
     at: 2026-10-12T07:58:06.406Z
     by: session:c1b20b2e
     who: Aleksandra-Mitricheva
+    build: c55c1a124b302d3b
+    buildFrom: deploy-history
 ---
 SalesRep 3.1013.0-pr-18-42c1, five served organizations. The rep placed an order in organization A, its newest, and salesRepCustomers(sort:"my-last-orders:desc") moved A to the top with lastOrder = that order. An admin then cancelled it (PUT /api/order/customerOrders, isCancelled=true, status Cancelled). Afterwards A's row still shows lastOrder = the cancelled order, status Cancelled, created today, which is the newest date of any row. But A sorts LAST under my-last-orders desc, behind organizations whose last orders are weeks older. The position matches A's last non-cancelled order (a timestamp 10 s earlier than the next row's). Reads were fresh (K equals the cold twin with a different `first`) on both replicas, so this is not a stale cache. The sort key excludes cancelled orders (statistics scope, BL-SR-005) but the displayed lastOrder includes them, so the list looks unordered to a reader.

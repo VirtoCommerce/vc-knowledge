@@ -18,5 +18,7 @@ evidence:
     at: 2026-10-12T13:58:11.023Z
     by: session:49cbdcfd
     who: kutasinaelena
+    build: f86788bce0128739
+    buildFrom: deploy-history
 ---
 Saving a thumbnail option with backgroundColor "notacolor" returns 200 (no validation). A Regenerate run of a task using it ends with errorCount 1, the notification error is a raw .NET stack trace (ImageColor.Parse with CI build paths), and the run stops after the first file (later files in the folder get no thumbnails at all). The task's lastRun stays null afterwards, and in Admin > Thumbnails > Run the "Process changes" button is disabled for it exactly as for a never-run task; it is enabled for a task with a successful run. Observed on ImageTools 3.1007.0-pr-130.

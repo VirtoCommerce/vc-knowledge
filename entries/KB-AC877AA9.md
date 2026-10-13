@@ -20,5 +20,7 @@ evidence:
     at: 2026-10-09T15:26:21.029Z
     by: session:df40a5cc
     who: Lenajava1
+    build: b8b26612d80a3a78
+    buildFrom: deploy-history
 ---
 The cart had one line item, a valid FixedRate shipment and a manual payment. Before the product was deleted, validationErrors(ruleSet:"*") returned []. After the product was deleted through REST and was gone from xAPI product(id), ruleSet "*" returned one CART_PRODUCT_UNAVAILABLE ("The product is no longer available for purchase", objectType LineItem), while ruleSet "default" returned []. This held 2/2 runs. So the "default" ruleSet (the one createQuoteFromCart validates with) does not catch a deleted product, and createQuoteFromCart's rejection of such a cart comes from its own line-item check.

@@ -39,12 +39,16 @@ evidence:
     platformVersion: 3.1007.26
     at: 2026-09-14T12:31:41.915Z
     by: session:a1f22912
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-13T14:07:00.315Z
     by: session:6d4f2631
     splitFrom: KB-360127D0
     mergedFrom: KB-9DB54091
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
@@ -60,6 +64,8 @@ evidence:
     resolvedIn: judge/configured-line-item-20261008
     resolution: "The body states it: the record keeps the product and quantity and drops only sectionId on that build; the September order re-read live 2026-10-08 shows exactly that."
     amendedFrom: 4f3965da1e7b
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     at: 2026-09-13T14:07:00.315Z
@@ -67,6 +73,8 @@ evidence:
     splitFrom: KB-360127D0
     mergedFrom: KB-E1E2716F
     duplicateSession: true
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     pin: c2f9c438eba4cd95
@@ -82,6 +90,8 @@ evidence:
     resolvedIn: judge/configured-line-item-20261008
     resolution: "The body states it: the record keeps the product and quantity and drops only sectionId on that build; the September order re-read live 2026-10-08 shows exactly that."
     amendedFrom: 4f3965da1e7b
+    build: be10ad6a04a12ec3
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     at: 2026-10-05T10:07:31.572Z
@@ -94,6 +104,8 @@ evidence:
     resolvedBy: session:d3bcc6b6
     resolvedIn: judge/configured-line-item-20261008
     resolution: True from XOrder 3.1013 / Orders 3.1016 (live on 3.1014 / 3.1018 2026-10-08); the five-field projection and the missing sectionId belong to the 3.1000.x support line. Body scoped by build.
+    build: 59983c56933fe571
+    buildFrom: deploy-history
   - method: observation
     deployment: vcptcore_stable
     conditions: platform=3.1039.12; module:VirtoCommerce.Orders=3.1009.0; module:VirtoCommerce.XOrder=3.1005.0; module:VirtoCommerce.Cart=3.1006.1; module:VirtoCommerce.XCart=3.1021.2; theme=2.51.2; store=B2B-store; role=Administrator; state:order=written 2026-09-14 on Orders 3.1000.4
@@ -102,6 +114,8 @@ evidence:
     who: Dan-BV
     note: "Order CO260914-00003 (placed on the September build) read 2026-10-08: one configured line per configured product, no option lines; stored items keep productId, sku, quantity, imageUrl, catalogId, categoryId, sectionId null. GraphQL OrderConfigurationItemType has 14 fields incl. productId, sku, quantity and sectionId String!; selecting sectionId on this order fails \"Cannot return null for a non-null type\"."
     investigation: true
+    build: efc133672faec7fa
+    buildFrom: deploy-history
   - method: observation
     deployment: vcst_qa
     conditions: platform=3.1076.0; module:VirtoCommerce.Orders=3.1018.0; module:VirtoCommerce.XOrder=3.1014.0; module:VirtoCommerce.Cart=3.1012.0; module:VirtoCommerce.XCart=3.1039.0; theme=2.59.0; store=B2B-store; role=Customer (owner) / Administrator
@@ -110,6 +124,8 @@ evidence:
     who: Dan-BV
     note: "Fresh configured order 2026-10-08 (3 sections: Product, Product, Text): one configured line on the base product, extendedPrice rolled up, no option lines; stored items keep sectionId and sectionName matching the chosen sections plus productId, sku, quantity, prices, catalogId, categoryId; GraphQL order(id) returns all 15 OrderConfigurationItemType fields with the same values as REST."
     investigation: true
+    build: c4000d0bea152759
+    buildFrom: deploy-history
 ---
 The cart line crosses whole on every build checked: one order line item on the base product, carrying the rolled-up price and its configurationItems, and the option products do not become lines of their own (observed live 2026-10-08 on a fresh order on vcst_qa, and on a September order on vcptcore_stable). A line whose configurationItems is an empty array also exists on a configurable product's order (seen on vcptcore_stable).
 

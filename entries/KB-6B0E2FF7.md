@@ -19,9 +19,11 @@ anchors:
   - coordinate: /catalog
 evidence:
   - method: observation
-    deployment: vcst
+    deployment: vcst_qa
     at: 2026-09-28T08:39:57.756Z
     by: session:p33116
     who: Lenajava1
+    build: 6b8b88f2e92e4dd8
+    buildFrom: deploy-history
 ---
 At a 375px viewport, as a guest on the catalog page, almost all interactive controls (grid/list view toggles, quantity-stepper buttons, add-to-compare, header cart/search/phone links) measure between 24 and 44 CSS px, matching the vc-frontend UI kit button size tiers xxs/xs/sm (26/32/38 px). Only the hamburger menu button reached 44px or more. No actionable control below 24px was found; the few under 24px were visually hidden skip links or disabled decorative rating stars.
