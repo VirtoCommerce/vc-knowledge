@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T10:28:17.696Z",
-  "count": 787,
+  "generated": "2026-10-13T11:51:17.750Z",
+  "count": 788,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15010,6 +15010,24 @@
         "KB-3FCE7089"
       ],
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C39684C8",
+      "path": "entries/KB-C39684C8.md",
+      "subject": "salesRepTopSellers takes a product row's name and imageUrl from the newest order line for it, even when that line's imageUrl is null",
+      "question": "Where do salesRepTopSellers name and imageUrl come from when the order lines for one product differ?",
+      "anchors": [
+        "POST /graphql/sales-rep",
+        "Query.salesRepTopSellers",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
