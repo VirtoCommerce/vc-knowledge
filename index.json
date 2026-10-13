@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T14:57:01.479Z",
-  "count": 810,
+  "generated": "2026-10-13T15:35:44.631Z",
+  "count": 813,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3609,6 +3609,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-3082C43B",
+      "path": "entries/KB-3082C43B.md",
+      "subject": "Catalog.Search.EventBasedIndexation.Enable takes effect immediately on save, without a platform restart",
+      "question": "Does turning Catalog.Search.EventBasedIndexation.Enable on take effect without restarting the platform?",
+      "anchors": [
+        "POST /api/platform/settings",
+        "Query.products",
+        "POST /api/catalog/products"
+      ],
+      "scope": [
+        "module=catalog",
+        "module=search",
+        "setting=catalog.search.eventbasedindexation.enable",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3113CBC1",
       "path": "entries/KB-3113CBC1.md",
       "subject": "where a product's configurability is actually stored",
@@ -3768,7 +3789,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -11246,6 +11267,26 @@
         "component=cancel-return-dialog",
         "surface=storefront-ui",
         "viewport=1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-91520A68",
+      "path": "entries/KB-91520A68.md",
+      "subject": "POST/DELETE /api/catalog/categories/{id}/automatic-links return 204 and change nothing unless the category has an AutomaticLinkQuery",
+      "question": "Why does POST /api/catalog/categories/{id}/automatic-links return 204 with no observable change?",
+      "anchors": [
+        "POST /api/catalog/categories/{id}/automatic-links",
+        "DELETE /api/catalog/categories/{id}/automatic-links",
+        "POST /api/catalog/automatic-link-queries",
+        "POST /api/catalog/listentries"
+      ],
+      "scope": [
+        "module=catalog",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -18926,6 +18967,27 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F12E94A7",
+      "path": "entries/KB-F12E94A7.md",
+      "subject": "ElasticSearch8 gram and field-limit settings apply only on Delete and build, and the admin \"Reset to default value\" writes the default explicitly",
+      "question": "When do the ElasticSearch8 NGram MinGram/MaxGram and IndexTotalFieldsLimit settings take effect, and what does resetting them do?",
+      "anchors": [
+        "GET /api/platform/settings/{name}",
+        "POST /api/search/indexes/index",
+        "Query.categories"
+      ],
+      "scope": [
+        "module=elasticsearch8",
+        "module=search",
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
