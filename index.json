@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T17:27:32.087Z",
-  "count": 842,
+  "generated": "2026-10-13T17:47:58.825Z",
+  "count": 843,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7239,7 +7239,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14440,6 +14440,26 @@
       "supersededBy": [
         "KB-DAD0D552"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B1778256",
+      "path": "entries/KB-B1778256.md",
+      "subject": "GA4 place_order items[] includes automatic-promotion gift lines as their own items, at price 0 with promotion fields, one item per order line",
+      "question": "Does the storefront's GA4 place_order event include gift lines added by an automatic promotion in items[]?",
+      "anchors": [
+        "/checkout/completed",
+        "window.dataLayer",
+        "Mutation.createOrderFromCart"
+      ],
+      "scope": [
+        "event=place_order",
+        "module=googleecommerceanalytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
