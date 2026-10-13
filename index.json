@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T16:44:31.075Z",
-  "count": 833,
+  "generated": "2026-10-13T17:04:25.956Z",
+  "count": 836,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1637,6 +1637,23 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-14811CA6",
+      "path": "entries/KB-14811CA6.md",
+      "subject": "PDP variations widget: the table-view expand/collapse icon button has no accessible name",
+      "question": "Does the PDP variations widget's expand/full-view icon button have an accessible name (axe button-name)?",
+      "anchors": [
+        "/seed-test-fixtures/agent-test-ga4-variations-parent"
+      ],
+      "scope": [
+        "element=variations-widget",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-14F26013",
@@ -6840,6 +6857,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-53157036",
+      "path": "entries/KB-53157036.md",
+      "subject": "Storefront home page: 6 slider/benefits images have no alt, and CLS at 1920 is about 0.49, mostly from the features block and footer",
+      "question": "On the storefront home page, do the hero slider and features/benefits images carry alt text, and how large is the layout shift on load?",
+      "anchors": [
+        "/agent-test-ga4-product-lists"
+      ],
+      "scope": [
+        "page=home",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-535FF3AC",
       "path": "entries/KB-535FF3AC.md",
       "subject": "The payment methods a B2B cart offers are the store's active payment methods from availablePaymentMethods, and the set differs per deployment",
@@ -9497,6 +9531,23 @@
       "scope": [
         "surface=rest",
         "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-75D49434",
+      "path": "entries/KB-75D49434.md",
+      "subject": "PDP related products carousel at lg and above: the prev arrow overlaps the first card's title",
+      "question": "On a PDP related products carousel at 1920, does the carousel prev arrow cover the first product card's title?",
+      "anchors": [
+        "/seed-test-fixtures/agent-test-ga4-related-anchor"
+      ],
+      "scope": [
+        "element=related-products-carousel",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
