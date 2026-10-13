@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T15:56:27.303Z",
-  "count": 824,
+  "generated": "2026-10-13T16:13:34.803Z",
+  "count": 827,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4336,6 +4336,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-3775F726",
+      "path": "entries/KB-3775F726.md",
+      "subject": "Html and LongText member dynamic property values are stored verbatim (no sanitizing); Admin shows them as source text and the storefront does not render member dynamic properties",
+      "question": "Is HTML in a member Html/LongText dynamic property sanitized or rendered (stored XSS risk)?",
+      "anchors": [
+        "GET /api/members/{id}",
+        "/workspace/customers"
+      ],
+      "scope": [
+        "concern=xss",
+        "feature=dynamic-properties",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-37B8E605",
       "path": "entries/KB-37B8E605.md",
       "subject": "customer address records use ISO-3 country codes and carry a region only for the US and Canada",
@@ -8136,6 +8155,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-6698A1D9",
+      "path": "entries/KB-6698A1D9.md",
+      "subject": "Admin dynamic-property form disables Multivalue for Long text and Multilingual/Dictionary for Integer; Required+Multilingual needs a value in every language before OK enables",
+      "question": "Which dynamic property flag combinations can be created in Admin, and how is Required enforced for multilingual properties?",
+      "anchors": [
+        "POST /api/platform/dynamic/properties",
+        "/workspace/dynamicProperties",
+        "/workspace/customers"
+      ],
+      "scope": [
+        "feature=dynamic-properties",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-66A126E3",
       "path": "entries/KB-66A126E3.md",
       "subject": "the Vendor Portal login footer shows the app version, not the vc-shell framework version",
@@ -11554,7 +11592,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -15942,6 +15980,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C804D647",
+      "path": "entries/KB-C804D647.md",
+      "subject": "A ShortText dynamic property value over 512 characters is not validated: member save returns 500 with the raw SQL truncation message, while Admin describes the type as 'under 1024 characters'",
+      "question": "What happens when a ShortText dynamic property value exceeds its length limit (PUT /api/members, Admin member Save)?",
+      "anchors": [
+        "PUT /api/members",
+        "/workspace/customers",
+        "/workspace/dynamicProperties"
+      ],
+      "scope": [
+        "feature=dynamic-properties",
+        "surface=admin-spa",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
