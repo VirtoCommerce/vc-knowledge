@@ -18,5 +18,11 @@ evidence:
     at: 2026-10-13T16:20:03.398Z
     by: session:f4689b85
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_regression
+    at: 2026-10-13T17:59:15.267Z
+    by: session:624d35a1
+    who: kutasinaelena
+    note: "Platform 3.1076.1 (Stable 16): reproduced; deleting in a freshly opened SEO list (no store Save while it was open) does mark the store dirty and persists. Ticking the row enabled toolbar Delete."
 ---
 Seo 3.1007.0-pr-24-9025, Store 3.1009.0. Stores > store > SEO widget > Add record > OK > store Save (PUT /api/stores 204), keep seo-list blade open, select row > Delete > Yes: row vanishes from the grid but store Save/Reset stay disabled and GET /api/stores/{id} still returns the record. seo-list keeps a reference to the pre-save store entity (blade.seoContainerObject; refresh() only replaces it when called with a new entity). Closing and reopening the SEO blade after the save makes Delete mark the store dirty and Save persists. The product blade does not show this: after product Save the open SEO list re-binds and Delete + Save persists.

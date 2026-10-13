@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T17:52:56.260Z",
-  "count": 844,
+  "generated": "2026-10-13T18:00:22.066Z",
+  "count": 849,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -181,7 +181,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -998,6 +998,22 @@
       "resolved": 1
     },
     {
+      "id": "KB-0D49339D",
+      "path": "entries/KB-0D49339D.md",
+      "subject": "Admin New store form accepts a hyphen in Code but blocks a space (Create stays disabled)",
+      "question": "Which characters does the Admin New store Code field reject?",
+      "anchors": [
+        "POST /api/stores"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0D8C1133",
       "path": "entries/KB-0D8C1133.md",
       "subject": "asset upload goes to POST /api/assets with a folderUrl, not /api/platform/assets/upload",
@@ -1233,7 +1249,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3415,7 +3431,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -3559,7 +3575,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4459,7 +4475,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4890,7 +4906,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5277,6 +5293,25 @@
       "scope": [
         "component=carousel",
         "role=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-444EF3F4",
+      "path": "entries/KB-444EF3F4.md",
+      "subject": "POST /connect/token for a platform-locked user returns 400 invalid_grant with code user_is_locked_out; the storefront maps it to \"You have been blocked...\"",
+      "question": "What does POST /connect/token return for a user whose account is locked (lockoutEnd 9999), and what does the storefront show?",
+      "anchors": [
+        "POST /connect/token",
+        "/sign-in"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=rest-api",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -7111,7 +7146,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8185,7 +8220,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8314,7 +8349,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10965,6 +11000,25 @@
       "scope": [
         "browser=chrome",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-88B6F7E8",
+      "path": "entries/KB-88B6F7E8.md",
+      "subject": "Admin 'Resend link' (sendVerificationEmail) creates a ConfirmationEmailNotification only while the store's Email verification setting is on; with it off the call answers 200 and nothing is journaled",
+      "question": "Does the Admin user blade 'Resend link' send a verification email when the store's Stores.EmailVerificationEnabled is false?",
+      "anchors": [
+        "POST /api/platform/security/users/{id}/sendVerificationEmail",
+        "POST /api/notifications/journal",
+        "Stores.EmailVerificationEnabled"
+      ],
+      "scope": [
+        "store-setting=stores.emailverificationenabled",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16253,7 +16307,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -17897,6 +17951,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-DF847E2F",
+      "path": "entries/KB-DF847E2F.md",
+      "subject": "POST /api/platform/security/users/apikeys does not generate a key: the caller must supply apiKey in the body, otherwise a key row with apiKey=null is stored and never authenticates",
+      "question": "Does POST /api/platform/security/users/apikeys generate the API key value, and what body does it need?",
+      "anchors": [
+        "POST /api/platform/security/users/apikeys",
+        "GET /api/platform/security/users/{id}/apikeys"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DF8D085C",
       "path": "entries/KB-DF8D085C.md",
       "subject": "a page missing the requested culture falls back to the default-language content, not a 404",
@@ -18264,7 +18336,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19752,7 +19824,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -20391,6 +20463,23 @@
       "scope": [
         "surface=storefront-ui",
         "theme=2.58.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FD25D714",
+      "path": "entries/KB-FD25D714.md",
+      "subject": "DELETE /api/members?ids=a,b with comma-separated ids returns 204 and deletes nothing; repeat the ids parameter instead",
+      "question": "Does DELETE /api/members accept comma-separated ids?",
+      "anchors": [
+        "DELETE /api/members"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",

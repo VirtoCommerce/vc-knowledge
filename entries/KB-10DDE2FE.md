@@ -19,5 +19,10 @@ evidence:
     at: 2026-10-13T15:51:37.984Z
     by: session:624d35a1
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_regression
+    at: 2026-10-13T17:55:52.499Z
+    by: session:624d35a1
+    who: kutasinaelena
 ---
 On Stable 16 an AGENT-TEST admin-type user with an active API key got 200 JSON from /api/platform/security/currentuser?api_key=<key> while unlocked. After POST /api/platform/security/users/{id}/lock (lockoutEnd=9999-12-31), the same key returned 200 {} from currentuser (same as an invalid key = anonymous) and 401 with an empty body, no content-type, from /api/platform/security/users/{userName}. No 'account locked' text is ever returned for API-key auth; a bogus key gives the identical 401/empty and 200 {} pattern on Stable 15 and 16.

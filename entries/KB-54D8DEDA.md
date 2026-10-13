@@ -18,5 +18,11 @@ evidence:
     at: 2026-10-13T15:41:33.612Z
     by: session:624d35a1
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_regression
+    at: 2026-10-13T17:55:52.846Z
+    by: session:624d35a1
+    who: kutasinaelena
+    note: "Re-observed: line item keeps the supplied listPrice 16.15 / salePrice 15; after quantity=5 the cart extendedPrice/subTotal/total = 80.75 = 5 x listPrice (placedPrice defaults to listPrice, sale price not used in totals when placedPrice is not supplied)."
 ---
 On Stable 16 (Cart 3.1012.0) a line item added via POST /api/carts/{cartId}/items without price fields came back with listPrice=0 while POST /api/pricing/evaluate for the same product returned list=200. Cart module source (CartModuleController.AddItemToCart -> ShoppingCartBuilder.AddItem(lineItem)) takes the LineItem from the body and does not call the pricing service; price evaluation for carts lives in xAPI (XCart addItem). Totals are then computed from the client-supplied price. A REST-cart test that expects pricing-module prices must pass the price itself.
