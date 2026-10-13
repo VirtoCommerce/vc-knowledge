@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T15:51:34.348Z",
-  "count": 820,
+  "generated": "2026-10-13T15:51:53.282Z",
+  "count": 821,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1179,6 +1179,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-10DDE2FE",
+      "path": "entries/KB-10DDE2FE.md",
+      "subject": "An active API key of a locked user authenticates nothing: protected endpoints return 401 with an empty body and no lock-specific message",
+      "question": "What does the platform return for a request with ?api_key= of an active key whose user is locked out?",
+      "anchors": [
+        "GET /api/platform/security/users/{userName}",
+        "GET /api/platform/security/currentuser",
+        "POST /api/platform/security/users/{id}/lock"
+      ],
+      "scope": [
+        "auth=api-key",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
