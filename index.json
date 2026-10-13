@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T04:10:36.111Z",
+  "generated": "2026-10-13T05:50:16.019Z",
   "count": 776,
   "entries": [
     {
@@ -336,7 +336,7 @@
     {
       "id": "KB-057A596A",
       "path": "entries/KB-057A596A.md",
-      "subject": "a configurable File section accepts a fixed broad list of document and image types",
+      "subject": "A configurable File section takes its size and type limits from the stand's product-configuration upload scope; without one the storefront falls back to 1 MB, 5 files and no type check",
       "question": "Which file types and sizes does a configurable product File section accept in Query.productConfiguration?",
       "questions": [
         "Which file types can I attach when configuring a product, and how big can they be?",
@@ -359,8 +359,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-06409954",
@@ -866,7 +867,7 @@
     {
       "id": "KB-0C1CA988",
       "path": "entries/KB-0C1CA988.md",
-      "subject": "currentuser for the built-in admin returns isAdministrator true with empty roles and permissions arrays",
+      "subject": "currentuser for the built-in admin returns isAdministrator true, no roles key, and only the permissions of the roles assigned to that account on the stand",
       "question": "Does GET /api/platform/security/currentuser list roles and permissions for the built-in admin account?",
       "anchors": [
         "GET /api/platform/security/currentuser"
@@ -878,7 +879,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-0CE38D75",
@@ -8365,9 +8367,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 1,
-      "resolved": 1
+      "trust": 4,
+      "disputed": 0,
+      "resolved": 2
     },
     {
       "id": "KB-6E4F5067",
