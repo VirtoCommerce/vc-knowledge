@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T16:23:13.886Z",
-  "count": 831,
+  "generated": "2026-10-13T16:44:31.075Z",
+  "count": 833,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2046,6 +2046,25 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-18CACC3F",
+      "path": "entries/KB-18CACC3F.md",
+      "subject": "Account types are the localizable dictionary setting VirtoCommerce.Platform.Security.AccountTypes; adding a value saves immediately via POST localizable-settings dictionary-items and becomes assignable as userType",
+      "question": "How is a new account (user) type added in Admin and how is it stored and assigned?",
+      "anchors": [
+        "POST /api/platform/localizable-settings/VirtoCommerce.Platform.Security.AccountTypes/dictionary-items",
+        "DELETE /api/platform/localizable-settings/VirtoCommerce.Platform.Security.AccountTypes/dictionary-items",
+        "GET /api/platform/settings/VirtoCommerce.Platform.Security.AccountTypes"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -19520,6 +19539,25 @@
       "disputed": 1
     },
     {
+      "id": "KB-F39ECA1A",
+      "path": "entries/KB-F39ECA1A.md",
+      "subject": "Locking the platform account does not lock the user's organization membership; the two lock flags are independent",
+      "question": "Does POST /api/platform/security/users/{id}/lock (Admin 'Lock account') also set the organization membership isLocked flag?",
+      "anchors": [
+        "POST /api/platform/security/users/{id}/lock",
+        "GET /api/platform/security/users/{id}/locked",
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F3A9F204",
       "path": "entries/KB-F3A9F204.md",
       "subject": "Clicking a storefront orders or quotes table row opens the detail in a new tab by design",
@@ -19710,7 +19748,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
