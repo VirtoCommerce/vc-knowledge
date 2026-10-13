@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T12:31:31.732Z",
-  "count": 791,
+  "generated": "2026-10-13T12:38:06.631Z",
+  "count": 792,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -12951,6 +12951,24 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A9005849",
+      "path": "entries/KB-A9005849.md",
+      "subject": "Catalog Personalization read endpoints accept catalog read permission regardless of its catalog scope, by design",
+      "question": "Does a catalog-scoped catalog:read limit what POST /api/personalization/search returns to that catalog?",
+      "anchors": [
+        "POST /api/personalization/search",
+        "GET /api/personalization/taggeditem/{id}"
+      ],
+      "scope": [
+        "module=catalog-personalization",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
