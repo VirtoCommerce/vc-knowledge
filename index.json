@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T12:58:05.071Z",
-  "count": 794,
+  "generated": "2026-10-13T13:00:20.111Z",
+  "count": 795,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10026,6 +10026,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-83483C4E",
+      "path": "entries/KB-83483C4E.md",
+      "subject": "POST /connect/token grant_type=password for a platform admin needs no storeId; a wrong username returns 400 invalid_grant / login_failed",
+      "question": "Does an admin password-grant token request on POST /connect/token need storeId, and what does a failed one return?",
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "layer=api",
+        "surface=platform-auth"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
