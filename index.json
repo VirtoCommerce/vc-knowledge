@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T17:08:54.515Z",
-  "count": 837,
+  "generated": "2026-10-13T17:09:43.810Z",
+  "count": 838,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -805,6 +805,23 @@
         "KB-ADF1DE84"
       ],
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0B4A32AA",
+      "path": "entries/KB-0B4A32AA.md",
+      "subject": "/cart recently browsed view_item_list is re-sent with the rendered subset whenever a resize changes how many cards the short grid shows",
+      "question": "Does the /cart recently browsed block re-send view_item_list when the viewport is resized?",
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1718,7 +1735,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16974,7 +16991,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
