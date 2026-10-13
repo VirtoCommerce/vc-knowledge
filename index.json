@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T18:44:44.629Z",
-  "count": 853,
+  "generated": "2026-10-13T18:54:47.809Z",
+  "count": 856,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1249,7 +1249,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4475,7 +4475,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -4729,6 +4729,23 @@
         "/workspace/Return"
       ],
       "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3D793889",
+      "path": "entries/KB-3D793889.md",
+      "subject": "Admin member Dynamic properties blade does not enforce Required on Dictionary properties: OK and Save stay enabled with no item picked and PUT /api/members returns 204",
+      "question": "Does a Required Dictionary dynamic property block OK/Save in the Admin member dynamic properties blade when no dictionary item is selected?",
+      "anchors": [
+        "PUT /api/members"
+      ],
+      "scope": [
+        "module=customer",
         "surface=admin-ui"
       ],
       "plane": "experiential",
@@ -5646,6 +5663,24 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-4974045E",
+      "path": "entries/KB-4974045E.md",
+      "subject": "GET /api/platform/security/users/{userId} returns null; a user by id is GET /api/platform/security/users/id/{userId}",
+      "question": "How do I read a platform user (e.g. lockoutEnd) by its id over REST?",
+      "anchors": [
+        "GET /api/platform/security/users/id/{id}",
+        "GET /api/platform/security/users/{userName}"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-4982C91F",
@@ -7164,7 +7199,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -8367,7 +8402,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -11386,6 +11421,25 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-8C4BEBF2",
+      "path": "entries/KB-8C4BEBF2.md",
+      "subject": "REST setup shapes on Stable 16: POST /api/catalog/catalogs needs languages, PATCH /api/inventory/{id} takes the inventory record id, order line items need catalogId, pricing evaluate needs catalogId for a catalog-assigned price list",
+      "question": "What minimal REST bodies create a catalog, initial stock, a REST customer order and an evaluated price on Stable 16?",
+      "anchors": [
+        "POST /api/catalog/catalogs",
+        "PATCH /api/inventory/{id}",
+        "POST /api/order/customerOrders",
+        "POST /api/pricing/evaluate"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-8C530141",
@@ -16379,7 +16433,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -18037,7 +18091,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19896,7 +19950,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -20555,7 +20609,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
