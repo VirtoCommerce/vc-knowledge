@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T08:05:58.620Z",
+  "generated": "2026-10-13T08:40:45.986Z",
   "count": 777,
   "entries": [
     {
@@ -2067,8 +2067,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 3,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-1C28E89D",
@@ -11212,7 +11213,7 @@
     {
       "id": "KB-94700769",
       "path": "entries/KB-94700769.md",
-      "subject": "A password-expired account's existing token still answers every return query and mutation; only an account lock yields UserLocked",
+      "subject": "A password-expired account is refused PasswordExpired on buyer-scoped return queries and mutations (reference data still answers); a lock yields UserLocked; PUT /api/platform/security/users does not set passwordExpired",
       "question": "What do return queries and mutations answer for a token whose account was set passwordExpired after sign-in?",
       "anchors": [
         "PUT /api/platform/security/users",
@@ -11224,8 +11225,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 1
+      "trust": 1,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-94C2ADCC",
