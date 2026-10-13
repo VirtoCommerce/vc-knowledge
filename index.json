@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T17:21:20.543Z",
-  "count": 840,
+  "generated": "2026-10-13T17:24:22.282Z",
+  "count": 841,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -18433,7 +18433,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -18638,6 +18638,25 @@
       ],
       "scope": [
         "locale=es-es,ru-ru",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EA61E19F",
+      "path": "entries/KB-EA61E19F.md",
+      "subject": "On single-step /cart, add_shipping_info fires before view_cart and begin_checkout when the cart already holds a shipment, is re-sent once on the first quantity change, and an emptied cart fires the whole funnel with 0 items",
+      "question": "In what order do GA4 add_shipping_info, view_cart and begin_checkout fire on /cart single-step checkout, and do they repeat on quantity change or fire for an empty cart?",
+      "anchors": [
+        "/cart",
+        "Mutation.changeCartItemsQuantity"
+      ],
+      "scope": [
+        "checkout=single-step",
+        "element=google-analytics",
         "surface=storefront-ui"
       ],
       "plane": "experiential",

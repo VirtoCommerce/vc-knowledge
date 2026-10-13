@@ -28,5 +28,13 @@ evidence:
     bodyHash: c59e429335ed
     who: Lenajava1
     note: "Chrome regression run REG-2026-10-13-1643 (GA-038/047): after seed, 1 RB view_item_list with the 6 seeded codes; +1 quantity -> update_cart_item, no RB re-send; Show more -> nothing; SFL title click (7PLSH835) -> 1 select_item item_list_id recently_browsed_products, item_list_name Recently browsed."
+  - method: observation
+    deployment: vcst_qa
+    conditions: theme=2.60.0-pr-2543-0127-01276486; browser=firefox; role=anonymous guest
+    at: 2026-10-13T17:24:02.772Z
+    by: session:aa76d86f
+    bodyHash: c59e429335ed
+    who: Lenajava1
+    note: "Guest on firefox: a cart line quantity change pushed update_cart_item and add_shipping_info (cart had a saved address + Air method). The add_shipping_info re-send happens only on the FIRST quantity change after page load; a second change pushes update_cart_item only."
 ---
 Signed in on /cart with 6 recently browsed and 8 saved-for-later products (disjoint): cold load pushed one view_item_list recently_browsed_products ('Recently browsed') with exactly the 6 RB products and none of the SFL products. Saved-for-later Show more (6 -> 8 cards) pushed no event. A cart line quantity +1 pushed update_cart_item and add_shipping_info but no RB re-send. An SFL card title click pushed one select_item with item_list_id recently_browsed_products (the SFL block reuses that id, manual call); an RB card title click pushed one select_item for that product. Cart-page product links open in a new tab. The RB list is re-sent on resize when the grid's rendered count changes (1920->390->800->1920 gave 6, 4, 6).
