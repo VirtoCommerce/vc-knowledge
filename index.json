@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T13:58:43.226Z",
-  "count": 804,
+  "generated": "2026-10-13T13:58:54.296Z",
+  "count": 807,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1629,6 +1629,23 @@
         "KB-9B9FAF0F",
         "KB-F1E057A8"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-159E3137",
+      "path": "entries/KB-159E3137.md",
+      "subject": "PDP related-products view_item_list items[] depends on width (grid below lg renders 4 of 10, carousel at lg+ renders all 10) and is re-sent on every lg crossing",
+      "question": "What does the PDP related products widget send as view_item_list at different widths and when the window crosses the lg breakpoint?",
+      "anchors": [
+        "/seed-test-fixtures/agent-test-ga4-related-anchor"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -13883,6 +13900,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-B0E6284D",
+      "path": "entries/KB-B0E6284D.md",
+      "subject": "PDP variations widget sends view_item_list per rendered page (not cumulative), never select_item, and does not re-send on list/table switch or full view",
+      "question": "What does the PDP product variations widget send to GA4 on load, pagination, view switch and variation click?",
+      "anchors": [
+        "/seed-test-fixtures/agent-test-ga4-variations-parent"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B13B361A",
       "path": "entries/KB-B13B361A.md",
       "subject": "After an organization rename, the /account/returns organization tab label shows the new name after a fresh sign-in, while every return (raised before AND after the rename) keeps the old organizationName snapshot",
@@ -17837,6 +17871,23 @@
       ],
       "trust": 1,
       "disputed": 3
+    },
+    {
+      "id": "KB-E88FFFEB",
+      "path": "entries/KB-E88FFFEB.md",
+      "subject": "Cart page sends one recently_browsed_products view_item_list per load, not on a quantity change; saved-for-later Show more sends nothing and an SFL card click sends select_item under the recently_browsed_products list id",
+      "question": "What GA4 list events does /cart push for the recently browsed and saved-for-later blocks?",
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-E8984A18",
