@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T16:21:28.451Z",
-  "count": 829,
+  "generated": "2026-10-13T16:23:13.886Z",
+  "count": 831,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -8217,6 +8217,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-66B6CABA",
+      "path": "entries/KB-66B6CABA.md",
+      "subject": "Turning the store setting Stores.IsSpa off has no effect on vc-frontend navigation, which stays client-side",
+      "question": "Does switching off 'Single-page application (SPA)' (Stores.IsSpa) on a store make the vc-frontend storefront do full page loads?",
+      "anchors": [
+        "GET /api/stores/{id}",
+        "Stores.IsSpa"
+      ],
+      "scope": [
+        "module=store",
+        "surface=admin-spa",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-66D78761",
       "path": "entries/KB-66D78761.md",
       "subject": "Admin Approve / decline commits in one click with no confirmation and emails the decision",
@@ -15934,6 +15953,24 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C6EB3748",
+      "path": "entries/KB-C6EB3748.md",
+      "subject": "Listing stores needs store:read: with only store:access, POST /api/stores/search returns 403 and the Admin Stores blade shows Error 403 with an empty list",
+      "question": "What does a back-office user with store:access but not store:read see in Admin > Stores, and what does POST /api/stores/search return?",
+      "anchors": [
+        "POST /api/stores/search"
+      ],
+      "scope": [
+        "module=store",
+        "surface=admin-spa",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
