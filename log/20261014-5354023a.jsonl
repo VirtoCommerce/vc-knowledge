@@ -1,1 +1,3 @@
-{"at":"2026-10-14T08:38:59.139Z","kind":"session","session":"5354023a","tools":29,"turns":2,"touchAt":[2,22],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-14T08:02:29.189Z","lastAt":"2026-10-14T08:38:58.963Z","who":"Dan-BV"}
+{"at":"2026-10-14T10:20:51.521Z","kind":"session","session":"5354023a","tools":92,"turns":1,"touchAt":[2,22,62,71,83],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-14T08:02:29.189Z","lastAt":"2026-10-14T10:20:51.284Z","who":"Dan-BV"}
+{"at":"2026-10-14T10:20:51.284Z","kind":"restart","why":"state-dropped","who":"Dan-BV"}
+{"at":"2026-10-14T10:20:51.542Z","kind":"flush","entries":0,"lines":3,"swept":["cad289d8.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
