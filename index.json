@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T06:25:46.858Z",
-  "count": 879,
+  "generated": "2026-10-14T06:33:46.394Z",
+  "count": 881,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3524,6 +3524,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2CFCFAF8",
+      "path": "entries/KB-2CFCFAF8.md",
+      "subject": "GET taggeditem for an untagged product returns a template with entityType \"CatalogProduct\"; PUTting it back creates an unusable row and later GETs for that entity 500 with message \"CatalogProduct\"",
+      "question": "Can I PUT back the template returned by GET /api/personalization/taggeditem/{id} for a product that has no tagged-item row?",
+      "anchors": [
+        "GET /api/personalization/taggeditem/{id}",
+        "PUT /api/personalization/taggeditem"
+      ],
+      "scope": [
+        "module=catalogpersonalization@3.1006.1",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11571,6 +11589,24 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-8BF13808",
+      "path": "entries/KB-8BF13808.md",
+      "subject": "Personalization tags/count returns one combined int (direct ∪ inherited, distinct); POST /api/personalization/search has no tags filter",
+      "question": "Does GET /api/personalization/taggeditem/{id}/tags/count split direct and inherited counts, and can POST /api/personalization/search filter by tag?",
+      "anchors": [
+        "GET /api/personalization/taggeditem/{id}/tags/count",
+        "POST /api/personalization/search"
+      ],
+      "scope": [
+        "module=catalogpersonalization@3.1006.1",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-8C054BAE",
