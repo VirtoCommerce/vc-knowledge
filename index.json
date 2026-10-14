@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T05:23:12.661Z",
-  "count": 873,
+  "generated": "2026-10-14T05:34:44.205Z",
+  "count": 874,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11908,6 +11908,25 @@
         "surface=rest",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-90FB9602",
+      "path": "entries/KB-90FB9602.md",
+      "subject": "An invalid cron value for a Cron-type platform setting is rejected with HTTP 500 \"Setting with name <name> is invalid\", and the stored value stays unchanged",
+      "question": "What does POST /api/platform/settings return for a Cron-type setting given an invalid cron expression, and is the stored value changed?",
+      "anchors": [
+        "POST /api/platform/settings",
+        "POST /api/platform/settings/v2/global/values",
+        "VirtoCommerce.Platform.Security.CronPruneExpiredTokensJob"
+      ],
+      "scope": [
+        "setting-type=cron",
+        "surface=platform-rest-api"
       ],
       "plane": "experiential",
       "status": "active",
