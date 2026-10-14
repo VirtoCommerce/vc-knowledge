@@ -45,5 +45,11 @@ evidence:
     mergedFrom: KB-3FCB032F
     build: 17622bd158a36d4f
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_qa1
+    at: 2026-10-14T08:08:59.304Z
+    by: session:cae69cc8
+    who: kutasinaelena
+    note: A new USD and a new EUR price list, each assigned by storeId (no catalogId, no condition) via POST /api/pricing/assignments, priced products in xAPI product and in addItem cart lines for a B2B buyer in that store, in the matching currency.
 ---
 A pricelist reaches a storefront shopper only through a PricelistAssignment, and the assignment is scoped EITHER by catalogId OR by storeId -- both routes work and the Admin blade makes them mutually exclusive (picking a Store greys out Catalog). The store's own catalog is what a catalogId-scoped assignment must match: B2B-store's catalog is a VIRTUAL catalog, and an assignment on it applies to products whose own catalogId is the underlying physical catalog, so do not look for the assignment on the product's catalog. Four things gate an assignment and all four were observed to bite independently: (1) scope match, catalog or store; (2) the date window -- setting endDate to a past instant on an otherwise-matching assignment made the storefront fall straight back to the next-best pricelist, with no other change; (3) the condition tree under 'Eligible shoppers', which on this deployment is in practice a single condition type, UserGroupsContainsCondition; (4) priority, higher wins -- an assignment at priority 20000 beat a matching unconditional one at priority 1 for the same product, and raising an assignment's priority via GET + PUT /api/pricing/assignments with only priority changed made its list win over another unconditional list at the same scope, as seen in POST /api/pricing/evaluate. An assignment with an EMPTY BlockPricingCondition (children: []) is unconditional and matches everybody, which is how the baseline lists here are wired. A pricelist with no assignment at all is invisible to the storefront however many prices it holds. Pricelist.priority exists on the REST model but the Admin price-list blade offers no field for it; the number that decides anything is the ASSIGNMENT's priority.

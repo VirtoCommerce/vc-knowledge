@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T08:07:57.489Z",
-  "count": 891,
+  "generated": "2026-10-14T08:09:52.935Z",
+  "count": 894,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3541,7 +3541,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -5616,6 +5616,24 @@
       "scope": [
         "account=admin",
         "surface=hangfire-dashboard"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4851AD97",
+      "path": "entries/KB-4851AD97.md",
+      "subject": "Prices in a price list are searched with POST /api/catalog/products/prices/search; POST /api/pricing/prices/search returns 404",
+      "question": "Which REST route lists the prices held by a given price list?",
+      "anchors": [
+        "POST /api/catalog/products/prices/search",
+        "POST /api/pricing/prices/search",
+        "GET /api/pricing/pricelists/{id}"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9249,7 +9267,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -9421,6 +9439,24 @@
         "KB-456FD813"
       ],
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6F5067F2",
+      "path": "entries/KB-6F5067F2.md",
+      "subject": "A full-body PUT /api/stores can return the settings array in a different order, so compare store settings by name, not by index",
+      "question": "After a GET-merge-PUT of /api/stores, is the settings array returned in the same order?",
+      "anchors": [
+        "PUT /api/stores",
+        "GET /api/stores/{id}",
+        "Store.settings"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11779,9 +11815,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0,
-      "resolved": 1
+      "trust": 4,
+      "disputed": 1
     },
     {
       "id": "KB-8CC2B45E",
@@ -14358,6 +14393,25 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AA5A0822",
+      "path": "entries/KB-AA5A0822.md",
+      "subject": "An xAPI cart line carries the product's MeasureUnit; a product without one gives measureUnit null",
+      "question": "What does a cart line item's measureUnit hold after addItem?",
+      "anchors": [
+        "Mutation.addItem",
+        "LineItemType.measureUnit",
+        "Query.product",
+        "POST /api/catalog/products"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
