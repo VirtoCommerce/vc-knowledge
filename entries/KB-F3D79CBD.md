@@ -19,5 +19,11 @@ evidence:
     who: kutasinaelena
     build: a65915e78a84c8d7
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_qa1
+    at: 2026-10-14T12:59:57.331Z
+    by: session:8b33e471
+    who: kutasinaelena
+    note: "Re-seen 2026-10-14: name 'tpl-{{=window.x=1}}' → 400 'Folder name must only contain lowercase letters, numbers, spaces, and single dashes'; 'sub-00' with an unvalidated mixed-case parentUrl → 204 and intermediate folders created."
 ---
 On the file-system assets provider, POST /api/assets/folder {name,parentUrl} validates `name` only (3-63 chars, lowercase letters/digits/spaces/single dashes, no leading/trailing/consecutive dashes, not empty; 400 with BlobFolderValidator messages). Creating a folder whose name already exists returns 204 with no error and leaves existing contents intact, so the Admin Asset Library workspace and the Page Builder Designer picker show no duplicate error. parentUrl is not validated: a parentUrl with segments that do not exist (even ones containing {{ }} braces) returns 204 and creates every missing intermediate folder. A name with leading/trailing spaces is accepted and stored untrimmed (the Admin and Designer UIs trim before sending).

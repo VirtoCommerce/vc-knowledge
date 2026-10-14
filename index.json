@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T12:11:01.356Z",
-  "count": 896,
+  "generated": "2026-10-14T13:05:27.008Z",
+  "count": 899,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2857,6 +2857,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-229155C4",
+      "path": "entries/KB-229155C4.md",
+      "subject": "POST /api/page-builder-assets/references counts Draft page image blocks and shared-component image blocks immediately after a content save; folderUrl switches it to one folder-aggregate row",
+      "question": "What does POST /api/page-builder-assets/references return per asset and per folder, and does it see Draft page content right after save?",
+      "anchors": [
+        "POST /api/page-builder-assets/references",
+        "POST /api/page-builder-pages/grouped/{groupId}/content"
+      ],
+      "scope": [
+        "build=pagebuildermodule 3.1035.0-pr-171-61df",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -14751,6 +14769,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-AD122033",
+      "path": "entries/KB-AD122033.md",
+      "subject": "Asset upload POST /api/assets?folderUrl= bypasses the folder-name validator: uppercase and {{ }} folder/file names are accepted and missing folders are created implicitly",
+      "question": "Can a folder whose name the POST /api/assets/folder validator rejects still be created through file upload?",
+      "anchors": [
+        "POST /api/assets",
+        "POST /api/assets/folder",
+        "DELETE /api/assets"
+      ],
+      "scope": [
+        "module=virtocommerce.assets 3.1010.0",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AD1902B5",
       "path": "entries/KB-AD1902B5.md",
       "subject": "At 375px the open mobile main menu does not contain focus: Tab past its last item and Shift+Tab before its first move focus to page controls hidden under the panel",
@@ -18097,6 +18134,23 @@
       "resolved": 3
     },
     {
+      "id": "KB-D7B43532",
+      "path": "entries/KB-D7B43532.md",
+      "subject": "DELETE /api/assets?urls=<folder> can 500 \"Directory not empty\" on a folder holding files plus empty sub-folders; delete files first, then folders deepest-first",
+      "question": "Does DELETE /api/assets with a folder url remove a whole folder tree in one call on the file-system assets provider?",
+      "anchors": [
+        "DELETE /api/assets"
+      ],
+      "scope": [
+        "provider=filesystemassets",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D7F08A26",
       "path": "entries/KB-D7F08A26.md",
       "subject": "Customer-scope wishlist share: Stop sharing deletes targets and message, the Private key returns null without error, re-share keeps the key with only the new orgs",
@@ -20756,7 +20810,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
