@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T05:34:44.205Z",
-  "count": 874,
+  "generated": "2026-10-14T05:52:06.312Z",
+  "count": 876,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15229,6 +15229,22 @@
       "resolved": 1
     },
     {
+      "id": "KB-B5AB9064",
+      "path": "entries/KB-B5AB9064.md",
+      "subject": "xAPI products sort has no deterministic tie-breaker; offset paging over tied values can duplicate/skip items",
+      "question": "Does paging the xAPI products query (first/after) return every product exactly once when many products tie on the sort value (default relevance sort with no keyword, or price sort with equal prices)?",
+      "anchors": [
+        "Query.products"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
       "id": "KB-B5B57F41",
       "path": "entries/KB-B5B57F41.md",
       "subject": "sign-in pins the user to their persisted default organization without checking it is blocked",
@@ -18649,6 +18665,22 @@
       ],
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-E3715228",
+      "path": "entries/KB-E3715228.md",
+      "subject": "Virto Cloud storefront COEP/CORP headers come from the environment's infra/environments.yml storefront headers block, not from the vc-frontend theme",
+      "question": "Where does the storefront document's Cross-Origin-Embedder-Policy header come from, and what does require-corp do to product images on an external blob host?",
+      "anchors": [
+        "/catalog"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-E423C32F",
