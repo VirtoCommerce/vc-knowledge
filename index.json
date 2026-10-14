@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T05:52:06.312Z",
-  "count": 876,
+  "generated": "2026-10-14T06:00:55.976Z",
+  "count": 877,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11254,6 +11254,26 @@
       "scope": [
         "browser=chrome",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-88B59F63",
+      "path": "entries/KB-88B59F63.md",
+      "subject": "POST /api/content/search returns a bare ContentItem[] array (Content 3.1007 PR-224 build); Admin SPA search action uses isArray with no transformResponse",
+      "question": "What shape does POST /api/content/search return and how does the Admin SPA Content pages/blogs blade consume it?",
+      "anchors": [
+        "POST /api/content/search",
+        "GET /api/content/search/enabled",
+        "GET /api/content/{contentType}/{storeId}/search"
+      ],
+      "scope": [
+        "module=virtocommerce.content",
+        "surface=admin-spa",
+        "version>=3.1007.0-pr-224"
       ],
       "plane": "experiential",
       "status": "active",
