@@ -20,5 +20,17 @@ evidence:
     at: 2026-10-14T06:19:58.238Z
     by: session:624d35a1
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_regression
+    at: 2026-10-14T21:05:43.233Z
+    by: session:624d35a1
+    who: kutasinaelena
+    note: "Re-run 2026-10-14 (Catalog 3.1048.0) with every node warmed: after DELETE P, both C and G returned 200 (also via GET /api/catalog/categories?ids=) while P 404; product under G 404 from ~30s. Polled every <=5 min: still stale at 15 min, cleared by 20 min. Cause in source: CategoryService.DeleteAsync calls ClearCacheAsync after the commit, and ClearCacheAsync finds descendants via GetAllChildrenCategoriesIdsAsync on the DB, where they are already gone, so their cache tokens are never expired."
+  - method: observation
+    deployment: vcptcore_stable
+    at: 2026-10-14T21:05:43.395Z
+    by: session:624d35a1
+    who: kutasinaelena
+    note: "Same on Catalog 3.1029.6 (2026-10-14): cascade-deleted, previously read descendants C and G still 200 after 20 min of polling every <=5 min; write probe under C fails with the FK error, proving the row is gone. Not new in 3.1048.0: the delete/cache-clear code is identical in both tags."
 ---
 2026-10-14, Catalog 3.1048.0. Tree P > C > G with a product in G; C had been loaded (G created under it). DELETE /api/catalog/categories?ids=P -> 204. GET P 404, GET G 404, product 404, but GET C stays 200 (parentId = deleted P) for >12 min and for every respGroup. The DB row is gone: POST /api/catalog/categories with parentId=C fails 500 FK_Category_Category_ParentCategoryId. Same after an Admin UI delete (Confirm delete with 'yes'). Read deletes of descendants through cache-backed GET as unreliable; probe with a write or wait for cache expiry.

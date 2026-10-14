@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T21:02:55.967Z",
-  "count": 908,
+  "generated": "2026-10-14T21:07:05.570Z",
+  "count": 910,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -213,6 +213,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-03E27EB3",
+      "path": "entries/KB-03E27EB3.md",
+      "subject": "Running and cancelling thumbnail tasks needs only thumbnail:read; create/update/delete need their own permissions",
+      "question": "Which permission does POST /api/image/thumbnails/tasks/run (and /{jobId}/cancel) require?",
+      "anchors": [
+        "POST /api/image/thumbnails/tasks/run",
+        "POST /api/image/thumbnails/tasks/{jobId}/cancel"
+      ],
+      "scope": [
+        "module=image-tools",
+        "operation=rbac",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10820,7 +10839,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -11105,6 +11124,29 @@
       "scope": [
         "layer=api",
         "surface=platform-auth"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-83632DB7",
+      "path": "entries/KB-83632DB7.md",
+      "subject": "FileSystem asset path-traversal attempts are rejected, but with 500 (list/folder/delete) or 405 (upload) instead of 400, and the error message echoes the server's absolute storage path",
+      "question": "What do the Assets REST endpoints return when folderUrl, parentUrl, urls or the upload file name contain ../ (or encoded variants) on the FileSystem provider?",
+      "anchors": [
+        "GET /api/assets",
+        "POST /api/assets",
+        "POST /api/assets/folder",
+        "DELETE /api/assets",
+        "POST /api/assets/localstorage"
+      ],
+      "scope": [
+        "module=assets",
+        "operation=path-traversal-rejection",
+        "provider=filesystem",
+        "surface=admin-api"
       ],
       "plane": "experiential",
       "status": "active",
