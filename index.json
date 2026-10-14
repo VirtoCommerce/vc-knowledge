@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T21:09:38.226Z",
-  "count": 911,
+  "generated": "2026-10-14T21:29:38.266Z",
+  "count": 912,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1483,7 +1483,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7814,7 +7814,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -13153,7 +13153,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -20943,7 +20943,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21636,6 +21636,27 @@
         "role=sales-rep",
         "surface=storefront-ui",
         "viewport=mobile-375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FD9E5569",
+      "path": "entries/KB-FD9E5569.md",
+      "subject": "xAPI Query.product prices[] (and REST GET /api/products/{id}/prices) can show ONE price list while the index's generic price_<cur> is fed by a second list, so prices[] cannot detect a multi-price-list product",
+      "question": "Does Query.product prices[] reveal every price list that contributes to the indexed price_<currency> used by the storefront price filter?",
+      "anchors": [
+        "Query.product",
+        "GET /api/products/{id}/prices",
+        "GET /api/search/indexes/index/Product/{id}",
+        "/catalog?facets=\"price\""
+      ],
+      "scope": [
+        "feature=price-range-filter",
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
