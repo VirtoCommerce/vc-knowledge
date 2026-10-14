@@ -55,5 +55,11 @@ evidence:
     splitFrom: KB-F20CD11C
     build: 8169d5e903339ded
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_qa1
+    at: 2026-10-14T11:31:05.923Z
+    by: session:cae69cc8
+    who: kutasinaelena
+    note: "Seen at the CART layer too (XCart 3.1042, Cart 3.1012): addItem with configurationSections on AGENT-TEST-CFG-031-20260527 gave line sku \"Configuration-AGENT-TEST-CFG-031-20260527\" on both xAPI cart.items.sku and REST GET /api/carts/{id} (isConfigured=true). xAPI LineItemType.product.code still returns the bare catalog code. Source: XCart ConfiguredLineItemContainer.CreateConfiguredLineItem sets Sku = $\"Configuration-{product.Code}\"."
 ---
 The configurable line's own sku is synthesized as 'Configuration-' + the catalog product code (order line sku 'Configuration-AGENT-TEST-CFG-013' vs catalog code 'AGENT-TEST-CFG-013'), so matching an order line sku against a catalog code fails for configurable lines; and the line's price is the rolled-up base + options (999 + 150 + 100 = 1249) with isConfigured=true and no separate lines for the option products.

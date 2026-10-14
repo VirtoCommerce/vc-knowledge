@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T10:18:54.710Z",
-  "count": 894,
+  "generated": "2026-10-14T11:31:41.824Z",
+  "count": 895,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11738,6 +11738,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-8C1467B8",
+      "path": "entries/KB-8C1467B8.md",
+      "subject": "Punchout PunchOutOrderMessage ItemIn SupplierPartID is the cart line sku, so a configurable line sends \"Configuration-<code>\" and SupplierPartAuxiliaryID is the cart line id",
+      "question": "what does createPunchoutRequisition put in cXML ItemIn SupplierPartID and SupplierPartAuxiliaryID for simple, variation and configurable cart lines",
+      "anchors": [
+        "Mutation.createPunchoutRequisition",
+        "POST /api/punchout/cxml"
+      ],
+      "scope": [
+        "entity=cxml-punchout-order-message",
+        "module=virtocommerce.punchout",
+        "surface=xapi",
+        "version=3.1000.0-pr-2"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8C3E463D",
       "path": "entries/KB-8C3E463D.md",
       "subject": "Admin renders order timestamps in the operator's profile timezone (UI.TimeZone), not the browser's",
@@ -17501,7 +17521,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
