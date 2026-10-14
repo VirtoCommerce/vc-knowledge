@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T13:34:35.274Z",
-  "count": 900,
+  "generated": "2026-10-14T13:52:35.743Z",
+  "count": 903,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2874,7 +2874,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6761,6 +6761,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-509C4B80",
+      "path": "entries/KB-509C4B80.md",
+      "subject": "Page Builder Shell Assets Library keeps the search keyword when you open a folder or go back via breadcrumb, and shows the empty-folder copy for a zero-hit search",
+      "question": "Does the Page Builder Shell Assets Library clear the search when navigating folders, and what does a zero-hit search show?",
+      "anchors": [
+        "/apps/page-builder-shell/#/page-builder-assets",
+        "POST /api/page-builder-assets/search"
+      ],
+      "scope": [
+        "module=page-builder",
+        "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-509D70C4",
       "path": "entries/KB-509D70C4.md",
       "subject": "Wishlist share target ids are case-insensitive; the 1000-id cap applies to addSharedWithIds only",
@@ -8513,6 +8531,25 @@
       "scope": [
         "module=virtocommerce.catalog",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-653DE2DB",
+      "path": "entries/KB-653DE2DB.md",
+      "subject": "Page Builder asset endpoints split permissions: /search needs platform:asset:read, /references needs Page Builder read",
+      "question": "Which permissions gate POST /api/page-builder-assets/search and /references?",
+      "anchors": [
+        "POST /api/page-builder-assets/search",
+        "POST /api/page-builder-assets/references"
+      ],
+      "scope": [
+        "aspect=rbac",
+        "module=page-builder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -10622,6 +10659,23 @@
         "aspect=layout-stability",
         "auth=signed-in",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7D01E399",
+      "path": "entries/KB-7D01E399.md",
+      "subject": "POST /api/page-builder-assets/search validates sort/skip/take with 400 and clamps an out-of-range skip to the last page; totalCount counts folders+files, fileCount files only",
+      "question": "What does POST /api/page-builder-assets/search accept and return for paging, sorting and invalid input?",
+      "anchors": [
+        "POST /api/page-builder-assets/search"
+      ],
+      "scope": [
+        "module=page-builder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
