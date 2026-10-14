@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T11:59:37.541Z",
-  "count": 895,
+  "generated": "2026-10-14T12:11:01.356Z",
+  "count": 896,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -8944,6 +8944,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-6A5F88F8",
+      "path": "entries/KB-6A5F88F8.md",
+      "subject": "createPunchoutRequisition always reads the buyer's cart named \"default\", ignoring the named cart the storefront displays, and reports refusals only through errorCode",
+      "question": "Which cart does createPunchoutRequisition send, and which errorCode does it return for an empty selection, a reused session, a disabled store and a missing default cart?",
+      "anchors": [
+        "Mutation.createPunchoutRequisition",
+        "/cart"
+      ],
+      "scope": [
+        "channel=punchout-session",
+        "module=punchout",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6A7DA439",
       "path": "entries/KB-6A7DA439.md",
       "subject": "A holder whose organization membership is locked gets a token with no organization and no permission, so organizationReturns answers Forbidden (not UserLocked); returnStatuses still answers",
@@ -11754,7 +11773,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
