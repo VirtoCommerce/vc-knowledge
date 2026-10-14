@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T23:19:55.364Z",
-  "count": 917,
+  "generated": "2026-10-14T23:37:14.361Z",
+  "count": 919,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4915,7 +4915,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -10205,7 +10205,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19167,6 +19167,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-DFB2A4B2",
+      "path": "entries/KB-DFB2A4B2.md",
+      "subject": "updateConfigurationItem on a Variation-type section appends the new variation next to the old one (price adds both), while on a Product-type section it replaces the selection",
+      "question": "Does Mutation.updateConfigurationItem replace or add the selected option of a configurable cart line, and does it differ by section type?",
+      "anchors": [
+        "Mutation.updateConfigurationItem",
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E01A9F11",
       "path": "entries/KB-E01A9F11.md",
       "subject": "the promotion blade's required-field warnings are not a save gate",
@@ -21301,6 +21319,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F79815CB",
+      "path": "entries/KB-F79815CB.md",
+      "subject": "The storefront Components list shows a blank Value for a Variation-type configuration item in the cart and the order detail, while xAPI/REST carry the variation name",
+      "question": "How does the storefront cart / order detail show a configured line whose configuration item is of type Variation?",
+      "anchors": [
+        "/cart",
+        "/account/orders/{id}",
+        "Query.cart"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
