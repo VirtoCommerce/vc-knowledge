@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T06:33:46.394Z",
-  "count": 881,
+  "generated": "2026-10-14T06:48:04.653Z",
+  "count": 887,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1443,6 +1443,24 @@
         "input=keyboard",
         "page=list-details",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-12BED7EA",
+      "path": "entries/KB-12BED7EA.md",
+      "subject": "With Back-in-Stock enabled (theme 2.59), an out-of-stock product page replaces the quantity stepper with a 'Stock alert' button and shows no 'Out of stock' label",
+      "question": "How does the product page indicate an out-of-stock product?",
+      "anchors": [
+        "Query.product",
+        "/account/back-in-stock"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=2.59.0"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7656,6 +7674,24 @@
       "resolved": 3
     },
     {
+      "id": "KB-59E90B6C",
+      "path": "entries/KB-59E90B6C.md",
+      "subject": "Storefront price-range facet matches the index's generic price_<currency> field, so with two price lists a product can be filtered by a price different from the one the shopper sees",
+      "question": "Which price does the storefront price range filter (xAPI filter price.USD / facets price) compare against when a product has prices in more than one price list?",
+      "anchors": [
+        "Query.products",
+        "/search"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5A0C4200",
       "path": "entries/KB-5A0C4200.md",
       "subject": "PUT /api/members still clears a Sales Rep contact's names; the SalesRep validator does not cover it",
@@ -8741,6 +8777,24 @@
       "scope": [
         "module=catalog",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6891B496",
+      "path": "entries/KB-6891B496.md",
+      "subject": "Catalog CSV import silently drops rows that fail type conversion (e.g. empty StartDate) and still reports 'Import finished successfully' with 0 processed and no errors",
+      "question": "Why does a CSV catalog import finish successfully but create nothing?",
+      "anchors": [
+        "POST /api/catalogcsvimport/import"
+      ],
+      "scope": [
+        "module=catalogcsvimportmodule@3.1007.0",
+        "surface=admin-ui",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -10382,6 +10436,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-7BC6FC36",
+      "path": "entries/KB-7BC6FC36.md",
+      "subject": "On a product page in a currency the product has no price for, theme 2.59 shows 'Price: €0.00' with a disabled quantity stepper and no 'not available' message",
+      "question": "What does the product page show after switching to a currency in which the product has no price?",
+      "anchors": [
+        "Query.product",
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=2.59.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7C6D6C33",
       "path": "entries/KB-7C6D6C33.md",
       "subject": "Sales Rep customer profile Top sellers widget keeps rank, units and revenue on one line (nowrap) while the Product column wraps; sibling Recent orders Total still wraps mid-number in the 2-column layout",
@@ -11469,7 +11541,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -16822,6 +16894,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-C853A803",
+      "path": "entries/KB-C853A803.md",
+      "subject": "The storefront 'Purchased before' filter checkbox is not rendered on category or search pages unless the store setting Order.PurchasedProductStoreFilter.Enable is true",
+      "question": "When does the catalog/search toolbar show the 'Purchased before' checkbox?",
+      "anchors": [
+        "/search",
+        "Order.PurchasedProductStoreFilter.Enable"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=2.59.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C856B61A",
       "path": "entries/KB-C856B61A.md",
       "subject": "A deleted user's still-valid access token gets HTTP 200 + errors[].code Unauthorized on returns, organizationReturns and return(id); returnStatuses still answers",
@@ -17268,6 +17358,24 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CF915D91",
+      "path": "entries/KB-CF915D91.md",
+      "subject": "A search-history hint whose query contains an HTML tag renders as an empty, unnamed button in the header search dropdown",
+      "question": "How does the header search dropdown show a previous search that contained HTML such as a script tag?",
+      "anchors": [
+        "/search",
+        "Query.searchHistory"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=2.59.0"
       ],
       "plane": "experiential",
       "status": "active",
