@@ -28,5 +28,11 @@ evidence:
     splitFrom: KB-6C3FA2B7
     build: 8169d5e903339ded
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_regression
+    at: 2026-10-14T22:29:44.618Z
+    by: session:624d35a1
+    who: kutasinaelena
+    note: "XCart 3.1039.0: with a parallel session creating named carts on the same user, Query.cart (no cartName, cartType null/empty) returned the freshly created named cart (empty) instead of the 'default' cart; /cart on the storefront showed 'Your cart is empty' while the default cart still held items added from a list."
 ---
 Query.cart with no cartName returns the most-recently-touched cart, NOT the one named 'default'.
