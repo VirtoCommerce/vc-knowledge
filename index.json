@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T06:09:45.957Z",
-  "count": 878,
+  "generated": "2026-10-14T06:25:46.858Z",
+  "count": 879,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10533,6 +10533,25 @@
       ],
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-7E41EAB9",
+      "path": "entries/KB-7E41EAB9.md",
+      "subject": "After deleting a category, GET /api/catalog/categories/{id} keeps returning 200 for descendant categories that were cascade-deleted, if they were in the platform cache",
+      "question": "Does GET /api/catalog/categories/{id} return 404 for subcategories removed by deleting their parent category?",
+      "anchors": [
+        "DELETE /api/catalog/categories",
+        "GET /api/catalog/categories/{id}"
+      ],
+      "scope": [
+        "module=catalog",
+        "operation=category-delete-cascade",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-7E840CCE",
