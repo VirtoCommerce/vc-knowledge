@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T13:52:35.743Z",
-  "count": 903,
+  "generated": "2026-10-14T17:32:52.109Z",
+  "count": 904,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -20199,6 +20199,25 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EE2FF2C8",
+      "path": "entries/KB-EE2FF2C8.md",
+      "subject": "Storefront cart line 'Price per item' follows LineItem.showPlacedPrice on desktop but always shows the placed price in the narrow (card) layout",
+      "question": "Does the /cart 'Price per item' show list price on desktop but placed (discounted) price on mobile?",
+      "anchors": [
+        "/cart",
+        "Query.cart",
+        "CartType.items.showPlacedPrice"
+      ],
+      "scope": [
+        "page=cart",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
