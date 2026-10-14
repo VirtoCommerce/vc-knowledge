@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T13:05:27.008Z",
-  "count": 899,
+  "generated": "2026-10-14T13:34:35.274Z",
+  "count": 900,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15052,6 +15052,25 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AF27FAE8",
+      "path": "entries/KB-AF27FAE8.md",
+      "subject": "Creating a Page Builder page while the Pages search index cannot be created returns 500 with the raw provider error, yet the page is persisted",
+      "question": "What happens when a Page Builder page is created while the Pages search index cannot be created — does the create fail and is anything persisted?",
+      "anchors": [
+        "POST /api/page-builder-pages/grouped",
+        "Query.pageContext"
+      ],
+      "scope": [
+        "build=pagebuildermodule 3.1035.0-pr-171-61df",
+        "search-provider=azure",
+        "surface=page-builder-shell"
       ],
       "plane": "experiential",
       "status": "active",
