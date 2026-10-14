@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T22:51:14.270Z",
-  "count": 914,
+  "generated": "2026-10-14T23:00:14.497Z",
+  "count": 915,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4915,7 +4915,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10163,6 +10163,26 @@
       "scope": [
         "element=related-products-carousel",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-76D8F765",
+      "path": "entries/KB-76D8F765.md",
+      "subject": "Options sent on a Variation-type configuration section are silently dropped on save; the section persists with options []",
+      "question": "Can a Variation-type product configuration section store options (productId = one of the parent's variations, quantity) via the catalog REST API?",
+      "anchors": [
+        "POST /api/catalog/products/configurations",
+        "GET /api/catalog/products/configurations/{id}",
+        "PUT /api/catalog/products/configurations/{id}",
+        "Query.productConfiguration"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
