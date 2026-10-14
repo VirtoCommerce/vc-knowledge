@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T18:26:41.051Z",
-  "count": 905,
+  "generated": "2026-10-14T20:22:18.827Z",
+  "count": 907,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2839,6 +2839,24 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 5
+    },
+    {
+      "id": "KB-224A9BC7",
+      "path": "entries/KB-224A9BC7.md",
+      "subject": "Page Builder Designer asset picker (PR #171 build) keeps Next enabled while a page loads, so paging clicks overlap; an older search response arriving late is discarded",
+      "question": "Does the Page Builder Designer \"Choose from asset library\" picker block paging while a page is loading, and can an older response overwrite a newer page?",
+      "anchors": [
+        "POST /api/page-builder-assets/search"
+      ],
+      "scope": [
+        "build=3.1035.0-pr-171-61df",
+        "module=pagebuildermodule",
+        "surface=admin-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-2289BD9F",
@@ -15541,6 +15559,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-B48AA284",
+      "path": "entries/KB-B48AA284.md",
+      "subject": "Page Builder Designer asset picker keeps the search keyword when the user changes folder, so an entered folder can look empty",
+      "question": "Does the Designer asset picker reset its search keyword when navigating into a folder or via the breadcrumb?",
+      "anchors": [
+        "POST /api/page-builder-assets/search"
+      ],
+      "scope": [
+        "build=3.1035.0-pr-171-61df",
+        "module=pagebuildermodule",
+        "surface=admin-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B4DC77F0",
       "path": "entries/KB-B4DC77F0.md",
       "subject": "Page Builder Designer needs platform:setting:read for a non-admin, else preview path is null and blocks are not editable",
@@ -17702,7 +17738,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
