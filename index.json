@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-13T20:54:05.675Z",
-  "count": 872,
+  "generated": "2026-10-14T05:23:12.661Z",
+  "count": 873,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5767,6 +5767,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-49AF58AC",
+      "path": "entries/KB-49AF58AC.md",
+      "subject": "With Subscription 3.1006.0-pr-128-5c31 the CreateSubscriptionsFromOrdersJob succeeds on the first attempt, creates exactly one subscription per plan-product order, and links it both ways (order.subscriptionId and subscription.customerOrdersIds)",
+      "question": "After Subscription PR #128 head 5c31, does placing an order for a product with a payment plan create exactly one subscription linked to the order without Hangfire retries?",
+      "anchors": [
+        "VirtoCommerce.SubscriptionModule.Data.BackgroundJobs.CreateSubscriptionsFromOrdersJob",
+        "GET /api/subscriptions/{id}",
+        "GET /api/order/customerOrders/{id}/changes",
+        "POST /api/subscriptions/plans"
+      ],
+      "scope": [
+        "module=virtocommerce.subscription@3.1006.0-pr-128-5c31",
+        "surface=background-job"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
