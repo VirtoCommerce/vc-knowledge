@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T07:08:47.420Z",
-  "count": 888,
+  "generated": "2026-10-14T07:19:48.621Z",
+  "count": 889,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9760,7 +9760,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -18479,6 +18479,25 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-DD1924E0",
+      "path": "entries/KB-DD1924E0.md",
+      "subject": "Image Tools never generates thumbnails for .jpg files: the allowed-format check compares the file extension against the format NAMES (JPEG, PNG, Webp, SVG), so only .jpeg passes, and Assets rejects .jpeg uploads",
+      "question": "Why are no thumbnails generated for .jpg images by a thumbnail task?",
+      "anchors": [
+        "POST /api/image/thumbnails/tasks/run",
+        "POST /api/assets"
+      ],
+      "scope": [
+        "module=imagetools@3.1006.1",
+        "surface=admin-ui",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DD67E1FA",
