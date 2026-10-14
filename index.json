@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T17:32:52.109Z",
-  "count": 904,
+  "generated": "2026-10-14T18:26:41.051Z",
+  "count": 905,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7271,6 +7271,23 @@
       ],
       "scope": [
         "surface=vendor-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5394491D",
+      "path": "entries/KB-5394491D.md",
+      "subject": "xAPI cart LineItemType.showPlacedPrice = IsDiscountAmountRounded: false only when an applied promotion line reward has roundAmountPerItem=false",
+      "question": "What makes xAPI cart line showPlacedPrice false — punchout session, promotion, or sale price?",
+      "anchors": [
+        "LineItemType.showPlacedPrice",
+        "Query.cart"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
