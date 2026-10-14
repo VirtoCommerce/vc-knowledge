@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T06:00:55.976Z",
-  "count": 877,
+  "generated": "2026-10-14T06:09:45.957Z",
+  "count": 878,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -16964,6 +16964,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CB650C31",
+      "path": "entries/KB-CB650C31.md",
+      "subject": "Moving a category across physical catalogs rewrites the CatalogId of products that are only LINKED into the moved category (owned by a third catalog)",
+      "question": "Does a cross-catalog category move (Cut/Paste, POST /api/catalog/listentries/move) change the catalog of a product that is merely linked into the moved category?",
+      "anchors": [
+        "POST /api/catalog/listentries/move",
+        "POST /api/catalog/listentrylinks",
+        "GET /api/catalog/products/{id}"
+      ],
+      "scope": [
+        "module=catalog",
+        "operation=category-move-cross-catalog",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
