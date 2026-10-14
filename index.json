@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T20:22:18.827Z",
-  "count": 907,
+  "generated": "2026-10-14T21:02:55.967Z",
+  "count": 908,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5619,6 +5619,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-466B557D",
+      "path": "entries/KB-466B557D.md",
+      "subject": "With vc-platform PR #3142 (ng-required on dictionary ui-selects) an empty Required Dictionary dynamic property invalidates the Admin Dynamic properties blade and disables OK, for all four dictionary variants",
+      "question": "Does a Required dictionary dynamic property block OK in the Admin Dynamic properties blade on a build carrying the ng-required fix (PR #3142)?",
+      "anchors": [
+        "PUT /api/members",
+        "genericValueInput.tpl.html"
+      ],
+      "scope": [
+        "build=platform-3.1084.0-pr-3142",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
