@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T22:34:43.120Z",
-  "count": 912,
+  "generated": "2026-10-14T22:36:51.354Z",
+  "count": 913,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4523,6 +4523,24 @@
         "host-os=linux",
         "module=virtocommerce.sqlqueries",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-36E050D4",
+      "path": "entries/KB-36E050D4.md",
+      "subject": "On a configurable product page below the 4xl container width, each option row shows the 'Total' label but its amount is display:none (theme 2.51.2 to 2.59.0)",
+      "question": "does the configurable product option row show its Total amount on mobile and tablet viewports",
+      "anchors": [
+        "/products-with-options/cfg-parents",
+        "client-app/ui-kit/components/molecules/product-price/vc-product-price.vue"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=mobile-tablet"
       ],
       "plane": "experiential",
       "status": "active",
