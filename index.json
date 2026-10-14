@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T07:19:48.621Z",
-  "count": 889,
+  "generated": "2026-10-14T07:39:04.323Z",
+  "count": 891,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -8347,7 +8347,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -12324,6 +12324,26 @@
         "component=vc-rating",
         "feature=customer-reviews",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-93031E4E",
+      "path": "entries/KB-93031E4E.md",
+      "subject": "xAPI cart query returns null when the user has no cart; clearCart creates and persists an empty default cart",
+      "question": "After deleting all of a user's carts, does the xAPI cart query recreate the default cart, and how do you get exactly one empty persisted default cart?",
+      "anchors": [
+        "Query.cart",
+        "Mutation.clearCart",
+        "DELETE /api/carts",
+        "POST /api/carts/search"
+      ],
+      "scope": [
+        "module=virtocommerce.xcart",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -19655,6 +19675,25 @@
       ],
       "scope": [
         "principal=customer",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EC0D1A9B",
+      "path": "entries/KB-EC0D1A9B.md",
+      "subject": "A store with no fulfillment center cannot take any product into the cart: addItem fails with PRODUCT_FFC_QTY",
+      "question": "Why does addItem add nothing in a store whose products show isBuyable true but isAvailable false?",
+      "anchors": [
+        "Mutation.addItem",
+        "Query.products",
+        "GET /api/stores/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.xcart",
         "surface=xapi"
       ],
       "plane": "experiential",
