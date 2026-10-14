@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T21:07:05.570Z",
-  "count": 910,
+  "generated": "2026-10-14T21:09:38.226Z",
+  "count": 911,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7814,7 +7814,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -16910,7 +16910,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -20927,6 +20927,24 @@
       ],
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-F327C1D0",
+      "path": "entries/KB-F327C1D0.md",
+      "subject": "The generic price_<currency> index field holds ONE value across all price lists: the MAX effective price by default (setting Pricing.Indexing.PriceIndexingValue = Max), not the shopper's winning list",
+      "question": "Which value does the product index store in price_usd when a product has prices in several price lists?",
+      "anchors": [
+        "Query.products",
+        "GET /api/search/indexes/index/Product/{id}"
+      ],
+      "scope": [
+        "surface=search-index",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-F39ECA1A",

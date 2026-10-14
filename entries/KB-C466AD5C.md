@@ -43,5 +43,11 @@ evidence:
     note: "No-permission user: only GET .../fields sent (403), Error 403 banner, switch OFF with no mode although stored scannerEnabled=true. Read-only user: stored Full-text state shown, radios and switch disabled, no Save, Reset disabled."
     build: 452b315ee3a31e8a
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_regression
+    at: 2026-10-14T21:08:43.668Z
+    by: session:624d35a1
+    who: kutasinaelena
+    note: "Catalog 3.1048.0 (Stable 16): back-office user with only platform:access + store:access + store:read opens B2B-store > Search configuration > Barcode scanner; only GET .../store/B2B-store/fields sent (403); Error 403 banner; switch OFF, no match mode, although stored scannerEnabled=true; after Dismiss the false OFF form remains. The blade does not exist in Catalog 3.1029.6 (Stable 15)."
 ---
 Admin SPA, Catalog 3.1046 (PR 909 build): the tile still opens; the blade calls only GET .../fields, gets 403, shows an 'Error 403' banner, and still renders the switch OFF with neither match mode selected, although the stored value is scannerEnabled=true. The settings GET is never issued. With Read but not Update the blade renders the stored state correctly: no Save, Reset disabled, rows and radios inert.
