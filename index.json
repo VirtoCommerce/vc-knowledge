@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T06:48:04.653Z",
-  "count": 887,
+  "generated": "2026-10-14T07:08:47.420Z",
+  "count": 888,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14082,6 +14082,25 @@
         "component=vc-shell-framework",
         "feature=environment-banner",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A81FBFCB",
+      "path": "entries/KB-A81FBFCB.md",
+      "subject": "A catalog publishing channel created or saved in the Admin keeps a stored CompletenessPercent (0) that evaluation never refreshes, so its Complete % stays 0% after evaluating products",
+      "question": "Why does a channel show Complete 0% after Evaluate finished for all its products?",
+      "anchors": [
+        "GET /api/completeness/channels/{id}",
+        "POST /api/completeness/channels/{id}/evaluate"
+      ],
+      "scope": [
+        "module=catalogpublishing@3.1007.1",
+        "surface=admin-ui",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
