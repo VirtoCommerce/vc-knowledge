@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T23:00:14.497Z",
-  "count": 915,
+  "generated": "2026-10-14T23:19:55.364Z",
+  "count": 917,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6900,6 +6900,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-50AFCCD6",
+      "path": "entries/KB-50AFCCD6.md",
+      "subject": "Without order:read_prices, GET order zeroes inPayments[].captures/refunds amounts but childrenOperations still carries capture/refund amounts with withPrices true, and the Admin operations tree and capture blade display them",
+      "question": "Does a user without order:read_prices see capture or refund amounts for an order anywhere?",
+      "anchors": [
+        "GET /api/order/customerOrders/{id}",
+        "/workspace/orders"
+      ],
+      "scope": [
+        "module=virtocommerce.orders 3.1018.0",
+        "surface=admin-spa",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-50B4A5C1",
       "path": "entries/KB-50B4A5C1.md",
       "subject": "On a stale save (HTTP 412) the Page Builder Designer shows a transient red error toast, keeps the author's unsaved edit on screen and leaves Save enabled",
@@ -12357,6 +12376,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-91162F6E",
+      "path": "entries/KB-91162F6E.md",
+      "subject": "Storefront order detail renders the Billing address block only when the order payment carries a billing address",
+      "question": "When does /account/orders/{id} show a Billing address section on the storefront order detail?",
+      "anchors": [
+        "/account/orders/{id}",
+        "Query.order",
+        "CustomerOrderType.inPayments.billingAddress"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=2.59.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
