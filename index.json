@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T22:36:51.354Z",
-  "count": 913,
+  "generated": "2026-10-14T22:45:28.848Z",
+  "count": 914,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14490,6 +14490,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A91E80EC",
+      "path": "entries/KB-A91E80EC.md",
+      "subject": "A pickup location is listed for a product (productPickupLocations / cartPickupLocations) only when its fulfillment center stocks that product; the store-level pickupLocations query lists every active location",
+      "question": "Which pickup locations do Query.cartPickupLocations / Query.productPickupLocations return compared with Query.pickupLocations?",
+      "anchors": [
+        "Query.cartPickupLocations",
+        "Query.productPickupLocations",
+        "Query.pickupLocations",
+        "POST /api/shipping/pickup-locations"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
