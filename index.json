@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T00:44:54.447Z",
-  "count": 924,
+  "generated": "2026-10-15T09:32:26.004Z",
+  "count": 926,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4347,6 +4347,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-3584A055",
+      "path": "entries/KB-3584A055.md",
+      "subject": "PUT /api/order/customerOrders with an unknown currency code returns HTTP 500 'Sequence contains no matching element' instead of a 400",
+      "question": "What does the order update endpoint return for an unknown currency or an unparsable createdDate?",
+      "anchors": [
+        "PUT /api/order/customerOrders"
+      ],
+      "scope": [
+        "module=virtocommerce.orders 3.1018.0",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-358A70CB",
       "path": "entries/KB-358A70CB.md",
       "subject": "storefront order page projection of the shipment",
@@ -6915,7 +6932,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -15715,7 +15732,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19888,6 +19905,24 @@
       ],
       "scope": [
         "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E9C7F5A3",
+      "path": "entries/KB-E9C7F5A3.md",
+      "subject": "Payment refunds are not limited by the captured or payment amount, and a full refund leaves the PaymentIn status Paid",
+      "question": "Can refunds on a payment exceed the captured amount, and does a full refund move the payment to Refunded?",
+      "anchors": [
+        "POST /api/order/payments/payment/refund",
+        "POST /api/order/payments/payment/capture"
+      ],
+      "scope": [
+        "module=virtocommerce.orders 3.1018.0",
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",

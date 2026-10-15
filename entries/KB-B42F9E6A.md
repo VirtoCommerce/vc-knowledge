@@ -20,5 +20,11 @@ evidence:
     at: 2026-10-15T00:05:59.124Z
     by: session:624d35a1
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_regression
+    at: 2026-10-15T09:30:15.056Z
+    by: session:624d35a1
+    who: kutasinaelena
+    note: "Re-observed 2026-10-15 via REST: POST /api/export/run (ExportablePricelist, JsonExportProvider) -> notification stays 'Starting export task...' 60s+; Hangfire ExportJob fails 3/3 with JsonSerializationException at Path 'Request.DataQuery.Currencies'. Same request on vcptcore_stable (Export 3.1003.0, no BackgroundJobs module) finishes in <1s with a download URL."
 ---
 On Platform 3.1076.3 with VirtoCommerce.BackgroundJobs 3.1052.1 and VirtoCommerce.Export 3.1005.0, Pricing > Price lists > select one list > Export > JSON export provider > Start enqueues a Hangfire ExportJob (HangfireJobExecutor) whose payload carries Request.DataQuery as the abstract VirtoCommerce.ExportModule.Core.Model.ExportDataQuery; JsonJobPayloadSerializer.Deserialize throws Newtonsoft JsonSerializationException 'Could not create an instance of type ...ExportDataQuery. Type is an interface or abstract class' on every attempt (retry 1..3), the push notification 'ExportablePricelist export' never finishes and the Admin Export progress blade stays at 'Starting export task...'. Same failure family as the PaymentMethod payload entries. Stable 15 (no BackgroundJobs module, Export 3.1003.0) does not use this executor.
