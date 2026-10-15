@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T16:24:52.994Z",
-  "count": 1001,
+  "generated": "2026-10-15T16:34:18.731Z",
+  "count": 1002,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -16191,6 +16191,23 @@
         "surface=storefront-ui",
         "theme=paprika",
         "viewport=desktop"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AE72A16D",
+      "path": "entries/KB-AE72A16D.md",
+      "subject": "organizationReturns is granted per organization membership: a role holding xapi:my_organization:return:view on the member's membership in that org opens it; without it the query is refused",
+      "question": "What lets a storefront user see their organization's returns via Query.organizationReturns, and what does a user without it get?",
+      "anchors": [
+        "Query.organizationReturns",
+        "PUT /api/customer/organization-memberships/{id}"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
