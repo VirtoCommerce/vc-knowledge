@@ -166,46 +166,46 @@
 {"at":"2026-10-06T17:53:29.663Z","kind":"capture","id":"KB-936B54EF","subject":"Background jobs carrying an order with in-payments fail to deserialize the abstract PaymentMethod and fail all retries","question":"Why do Hangfire jobs fail with Could not create an instance of type PaymentMethod?","after":"2026-10-06T17:25:46.515Z","related":[],"read":["KB-ED01C2A4","KB-23CBD97B","KB-7564A9BF","KB-F1E057A8","KB-84773559","KB-17555498","KB-6CDB7E6F","KB-F1071A5D","KB-F3A9F204","KB-A46DF150","KB-31224A5E","KB-D080516B","KB-97170665","KB-D1D30720","KB-1F2EBF83","KB-700E5D52","KB-A4ABEFEA","KB-657521DF","KB-ED76FF4B","KB-7CC25D4A","KB-3D3B8531","KB-85F02FDB","KB-67D0AB31","KB-58A94337","KB-C6BB1914","KB-06CFE625","KB-512D556A","KB-B769C7B1","KB-4EDC989E","KB-D61EEFF8"],"via":"cli","topic":"organization returns list","who":"yuskithedeveloper"}
 {"at":"2026-10-06T17:53:58.668Z","kind":"show","id":"KB-D1D30720","state":"answer","via":"cli","topic":"organization returns list","call":"toolu_012tk1YvyxKZUZrnkiP7T3xs","agent":"main","who":"yuskithedeveloper"}
 {"at":"2026-10-06T20:55:01.398Z","kind":"restart","why":"state-dropped","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:30:54.101Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:31:53.495Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:32:50.675Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:32:51.958Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:32:58.467Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:33:54.692Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:34:53.941Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:35:51.722Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:36:51.753Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:37:53.772Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:38:53.662Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:39:52.483Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:40:52.326Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:41:53.608Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:42:46.902Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:42:51.762Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:42:52.184Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:43:51.943Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:44:51.945Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:45:53.593Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:46:52.470Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:47:51.798Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:48:51.751Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:49:52.151Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:50:51.692Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:51:54.241Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:52:53.868Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:53:53.707Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:54:51.647Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:55:52.011Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:56:51.686Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:57:54.680Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:58:51.827Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T22:59:51.866Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T23:00:52.258Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T23:01:51.895Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T23:01:54.692Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T23:02:00.481Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T23:02:52.507Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T23:03:32.061Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T23:03:37.452Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
-{"at":"2026-10-06T23:03:53.133Z","kind":"flush","ok":false,"attempts":1,"why":"HTTP 403 POST /git/blobs — Resource not accessible by personal access token","reason":"denied","who":"yuskithedeveloper"}
+{"at":"2026-10-06T22:30:54.101Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:31:53.495Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:32:50.675Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:32:51.958Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:32:58.467Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:33:54.692Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:34:53.941Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:35:51.722Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:36:51.753Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:37:53.772Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:38:53.662Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:39:52.483Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:40:52.326Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:41:53.608Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:42:46.902Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:42:51.762Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:42:52.184Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:43:51.943Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:44:51.945Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:45:53.593Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:46:52.470Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:47:51.798Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:48:51.751Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:49:52.151Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:50:51.692Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:51:54.241Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:52:53.868Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:53:53.707Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:54:51.647Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:55:52.011Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:56:51.686Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:57:54.680Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:58:51.827Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T22:59:51.866Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T23:00:52.258Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T23:01:51.895Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T23:01:54.692Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T23:02:00.481Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T23:02:52.507Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T23:03:32.061Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T23:03:37.452Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
+{"at":"2026-10-06T23:03:53.133Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","who":"yuskithedeveloper","code":"no-write-access"}
 {"at":"2026-10-08T14:50:46.403Z","kind":"session","session":"b6bd53fc","tools":659,"turns":2,"touchAt":[29,30,31,32,33,34,60,61,62,133,261,262,266,268,270],"agents":11,"agentTools":1723,"agentTouches":51,"firstAt":"2026-10-06T13:06:02.631Z","lastAt":"2026-10-07T20:43:40.964Z","who":"yuskithedeveloper"}
