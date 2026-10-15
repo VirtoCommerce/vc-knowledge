@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T12:17:05.573Z",
+  "generated": "2026-10-15T13:02:46.975Z",
   "count": 926,
   "entries": [
     {
@@ -1787,7 +1787,7 @@
       "plane": "experiential",
       "status": "superseded",
       "supersededBy": [
-        "KB-9B9FAF0F",
+        "KB-17555498",
         "KB-F1E057A8"
       ],
       "trust": 1,
@@ -2994,7 +2994,7 @@
       "status": "superseded",
       "supersededBy": [
         "KB-16363E17",
-        "KB-3FCB032F"
+        "KB-6D5E2CD1"
       ],
       "trust": 1,
       "disputed": 0
@@ -4501,8 +4501,7 @@
       "plane": "experiential",
       "status": "superseded",
       "supersededBy": [
-        "KB-E1E2716F",
-        "KB-9DB54091"
+        "KB-59E4B5FC"
       ],
       "trust": 1,
       "disputed": 1
@@ -6410,7 +6409,7 @@
       "supersededBy": [
         "KB-972CF223",
         "KB-BBBC4225",
-        "KB-51459ABB"
+        "KB-DA14E8B7"
       ],
       "trust": 2,
       "disputed": 4
@@ -10911,7 +10910,7 @@
       "status": "superseded",
       "supersededBy": [
         "KB-5E4764CF",
-        "KB-F320B037"
+        "KB-8C3E463D"
       ],
       "trust": 2,
       "disputed": 1
@@ -11904,7 +11903,7 @@
       "status": "superseded",
       "supersededBy": [
         "KB-1D885AE7",
-        "KB-8E1456B8"
+        "KB-6161BC89"
       ],
       "trust": 1,
       "disputed": 0
@@ -14724,8 +14723,7 @@
       "plane": "experiential",
       "status": "superseded",
       "supersededBy": [
-        "KB-2A9084BA",
-        "KB-A0FFEA0A"
+        "KB-2F64A447"
       ],
       "trust": 1,
       "disputed": 4
