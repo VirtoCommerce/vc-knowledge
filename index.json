@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-14T23:37:14.361Z",
-  "count": 919,
+  "generated": "2026-10-15T00:11:15.507Z",
+  "count": 920,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15659,6 +15659,25 @@
         "KB-E8984A18"
       ],
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B42F9E6A",
+      "path": "entries/KB-B42F9E6A.md",
+      "subject": "Generic export (Pricing > Price lists > Export, JSON provider) never completes with BackgroundJobs 3.1052.1: ExportJob fails every retry deserializing the abstract ExportDataQuery",
+      "question": "Why does a price-list export from the Admin stay on 'Starting export task...' forever?",
+      "anchors": [
+        "/workspace/pricing",
+        "/hangfire/jobs/details"
+      ],
+      "scope": [
+        "module=virtocommerce.backgroundjobs 3.1052.1",
+        "module=virtocommerce.export 3.1005.0",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
