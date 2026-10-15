@@ -76,5 +76,14 @@ evidence:
     bodyHash: 3b83d8af725d
     build: 4ca08b7825765bae
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 7ec352df61232ca8
+    conditions: module:VirtoCommerce.SalesRep=3.1014.0; theme=2.60.0-alpha.2579; browser=edge
+    at: 2026-10-15T13:28:38.165Z
+    by: session:10db9d7d
+    bodyHash: 3b83d8af725d
+    who: Lenajava1
+    note: "Re-observed after salesrep 3.1014.0 release: canceled Kilo unchanged Save and re-dated Save (+20 days) -> UpdateSalesRepTask 200, no errors, isActive:false completed:false, 'Task saved', no row action, counts unchanged."
 ---
 On /company/tasks a canceled task (isActive:false, completed:false) renders a clickable title that opens the Edit task modal with every field editable and Save enabled. Saving it, unchanged or with a new due date, sends Mutation.updateSalesRepTask and returns HTTP 200 with the task in data and no errors[]; the toast is 'Task saved', the modal closes, the list and counts refetch, and the task stays canceled. A completed task saves the same way. The row offers no action for a canceled task and 'Reopen' for a completed one. updateSalesRepTask answers HTTP 200 with errors[{message:"Task not found."}] and data null only when the task no longer exists or is not the rep's own (SalesRepTaskCommandHandlerBase, one answer for both so a write cannot probe ids); the storefront then shows 'Something went wrong. Please try again later.' and keeps the modal open. Deleting the task while its Edit modal is open reproduces exactly that. Observed 2026-10-12 on theme 2.60.0-pr-2511-81f1 with SalesRep 3.1013.0-pr-18-d367 and TaskManagement 3.1005.0 (vcst); the completed-task save also on vcptcore.

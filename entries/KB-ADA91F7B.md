@@ -103,5 +103,14 @@ evidence:
     splitFrom: KB-0C102D97
     build: 59983c56933fe571
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: e00c89f4da0e9c98
+    conditions: module:VirtoCommerce.Orders=3.1018.0; module:VirtoCommerce.Payment=3.1010.0; store=B2B-store; principal=admin
+    at: 2026-10-15T08:26:41.691Z
+    by: session:10db9d7d
+    bodyHash: 435009fa6b8e
+    who: Lenajava1
+    note: "Cancelled 6 B2B-store orders via PUT /api/order/customerOrders (status Cancelled, isCancelled true, cancelReason). The 3 orders whose inPayment was DefaultManualPaymentMethod at status New: payment reached Cancelled / isCancelled true / cancelledState Completed within seconds; all 6 shipments stayed New. Exception: inPayments already at status Paid (Datatrans, Skyflow) were NOT cancelled - see the separate entry on paid payments."
 ---
 Cancelling an order cascades to the PAYMENT and not to the SHIPMENT or the line items. In Admin, Cancel document on the order blade asks for a reason in a modal - a Bootstrap .modal, not the app's own dialog element - and changes nothing until Confirm is pressed, so a check of the record straight after clicking shows the order still New and looks like the action silently failed. On Confirm the order goes to Cancelled with isCancelled true, cancelledDate set and cancelReason carrying the dialog text; the order's own cancelledState stays Undefined, so it is not the field to test. Its inPayment follows about 1.7 seconds later on a background job, reaching status Cancelled, isCancelled true and cancelledState Completed; its shipment stays at status New with isCancelled false and a modifiedDate still equal to its createdDate, never written again; its line items all stay isCancelled false. Reserved stock IS released - the inventory each line drew down returns to its pre-order figure. The mechanism is that CancelPaymentOrderChangedEventHandler collects changedEntry.NewEntry.InPayments only, and no shipment-cancelling handler exists anywhere in the Orders module. So a cancelled order leaves a live shipment document and line items that individually claim not to be cancelled, and anything counting open shipments or reasoning per line rather than per order - a fulfilment queue, a warehouse worklist - keeps treating them as open; this is why a store used for order testing accumulates New shipments belonging to orders that are all Cancelled. Reproduced independently by three separate runs on 2026-09-15.

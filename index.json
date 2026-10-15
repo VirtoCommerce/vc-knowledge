@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T16:02:04.514Z",
-  "count": 977,
+  "generated": "2026-10-15T16:21:10.538Z",
+  "count": 1000,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1284,7 +1284,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1594,7 +1594,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1817,7 +1817,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2415,7 +2415,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -3640,7 +3640,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -3843,6 +3843,23 @@
       ],
       "scope": [
         "layer=plugin-delivery",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2DD1A73B",
+      "path": "entries/KB-2DD1A73B.md",
+      "subject": "/company/info throws TypeError (reading 'status') and vue-i18n SyntaxError 26 on render for an organization editor, and the Vue error handler hides both from the browser console",
+      "question": "Does opening /company/info as an organization maintainer produce browser exceptions, and where can they be seen?",
+      "anchors": [
+        "/company/info"
+      ],
+      "scope": [
+        "role=organization-editor",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -5615,6 +5632,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-411B8AA9",
+      "path": "entries/KB-411B8AA9.md",
+      "subject": "approveQuoteRequest converts a 'Proposal sent' quote whose expirationDate is already past",
+      "question": "Does approveQuoteRequest refuse a quote whose expirationDate has passed?",
+      "anchors": [
+        "Mutation.approveQuoteRequest",
+        "POST /api/quote/requests"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-417AC3F2",
       "path": "entries/KB-417AC3F2.md",
       "subject": "Barcode scanner blade: saved field missing from the index is shown checked with a badge, inert, and dropped on the next save",
@@ -5698,6 +5732,22 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-429A791E",
+      "path": "entries/KB-429A791E.md",
+      "subject": "The quotes list page intermittently renders raw i18n keys as column headers and page title",
+      "question": "Does /account/quotes always render translated column headers and title?",
+      "anchors": [
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-432D02EF",
@@ -6003,6 +6053,25 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-487FCE72",
+      "path": "entries/KB-487FCE72.md",
+      "subject": "Creating a quote request from the cart empties the cart",
+      "question": "After 'Add cart items to quote' on /cart and submitting the quote request, are the cart items kept?",
+      "anchors": [
+        "/cart",
+        "/account/quotes/{id}/edit",
+        "Mutation.createQuoteFromCart"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7782,6 +7851,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-53E57D1B",
+      "path": "entries/KB-53E57D1B.md",
+      "subject": "On /compare below 768px the row Pin buttons and row info-tooltip triggers are display:none with no overflow menu or bottom-sheet substitute",
+      "question": "Are the row pin and row info-tooltip controls available on the Product Compare page on mobile widths?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=below-md"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-54D11D0D",
       "path": "entries/KB-54D11D0D.md",
       "subject": "The storefront robots.txt is store content uploaded through the store Assets widget in Admin",
@@ -7959,7 +8045,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7990,7 +8076,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -9117,6 +9203,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-65D34B0B",
+      "path": "entries/KB-65D34B0B.md",
+      "subject": "Loading /checkout/completed directly or after a reload throws vue-router 'Missing required param \"orderId\"': page shows 'Order completed' with no order number and no Show order button",
+      "question": "What does /checkout/completed show after a reload or direct load, with no order just placed?",
+      "anchors": [
+        "/checkout/completed"
+      ],
+      "scope": [
+        "state=reload-or-direct-load",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10426,6 +10529,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-7457724D",
+      "path": "entries/KB-7457724D.md",
+      "subject": "A Datatrans refund through POST /api/order/payments/payment/refund returns succeeded, but the refund document stays Pending and the PaymentIn stays Paid",
+      "question": "After refunding a Paid Datatrans payment via POST /api/order/payments/payment/refund, what state do the refund document and the payment end in?",
+      "anchors": [
+        "POST /api/order/payments/payment/refund",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "principal=admin",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-74682777",
       "path": "entries/KB-74682777.md",
       "subject": "A platform administrator's storefront-grant token carries role __administrator and no xapi:my_organization permission claims; organizationReturns refuses an administrator who is not a member",
@@ -10694,7 +10815,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10756,7 +10877,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11547,6 +11668,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-81D02797",
+      "path": "entries/KB-81D02797.md",
+      "subject": "On /company/tasks at 1440px the Due dates rail is 280px wide, completed task titles keep the link colour with line-through, and Completed/Overdue status chips use a filled (tonal) background with a dot",
+      "question": "What width is the Due dates rail on /company/tasks, what colour is a completed task title, and what style do the status chips use?",
+      "anchors": [
+        "/company/tasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "viewport=1440"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-82111688",
       "path": "entries/KB-82111688.md",
       "subject": "the storefront members Status filter finds nobody in a state the roster is full of",
@@ -12044,7 +12183,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12534,7 +12673,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13749,6 +13888,24 @@
       "resolved": 4
     },
     {
+      "id": "KB-9795DE39",
+      "path": "entries/KB-9795DE39.md",
+      "subject": "updateMemberAddresses rejects an address whose first or last name contains a digit with a bare VALIDATION error; letters-only names succeed",
+      "question": "Why does adding an address on /account/addresses return \"Something went wrong\" with errors[0].extensions.code VALIDATION and data.updateMemberAddresses null?",
+      "anchors": [
+        "Mutation.updateMemberAddresses",
+        "/account/addresses"
+      ],
+      "scope": [
+        "account=personal",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-97A675C1",
       "path": "entries/KB-97A675C1.md",
       "subject": "Approve / decline commits immediately without confirmation and emails the decision",
@@ -14035,6 +14192,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-9B275671",
+      "path": "entries/KB-9B275671.md",
+      "subject": "The cart Select-address popup's sortable column header sets aria-sort=descending on the first click, then ascending, and non-sortable headers carry aria-sort=none",
+      "question": "On /cart, what aria-sort value does the Address column header of the address selection popup take after the first and second click, and do non-sortable headers carry aria-sort?",
+      "anchors": [
+        "/cart",
+        "Query.currentCustomerAddresses"
+      ],
+      "scope": [
+        "component=select-address-modal",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9B9FAF0F",
       "path": "entries/KB-9B9FAF0F.md",
       "subject": "submitting a return raises one registered-return email notification and one push message whose topic is the return number",
@@ -14065,6 +14240,23 @@
       "supersededBy": [
         "KB-17555498"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9C031F08",
+      "path": "entries/KB-9C031F08.md",
+      "subject": "In the /cart Select address popup a zero-match keyword search shows the no-saved-addresses copy 'You do not have any addresses yet' and hides the facet dropdowns",
+      "question": "What does the /cart Select address popup show when a keyword search matches no addresses?",
+      "anchors": [
+        "/cart",
+        "Query.currentOrganizationAddresses"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -14431,6 +14623,22 @@
       ],
       "trust": 4,
       "disputed": 1
+    },
+    {
+      "id": "KB-A0EC64CD",
+      "path": "entries/KB-A0EC64CD.md",
+      "subject": "Approving a quote with an out-of-stock line places the order without any stock warning",
+      "question": "On /account/quotes/{id}, when a Proposal sent quote contains a line whose product is out of stock, does Approve warn or block, or place the order anyway?",
+      "anchors": [
+        "/account/quotes/{id}"
+      ],
+      "scope": [
+        "surface=storefront"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-A0FFEA0A",
@@ -15235,7 +15443,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -15862,7 +16070,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 9,
+      "trust": 10,
       "disputed": 0
     },
     {
@@ -17355,6 +17563,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-BE64F57E",
+      "path": "entries/KB-BE64F57E.md",
+      "subject": "Quote statuses have no \"Cancelled\" value; a full-body PUT /api/quote/requests moves a Processing quote to Declined and keeps its attachments",
+      "question": "How do I cancel or decline a Processing quote request via admin REST, and which status values are allowed?",
+      "anchors": [
+        "PUT /api/quote/requests",
+        "GET /api/quote/requests/{id}"
+      ],
+      "scope": [
+        "principal=admin",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BE7DF8DA",
       "path": "entries/KB-BE7DF8DA.md",
       "subject": "Customer share switched to AnyoneAnonymous: targets and message cleared, key kept",
@@ -18054,6 +18280,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-C672CA47",
+      "path": "entries/KB-C672CA47.md",
+      "subject": "The order-cancel payment cascade calls the gateway's RefundProcessPaymentAsync for a Paid payment (VoidProcessPaymentAsync for Authorized) and only flags non-captured payments as cancelled",
+      "question": "Why does a Paid payment stay Paid with isCancelled false but cancelledState Completed after its order is cancelled?",
+      "anchors": [
+        "PUT /api/order/customerOrders",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C6BB1914",
       "path": "entries/KB-C6BB1914.md",
       "subject": "Return.LanguageCode comes from createReturn cultureName, not from the order languageCode",
@@ -18300,6 +18543,23 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C9FE6156",
+      "path": "entries/KB-C9FE6156.md",
+      "subject": "Org-member Select address popup on /cart pages org addresses 6 per page with numbered pagination; currentOrganizationAddresses uses a numeric offset in after and each page replaces the rows",
+      "question": "How does the /cart Select address popup paginate organization addresses?",
+      "anchors": [
+        "/cart",
+        "Query.currentOrganizationAddresses"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -18675,7 +18935,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0,
       "resolved": 3
     },
@@ -18867,7 +19127,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -19131,6 +19391,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-D47B8DF1",
+      "path": "entries/KB-D47B8DF1.md",
+      "subject": "Quote expiration date is neither shown nor enforced on the storefront; approving an expired or out-of-stock quote places the order",
+      "question": "Does the storefront show a quote's expiration date or block Approve on an expired quote or a quote with an out-of-stock line?",
+      "anchors": [
+        "/account/quotes/{id}",
+        "Mutation.approveQuoteRequest"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D48E2629",
       "path": "entries/KB-D48E2629.md",
       "subject": "PDP recommended-products view_item_list carries only the cards rendered at the current width and is re-sent each time a resize changes that count",
@@ -19204,6 +19482,24 @@
       "scope": [
         "store-content-flow=blob",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D50712C5",
+      "path": "entries/KB-D50712C5.md",
+      "subject": "Changing the shipping address from /cart edits the user's saved account address in place",
+      "question": "When a personal user edits the cart's shipping address in the Edit address dialog, is the saved address in /account/addresses changed?",
+      "anchors": [
+        "/cart",
+        "/account/addresses"
+      ],
+      "scope": [
+        "role=personal account",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -19817,6 +20113,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-DC4E2D6D",
+      "path": "entries/KB-DC4E2D6D.md",
+      "subject": "An order placed by approving a quote carries no quote reference, and the quote shows no order reference",
+      "question": "After Approve on /account/quotes/{id}, does the resulting order on /account/orders/{id} show the quote number, and does the quote detail show the order it produced?",
+      "anchors": [
+        "/account/quotes/{id}",
+        "/account/orders/{id}"
+      ],
+      "scope": [
+        "surface=storefront"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DCE536F0",
       "path": "entries/KB-DCE536F0.md",
       "subject": "Admin loyalty mission blade: up to Loyalty 3.1008 it hid server validation messages and blanked the mission tree after a failed save; from Loyalty 3.1009 with platform 3.1074 it shows the message and keeps the form",
@@ -20285,6 +20598,22 @@
       ],
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-E23CFAF6",
+      "path": "entries/KB-E23CFAF6.md",
+      "subject": "A quote put into Proposal sent by a REST status write produces no storefront header notification for the buyer",
+      "question": "Does a quote status change to Proposal sent produce a notification in the storefront header notifications popup for the buyer?",
+      "anchors": [
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=storefront"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-E367DA11",
@@ -20761,6 +21090,42 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-E9471929",
+      "path": "entries/KB-E9471929.md",
+      "subject": "On the storefront the locale URL prefix for English is /en-GB/ (and /en-US/ redirects to the unprefixed default); a bare /en/ is not a locale prefix and stacks under the active locale as /de/en/ with a 404",
+      "question": "Which locale prefixes does the storefront accept in the URL, and what happens to /en/ when German is the active locale?",
+      "anchors": [
+        "/de/destinations",
+        "/en-GB/"
+      ],
+      "scope": [
+        "feature=locale-routing",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E98AB061",
+      "path": "entries/KB-E98AB061.md",
+      "subject": "Cancelling an order does not cancel an inPayment that is already Paid: it stays status Paid, isCancelled false (cancelledState reads Completed)",
+      "question": "When an order whose payment is already Paid (e.g. Datatrans or Skyflow) is cancelled, is that payment cancelled by the cascade?",
+      "anchors": [
+        "PUT /api/order/customerOrders",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "principal=admin",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-E9939511",
@@ -21589,6 +21954,24 @@
       "resolved": 2
     },
     {
+      "id": "KB-EF1D080D",
+      "path": "entries/KB-EF1D080D.md",
+      "subject": "An order placed by approving a quote keeps the list price as price and the proposal as placedPrice, with the difference in discountAmount",
+      "question": "What prices does the CustomerOrder created by approveQuoteRequest carry on its lines?",
+      "anchors": [
+        "Mutation.approveQuoteRequest",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EF3CB7FB",
       "path": "entries/KB-EF3CB7FB.md",
       "subject": "Login on behalf is authorized on the storefront not in Admin",
@@ -21800,6 +22183,24 @@
         "/account/coupons"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F0FDB3F2",
+      "path": "entries/KB-F0FDB3F2.md",
+      "subject": "The State / Province facet in the checkout address popup is removed while a Country filter selects a country without regions, and returns when the filter is cleared",
+      "question": "Does the State / Province facet of the checkout shipping address popup react to an applied Country filter?",
+      "anchors": [
+        "/cart",
+        "Query.currentOrganizationAddresses"
+      ],
+      "scope": [
+        "flow=checkout-shipping-address-popup",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -22146,7 +22547,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 8,
+      "trust": 9,
       "disputed": 0
     },
     {
