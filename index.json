@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T16:38:25.405Z",
-  "count": 1003,
+  "generated": "2026-10-15T16:54:10.396Z",
+  "count": 1004,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3358,6 +3358,23 @@
       "trust": 9,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-27D0676F",
+      "path": "entries/KB-27D0676F.md",
+      "subject": "xapi:my_organization:return:submit unlocks nothing on Return 3.1005.0: a holder still gets no returnable lines on a colleague's order",
+      "question": "What does xapi:my_organization:return:submit allow — creating or submitting a return on another organization member's order (returnableItems, createReturn, submitReturn), or something else?",
+      "anchors": [
+        "Query.returnableItems",
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-29037452",
