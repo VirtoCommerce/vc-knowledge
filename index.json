@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T00:11:15.507Z",
-  "count": 920,
+  "generated": "2026-10-15T00:19:15.523Z",
+  "count": 922,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -20848,6 +20848,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-F13F5D04",
+      "path": "entries/KB-F13F5D04.md",
+      "subject": "The cart pickup-point picker is a 6-per-page 'Select address' table with numbered pagination unless Shipping.Bopis.GoogleMaps.Enabled is on; only then the map modal with 50-per-page 'Load more' is used",
+      "question": "Which pickup-location picker does the /cart Pickup option open, and what decides between the map modal and the table?",
+      "anchors": [
+        "/cart",
+        "Query.cartPickupLocations"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F1542157",
       "path": "entries/KB-F1542157.md",
       "subject": "An order-level promotion is recorded only in the order's discounts collection, not on line items, so the Admin Line items header shows the undiscounted sum",
@@ -21259,6 +21277,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F703AF4B",
+      "path": "entries/KB-F703AF4B.md",
+      "subject": "On vcptcore_regression the BOPIS 'Pick points' map does not load (Google Maps NoApiKeys / ApiProjectMapError); the location list and search still work",
+      "question": "Does the storefront BOPIS pickup-location map render on vcptcore_regression?",
+      "anchors": [
+        "/cart",
+        "Query.productPickupLocations"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
