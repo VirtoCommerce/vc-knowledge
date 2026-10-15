@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T00:19:15.523Z",
-  "count": 922,
+  "generated": "2026-10-15T00:31:16.538Z",
+  "count": 923,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4667,7 +4667,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -12093,6 +12093,25 @@
       "scope": [
         "module=virtocommerce.imagetools",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8D5B9AC9",
+      "path": "entries/KB-8D5B9AC9.md",
+      "subject": "productPickupLocations / cartPickupLocations ignore a keyword that contains an apostrophe (or is only '&') and return every location, while Query.pickupLocations returns 0 for the same keyword",
+      "question": "How do the pickup-location keyword searches treat special characters such as an apostrophe or ampersand?",
+      "anchors": [
+        "Query.productPickupLocations",
+        "Query.cartPickupLocations",
+        "/cart"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
