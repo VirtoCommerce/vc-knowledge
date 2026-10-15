@@ -37,5 +37,14 @@ evidence:
     splitFrom: KB-6F0094B3
     build: 59983c56933fe571
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: ca098b1f8643fb95
+    conditions: theme=2.60.0-pr-2543-fdab-fdabd62d; store=B2B-store; setting:BarcodeSearch.Fields=[gtin]; browser=Edge-1920; role=anonymous
+    at: 2026-10-14T09:12:50.840Z
+    by: session:b0e90290
+    bodyHash: aba6eda9891c
+    who: Lenajava1
+    note: "Holds on the markup-analytics build (vc-frontend PR 2543, data-vc-track): single-hit /search?barcode= redirect pushed only view_item (0 view_item_list, 0 view_search_results; no en=view_item_list /g/collect hit). A 3-hit barcode pushed exactly one view_item_list (3 items, one /g/collect hit) plus view_search_results with the barcode as search_term, no markup duplicate."
 ---
 Observed in the GA4 dataLayer on a vc-frontend 2.59 build carrying the barcode scanner search setup (theme PR 2501), store in exact mode. Opening /search?barcode=<v> by link: 3 hits pushed view_item_list and view_search_results with search_term <v>, results_count 3, results_page 1 and the three SKUs in visible_items; 0 hits pushed both with results_count 0 and an empty visible_items; exactly one hit replaced the URL with the product page and pushed only view_item, no view_search_results and no view_item_list. With &q=<other term> added, view_search_results still carried the barcode as search_term. /search?q=<v> pushed view_search_results with the phrase as search_term. No search event was pushed for a link-opened lookup (in source it is sent only after a scan).
