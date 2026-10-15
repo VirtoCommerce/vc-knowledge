@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T00:31:16.538Z",
-  "count": 923,
+  "generated": "2026-10-15T00:44:54.447Z",
+  "count": 924,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10567,6 +10567,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-7A6171A9",
+      "path": "entries/KB-7A6171A9.md",
+      "subject": "productPickupLocations / cartPickupLocations pass the keyword through the search-phrase grammar: an unparsable keyword is dropped (all locations), a quoted keyword is literal, and field:value syntax in keyword acts as a filter",
+      "question": "Why does a pickup-location keyword with an apostrophe or bracket return every location, and how is that keyword interpreted?",
+      "anchors": [
+        "Query.productPickupLocations",
+        "Query.cartPickupLocations",
+        "Query.pickupLocations"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7A9D4927",
       "path": "entries/KB-7A9D4927.md",
       "subject": "Switching a shared wishlist to Private only suspends its link; removeWishlist is the only revocation",
@@ -12115,7 +12134,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
