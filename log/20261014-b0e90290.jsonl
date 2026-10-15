@@ -209,3 +209,4 @@
 {"at":"2026-10-14T10:57:28.717Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 2 path(s) outside <root>/{entries,index.json,log}: builds/ca098b1f8643fb95.json, builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
 {"at":"2026-10-14T10:57:33.984Z","kind":"flush","ok":false,"attempts":1,"why":"could not read entries/KB-E9FD99DC.md: UND_ERR_SOCKET: fetch failed","reason":"unreachable","who":"Lenajava1"}
 {"at":"2026-10-14T10:58:13.999Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 2 path(s) outside <root>/{entries,index.json,log}: builds/ca098b1f8643fb95.json, builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
+{"at":"2026-10-14T11:28:34.192Z","kind":"session","session":"b0e90290","tools":106,"turns":15,"touchAt":[38],"agents":12,"agentTools":1658,"agentTouches":59,"firstAt":"2026-10-14T09:01:02.638Z","lastAt":"2026-10-14T10:57:20.347Z","who":"Lenajava1"}

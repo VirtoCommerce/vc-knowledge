@@ -171,4 +171,4 @@
 {"at":"2026-10-14T11:19:14.880Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
 {"at":"2026-10-14T11:20:13.738Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
 {"at":"2026-10-14T11:21:14.428Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:26:53.255Z","kind":"session","session":"ad1b6cbd","tools":62,"turns":5,"touchAt":[],"agents":6,"agentTools":341,"agentTouches":8,"firstAt":"2026-10-14T08:50:05.055Z","lastAt":"2026-10-14T09:36:27.686Z","who":"Lenajava1"}
+{"at":"2026-10-14T11:52:11.107Z","kind":"session","session":"ad1b6cbd","tools":89,"turns":4,"touchAt":[73,76],"agents":7,"agentTools":371,"agentTouches":12,"firstAt":"2026-10-14T08:50:05.055Z","lastAt":"2026-10-14T11:13:33.686Z","who":"Lenajava1"}
