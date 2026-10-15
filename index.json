@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T16:34:18.731Z",
-  "count": 1002,
+  "generated": "2026-10-15T16:38:25.405Z",
+  "count": 1003,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -19811,6 +19811,23 @@
         "file-scope=product-configuration",
         "owner=empty",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D8F9C095",
+      "path": "entries/KB-D8F9C095.md",
+      "subject": "An administrator who IS a member of the org gets xapi:my_organization:return:view in an org-switched token when the membership role grants it, and organizationReturns answers",
+      "question": "Does a platform administrator who is a member of an organization reach organizationReturns once their membership role grants xapi:my_organization:return:view?",
+      "anchors": [
+        "Query.organizationReturns",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
