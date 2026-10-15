@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T16:21:10.538Z",
-  "count": 1000,
+  "generated": "2026-10-15T16:24:52.994Z",
+  "count": 1001,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11770,6 +11770,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-828032F5",
+      "path": "entries/KB-828032F5.md",
+      "subject": "An order created by admin POST /api/order/customerOrders with status Completed advances loyalty mission progress for its customer: count +1, value +order total, PerSku units",
+      "question": "Does an admin-created order (POST /api/order/customerOrders) with status Completed contribute to the customer's loyalty mission progress, and how does each goal type count it?",
+      "anchors": [
+        "POST /api/order/customerOrders",
+        "POST /api/loyalty-mission-progress/search",
+        "Query.loyaltyMissionProgress"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
