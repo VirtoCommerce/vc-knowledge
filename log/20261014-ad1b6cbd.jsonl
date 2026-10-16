@@ -1,174 +1,174 @@
-{"at":"2026-10-14T08:59:56.642Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:00:59.695Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:05:11.671Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:06:12.008Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:06:30.933Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:06:33.249Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:07:10.453Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:08:10.593Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:09:10.871Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:10:10.543Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:11:12.327Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:12:12.564Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:13:12.066Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:14:13.484Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:15:13.262Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:16:04.420Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:16:08.419Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:16:12.041Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:17:12.624Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:18:12.760Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
+{"at":"2026-10-14T08:59:56.642Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:00:59.695Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:05:11.671Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:06:12.008Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:06:30.933Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:06:33.249Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:07:10.453Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:08:10.593Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:09:10.871Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:10:10.543Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:11:12.327Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:12:12.564Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:13:12.066Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:14:13.484Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:15:13.262Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:16:04.420Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:16:08.419Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:16:12.041Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:17:12.624Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:18:12.760Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
 {"at":"2026-10-14T09:18:26.063Z","kind":"ask","q":"POST /api/page-builder-pages/grouped/{groupId}/content without If-Match: does the build with concurrency token return 428, and how is the version token obtained (includeVersion=true)?","verdict":"ambiguous","p":0.86,"f":{"idfCoverage":0.46,"sentenceStrength":0.13,"sentenceMargin":0.41,"margin":0.56},"shown":["KB-1336804F","KB-50B4A5C1","KB-DF8D085C"],"state":"ambiguous","ms":1254,"rank":"verdict-1","via":"mcp","call":"toolu_01PMk9U3P1drEGhKGDJtaHQ5","topic":"Page Builder content concurrency","deployment":"vcst_qa","who":"Lenajava1","agent":"test-management-specialist"}
 {"at":"2026-10-14T09:18:26.368Z","kind":"ask","q":"changeWishlist sharingSetting targets: can a non-owner Write member of an Organization-scope list change scope or ownership?","verdict":"ambiguous","p":0.8,"f":{"idfCoverage":0.81,"sentenceStrength":0.29,"sentenceMargin":0.26,"margin":0.25},"shown":["KB-B59A1F9D","KB-ACDF81BB","KB-6E56FB4B"],"state":"ambiguous","ms":281,"rank":"verdict-1","via":"mcp","call":"toolu_01E1E1v2ii3nYvJjDLRMCoHx","topic":"Wishlist sharing authorization","deployment":"vcst_qa","who":"Lenajava1","agent":"test-management-specialist"}
 {"at":"2026-10-14T09:18:26.727Z","kind":"ask","q":"/connect/token otp_email locked account correct code response and storefront message","verdict":"ambiguous","p":0.32,"f":{"idfCoverage":0.6,"sentenceStrength":0.2,"sentenceMargin":-0.35,"margin":0.04},"shown":["KB-0407F36E","KB-08CC76A3","KB-06FE6C8D"],"state":"ambiguous","ms":340,"rank":"verdict-1","via":"mcp","call":"toolu_01TRKgGME1iCyyrFroQe57A4","topic":"OTP sign-in lockout","deployment":"vcst_qa","who":"Lenajava1","agent":"test-management-specialist"}
-{"at":"2026-10-14T09:18:30.911Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
+{"at":"2026-10-14T09:18:30.911Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
 {"at":"2026-10-14T09:18:33.504Z","kind":"show","id":"KB-1336804F","state":"answer","after":"2026-10-14T09:18:26.063Z","via":"mcp","call":"toolu_0135otU1xputzXyBFpnJiApL","topic":"Page Builder content concurrency","who":"Lenajava1","agent":"test-management-specialist"}
 {"at":"2026-10-14T09:18:33.562Z","kind":"show","id":"KB-6E56FB4B","state":"answer","after":"2026-10-14T09:18:26.368Z","via":"mcp","call":"toolu_01DjdSQqpiiFVQr2jZ8bS73c","topic":"Wishlist sharing authorization","who":"Lenajava1","agent":"test-management-specialist"}
 {"at":"2026-10-14T09:18:33.646Z","kind":"none","after":"2026-10-14T09:18:26.727Z","via":"mcp","call":"toolu_013qdtvBAYHHzEFMf1WWzkMB","topic":"OTP sign-in lockout","who":"Lenajava1","agent":"test-management-specialist"}
 {"at":"2026-10-14T09:18:33.691Z","kind":"show","id":"KB-06FE6C8D","state":"answer","verify":true,"via":"mcp","call":"toolu_01Vb6jzbXDAKwuL8zMSJp4Ew","topic":"OTP sign-in lockout","who":"Lenajava1","agent":"test-management-specialist"}
-{"at":"2026-10-14T09:18:37.654Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:19:12.410Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:20:12.179Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:21:12.048Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:22:12.268Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:23:12.638Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:24:12.269Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:25:12.127Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:26:13.141Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:27:12.795Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:28:12.067Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:29:12.252Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:30:12.309Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:31:12.191Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:32:12.532Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:33:12.335Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:34:13.299Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:35:13.300Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:36:12.087Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:36:32.300Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:36:36.313Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:37:12.383Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:38:12.200Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:39:12.318Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:40:12.177Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:41:12.667Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:42:12.581Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:43:12.456Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:44:12.284Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:45:12.203Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:46:12.289Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:47:12.530Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:48:12.555Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:49:13.871Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:50:12.607Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:51:12.866Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:52:12.289Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:53:13.493Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:54:13.644Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:55:12.698Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:56:12.692Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:57:12.669Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:58:13.423Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T09:59:12.698Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:00:12.931Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:01:13.327Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:02:12.684Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:03:12.879Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:04:13.003Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:05:12.952Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:06:13.048Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:07:12.538Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:08:12.932Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:09:13.021Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:10:13.030Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:11:12.647Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:12:13.016Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:13:13.266Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:14:12.980Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:15:12.849Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:16:13.756Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:17:12.824Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:18:12.642Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:19:12.694Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:20:13.478Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:21:12.727Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:22:12.631Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:23:12.692Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:24:12.845Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:25:12.997Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:26:12.747Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:27:12.846Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:28:13.085Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:29:12.770Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:30:13.401Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:31:12.862Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:32:13.214Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:33:13.153Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:34:13.126Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:35:13.410Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:36:12.775Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:37:12.914Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:38:12.953Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:39:13.228Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:40:13.227Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:41:13.412Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:42:12.997Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:43:13.298Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:44:13.015Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:45:12.997Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:46:13.101Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:47:12.845Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:48:13.225Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:49:13.141Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:50:13.124Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:51:13.377Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:52:13.140Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:53:13.089Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:54:13.021Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:55:12.968Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:56:12.916Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:57:13.123Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:58:13.323Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T10:59:13.143Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:00:14.272Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:01:13.263Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:02:13.120Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:03:13.383Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
+{"at":"2026-10-14T09:18:37.654Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:19:12.410Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:20:12.179Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:21:12.048Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:22:12.268Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:23:12.638Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:24:12.269Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:25:12.127Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:26:13.141Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:27:12.795Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:28:12.067Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:29:12.252Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:30:12.309Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:31:12.191Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:32:12.532Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:33:12.335Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:34:13.299Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:35:13.300Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:36:12.087Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:36:32.300Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:36:36.313Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:37:12.383Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:38:12.200Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:39:12.318Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:40:12.177Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:41:12.667Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:42:12.581Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:43:12.456Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:44:12.284Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:45:12.203Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:46:12.289Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:47:12.530Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:48:12.555Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:49:13.871Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:50:12.607Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:51:12.866Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:52:12.289Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:53:13.493Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:54:13.644Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:55:12.698Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:56:12.692Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:57:12.669Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:58:13.423Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T09:59:12.698Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:00:12.931Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:01:13.327Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:02:12.684Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:03:12.879Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:04:13.003Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:05:12.952Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:06:13.048Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:07:12.538Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:08:12.932Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:09:13.021Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:10:13.030Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:11:12.647Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:12:13.016Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:13:13.266Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:14:12.980Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:15:12.849Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:16:13.756Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:17:12.824Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:18:12.642Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:19:12.694Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:20:13.478Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:21:12.727Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:22:12.631Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:23:12.692Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:24:12.845Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:25:12.997Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:26:12.747Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:27:12.846Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:28:13.085Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:29:12.770Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:30:13.401Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:31:12.862Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:32:13.214Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:33:13.153Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:34:13.126Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:35:13.410Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:36:12.775Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:37:12.914Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:38:12.953Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:39:13.228Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:40:13.227Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:41:13.412Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:42:12.997Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:43:13.298Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:44:13.015Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:45:12.997Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:46:13.101Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:47:12.845Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:48:13.225Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:49:13.141Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:50:13.124Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:51:13.377Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:52:13.140Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:53:13.089Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:54:13.021Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:55:12.968Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:56:12.916Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:57:13.123Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:58:13.323Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T10:59:13.143Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:00:14.272Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:01:13.263Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:02:13.120Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:03:13.383Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
 {"at":"2026-10-14T11:03:46.124Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
-{"at":"2026-10-14T11:03:50.814Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:03:54.759Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:04:13.393Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
+{"at":"2026-10-14T11:03:50.814Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:03:54.759Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:04:13.393Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
 {"at":"2026-10-14T11:05:01.010Z","kind":"ask","q":"storefront window.dataLayer view_item_list select_item from data-vc-track markup roles on Page Builder product blocks and data-product-* plain HTML","verdict":"ambiguous","p":0.36,"f":{"idfCoverage":0.35,"sentenceStrength":0.13,"sentenceMargin":-0.07,"margin":0.27},"shown":["KB-85F9B1ED","KB-FF2B4381","KB-D0013883"],"state":"ambiguous","ms":1620,"rank":"verdict-1","via":"mcp","call":"toolu_01KS5hYksLdB255hQRJ95Jvo","topic":"storefront markup analytics documentation","deployment":"vcst_qa","who":"Lenajava1","agent":"main"}
-{"at":"2026-10-14T11:05:05.566Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
+{"at":"2026-10-14T11:05:05.566Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
 {"at":"2026-10-14T11:05:09.710Z","kind":"show","id":"KB-85F9B1ED","state":"answer","after":"2026-10-14T11:05:01.010Z","via":"mcp","call":"toolu_01P3EKrpuSz2Wj5oEurumJCx","topic":"storefront markup analytics documentation","who":"Lenajava1","agent":"main"}
-{"at":"2026-10-14T11:05:14.224Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:05:16.169Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:05:40.898Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:05:44.963Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
+{"at":"2026-10-14T11:05:14.224Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:05:16.169Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:05:40.898Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:05:44.963Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
 {"at":"2026-10-14T11:06:01.629Z","kind":"ask","q":"Page Builder products block window.dataLayer view_item_list item_list_id products_block data-vc-track markup which blocks send analytics events","verdict":"ambiguous","p":0.41,"f":{"idfCoverage":0.43,"sentenceStrength":0.15,"sentenceMargin":0,"margin":0.18},"shown":["KB-85F9B1ED","KB-56979CB9","KB-5CDD664E"],"state":"ambiguous","ms":478,"rank":"verdict-1","via":"mcp","call":"toolu_0198Edkcj5KH61f7XHSygh7M","topic":"markup list analytics","deployment":"vcst_qa","who":"Lenajava1","agent":"ba-doc-writer"}
-{"at":"2026-10-14T11:06:05.937Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
+{"at":"2026-10-14T11:06:05.937Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
 {"at":"2026-10-14T11:06:06.062Z","kind":"show","id":"KB-85F9B1ED","state":"answer","after":"2026-10-14T11:06:01.629Z","via":"mcp","call":"toolu_012VnXry3BCwJb4chQAFD7v2","topic":"markup list analytics","who":"Lenajava1","agent":"ba-doc-writer"}
 {"at":"2026-10-14T11:06:06.237Z","kind":"show","id":"KB-5CDD664E","state":"answer","after":"2026-10-14T11:06:01.629Z","via":"mcp","call":"toolu_013RiDEx9WzXNZQesry4Puy4","topic":"markup list analytics","who":"Lenajava1","agent":"ba-doc-writer"}
 {"at":"2026-10-14T11:06:06.350Z","kind":"show","id":"KB-D0013883","state":"answer","after":"2026-10-14T11:05:01.010Z","via":"mcp","call":"toolu_012FCwqdtfkngSW4XYuLb7aW","topic":"markup list analytics","who":"Lenajava1","agent":"ba-doc-writer"}
-{"at":"2026-10-14T11:06:10.256Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:06:14.404Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:07:13.519Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:08:13.325Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:08:32.006Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:08:36.322Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:09:13.506Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:10:13.285Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:11:13.425Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:12:13.420Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:13:13.144Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:13:38.356Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:13:42.480Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:14:13.824Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:15:13.827Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:16:13.744Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:17:14.092Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:18:14.629Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:19:14.880Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:20:13.738Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
-{"at":"2026-10-14T11:21:14.428Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/1f4819b72da4dd49.json","reason":"contained","who":"Lenajava1"}
+{"at":"2026-10-14T11:06:10.256Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:06:14.404Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:07:13.519Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:08:13.325Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:08:32.006Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:08:36.322Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:09:13.506Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:10:13.285Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:11:13.425Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:12:13.420Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:13:13.144Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:13:38.356Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:13:42.480Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:14:13.824Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:15:13.827Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:16:13.744Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:17:14.092Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:18:14.629Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:19:14.880Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:20:13.738Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
+{"at":"2026-10-14T11:21:14.428Z","kind":"flush","ok":false,"attempts":1,"reason":"contained","who":"Lenajava1","code":"contained"}
 {"at":"2026-10-14T11:52:11.107Z","kind":"session","session":"ad1b6cbd","tools":89,"turns":4,"touchAt":[73,76],"agents":7,"agentTools":371,"agentTouches":12,"firstAt":"2026-10-14T08:50:05.055Z","lastAt":"2026-10-14T11:13:33.686Z","who":"Lenajava1"}
