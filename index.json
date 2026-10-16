@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-16T11:57:27.548Z",
-  "count": 1006,
+  "generated": "2026-10-16T12:26:46.230Z",
+  "count": 1007,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13778,6 +13778,24 @@
         "surface=storefront-ui",
         "surface=xapi",
         "user=organization-member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-961E5BA1",
+      "path": "entries/KB-961E5BA1.md",
+      "subject": "The legacy REST cart coupon endpoint returns 204 without adding the coupon to cart.coupons; coupons are applied through the storefront xAPI addCoupon mutation",
+      "question": "Why does POST /api/carts/{id}/coupons/{code} return 204 while the cart's coupons stay empty?",
+      "anchors": [
+        "POST /api/carts/{id}/coupons/{code}",
+        "Mutation.addCoupon"
+      ],
+      "scope": [
+        "surface=rest-api",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
