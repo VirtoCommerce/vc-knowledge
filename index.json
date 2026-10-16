@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T09:32:26.004Z",
-  "count": 926,
+  "generated": "2026-10-15T16:54:10.396Z",
+  "count": 1004,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -76,6 +76,23 @@
       "scope": [
         "feature=otp-email-sign-in",
         "persona=multi-org",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-00C93196",
+      "path": "entries/KB-00C93196.md",
+      "subject": "On /compare, two configuration sections that share one display label render as a single configuration row showing only one section's selected option",
+      "question": "How does the compare table render a configured product whose two configuration sections share the same display label?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "feature=product-compare",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -283,6 +300,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-04095FB5",
+      "path": "entries/KB-04095FB5.md",
+      "subject": "Storefront return wizard requires a reason per line (Submit disabled until chosen) and the submitted return's detail page does not display the reason",
+      "question": "On the storefront return request flow, is a return reason required, which reasons are offered, and is the chosen reason shown after submit?",
+      "anchors": [
+        "/account/returns/new",
+        "/account/returns",
+        "Mutation.updateReturn"
+      ],
+      "scope": [
+        "feature=returns",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-040FD11E",
       "path": "entries/KB-040FD11E.md",
       "subject": "Back-office bearer tokens carry permissions as JWT claims, so a role permission change reaches REST authorization only on a newly issued token",
@@ -417,7 +453,8 @@
       "status": "active",
       "trust": 2,
       "disputed": 0,
-      "resolved": 1
+      "resolved": 1,
+      "contested": 1
     },
     {
       "id": "KB-05F297E6",
@@ -432,7 +469,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -488,6 +525,23 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-068E0A53",
+      "path": "entries/KB-068E0A53.md",
+      "subject": "/checkout/completed shows only the order number, a generic email notice and 'Show order' / 'Home page' links",
+      "question": "What does the storefront order confirmation page show after placing an order?",
+      "anchors": [
+        "/checkout/completed"
+      ],
+      "scope": [
+        "feature=checkout",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -592,6 +646,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-07723C70",
+      "path": "entries/KB-07723C70.md",
+      "subject": "A cold full load of a Sales Rep hub route on the Module Federation storefront fetches the HOST chunk /assets/plugin-route-placeholder-*.js before the plugin's page chunks",
+      "question": "Which scripts does a cold full load of a plugin-served hub route fetch from the host storefront rather than from the plugin folder?",
+      "anchors": [
+        "/company/customer-orders",
+        "GET /assets/plugin-route-placeholder-*.js"
+      ],
+      "scope": [
+        "module=virtocommerce.salesrep",
+        "surface=storefront-runtime"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-08CC76A3",
       "path": "entries/KB-08CC76A3.md",
       "subject": "Storefront OTP code step: digits only, auto-submit at 6, 7-digit input cut to the first 6, spaced paste accepted; a wrong code shows one message and, from theme 2.59.0-pr-2477, clears the field; Resend clears field and error and says \"New code sent.\"",
@@ -669,7 +741,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -860,7 +932,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-0B6067F8",
@@ -989,6 +1062,24 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-0C936EC3",
+      "path": "entries/KB-0C936EC3.md",
+      "subject": "The storefront discovers the Sales Rep Hub plugin through GetStorePlugins and loads it from /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/ for every visitor, anonymous included",
+      "question": "How does the storefront discover and load the Sales Rep Hub Module Federation plugin, and does it load for anonymous visitors?",
+      "anchors": [
+        "/modules/VirtoCommerce.SalesRep/plugins/vc-frontend/mf-manifest.json",
+        "Query.store"
+      ],
+      "scope": [
+        "surface=storefront-boot",
+        "user=anonymous"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-0CE38D75",
@@ -1142,6 +1233,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-0E2C684F",
+      "path": "entries/KB-0E2C684F.md",
+      "subject": "Even with no throttling, the declared Corporate \"Sales reps\" link renders as the raw key Sales_rep.navigation.link for about 45-75 ms on every page load, before the Sales Rep plugin's code or locale chunk is requested",
+      "question": "Does the Sales Rep plugin's Corporate link flash a raw i18n key on a normal, unthrottled storefront load?",
+      "anchors": [
+        "/company/sales-reps",
+        "/company/dashboard",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "culture=en-us",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0ECE802D",
       "path": "entries/KB-0ECE802D.md",
       "subject": "Every order email (created, cancelled, status/payment/shipment changed, paid, sent) goes To the first non-empty order address email; the customer's contact/account email is only the fallback",
@@ -1173,7 +1284,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1390,7 +1501,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1483,7 +1594,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1659,7 +1770,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1706,7 +1817,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1787,7 +1898,7 @@
       "plane": "experiential",
       "status": "superseded",
       "supersededBy": [
-        "KB-9B9FAF0F",
+        "KB-17555498",
         "KB-F1E057A8"
       ],
       "trust": 1,
@@ -1808,7 +1919,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 3
     },
     {
       "id": "KB-160CE93F",
@@ -1899,7 +2011,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 7,
+      "trust": 8,
       "disputed": 0
     },
     {
@@ -1945,6 +2057,24 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-17146D60",
+      "path": "entries/KB-17146D60.md",
+      "subject": "On /compare below the md breakpoint the per-row Pin buttons and the row info-tooltip icons are not rendered (display:none); the All/Differences switch and Clear category stay available",
+      "question": "Which compare-table controls remain available on /compare at narrow widths (mobile, or desktop at 200%/400% zoom)?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "feature=product-compare",
+        "surface=storefront-ui",
+        "viewport=below-md"
       ],
       "plane": "experiential",
       "status": "active",
@@ -2021,8 +2151,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 0
+      "trust": 3,
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-1834ABE5",
@@ -2240,7 +2371,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2284,7 +2415,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -2431,7 +2562,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -2994,7 +3125,7 @@
       "status": "superseded",
       "supersededBy": [
         "KB-16363E17",
-        "KB-3FCB032F"
+        "KB-6D5E2CD1"
       ],
       "trust": 1,
       "disputed": 0
@@ -3229,6 +3360,23 @@
       "resolved": 1
     },
     {
+      "id": "KB-27D0676F",
+      "path": "entries/KB-27D0676F.md",
+      "subject": "xapi:my_organization:return:submit unlocks nothing on Return 3.1005.0: a holder still gets no returnable lines on a colleague's order",
+      "question": "What does xapi:my_organization:return:submit allow — creating or submitting a return on another organization member's order (returnableItems, createReturn, submitReturn), or something else?",
+      "anchors": [
+        "Query.returnableItems",
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-29037452",
       "path": "entries/KB-29037452.md",
       "subject": "the loyalty points-history page shows redeemed amounts unsigned",
@@ -3247,6 +3395,42 @@
         "/account/points-history"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-290A172B",
+      "path": "entries/KB-290A172B.md",
+      "subject": "Admin order blade 'Get invoice PDF' opens GET /api/order/customerOrders/invoice/{number} in a new tab as an inline application/pdf (no download); generation took ~61 s, and parallel requests ~120 s",
+      "question": "What happens when you click 'Get invoice PDF' on an Admin SPA customer order blade, and how long does it take?",
+      "anchors": [
+        "GET /api/order/customerOrders/invoice/{number}"
+      ],
+      "scope": [
+        "feature=order-invoice-pdf",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-290D6532",
+      "path": "entries/KB-290D6532.md",
+      "subject": "On theme 2.60.0-pr-2511 a file field whose Query.fileUploadOptions(scope) returns null is shown as unavailable and never posts a file",
+      "question": "What does the storefront file uploader do when Query.fileUploadOptions returns null for its scope?",
+      "anchors": [
+        "Query.fileUploadOptions",
+        "POST /api/files/product-configuration"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "module=fileexperienceapi",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -3428,6 +3612,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-2BA3B152",
+      "path": "entries/KB-2BA3B152.md",
+      "subject": "While the Sales Rep plugin or its locale chunk is still loading, the hub rail, page titles, widget captions and the Corporate link render raw i18n keys",
+      "question": "Does the Sales Rep hub show raw i18n keys while the plugin locale chunk assets/en-*.js or remoteEntry.js is still loading?",
+      "anchors": [
+        "GET /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/assets/en-*.js",
+        "/company/dashboard",
+        "/company/sales-reps"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-2BCFC8A6",
       "path": "entries/KB-2BCFC8A6.md",
       "subject": "Quote Approve converts to an order in one step; no Accepted status",
@@ -3454,7 +3657,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -3637,6 +3840,44 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2D8E833E",
+      "path": "entries/KB-2D8E833E.md",
+      "subject": "A slow Sales Rep plugin remoteEntry shows \"Loading page…\" on the hub route, then within 8 s a \"This page is taking longer than usual to load\" notice with a Reload page button, and the real page once the entry arrives",
+      "question": "What does a Sales Rep hub deep link show while the plugin remoteEntry.js is slow to download?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/my-customers",
+        "/company/customer-orders",
+        "/company/tasks",
+        "GET /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js"
+      ],
+      "scope": [
+        "layer=plugin-delivery",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2DD1A73B",
+      "path": "entries/KB-2DD1A73B.md",
+      "subject": "/company/info throws TypeError (reading 'status') and vue-i18n SyntaxError 26 on render for an organization editor, and the Vue error handler hides both from the browser console",
+      "question": "Does opening /company/info as an organization maintainer produce browser exceptions, and where can they be seen?",
+      "anchors": [
+        "/company/info"
+      ],
+      "scope": [
+        "role=organization-editor",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4501,8 +4742,7 @@
       "plane": "experiential",
       "status": "superseded",
       "supersededBy": [
-        "KB-E1E2716F",
-        "KB-9DB54091"
+        "KB-59E4B5FC"
       ],
       "trust": 1,
       "disputed": 1
@@ -4732,6 +4972,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-3B877DF1",
+      "path": "entries/KB-3B877DF1.md",
+      "subject": "Reorder all on a Completed order adds every line at the CURRENT catalog price with the original quantities and merges into an existing same-SKU cart line",
+      "question": "What does Reorder all on /account/orders/:id put in the cart — historical or current prices, and does it merge with existing cart lines?",
+      "anchors": [
+        "/account/orders/{}",
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3BF93B85",
       "path": "entries/KB-3BF93B85.md",
       "subject": "Removing the header search bar category scope chip ('Remove: <category>') drops document.activeElement to <body>; no focus is restored to the search input",
@@ -4799,6 +5056,23 @@
         "/account/missions"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3CC64161",
+      "path": "entries/KB-3CC64161.md",
+      "subject": "On /compare at 375px axe-core 4.12.1 reports scrollable-region-focusable (serious) on the compare table's tbody scroller; at 1920px only a color-contrast finding on the inactive Differences switch",
+      "question": "Which WCAG A/AA axe-core violations does the /compare page report with three products at desktop and mobile widths?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "feature=product-compare",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -5375,6 +5649,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-411B8AA9",
+      "path": "entries/KB-411B8AA9.md",
+      "subject": "approveQuoteRequest converts a 'Proposal sent' quote whose expirationDate is already past",
+      "question": "Does approveQuoteRequest refuse a quote whose expirationDate has passed?",
+      "anchors": [
+        "Mutation.approveQuoteRequest",
+        "POST /api/quote/requests"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-417AC3F2",
       "path": "entries/KB-417AC3F2.md",
       "subject": "Barcode scanner blade: saved field missing from the index is shown checked with a badge, inert, and dropped on the next save",
@@ -5458,6 +5749,22 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-429A791E",
+      "path": "entries/KB-429A791E.md",
+      "subject": "The quotes list page intermittently renders raw i18n keys as column headers and page title",
+      "question": "Does /account/quotes always render translated column headers and title?",
+      "anchors": [
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-432D02EF",
@@ -5622,7 +5929,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-4593FC41",
@@ -5713,6 +6021,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-47D078C7",
+      "path": "entries/KB-47D078C7.md",
+      "subject": "On theme 2.60.0-pr-2511 an oversize file is rejected client-side with the scope's limit in the message, formatted like the requirements line, and no POST is sent",
+      "question": "What error does the storefront show for a file larger than fileUploadOptions maxFileSize, and is it uploaded?",
+      "anchors": [
+        "POST /api/files/quote-attachments",
+        "POST /api/files/return-attachments",
+        "POST /api/files/organization-logos",
+        "Query.fileUploadOptions"
+      ],
+      "scope": [
+        "module=fileexperienceapi",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4803E670",
       "path": "entries/KB-4803E670.md",
       "subject": "On vcst_qa two Hangfire recurring jobs fail every day: AbandonedCartReminderJob.Process (notification validation errors) and PruneExpiredTokensJob (abstract class instantiation), accumulating 339 failed jobs",
@@ -5742,6 +6070,25 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-487FCE72",
+      "path": "entries/KB-487FCE72.md",
+      "subject": "Creating a quote request from the cart empties the cart",
+      "question": "After 'Add cart items to quote' on /cart and submitting the quote request, are the cart items kept?",
+      "anchors": [
+        "/cart",
+        "/account/quotes/{id}/edit",
+        "Mutation.createQuoteFromCart"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -5857,7 +6204,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -6222,6 +6569,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-4C05CD46",
+      "path": "entries/KB-4C05CD46.md",
+      "subject": "Sales Rep dashboard My customers stat card shows assigned customers, 'N ordered this month' and 'N new customer(s)' with no month-over-month change; its SalesRepCustomerCounts query requests no comparison fields",
+      "question": "Does the My customers card on /company/dashboard show a month-over-month change indicator, and what does it query?",
+      "anchors": [
+        "/company/dashboard",
+        "Query.salesRepCustomerCounts"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4C29749E",
       "path": "entries/KB-4C29749E.md",
       "subject": "A manual POST api/search/indexes/index moves the scheduled index-changes job's start date to now, so the job then skips any change or delete made before that request",
@@ -6276,7 +6642,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -6410,7 +6776,7 @@
       "supersededBy": [
         "KB-972CF223",
         "KB-BBBC4225",
-        "KB-51459ABB"
+        "KB-DA14E8B7"
       ],
       "trust": 2,
       "disputed": 4
@@ -6936,6 +7302,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-50B007D9",
+      "path": "entries/KB-50B007D9.md",
+      "subject": "The Sales Rep storefront plugin's init() is synchronous: it registers routes, the hub rail section and nav links, then starts its locale merge with `void mergeLocale(...)` without awaiting it, although the host awaits a Promise returned from init()",
+      "question": "Does the Sales Rep storefront plugin wait for its locale messages before its labelled navigation and pages render?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/sales-reps"
+      ],
+      "scope": [
+        "layer=storefront-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-50B4A5C1",
       "path": "entries/KB-50B4A5C1.md",
       "subject": "On a stale save (HTTP 412) the Page Builder Designer shows a transient red error toast, keeps the author's unsaved edit on screen and leaves Save enabled",
@@ -7254,6 +7638,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-51F5CFD6",
+      "path": "entries/KB-51F5CFD6.md",
+      "subject": "A slow Sales Rep remoteEntry.js shows \"Loading page…\", then a slow notice with Reload page at about 8 s; a failed one shows \"Part of the site could not be loaded…\" with Reload page, which recovers. Both are inside an output (role=status) element",
+      "question": "What does a rep see on a hub deep link when the Sales Rep plugin remoteEntry.js is slow or fails to download?",
+      "anchors": [
+        "GET /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-52188DBA",
       "path": "entries/KB-52188DBA.md",
       "subject": "Sales Rep hub pages Tasks, Calendar, Dashboard and My customers leave document.title at the default 'Virto Commerce', while Customer orders and account pages set '<store> & <page>'",
@@ -7270,7 +7672,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -7436,7 +7838,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-53D776C2",
@@ -7462,6 +7865,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-53E57D1B",
+      "path": "entries/KB-53E57D1B.md",
+      "subject": "On /compare below 768px the row Pin buttons and row info-tooltip triggers are display:none with no overflow menu or bottom-sheet substitute",
+      "question": "Are the row pin and row info-tooltip controls available on the Product Compare page on mobile widths?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=below-md"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7598,6 +8018,25 @@
       "resolved": 1
     },
     {
+      "id": "KB-56048C88",
+      "path": "entries/KB-56048C88.md",
+      "subject": "GetStorePlugins returns the sales-rep plugin with the SalesRep module version and a contributions manifest that gates every hub route on SalesRep.Enabled and sales-rep:access, and /company/documents additionally on sales-rep-documents:read",
+      "question": "What does GetStorePlugins (store.plugins appId vc-frontend) return for the Sales Rep plugin, and how are its routes and menu gated?",
+      "anchors": [
+        "Query.store.plugins",
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json",
+        "/company/documents"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-563D7FE5",
       "path": "entries/KB-563D7FE5.md",
       "subject": "Storefront quote detail shows list price per item while line total uses the proposed price",
@@ -7623,7 +8062,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7654,7 +8093,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -7713,7 +8152,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7790,7 +8229,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -7941,6 +8380,24 @@
       "disputed": 1
     },
     {
+      "id": "KB-5A7B15F5",
+      "path": "entries/KB-5A7B15F5.md",
+      "subject": "A list a sales rep shares to a customer organization reaches that organization's buyers as a push notification, and /shared-list/{key} shows \"Recommended by your sales representative\" rendered by the SalesRep plugin",
+      "question": "What does a buyer see when a sales rep shares a list with their organization (Specific customers)?",
+      "anchors": [
+        "/shared-list/{key}",
+        "/account/lists",
+        "/account/notifications"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5AB85ADC",
       "path": "entries/KB-5AB85ADC.md",
       "subject": "Sales-rep list share notification carries no organization name; a typed rep message replaces the default body",
@@ -8053,7 +8510,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-5CEB51A1",
@@ -8103,6 +8561,24 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5D6EC340",
+      "path": "entries/KB-5D6EC340.md",
+      "subject": "In dashboard edit mode the widget 'Max rows' spinbuttons clamp out-of-range input on blur: Document library, Top sellers and Tasks accept 1..10, My recent orders accepts 1..20; the saved value drives the row count after reload",
+      "question": "What range does the Max rows setting of Sales Rep dashboard widgets accept, and what happens to out-of-range input?",
+      "anchors": [
+        "/company/dashboard",
+        "Mutation.saveSalesRepLayout"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8279,7 +8755,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -8479,6 +8955,23 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-628643EB",
+      "path": "entries/KB-628643EB.md",
+      "subject": "Markup product lists compare items by id when cards carry one and by value when they do not: a changed data-product-price re-sends an id-less list but not an id-keyed one",
+      "question": "Does a markup (data-vc-track) product list re-send view_item_list when a card's data-product-* value changes, and does it differ between cards with and without data-product-id?",
+      "anchors": [
+        "/agent-test-ga4-html-product-lists"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-62BF1335",
@@ -8727,6 +9220,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-65D34B0B",
+      "path": "entries/KB-65D34B0B.md",
+      "subject": "Loading /checkout/completed directly or after a reload throws vue-router 'Missing required param \"orderId\"': page shows 'Order completed' with no order number and no Show order button",
+      "question": "What does /checkout/completed show after a reload or direct load, with no order just placed?",
+      "anchors": [
+        "/checkout/completed"
+      ],
+      "scope": [
+        "state=reload-or-direct-load",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -9711,6 +10221,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-6FC8637A",
+      "path": "entries/KB-6FC8637A.md",
+      "subject": "Mobile /account/orders Filters drawer: the Created-date preset listbox stays expanded after keyboard focus moves on, covering the date field and blocking clicks on it",
+      "question": "On the mobile orders Filters drawer, does the Created-date preset dropdown close when focus leaves it?",
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "feature=orders-date-filter",
+        "layout=mobile-combined",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-700E5D52",
       "path": "entries/KB-700E5D52.md",
       "subject": "POST /api/return/{id}/authorize requires return:authorize; return:update alone gets 403",
@@ -9982,6 +10510,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-73AAD5A9",
+      "path": "entries/KB-73AAD5A9.md",
+      "subject": "Leaving and re-entering /company/my-customers inside the account area refetches the SalesRepCustomers list with identical variables but does not refetch the SalesRepCustomersCount badge query",
+      "question": "When a sales rep navigates from /company/dashboard back to /company/my-customers by the left-rail link, which sales-rep queries fire again?",
+      "anchors": [
+        "/company/my-customers",
+        "Query.salesRepCustomers"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7454D90C",
       "path": "entries/KB-7454D90C.md",
       "subject": "ImageTools 3.1006.0: under the default AllowedImageFormats (JPEG,PNG,Webp,SVG) a .jpg original gets no thumbnails while the identical .jpeg does",
@@ -9997,6 +10543,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7457724D",
+      "path": "entries/KB-7457724D.md",
+      "subject": "A Datatrans refund through POST /api/order/payments/payment/refund returns succeeded, but the refund document stays Pending and the PaymentIn stays Paid",
+      "question": "After refunding a Paid Datatrans payment via POST /api/order/payments/payment/refund, what state do the refund document and the payment end in?",
+      "anchors": [
+        "POST /api/order/payments/payment/refund",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "principal=admin",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10206,6 +10770,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-761B2013",
+      "path": "entries/KB-761B2013.md",
+      "subject": "On the storefront, account-menu Logout, password Sign in and the header language selector each perform a full document load (performance.timeOrigin changes); none is an in-place SPA transition",
+      "question": "Do storefront sign-in, logout or a header language switch keep the same page instance (no reload), so a test can observe a user or language change without a reload?",
+      "anchors": [
+        "/sign-in",
+        "/account/dashboard",
+        "/de/account/dashboard"
+      ],
+      "scope": [
+        "feature=auth-and-locale-switch",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-76D8F765",
       "path": "entries/KB-76D8F765.md",
       "subject": "Options sent on a Variation-type configuration section are silently dropped on save; the section persists with options []",
@@ -10249,7 +10832,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10311,7 +10894,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10448,7 +11031,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0,
       "resolved": 2
     },
@@ -10784,6 +11367,27 @@
       "disputed": 2
     },
     {
+      "id": "KB-7CA9C713",
+      "path": "entries/KB-7CA9C713.md",
+      "subject": "With the Sales Rep Hub served as a federated plugin, a non-rep or anonymous cold deep link to a hub route paints the host 404 for 44-126 ms before the guard redirect, but only on an empty HTTP cache",
+      "question": "Does a non-rep or anonymous cold deep link to /company/dashboard (Sales Rep Hub) briefly render the 404 Page not found page before redirecting, and when?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/my-customers",
+        "/company/customer-orders",
+        "/company/tasks",
+        "/company/documents"
+      ],
+      "scope": [
+        "delivery=module-federation-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7CC25D4A",
       "path": "entries/KB-7CC25D4A.md",
       "subject": "A Draft row in the storefront returns list opens the /edit wizard step, which has no cancel/discard control; Cancel return exists only on /account/returns/:id",
@@ -10911,7 +11515,7 @@
       "status": "superseded",
       "supersededBy": [
         "KB-5E4764CF",
-        "KB-F320B037"
+        "KB-8C3E463D"
       ],
       "trust": 2,
       "disputed": 1
@@ -11081,6 +11685,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-81D02797",
+      "path": "entries/KB-81D02797.md",
+      "subject": "On /company/tasks at 1440px the Due dates rail is 280px wide, completed task titles keep the link colour with line-through, and Completed/Overdue status chips use a filled (tonal) background with a dot",
+      "question": "What width is the Due dates rail on /company/tasks, what colour is a completed task title, and what style do the status chips use?",
+      "anchors": [
+        "/company/tasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "viewport=1440"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-82111688",
       "path": "entries/KB-82111688.md",
       "subject": "the storefront members Status filter finds nobody in a state the roster is full of",
@@ -11165,6 +11787,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-828032F5",
+      "path": "entries/KB-828032F5.md",
+      "subject": "An order created by admin POST /api/order/customerOrders with status Completed advances loyalty mission progress for its customer: count +1, value +order total, PerSku units",
+      "question": "Does an admin-created order (POST /api/order/customerOrders) with status Completed contribute to the customer's loyalty mission progress, and how does each goal type count it?",
+      "anchors": [
+        "POST /api/order/customerOrders",
+        "POST /api/loyalty-mission-progress/search",
+        "Query.loyaltyMissionProgress"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11459,7 +12100,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11534,6 +12175,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-872FB6EB",
+      "path": "entries/KB-872FB6EB.md",
+      "subject": "A sales rep with the global Sales Representative role and no organization membership reaches /company/my-customers and sees \"No customers found\"; a non-matching search shows \"No customers match your search\" with Reset search",
+      "question": "What does /company/my-customers show for a sales rep who serves no organizations?",
+      "anchors": [
+        "/company/my-customers",
+        "/company/sales-reps"
+      ],
+      "scope": [
+        "role=sales-rep-no-org",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-874B24DD",
       "path": "entries/KB-874B24DD.md",
       "subject": "Buyer quote list filters by login id AND current organization",
@@ -11560,7 +12219,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11629,7 +12288,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11668,6 +12327,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-8857D430",
+      "path": "entries/KB-8857D430.md",
+      "subject": "A signed-in B2B user without sales-rep:access who opens /company/my-customers is redirected to /account/dashboard, sees no Sales Rep hub, and no salesRep* query is sent",
+      "question": "What happens when a signed-in B2B user without sales-rep:access (buyer or organization maintainer) opens /company/my-customers directly?",
+      "anchors": [
+        "/company/my-customers",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "role=non-sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8891459E",
       "path": "entries/KB-8891459E.md",
       "subject": "On /compare in Chrome, a scroll that stops where the sticky header row sits at the compact threshold hangs the tab: the row's stuck class toggles without end and renderer memory climbs into gigabytes",
@@ -11677,6 +12354,24 @@
       ],
       "scope": [
         "browser=chrome",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-88AC861A",
+      "path": "entries/KB-88AC861A.md",
+      "subject": "The Document library (/company/documents) appears only for a rep with sales-rep-documents:read; a plain Sales Representative has no rail link or dashboard widget and is redirected to /account/dashboard",
+      "question": "Who can open /company/documents on the storefront, and what happens to a rep without document read access?",
+      "anchors": [
+        "/company/documents",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "actor=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -11810,7 +12505,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-89822898",
@@ -11904,7 +12600,7 @@
       "status": "superseded",
       "supersededBy": [
         "KB-1D885AE7",
-        "KB-8E1456B8"
+        "KB-6161BC89"
       ],
       "trust": 1,
       "disputed": 0
@@ -12013,7 +12709,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12326,6 +13022,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-8FE69FD1",
+      "path": "entries/KB-8FE69FD1.md",
+      "subject": "A Sales Rep plugin manifest that is 404, HTML, or declares an incompatible requiredHostVersion makes the host skip the plugin: no remoteEntry.js request, no hub rail or Corporate Sales reps link, and hub routes show the host 404 page with no Reload offer",
+      "question": "What does the storefront do when the sales-rep plugin manifest mf-manifest.json is unusable (404, HTML body, or requiredHostVersion the host does not satisfy)?",
+      "anchors": [
+        "GET /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json",
+        "/company/dashboard",
+        "/company/sales-reps"
+      ],
+      "scope": [
+        "aspect=plugin-delivery",
+        "feature=sales-rep-hub",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-903E980C",
       "path": "entries/KB-903E980C.md",
       "subject": "OTP request outcome for a contact whose account storeId names no existing store",
@@ -12376,7 +13092,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12837,7 +13553,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -13208,6 +13924,24 @@
       "resolved": 4
     },
     {
+      "id": "KB-9795DE39",
+      "path": "entries/KB-9795DE39.md",
+      "subject": "updateMemberAddresses rejects an address whose first or last name contains a digit with a bare VALIDATION error; letters-only names succeed",
+      "question": "Why does adding an address on /account/addresses return \"Something went wrong\" with errors[0].extensions.code VALIDATION and data.updateMemberAddresses null?",
+      "anchors": [
+        "Mutation.updateMemberAddresses",
+        "/account/addresses"
+      ],
+      "scope": [
+        "account=personal",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-97A675C1",
       "path": "entries/KB-97A675C1.md",
       "subject": "Approve / decline commits immediately without confirmation and emails the decision",
@@ -13443,6 +14177,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-9A68468D",
+      "path": "entries/KB-9A68468D.md",
+      "subject": "/account/orders Filters popover Apply is dirty-gated: disabled when the draft equals the applied filters, enabled on any change, disabled again when reverted",
+      "question": "On /account/orders, after applying a valid custom date range and reopening the Filters popover without changing anything, is Apply enabled or disabled?",
+      "anchors": [
+        "/account/orders",
+        "Query.orders"
+      ],
+      "scope": [
+        "feature=orders-date-filter",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9AF5645D",
       "path": "entries/KB-9AF5645D.md",
       "subject": "With PasswordLogin DetailedErrors off, the storefront OTP flow does not reveal whether an email has an account: an unknown address gets \"Check your email\", no email is sent, and a wrong code returns the same invalid_code as for a real account",
@@ -13468,6 +14220,24 @@
         "feature=otp-email-sign-in",
         "setting=detailederrors-off",
         "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9B275671",
+      "path": "entries/KB-9B275671.md",
+      "subject": "The cart Select-address popup's sortable column header sets aria-sort=descending on the first click, then ascending, and non-sortable headers carry aria-sort=none",
+      "question": "On /cart, what aria-sort value does the Address column header of the address selection popup take after the first and second click, and do non-sortable headers carry aria-sort?",
+      "anchors": [
+        "/cart",
+        "Query.currentCustomerAddresses"
+      ],
+      "scope": [
+        "component=select-address-modal",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -13510,6 +14280,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-9C031F08",
+      "path": "entries/KB-9C031F08.md",
+      "subject": "In the /cart Select address popup a zero-match keyword search shows the no-saved-addresses copy 'You do not have any addresses yet' and hides the facet dropdowns",
+      "question": "What does the /cart Select address popup show when a keyword search matches no addresses?",
+      "anchors": [
+        "/cart",
+        "Query.currentOrganizationAddresses"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9C06E390",
       "path": "entries/KB-9C06E390.md",
       "subject": "After saving a category's images via POST /api/catalog/categories and indexing it by documentIds, xAPI Query.categories returns the sortOrder-0 image as imgSrc, including for physical categories linked into the store's virtual catalog.",
@@ -13522,6 +14309,24 @@
       "scope": [
         "entity=category",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9C0EC5AB",
+      "path": "entries/KB-9C0EC5AB.md",
+      "subject": "A storefront currency switch carries cart line items to the target-currency cart but not the selected delivery method; each currency's cart keeps its own shipment",
+      "question": "On /cart, when the user switches currency (e.g. USD to EUR), is the previously selected delivery method carried over to the new-currency cart?",
+      "anchors": [
+        "/cart",
+        "Mutation.changeCartCurrency"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13630,6 +14435,25 @@
       "disputed": 1
     },
     {
+      "id": "KB-9DCCB4B3",
+      "path": "entries/KB-9DCCB4B3.md",
+      "subject": "On a served customer's orders page in the Sales Rep hub, orders the rep created link to /account/orders/{id} while orders placed by others link to /company/my-customers/{orgId}/orders/{orderId}",
+      "question": "Where does an order row on /company/my-customers/{orgId}/orders link to?",
+      "anchors": [
+        "/company/my-customers/{orgId}/orders",
+        "/company/my-customers/{orgId}/orders/{orderId}",
+        "/account/orders/{id}"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9E0ED0F4",
       "path": "entries/KB-9E0ED0F4.md",
       "subject": "Query.organizationReturns lists an organization's returns only for an active member holding xapi:my_organization:return:view; everyone else gets one uniform Forbidden",
@@ -13684,6 +14508,24 @@
       ],
       "scope": [
         "surface=admin-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9F120CC2",
+      "path": "entries/KB-9F120CC2.md",
+      "subject": "Signing out on a Sales Rep hub page lands on /sign-in?returnUrl=<that hub path>, and a non-rep who signs in from that form ends on /account/dashboard with no sales-rep request",
+      "question": "Where does Logout on a hub page land, and what happens when a buyer signs in from that sign-in URL?",
+      "anchors": [
+        "/sign-in",
+        "/company/dashboard",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13819,6 +14661,22 @@
       "disputed": 1
     },
     {
+      "id": "KB-A0EC64CD",
+      "path": "entries/KB-A0EC64CD.md",
+      "subject": "Approving a quote with an out-of-stock line places the order without any stock warning",
+      "question": "On /account/quotes/{id}, when a Proposal sent quote contains a line whose product is out of stock, does Approve warn or block, or place the order anyway?",
+      "anchors": [
+        "/account/quotes/{id}"
+      ],
+      "scope": [
+        "surface=storefront"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A0FFEA0A",
       "path": "entries/KB-A0FFEA0A.md",
       "subject": "Target organization members read a Customer-scope shared list through its sharing link",
@@ -13869,7 +14727,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14057,7 +14915,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14210,7 +15068,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -14429,6 +15287,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-A6E1D965",
+      "path": "entries/KB-A6E1D965.md",
+      "subject": "A cold deep link to a Sales Rep hub route by a non-rep or anonymous visitor briefly renders the host 404 \"Page not found\" page before the guard redirect",
+      "question": "Does a non-rep or anonymous cold deep link to /company/dashboard (or another Sales Rep hub route) show a Not Found page before it is redirected?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/my-customers",
+        "/company/customer-orders"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A768A5D6",
       "path": "entries/KB-A768A5D6.md",
       "subject": "The /connect/token password grant accepts either the account's user name or its email address as `username`",
@@ -14513,7 +15390,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -14602,7 +15479,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -14724,8 +15601,7 @@
       "plane": "experiential",
       "status": "superseded",
       "supersededBy": [
-        "KB-2A9084BA",
-        "KB-A0FFEA0A"
+        "KB-2F64A447"
       ],
       "trust": 1,
       "disputed": 4
@@ -15004,6 +15880,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-ACB009C9",
+      "path": "entries/KB-ACB009C9.md",
+      "subject": "Below the lg breakpoint /account/orders shows no active-filter chips or Reset filters chip; the applied filter is only visible inside the filter sidebar",
+      "question": "At mobile width, does /account/orders show which filters are applied after the filter panel closes?",
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-ACC12F26",
       "path": "entries/KB-ACC12F26.md",
       "subject": "On Punchout 3.1000.0-pr-1 up to build fbb9 a punchout user mapping accepted an unvalidated userId (privilege-escalation sign-in chain); from the fix commit 12dd178 (build ca33 onward) the mapping endpoint and the punchout grant reject it",
@@ -15034,6 +15927,25 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-ACD62417",
+      "path": "entries/KB-ACD62417.md",
+      "subject": "With the Sales Rep Hub served as a federated plugin, a non-rep deep link to /company/dashboard lands on /account/dashboard and an anonymous one on /sign-in?returnUrl=/company/dashboard",
+      "question": "Where does a user without sales-rep access land when opening a Sales Rep Hub URL directly, and does the Corporate \"Sales reps\" link still show for a buyer?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/sales-reps",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-ACDF81BB",
@@ -15194,7 +16106,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 9,
+      "trust": 10,
       "disputed": 0
     },
     {
@@ -15296,6 +16208,44 @@
         "surface=storefront-ui",
         "theme=paprika",
         "viewport=desktop"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AE72A16D",
+      "path": "entries/KB-AE72A16D.md",
+      "subject": "organizationReturns is granted per organization membership: a role holding xapi:my_organization:return:view on the member's membership in that org opens it; without it the query is refused",
+      "question": "What lets a storefront user see their organization's returns via Query.organizationReturns, and what does a user without it get?",
+      "anchors": [
+        "Query.organizationReturns",
+        "PUT /api/customer/organization-memberships/{id}"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AEBE2951",
+      "path": "entries/KB-AEBE2951.md",
+      "subject": "While the Sales Rep plugin's locale chunk is pending, the Corporate link and hub labels render raw i18n keys (e.g. \"Sales_rep.navigation.link\", \"SALES_REP.HUB.TITLE\", \"PAGE.TITLE\", \"sales_rep.table.name\")",
+      "question": "Does the storefront show raw sales_rep.* i18n keys before the Sales Rep plugin's translations load?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/sales-reps",
+        "/account/dashboard",
+        "GET /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/assets/en-*.js"
+      ],
+      "scope": [
+        "concern=localization",
+        "layer=plugin-delivery",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -15447,6 +16397,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-B0C67841",
+      "path": "entries/KB-B0C67841.md",
+      "subject": "Sales Rep dashboard Document library widget rows show a file-type icon, display name and 'Published <date> · <n> pages' only — no category and no size; /company/documents is a card grid with category but no per-card size, and image documents with previewUrl null show a type icon, not a thumbnail",
+      "question": "Which document fields does the Sales Rep Document library widget and the /company/documents page render, and do image documents get an inline preview?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/documents",
+        "Query.salesRepDocuments"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep-documents-read",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B0E6284D",
       "path": "entries/KB-B0E6284D.md",
       "subject": "PDP variations widget sends view_item_list per rendered page (not cumulative), never select_item, and does not re-send on list/table switch or full view",
@@ -15460,7 +16430,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -16004,6 +16974,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-B720733E",
+      "path": "entries/KB-B720733E.md",
+      "subject": "The buyer-facing /company/sales-reps page lists the active organization's sales reps (Name / Email / Phone) and rescopes when the user switches organization; a rep whose membership in that organization is locked is not listed",
+      "question": "What does /company/sales-reps show, and does it follow an organization switch?",
+      "anchors": [
+        "/company/sales-reps",
+        "Query.customerSalesReps"
+      ],
+      "scope": [
+        "actor=buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B75AAE47",
       "path": "entries/KB-B75AAE47.md",
       "subject": "Removing one chip of an applied date preset on the sales-rep orders page leaves the filter drawer still showing the preset name while the grid filters by the remaining open-ended bound",
@@ -16475,6 +17463,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-BC61FC6B",
+      "path": "entries/KB-BC61FC6B.md",
+      "subject": "At mobile width the /account/orders filter icon button has no accessible name in the accessibility tree",
+      "question": "What accessible name does the /account/orders filter button expose at 375px?",
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BC6FC633",
       "path": "entries/KB-BC6FC633.md",
       "subject": "admin account role assignment is staged until save",
@@ -16496,6 +17501,24 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BC9F3CB1",
+      "path": "entries/KB-BC9F3CB1.md",
+      "subject": "The sales-rep customer profile stat cards show no period-over-period change; the MTD card shows only '% of YTD'",
+      "question": "Do the customer profile stat cards on the storefront show a period-over-period $ or % change?",
+      "anchors": [
+        "/company/my-customers/:organizationId",
+        "Query.salesRepCustomerOrderStatistics"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16586,6 +17609,24 @@
         "build=2.59.0-pr-2519",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BE64F57E",
+      "path": "entries/KB-BE64F57E.md",
+      "subject": "Quote statuses have no \"Cancelled\" value; a full-body PUT /api/quote/requests moves a Processing quote to Declined and keeps its attachments",
+      "question": "How do I cancel or decline a Processing quote request via admin REST, and which status values are allowed?",
+      "anchors": [
+        "PUT /api/quote/requests",
+        "GET /api/quote/requests/{id}"
+      ],
+      "scope": [
+        "principal=admin",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16737,6 +17778,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C08D9226",
+      "path": "entries/KB-C08D9226.md",
+      "subject": "With module federation enabled, the storefront fetches the Sales Rep plugin on every page, signed in or not: GetStorePlugins returns plugin \"sales-rep\", and its manifest, remoteEntry and chunks load from /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/",
+      "question": "Does the storefront load the sales-rep Module Federation plugin for an anonymous visitor, and what does GetStorePlugins return for it?",
+      "anchors": [
+        "Query.store.plugins",
+        "GET /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json",
+        "/sign-in"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -17273,6 +18333,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-C672CA47",
+      "path": "entries/KB-C672CA47.md",
+      "subject": "The order-cancel payment cascade calls the gateway's RefundProcessPaymentAsync for a Paid payment (VoidProcessPaymentAsync for Authorized) and only flags non-captured payments as cancelled",
+      "question": "Why does a Paid payment stay Paid with isCancelled false but cancelledState Completed after its order is cancelled?",
+      "anchors": [
+        "PUT /api/order/customerOrders",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C6BB1914",
       "path": "entries/KB-C6BB1914.md",
       "subject": "Return.LanguageCode comes from createReturn cultureName, not from the order languageCode",
@@ -17526,6 +18603,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-C9FE6156",
+      "path": "entries/KB-C9FE6156.md",
+      "subject": "Org-member Select address popup on /cart pages org addresses 6 per page with numbered pagination; currentOrganizationAddresses uses a numeric offset in after and each page replaces the rows",
+      "question": "How does the /cart Select address popup paginate organization addresses?",
+      "anchors": [
+        "/cart",
+        "Query.currentOrganizationAddresses"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-CA2AE929",
       "path": "entries/KB-CA2AE929.md",
       "subject": "An invalid /punchout/&lt;token&gt; start page silently lands the visitor on the anonymous homepage; the grant answers 400 login_failed",
@@ -17634,6 +18728,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CB2CE5C0",
+      "path": "entries/KB-CB2CE5C0.md",
+      "subject": "With store setting SalesRep.Enabled=false the storefront still receives the sales-rep plugin from GetStorePlugins but fetches nothing from its plugin folder, renders no hub rail and no Corporate 'Sales reps' link, and shows the host 404 on /company/dashboard, /company/my-customers and /company/sales-reps",
+      "question": "What does the storefront do for the Sales Rep Hub plugin when the store setting SalesRep.Enabled is off?",
+      "anchors": [
+        "Query.store.plugins",
+        "/company/dashboard",
+        "/company/my-customers",
+        "/company/sales-reps",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "feature=sales-rep-hub",
+        "setting=salesrep.enabled:false",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -17767,6 +18883,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-CD951974",
+      "path": "entries/KB-CD951974.md",
+      "subject": "With the Mercury preset in dark mode, the selected-option subtitle under a configuration section on a configurable product's PDP renders #3b7754 on #0a090b = 3.74:1, below 4.5:1",
+      "question": "Is the selected-option subtitle under a configuration section header on a configurable product PDP readable in dark mode with the Mercury preset?",
+      "anchors": [
+        "/products-with-options/cfg-parents/agent-test-config-phone-case"
+      ],
+      "scope": [
+        "colormode=dark",
+        "preset=mercury",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-CD99436F",
       "path": "entries/KB-CD99436F.md",
       "subject": "Refused addWishlistItem still persists the quantity change",
@@ -17854,7 +18988,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0,
       "resolved": 3
     },
@@ -17883,6 +19017,26 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CF5C7FBE",
+      "path": "entries/KB-CF5C7FBE.md",
+      "subject": "When the Sales Rep plugin manifest fails (404, HTML body with 200, or requiredHostVersion mismatch) every hub route and /company/sales-reps renders the host 404 \"Page not found\" with no Reload offer, and the Corporate \"Sales reps\" link and the \"Sales Rep hub\" rail are withdrawn",
+      "question": "What does the storefront show on Sales Rep hub routes when the plugin mf-manifest.json cannot be used (404, HTML instead of JSON, or host version mismatch)?",
+      "anchors": [
+        "/company/dashboard",
+        "/company/my-customers",
+        "/company/sales-reps",
+        "GET /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json"
+      ],
+      "scope": [
+        "layer=plugin-delivery",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -17933,7 +19087,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -18026,7 +19180,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -18290,6 +19444,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-D47B8DF1",
+      "path": "entries/KB-D47B8DF1.md",
+      "subject": "Quote expiration date is neither shown nor enforced on the storefront; approving an expired or out-of-stock quote places the order",
+      "question": "Does the storefront show a quote's expiration date or block Approve on an expired quote or a quote with an out-of-stock line?",
+      "anchors": [
+        "/account/quotes/{id}",
+        "Mutation.approveQuoteRequest"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D48E2629",
       "path": "entries/KB-D48E2629.md",
       "subject": "PDP recommended-products view_item_list carries only the cards rendered at the current width and is re-sent each time a resize changes that count",
@@ -18304,7 +19476,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 4
     },
     {
       "id": "KB-D4914072",
@@ -18362,6 +19535,24 @@
       "scope": [
         "store-content-flow=blob",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D50712C5",
+      "path": "entries/KB-D50712C5.md",
+      "subject": "Changing the shipping address from /cart edits the user's saved account address in place",
+      "question": "When a personal user edits the cart's shipping address in the Edit address dialog, is the saved address in /account/addresses changed?",
+      "anchors": [
+        "/cart",
+        "/account/addresses"
+      ],
+      "scope": [
+        "role=personal account",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -18637,6 +19828,23 @@
         "file-scope=product-configuration",
         "owner=empty",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D8F9C095",
+      "path": "entries/KB-D8F9C095.md",
+      "subject": "An administrator who IS a member of the org gets xapi:my_organization:return:view in an org-switched token when the membership role grants it, and organizationReturns answers",
+      "question": "Does a platform administrator who is a member of an organization reach organizationReturns once their membership role grants xapi:my_organization:return:view?",
+      "anchors": [
+        "Query.organizationReturns",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -18975,6 +20183,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-DC4E2D6D",
+      "path": "entries/KB-DC4E2D6D.md",
+      "subject": "An order placed by approving a quote carries no quote reference, and the quote shows no order reference",
+      "question": "After Approve on /account/quotes/{id}, does the resulting order on /account/orders/{id} show the quote number, and does the quote detail show the order it produced?",
+      "anchors": [
+        "/account/quotes/{id}",
+        "/account/orders/{id}"
+      ],
+      "scope": [
+        "surface=storefront"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DCE536F0",
       "path": "entries/KB-DCE536F0.md",
       "subject": "Admin loyalty mission blade: up to Loyalty 3.1008 it hid server validation messages and blanked the mission tree after a failed save; from Loyalty 3.1009 with platform 3.1074 it shows the message and keeps the form",
@@ -19035,6 +20260,25 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DE0DC73D",
+      "path": "entries/KB-DE0DC73D.md",
+      "subject": "When the Sales Rep plugin manifest is unusable (404, HTML body, or requiredHostVersion not satisfied), the storefront withdraws the hub and the Corporate Sales reps link and shows the host 404 on hub routes, with no Reload offer",
+      "question": "What does the storefront do when the Sales Rep plugin mf-manifest.json returns 404, returns HTML, or declares a requiredHostVersion the host does not satisfy?",
+      "anchors": [
+        "GET /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json",
+        "/company/dashboard",
+        "/company/sales-reps"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -19426,6 +20670,22 @@
       "disputed": 1
     },
     {
+      "id": "KB-E23CFAF6",
+      "path": "entries/KB-E23CFAF6.md",
+      "subject": "A quote put into Proposal sent by a REST status write produces no storefront header notification for the buyer",
+      "question": "Does a quote status change to Proposal sent produce a notification in the storefront header notifications popup for the buyer?",
+      "anchors": [
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=storefront"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E367DA11",
       "path": "entries/KB-E367DA11.md",
       "subject": "wishlist scope has three values and the roster shows two",
@@ -19801,6 +21061,23 @@
       "disputed": 3
     },
     {
+      "id": "KB-E86A5FDE",
+      "path": "entries/KB-E86A5FDE.md",
+      "subject": "The Sales Rep storefront plugin manifest is served at /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json (literal \"$(…)\"), not at /modules/VirtoCommerce.SalesRep/…",
+      "question": "At what storefront URL is the Sales Rep Module Federation plugin manifest served, and what does it declare?",
+      "anchors": [
+        "GET /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json"
+      ],
+      "scope": [
+        "module=virtocommerce.salesrep",
+        "surface=storefront-runtime"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E88FFFEB",
       "path": "entries/KB-E88FFFEB.md",
       "subject": "Cart page sends one recently_browsed_products view_item_list per load, not on a quantity change; saved-for-later Show more sends nothing and an SFL card click sends select_item under the recently_browsed_products list id",
@@ -19814,7 +21091,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -19885,6 +21162,42 @@
       "resolved": 1
     },
     {
+      "id": "KB-E9471929",
+      "path": "entries/KB-E9471929.md",
+      "subject": "On the storefront the locale URL prefix for English is /en-GB/ (and /en-US/ redirects to the unprefixed default); a bare /en/ is not a locale prefix and stacks under the active locale as /de/en/ with a 404",
+      "question": "Which locale prefixes does the storefront accept in the URL, and what happens to /en/ when German is the active locale?",
+      "anchors": [
+        "/de/destinations",
+        "/en-GB/"
+      ],
+      "scope": [
+        "feature=locale-routing",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E98AB061",
+      "path": "entries/KB-E98AB061.md",
+      "subject": "Cancelling an order does not cancel an inPayment that is already Paid: it stays status Paid, isCancelled false (cancelledState reads Completed)",
+      "question": "When an order whose payment is already Paid (e.g. Datatrans or Skyflow) is cancelled, is that payment cancelled by the cascade?",
+      "anchors": [
+        "PUT /api/order/customerOrders",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "principal=admin",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E9939511",
       "path": "entries/KB-E9939511.md",
       "subject": "UCP REST GET /ucp/v1/carts/{cartId} cannot read an anonymous cart",
@@ -19930,6 +21243,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-E9DE91F6",
+      "path": "entries/KB-E9DE91F6.md",
+      "subject": "The storefront sales-rep customer profile fires two identical SalesRepCustomer queries per page mount",
+      "question": "How many salesRepCustomer requests does the storefront send when a sales rep opens a customer profile?",
+      "anchors": [
+        "/company/my-customers/:organizationId",
+        "Query.salesRepCustomer"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E9FD2A2F",
       "path": "entries/KB-E9FD2A2F.md",
       "subject": "The password grant issues a token to an account whose passwordExpired is true; the expiry is enforced downstream, as xAPI errors[].code PasswordExpired",
@@ -19964,7 +21295,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -20023,6 +21354,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0,
+      "contested": 2
+    },
+    {
+      "id": "KB-EA4C1F30",
+      "path": "entries/KB-EA4C1F30.md",
+      "subject": "Dashboard layout reconcile and save always derive regions from the registry, and the dashboard registry now has a mainRight rail (tasks, plus documents for document-read reps), so the rail always renders and a save never emits mainRight: []",
+      "question": "What regions and blocks does SaveSalesRepLayout emit for scope dashboard, and how are planted unknown or misplaced blocks reconciled?",
+      "anchors": [
+        "/company/dashboard",
+        "Mutation.saveSalesRepLayout",
+        "Query.salesRepLayout"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -20588,6 +21940,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-EEA78FBF",
+      "path": "entries/KB-EEA78FBF.md",
+      "subject": "POST /api/return/{id}/authorize items[].lineItemId is the RETURN line item id, every line must be decided, and the status follows the approved quantities",
+      "question": "POST /api/return/{id}/authorize — is items[].lineItemId the return line item id or the order line item id, and which status results?",
+      "anchors": [
+        "POST /api/return/{id}/authorize"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EEB448C8",
       "path": "entries/KB-EEB448C8.md",
       "subject": "Designer toolbar Publish and Unpublish give no toast; while a saved draft differs from the published page, Unpublish is disabled in the Designer and hidden in the shell blade",
@@ -20622,7 +21990,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -20654,6 +22022,24 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-EF1D080D",
+      "path": "entries/KB-EF1D080D.md",
+      "subject": "An order placed by approving a quote keeps the list price as price and the proposal as placedPrice, with the difference in discountAmount",
+      "question": "What prices does the CustomerOrder created by approveQuoteRequest carry on its lines?",
+      "anchors": [
+        "Mutation.approveQuoteRequest",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-EF3CB7FB",
@@ -20875,6 +22261,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-F0FDB3F2",
+      "path": "entries/KB-F0FDB3F2.md",
+      "subject": "The State / Province facet in the checkout address popup is removed while a Country filter selects a country without regions, and returns when the filter is cleared",
+      "question": "Does the State / Province facet of the checkout shipping address popup react to an applied Country filter?",
+      "anchors": [
+        "/cart",
+        "Query.currentOrganizationAddresses"
+      ],
+      "scope": [
+        "flow=checkout-shipping-address-popup",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F1071A5D",
       "path": "entries/KB-F1071A5D.md",
       "subject": "The purchase requests list page shows a raw i18n key as its title and has no upload control when empty",
@@ -21044,7 +22448,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21213,7 +22617,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 9,
       "disputed": 0
     },
     {
@@ -21276,7 +22680,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21942,6 +23346,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-FEC126AB",
+      "path": "entries/KB-FEC126AB.md",
+      "subject": "/account/orders Filters popover keeps un-applied Start/End dates after it is dismissed by outside click or Escape",
+      "question": "Are un-applied Created-date entries discarded when the /account/orders Filters popover is closed without Apply?",
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "feature=orders-date-filter",
+        "layout=desktop-split",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-FF2B4381",
       "path": "entries/KB-FF2B4381.md",
       "subject": "The gtag config entry carries currency and language always, user_id = platform user GUID when signed in, and a user_id key holding undefined for guests",
@@ -21996,7 +23418,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-FF7E4D5B",

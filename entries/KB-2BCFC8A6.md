@@ -30,5 +30,22 @@ evidence:
     who: kutasinaelena
     build: 59983c56933fe571
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: e00c89f4da0e9c98
+    conditions: platform=3.1083.0; module:VirtoCommerce.Quote=3.1005.0; surface=xapi
+    at: 2026-10-15T11:31:33.939Z
+    by: session:10db9d7d
+    bodyHash: 6c2eab92af70
+    who: Lenajava1
+    note: "2026-10-15: as the slot-1 B2B buyer via xAPI, approveQuoteRequest on an API-created 'Proposal sent' quote returned {id, orderId} and the quote read back 'Ordered' in the same call; a CustomerOrder (status New) was placed for the same customerId + organizationId. Quotes.Status allowed values unchanged (Processing, On hold, New, Declined, Proposal sent, Ordered)."
+  - method: observation
+    deployment: vcst_qa
+    build: 7ec352df61232ca8
+    at: 2026-10-15T13:23:19.760Z
+    by: session:10db9d7d
+    bodyHash: 6c2eab92af70
+    who: Lenajava1
+    note: "Theme 2.60.0-alpha.2579: six Proposal sent quotes approved from /account/quotes/{id}; each single click (no confirmation dialog) redirected to /account/orders/{id} with a New order and set the quote to Ordered."
 ---
 The storefront quote detail page shows Approve and Decline only when quote.status === 'Proposal sent' and renders the raw status code as its label (vc-frontend view-quote.vue, settings_data.json quote statuses). The approveQuoteRequest mutation (ApproveQuoteCommandHandler) accepts only 'Proposal sent', then converts the quote to a cart, places the customer order and sets the quote to 'Ordered' in the same call; declineQuoteRequest sets 'Declined'. There is no intermediate 'Accepted' status and no separate checkout step for a quote. On vcst the Quotes.Status allowed values are Processing, On hold, New, Declined, Proposal sent, Ordered; Quotes.DefaultStatus is Draft.

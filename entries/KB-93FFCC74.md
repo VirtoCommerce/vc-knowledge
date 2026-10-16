@@ -32,5 +32,14 @@ evidence:
     who: kutasinaelena
     build: df4b8991ac35ca53
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: e00c89f4da0e9c98
+    conditions: platform=3.1083.0; theme=2.60.0-alpha.2579
+    at: 2026-10-14T14:54:25.515Z
+    by: session:6630b76f
+    bodyHash: aa850604af2f
+    who: Lenajava1
+    note: "Theme 2.60.0-alpha.2579: Test.xlsx listed with 'File format is not allowed' + 'Fix file upload errors to continue.'; Submit return disabled; no /api/files request issued. With Return.AttachmentsRequired off there is no 'still need a photo' line."
 ---
 On theme 2.59.0-pr-2477, attaching Test.xlsx in the return wizard (/account/returns/{id}/edit) lists the file with 'File format is not allowed', shows 'Fix file upload errors to continue.' and 'Some files failed to upload. Remove or retry them before submitting.', keeps Submit return disabled and still counts the line under 'line(s) still need a photo'. No request to /api/files/return-attachments is issued; the allowed set shown is JPG, JPEG, PNG, WEBP, PDF, 5MB, max 5 files.
