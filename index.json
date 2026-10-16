@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-16T12:26:46.230Z",
-  "count": 1007,
+  "generated": "2026-10-16T13:34:59.691Z",
+  "count": 1008,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -19727,6 +19727,29 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-D7B0A4FD",
+      "path": "entries/KB-D7B0A4FD.md",
+      "subject": "VcTileButton in Storybook shows a visible keyboard focus ring (thin blue outline from the global focus style) on button and link tiles in light and dark mode; disabled tiles are skipped by Tab",
+      "question": "Does the ui-kit VcTileButton show a visible focus indicator when reached with Tab, and are disabled tiles skipped?",
+      "questions": [
+        "Is there a focus ring on VcTileButton?",
+        "Does Tab skip disabled VcTileButton tiles?",
+        "Does VcTileButton define its own focus style?"
+      ],
+      "anchors": [
+        "/iframe.html?id=components-molecules-vctilebutton--grid",
+        "/iframe.html?id=components-molecules-vctilebutton--links"
+      ],
+      "scope": [
+        "component=vctilebutton",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D7B43532",
