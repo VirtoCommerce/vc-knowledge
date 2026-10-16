@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-16T11:25:46.798Z",
-  "count": 1005,
+  "generated": "2026-10-16T11:57:27.548Z",
+  "count": 1006,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5057,6 +5057,36 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3CBA0D5F",
+      "path": "entries/KB-3CBA0D5F.md",
+      "subject": "With the VCST-6132 fix, POST /connect/token grant_type=otp_email falls back to the buyer's remaining organization exactly like the password grant when the sent organization_id is removed, locked, Invited, Rejected or Deleted; refresh_token to a blocked org still fails",
+      "question": "After the VCST-6132 fix, which organization does an otp_email sign-in land in when the last-used organization_id is no longer usable?",
+      "questions": [
+        "Does code sign-in fall back to another organization when the buyer is locked in the last-used organization?",
+        "connect/token otp_email organization_id blocked membership fallback after vc-module-customer PR 321",
+        "Can a refresh_token organization switch fall back to another organization?"
+      ],
+      "concepts": [
+        "otp",
+        "organization",
+        "sign-in"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/otp/request",
+        "POST /api/customer/organization-memberships/{id}/lock"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest",
+        "ticket=vcst-6132"
       ],
       "plane": "experiential",
       "status": "active",
