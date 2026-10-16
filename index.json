@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-15T16:54:10.396Z",
-  "count": 1004,
+  "generated": "2026-10-16T11:25:46.798Z",
+  "count": 1005,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -21756,6 +21756,30 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ED213173",
+      "path": "entries/KB-ED213173.md",
+      "subject": "Before the VCST-6132 fix, POST /connect/token grant_type=otp_email with an organization_id the buyer no longer belongs to returns 400 invalid_grant, while grant_type=password with the same organization_id falls back to the buyer's remaining organization",
+      "question": "Does an otp_email sign-in fall back to another organization when the sent organization_id is no longer accessible, like the password grant does?",
+      "questions": [
+        "Why does code sign-in fail for a multi-organization buyer removed from the last-used organization?",
+        "Does OrganizationIdRequestValidator apply organization fallback to grant_type=otp_email?",
+        "connect/token otp_email organization_id unavailable organization error"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest",
+        "ticket=vcst-6132"
       ],
       "plane": "experiential",
       "status": "active",
