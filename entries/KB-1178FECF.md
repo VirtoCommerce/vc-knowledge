@@ -37,7 +37,7 @@ evidence:
     at: 2026-09-30T15:00:57.944Z
     by: session:8402b2ed
     who: kutasinaelena
-    note: "Walked the full 42-combination field x operator matrix through the Custom conditions builder on vcptcore-qa1 after the ElasticSearch8 switch (Member = 263 docs). All three wildcard operators return non-zero: emails:\"kutasina*\" -> 15 members, emails:\"*@gmail.com\" -> 20 members / 18 recipients, emails:\"*kutasina*\" -> 15 members, login:\"*@yopmail.com\" -> 20, name:\"Elena*\" / name:\"*Kutasina\" / name:\"*Kutas*\" -> 3 each. Exact emails:kutasina.elena@gmail.com correctly returns 0."
+    note: "Walked the full 42-combination field x operator matrix through the Custom conditions builder on vcptcore-qa1 after the ElasticSearch8 switch (Member = 263 docs). All three wildcard operators return non-zero: emails:\"<prefix>*\" -> 15 members, emails:\"*@gmail.com\" -> 20 members / 18 recipients, emails:\"*<infix>*\" -> 15 members, login:\"*@yopmail.com\" -> 20, name:\"<first-name>*\" / name:\"*<last-name>\" / name:\"*<infix>*\" -> 3 each. An exact emails:<address> on a non-test domain correctly returns 0."
     build: b336aebf0395d5ec
     buildFrom: deploy-history
   - method: observation

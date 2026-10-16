@@ -12,7 +12,7 @@ One base, at the root of this repository. See *What used to be here* below.
 | `kb.json` | the manifest: the id rule, and which index file serves which plane |
 | `index.json` | one row per entry — everything needed to RANK an entry, nothing needed to read one. One fetch answers "what does this base hold?" |
 | `entries/KB-XXXXXXXX.md` | one fact each: frontmatter (subject, question, anchors, scope, `evidence[]`) plus the claim in prose |
-| `log/YYYY-MM-DD/*.jsonl` | one file per session: what was asked, what matched, what missed, what was captured or confirmed |
+| `log/YYYYMMDD-<session>.jsonl` | one file per session (older ones under `log/YYYY-MM-DD/`): what was asked, what matched, what missed, what was captured or confirmed |
 | `builds/<pin>.json` | one build a stand ran when something was observed on it: platform, theme, module versions. Content-addressed — an evidence item names it as `build: <pin>` |
 
 An entry records something an agent **saw on a deployment**, or — labelled as such — **read in source
@@ -46,10 +46,11 @@ and then writes a duplicate of an entry that already exists.
 
 ## How it is written
 
-**Only by the tool, and only as one atomic commit per session.** An agent's `capture`, `confirm` and
-`dispute` queue locally and send nothing; at session end the push re-reads the current head, the
-current `index.json` and the current body of every entry it is mutating, then lands entries, index
-and log together — blobs → tree → commit → ref compare-and-swap.
+**Only by the tool, and only as atomic commits.** An agent's `capture`, `confirm` and `dispute` queue
+locally and send nothing; a push -- at the end of a turn, or when the queue has waited a few minutes --
+re-reads the current head, the
+current `index.json` and the current body of every entry it is mutating, then lands entries, index,
+log and any new `builds/<pin>.json` together in one commit — blobs → tree → commit → ref compare-and-swap.
 
 That shape is not incidental. Writing one file per call would allow a state where `index.json` names
 an entry that is not there, and patching a *cached* index would silently drop whatever another
