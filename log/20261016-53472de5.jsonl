@@ -1,2 +1,4 @@
 {"at":"2026-10-16T04:30:27.583Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Dan-BV"}
 {"at":"2026-10-16T04:31:27.256Z","kind":"flush","entries":0,"lines":9,"swept":["35e9609e.jsonl","b92ab881.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
+{"at":"2026-10-16T04:32:41.140Z","kind":"restart","why":"state-dropped","who":"Dan-BV"}
+{"at":"2026-10-16T09:30:23.507Z","kind":"restart","why":"state-dropped","who":"Dan-BV"}

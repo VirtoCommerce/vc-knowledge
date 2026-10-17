@@ -1,0 +1,2 @@
+{"at":"2026-10-17T05:54:58.931Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Dan-BV"}
+{"at":"2026-10-17T05:55:56.296Z","kind":"flush","entries":0,"lines":7,"swept":["00df63e6.jsonl","53472de5.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
