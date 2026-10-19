@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T08:44:26.449Z",
-  "count": 1009,
+  "generated": "2026-10-19T09:00:18.094Z",
+  "count": 1010,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -18541,6 +18541,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C8374994",
+      "path": "entries/KB-C8374994.md",
+      "subject": "Missions SKU modal quantity stepper: the ceiling is the tracked available stock; untracked targets announce no max, and a typed quantity above stock is kept, flagged invalid and disables Add to cart",
+      "question": "What upper bound does the quantity stepper in the missions SKU modal announce, and what happens when a quantity above it is typed?",
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
