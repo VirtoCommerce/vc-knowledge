@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T20:16:54.642Z",
-  "count": 1033,
+  "generated": "2026-10-19T21:55:32.882Z",
+  "count": 1034,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7837,6 +7837,29 @@
       ],
       "scope": [
         "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-51FB70F2",
+      "path": "entries/KB-51FB70F2.md",
+      "subject": "The storefront account-menu organization switcher lists an organization the buyer is locked in as a disabled option with a padlock, not hidden; Invited/Rejected/Deleted memberships are hidden",
+      "question": "Does the storefront organization switcher show an organization where the buyer's membership is locked?",
+      "questions": [
+        "Is a locked organization hidden from the account menu switcher?",
+        "How does the storefront show an org the buyer is blocked in after an OTP fallback?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=organization-switcher",
+        "persona=multi-org",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
