@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T15:35:42.924Z",
-  "count": 1024,
+  "generated": "2026-10-19T15:39:42.283Z",
+  "count": 1025,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -18069,6 +18069,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BFF94794",
+      "path": "entries/KB-BFF94794.md",
+      "subject": "Storybook rejects a VcStatWidget color/deltaColor value outside the 8-option list and keeps the story default",
+      "question": "Does Storybook accept an unknown color or deltaColor value (e.g. \"purple\") for the VcStatWidget stories?",
+      "questions": [
+        "How do I render VcStatWidget with an unknown colour in Storybook?",
+        "Can the VcStatWidget neutral fallback for an unknown color be tested through Storybook URL args?",
+        "Why does args=color:purple not change the VcStatWidget story?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--basic"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
