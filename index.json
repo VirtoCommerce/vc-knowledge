@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T21:55:32.882Z",
-  "count": 1034,
+  "generated": "2026-10-19T22:01:11.145Z",
+  "count": 1036,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7465,6 +7465,32 @@
         "locale=ru-ru",
         "surface=storefront-ui",
         "viewport=1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-509F34F1",
+      "path": "entries/KB-509F34F1.md",
+      "subject": "Storefront OTP sign-in sends organization_id only when the email is typed in the exact case of the stored last-used-org key; a differently-cased email sends none and lands in the server-side current org",
+      "question": "Does the storefront code sign-in send the last-used organization when the email is typed in a different letter case?",
+      "questions": [
+        "Is the last-used organization respected when the buyer types their email with capital letters at code sign-in?"
+      ],
+      "concepts": [
+        "otp",
+        "organization"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "persona=multi-org",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -23947,6 +23973,31 @@
       "scope": [
         "surface=storefront-ui",
         "theme=2.58.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FC1BCACF",
+      "path": "entries/KB-FC1BCACF.md",
+      "subject": "The credential sign-in fallback away from a blocked organization picks the first accessible organization in the contact's list, ignoring DefaultOrganizationId and CurrentOrganizationId, and then overwrites CurrentOrganizationId with it",
+      "question": "When a sign-in falls back from a blocked organization, does it prefer the contact's default or current organization?",
+      "questions": [
+        "Which organization does otp_email or password fallback pick when the buyer has three organizations and a default?"
+      ],
+      "concepts": [
+        "organization",
+        "organization-membership"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=organization-fallback",
+        "persona=multi-org",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
