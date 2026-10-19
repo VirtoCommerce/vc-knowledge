@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T20:14:43.360Z",
-  "count": 1032,
+  "generated": "2026-10-19T20:16:54.642Z",
+  "count": 1033,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2909,6 +2909,26 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-20C69E1B",
+      "path": "entries/KB-20C69E1B.md",
+      "subject": "Admin Sign-in log dashboard trend badges show a raw percentage even when the previous window is tiny, e.g. +1386% for 104 vs 7 users",
+      "question": "Why does the Admin Sign-in log dashboard show trend badges like 1597% or 2000%?",
+      "questions": [
+        "How is the trend badge on the Sign-in log tiles computed?",
+        "What does the Sign-in log tile badge show when the previous period had zero records?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/sign-in-log/stats"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-20F8350F",
