@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T18:09:08.144Z",
-  "count": 1031,
+  "generated": "2026-10-19T18:15:57.526Z",
+  "count": 1032,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -862,6 +862,30 @@
       "scope": [
         "module=pricing",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0AE6A961",
+      "path": "entries/KB-0AE6A961.md",
+      "subject": "On the plugin-delivered Sales Rep hub dashboard, a stat card saved as hidden (active_carts hidden:true) sends no SalesRepCustomerCartStatistics on mount; hub operations go to POST /graphql",
+      "question": "Does a hidden Active carts stat card on /company/dashboard still fetch SalesRepCustomerCartStatistics, and which endpoint do hub queries use?",
+      "questions": [
+        "Is the Active carts KPI card lazy when hidden in the saved layout?",
+        "Why does the sales rep dashboard show only 5 KPI cards?",
+        "Do Sales Rep hub GraphQL operations still go to /graphql/sales-rep after the module federation move?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "Query.salesRepLayout",
+        "Query.salesRepCustomerCartStatistics"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
