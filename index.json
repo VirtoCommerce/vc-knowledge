@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T17:48:23.549Z",
-  "count": 1029,
+  "generated": "2026-10-19T17:54:23.213Z",
+  "count": 1031,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2856,7 +2856,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9661,7 +9661,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-688E2CBC",
@@ -10497,7 +10498,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12458,7 +12459,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -17362,7 +17363,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-B70CDB22",
@@ -22177,6 +22179,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-EC38F358",
+      "path": "entries/KB-EC38F358.md",
+      "subject": "When the GA reads behind the sales-rep activity page fail, the tracked tabs and All show (–), Orders/Customers keep exact counts and rows, and a \"Some tracked activity couldn't be loaded\" notice sits above the list",
+      "question": "What does a customer's sales-rep activity page show when the Google Analytics reads fail but platform data loads?",
+      "questions": [
+        "How does /company/my-customers/{id}/activities degrade when GA is unavailable?",
+        "Does the All tab show a number when tracked counts failed on the sales rep activity page?",
+        "What does the Customer activity widget show for Searches when salesRepCustomerInsights returns isAnalyticsAvailable false?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/activities",
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerInsights"
+      ],
+      "scope": [
+        "feature=customer-activity",
+        "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EC3BEB66",
       "path": "entries/KB-EC3BEB66.md",
       "subject": "xAPI categories returns 0 items when the filter carries product-only terms (price.USD:(0 TO), inStock_variations:true); the storefront sends categories a separate subtree-only filter",
@@ -22431,6 +22458,31 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EE2E1EC4",
+      "path": "entries/KB-EE2E1EC4.md",
+      "subject": "When GA reads exceed the store's GoogleAnalytics4.DataApi.RequestTimeoutSeconds, the sales-rep activity queries return HTTP 200, no errors[], isAnalyticsAvailable false, 0 for the failed GA categories and real DB counts; GA results are cached per calendar-day range, not per instant",
+      "question": "What do salesRepActivities, salesRepCustomerActivitySummary and salesRepCustomerInsights return when the Google Analytics read times out?",
+      "questions": [
+        "How do I force a GA-unavailable state for the sales-rep activity page?",
+        "Does a changed period.to timestamp bypass the sales-rep GA cache?",
+        "What does a partial GA failure look like in salesRepActivities categoryCounts?"
+      ],
+      "anchors": [
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerActivitySummary",
+        "Query.salesRepCustomerInsights",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -23261,8 +23313,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 0
+      "trust": 1,
+      "disputed": 0,
+      "contested": 2
     },
     {
       "id": "KB-F6EDA2F4",

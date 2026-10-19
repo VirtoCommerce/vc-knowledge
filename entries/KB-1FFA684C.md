@@ -23,5 +23,14 @@ evidence:
     who: Aleksandra-Mitricheva
     build: f960736e1109b3de
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_qa
+    build: 5c581fd90c2dabb7
+    conditions: module:VirtoCommerce.SalesRep=3.1015.0-pr-15-e5bc; module:VirtoCommerce.GoogleEcommerceAnalytics=4.1005.0-pr-61-5267; platform=3.1085.0; theme=2.61.0-pr-2458-3f0b
+    at: 2026-10-19T17:51:51.761Z
+    by: session:68b36f2b
+    bodyHash: a537a17aae1d
+    who: Aleksandra-Mitricheva
+    note: "Re-checked 2026-10-19 with four non-rep ACME members (maintainer, purchasing agent, employee, manager): own org, no org, unrelated org -> data null, no errors[], on both /graphql/sales-rep and /graphql. Anonymous -> errors[Unauthorized]. Storefront /company/activities, ?organizationId= and /company/my-customers/<id>/activities redirect a non-rep to /account/dashboard with no activity request."
 ---
 Password-grant tokens (storeId=B2B-store) for four non-rep B2B members (Organization employee, maintainer, manager, Purchasing agent; permissions without any sales-rep entry) called Query.salesRepActivities (no organizationId, own org id, an unrelated org id), Query.salesRepCustomerActivitySummary and Query.salesRepCustomerInsights on POST /graphql/sales-rep and on POST /graphql. Every call returned HTTP 200 with the field null and no errors[] - never rows, never an authorization error. The same three queries with a rep token returned identical data on both endpoints; the storefront itself calls them on the main /graphql endpoint. POST /api/sales-rep/analytics-diagnostics returned 403 for both member and rep tokens.
