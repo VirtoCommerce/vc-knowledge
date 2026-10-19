@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T11:01:45.078Z",
-  "count": 1012,
+  "generated": "2026-10-19T11:03:26.421Z",
+  "count": 1021,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3593,6 +3593,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-2B31393F",
+      "path": "entries/KB-2B31393F.md",
+      "subject": "VcStatWidget renders its output (role=status) status text already filled on first mount in loading or error, aria-hides the dash, error row and icons, and repeats the label inside the status text",
+      "question": "What does a screen reader get from a VcStatWidget that mounts in loading or error state?",
+      "questions": [
+        "Is the VcStatWidget live region empty before its status text appears?",
+        "Which parts of VcStatWidget are aria-hidden?",
+        "Does VcStatWidget announce the ready value?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--loading",
+        "/story/components-organisms-vcstatwidget--error-state"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-2B93579A",
       "path": "entries/KB-2B93579A.md",
       "subject": "Unauthenticated platform REST calls get 401 with an empty body and no WWW-Authenticate header",
@@ -3740,6 +3763,30 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2C889DD2",
+      "path": "entries/KB-2C889DD2.md",
+      "subject": "VcStatWidget figure never wraps but also never shrinks or clips: a long figure paints past a narrow card and scrolls the page horizontally",
+      "question": "What happens to a long VcStatWidget figure such as $1,512,400.00 when the card is narrower than the figure?",
+      "questions": [
+        "Does VcStatWidget wrap or truncate a long value?",
+        "VcStatWidget overflow in a narrow grid column",
+        "Why does a stat card cause horizontal scroll on mobile?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--basic",
+        "/story/components-organisms-vcstatwidget--colors"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "host=storybook",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7706,6 +7753,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-527B0F06",
+      "path": "entries/KB-527B0F06.md",
+      "subject": "A VcStatWidget card never shrinks below its figure's width: in the Row story the flex row wraps instead of letting a long figure overflow, figures sit at one line with or without the optional parts, and a valueSuffix wraps onto its own line under a long figure",
+      "question": "How do VcStatWidget cards lay out in a row at narrow widths and with optional parts missing?",
+      "questions": [
+        "Does a long VcStatWidget figure overflow the card at narrow widths?",
+        "Do VcStatWidget figures align when some cards lack icon, description or delta?",
+        "Where does the VcStatWidget valueSuffix go when the figure is long?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--row",
+        "/story/components-organisms-vcstatwidget--basic",
+        "/story/components-organisms-vcstatwidget--with-suffix",
+        "/story/components-organisms-vcstatwidget--colors"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-52A684A6",
       "path": "entries/KB-52A684A6.md",
       "subject": "On a stand whose Return.Status dictionary lacks the Cancelled spelling, the Admin return detail blade shows an empty Status select for a buyer-cancelled return, and PUT /api/return accepts changing Cancelled to Canceled",
@@ -7908,6 +7980,25 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=below-md"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-549A7548",
+      "path": "entries/KB-549A7548.md",
+      "subject": "A standalone VcStatWidget changes height when it leaves the loading or error state, because loading and error hide the description and delta lines",
+      "question": "Does a VcStatWidget keep its height between loading, error and ready states?",
+      "anchors": [
+        "/iframe.html?id=components-organisms-vcstatwidget--basic",
+        "/iframe.html?id=components-organisms-vcstatwidget--row"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "surface=storefront-ui",
+        "viewport=1280"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11785,6 +11876,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-82296935",
+      "path": "entries/KB-82296935.md",
+      "subject": "VcStatWidget state and colour rules: loading outranks errorText, label always visible, accent -500 on bar/icon/prepend, delta -700, unset colour = neutral",
+      "question": "How does the VcStatWidget card render its loading, error and colour states?",
+      "questions": [
+        "What does VcStatWidget show when both loading and errorText are set?",
+        "Which colour tokens does VcStatWidget use for the bar and the delta line?",
+        "What does the VcStatWidget screen-reader status say while loading?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--basic",
+        "/story/components-organisms-vcstatwidget--row"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "host=storybook",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8246C473",
       "path": "entries/KB-8246C473.md",
       "subject": "An organization address of type BillingAndShipping cannot be marked default",
@@ -14407,6 +14522,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-9C14AC59",
+      "path": "entries/KB-9C14AC59.md",
+      "subject": "VcStatWidget delta text in secondary colour is 3.36:1 on the card in the Black gold light preset",
+      "question": "Does VcStatWidget deltaColor secondary meet 4.5:1 text contrast in every Storybook theme preset?",
+      "anchors": [
+        "/iframe.html?id=components-organisms-vcstatwidget--basic",
+        "/iframe.html?id=components-organisms-vcstatwidget--delta-colors"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "mode=light",
+        "preset=black-gold",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9CD03E2B",
       "path": "entries/KB-9CD03E2B.md",
       "subject": "On /search?barcode= the first barcode value wins and a q keyword is ignored",
@@ -15236,6 +15371,27 @@
         "layer=platform-blade-chrome",
         "scanner=axe-core-4.10.2",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A4C7F35D",
+      "path": "entries/KB-A4C7F35D.md",
+      "subject": "VcStatWidget treats a whitespace-only errorText as an error: it hides the figures and shows the alert icon with a blank message, and the status reads only \"<label>:  \"",
+      "question": "What does VcStatWidget show when errorText is only whitespace?",
+      "questions": [
+        "Does a blank errorText put VcStatWidget into the error state?",
+        "What does VcStatWidget announce for a whitespace errorText?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--with-suffix"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -17290,6 +17446,29 @@
       "scope": [
         "account=admin",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B9BB372D",
+      "path": "entries/KB-B9BB372D.md",
+      "subject": "VcStatWidget shows the dash only for value undefined or empty string; a whitespace-only value renders an empty, zero-height figure row",
+      "question": "What does the VcStatWidget UI-kit card show when its value prop is missing, empty, whitespace-only or \"0\"?",
+      "questions": [
+        "Does VcStatWidget show a dash for a blank value?",
+        "Why does a stat card lose its figure line when value is a space?",
+        "VcStatWidget hasValue check for whitespace"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--basic"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "host=storybook",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -19813,6 +19992,27 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-D7AF72F3",
+      "path": "entries/KB-D7AF72F3.md",
+      "subject": "VcStatWidget isolates its loader overlay (isolation:isolate on a z-auto relative root), so the z-996 overlay cannot rise above the storefront's z-20 sticky header",
+      "question": "Can a loading VcStatWidget's spinner overlay paint over a sticky header?",
+      "questions": [
+        "What z-index does the VcStatWidget loader overlay have and is it contained?",
+        "Does the storefront sticky header stay above a loading stat card?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--loading"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D7B0A4FD",
