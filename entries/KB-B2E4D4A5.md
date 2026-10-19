@@ -55,5 +55,15 @@ evidence:
     bodyHash: cb8083f4a0be
     build: 4ca08b7825765bae
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_stable
+    build: b0005569472f16df
+    conditions: platform=3.1039.15; module:VirtoCommerce.PageBuilderModule=3.1022.0; store=B2B-store; role=admin
+    at: 2026-10-19T09:54:51.183Z
+    by: session:6ac5ef0c
+    bodyHash: cb8083f4a0be
+    defect: VCST-4973
+    who: Lenajava1
+    note: "2026-10-19, Edge, own AGENT-TEST pages (all archived), snapshots at ~0 / +1.5 / +4 s per action: Publish 0/4 toasts (POST /grouped/publishing/{id}?publish=true -> 200), Unpublish 0/2 (?publish=false -> 200), Archive of a Published page 0/2 and of a Draft page 0/2 (POST /grouped/archive?ids= -> 204, blade closes). Save showed 'Page saved successfully' every time (5/5). The shell notification centre (bell) read 'No notifications yet' afterwards. Same shell layout as 3.1033.0 (toolbar Save/Archive/Open designer/Save content/Clone/Publish|Unpublish)."
 ---
 On released PageBuilderModule builds (observed live on 3.1033.0 with vc-shell 2.6.0 on vcst, 2026-10-12, administrator, page details blade opened from the store's Page Builder widget): Publish (POST /api/page-builder-pages/grouped/publishing/{groupId}?publish=true -> 200, 3 runs), Unpublish (?publish=false -> 200, 3 runs) and Archive (Confirmation 'Are you sure you want to archive this page?' -> Confirm -> POST /grouped/archive?ids= -> 204, 4 runs) all succeed, but no notification is rendered within 8 s; the only signals are the status chip and the Publish/Unpublish button swapping (Archive closes the blade). Save shows 'Page saved successfully', Clone shows 'Page cloned successfully' once and it stays visible after the blade swaps to the copy (2/2), Load content shows 'Content loaded successfully', and saving an imported page shows 'Page saved successfully' (Save stays disabled after an import until a field changes). The toast is a role=status item in the top-level notification list with a 'Dismiss notification' button. Source: PageDetails.vue at tags 3.1033.0 and 3.1034.0 calls notification.success only for SAVE_SUCCESS, DOWNLOAD_SUCCESS and CLONE_SUCCESS; the publish/unpublish/archive handlers have none (dropped in the @vc-shell 2.0.3 upgrade, VCST-5105). The unmerged PR VirtoCommerce/vc-module-pagebuilder#172 (VCST-4973, build 3.1034.0-pr-172-5aad) restores 'Page published successfully', 'Page unpublished successfully' and 'Page archived successfully'.
