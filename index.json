@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T22:27:53.418Z",
-  "count": 1038,
+  "generated": "2026-10-19T23:28:11.822Z",
+  "count": 1039,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -23414,6 +23414,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F57FC873",
+      "path": "entries/KB-F57FC873.md",
+      "subject": "salesRepLayout reads a per-user CustomerPreference named SalesRepLayout.{scope}[.{storeId}]; deleting that row restores null",
+      "question": "Where does salesRepLayout on /graphql/sales-rep persist a saved layout, and how is a rep reset to never-saved?",
+      "anchors": [
+        "/graphql/sales-rep",
+        "/api/customer-preferences",
+        "/api/customer-preferences/search"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
