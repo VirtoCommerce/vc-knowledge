@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T23:28:11.822Z",
-  "count": 1039,
+  "generated": "2026-10-19T23:37:56.462Z",
+  "count": 1041,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5443,6 +5443,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-3E4C1F61",
+      "path": "entries/KB-3E4C1F61.md",
+      "subject": "Under a non-English culture the sales-rep customer profile's My recent orders dates stay in English while Customer information dates and all money values localize",
+      "question": "On /company/my-customers/:organizationId under a non-English culture, do the My recent orders date cells localize?",
+      "questions": [
+        "Why are recent order dates English on the Italian sales rep customer profile?",
+        "Does Query.salesRepOrders createdDate render in the store locale on the customer profile?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Query.salesRepOrders"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3EA119C5",
       "path": "entries/KB-3EA119C5.md",
       "subject": "The storefront category page header banner loads the ORIGINAL category image (no _md/_sm thumbnail suffix) and crops it to a wide banner, while product cards on the same page load _md thumbnails.",
@@ -5879,6 +5902,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-41855315",
+      "path": "entries/KB-41855315.md",
+      "subject": "On the sales-rep orders grid, the zero-match empty state carries a Reset search button only when a search term is active; a filter-only zero match shows the text with no inline control, and clearing is left to the chip row's Reset filters",
+      "question": "Does the 'No orders match this filter' empty state on /company/customer-orders have an inline clear or reset control?",
+      "questions": [
+        "Is there a Reset filters button inside the empty state on the sales rep customer orders page?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/customer-orders",
+        "Query.salesRepCustomerOrders"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -17511,7 +17559,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -18140,7 +18188,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19768,7 +19816,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -21935,7 +21983,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {

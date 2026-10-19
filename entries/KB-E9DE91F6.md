@@ -21,5 +21,14 @@ evidence:
     at: 2026-10-14T17:52:05.127Z
     by: session:6630b76f
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_qa
+    build: 5c581fd90c2dabb7
+    conditions: platform=3.1085.0; theme=2.61.0-pr-2458-3f0b; module:VirtoCommerce.SalesRep=3.1015.0-pr-15-e5bc
+    at: 2026-10-19T23:36:34.714Z
+    by: session:68b36f2b
+    bodyHash: 5270bfe96ccc
+    who: Aleksandra-Mitricheva
+    note: "Same on the module-delivered plugin build: SPA mount and full load each sent Query.salesRepCustomer twice with identical variables (once beside SalesRepLayout, once beside the block queries)."
 ---
 Opening /company/my-customers/{organizationId} as a sales rep (both via the My customers row link and via direct URL, and again on an SPA re-mount) sends Query.salesRepCustomer twice with the same organizationId per mount: once together with SalesRepLayout(scope customerProfile), and a second time after the layout resolves, alongside the block queries (SalesRepCustomerOrderStatistics, SalesRepOrders, SalesRepTopSellers...). Both return 200 with identical data and empty errors[]; the heading, Customer information card and rail render consistent values. So Apollo does not collapse the profile's salesRepCustomer consumers into one request on this build.
