@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T15:45:59.013Z",
-  "count": 1026,
+  "generated": "2026-10-19T15:54:56.151Z",
+  "count": 1027,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10709,6 +10709,29 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-73D8A72E",
+      "path": "entries/KB-73D8A72E.md",
+      "subject": "In the VcStatWidget Row story, flex stretch hides the state height difference only while cards share a line; at 375px the cards stack one per line and keep their own heights",
+      "question": "Does a row of VcStatWidget cards keep equal heights when the row wraps to one column on mobile?",
+      "questions": [
+        "Is the VcStatWidget loading/error height difference masked in a flex row at every viewport?",
+        "What heights do VcStatWidget Row story cards have at 375px?",
+        "Does flex-wrap stretch equalise stat widget cards that wrap onto separate lines?"
+      ],
+      "anchors": [
+        "/iframe.html?id=components-organisms-vcstatwidget--row"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "surface=storefront-ui",
+        "viewport=375"
       ],
       "plane": "experiential",
       "status": "active",
