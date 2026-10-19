@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T22:11:27.643Z",
-  "count": 1036,
+  "generated": "2026-10-19T22:12:38.837Z",
+  "count": 1037,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -19880,7 +19880,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -20795,6 +20795,28 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-DC2411FF",
+      "path": "entries/KB-DC2411FF.md",
+      "subject": "The impersonate grant on /connect/token gets no organization fallback: an organization_id the target is locked, Rejected or not a member in is refused with the org-specific code",
+      "question": "What does POST /connect/token grant_type=impersonate return when organization_id names an organization the target user is locked or blocked in?",
+      "questions": [
+        "Does login on behalf fall back to another organization when the requested one is blocked for the customer?",
+        "Is the VCST-6132 credential sign-in organization fallback applied to impersonation?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=organization-fallback",
+        "grant=impersonate",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DC2F1BF0",

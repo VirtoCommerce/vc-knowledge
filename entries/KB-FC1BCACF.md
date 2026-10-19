@@ -26,5 +26,14 @@ evidence:
     at: 2026-10-19T21:55:45.993Z
     by: session:1b3fc42e
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 5b60cc99a102c4af
+    conditions: module:VirtoCommerce.Customer=3.1030.0-pr-321-c54f; platform=3.1084.0-pr-3140
+    at: 2026-10-19T22:11:27.899Z
+    by: session:1b3fc42e
+    bodyHash: 8678ef894516
+    who: kutasinaelena
+    note: "Re-observed the parts this fixture can separate: CurrentOrganizationId was A before and B after an otp_email fallback from locked A; A removed + B Rejected -> 200 without organization_id claim on otp_email and password; A locked + B active, password org=A -> 200 claim B. A sign-in that resolves no organization (both locked) left CurrentOrganizationId unchanged (A). Fixture had no default org, so the default-vs-list-order part was not re-tested."
 ---
 On vcptcore_qa1 a disposable contact in orgs A, B, C (read back in order B, A, C) with DefaultOrganizationId=C: with A locked or A Rejected, POST /connect/token (otp_email and password) with organization_id=A returned 200 with organization_id claim B, not the default C. Setting CurrentOrganizationId=C beforehand did not change it: claim B, and CurrentOrganizationId was rewritten to B. Also: A removed from the contact + B Rejected gave 200 without an organization_id claim on both grants; A locked + B active, password with organization_id=A gave 200 claim B (not 400).
