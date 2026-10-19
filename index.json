@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-16T13:34:59.691Z",
-  "count": 1008,
+  "generated": "2026-10-19T08:44:26.449Z",
+  "count": 1009,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -18794,6 +18794,28 @@
         "feature=sales-rep-hub",
         "setting=salesrep.enabled:false",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CB5C5AD3",
+      "path": "entries/KB-CB5C5AD3.md",
+      "subject": "Parallel saves of one localizable dictionary setting can return 409 and can persist exact-duplicate translation rows, which GET lists and the next save collapses",
+      "question": "What happens when several POST /api/platform/localizable-settings/{name}/dictionary-items requests for the same setting run concurrently?",
+      "questions": [
+        "Can concurrent saves of Order.Status translations create duplicate translation rows?",
+        "Does GET /api/platform/localizable-settings show duplicate localizedValues for one alias and language?",
+        "Why does saving a localizable setting return 409 with an optimistic concurrency message?"
+      ],
+      "anchors": [
+        "POST /api/platform/localizable-settings/{id}/dictionary-items",
+        "GET /api/platform/localizable-settings"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
