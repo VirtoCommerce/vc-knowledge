@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T17:46:53.125Z",
-  "count": 1028,
+  "generated": "2026-10-19T17:48:23.549Z",
+  "count": 1029,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5330,8 +5330,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
-      "disputed": 0
+      "trust": 1,
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-3DDFBA81",
@@ -14810,6 +14811,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9E304167",
+      "path": "entries/KB-9E304167.md",
+      "subject": "After a sales rep selects a served customer organization in the account menu, GA4 hits carry that organization's id with up.is_sales_rep=true and session_kind=self",
+      "question": "What GA4 user properties does the storefront send when a sales rep switches to a customer organization they serve?",
+      "questions": [
+        "Is sales-rep storefront activity tagged is_sales_rep=true in GA4 after an org switch?",
+        "Which organization_id does GA4 get when a sales rep works inside a served customer org?"
+      ],
+      "anchors": [
+        "/company/my-customers",
+        "/search"
+      ],
+      "scope": [
+        "feature=google-analytics-user-properties",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
