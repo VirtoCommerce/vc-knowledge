@@ -51,3 +51,5 @@
 {"at":"2026-10-19T14:04:01.673Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/16ef5057616c6cbb.json","reason":"contained","who":"yuskithedeveloper"}
 {"at":"2026-10-19T14:05:03.655Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/16ef5057616c6cbb.json","reason":"contained","who":"yuskithedeveloper"}
 {"at":"2026-10-19T14:06:01.701Z","kind":"flush","ok":false,"attempts":1,"why":"refusing to touch 1 path(s) outside <root>/{entries,index.json,log}: builds/16ef5057616c6cbb.json","reason":"contained","who":"yuskithedeveloper"}
+{"at":"2026-10-19T14:06:12.785Z","kind":"restart","why":"state-absent","who":"yuskithedeveloper"}
+{"at":"2026-10-19T15:19:00.271Z","kind":"flush","entries":2,"lines":39,"swept":["354a4bc5.jsonl","55081948.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"yuskithedeveloper"}

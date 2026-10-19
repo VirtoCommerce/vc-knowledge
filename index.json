@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T11:03:26.421Z",
-  "count": 1021,
+  "generated": "2026-10-19T15:19:00.271Z",
+  "count": 1023,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5077,6 +5077,24 @@
       "scope": [
         "element=products-filter-field-names",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3C5DB2E7",
+      "path": "entries/KB-3C5DB2E7.md",
+      "subject": "Concurrent identical saves of a localizable dictionary setting did not store duplicate translations on vcptcore_dev",
+      "question": "Can firing identical concurrent POST /api/platform/localizable-settings/{name}/dictionary-items requests reproduce duplicate PlatformLocalizedItem rows?",
+      "anchors": [
+        "POST /api/platform/localizable-settings/{name}/dictionary-items",
+        "GET /api/platform/localizable-settings"
+      ],
+      "scope": [
+        "setting=order.status",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12654,6 +12672,25 @@
       "scope": [
         "surface=admin-spa",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8957DB67",
+      "path": "entries/KB-8957DB67.md",
+      "subject": "On platform 3.1084.0-pr-3139 the Admin \"Edit dictionary value\" blade sends one save per double click on Save, and \"Yes\" in its \"Save changes\" dialog saves the edit",
+      "question": "Does a double click on Save in the Admin Settings \"Edit dictionary value\" blade send one or two POST /api/platform/localizable-settings/{name}/dictionary-items, and does \"Yes\" in its unsaved-changes dialog save?",
+      "anchors": [
+        "POST /api/platform/localizable-settings/{name}/dictionary-items",
+        "GET /api/platform/localizable-settings",
+        "Order.Status"
+      ],
+      "scope": [
+        "setting=order.status",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
