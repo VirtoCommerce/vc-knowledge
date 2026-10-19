@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T22:12:38.837Z",
-  "count": 1037,
+  "generated": "2026-10-19T22:27:53.418Z",
+  "count": 1038,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -20188,6 +20188,30 @@
       "scope": [
         "concern=test-data-availability",
         "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D59DDAAD",
+      "path": "entries/KB-D59DDAAD.md",
+      "subject": "A storefront organization switch that fails at /connect/token still stores the target org as last-used and signs the buyer out, so the next code sign-in sends the refused org",
+      "question": "When a storefront organization switch fails, does the storefront still remember that organization as the last-used one?",
+      "questions": [
+        "Does a failed header org switch overwrite the last-used organization in localStorage?",
+        "What happens in the storefront when switching to an organization whose membership was locked after the menu opened?",
+        "Why does the next code sign-in send an organization the buyer could not switch to?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=organization-switcher",
+        "persona=multi-org",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
