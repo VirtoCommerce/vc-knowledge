@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T09:46:16.255Z",
-  "count": 1010,
+  "generated": "2026-10-19T09:46:49.472Z",
+  "count": 1011,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11293,6 +11293,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7BB90D27",
+      "path": "entries/KB-7BB90D27.md",
+      "subject": "Page Builder shell Publish, Unpublish and Archive each show exactly one success toast on released PageBuilderModule 3.1032.2",
+      "question": "Does the Page Builder shell show a success notification after Publish, Unpublish or Archive on PageBuilderModule 3.1032.2?",
+      "questions": [
+        "Which PageBuilderModule release restores the publish/unpublish/archive toasts in the shell?",
+        "What toast text appears after archiving a page in the Page Builder shell?",
+        "Is the VCST-4973 toast fix present on the 3.1032 support line?"
+      ],
+      "anchors": [
+        "/apps/page-builder-shell",
+        "POST /api/page-builder-pages/grouped/publishing/{id}",
+        "POST /api/page-builder-pages/grouped/archive"
+      ],
+      "scope": [
+        "module=page-builder",
+        "role=administrator",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
