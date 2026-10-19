@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T15:39:42.283Z",
-  "count": 1025,
+  "generated": "2026-10-19T15:45:59.013Z",
+  "count": 1026,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -541,6 +541,31 @@
       ],
       "scope": [
         "feature=checkout",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-069099FD",
+      "path": "entries/KB-069099FD.md",
+      "subject": "In the VcStatWidget Colors/DeltaColors 4-column grid at 1024px, a 9-digit figure such as $123,456,789.00 paints 13px past the card border; at 480px (2 columns) an 8-digit $12,345,678.90 paints 16px past it",
+      "question": "Does a long VcStatWidget figure overflow the card border at a supported viewport in the Storybook grid stories?",
+      "questions": [
+        "At which viewport widths does the VcStatWidget figure cross the card border in the Colors story?",
+        "How long can a VcStatWidget value be before it overflows a 4-column grid card at 1024px?",
+        "Does the VcStatWidget Basic story overflow at 375px with a 9-digit currency figure?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--colors",
+        "/story/components-organisms-vcstatwidget--delta-colors",
+        "/story/components-organisms-vcstatwidget--basic"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "host=storybook",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -7816,7 +7841,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-52A684A6",
