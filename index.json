@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T09:54:51.225Z",
-  "count": 1011,
+  "generated": "2026-10-19T11:01:45.078Z",
+  "count": 1012,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15371,6 +15371,29 @@
       ],
       "scope": [
         "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A74F95A5",
+      "path": "entries/KB-A74F95A5.md",
+      "subject": "VcStatWidget with loading=true covers the whole card, including the prepend slot, with a pointer-blocking loader overlay; a drag handle in prepend cannot be clicked while loading",
+      "question": "Can a control placed in the VcStatWidget prepend slot be clicked while the card is loading?",
+      "questions": [
+        "Does the VcStatWidget loading overlay block pointer events on the prepend slot?",
+        "Is a drag handle in a loading stat widget still operable?",
+        "What does VcLoaderOverlay cover inside VcStatWidget?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--prepend-slot",
+        "/story/components-organisms-vcstatwidget--loading"
+      ],
+      "scope": [
+        "component=vcstatwidget",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
