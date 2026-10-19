@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T15:54:56.151Z",
-  "count": 1027,
+  "generated": "2026-10-19T16:00:42.163Z",
+  "count": 1028,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -12171,6 +12171,31 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-847622A8",
+      "path": "entries/KB-847622A8.md",
+      "subject": "With module_federation_enabled the storefront loads the Sales Rep Hub from /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/ on its own origin; a storefront host without a /modules -> platform route returns 404 for the whole hub",
+      "question": "Why does every Sales Rep Hub page (/company/activities, /company/my-customers) return 404 on a storefront after the hub moved to a Module Federation plugin?",
+      "questions": [
+        "Does the Sales Rep Hub MF plugin need a /modules route on the storefront ingress?",
+        "Why does mf-manifest.json for VirtoCommerce.SalesRep return 404 on the storefront but 200 on the platform?",
+        "What environment change does a storefront need to load vc-frontend module plugins?"
+      ],
+      "anchors": [
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json",
+        "/company/activities",
+        "Query.store.plugins"
+      ],
+      "scope": [
+        "feature=module-federation-plugin-delivery",
+        "module=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
