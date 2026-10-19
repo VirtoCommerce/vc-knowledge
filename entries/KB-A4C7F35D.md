@@ -23,5 +23,15 @@ evidence:
     at: 2026-10-19T11:02:02.913Z
     by: session:43a7a721
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 63a7907dd6e47437
+    conditions: storybook=2.61.0-alpha.2594-vcst-5903-vc-stat-widget-3f8af63a; theme=2.61.0-pr-2568-3f8a-3f8af63a; commit=vc-frontend@3f8af63a; browser=chromium
+    at: 2026-10-19T15:43:46.302Z
+    by: session:43a7a721
+    bodyHash: e03f1929c994
+    defect: suspected
+    who: Lenajava1
+    note: "Re-observed on chromium, With Suffix story: errorText \" \" gives a 92px card with the head and the alert icon only (y74), and the status a11y name is \"Active carts:\". errorText \"\" leaves the ready card (\"34 items\"). Source vc-stat-widget.vue:17 v-else-if=\"errorText\" and :96 use plain truthiness."
 ---
 QA Storybook (storefront UI kit), With Suffix story in the manager, errorText control set via "Set string" and then one space typed (URL arg errorText:+). The card drops the figure, suffix, description and delta. It shows only the head and the red alert icon, with an error row whose text is " ", at 51px from the top in a 92px card. The status output reads "Active carts:  " (label, colon, nothing). An empty errorText ("") leaves the card ready, because "" is falsy. The PR's value rule treats undefined and "" as missing but does not mention whitespace, and the error branch has the same gap.
