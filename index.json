@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-19T15:33:45.656Z",
-  "count": 1023,
+  "generated": "2026-10-19T15:35:42.924Z",
+  "count": 1024,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1879,6 +1879,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-155A23DB",
+      "path": "entries/KB-155A23DB.md",
+      "subject": "The Sales Rep dashboard new-orders KPI card is labelled 'Orders in “New” status', and the layout keyboard-reorder live announcer uses that label as the block name",
+      "question": "What is the label of the new-orders KPI card on /company/dashboard and what name does the keyboard reorder announcer use for it?",
+      "questions": [
+        "Does the sales rep dashboard still call the first KPI card 'New orders'?",
+        "What does the aria-live announcer say when a stat card is grabbed with Space in Edit layout?",
+        "What are the keyboard reorder announcements for stat cards and widgets on /company/dashboard?"
+      ],
+      "anchors": [
+        "/company/dashboard"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-layout",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -6679,7 +6702,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12564,7 +12587,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16233,7 +16256,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
