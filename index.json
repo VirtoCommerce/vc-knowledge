@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T14:29:16.874Z",
-  "count": 1078,
+  "generated": "2026-10-20T14:31:16.271Z",
+  "count": 1087,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6323,6 +6323,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-434F1EBE",
+      "path": "entries/KB-434F1EBE.md",
+      "subject": "On /company/tasks a call's line reads 'Due <date>, <time> · <customer> · Call', or 'Customer not assigned' without a customer; other tasks show date and type only",
+      "question": "How does /company/tasks show a call's time and customer in the task list?",
+      "questions": [
+        "What does a call row on the sales rep Tasks page show under the title?",
+        "What does the Tasks page show for a call with no customer?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-444EF3F4",
       "path": "entries/KB-444EF3F4.md",
       "subject": "POST /connect/token for a platform-locked user returns 400 invalid_grant with code user_is_locked_out; the storefront maps it to \"You have been blocked...\"",
@@ -6511,6 +6536,32 @@
       "scope": [
         "build=platform-3.1084.0-pr-3142",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-469F41C8",
+      "path": "entries/KB-469F41C8.md",
+      "subject": "The storefront Sales Rep plugin sends its task queries and mutations to /graphql, and the platform's main /graphql serves the same salesRep task fields as /graphql/sales-rep",
+      "question": "Which GraphQL endpoint does the storefront Sales Rep plugin use for salesRepTasks / createSalesRepTask: /graphql or /graphql/sales-rep?",
+      "questions": [
+        "Is the sales rep schema only on /graphql/sales-rep?",
+        "Does the main /graphql endpoint serve salesRepTask?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "Query.salesRepTasks",
+        "Mutation.createSalesRepTask",
+        "Mutation.updateSalesRepTask"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8338,6 +8389,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-53420670",
+      "path": "entries/KB-53420670.md",
+      "subject": "Moving a non-call task to another day on /company/tasks keeps its time of day, and New task pre-fills the day selected in the page calendar",
+      "question": "When a sales rep edits only the due date of a non-call task on /company/tasks, is its time of day kept, and does New task prefill the selected day?",
+      "questions": [
+        "Does changing a task's due date in the storefront reset its time to midnight?",
+        "Which day does the New task popup preselect on /company/tasks?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Mutation.updateSalesRepTask",
+        "Mutation.createSalesRepTask"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -12181,6 +12258,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-7C2F8AB2",
+      "path": "entries/KB-7C2F8AB2.md",
+      "subject": "Editing a call on /company/tasks keeps its customer, and a notes-only edit sends the stored dueDate back unchanged",
+      "question": "Does Mutation.updateSalesRepTask from the storefront Edit call keep the call's customerId and dueDate when only the notes or the time change?",
+      "questions": [
+        "Does the storefront unlink a call's customer when the call is edited?",
+        "Can a call's type be changed in Edit call?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Mutation.updateSalesRepTask"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7C6D6C33",
       "path": "entries/KB-7C6D6C33.md",
       "subject": "Sales Rep customer profile Top sellers widget keeps rank, units and revenue on one line (nowrap) while the Product column wraps; sibling Recent orders Total still wraps mid-number in the 2-column layout",
@@ -13654,6 +13756,33 @@
       "disputed": 0
     },
     {
+      "id": "KB-8B4E880C",
+      "path": "entries/KB-8B4E880C.md",
+      "subject": "The sales-rep task API takes a customer and any type string on any task: customerId is not bound to type Call and TaskManagement.TaskTypes is not enforced",
+      "question": "Does Mutation.createSalesRepTask accept customerId on a task whose type is not Call, or a type that is not in the task-type list?",
+      "questions": [
+        "Can a non-call sales-rep task be linked to a customer?",
+        "Does the server validate a sales-rep task type against TaskManagement.TaskTypes?",
+        "Is a task typed CALL in upper case treated as a call by the storefront?",
+        "Can a sales rep add a customer to a task that is linked to an order?"
+      ],
+      "anchors": [
+        "Mutation.createSalesRepTask",
+        "Mutation.updateSalesRepTask",
+        "Query.salesRepTaskTypes",
+        "/company/tasks"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8B7F9409",
       "path": "entries/KB-8B7F9409.md",
       "subject": "On /company/tasks the day heading and the per-row due date stay in en-US format (\"Oct 8, 2026\") in ru, es, fr, it, pl, pt and sv; only de renders a localized date (\"8. Okt. 2026\")",
@@ -14325,6 +14454,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-916191D9",
+      "path": "entries/KB-916191D9.md",
+      "subject": "Schedule call on a sales rep's customer page opens a Schedule call popup prefilled with Title Call, that customer, no due date and 9:00 AM, and saves a Call task linked to the customer",
+      "question": "What does the Schedule call quick action on /company/my-customers/{organizationId} open, prefill and save?",
+      "questions": [
+        "What does the Schedule call popup prefill?",
+        "Is Save enabled in the Schedule call popup before a due date is picked?",
+        "Which time options does the call Time select offer?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Mutation.createSalesRepTask"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -16461,6 +16613,30 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A6DBACE4",
+      "path": "entries/KB-A6DBACE4.md",
+      "subject": "Calendar export of a new call: Google gets text \"Call — <customer>\", UTC start and +30 min end, notes as details; Apple gets call.ics with UID = task id and RFC 5545 escaping; a refused save closes the pre-opened tab",
+      "question": "What does Add to calendar send to Google and Apple Calendar when a sales rep saves a new call, and what happens when the save fails?",
+      "questions": [
+        "What is inside the call.ics a sales rep downloads?",
+        "Does the Google Calendar tab open when saving a call in Firefox?",
+        "What does a rep see when a call cannot be saved because the customer was unassigned meanwhile?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Mutation.createSalesRepTask"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -22809,6 +22985,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-EA1CB4BF",
+      "path": "entries/KB-EA1CB4BF.md",
+      "subject": "updateSalesRepTask without customerId unlinks a served customer but keeps a link to an organization the rep no longer serves; a served customerId replaces even a hidden link",
+      "question": "Does Mutation.updateSalesRepTask sent without customerId remove the task's customer link?",
+      "questions": [
+        "What happens to a sales-rep call's customer when the rep edits it while no longer serving that customer?",
+        "Is omitting customerId on updateSalesRepTask a breaking change for API clients?",
+        "Does re-assigning an organization to a rep bring back the customer name on an existing call?"
+      ],
+      "anchors": [
+        "Mutation.updateSalesRepTask",
+        "PUT /api/sales-rep"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EA337811",
       "path": "entries/KB-EA337811.md",
       "subject": "Share dialog reopen pre-fills the saved message and recipients; it starts empty after Stop sharing and re-share",
@@ -23709,6 +23909,32 @@
       ],
       "scope": [
         "principal=customer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EF9531FB",
+      "path": "entries/KB-EF9531FB.md",
+      "subject": "Schedule call on a served customer's page opens a call draft: localized title, that customer, no day, 9:00 AM, priority Normal, Notes 0/1000, both calendars unticked",
+      "question": "What title, customer, date, time and priority does the Schedule call quick action open with on /company/my-customers/{orgId}?",
+      "questions": [
+        "Is the Schedule call quick action enabled in the sales rep hub?",
+        "What priority does a new sales-rep call default to?",
+        "Is the call title translated when the storefront language changes?",
+        "Can the Time field of a sales-rep call be emptied?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Mutation.createSalesRepTask",
+        "/company/tasks"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
