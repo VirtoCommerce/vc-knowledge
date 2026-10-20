@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:39:03.006Z",
-  "count": 1120,
+  "generated": "2026-10-20T15:39:57.710Z",
+  "count": 1121,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -25639,6 +25639,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F97583AC",
+      "path": "entries/KB-F97583AC.md",
+      "subject": "On the vc-frontend-next redesign theme, the desktop account menu has no organization switcher for a multi-org user; only the mobile menu (Corporate → My organizations) offers one.",
+      "question": "Where does a multi-organization user switch organization on the vc-frontend-next (3.x redesign) storefront?",
+      "questions": [
+        "Does the vc-frontend-next desktop account menu show the Organizations switcher?",
+        "Why is the organization switcher missing from the storefront account menu on theme 3.1.0?",
+        "Is the organization switcher available on mobile but not desktop in the Next theme?"
+      ],
+      "anchors": [
+        "Query.me",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next",
+        "user-type=b2b-multi-organization-member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
