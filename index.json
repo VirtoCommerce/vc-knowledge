@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:32:31.775Z",
-  "count": 1118,
+  "generated": "2026-10-20T15:38:09.312Z",
+  "count": 1120,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13046,6 +13046,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-80095B02",
+      "path": "entries/KB-80095B02.md",
+      "subject": "On a hard load of the quotes pages, raw i18n keys appear whenever the page chunk is served from browser cache while the quotes module locale chunk still needs a network revalidation",
+      "question": "What decides whether a hard load of /account/quotes shows raw i18n keys or translated headers?",
+      "questions": [
+        "Why are the quotes raw i18n keys intermittent on full page load?",
+        "Does the storefront wait for a module's locale before rendering its lazy page?",
+        "Why does the first visit to /account/quotes translate but a reload shows quotes.quote_number_label?",
+        "Why does the quote detail tab title show quote_details.title on reload?"
+      ],
+      "anchors": [
+        "/account/quotes",
+        "/account/quotes/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8047A305",
       "path": "entries/KB-8047A305.md",
       "subject": "The /company/dashboard Tasks & due dates widget shows the selected day's tasks with the Tasks page sub-line cut to one line with an ellipsis, so a call's customer name is truncated",
@@ -13612,7 +13635,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -17304,6 +17327,30 @@
         "grant_type=password",
         "surface=api",
         "usertype=customer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A788D882",
+      "path": "entries/KB-A788D882.md",
+      "subject": "On the vc-frontend-next theme the storefront root '/' always renders the built-in demo home component; Page Builder or Builder.io content published for '/' is never shown",
+      "question": "On vc-frontend-next, does the home page '/' show Page Builder content or a built-in page?",
+      "questions": [
+        "Why does the vc-frontend-next home page not show the Page Builder home blocks?",
+        "Which previewer wins on the home page in vc-frontend-next: internal, slugContent or builderIo?",
+        "Can a Page Builder products block be tested on the home page of the Next theme?"
+      ],
+      "anchors": [
+        "/pages/matcher/matcher.vue",
+        "/pages/demo-home/demo-home.vue"
+      ],
+      "scope": [
+        "page=home",
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
