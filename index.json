@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T14:19:36.107Z",
-  "count": 1077,
+  "generated": "2026-10-20T14:25:36.003Z",
+  "count": 1078,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3744,7 +3744,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0,
       "resolved": 2
     },
@@ -4919,7 +4919,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-350797F5",
@@ -5496,7 +5497,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -15683,7 +15684,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -25090,6 +25091,23 @@
       "status": "active",
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-FF7C9595",
+      "path": "entries/KB-FF7C9595.md",
+      "subject": "On a configurable PDP the product-option radio inputs (Product-type section rows) have an empty label, so axe reports label (critical) and the AX tree shows unnamed radios",
+      "question": "Do the option radio buttons in a configurable product's Configure the parameters section have an accessible name?",
+      "anchors": [
+        "/product/{id}"
+      ],
+      "scope": [
+        "feature=product-configuration",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-FF7E4D5B",
