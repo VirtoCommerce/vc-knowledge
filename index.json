@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T16:52:14.841Z",
-  "count": 1142,
+  "generated": "2026-10-20T18:03:16.511Z",
+  "count": 1144,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11045,7 +11045,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-6A7DA439",
@@ -12821,6 +12821,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7BA531B3",
+      "path": "entries/KB-7BA531B3.md",
+      "subject": "A punchout session that already returned its cart replays the stored cXML byte-identical on every later createPunchoutRequisition, unless Punchout.Enabled is off",
+      "question": "What does createPunchoutRequisition return when it is called again on a punchout session that has already returned its cart?",
+      "questions": [
+        "Can a punchout buyer send the requisition twice from the same session?",
+        "What happens when a punchout buyer presses Back and clicks Create requisition again?",
+        "What does a second tab get after the first tab returned the punchout cart?",
+        "Does a returned punchout session still answer while Punchout.Enabled is off?",
+        "Is the replayed punchout cXML rebuilt from the current cart?"
+      ],
+      "anchors": [
+        "Mutation.createPunchoutRequisition",
+        "/cart"
+      ],
+      "scope": [
+        "channel=punchout-session",
+        "module=punchout",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -18937,6 +18963,33 @@
         "module=seo",
         "surface=admin-spa",
         "viewport=1920-1280-1024"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B2D1325E",
+      "path": "entries/KB-B2D1325E.md",
+      "subject": "createPunchoutRequisition sends the cart the storefront shows (Query.cart without a name), never a SavedForLater or wishlist list, and the cart is kept after the return",
+      "question": "Which of the buyer's carts does createPunchoutRequisition put into the PunchOutOrderMessage?",
+      "questions": [
+        "Which cart is sent when a punchout buyer has a named cart and a default cart?",
+        "Is a saved-for-later line sent in the punchout requisition?",
+        "Does a new punchout session start with an empty cart?",
+        "Is the cart cleared after a punchout requisition is returned?",
+        "What errorCode does a punchout buyer with no cart get?"
+      ],
+      "anchors": [
+        "Mutation.createPunchoutRequisition",
+        "Query.cart",
+        "/cart"
+      ],
+      "scope": [
+        "channel=punchout-session",
+        "module=punchout",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
