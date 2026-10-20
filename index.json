@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:15:17.469Z",
-  "count": 1147,
+  "generated": "2026-10-20T18:16:12.431Z",
+  "count": 1148,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3509,6 +3509,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-232D4C5C",
+      "path": "entries/KB-232D4C5C.md",
+      "subject": "At 375 px the storefront /cart sticky checkout bar permanently covers the footer legal strip, in regular and punchout mode alike, because the page has no bottom padding for the fixed bar",
+      "question": "Does the mobile sticky checkout bar on /cart cover the footer at 375 px?",
+      "questions": [
+        "Can the footer version line be scrolled into view on the mobile cart page?",
+        "Is the /cart sticky Place order bar overlap with the footer specific to punchout mode?",
+        "Does the cart page reserve space at the bottom for the fixed mobile checkout bar?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
