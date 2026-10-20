@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T07:26:08.855Z",
-  "count": 1050,
+  "generated": "2026-10-20T08:16:48.718Z",
+  "count": 1051,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10664,6 +10664,31 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6FAD0B85",
+      "path": "entries/KB-6FAD0B85.md",
+      "subject": "On /graphql, a sales rep querying order(id) for another customer's order in an organization the rep neither serves nor belongs to gets errors[] Access denied (Forbidden) with data.order null, while the scoped salesRepCustomerOrder returns plain null",
+      "question": "What does xAPI Query.order(id) return to a sales rep for a buyer's order in an organization the rep does not serve?",
+      "questions": [
+        "Can a sales rep open another organization's order by id through the storefront xAPI?",
+        "Does Query.orders list orders of an organization the sales rep does not serve?",
+        "Is a rep-authored order in an unserved organization visible to the rep via Query.order?"
+      ],
+      "anchors": [
+        "Query.order",
+        "Query.orders",
+        "Query.organizationOrders",
+        "Query.salesRepCustomerOrder"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
