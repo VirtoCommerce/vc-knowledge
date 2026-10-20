@@ -85,5 +85,13 @@ evidence:
     bodyHash: 3b83d8af725d
     who: Lenajava1
     note: "Re-observed after salesrep 3.1014.0 release: canceled Kilo unchanged Save and re-dated Save (+20 days) -> UpdateSalesRepTask 200, no errors, isActive:false completed:false, 'Task saved', no row action, counts unchanged."
+  - method: observation
+    deployment: local
+    conditions: platform=3.1083.0; module:VirtoCommerce.SalesRep=3.1015.0-src-pr26-7007756; module:VirtoCommerce.TaskManagement=3.1005.0; theme=2.60.0; role=Sales Representative
+    at: 2026-10-20T14:29:16.450Z
+    by: session:70c763de
+    bodyHash: 3b83d8af725d
+    who: yuskithedeveloper
+    note: "Foreign-task half re-observed with a second rep's own token on /graphql/sales-rep: updateSalesRepTask, changeSalesRepTaskStatus and deleteSalesRepTask on another rep's task each return errors[{message:\"Task not found.\"}] with data null, and the owner's task is unchanged (still present, same priority/dueDate/customer). Query.salesRepTask on that id returns null without an error and salesRepTasks lists 0."
 ---
 On /company/tasks a canceled task (isActive:false, completed:false) renders a clickable title that opens the Edit task modal with every field editable and Save enabled. Saving it, unchanged or with a new due date, sends Mutation.updateSalesRepTask and returns HTTP 200 with the task in data and no errors[]; the toast is 'Task saved', the modal closes, the list and counts refetch, and the task stays canceled. A completed task saves the same way. The row offers no action for a canceled task and 'Reopen' for a completed one. updateSalesRepTask answers HTTP 200 with errors[{message:"Task not found."}] and data null only when the task no longer exists or is not the rep's own (SalesRepTaskCommandHandlerBase, one answer for both so a write cannot probe ids); the storefront then shows 'Something went wrong. Please try again later.' and keeps the modal open. Deleting the task while its Edit modal is open reproduces exactly that. Observed 2026-10-12 on theme 2.60.0-pr-2511-81f1 with SalesRep 3.1013.0-pr-18-d367 and TaskManagement 3.1005.0 (vcst); the completed-task save also on vcptcore.
