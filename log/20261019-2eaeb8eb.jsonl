@@ -1,3 +1,3 @@
 {"at":"2026-10-19T16:08:17.919Z","kind":"show","id":"KB-F5901D4D","state":"answer","verify":true,"via":"mcp","call":"toolu_014ERWDoipoCrmMdoiKua61E","topic":"sales rep hub dashboard stale cases","who":"Lenajava1"}
 {"at":"2026-10-19T16:08:19.542Z","kind":"show","id":"KB-4C05CD46","state":"answer","verify":true,"via":"mcp","call":"toolu_01H2WAYzo3bNmB9GZtxuPQRy","topic":"sales rep hub dashboard stale cases","who":"Lenajava1"}
-{"at":"2026-10-20T07:23:16.369Z","kind":"session","session":"2eaeb8eb","tools":85,"turns":1,"touchAt":[8,9],"agents":1,"agentTools":2,"agentTouches":0,"firstAt":"2026-10-19T16:07:43.305Z","lastAt":"2026-10-20T07:15:11.941Z","who":"Lenajava1"}
+{"at":"2026-10-20T07:26:08.813Z","kind":"session","session":"2eaeb8eb","tools":105,"turns":2,"touchAt":[8,9],"agents":3,"agentTools":139,"agentTouches":8,"firstAt":"2026-10-19T16:07:43.305Z","lastAt":"2026-10-20T07:26:08.721Z","who":"Lenajava1"}
