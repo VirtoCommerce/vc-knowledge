@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:38:28.119Z",
-  "count": 1160,
+  "generated": "2026-10-20T18:55:14.821Z",
+  "count": 1161,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15666,6 +15666,29 @@
       "scope": [
         "module=virtocommerce.xcart",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-931CC1C4",
+      "path": "entries/KB-931CC1C4.md",
+      "subject": "A manual index build started while another indexation holds the IndexationJob lock is sealed at once with the error \"Indexation is already in progress.\" and indexes nothing; once the holder finishes, the next build runs",
+      "question": "What happens to a manual index build started (POST /api/search/indexes/index) while another indexation is still running?",
+      "questions": [
+        "Does a second search index build wait, fail, or report success while the first one runs?",
+        "What does the indexation notification show when the IndexationJob lock is already held?",
+        "Is the IndexationJob lock released after an index build completes?"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "POST /api/platform/pushnotifications"
+      ],
+      "scope": [
+        "job=indexalldocumentsjob",
+        "surface=admin-rest"
       ],
       "plane": "experiential",
       "status": "active",
