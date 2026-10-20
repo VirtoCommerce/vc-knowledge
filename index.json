@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:01:07.649Z",
-  "count": 1104,
+  "generated": "2026-10-20T15:07:59.224Z",
+  "count": 1105,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -910,6 +910,28 @@
       "scope": [
         "module=pricing",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0ADAC454",
+      "path": "entries/KB-0ADAC454.md",
+      "subject": "A completed mission card on /account/missions draws a 56px circle-check directly on a 0.55-alpha success scrim over the banner art, so the check's contrast depends on the art",
+      "question": "How does the storefront mark a completed mission card on /account/missions, and does the check icon have its own background?",
+      "questions": [
+        "What overlay does a completed loyalty mission card show on the Missions & challenges page?",
+        "Is the completed-mission check icon on an opaque disc or on a translucent scrim?",
+        "Does the completed mission card overlay carry aria-hidden?"
+      ],
+      "anchors": [
+        "/account/missions",
+        "Query.loyaltyMissionProgress"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
