@@ -24,5 +24,14 @@ evidence:
     at: 2026-10-20T14:15:25.401Z
     by: session:d992339e
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: f6080d062139e9f0
+    conditions: theme=3.1.0-pr-11-d67b-d67b0e0a; browser=edge; role=guest
+    at: 2026-10-20T15:30:22.716Z
+    by: session:d992339e
+    bodyHash: 5016c58e7325
+    who: Lenajava1
+    note: "Edge 1920, 3 iPhones in one tab: 'Differ: 3 of 9 rows' = the 3 rows whose values differ out of 9; the switch fired no request. Note: the Differences tab can show MORE rows than N, because Price per unit and Availability stay visible even when identical, and pinned rows stay visible too (4 rows shown, 5 with an identical row pinned, counter still 3)."
 ---
 Guest, theme 3.1.0-pr-11-d67b-d67b0e0a, 5 Inkjet Printers in one tab (the tab caps at 5: a 6th Add to Compare shows 'Only 5 products from the same category can be compared'). At 1920 and 1280 the corner cell of the single compare table holds the All / Differences group, 'Differ: 10 of 11 rows' and 'Clear category'. All showed 11 rows. Differences showed 10, dropping only Export, which was 'No' for all 5. There was no navigation and no GraphQL request on the switch. Rows with '–' for some products count as differing. Once the header row is stuck under the app header, the compact row keeps only the All/Differences group (no differ line, no Clear category). The header row is a focusable scroller: arrow keys scroll it, the body follows, and the corner cell stays pinned. Below md (700 and 390) one bar above the table holds All/Differences and Clear category, there is no differ line, and the corner cell is empty. Resizing 1280 -> 700 -> 1280 kept exactly one of each control, and the differ line came back at 1280.
