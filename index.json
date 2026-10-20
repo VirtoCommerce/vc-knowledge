@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T12:13:06.065Z",
-  "count": 1059,
+  "generated": "2026-10-20T12:15:18.094Z",
+  "count": 1060,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -12021,6 +12021,30 @@
       ],
       "trust": 1,
       "disputed": 2
+    },
+    {
+      "id": "KB-7C95C0AE",
+      "path": "entries/KB-7C95C0AE.md",
+      "subject": "VcStatWidget does not blank-check delta, description, label or valueSuffix: a whitespace or zero-width delta renders the trend icon with no text",
+      "question": "/story/components-organisms-vcstatwidget--basic VcStatWidget: what renders when delta, description, label or valueSuffix is whitespace-only or a zero-width space?",
+      "questions": [
+        "Is the VcStatWidget delta prop trimmed like value and errorText?",
+        "Why does a VcStatWidget card show a chevron with no delta text?",
+        "Which VcStatWidget string props are blank-safe?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--basic",
+        "/story/components-organisms-vcstatwidget--with-suffix"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "host=storybook",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-7CA9C713",
