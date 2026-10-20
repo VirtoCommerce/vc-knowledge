@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T14:31:16.271Z",
-  "count": 1087,
+  "generated": "2026-10-20T14:36:41.151Z",
+  "count": 1099,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1465,7 +1465,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2713,8 +2713,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 0
+      "trust": 3,
+      "disputed": 1
     },
     {
       "id": "KB-1B18B821",
@@ -4738,6 +4738,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-320E72F4",
+      "path": "entries/KB-320E72F4.md",
+      "subject": "A new call saved with Google Calendar ticked opens Google's event template from dueDate to +30 min; with Apple Calendar ticked it downloads call.ics with the same instants",
+      "question": "What does Add to calendar (Google Calendar / Apple Calendar) produce when a sales rep saves a new call in the storefront?",
+      "questions": [
+        "What is in the call.ics file the sales rep hub downloads?",
+        "Which dates does the Google Calendar link of a scheduled call carry?",
+        "Can an edited call be added to a calendar again?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Mutation.createSalesRepTask"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -6927,6 +6953,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-4A03C0E8",
+      "path": "entries/KB-4A03C0E8.md",
+      "subject": "In the /company/tasks New task popup, picking Type Call adds Customer, Time 9:00 AM and Add to calendar; switching back to another type removes them and saves no customer",
+      "question": "What does choosing Call in the New task Type select on /company/tasks add to the form, and what is saved if the type is switched back?",
+      "questions": [
+        "Which fields appear when a task's type is set to Call?",
+        "Does a task switched back from Call keep a customer link?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Mutation.createSalesRepTask",
+        "Query.salesRepTaskTypes"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4A717175",
       "path": "entries/KB-4A717175.md",
       "subject": "On the organization returns tab a draft cancelled before submit stays private, while a return submitted and then cancelled stays listed as Cancelled and opens read-only",
@@ -7600,6 +7652,35 @@
       "disputed": 0
     },
     {
+      "id": "KB-4E31D091",
+      "path": "entries/KB-4E31D091.md",
+      "subject": "A call linked to an organization reads back customerId and customerName null once the admin removes that organization from the rep, keeps the link stored, and names the customer again after the organization is re-assigned",
+      "question": "What do Query.salesRepTask and Query.salesRepTasks return for a call's customer after the admin unassigns that organization from the sales rep (PUT /api/sales-rep), and after re-assigning it?",
+      "questions": [
+        "Does a sales rep still see the customer on a call after they stop serving that customer?",
+        "Is the call's customer link deleted when the organization is unassigned from the rep?",
+        "What does the Tasks page show for a call whose customer the rep no longer serves?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "organization"
+      ],
+      "anchors": [
+        "Query.salesRepTask",
+        "Query.salesRepTasks",
+        "PUT /api/sales-rep",
+        "/company/tasks"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4E45A8BA",
       "path": "entries/KB-4E45A8BA.md",
       "subject": "admin contact Status picker cannot represent Invited or Locked",
@@ -8252,6 +8333,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-51E1CD74",
+      "path": "entries/KB-51E1CD74.md",
+      "subject": "salesRepCustomers called by a member without sales-rep:access answers HTTP 200 with a generic \"Error trying to resolve field 'salesRepCustomers'.\" (code INVALID_OPERATION) and null, while salesRepTasks in the same request returns an empty list",
+      "question": "What does Query.salesRepCustomers on /graphql/sales-rep return to an organization member who does not have sales-rep:access?",
+      "questions": [
+        "Does salesRepCustomers return an empty list or an error to a non-rep?",
+        "Why does salesRepCustomers answer INVALID_OPERATION for a buyer token?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "graphql-api"
+      ],
+      "anchors": [
+        "Query.salesRepCustomers",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-51F5CFD6",
       "path": "entries/KB-51F5CFD6.md",
       "subject": "A slow Sales Rep remoteEntry.js shows \"Loading page…\", then a slow notice with Reload page at about 8 s; a failed one shows \"Part of the site could not be loaded…\" with Reload page, which recovers. Both are inside an output (role=status) element",
@@ -8871,6 +8977,29 @@
       "disputed": 1
     },
     {
+      "id": "KB-574C0AD2",
+      "path": "entries/KB-574C0AD2.md",
+      "subject": "The Admin Tasks app lists a sales rep's call with type Call and the rep as Assignee and finds it with the Type filter, but shows nothing about the linked customer except optional raw Object Id / Object Type columns",
+      "question": "What does the Admin Tasks app (POST /api/task-management/search) show for a call a sales rep created with createSalesRepTask: type, assignee, Type filter, and the linked customer?",
+      "questions": [
+        "Can an admin see which customer a sales rep call is about in the Tasks app?",
+        "How do I filter the Admin Tasks list to calls?",
+        "Why is the Status column empty in the Admin All tasks grid?",
+        "Is a sales rep task's organizationId the customer or the rep's organization?"
+      ],
+      "anchors": [
+        "POST /api/task-management/search",
+        "GET /api/task-management/{id}"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-574C8604",
       "path": "entries/KB-574C8604.md",
       "subject": "the operator's free-text cancellation reason is printed to the shopper under the order status",
@@ -9006,7 +9135,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-59E4B5FC",
@@ -9855,6 +9984,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-632BAEE0",
+      "path": "entries/KB-632BAEE0.md",
+      "subject": "createSalesRepTask called by an organization member without sales-rep:access is refused with \"Access denied.\" (code Forbidden), even with their own organization as customerId, and writes nothing",
+      "question": "Can an organization member without sales-rep:access create a sales rep task (Mutation.createSalesRepTask) linked to their own organization, and what error is returned?",
+      "questions": [
+        "Can a buyer who is not a sales rep create a call on the sales rep scoped endpoint?",
+        "What does salesRepTasks return to a non-rep customer?",
+        "Is createSalesRepTask gated on sales-rep access or only on authentication?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "graphql-api"
+      ],
+      "anchors": [
+        "Mutation.createSalesRepTask",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6352B756",
       "path": "entries/KB-6352B756.md",
       "subject": "Admin Return list up to Return 3.1005.0-pr-28-62f9: nine columns incl. a sortable Organization column, and the last header Item count is clipped by the grid-options button at 1920 px",
@@ -10036,6 +10191,35 @@
         "KB-A272971F",
         "KB-B4490B0B"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6693247D",
+      "path": "entries/KB-6693247D.md",
+      "subject": "A call created with an explicit UTC dueDate reads back the exact instant on /graphql/sales-rep and /graphql, and /company/tasks shows it at the browser-local time on the browser-local day",
+      "question": "Does createSalesRepTask keep an explicit UTC dueDate exactly (salesRepTask read-back), and how does /company/tasks display the call's day and time?",
+      "questions": [
+        "Does the Tasks page show a call's time in local time or UTC?",
+        "Which GraphQL endpoint does the storefront Tasks page use?",
+        "Does a call due late evening local time stay on its local day?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "graphql-api"
+      ],
+      "anchors": [
+        "Mutation.createSalesRepTask",
+        "Query.salesRepTask",
+        "Query.salesRepTasks",
+        "/company/tasks"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -11108,6 +11292,29 @@
         "feature=orders-date-filter",
         "layout=mobile-combined",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6FD882B7",
+      "path": "entries/KB-6FD882B7.md",
+      "subject": "Admin task search by type matches the canonical type exactly: a task stored as \"CALL\" is found by no type filter, while the storefront treats it as a call",
+      "question": "Does POST /api/task-management/search with type Call find tasks whose type was stored in another letter case?",
+      "questions": [
+        "Is the TaskManagement type filter case-sensitive?",
+        "Why does a sales-rep call created through the API not show under the Call type filter in Admin Tasks?"
+      ],
+      "anchors": [
+        "POST /api/task-management/search",
+        "Mutation.createSalesRepTask"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "role=admin",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12615,6 +12822,31 @@
         "engine=chromium",
         "surface=storefront-ui",
         "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8047A305",
+      "path": "entries/KB-8047A305.md",
+      "subject": "The /company/dashboard Tasks & due dates widget shows the selected day's tasks with the Tasks page sub-line cut to one line with an ellipsis, so a call's customer name is truncated",
+      "question": "What does the /company/dashboard Tasks & due dates widget show for a selected day's call, and can the rep read the call's customer there?",
+      "questions": [
+        "Does the sales rep dashboard Tasks widget show a call's customer?",
+        "Is the dashboard tasks widget sub-line truncated?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16054,6 +16286,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-A16A1DE3",
+      "path": "entries/KB-A16A1DE3.md",
+      "subject": "GET /api/task-management/tasks/types exists and returns the TaskManagement.TaskTypes allowed values as [{name}] in setting order; the Admin Tasks app loads its Type filter and Type select from it",
+      "question": "Does GET /api/task-management/tasks/types exist, what does it return, and where does the Admin Tasks app get its task type list?",
+      "questions": [
+        "Which REST route lists task types for the Tasks app?",
+        "Where does the Admin Tasks Type filter take its options from?",
+        "Is Call offered as a task type in the Admin Tasks app?"
+      ],
+      "anchors": [
+        "GET /api/task-management/tasks/types"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A1B35892",
       "path": "entries/KB-A1B35892.md",
       "subject": "a configured product as a cart line item",
@@ -16531,6 +16785,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-A5219B63",
+      "path": "entries/KB-A5219B63.md",
+      "subject": "createSalesRepTask and updateSalesRepTask refuse a customerId the calling rep does not serve, with the same \"Customer not found.\" for an existing unserved organization and an unknown id, and write nothing",
+      "question": "What do Mutation.createSalesRepTask and Mutation.updateSalesRepTask on /graphql/sales-rep return when customerId is an organization the calling sales rep does not serve, or an id that does not exist?",
+      "questions": [
+        "Can a sales rep link a call to an organization they do not serve?",
+        "What error does createSalesRepTask give for an unknown customerId?",
+        "Does updateSalesRepTask change the customer link when customerId is not served?",
+        "Is an unknown organization id answered differently from an unserved one on the sales rep task mutations?"
+      ],
+      "anchors": [
+        "Mutation.createSalesRepTask",
+        "Mutation.updateSalesRepTask",
+        "Query.salesRepTask"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A588334E",
       "path": "entries/KB-A588334E.md",
       "subject": "Admin SPA Add new return Line items blade: a row click only highlights the line; only its 13 px checkbox selects it and enables Make return",
@@ -16859,8 +17137,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
-      "disputed": 0
+      "trust": 2,
+      "disputed": 1
     },
     {
       "id": "KB-A91E80EC",
@@ -22365,6 +22643,32 @@
       ],
       "scope": [
         "surface=storefront"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E251C26A",
+      "path": "entries/KB-E251C26A.md",
+      "subject": "When the admin removes the organization a signed-in sales rep currently has selected, reloading /company/tasks lands on /403 Access denied until the rep signs out and in again",
+      "question": "What happens on the storefront /company/tasks when an admin removes (PUT /api/sales-rep) the organization that is the sales rep's current organization in an open session?",
+      "questions": [
+        "Why does a sales rep get a 403 page after the admin unassigns an organization?",
+        "How does a rep recover when their selected organization is removed?",
+        "Does the storefront switch a rep to another organization when the current one is unassigned?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "organization"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "PUT /api/sales-rep"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
