@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:55:14.821Z",
-  "count": 1161,
+  "generated": "2026-10-20T18:58:49.529Z",
+  "count": 1163,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -893,6 +893,30 @@
         "/account/returns"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-09E9A758",
+      "path": "entries/KB-09E9A758.md",
+      "subject": "VcCheckbox indicators and VcInput field boundaries on core storefront pages are neutral-400 #a3a3a3, 2.52:1 on white, outside the sales-rep plugin",
+      "question": "What contrast do the storefront UI-kit checkbox and text-field boundaries have on core pages such as /sign-in and the /account/orders Filters, outside any plugin?",
+      "questions": [
+        "Is the 2.52:1 checkbox border specific to the sales rep call popup or storefront-wide?",
+        "What colour is the Remember me checkbox border on /sign-in?",
+        "Do the Email and Password inputs on /sign-in meet WCAG 1.4.11 non-text contrast?",
+        "What border do the Created date, Start date and End date fields in the /account/orders Filters have?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "/account/orders"
+      ],
+      "scope": [
+        "component=ui-kit",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -16023,6 +16047,30 @@
       "scope": [
         "surface=rest-api",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-963101C9",
+      "path": "entries/KB-963101C9.md",
+      "subject": "On the storefront, a signed-in corporate user whose token names an organization they can no longer access lands on /403 on every full page load, because the header Ship to selector requests that organization's addresses and the global error handler routes any Forbidden to /403; SPA navigation is unaffected",
+      "question": "Why does every full page load go to /403 Access denied for a storefront user whose current organization is no longer accessible, and how long does it last?",
+      "questions": [
+        "Which request sends the storefront to /403 after the user's current organization membership is removed?",
+        "Why do links inside the app work but a reload of the same page shows 403 Access denied?",
+        "Does the storefront recover on its own when the current organization becomes inaccessible mid-session?",
+        "What does GetOrganizationAddresses Forbidden do to the storefront page?"
+      ],
+      "anchors": [
+        "/403",
+        "Query.organization",
+        "Query.pageContext"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
