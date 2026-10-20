@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T13:58:12.437Z",
-  "count": 1065,
+  "generated": "2026-10-20T14:00:33.938Z",
+  "count": 1072,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -254,6 +254,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-03B5D945",
+      "path": "entries/KB-03B5D945.md",
+      "subject": "On the vc-frontend-next 3.1 build the Sales Rep hub rail is Dashboard, My customers (badge = served-org row count) and Tasks, and /company/tasks serves the plugin's Tasks page with a due-date calendar",
+      "question": "Which entries does the Sales Rep hub rail show to a plain sales rep, and what does /company/tasks render, when the hub comes from the SalesRep plugin on vc-frontend-next?",
+      "questions": [
+        "Is /company/tasks a live route on the deployed storefront or only in a prerelease?",
+        "Does the My customers badge in the Sales Rep hub equal the number of rows on /company/my-customers?"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "/company/my-customers",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "delivery=module-federation-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3837,7 +3861,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4098,7 +4122,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5668,6 +5692,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-3F3D3C6B",
+      "path": "entries/KB-3F3D3C6B.md",
+      "subject": "salesRepCustomerOrders on /graphql/sales-rep answers a non-rep buyer token with HTTP 200, totalCount 0 and no errors[] — an empty result, not a refusal",
+      "question": "What does Query.salesRepCustomerOrders on /graphql/sales-rep return to an authenticated buyer who holds no sales-rep:access?",
+      "questions": [
+        "Does the scoped sales-rep GraphQL schema refuse a non-rep token on salesRepCustomerOrders?",
+        "Is salesRepCustomerOrders authorization a Forbidden error or data filtering for users without sales-rep:access?"
+      ],
+      "anchors": [
+        "Query.salesRepCustomerOrders",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "actor=buyer-without-sales-rep-access",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3F58D8D5",
       "path": "entries/KB-3F58D8D5.md",
       "subject": "Shared Component create resolves storeId case-insensitively but stores it as sent — \"b2b-store\" is accepted (201) and saved lowercase, yet stays reachable from the canonical store",
@@ -6326,7 +6372,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0,
       "contested": 1
     },
@@ -9938,6 +9984,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-675F86C2",
+      "path": "entries/KB-675F86C2.md",
+      "subject": "On the Next storefront every auth change (password sign-in, Logout, sign-out or sign-in in another tab) is a full document reload, so plugin contributions gated on \"authenticated\" are re-evaluated and never go stale",
+      "question": "Does signing in or out on the module federation storefront happen without a page reload, leaving Sales Rep hub links from before the auth change?",
+      "questions": [
+        "Is the when: authenticated contribution snapshot stale after SPA sign-in?",
+        "Does logout in one tab sign out the other tabs of the storefront?",
+        "Does the storefront reload the page after sign-in from /sign-in?returnUrl"
+      ],
+      "anchors": [
+        "/sign-in",
+        "/company/tasks",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=authentication",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-67A26854",
       "path": "entries/KB-67A26854.md",
       "subject": "share dialog pre-fills Message and recipients on reopen; counter does not block over-cap text",
@@ -11442,7 +11512,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13201,7 +13271,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -13309,6 +13379,27 @@
       "scope": [
         "surface=admin-spa",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-893FD86D",
+      "path": "entries/KB-893FD86D.md",
+      "subject": "In configuration edit mode (?lineItemId) with unsaved changes, a Configuration checklist \"Review\" link scrolls without the \"Save changes\" dialog, while the \"Create new configuration\" link raises it",
+      "question": "Does clicking a Configuration checklist link while editing a configured cart item trigger the Save changes guard?",
+      "questions": [
+        "Does the unsaved configuration guard fire on in-page checklist anchors?",
+        "When does the Save changes dialog appear on a configurable PDP opened from the cart?"
+      ],
+      "anchors": [
+        "/products-with-options/cfg-parents/agent-test-config-gift-box"
+      ],
+      "scope": [
+        "feature=product-configuration-checklist",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -15392,7 +15483,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -16962,7 +17053,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -20019,6 +20110,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-CCFCAEEB",
+      "path": "entries/KB-CCFCAEEB.md",
+      "subject": "On a category page the infinite-scroll view_item_list for page 2 repeats every page-1 item, and a filter that empties the grid pushes a view_item_list with items []",
+      "question": "Which items does a category page's view_item_list carry after infinite scroll loads page 2, and what is pushed when a search-within-category returns nothing?",
+      "questions": [
+        "Does category_<slug>_page_2 view_item_list include page 1 products again?",
+        "Is view_item_list sent with an empty items array on a category with no results?",
+        "Is a second view_item_list sent after Reset filters restores the same products?"
+      ],
+      "anchors": [
+        "/products-with-options/cfg-parents",
+        "window.dataLayer"
+      ],
+      "scope": [
+        "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-CD451F5C",
       "path": "entries/KB-CD451F5C.md",
       "subject": "the product configuration POST silently saves an empty inactive configuration for a wrong sections field",
@@ -21310,6 +21424,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-DAAD23E0",
+      "path": "entries/KB-DAAD23E0.md",
+      "subject": "In the PDP Configuration checklist a filled optional Text section reads \"{name} (completed)\" with no value, a Product section reads \"{name} — {product name} (completed)\", and whitespace-only text in an optional Text section counts as completed and is sent to the cart as-is",
+      "question": "What does the Configuration checklist row show for a filled optional Text section, and how is whitespace-only text in an optional Text section treated?",
+      "questions": [
+        "Does the configuration checklist show the entered text value for a text section?",
+        "Is an optional text section with only spaces marked completed in the configuration checklist?",
+        "What customText does addItem send for an optional text section filled with spaces?"
+      ],
+      "anchors": [
+        "/products-with-options/cfg-parents/agent-test-config-gift-box",
+        "Mutation.addItem",
+        "/cart"
+      ],
+      "scope": [
+        "feature=product-configuration-checklist",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DAD0D552",
       "path": "entries/KB-DAD0D552.md",
       "subject": "UCP refuses over-stock cart and checkout calls with isError, a stable inventory code and structured quantities",
@@ -21733,6 +21871,28 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DF9FBE2F",
+      "path": "entries/KB-DF9FBE2F.md",
+      "subject": "A signed-in personal account with no organization deep-linking /company/dashboard lands on /account/dashboard and never sees Sales Rep hub content",
+      "question": "What happens when a signed-in user with no organization opens /company/dashboard directly, given the rep routes clear requiresOrganization?",
+      "questions": [
+        "Can a personal (no-org) storefront user reach the Sales Rep hub dashboard by URL?",
+        "Does the federated Sales Rep plugin let a user without an organization see /company/dashboard?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "actor=personal-account-no-organization",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",

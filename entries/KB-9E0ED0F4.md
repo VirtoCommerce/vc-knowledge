@@ -56,5 +56,14 @@ evidence:
     note: "Return 3.1005.0-pr-28-fb4f, 2026-10-12: a non-holder employee (own org, full list and keyword) and a global-role holder asking another organization and a zero GUID all got errors[] Forbidden \"The organization's returns are not available to this contact.\" with data null."
     build: 0bb1aea0269f4c1b
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: f6080d062139e9f0
+    conditions: theme=3.1.0-pr-11-d67b; module:VirtoCommerce.Return=3.1005.0
+    at: 2026-10-20T13:58:12.532Z
+    by: session:d992339e
+    bodyHash: db9306447dbc
+    who: Lenajava1
+    note: "Return 3.1005.0 (released): non-holder org employee's own token -> errors[] Forbidden 'The organization's returns are not available to this contact.', data.organizationReturns null; a global-role holder in the same org got totalCount 59. Storefront /account/returns for the non-holder shows no organization tab and sends no GetOrganizationReturns."
 ---
 On Return 3.1005.0-pr-28-62f9, organizationReturns(storeId, organizationId) answered for a member of that organization whose roles include xapi:my_organization:return:view, whether granted through a global role, the membership role or a role on the organization itself. A member without it (purchasing agent, employee, an Organization manager holding the other xapi:my_organization grants), a holder from another organization, an administrator who is not a member, an empty or unknown organizationId all got errors[] Forbidden "The organization's returns are not available to this contact." with data null, never an empty list; anonymous got Unauthorized. The requested organizationId decides, whatever organization the token is scoped to. A locked, Invited or Rejected membership is refused; a locked account gets UserLocked on every return operation. On this deployment no role held the permission until an admin granted it.
