@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T00:13:04.444Z",
-  "count": 1044,
+  "generated": "2026-10-20T00:31:04.207Z",
+  "count": 1045,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -46,6 +46,30 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0047E1FA",
+      "path": "entries/KB-0047E1FA.md",
+      "subject": "Sales-rep library documents uploaded in August 2026 return 403 on GET /api/files/{id} for a :read rep while documents uploaded in October download 200; the storefront then navigates to /403",
+      "question": "Can a sales rep with sales-rep-documents:read download every document listed on /company/documents?",
+      "questions": [
+        "Why does Download on an older document in the sales rep Document library open the 403 page?",
+        "Do older sales-rep shared documents still download after the SalesRep module upgrade?"
+      ],
+      "anchors": [
+        "/company/documents",
+        "GET /api/files/{id}",
+        "Query.salesRepDocuments"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16986,7 +17010,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
