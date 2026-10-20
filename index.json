@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T05:41:18.299Z",
-  "count": 1048,
+  "generated": "2026-10-20T05:46:50.971Z",
+  "count": 1049,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -8083,6 +8083,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5351A26B",
+      "path": "entries/KB-5351A26B.md",
+      "subject": "salesRepCustomerCartStatistics period(filter:\"active-carts\") counts only carts NAMED \"default\"; a rep's named cart is counted by the unfiltered period but never by active-carts",
+      "question": "Which carts does salesRepCustomerCartStatistics period(filter:\"active-carts\") count — does a sales rep's named (non-default) cart show on the Active carts card?",
+      "questions": [
+        "Why does the Sales Rep dashboard Active carts card read 0 when the rep has a non-empty named cart in that organization?",
+        "Is the active-carts cart filter of the sales-rep statistics an include-list by cart name?",
+        "How do I seed a cart that the sales rep dashboard Active carts card will count?",
+        "Why does salesRepCustomerCartStatistics return different numbers with and without filter active-carts?"
+      ],
+      "anchors": [
+        "Query.salesRepCustomerCartStatistics",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
