@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T19:05:36.640Z",
-  "count": 1168,
+  "generated": "2026-10-20T19:10:44.062Z",
+  "count": 1169,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1298,6 +1298,29 @@
       "resolved": 1
     },
     {
+      "id": "KB-0C40D235",
+      "path": "entries/KB-0C40D235.md",
+      "subject": "The storefront Notifications popup opened from the header bell has two unnamed buttons: the 'Show unread only' switch track and the options (kebab) menu trigger",
+      "question": "Do the controls inside the storefront Notifications popup (opened from the header bell) have accessible names?",
+      "questions": [
+        "Does the 'Show unread only' switch in the notifications popup have an accessible name?",
+        "Is the three-dots options button in the push messages popup named for screen readers?",
+        "What does axe report inside the open notifications popup on the storefront?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "Query.pushMessages"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0C6FA664",
       "path": "entries/KB-0C6FA664.md",
       "subject": "On the PDP the 'SKU #' line under the title is light on dark in dark mode, 11.2:1 contrast, and near-black in light mode",
@@ -2139,7 +2162,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -7767,7 +7790,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
