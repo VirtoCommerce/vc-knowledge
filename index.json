@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T14:55:07.774Z",
-  "count": 1103,
+  "generated": "2026-10-20T15:00:13.064Z",
+  "count": 1104,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2315,7 +2315,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2520,6 +2520,23 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-18C5F129",
+      "path": "entries/KB-18C5F129.md",
+      "subject": "On /compare the column 'Add to cart' button is disabled for a product whose displayed stock (3) is below its Min. order qty (7)",
+      "question": "Why is the Add to cart button in a /compare column disabled for a product that shows In stock?",
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "feature=product-compare",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
