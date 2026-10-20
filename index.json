@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T16:01:41.497Z",
-  "count": 1137,
+  "generated": "2026-10-20T16:04:00.386Z",
+  "count": 1138,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13620,6 +13620,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-84A3C38E",
+      "path": "entries/KB-84A3C38E.md",
+      "subject": "On the draft quote edit page, an invalid line quantity (0) marks the quantity input aria-invalid=\"true\" and links it via aria-describedby to the element holding the validation message",
+      "question": "Is the quantity validation message on /account/quotes/{id}/edit programmatically associated with the input (aria-invalid, aria-describedby)?",
+      "questions": [
+        "Does the quote edit quantity stepper expose its error to screen readers?",
+        "What aria attributes does the quote line quantity input get when the quantity is 0?",
+        "Is 'Value must be a positive number' the accessible description of the quote quantity field?"
+      ],
+      "anchors": [
+        "/account/quotes/{id}/edit"
+      ],
+      "scope": [
+        "role=signed-in customer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
