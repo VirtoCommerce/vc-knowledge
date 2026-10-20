@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:23:25.935Z",
-  "count": 1116,
+  "generated": "2026-10-20T15:31:19.536Z",
+  "count": 1117,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1302,6 +1302,29 @@
       ],
       "scope": [
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0D6455F6",
+      "path": "entries/KB-0D6455F6.md",
+      "subject": "On /compare the Differences tab always keeps the Price per unit and Availability rows and every pinned row, even when their values are identical, while 'Differ: N of M rows' counts only rows whose values differ, so the tab can show more rows than N",
+      "question": "Why does the Differences tab on /compare show more rows than the 'Differ: N of M rows' line says?",
+      "questions": [
+        "Is the Availability row always shown under Differences on /compare?",
+        "Does the compare differ counter include pinned rows?",
+        "Which rows does the Differences filter on /compare keep when values are identical?",
+        "Does 'Differ: N of M rows' equal the number of rows in the Differences tab?"
+      ],
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "role=guest",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
