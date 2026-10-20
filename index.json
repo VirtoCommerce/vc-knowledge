@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:39:57.710Z",
-  "count": 1121,
+  "generated": "2026-10-20T15:43:48.983Z",
+  "count": 1124,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4539,6 +4539,31 @@
       "trust": 12,
       "disputed": 0,
       "resolved": 4
+    },
+    {
+      "id": "KB-2FECA0AC",
+      "path": "entries/KB-2FECA0AC.md",
+      "subject": "/company/calendar renders the host 404 'Page not found' page for a signed-in sales rep with no redirect to /company/tasks; the hub rail Tasks item and the dashboard 'All tasks' link both point at /company/tasks",
+      "question": "What does a signed-in sales rep get at the old /company/calendar route after the Calendar-to-Tasks rename, and where do the rail Tasks item and the dashboard All tasks link point?",
+      "questions": [
+        "Does /company/calendar redirect to /company/tasks?",
+        "Is there any leftover Calendar link in the Sales Rep hub after the Tasks rename?",
+        "What href does the dashboard 'All tasks' link on /company/dashboard have?",
+        "Is /company/calendar an alias of the Tasks page?"
+      ],
+      "anchors": [
+        "/company/calendar",
+        "/company/tasks",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-30153EA8",
@@ -11594,6 +11619,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-7052E6CD",
+      "path": "entries/KB-7052E6CD.md",
+      "subject": "Query.salesRepTaskFilterRules returns no rules for a sales rep who serves no organizations, so /company/tasks shows only the Today and All chips; a rep serving organizations gets upcoming, overdue and completed even with zero tasks",
+      "question": "What does Query.salesRepTaskFilterRules return for a sales rep with no served organizations versus one who serves organizations, and how does that change the /company/tasks chips?",
+      "questions": [
+        "Why does /company/tasks show only the Today and All chips for some sales reps?",
+        "Do the Upcoming, Overdue and Completed chips on /company/tasks depend on how many tasks the rep has?",
+        "Which GraphQL query decides the status chips on the Sales Rep Tasks page?"
+      ],
+      "anchors": [
+        "Query.salesRepTaskFilterRules",
+        "/company/tasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7056B9DA",
       "path": "entries/KB-7056B9DA.md",
       "subject": "POST /api/platform/settings silently ignores a null value, so a stored module setting cannot be returned to unset through the REST API",
@@ -17515,7 +17564,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-A91E80EC",
@@ -19986,6 +20035,30 @@
       ],
       "scope": [
         "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C1A1B6D9",
+      "path": "entries/KB-C1A1B6D9.md",
+      "subject": "The sales-rep 'Send a message' modal from the customer profile Send email quick action is a centred 564 px panel at 1920 px and full-screen at 768 px and 375 px, with Cancel and Send pinned to the bottom",
+      "question": "How does the Send a message modal opened from the Send email quick action on /company/my-customers/{id} render at desktop 1920, tablet 768 and mobile 375 px widths?",
+      "questions": [
+        "Is the sales rep Send a message dialog full-screen on mobile?",
+        "At 768 px is the customer communication modal on the customer profile a panel or full screen?",
+        "Where are the Cancel and Send buttons of the Send a message modal on a phone-width viewport?",
+        "Does the Send a message modal clip or overflow horizontally at tablet or mobile width?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
