@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:58:49.529Z",
-  "count": 1163,
+  "generated": "2026-10-20T18:59:35.883Z",
+  "count": 1164,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3109,6 +3109,30 @@
         "module=subscription",
         "surface=background-jobs",
         "version=3.1006.0-pr-128"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1E8C1285",
+      "path": "entries/KB-1E8C1285.md",
+      "subject": "Under the Coffee and Red presets the VcCheckbox and VcInput boundaries still measure 2.52:1 and VcTextarea 1.48:1 on white, and axe reports none of it",
+      "question": "Do the UI-kit checkbox, input and textarea boundaries meet WCAG 1.4.11 3:1 on the accessibility-gated Coffee and Red presets, measured rather than derived?",
+      "questions": [
+        "What colour is the VcCheckbox border in the Coffee preset?",
+        "Does the Red theme fix the 2.52:1 checkbox and input border contrast?",
+        "Why does the Storybook a11y (axe) check pass VcCheckbox although its border is below 3:1?",
+        "Does axe-core test WCAG 1.4.11 non-text contrast for component borders?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "component=ui-kit",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
