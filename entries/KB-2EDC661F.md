@@ -34,5 +34,14 @@ evidence:
     by: session:624d35a1
     who: kutasinaelena
     note: "XCart 3.1039.0: with a parallel session creating named carts on the same user, Query.cart (no cartName, cartType null/empty) returned the freshly created named cart (empty) instead of the 'default' cart; /cart on the storefront showed 'Your cart is empty' while the default cart still held items added from a list."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: a065342a82b3d4c1
+    conditions: store=B2B-store; theme=2.61.0 (qa1 release) and local PR build fe-f23723b99db0
+    at: 2026-10-20T12:13:05.468Z
+    by: session:9bc86b2b
+    bodyHash: d8ffd94c6831
+    who: Aleksandra-Mitricheva
+    note: "B2B-store, user with 14 leftover named carts + 'default': Query.cart (no cartName) kept returning the newest-created named cart even right after addCoupon/addItem had modified the 'default' cart, so 'most recently touched' may really be 'most recently created'. Storefront /cart rendered that named cart while its RemoveCartItems and add-coupon mutations (sent without cartId) acted on the 'default' cart: the remove-line X was a silent no-op (HTTP 200, line stayed) and the coupon landed on the other cart."
 ---
 Query.cart with no cartName returns the most-recently-touched cart, NOT the one named 'default'.
