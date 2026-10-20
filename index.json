@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T11:12:10.035Z",
-  "count": 1055,
+  "generated": "2026-10-20T11:36:10.294Z",
+  "count": 1058,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4868,6 +4868,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-359D6046",
+      "path": "entries/KB-359D6046.md",
+      "subject": "The admin Sales Reps grid range label on page 2 is wrong (shows 14–18 of 25 for rows 21–25)",
+      "question": "Does the Sales Reps grid pager range label in the admin Sales Rep app show the correct row range on page 2?",
+      "anchors": [
+        "/apps/vc-sales-rep",
+        "POST /api/sales-rep/search"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10671,6 +10689,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-6F18B42D",
+      "path": "entries/KB-6F18B42D.md",
+      "subject": "sales-rep-documents upload refusals (bad extension, oversize) come back as HTTP 200 with succeeded:false; a 0-byte file is accepted at upload and refused only at registration",
+      "question": "What does POST /api/files/sales-rep-documents return for a disallowed extension, an oversize file or a 0-byte file?",
+      "questions": [
+        "Does the sales-rep document upload return 400 for an .exe?",
+        "Is a zero-byte sales-rep document rejected?",
+        "What status does an over-50MB sales-rep document upload return?"
+      ],
+      "anchors": [
+        "POST /api/files/sales-rep-documents",
+        "POST /api/sales-rep/documents"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=admin",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6F5067F2",
       "path": "entries/KB-6F5067F2.md",
       "subject": "A full-body PUT /api/stores can return the settings array in a different order, so compare store settings by name, not by index",
@@ -13608,6 +13650,25 @@
       "supersededBy": [
         "KB-6161BC89"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8E87911F",
+      "path": "entries/KB-8E87911F.md",
+      "subject": "An orphaned sales-rep-documents blob (uploaded, never registered as a document) is refused to anonymous callers with 403",
+      "question": "Can an anonymous caller read GET /api/files/{id} for a file uploaded to the sales-rep-documents scope that was never registered as a library document?",
+      "anchors": [
+        "POST /api/files/sales-rep-documents",
+        "GET /api/files/{id}"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=anonymous",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -19214,7 +19275,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
