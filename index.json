@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T10:45:15.860Z",
-  "count": 1053,
+  "generated": "2026-10-20T11:06:53.861Z",
+  "count": 1054,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9228,6 +9228,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5F68A1D3",
+      "path": "entries/KB-5F68A1D3.md",
+      "subject": "A refresh token minted through the storefront's /connect/token is accepted only on the storefront host; POSTed to the platform backend host it fails 400 invalid_grant \"The issuer associated to the specified token is not valid.\" with no errors[] code",
+      "question": "Can a refresh token obtained from the storefront sign-in be redeemed on the platform backend /connect/token?",
+      "questions": [
+        "Why does a refresh_token grant on the backend return 'The issuer associated to the specified token is not valid'?",
+        "Which host must a refresh_token org switch be sent to when the token came from the storefront sign-in?",
+        "Is a code-less invalid_grant on refresh_token always a revoked token?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=oauth-refresh-token",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
