@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:32:42.677Z",
-  "count": 1157,
+  "generated": "2026-10-20T18:38:28.119Z",
+  "count": 1160,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13218,6 +13218,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-7CDFBB8B",
+      "path": "entries/KB-7CDFBB8B.md",
+      "subject": "Desktop /account/orders Filters popover: the Created date preset list opens on keyboard focus and stays open after Tab, hiding the focused Start date field and its calendar button",
+      "question": "On /account/orders at desktop width, does the Created date preset dropdown in the Filters popover close when keyboard focus moves on to the date fields?",
+      "questions": [
+        "Is the Start date field visible when tabbing through the desktop orders Filters popover?",
+        "Does the orders filter date preset select stay expanded after Tab on desktop?",
+        "Which orders filter control hides the Start date input for keyboard users?"
+      ],
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "feature=orders-date-filter",
+        "layout=desktop-split",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7CE03201",
       "path": "entries/KB-7CE03201.md",
       "subject": "On upstream vc-frontend 2.59.0-pr-2458 a zero-hit /search?q= shifts layout on load (signed in: CLS 0.644 at 1920px, 0.810 at 375px) — the same skeleton/sidebar-to-empty-view collapse as vc-frontend-next",
@@ -22143,6 +22166,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-D179558F",
+      "path": "entries/KB-D179558F.md",
+      "subject": "On /account/profile the Default language select opens its list on Tab focus, the next Tab moves focus into the options and further Tabs cycle among them, so Default currency is not reached until Escape",
+      "question": "On /account/profile, can a keyboard user Tab from the Default language select to Default currency, or does Tab stay inside the language options?",
+      "questions": [
+        "Does Tab get stuck in the Default language dropdown on the profile page?",
+        "Where does focus go after tabbing onto the profile page language select?",
+        "How does a keyboard user leave an open select list on the storefront profile page?"
+      ],
+      "anchors": [
+        "/account/profile"
+      ],
+      "scope": [
+        "feature=profile-preferences",
+        "layout=desktop",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D1D30720",
       "path": "entries/KB-D1D30720.md",
       "subject": "locking an organization membership revokes tokens but a live session in another organization survives",
@@ -24003,6 +24049,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E6118308",
+      "path": "entries/KB-E6118308.md",
+      "subject": "The Share list 'Specific customers' picker renders its option list inline (not teleported), so Tab from the picker moves into its options and then cycles among them until Escape",
+      "question": "In the Share list dialog on /account/lists, can a sales rep Tab past the Specific customers picker to the Message field, or does Tab stay inside the picker's options?",
+      "questions": [
+        "Why does Tab cycle through the customers in the Share list picker instead of reaching Message?",
+        "Is the Share list customers picker list teleported like the task popup selects?"
+      ],
+      "anchors": [
+        "/account/lists",
+        "/account/lists/{id}"
+      ],
+      "scope": [
+        "feature=list-sharing",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
