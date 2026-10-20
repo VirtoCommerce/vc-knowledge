@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:49:41.307Z",
-  "count": 1130,
+  "generated": "2026-10-20T15:52:37.202Z",
+  "count": 1132,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10879,6 +10879,30 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-690403F4",
+      "path": "entries/KB-690403F4.md",
+      "subject": "On a configurable PDP the Configuration checklist mounts only after GetProductConfigurations returns, with no reserved space, and together with the configuration sections pushes the page footer and the Price and delivery widget footer; CLS on the 7-section Vintage Wedding cake is 0.1015 at 1920x1080 and 0.0996 at 1280x900",
+      "question": "Does a configurable product page shift layout on full load, and which elements move when the product configuration loads?",
+      "questions": [
+        "What is the CLS of a configurable PDP on theme 3.1.0-pr-11?",
+        "Does the Configuration checklist in Price and delivery cause a layout shift?",
+        "Why does the footer jump on a configurable product page?",
+        "Is CLS on the configurable PDP over 0.1?"
+      ],
+      "anchors": [
+        "/product/{id}",
+        "Query.productConfiguration"
+      ],
+      "scope": [
+        "role=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-6A20B0AF",
@@ -25383,6 +25407,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F4FD0938",
+      "path": "entries/KB-F4FD0938.md",
+      "subject": "The unnamed option radios of configurable PDP Product sections come from option-product.vue passing no label to VcRadioButton, in Next dev and upstream alike, not from the 2.60.0 merge",
+      "question": "Why do the option radios in a configurable product's Product-type sections have no accessible name, and did the vc-frontend 2.60.0 merge into vc-frontend-next introduce it?",
+      "anchors": [
+        "/product/{id}",
+        "client-app/shared/catalog/components/configuration/option-product.vue"
+      ],
+      "scope": [
+        "feature=product-configuration",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
