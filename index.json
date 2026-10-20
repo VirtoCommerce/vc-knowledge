@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:24:35.031Z",
-  "count": 1154,
+  "generated": "2026-10-20T18:32:42.677Z",
+  "count": 1157,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2907,7 +2907,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 1
+      "disputed": 2
     },
     {
       "id": "KB-1B18B821",
@@ -3382,6 +3382,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-21DE5448",
+      "path": "entries/KB-21DE5448.md",
+      "subject": "After the user's membership in their current organization is deleted, Query.me / pageContext still return that organization as contact.organizationId and contact.organization for the life of the access token, while contact.organizations excludes it and organization(id) for it answers Forbidden",
+      "question": "What do Query.me and pageContext return for contact.organizationId after the user's membership in their current organization was deleted mid-session?",
+      "questions": [
+        "Does xAPI validate the token's organization_id claim before returning it as the current organization?",
+        "Why does the storefront header keep showing an organization the user was removed from?",
+        "Can contact.organizationId name an organization that is not in contact.organizations?",
+        "Why is organization(id) Forbidden for the organization me.contact.organizationId returns?"
+      ],
+      "anchors": [
+        "Query.me",
+        "Query.pageContext",
+        "Query.organization",
+        "PUT /api/sales-rep"
+      ],
+      "scope": [
+        "module=profile-experience-api",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -17926,6 +17952,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-A85BEDD3",
+      "path": "entries/KB-A85BEDD3.md",
+      "subject": "In the Schedule call popup, typing a filter into the Customer combobox writes 'N results available' into that VcSelect's sr-only aria-live polite span, and clears it when the list closes",
+      "question": "Does the Customer picker (VcSelect autocomplete) in the Schedule call popup on /company/my-customers/{id} announce how many customers match the typed filter?",
+      "questions": [
+        "Does VcSelect autocomplete announce the number of filtered results to screen readers?",
+        "Which live regions exist inside the Schedule call dialog?",
+        "Is the customer search result count in the Schedule call popup announced?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Query.salesRepCustomers"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A871AA8D",
       "path": "entries/KB-A871AA8D.md",
       "subject": "changeWishlist legacy sharedWithId input becomes a one-element target set",
@@ -20936,6 +20986,29 @@
       "resolved": 1
     },
     {
+      "id": "KB-C55B3252",
+      "path": "entries/KB-C55B3252.md",
+      "subject": "On /account/profile an emptied required First name shows 'This field is required' in a plain div linked by aria-describedby, outside any aria-live region, so the error is not announced when it appears",
+      "question": "Is the required-field validation error on /account/profile (First name, Last name) announced to screen readers when it appears, or only exposed through aria-invalid and aria-describedby?",
+      "questions": [
+        "Does the storefront announce field validation errors (VcInputDetails) through a live region?",
+        "Profile page First name required error: role=alert or aria-live?",
+        "Where does focus go when a required field on /account/profile is emptied and left?",
+        "Is the VcInput error message programmatically associated with the input on /account/profile?"
+      ],
+      "anchors": [
+        "/account/profile"
+      ],
+      "scope": [
+        "role=signed-in customer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C55BBF2E",
       "path": "entries/KB-C55BBF2E.md",
       "subject": "a sale price is carried as the list subtotal plus a line discount, not a reduced subtotal",
@@ -22095,7 +22168,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
