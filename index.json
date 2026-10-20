@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:38:09.312Z",
+  "generated": "2026-10-20T15:39:03.006Z",
   "count": 1120,
   "entries": [
     {
@@ -8388,7 +8388,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-51459ABB",
