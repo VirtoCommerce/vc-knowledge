@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T16:35:01.378Z",
-  "count": 1140,
+  "generated": "2026-10-20T16:35:37.457Z",
+  "count": 1141,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5600,6 +5600,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3AD6DEAA",
+      "path": "entries/KB-3AD6DEAA.md",
+      "subject": "A locked organization membership takes that organization out of a sales rep's served set",
+      "question": "locked organization membership (OrganizationMembership isLocked) for a sales representative: does the locked organization still count as served for task customer links and My customers?",
+      "questions": [
+        "can a sales rep link a call to a customer whose membership is locked?",
+        "does salesRepCustomers return organizations whose sales rep membership is locked?",
+        "what does a call linked to a customer show after the rep's membership in that customer is locked?"
+      ],
+      "anchors": [
+        "Mutation.createSalesRepTask",
+        "Mutation.updateSalesRepTask",
+        "Query.salesRepCustomers",
+        "VirtoCommerce.SalesRep.Data.Services.SalesRepOrganizationAccessService"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
