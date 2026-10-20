@@ -40,5 +40,13 @@ evidence:
     bodyHash: 19e47acec486
     who: yuskithedeveloper
     note: "2026-10-20: on /company/tasks with Oct 23 picked in the page calendar, the call row reads 'Due Oct 23, 2026, 3:45 PM · Contoso Ltd. · Call'. The sub-line is display block with white-space normal and no line clamp. At 1440 px it wraps onto 2 lines (176 px wide) and is fully visible; at 375 px it fits on 1 line (245 px). The dashboard widget cuts the same string at both widths."
+  - method: observation
+    deployment: local
+    conditions: platform=3.1083.0; module:VirtoCommerce.SalesRep=3.1015.0-src-pr26-7007756; theme=2.60.0; role=Sales Representative; state:browser-timezone=UTC-6
+    at: 2026-10-20T18:04:32.725Z
+    by: session:70c763de
+    bodyHash: 19e47acec486
+    who: yuskithedeveloper
+    note: "Edge, All tab: a task whose type was stored as \"CALL\" (case variant written through the API) gets the call line too, with the type printed verbatim: 'Due Nov 2, 2026, 11:15 AM · Contoso Ltd. · CALL' (dueDate 17:15Z, browser UTC-6); a task typed \"AGENT-TEST unlisted\" reads 'Due Nov 2, 2026 · AGENT-TEST unlisted' (no time, no customer). salesRepTasks returned type \"CALL\" and customerName for it."
 ---
 Theme 2.60.0 with the SalesRep plugin built from vc-module-sales-rep PR #26 (unreleased), browser zone UTC-6, en-US, 1920 px. Under a call's title the Tasks page row shows 'Due Oct 23, 2026, 2:30 PM · Contoso Ltd. · Call': the time is the stored UTC dueDate in the browser's zone (h:mm AM/PM) and the customer is the API's customerName. A call saved without a customer shows 'Due Oct 26, 2026, 10:15 AM · Customer not assigned · Call'; a non-call task shows 'Due Oct 24, 2026 · Other' with no time and no customer. The line wraps inside the table cell, so it stays fully readable. Picking a calendar day lists the tasks whose dueDate falls between that day's local midnight and +24h-1ms (Query.salesRepTasks period), so a call at 11:45 PM local is listed on its own day and a call at 12:00 AM on the next day; the calendar cell reads e.g. '1 task. Marked: Upcoming'.

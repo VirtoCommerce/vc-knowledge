@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:03:16.511Z",
-  "count": 1144,
+  "generated": "2026-10-20T18:09:42.412Z",
+  "count": 1146,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11725,7 +11725,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-700E5D52",
@@ -19499,6 +19499,34 @@
       "disputed": 0
     },
     {
+      "id": "KB-B7C2A879",
+      "path": "entries/KB-B7C2A879.md",
+      "subject": "A task write the server refuses (createSalesRepTask / updateSalesRepTask errors[]) reaches the rep only as the generic \"Something went wrong. Please try again later.\" toast; the task dialog keeps the draft and never shows the server's reason",
+      "question": "What does the storefront Sales Rep task dialog (Schedule call on /company/my-customers/{id}, New task / Edit call on /company/tasks) show when Mutation.createSalesRepTask or Mutation.updateSalesRepTask comes back with errors[] such as \"Customer not found.\" or \"This task is linked to another record, so it cannot take a customer.\"?",
+      "questions": [
+        "Does the sales rep task modal show the server's error message when saving a call fails?",
+        "Why does Schedule call show 'Something went wrong. Please try again later.' instead of 'Customer not found.'?",
+        "Do the Sales Rep plugin's task mutations pass SUPPRESS_ERROR_NOTIFICATIONS_CONTEXT, or do they use vc-frontend's global GraphQL error toast?",
+        "What happens in the Edit call dialog when updateSalesRepTask is refused for a call linked to another record?",
+        "Is the task dialog closed or kept open after a refused createSalesRepTask?"
+      ],
+      "anchors": [
+        "Mutation.createSalesRepTask",
+        "Mutation.updateSalesRepTask",
+        "/company/my-customers/{id}",
+        "/company/tasks"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B811FD82",
       "path": "entries/KB-B811FD82.md",
       "subject": "Refused changeWishlist can leave a poisoned cached list that the next rename persists",
@@ -22423,6 +22451,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 8,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D80C8A22",
+      "path": "entries/KB-D80C8A22.md",
+      "subject": "On PostgreSQL, task search results for type or keyword are cached under a lower-cased key, so every letter-case variant of a term returns whatever the first-searched variant returned",
+      "question": "Does POST /api/task-management/search return the same tasks for \"Call\", \"CALL\" and \"call\" (type or keyword), and does the order of searches matter?",
+      "questions": [
+        "Why does the Admin Tasks app search return no rows for a keyword that matches a task name?",
+        "Is the task-management search case-sensitive on PostgreSQL?",
+        "Why do POST /api/task-management/search results change depending on an earlier search?",
+        "Does the platform search cache treat case variants of search criteria as the same entry?"
+      ],
+      "anchors": [
+        "POST /api/task-management/search",
+        "/apps/tasks"
+      ],
+      "scope": [
+        "db=postgresql",
+        "module=taskmanagement",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
