@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:59:35.883Z",
-  "count": 1164,
+  "generated": "2026-10-20T19:04:43.202Z",
+  "count": 1168,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13432,6 +13432,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-7E8F96BC",
+      "path": "entries/KB-7E8F96BC.md",
+      "subject": "On /account/profile an emptied required First name inserts a 16 px 'This field is required' row that pushes Last name, Email, Default language/currency and Update down 16 px",
+      "question": "On /account/profile, does the 'This field is required' message under an emptied First name move the fields and the Update button below it?",
+      "questions": [
+        "Does a validation error on the profile page cause a layout shift?",
+        "Do the required-field messages on /account/profile reserve their space?",
+        "Why does the Update button on the profile page jump down when First name is cleared?"
+      ],
+      "anchors": [
+        "/account/profile"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7EF11A51",
       "path": "entries/KB-7EF11A51.md",
       "subject": "Storefront account profile Email field is always disabled in vc-frontend; email cannot be changed from /account/profile",
@@ -17011,6 +17032,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-A0047040",
+      "path": "entries/KB-A0047040.md",
+      "subject": "On vcst_qa (Next theme 3.1.0-pr-11) the /sign-in Email field boundary is #a89a8b on #f5f1ea = 2.44:1 and the header search 1.39:1, below the 3:1 non-text floor",
+      "question": "What theme does the vcst_qa storefront serve on /sign-in, and what boundary contrast do its text fields have?",
+      "questions": [
+        "Does the vcst_qa storefront still run vc-frontend 2.x with the Coffee preset?",
+        "Do the Next theme's input borders meet WCAG 1.4.11?",
+        "What does the footer version on the vcst_qa sign-in page say?"
+      ],
+      "anchors": [
+        "/sign-in"
+      ],
+      "scope": [
+        "component=ui-kit",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A0595602",
       "path": "entries/KB-A0595602.md",
       "subject": "GET /api/pricing/pricelists/{id} for a deleted price list returns 200 with body null, not 404",
@@ -19121,6 +19164,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-B030DB04",
+      "path": "entries/KB-B030DB04.md",
+      "subject": "The Notes field (VcTextarea) in the Schedule call popup has a 1px #d4d4d4 boundary, 1.48:1 on white, below the 2.52:1 of the other fields",
+      "question": "What boundary contrast does the Notes textarea in the Schedule call popup on /company/my-customers/{id} have?",
+      "questions": [
+        "Is the Notes field border in the sales rep task popup visible enough for WCAG 1.4.11?",
+        "Why is the Notes box border lighter than the Title and Priority borders in the Schedule call popup?",
+        "What border colour does VcTextarea use by default?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "component=ui-kit",
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B0C67841",
       "path": "entries/KB-B0C67841.md",
       "subject": "Sales Rep dashboard Document library widget rows show a file-type icon, display name and 'Published <date> · <n> pages' only — no category and no size; /company/documents is a card grid with category but no per-card size, and image documents with previewUrl null show a type icon, not a thumbnail",
@@ -19418,6 +19485,27 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-B3E09B90",
+      "path": "entries/KB-B3E09B90.md",
+      "subject": "On the /account/returns filter, an invalid Start date shows 'Invalid date format' in a 16 px row that drops End date 16 px out of line with Start date and pushes Status, Reset and Apply down 16 px",
+      "question": "On /account/returns Filters with a custom created-date range, does the VcDatePicker error under Start date move End date and the rest of the filter panel?",
+      "questions": [
+        "Can a VcDatePicker reserve space for its validation message?",
+        "Why do the Start and End date fields on the returns filter go out of line?",
+        "Does the returns date filter shift when a date is invalid?"
+      ],
+      "anchors": [
+        "/account/returns"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-B3EEBA10",
