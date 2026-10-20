@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T16:35:37.457Z",
-  "count": 1141,
+  "generated": "2026-10-20T16:52:14.841Z",
+  "count": 1142,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -8666,6 +8666,30 @@
       "scope": [
         "actor=anonymous",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-51C67C3F",
+      "path": "entries/KB-51C67C3F.md",
+      "subject": "POST /api/catalog/categories saves a second category with the same seoInfos semanticUrl in the same catalog and language with 200 and no error",
+      "question": "Does POST /api/catalog/categories refuse a category whose SEO slug duplicates another category's slug in the same catalog and language?",
+      "questions": [
+        "Is a duplicate category slug rejected on save through the Catalog REST API?",
+        "Can two categories share one semanticUrl in the same store and language?",
+        "Does the catalog API validate SEO slug uniqueness?"
+      ],
+      "anchors": [
+        "POST /api/catalog/categories",
+        "GET /api/seoinfos/explain"
+      ],
+      "scope": [
+        "module=catalog",
+        "owner=category",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",

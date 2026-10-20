@@ -1,2 +1,5 @@
 {"at":"2026-10-20T05:15:09.901Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
 {"at":"2026-10-20T06:53:08.311Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
+{"at":"2026-10-20T11:29:00.077Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
+{"at":"2026-10-20T11:32:51.992Z","kind":"ask","q":"createPunchoutRequisition GraphQL mutation: which cart is sent, replay on returned session, SessionNotFound for non-punchout token","verdict":"ambiguous","p":0.15,"f":{"idfCoverage":0.22,"sentenceStrength":0.12,"sentenceMargin":0,"margin":0.09},"shown":["KB-CA2AE929","KB-5394491D","KB-6A5F88F8"],"state":"ambiguous","ms":3084,"rank":"verdict-1","via":"mcp","call":"toolu_019ChbUvVHDaM9n9LfUXsZxD","topic":"punchout requisition xAPI","deployment":"vcptcore_qa1","who":"kutasinaelena","agent":"qa-backend-expert"}
+{"at":"2026-10-20T11:33:06.770Z","kind":"show","id":"KB-6A5F88F8","state":"answer","after":"2026-10-20T11:32:51.992Z","via":"mcp","call":"toolu_019ZL6Mkz2pFTUMceSH1VFqY","topic":"punchout requisition xAPI","who":"kutasinaelena","agent":"qa-backend-expert"}
