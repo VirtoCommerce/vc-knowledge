@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T08:16:48.718Z",
-  "count": 1051,
+  "generated": "2026-10-20T10:36:03.448Z",
+  "count": 1052,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13539,6 +13539,31 @@
       "supersededBy": [
         "KB-6161BC89"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8EEED16D",
+      "path": "entries/KB-8EEED16D.md",
+      "subject": "After a platform account lock, a sales-rep access token issued before the lock is refused on /graphql/sales-rep with extensions.code Unauthorized (not UserLocked)",
+      "question": "What does /graphql/sales-rep return when a rep's account is locked after their token was issued?",
+      "questions": [
+        "Does locking a user invalidate their existing access token for the sales-rep schema?",
+        "Which error code does salesRepCustomerOrders return for a token minted before the account lock?",
+        "Is the query-time account-state gate reported as UserLocked or Unauthorized?"
+      ],
+      "anchors": [
+        "POST /graphql/sales-rep",
+        "Query.salesRepCustomerOrders",
+        "POST /api/platform/security/users/{id}/lock",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
