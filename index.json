@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T00:31:04.207Z",
-  "count": 1045,
+  "generated": "2026-10-20T00:32:31.479Z",
+  "count": 1046,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15563,6 +15563,31 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-A3A2CBEF",
+      "path": "entries/KB-A3A2CBEF.md",
+      "subject": "Password sign-in as a sales rep with zero organizations intermittently fails with a 'Something went wrong' toast (GetMe errors on me.contact.organizationId) while GA still records a successful login; a repeat sign-in succeeds",
+      "question": "Does signing in on /sign-in as a sales rep with no organization ever fail, and what is sent to GA when it does?",
+      "questions": [
+        "Why does a zero-customer sales rep get 'Something went wrong' after signing in?",
+        "Is a failed storefront sign-in reported to GA4 as login success=true?",
+        "GetMe INVALID_OPERATION me.contact.organizationId after /connect/token 200"
+      ],
+      "anchors": [
+        "/sign-in",
+        "Query.me",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=sign-in",
+        "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-A3CE7FBA",
