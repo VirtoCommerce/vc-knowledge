@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T12:35:11.871Z",
-  "count": 1063,
+  "generated": "2026-10-20T13:07:42.649Z",
+  "count": 1064,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13082,6 +13082,28 @@
         "feature=customer-activity",
         "module=sales-rep",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-881267E5",
+      "path": "entries/KB-881267E5.md",
+      "subject": "TaskManagement.TaskTypes is a non-public dictionary setting listing the task types; its default is Registration Review",
+      "question": "Which task types does the TaskManagement.TaskTypes setting offer (GET /api/platform/settings/TaskManagement.TaskTypes), and which is the default?",
+      "questions": [
+        "What task types can a work task have in the Task Management module?",
+        "Is TaskManagement.TaskTypes readable anonymously through store settings?",
+        "Which task type is selected by default when creating a task?"
+      ],
+      "anchors": [
+        "GET /api/platform/settings/TaskManagement.TaskTypes"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
