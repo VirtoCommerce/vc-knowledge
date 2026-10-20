@@ -36,5 +36,16 @@ evidence:
     defect: suspected
     who: Lenajava1
     note: "Re-observed on chromium: Basic value \" \" and \"   \" give card 156->118px, description y111->73 (only 38px lost, so the 0-height figure div stays mounted); \"\" shows the dash, \"0\" shows 0. With Suffix value \" \" shows the unit alone (\"items\") in the 38px figure row, because the suffix span lives in the has-value branch. Source vc-stat-widget.vue:90 hasValue has no trim()."
+  - method: observation
+    deployment: vcst_qa
+    build: 4661c4a61799a028
+    conditions: storybook=2.61.0-alpha.2597-vcst-5903-vc-stat-widget-a6255676; theme=2.61.0-pr-2568-bfe0-bfe0b259; commit=vc-frontend@bfe0b259; browser=chromium
+    at: 2026-10-20T12:34:44.222Z
+    by: session:43a7a721
+    bodyHash: 2ff0222a679c
+    who: Lenajava1
+    contradicts: true
+    contested: theme 2.61.0-pr-2568-bfe0-bfe0b259 vs 2.61.0-pr-2568; commit vc-frontend@bfe0b259 vs vc-frontend@3f8af63a; theme 2.61.0-pr-2568-bfe0-bfe0b259 vs 2.61.0-pr-2568-3f8a-3f8af63a
+    note: "Fixed on a later build (VCST-6427, vc-frontend@bfe0b259, not yet released): hasValue = !!value?.trim(), so \" \", \"   \", tab and NBSP show the --pending dash and the card is as tall as with \"\"; With Suffix \" \" shows no unit; \"0\" still shows 0. The entry holds for 3f8af63a only. Remaining gap: trim() keeps zero-width chars (U+200B) — KB-3F700CCC, VCST-6449."
 ---
 Storybook (UI-kit) Components/Organisms/VcStatWidget Basic story, Controls: value undefined (args value:!undefined) and value "" both render div.vc-stat-widget__value--pending with the dash in neutral-300, 38px tall. value "0" renders 0 normally. value " " (one space) renders div.vc-stat-widget__value with only whitespace: no pending class, no dash, height 0, so the description moves up into the figure line (card height drops). Source at the PR head: hasValue = value !== undefined && value !== "" (no trim). Contradicts the PR's stated intent that no value shows the same dash.
