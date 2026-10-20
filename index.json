@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:12:48.457Z",
-  "count": 1105,
+  "generated": "2026-10-20T15:16:15.693Z",
+  "count": 1109,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2807,6 +2807,24 @@
         "Query.promotionCoupons.sort"
       ],
       "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1D490FB3",
+      "path": "entries/KB-1D490FB3.md",
+      "subject": "Place order from /cart as a personal user triggers UpdateMemberAddresses that returns 200 with a VALIDATION error while the order still completes",
+      "question": "Does the storefront Place order flow call UpdateMemberAddresses, and can it fail without blocking the order?",
+      "anchors": [
+        "/cart",
+        "Mutation.updateMemberAddresses"
+      ],
+      "scope": [
+        "surface=storefront-ui",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -8910,6 +8928,24 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-55F5BDA3",
+      "path": "entries/KB-55F5BDA3.md",
+      "subject": "GA4 place_order on /checkout/completed sends value = order subtotal (excl. shipping and tax) with shipping and tax as separate params, not the order total",
+      "question": "Is the GA4 place_order value the order total or the subtotal excluding shipping and tax?",
+      "anchors": [
+        "/checkout/completed",
+        "window.dataLayer"
+      ],
+      "scope": [
+        "event=place_order",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-56048C88",
@@ -15473,6 +15509,24 @@
       "trust": 4,
       "disputed": 0,
       "resolved": 4
+    },
+    {
+      "id": "KB-9751007F",
+      "path": "entries/KB-9751007F.md",
+      "subject": "GA4 add_to_cart sends source_route as the storefront route name (e.g. 'Product'), not a URL path",
+      "question": "What does the GA4 add_to_cart source_route parameter contain on a product page?",
+      "anchors": [
+        "/product/{id}",
+        "window.dataLayer"
+      ],
+      "scope": [
+        "event=add_to_cart",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-9795DE39",
@@ -25197,6 +25251,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F813F29D",
+      "path": "entries/KB-F813F29D.md",
+      "subject": "The vcst-qa home page '/' on theme 3.1.0-pr-11 carries product-card markup but no product-list container with a list id, and sends no view_item_list",
+      "question": "Does the storefront home page expose a markup-tracked products_block list that sends view_item_list?",
+      "anchors": [
+        "window.dataLayer"
+      ],
+      "scope": [
+        "event=view_item_list",
+        "page=home",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
