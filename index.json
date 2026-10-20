@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T12:15:50.640Z",
-  "count": 1061,
+  "generated": "2026-10-20T12:19:17.983Z",
+  "count": 1062,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5656,6 +5656,31 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3F700CCC",
+      "path": "entries/KB-3F700CCC.md",
+      "subject": "VcStatWidget's blank guard (trim) does not catch zero-width characters: a U+200B value renders a blank figure row instead of the dash, and a U+200B errorText shows the error state with an empty message",
+      "question": "Does the VcStatWidget card show the dash when value or errorText contains only a zero-width space (U+200B)?",
+      "questions": [
+        "What does VcStatWidget render for a value that is only invisible characters?",
+        "Is a zero-width space treated as blank by VcStatWidget hasValue / hasError?",
+        "Why does VcStatWidget show an error icon with no message?",
+        "Which characters does the VcStatWidget empty-value check ignore?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--basic",
+        "/story/components-organisms-vcstatwidget--with-suffix"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "host=storybook",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
