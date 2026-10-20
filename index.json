@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T12:19:17.983Z",
-  "count": 1062,
+  "generated": "2026-10-20T12:26:16.467Z",
+  "count": 1063,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -17274,6 +17274,30 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AF2196EB",
+      "path": "entries/KB-AF2196EB.md",
+      "subject": "In VcStatWidget a long unbreakable token in errorText, description or delta stays on one line and paints past the card border, while the same token in label wraps inside the card",
+      "question": "Does a long unbreakable word in VcStatWidget errorText, description or delta wrap inside the card or overflow past its border?",
+      "questions": [
+        "Does a URL in VcStatWidget errorText fit inside the card?",
+        "Which VcStatWidget text parts wrap long words?",
+        "Does the VcStatWidget error message overflow the card in Storybook?"
+      ],
+      "anchors": [
+        "/story/components-organisms-vcstatwidget--error-state",
+        "/story/components-organisms-vcstatwidget--basic"
+      ],
+      "scope": [
+        "component=vcstatwidget",
+        "host=storybook",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
