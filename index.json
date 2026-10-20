@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T13:07:42.649Z",
-  "count": 1064,
+  "generated": "2026-10-20T13:46:09.671Z",
+  "count": 1065,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1975,6 +1975,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-14F5E7B6",
+      "path": "entries/KB-14F5E7B6.md",
+      "subject": "Query.salesRepTaskTypes returns the TaskManagement.TaskTypes allowed values, in setting order, to a signed-in sales rep",
+      "question": "Which task types does Query.salesRepTaskTypes on /graphql/sales-rep return to a sales rep, and does it follow the TaskManagement.TaskTypes setting?",
+      "questions": [
+        "Does salesRepTaskTypes include Call?",
+        "Where does the storefront New task Type list come from?",
+        "Does a newly created sales rep see its served customers in salesRepCustomers without reindexing?"
+      ],
+      "anchors": [
+        "Query.salesRepTaskTypes",
+        "Query.salesRepCustomers"
+      ],
+      "scope": [
+        "module=salesrep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
