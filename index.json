@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:09:42.412Z",
-  "count": 1146,
+  "generated": "2026-10-20T18:15:17.469Z",
+  "count": 1147,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10994,6 +10994,31 @@
       "scope": [
         "role=guest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-69839926",
+      "path": "entries/KB-69839926.md",
+      "subject": "Storefront GA4 searches, product views and sign-ins reached Query.salesRepActivities between ~9 h and ~24.5 h after they were sent",
+      "question": "How long after storefront traffic do its searches, product views and logins appear in the sales-rep activity feed?",
+      "questions": [
+        "When does GA4 data planted on the storefront become visible to a sales rep?",
+        "Is a missing activity row a day after planting a failure or still processing lag?",
+        "How fast does the GA Data API processedData count catch up after storefront search events?"
+      ],
+      "anchors": [
+        "Query.salesRepActivities",
+        "POST /graphql/sales-rep",
+        "POST /api/sales-rep/analytics-diagnostics"
+      ],
+      "scope": [
+        "feature=customer-activity",
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
