@@ -63,5 +63,14 @@ evidence:
     bodyHash: c59e429335ed
     who: Lenajava1
     note: "Re-observed on the newer PR build: after the cart seed, one RB view_item_list with the 6 seeded codes; +1 quantity pushed add_shipping_info + update_cart_item, no RB re-send; SFL Show more 6->8 cards pushed nothing; SFL title click (7PLSH835) opened a new tab and pushed one select_item with item_list_id recently_browsed_products, item_list_name Recently browsed. SFL cards carry no data-vc-track markup."
+  - method: observation
+    deployment: vcst_qa
+    build: f6080d062139e9f0
+    conditions: theme=3.1.0-pr-11-d67b-d67b0e0a; browser=chromium; role=signed-in customer
+    at: 2026-10-20T14:15:25.354Z
+    by: session:d992339e
+    bodyHash: c59e429335ed
+    who: Lenajava1
+    note: "Held on theme 3.1.0-pr-11-d67b, B2B org admin: one recently_browsed_products view_item_list per /cart load. An RB card title click (Doritos) pushed one select_item with the same id and name, and the link opened in a new tab."
 ---
 Signed in on /cart with 6 recently browsed and 8 saved-for-later products (disjoint): cold load pushed one view_item_list recently_browsed_products ('Recently browsed') with exactly the 6 RB products and none of the SFL products. Saved-for-later Show more (6 -> 8 cards) pushed no event. A cart line quantity +1 pushed update_cart_item and add_shipping_info but no RB re-send. An SFL card title click pushed one select_item with item_list_id recently_browsed_products (the SFL block reuses that id, manual call); an RB card title click pushed one select_item for that product. Cart-page product links open in a new tab. The RB list is re-sent on resize when the grid's rendered count changes (1920->390->800->1920 gave 6, 4, 6).

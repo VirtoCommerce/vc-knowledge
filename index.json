@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T14:14:24.799Z",
-  "count": 1072,
+  "generated": "2026-10-20T14:19:36.107Z",
+  "count": 1077,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -499,7 +499,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0,
       "resolved": 1,
       "contested": 1
@@ -1140,7 +1140,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-0C1CA988",
@@ -1159,6 +1160,52 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-0C6FA664",
+      "path": "entries/KB-0C6FA664.md",
+      "subject": "On the PDP the 'SKU #' line under the title is light on dark in dark mode, 11.2:1 contrast, and near-black in light mode",
+      "question": "Is the SKU line under the product title readable in storefront dark mode?",
+      "questions": [
+        "What colour is the PDP SKU text in dark theme?",
+        "Does the PDP SKU label meet WCAG contrast in dark mode?"
+      ],
+      "anchors": [
+        "/product/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=dark"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0C8E0543",
+      "path": "entries/KB-0C8E0543.md",
+      "subject": "A configurable PDP's Configuration checklist in Price and delivery lists one row per visible section live, colours rows by state and gates Add to cart on required rows; whitespace-only required text stays red",
+      "question": "How does the Configuration checklist on a configurable product page behave: rows, states, links, dependent sections and the add-to-cart gate?",
+      "questions": [
+        "What does the Review / Fill it in / Upload a file link in the configuration checklist do?",
+        "Do dependent configuration sections appear in the checklist when the parent is chosen?",
+        "Where is the configuration checklist on mobile?",
+        "Does a non-configurable PDP show a configuration checklist?"
+      ],
+      "anchors": [
+        "/product/{id}",
+        "Query.productConfiguration",
+        "Mutation.createConfiguredLineItem"
+      ],
+      "scope": [
+        "role=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-0C936EC3",
@@ -1873,6 +1920,30 @@
         "KB-9E7315D1",
         "KB-AA57B0E5"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-13B9743E",
+      "path": "entries/KB-13B9743E.md",
+      "subject": "On a draft quote edit page the line quantity field shows no upper-bound message above stock (only a positive-number check), and quote attachments are refused client-side by the quote-attachments scope limits",
+      "question": "What validation does /account/quotes/{id}/edit show for a line quantity above stock, and how are attachments over the size, count or format limit handled?",
+      "questions": [
+        "Does the quote edit page warn when a line quantity exceeds available stock?",
+        "What happens when more than 5 files are attached to a quote request?",
+        "What file formats and size does the quote attachment field accept on vcst?",
+        "Is a too-large quote attachment uploaded to the server?"
+      ],
+      "anchors": [
+        "/account/quotes/{id}/edit",
+        "Query.fileUploadOptions"
+      ],
+      "scope": [
+        "role=signed-in customer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -4666,7 +4737,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6536,7 +6607,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10517,6 +10588,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-6CA2F98B",
+      "path": "entries/KB-6CA2F98B.md",
+      "subject": "On /compare the All/Differences switch filters rows client-side and the 'Differ: N of M rows' line counts the rows that differ out of all rows; below md the tabs and Clear category sit in one bar with no differ line",
+      "question": "How do the All / Differences tabs and the 'Differ: N of M rows' line on /compare behave, and where do they render on mobile?",
+      "questions": [
+        "Does the Differences tab on /compare reload the page or call the API?",
+        "What does 'Differ: 10 of 11 rows' count on the compare page?",
+        "Is the differ line shown on mobile compare?",
+        "Where are Clear category and the row filter on the compare table at 390 px?"
+      ],
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "role=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6CC1EFE6",
       "path": "entries/KB-6CC1EFE6.md",
       "subject": "Deleting a security account leaves its contact (and vice versa); an invited contact may be missing from member keyword search",
@@ -13458,7 +13552,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -22506,7 +22600,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -24283,6 +24377,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-F70D6D0A",
+      "path": "entries/KB-F70D6D0A.md",
+      "subject": "Storefront product lists push one GA4 view_item_list per render and one select_item per click, each with item_list_id and item_list_name; variation rows push no select_item",
+      "question": "Which item_list_id / item_list_name do the storefront's product lists send in GA4 view_item_list and select_item, and how many events fire per render?",
+      "questions": [
+        "Does clicking a product in Customers bought together push select_item?",
+        "What GA4 list id does the cart Recently browsed block use?",
+        "Does the variations list on a PDP push select_item when a variation is clicked?",
+        "Is view_item_list pushed twice for one category render?"
+      ],
+      "anchors": [
+        "/cart",
+        "/product/{id}"
+      ],
+      "scope": [
+        "integration=ga4",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F7449926",
       "path": "entries/KB-F7449926.md",
       "subject": "organization memberships use userId and role objects over REST but memberId and an org from the session in GraphQL",
@@ -24970,7 +25088,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 1
     },
     {
