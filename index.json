@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T11:06:53.861Z",
-  "count": 1054,
+  "generated": "2026-10-20T11:12:10.035Z",
+  "count": 1055,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3510,6 +3510,30 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-27D7DCE3",
+      "path": "entries/KB-27D7DCE3.md",
+      "subject": "On a served customer's activity page, salesRepActivities with take 20 / skip 0 returned only 19 items while totalCount was 51, so page 1 of the All list showed 19 rows and page 2 showed 20",
+      "question": "Does the first page of the sales-rep customer activity list always hold 20 rows when more rows exist?",
+      "questions": [
+        "Why does page 1 of /company/my-customers/{id}/activities show 19 rows?",
+        "Is salesRepActivities paging short by one item?",
+        "How many items does Query.salesRepActivities return for take 20 skip 0?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/activities",
+        "Query.salesRepActivities"
+      ],
+      "scope": [
+        "feature=customer-activity",
+        "module=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
