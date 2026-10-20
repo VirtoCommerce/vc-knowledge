@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:16:12.431Z",
-  "count": 1148,
+  "generated": "2026-10-20T18:16:44.161Z",
+  "count": 1150,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3544,6 +3544,29 @@
       "scope": [
         "module=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2484DEB4",
+      "path": "entries/KB-2484DEB4.md",
+      "subject": "salesRepActivities period days are applied as GA-property-local calendar days, not UTC instants: a UTC 2026-10-19 range returned buckets labelled 2026-10-20T00:00Z and 05:00Z, and a range from 2026-10-20T00:00Z returned none of them",
+      "question": "Is the salesRepActivities period from/to on POST /graphql/sales-rep applied as UTC instants or as calendar days in the Google Analytics property timezone?",
+      "questions": [
+        "Why does a one-day salesRepActivities period return hour buckets from the next UTC day?",
+        "Do sales-rep activity GA hour buckets respect period.to to the hour?"
+      ],
+      "anchors": [
+        "Query.salesRepActivities",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "feature=customer-activity",
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -22980,6 +23003,30 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-DBA1110A",
+      "path": "entries/KB-DBA1110A.md",
+      "subject": "The salesRepActivities logins category counts every GA `login` event of a customer session with no success filter, so a failed storefront sign-in (login with success=false) is counted as a login",
+      "question": "Does Query.salesRepActivities logins category on POST /graphql/sales-rep count failed storefront sign-ins (GA login event with success=false)?",
+      "questions": [
+        "Why does the sales-rep activity feed show more logins than successful sign-ins?",
+        "Is visitsCount in salesRepCustomerActivitySummary inflated by failed sign-ins?"
+      ],
+      "anchors": [
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerActivitySummary",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "feature=customer-activity",
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DC2411FF",
