@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T00:32:31.479Z",
-  "count": 1046,
+  "generated": "2026-10-20T01:17:16.599Z",
+  "count": 1047,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -8483,6 +8483,31 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=1920x1080-and-375x812"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-57210674",
+      "path": "entries/KB-57210674.md",
+      "subject": "salesRepCustomerCartStatistics counts a rep's NAMED carts per organization; a line taken out of checkout with unSelectCartItems moves its quantity from selectedItemQuantity to unselectedItemQuantity at once",
+      "question": "Does salesRepCustomerCartStatistics count a sales rep's named (non-default) cart, and how does a line not selected for checkout show in selectedItemQuantity / unselectedItemQuantity?",
+      "questions": [
+        "How do I seed a cart that makes the Active carts 'not for checkout' figure non-zero?",
+        "Which quantity does salesRepCustomerCartStatistics report for a cart line with selectedForCheckout=false?",
+        "Is the sales rep cart statistic refreshed right after removeCart or unSelectCartItems?",
+        "Does the cart statistic total include lines not selected for checkout?"
+      ],
+      "anchors": [
+        "Query.salesRepCustomerCartStatistics",
+        "Mutation.unSelectCartItems",
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
