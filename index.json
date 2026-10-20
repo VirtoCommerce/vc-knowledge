@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:45:11.271Z",
-  "count": 1125,
+  "generated": "2026-10-20T15:49:41.307Z",
+  "count": 1130,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -975,6 +975,28 @@
       "scope": [
         "actor=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0AF2E9CF",
+      "path": "entries/KB-0AF2E9CF.md",
+      "subject": "Saving a new task in the Tasks app shows no success toast: the create blade turns into the task's details blade and the grid reloads",
+      "question": "Does the Admin Tasks app (/apps/tasks) show a success toast or notification after Save creates a task through POST /api/task-management?",
+      "questions": [
+        "Is there a 'Saved' or 'Task created' message after creating a task in the Tasks app?",
+        "How does a tester tell that a task was created in the Tasks app?"
+      ],
+      "anchors": [
+        "/apps/tasks",
+        "POST /api/task-management"
+      ],
+      "scope": [
+        "module=task-management",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6591,6 +6613,27 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-43560E0B",
+      "path": "entries/KB-43560E0B.md",
+      "subject": "The Tasks app shares the back-office sign-in: it opens already signed in after an Admin SPA login, and its Log Out also ends the Admin SPA session",
+      "question": "Does the Tasks app (/apps/tasks) reuse the Admin SPA session, and does Log Out in the Tasks app sign the user out of the back office too?",
+      "questions": [
+        "Do I need to sign in separately to the Tasks app after logging into the Admin back office?",
+        "How do I clear the admin session between Tasks app test cases?"
+      ],
+      "anchors": [
+        "/apps/tasks"
+      ],
+      "scope": [
+        "module=task-management",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14101,7 +14144,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21744,6 +21787,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-D3B7A017",
+      "path": "entries/KB-D3B7A017.md",
+      "subject": "The Tasks app grid range label is wrong on a short last page: rows 21–29 of a 29-row list are labelled '16–24 of 29'",
+      "question": "Does the All tasks grid pager label in the Tasks app (/apps/tasks, POST /api/task-management/search) show the correct row range on page 2?",
+      "questions": [
+        "Why does the Tasks grid say 16–24 of 29 on page 2?",
+        "Is the vc-shell table 'X–Y of Z' counter correct when the last page is not full?"
+      ],
+      "anchors": [
+        "/apps/tasks",
+        "POST /api/task-management/search"
+      ],
+      "scope": [
+        "module=task-management",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D47B8DF1",
       "path": "entries/KB-D47B8DF1.md",
       "subject": "Quote expiration date is neither shown nor enforced on the storefront; approving an expired or out-of-stock quote places the order",
@@ -22979,6 +23044,29 @@
       "scope": [
         "auth=guest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E10344F0",
+      "path": "entries/KB-E10344F0.md",
+      "subject": "Task-management member endpoints return the contact's security accounts with passwordHash and securityStamp filled, although Authorization:ReturnPasswordHash is false",
+      "question": "Do POST /api/task-management/members/search and GET /api/task-management/members/{id} (the Tasks app Assignee picker) expose security account password hashes?",
+      "questions": [
+        "Does the Tasks app Assignee search leak passwordHash in its response?",
+        "Is the password hash redacted in task-management member payloads when ReturnPasswordHash is false?",
+        "Which REST endpoints besides GET /api/members/{id} return securityAccounts with passwordHash?"
+      ],
+      "anchors": [
+        "POST /api/task-management/members/search",
+        "GET /api/task-management/members/{id}"
+      ],
+      "scope": [
+        "module=task-management",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -25180,6 +25268,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F34CDFDB",
+      "path": "entries/KB-F34CDFDB.md",
+      "subject": "The Tasks app Assignee picker searches customer Contact and Employee members by keyword, not platform user logins",
+      "question": "What does the Tasks app Assignee picker search (POST /api/task-management/members/search), and does typing the admin login find the platform admin?",
+      "questions": [
+        "Can a task be assigned to the platform admin account from the Tasks app?",
+        "Why does searching 'admin' in the task Assignee field return a contact instead of the administrator?"
+      ],
+      "concepts": [
+        "member-search"
+      ],
+      "anchors": [
+        "POST /api/task-management/members/search",
+        "/apps/tasks"
+      ],
+      "scope": [
+        "module=task-management",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
