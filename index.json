@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T01:17:16.599Z",
-  "count": 1047,
+  "generated": "2026-10-20T02:33:55.597Z",
+  "count": 1048,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -12801,6 +12801,32 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-87F24950",
+      "path": "entries/KB-87F24950.md",
+      "subject": "Storefront GA4 traffic was still absent from Query.salesRepActivities about 9 hours after it was sent; the newest GA hour bucket on the stand stayed 10 days old",
+      "question": "How long after storefront traffic do its searches, product views and logins appear in the sales-rep activity feed?",
+      "questions": [
+        "What is the Google Analytics lag for salesRepActivities rows?",
+        "Why does a fresh customer search not show in the rep's customer activity yet?",
+        "Is an empty GA hour bucket a few hours after traffic a failure?"
+      ],
+      "anchors": [
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerActivitySummary",
+        "Query.salesRepCustomerInsights",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "feature=customer-activity",
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
