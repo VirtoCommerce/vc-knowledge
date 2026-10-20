@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T18:16:44.161Z",
-  "count": 1150,
+  "generated": "2026-10-20T18:24:35.031Z",
+  "count": 1154,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1124,6 +1124,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-0BAA4DB6",
+      "path": "entries/KB-0BAA4DB6.md",
+      "subject": "The Customer activity widget's hourglass hint triggers are 14x14 px role=button spans named 'Tracked storefront activity: can take up to 48 hours to appear.' — the same name on every row — and clear the WCAG 2.5.8 spacing exception at 320 and 1920 px",
+      "question": "How big are the hourglass tooltip triggers in the sales-rep Customer activity widget and do they have an accessible name?",
+      "questions": [
+        "Do the tracked-metric hourglass icons meet the 24x24 target size?",
+        "What do screen readers announce for the hourglass next to Total visits?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "feature=sales-rep-customer-activity-widget",
+        "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0BC18481",
       "path": "entries/KB-0BC18481.md",
       "subject": "Wishlist sharing message: blank/whitespace stored as null, trimmed, 1024-unit limit with an atomic opaque refusal",
@@ -1152,6 +1177,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 7,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0BE09FF7",
+      "path": "entries/KB-0BE09FF7.md",
+      "subject": "The dashboard My activity widget shows hour-bucket rows as '~N hours ago' for anything under 24 hours old, even when it fell on the previous calendar day; only from 24 hours on does it count calendar days ('~yesterday', '2 days ago')",
+      "question": "When does a row in the sales-rep dashboard My activity widget read '~yesterday' rather than '~N hours ago'?",
+      "questions": [
+        "Does an event from late yesterday show as yesterday or as hours ago in the My activity widget?",
+        "How is relative time computed for compact sales-rep activity rows?",
+        "Which timezone does the My activity widget use to decide 'yesterday'?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "Query.salesRepActivities"
+      ],
+      "scope": [
+        "feature=sales-rep-my-activity-widget",
+        "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3862,7 +3911,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-2800B0C0",
@@ -5976,8 +6025,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0,
+      "trust": 2,
+      "disputed": 1,
       "contested": 1
     },
     {
@@ -14640,6 +14689,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-8B3C6CE5",
+      "path": "entries/KB-8B3C6CE5.md",
+      "subject": "salesRepActivities returns data null with no errors for a sales rep who serves zero organizations, while salesRepCustomers returns totalCount 0 for the same caller",
+      "question": "What does salesRepActivities return for a sales rep with no customers?",
+      "questions": [
+        "Does the sales-rep activity feed return an empty connection or null when the rep serves nobody?",
+        "Why is salesRepActivities null for a rep with zero memberships?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "Query.salesRepActivities",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "actor=sales-rep-zero-customers",
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8B4E880C",
       "path": "entries/KB-8B4E880C.md",
       "subject": "The sales-rep task API takes a customer and any type string on any task: customerId is not bound to type Call and TaskManagement.TaskTypes is not enforced",
@@ -17800,6 +17875,33 @@
         "module=catalogpublishing@3.1007.1",
         "surface=admin-ui",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A85687E0",
+      "path": "entries/KB-A85687E0.md",
+      "subject": "The dashboard My activity widget's order rows show only 'Order placed' + the order-number link, organization and relative time — no total and no status chip, which the /company/activities page rows do show",
+      "question": "Does an order row in the sales-rep dashboard My activity widget show the order total and status?",
+      "questions": [
+        "Why does the My activity widget order row lack the amount?",
+        "What does a compact activity row render compared with the activity page row?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "/company/activities",
+        "Query.salesRepActivities"
+      ],
+      "scope": [
+        "feature=sales-rep-my-activity-widget",
+        "module=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -23026,7 +23128,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-DC2411FF",
