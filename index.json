@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:18:41.110Z",
-  "count": 1115,
+  "generated": "2026-10-20T15:23:25.935Z",
+  "count": 1116,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3747,6 +3747,30 @@
         "feature=customer-activity",
         "module=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2800B0C0",
+      "path": "entries/KB-2800B0C0.md",
+      "subject": "Preset coupon ZUR10 is rejected on carts under 100 because its promotion requires a cart subtotal of at least 100; QA10OFF validates true on a cart above 100",
+      "question": "Why does validateCoupon reject the preset coupons QA10OFF or ZUR10 on a B2B-store cart?",
+      "questions": [
+        "Is coupon ZUR10 broken or does it have a cart-subtotal condition?",
+        "Does QA10OFF still validate on the B2B-store?",
+        "Why does /cart say 'This code is not valid' for ZUR10?"
+      ],
+      "anchors": [
+        "Query.validateCoupon",
+        "POST /api/marketing/promotions/search",
+        "/cart"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
