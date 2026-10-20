@@ -26,5 +26,14 @@ evidence:
     by: session:70c763de
     who: yuskithedeveloper
     note: "distinct: Desktop Filters popover (split layout) at 1440 px; KB-6FC8637A is the mobile Filters drawer at 375 px on another stand."
+  - method: observation
+    deployment: local
+    conditions: platform=3.1083.0; theme=2.60.0; browser=msedge-155
+    at: 2026-10-20T19:05:19.355Z
+    by: session:70c763de
+    bodyHash: 154dda9300c3
+    defect: VCST-6459
+    who: yuskithedeveloper
+    note: "Re-mark only: filed as VCST-6459 (UI-kit VcSelect: the list opens on focus and is not closed when focus leaves; the Created date preset uses enable-teleport via date-filter-select.vue). No observation beyond this session's Edge run already recorded on the entry."
 ---
 Edge 155, 1440x900, signed-in buyer account, /account/orders with the Filters button clicked (the panel 'Orders filters' takes focus). Tab 1 reaches the panel's Close button; Tab 2 focuses the 'Created date' combobox (value 'Custom date') and its list opens on focus (aria-expanded=true, five options: Custom date, Last day, Last week, Last month, Last year). Tab 3 moves focus to the 'Start date' input and Tab 4 to 'Open calendar: Start date'; at both stops the list is still open and document.elementFromPoint at the centre and four corners of the focused control returns the 'Last day' option (5/5), so the focused control and the whole date row are hidden. The list is not part of the panel's tab order, so Tab walks past it. This is the desktop split-layout popover; KB-6FC8637A describes the same behaviour in the mobile Filters drawer. Escape on the date row closes the panel and returns focus to Filters; nothing is applied.
