@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:52:37.202Z",
-  "count": 1132,
+  "generated": "2026-10-20T15:55:37.332Z",
+  "count": 1133,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14339,6 +14339,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8A4AB65C",
+      "path": "entries/KB-8A4AB65C.md",
+      "subject": "On /compare at 390px Firefox 151 gives the compare table's tbody scroller a Tab stop and Arrow keys scroll it, although the tbody has no tabindex; tabbing to a clipped column's header controls also scrolls the body via scroll sync",
+      "question": "On /compare at mobile width, can a keyboard-only user reach and horizontally scroll the product columns of the compare table?",
+      "questions": [
+        "Is the /compare tbody.compare-table__scroll scroller keyboard-reachable in Firefox?",
+        "Does the axe scrollable-region-focusable finding on /compare block keyboard scrolling in a real browser?",
+        "How does a keyboard user bring the third compare column into view at 390px?"
+      ],
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "feature=product-compare",
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
