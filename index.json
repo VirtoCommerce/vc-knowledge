@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T14:36:41.151Z",
-  "count": 1099,
+  "generated": "2026-10-20T14:41:00.071Z",
+  "count": 1101,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -173,7 +173,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2115,7 +2115,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -5435,6 +5435,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-3C569B6F",
+      "path": "entries/KB-3C569B6F.md",
+      "subject": "Missions SKU modal 'Buy at least N' chip shows the remaining quantity (target minus current) on an unmet row, the target itself with a check icon on a met row",
+      "question": "On /account/missions what number does the 'Buy at least N' chip in the PerSku mission modal show, the item's targetQuantity or the quantity still missing?",
+      "anchors": [
+        "/account/missions",
+        "Query.loyaltyMissionProgress"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3C5DB2E7",
       "path": "entries/KB-3C5DB2E7.md",
       "subject": "Concurrent identical saves of a localizable dictionary setting did not store duplicate translations on vcptcore_dev",
@@ -7203,7 +7220,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -13511,6 +13528,25 @@
       "scope": [
         "module=pricing",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-878C0A7B",
+      "path": "entries/KB-878C0A7B.md",
+      "subject": "On /company/tasks a task fixture seeded five days earlier shows chips Today 1, All 22, Upcoming 4, Overdue 10, Completed 4, because every due date is a fixed offset from the seed instant",
+      "question": "What do the /company/tasks scope chip counts look like for a rep whose relative-date task fixture was seeded several days ago?",
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "feature=sales-rep-tasks",
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
