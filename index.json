@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T14:44:05.232Z",
-  "count": 1102,
+  "generated": "2026-10-20T14:49:59.521Z",
+  "count": 1103,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2388,7 +2388,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0,
       "contested": 1
     },
@@ -12478,7 +12478,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -15021,7 +15021,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16669,7 +16669,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -16838,6 +16838,26 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A5287384",
+      "path": "entries/KB-A5287384.md",
+      "subject": "Replacing an applied cart coupon with another preset sends ValidateCoupon(new) -> RemoveCoupon(old) -> AddCoupon(new), but the ValidateCoupon request is skipped when that code was already validated earlier in the same page session",
+      "question": "What is the GraphQL request order when a second coupon is applied on /cart while another coupon is already applied?",
+      "anchors": [
+        "/cart",
+        "Mutation.addCoupon",
+        "Mutation.removeCoupon",
+        "Query.validateCoupon"
+      ],
+      "scope": [
+        "feature=coupons-sidebar",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
