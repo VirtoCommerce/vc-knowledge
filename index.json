@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T12:15:18.094Z",
-  "count": 1060,
+  "generated": "2026-10-20T12:15:50.640Z",
+  "count": 1061,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -8272,7 +8272,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -18541,6 +18541,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-BD09051C",
+      "path": "entries/KB-BD09051C.md",
+      "subject": "A coupon-less catalog-item promotion conditioned on a virtual category is reported valid by POST /api/marketing/promotions/evaluate but is not applied to xAPI cart lines",
+      "question": "Why does an active no-coupon category promotion not discount cart lines although the marketing evaluate endpoint returns its reward as valid?",
+      "questions": [
+        "Does ConditionCategoryIs on a virtual store-catalog category apply in the xAPI cart?",
+        "Catalog item promotion not applied in cart but evaluate API says isValid true"
+      ],
+      "anchors": [
+        "Query.cart",
+        "POST /api/marketing/promotions/evaluate"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BD846528",
       "path": "entries/KB-BD846528.md",
       "subject": "The modules API reports a PR prerelease module by its full build string, not its base version",
@@ -23103,7 +23125,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
