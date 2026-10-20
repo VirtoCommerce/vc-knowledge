@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T16:04:00.386Z",
-  "count": 1138,
+  "generated": "2026-10-20T16:27:02.382Z",
+  "count": 1139,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13562,6 +13562,27 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8453BE84",
+      "path": "entries/KB-8453BE84.md",
+      "subject": "Storefront notices are rendered inside one polite aria-live region",
+      "question": "storefront toast notification after a successful save (useNotifications): is it rendered in an aria-live region that screen readers announce?",
+      "questions": [
+        "is the storefront notifications host role=alert or aria-live polite?",
+        "do vc-frontend success and warning toasts get announced by screen readers?"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
