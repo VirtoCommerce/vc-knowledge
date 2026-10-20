@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T05:46:50.971Z",
-  "count": 1049,
+  "generated": "2026-10-20T06:33:10.593Z",
+  "count": 1050,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4138,6 +4138,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2EE43E7A",
+      "path": "entries/KB-2EE43E7A.md",
+      "subject": "Storefront OTP sign-in records in the Security Sign-in log carry organizationId and organizationName null, on success and on an organization-refused failure (reason Unknown)",
+      "question": "Does the Admin Sign-in log record the organization a storefront OTP sign-in landed in or was refused for?",
+      "questions": [
+        "Why is the Organization Id column empty in the Admin Sign-in log for buyer sign-ins?",
+        "What failure reason does the sign-in log show when an OTP sign-in is refused with user_is_rejected_in_organization?",
+        "Does the Sign-in record blade show an organization field?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/sign-in-log/search",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "grant=otp_email",
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

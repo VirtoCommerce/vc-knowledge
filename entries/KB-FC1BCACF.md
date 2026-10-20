@@ -44,5 +44,14 @@ evidence:
     bodyHash: 8678ef894516
     who: kutasinaelena
     note: "Seeded two-org persona, password grant org=A with A Invited (and A Invited + permanently locked): 200 claim B, and GET /api/members showed CurrentOrganizationId rewritten A -> B. Single-org buyer with its only org temp-locked: 200 with no claim and CurrentOrganizationId stayed null."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: e7a47c5e8f6de4e7
+    conditions: module:VirtoCommerce.Customer=3.1030.0-pr-321-c54f; platform=3.1084.0-pr-3140-9092; theme=2.61.0-pr-2564-69d4; store=B2B-store
+    at: 2026-10-20T06:30:59.977Z
+    by: session:1b3fc42e
+    bodyHash: 8678ef894516
+    who: kutasinaelena
+    note: "Re-observed end-to-end through the storefront UI with a fresh A/B/C fixture (read back B, A, C; DefaultOrganizationId=C): signed in by code, switched header to A, signed out, A membership locked; next code sign-in sent organization_id=A and landed on B (header B, token claim B), CurrentOrganizationId A -> B, default C ignored. Also: the first code sign-in with no prior last-used org landed on default C. The following sign-in (after the fallback to B) still sent organization_id=A, i.e. the storefront's last-used key was not updated to the fallback org."
 ---
 On vcptcore_qa1 a disposable contact in orgs A, B, C (read back in order B, A, C) with DefaultOrganizationId=C: with A locked or A Rejected, POST /connect/token (otp_email and password) with organization_id=A returned 200 with organization_id claim B, not the default C. Setting CurrentOrganizationId=C beforehand did not change it: claim B, and CurrentOrganizationId was rewritten to B. Also: A removed from the contact + B Rejected gave 200 without an organization_id claim on both grants; A locked + B active, password with organization_id=A gave 200 claim B (not 400).
