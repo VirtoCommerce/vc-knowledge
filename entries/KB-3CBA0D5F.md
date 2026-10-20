@@ -77,5 +77,14 @@ evidence:
     bodyHash: 9e8fee29dd1b
     who: kutasinaelena
     note: "Re-observed on the password grant with refresh tokens minted AFTER the membership change: single-org temp-locked -> password 200 no organization_id claim, refresh_token to that org 400 invalid_grant errors[]=[user_is_locked_in_organization]; multi-org A Invited -> password org=A 200 claim B, refresh_token org=A 400 errors[]=[user_invitation_pending_in_organization]; A Invited + permanently locked -> password org=A 200 claim B, implicit 200 claim B, refresh_token org=A 400 errors[]=[user_is_locked_in_organization] only (lock beats status). Global /locked false throughout."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 23abf91a5a093637
+    conditions: theme=2.61.0-pr-2564-2fa8; store=B2B-store
+    at: 2026-10-20T17:46:47.719Z
+    by: session:1b3fc42e
+    bodyHash: 9e8fee29dd1b
+    who: kutasinaelena
+    note: "Storefront UI path 2026-10-20: org admin blocked the member via /company/members (LockOrganizationContact, errors[] empty). Member password sign-in -> 200 organization_id claim = the other (unlocked) org, header shows it, account-menu Organizations listbox shows the blocked org as a disabled option with a lock icon. refresh_token (minted after the block) with organization_id=blocked org -> 400 error=invalid_grant, code and errors[0].code=user_is_locked_in_organization, errorDescription \"Your access to organization '<id>' has been blocked. Please contact your organization administrator.\" (response field is camelCase errorDescription, not error_description)."
 ---
 On vcptcore_qa1 running VirtoCommerce.Customer 3.1030.0-pr-321-c54f (PR build of vc-module-customer#321), a disposable buyer with memberships in org A and org B signed in with organization_id=A on every call. For the otp_email grant (fresh code per scenario from POST /api/otp/request) and the password grant, results were identical. Both active: 200 with claim A. Removed from A: 200 with claim B. Locked in A: 200 with claim B. Membership Invited, Rejected or Deleted in A: 200 with claim B. Locked in both: 200 with no organization_id claim. Rejected in both: 400 invalid_grant, code user_is_rejected_in_organization. grant_type=refresh_token with organization_id=A while locked in A: 400 invalid_grant, code user_is_locked_in_organization, so an explicit switch still gets no fallback. Before the fix (3.1029.0) the removed-from-A otp_email case returned 400 invalid_grant; see KB-ED213173.
