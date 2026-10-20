@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T19:10:44.062Z",
-  "count": 1169,
+  "generated": "2026-10-20T19:32:17.088Z",
+  "count": 1170,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -24155,6 +24155,33 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E4380CA9",
+      "path": "entries/KB-E4380CA9.md",
+      "subject": "When a second indexation loses the IndexationJob lock, its push notification can then show the winning run's progress and end as \"<Type>: indexation finished\", while the winner's own notification freezes until it completes",
+      "question": "Why does an indexation notification that failed with \"already in progress\" later show another document type's progress?",
+      "questions": [
+        "Why does the Indexation process blade of a Category build show Product: indexation finished 413 of 413?",
+        "Why does the indexation progress of a running Product build stop at 50 of 413 and then jump to completed?",
+        "Is the indexation notification of a concurrent losing run reliable?"
+      ],
+      "concepts": [
+        "search-index",
+        "background-job"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "POST /api/platform/pushnotifications"
+      ],
+      "scope": [
+        "job=indexalldocumentsjob",
+        "surface=admin-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
