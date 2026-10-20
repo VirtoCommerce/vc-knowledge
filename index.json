@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:58:00.128Z",
-  "count": 1134,
+  "generated": "2026-10-20T16:01:41.497Z",
+  "count": 1137,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -752,7 +752,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16406,7 +16406,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16979,6 +16979,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A34914DC",
+      "path": "entries/KB-A34914DC.md",
+      "subject": "The storefront order details page /account/orders/{orderId} renders without the left account rail, so no 'Sales Rep hub' rail section shows there even for a sales rep",
+      "question": "Is the left account navigation rail (Sales Rep hub, Purchasing, Corporate sections) shown on the order details page /account/orders/{orderId}?",
+      "questions": [
+        "Why does the Sales Rep hub rail section disappear when a rep opens an order from the hub?",
+        "Which account routes hide the left sidebar on the storefront?",
+        "Does an assertion that the Sales Rep hub rail section is present on every screen hold on /account/orders/{orderId}?"
+      ],
+      "anchors": [
+        "/account/orders/{id}"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -20125,7 +20147,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -23225,7 +23247,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -25753,6 +25775,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-F7D9A180",
+      "path": "entries/KB-F7D9A180.md",
+      "subject": "Returning to /company/dashboard after the other Sales Rep hub pages re-renders the same widget blocks: six KPI tiles plus My recent orders, Top sellers and Tasks & due dates",
+      "question": "Does the Sales Rep hub dashboard /company/dashboard render the same widget blocks when a rep comes back to it after visiting other hub pages?",
+      "questions": [
+        "Which widget blocks does the Sales Rep hub dashboard show to a plain rep with a never-saved layout?",
+        "Does the plugin-served hub dashboard duplicate or drop widgets on a second visit in the same session?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "Query.salesRepLayout"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F7E4DB8E",
       "path": "entries/KB-F7E4DB8E.md",
       "subject": "customerOrders/search keyword is a prefix match, results newest first",
@@ -26167,6 +26211,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FB821F18",
+      "path": "entries/KB-FB821F18.md",
+      "subject": "The first client-side navigation into a /company/* Sales Rep hub route also loads the host's Company parent-route component (pages/company/index.vue, which renders AccountShell) from the storefront, next to the plugin's page chunks",
+      "question": "Which host (non-plugin) scripts does the storefront fetch when a rep first clicks into a Sales Rep hub route such as /company/dashboard from /account/dashboard?",
+      "questions": [
+        "Does an every-script-from-the-plugin-folder assertion for Sales Rep hub pages need to exempt the host Company route chunk?",
+        "Why is client-app/pages/company/index.vue requested when opening the Sales Rep hub dashboard?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "Query.store.plugins"
+      ],
+      "scope": [
+        "module=virtocommerce.salesrep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
