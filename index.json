@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:16:15.693Z",
-  "count": 1109,
+  "generated": "2026-10-20T15:18:41.110Z",
+  "count": 1115,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -503,6 +503,25 @@
       "disputed": 0,
       "resolved": 1,
       "contested": 1
+    },
+    {
+      "id": "KB-0596D202",
+      "path": "entries/KB-0596D202.md",
+      "subject": "The Time select in the call popups is a read-only combobox with 96 quarter-hour options whose list opens at 12:00 AM; ArrowDown, Enter and Escape work, Home/End/PageDown only scroll and typing does not jump",
+      "question": "How does the Time select in the Schedule call / New task Call popup behave for a keyboard user (opening position, Home/End, type-ahead, selecting)?",
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/company/tasks"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-05F297E6",
@@ -1508,6 +1527,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-100B4E3A",
+      "path": "entries/KB-100B4E3A.md",
+      "subject": "In the Schedule call popup the empty required Due date shows 'this is a required field' as soon as the field has been focused and left, and the 16 px message moves every control below it down and (dialog re-centred) every control above up",
+      "question": "When does the Due date required error appear in the Schedule call popup, does it shift the layout, and is it announced?",
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/company/tasks"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5971,6 +6009,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3F907E24",
+      "path": "entries/KB-3F907E24.md",
+      "subject": "The dashboard Tasks widget shows a call's sub-line on one line with an ellipsis and cuts it at about 34 of 47 characters from 1280 px up and at 375 px; it fits from 600 to 1024 px",
+      "question": "How does the Sales Rep dashboard Tasks widget render a call's 'Due <date>, <time> · <customer> · Call' line at different viewport widths, and can the cut-off part be read?",
+      "anchors": [
+        "/company/dashboard"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -13231,6 +13287,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-8424A640",
+      "path": "entries/KB-8424A640.md",
+      "subject": "In the sales-rep Schedule call and New task popups each select list opens on keyboard focus and stays open after Tab, so up to four lists pile up and cover the focused Due date, Time or Notes field",
+      "question": "What happens to the Customer, Type, Time and Priority select lists when a keyboard user tabs through the Schedule call / New task popup, and is the focused field still visible?",
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/company/tasks"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-843D0515",
       "path": "entries/KB-843D0515.md",
       "subject": "Deleting an org a Sales Rep serves leaves it in the rep record; a PUT /api/sales-rep that echoes it back 500s",
@@ -16079,6 +16154,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-9E025CA7",
+      "path": "entries/KB-9E025CA7.md",
+      "subject": "The Add to calendar checkboxes and the Customer, Time, Due date and Priority input wrappers in the call popups draw their boundary in neutral-400 #a3a3a3, 2.52:1 on white, in every preset",
+      "question": "What contrast do the boundary of the Add to calendar checkboxes and of the select/input fields in the Schedule call popup have, and is it preset-dependent?",
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/company/tasks"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9E0ED0F4",
       "path": "entries/KB-9E0ED0F4.md",
       "subject": "Query.organizationReturns lists an organization's returns only for an active member holding xapi:my_organization:return:view; everyone else gets one uniform Forbidden",
@@ -16950,6 +17044,23 @@
       ],
       "scope": [
         "feature=coupons-sidebar",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A54BD176",
+      "path": "entries/KB-A54BD176.md",
+      "subject": "At 375 px a signed-in storefront page has an icon-only header button (button.relative with aria-haspopup=dialog, 24x24) with no accessible name, reported by axe button-name as critical",
+      "question": "Does the storefront header at mobile width contain a button without an accessible name when signed in as a sales rep on /company/dashboard?",
+      "anchors": [
+        "/company/dashboard"
+      ],
+      "scope": [
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
