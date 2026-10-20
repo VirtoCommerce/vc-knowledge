@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T19:32:17.088Z",
-  "count": 1170,
+  "generated": "2026-10-20T19:32:34.563Z",
+  "count": 1171,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -18811,6 +18811,32 @@
         "principal=customer",
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AD528300",
+      "path": "entries/KB-AD528300.md",
+      "subject": "Event-based product indexation does not take the IndexationJob lock, so a product edit reaches search while a full manual Build is running",
+      "question": "Is a product change indexed while a full search index build is running?",
+      "questions": [
+        "Does event-based indexation wait for a running manual index build?",
+        "Can a renamed product be found in storefront search during a full Product reindex?"
+      ],
+      "concepts": [
+        "search-index",
+        "background-job"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "Query.products"
+      ],
+      "scope": [
+        "setting=catalog.search.eventbasedindexation.enable",
+        "surface=admin-rest"
       ],
       "plane": "experiential",
       "status": "active",
