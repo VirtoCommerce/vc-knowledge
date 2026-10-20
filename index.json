@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T15:31:19.536Z",
-  "count": 1117,
+  "generated": "2026-10-20T15:32:31.775Z",
+  "count": 1118,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2729,6 +2729,28 @@
         "/account/addresses"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-19E3F96A",
+      "path": "entries/KB-19E3F96A.md",
+      "subject": "The category page's infinite-scroll view_item_list is sent with the whole accumulated product list, from category.vue changeProductsPage, unchanged since vc-frontend 2.40.0",
+      "question": "Which code builds the category page's next-page view_item_list payload, and since which vc-frontend version does it send the accumulated grid?",
+      "questions": [
+        "Is the repeated page-1 items in category_<slug>_page_2 view_item_list new with the dom-analytics engine?",
+        "Does the dom-analytics markup-role engine send view_item_list for the category grid?",
+        "Why does view_item_list for page 2 of a category contain page-1 products?"
+      ],
+      "anchors": [
+        "window.dataLayer"
+      ],
+      "scope": [
+        "element=google-analytics",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
