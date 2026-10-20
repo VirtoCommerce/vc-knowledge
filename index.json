@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T11:36:10.294Z",
-  "count": 1058,
+  "generated": "2026-10-20T11:51:10.255Z",
+  "count": 1059,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11572,6 +11572,28 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-791A58AB",
+      "path": "entries/KB-791A58AB.md",
+      "subject": "Typing a keyword in the admin Sales Reps grid while on page 2 keeps skip=20, so a 1-hit search shows an empty grid",
+      "question": "Does a keyword search in the admin Sales Reps grid reset paging to page 1?",
+      "questions": [
+        "Why does the Sales Reps admin search show No results found for a rep that exists?",
+        "What skip does POST /api/sales-rep/search send after typing a keyword on page 2?"
+      ],
+      "anchors": [
+        "/apps/vc-sales-rep",
+        "POST /api/sales-rep/search"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
