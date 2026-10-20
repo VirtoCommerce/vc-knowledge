@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T10:36:03.448Z",
-  "count": 1052,
+  "generated": "2026-10-20T10:45:15.860Z",
+  "count": 1053,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1453,6 +1453,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-110978AE",
+      "path": "entries/KB-110978AE.md",
+      "subject": "Storefront wishlist/quote line 'Price per item' switches from list price to actual price when the .vc-line-items container drops to 896px or below (about 1280px viewport on account pages)",
+      "question": "Which price slot (column vs 'Price per item' property) does a storefront line item show on cart, wishlist and quote pages at common desktop widths?",
+      "questions": [
+        "At what viewport width does the storefront line item switch to the narrow card layout?",
+        "Why does the wishlist show a different unit price on a 1280px laptop than on a 1920px monitor?",
+        "Is the vc-line-item price layout driven by viewport or container width?"
+      ],
+      "anchors": [
+        "/account/lists/{id}",
+        "/account/quotes/{id}/edit",
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
