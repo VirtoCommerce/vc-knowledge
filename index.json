@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T14:41:00.071Z",
-  "count": 1101,
+  "generated": "2026-10-20T14:44:05.232Z",
+  "count": 1102,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -22605,6 +22605,28 @@
       ],
       "scope": [
         "surface=vendor-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E1585C7A",
+      "path": "entries/KB-E1585C7A.md",
+      "subject": "The Sales Rep hub customer profile and customer orders routes carry the organization platform GUID, not the business key: /company/my-customers/<guid> and /company/my-customers/<guid>/orders/<orderId>",
+      "question": "Is the :organizationId in /company/my-customers/:organizationId the platform GUID or a human business key like ORG-001?",
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/company/my-customers/{id}/orders"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
