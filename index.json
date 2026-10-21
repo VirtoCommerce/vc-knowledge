@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T16:32:50.702Z",
-  "count": 1196,
+  "generated": "2026-10-21T16:38:49.819Z",
+  "count": 1202,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -345,7 +345,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-04095FB5",
@@ -1988,6 +1989,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-12E99BF8",
+      "path": "entries/KB-12E99BF8.md",
+      "subject": "On the storefront origin POST /api/mfa/resend is refused by the ingress with 405 while /connect/token (mfa grant) and /api/otp/request are routed, so the storefront MFA step's Resend code call cannot reach the platform",
+      "question": "Can the storefront MFA code step request a new code (POST /api/mfa/resend) through the storefront origin?",
+      "anchors": [
+        "POST /api/mfa/resend",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa",
+        "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1328216A",
       "path": "entries/KB-1328216A.md",
       "subject": "A cart line whose effective (sale) price becomes 0 is flagged CART_PRODUCT_UNAVAILABLE on the next place-order attempt, and the stored line price stays stale until then",
@@ -3103,6 +3123,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1D5CC609",
+      "path": "entries/KB-1D5CC609.md",
+      "subject": "Admin Security > Users > user: the User information blade carries Lock account, Change password and Login on behalf in its toolbar, an Active sessions widget (IP address, User agent; Refresh, Terminate all) and a Sign-in log widget",
+      "question": "Where in the Admin SPA can an operator see or terminate a user's active sessions, lock the account, or log in on behalf?",
+      "anchors": [
+        "GET /api/platform/security/permissions"
+      ],
+      "scope": [
+        "feature=active-sessions",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5402,6 +5439,26 @@
       "scope": [
         "surface=graphql",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3466E783",
+      "path": "entries/KB-3466E783.md",
+      "subject": "A failed password grant for a NONEXISTENT user answers the collapsed login_failed on the wire (same envelope as every token error), yet the Admin Sign-in log records the true cause UserNotFound",
+      "question": "What does a failed password grant return for a nonexistent user, and does the Admin Sign-in log record the same reason?",
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=sign-in",
+        "grant=password",
+        "surface=admin-spa",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11616,6 +11673,26 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6B10CB0E",
+      "path": "entries/KB-6B10CB0E.md",
+      "subject": "The Admin \"Store authentication types\" blade lists only Password and the external IdPs (no OTP), while the xAPI authenticationTypes and the storefront buttons follow different lists per stand; the storefront drops the Virto IdP",
+      "question": "Which sign-in methods does the store Authentication blade control, and what does the storefront render from store.settings.authenticationTypes?",
+      "anchors": [
+        "Query.store",
+        "GET /api/platform/settings/OtpSignIn.Enabled"
+      ],
+      "scope": [
+        "feature=authentication-types",
+        "surface=admin-spa",
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -17971,6 +18048,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-A3E16349",
+      "path": "entries/KB-A3E16349.md",
+      "subject": "A password grant for a contact of a TRUSTED (linked) store succeeds on the other store (200); a contact with a foreign or no storeId is refused with user_cannot_login_in_store even with the right password",
+      "question": "Can a customer of a linked (trusted) store sign in to this store with a password, and what happens with foreign-store and no-store accounts?",
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=store-access",
+        "grant=password",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A424AB94",
       "path": "entries/KB-A424AB94.md",
       "subject": "The storefront sign-in page does not remember the password-view choice or the typed email: reload and every view switch return to an empty one-time-code view",
@@ -23064,6 +23159,24 @@
       "scope": [
         "module=task-management",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D42D6CAA",
+      "path": "entries/KB-D42D6CAA.md",
+      "subject": "Admin Sign-in log vocabularies disagree: with VirtoCommerce.MFA installed, the Type filter offers \"Sign-in code\" (no MFA, no OTP option) and selecting it lists rows whose Type column reads MFA; the Outcome filter gains \"Awaiting second factor\"",
+      "question": "What Type and Outcome values does the Admin Sign-in log expose once MFA and OTP are installed, and are the filter labels the same as the grid values?",
+      "anchors": [
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=sign-in-log",
+        "surface=admin-spa",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
