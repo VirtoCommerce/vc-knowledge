@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T15:29:07.796Z",
-  "count": 1190,
+  "generated": "2026-10-21T15:48:59.113Z",
+  "count": 1191,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -25484,6 +25484,29 @@
       "scope": [
         "principal=customer",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EC06E878",
+      "path": "entries/KB-EC06E878.md",
+      "subject": "The Admin SPA re-POSTs its whole cached user profile to /api/platform/profiles/currentuser while the user navigates, which overwrites a UserProfile setting changed meanwhile through settings/v2/me/values",
+      "question": "Can a UserProfile setting changed through POST /api/platform/settings/v2/me/values be overwritten by an Admin SPA session that is already open for the same user?",
+      "questions": [
+        "Why did my settings/v2/me value revert after I used the Admin UI?",
+        "Does POST /api/platform/profiles/currentuser send every profile setting or only the changed one?",
+        "Is there a lost-update between an open Admin SPA tab and the settings v2 me API?"
+      ],
+      "anchors": [
+        "POST /api/platform/profiles/currentuser",
+        "POST /api/platform/settings/v2/me/values"
+      ],
+      "scope": [
+        "role=administrator",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
