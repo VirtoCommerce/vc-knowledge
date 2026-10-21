@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T15:50:58.732Z",
-  "count": 1191,
+  "generated": "2026-10-21T15:53:54.441Z",
+  "count": 1192,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15963,6 +15963,28 @@
       "scope": [
         "module=virtocommerce.xcart",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9314E8DA",
+      "path": "entries/KB-9314E8DA.md",
+      "subject": "The /cart line quantity field drops '-', '.' and 'e' keystrokes but accepts the same characters when the value is pasted, and commits typed values on a debounce before blur",
+      "question": "On /cart, can a buyer enter a negative, decimal or exponent quantity into a line's quantity field, by typing or by pasting?",
+      "questions": [
+        "Does the cart quantity stepper block the minus sign, decimal point and letter e?",
+        "Does pasting -1 or 1.5 into the /cart quantity field reach changeCartItemsQuantity?",
+        "Does the cart quantity field send ChangeFullCartItemsQuantity before the field loses focus?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.changeCartItemsQuantity"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
