@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T16:05:58.721Z",
-  "count": 1193,
+  "generated": "2026-10-21T16:14:19.481Z",
+  "count": 1194,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3919,6 +3919,29 @@
       ],
       "scope": [
         "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-262ADDFB",
+      "path": "entries/KB-262ADDFB.md",
+      "subject": "A password-grant token request for a temporarily locked-out account returns 400 invalid_grant with code user_is_temporary_locked_out, and the response body carries lockoutSecondsRemaining (null) and userId (null)",
+      "question": "What does POST /connect/token grant_type=password return for an account that is temporarily locked out?",
+      "questions": [
+        "Does the password grant response include lockoutSecondsRemaining like the OTP grant does?",
+        "What error code does the token endpoint give when an account is temporarily locked out after failed attempts?",
+        "Why does the admin token request return 400 user_is_temporary_locked_out?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=account-lockout",
+        "grant=password",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",

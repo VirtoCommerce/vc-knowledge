@@ -1,2 +1,3 @@
 {"at":"2026-10-21T08:45:37.591Z","kind":"session","session":"8824b1c0","tools":120,"turns":5,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-21T07:22:49.676Z","lastAt":"2026-10-21T07:44:39.749Z","who":"Lenajava1"}
 {"at":"2026-10-21T13:30:47.957Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
+{"at":"2026-10-21T15:38:37.370Z","kind":"restart","why":"transcript-moved","priorTools":244,"who":"Lenajava1"}
