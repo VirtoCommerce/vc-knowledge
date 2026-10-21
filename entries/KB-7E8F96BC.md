@@ -21,5 +21,13 @@ evidence:
     at: 2026-10-20T19:02:01.574Z
     by: session:70c763de
     who: yuskithedeveloper
+  - method: observation
+    deployment: local
+    at: 2026-10-21T00:28:50.248Z
+    by: session:70c763de
+    bodyHash: 7a013b174e08
+    defect: VCST-6467
+    who: yuskithedeveloper
+    note: "Re-mark only, no new observation: the kit-level row reservation gap is filed as VCST-6467."
 ---
 Firefox 151, 1440x900, theme 2.60.0, signed in as a Sales Representative. On /account/profile the First name was emptied with Ctrl+A, Delete and Tab. Measured with getBoundingClientRect before and after: the First name details row goes from display none to flex (margin-top 4px + min-height 12px, a 10 px font), and the First name wrapper grows from 66 to 82 px. Last name, Email, the Default language and Default currency selects and the Update button all move down 16 px. Nothing moves horizontally and nothing above First name moves. The cause is in the kit: VcInputDetails hides an empty details row (empty:hidden) unless the consumer sets showEmptyDetails, which VcInput supports, and the profile page does not set it. Typing the value back removes the message and the layout returns. Nothing was saved; Update stays disabled.
