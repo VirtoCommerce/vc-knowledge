@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T15:53:54.441Z",
-  "count": 1192,
+  "generated": "2026-10-21T16:05:58.721Z",
+  "count": 1193,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -753,6 +753,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-089B3B10",
+      "path": "entries/KB-089B3B10.md",
+      "subject": "A refund request that reuses the transactionId of an already Processed refund on the same payment fails with PAYMENT_FAILED 'An error occurred while saving the entity changes', whatever the amount",
+      "question": "Why does a second refund on a payment return PAYMENT_FAILED 'error occurred while saving the entity changes'?",
+      "questions": [
+        "Does POST /api/order/payments/payment/refund reject an over-refund or is the failure caused by a duplicate transactionId?",
+        "Must every refund on a payment carry a unique transactionId?",
+        "What does a repeat refund with the same transactionId return?"
+      ],
+      "anchors": [
+        "POST /api/order/payments/payment/refund"
+      ],
+      "scope": [
+        "module=virtocommerce.orders 3.1018.0",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
