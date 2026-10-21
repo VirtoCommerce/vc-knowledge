@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T16:38:49.819Z",
-  "count": 1202,
+  "generated": "2026-10-21T16:51:53.682Z",
+  "count": 1203,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13342,6 +13342,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7B9A982F",
+      "path": "entries/KB-7B9A982F.md",
+      "subject": "On /cart the line-item quantity stepper sends changeCartItemsQuantity (not changeCartItemQuantity); '-' is disabled at qty 1 and line total / Subtotal recompute to unit price x qty",
+      "question": "storefront /cart page quantity stepper: which GraphQL mutation fires on '+' / '-', is '-' disabled at qty 1, and how do line total and subtotal update",
+      "questions": [
+        "what mutation does the cart page send when the quantity is changed",
+        "is the Decrease quantity button disabled at quantity 1 on the cart page",
+        "does the cart line total update after clicking plus on /cart",
+        "which mutation does the PDP plus button use to add to cart"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.changeCartItemsQuantity",
+        "Mutation.updateCartQuantity"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
