@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T08:27:48.050Z",
-  "count": 1175,
+  "generated": "2026-10-21T11:50:39.245Z",
+  "count": 1176,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -17070,6 +17070,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9F8D0023",
+      "path": "entries/KB-9F8D0023.md",
+      "subject": "An indexation skipped because the IndexationJob lock is held is logged at Error level (\"Indexation skipped: the 'IndexationJob' lock is held by another run…\") on the pod that ran it",
+      "question": "Is a search index build skipped by IndexationJob lock contention visible in the platform logs?",
+      "questions": [
+        "What log line does the platform write when a second indexation finds the IndexationJob lock held?",
+        "How do I find a silently skipped search index build in the pod logs?"
+      ],
+      "concepts": [
+        "search-index",
+        "background-job"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index"
+      ],
+      "scope": [
+        "evidence=pod-logs",
+        "job=indexalldocumentsjob",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
