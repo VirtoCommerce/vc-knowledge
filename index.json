@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T16:32:43.163Z",
-  "count": 1195,
+  "generated": "2026-10-21T16:32:50.702Z",
+  "count": 1196,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -22285,6 +22285,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CC18E96D",
+      "path": "entries/KB-CC18E96D.md",
+      "subject": "The MFA module's switches are a global Boolean (Settings > Platform > Security > Multi-factor authentication, default off) and a per-store dropdown (Store > Settings > Store > Security, default Use global setting); neither is exposed anonymously through xAPI",
+      "question": "Where is multi-factor authentication switched on, and can the storefront or an anonymous client read whether a store requires it?",
+      "anchors": [
+        "GET /api/platform/settings/MultiFactorAuthentication.Enabled",
+        "GET /api/stores/{id}",
+        "Query.store"
+      ],
+      "scope": [
+        "feature=mfa",
+        "surface=admin-spa",
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
