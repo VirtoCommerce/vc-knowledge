@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T13:57:55.647Z",
-  "count": 1184,
+  "generated": "2026-10-21T13:58:05.969Z",
+  "count": 1185,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -24048,6 +24048,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DF95C2F6",
+      "path": "entries/KB-DF95C2F6.md",
+      "subject": "Admin header global search (Ctrl/Cmd+K) is client-side: built-in providers call settings v2 schema and security users/roles search, there is no /api/platform/search endpoint",
+      "question": "Which endpoints does the Admin SPA header global search (Ctrl/Cmd+K) call, and which providers does it have?",
+      "questions": [
+        "How does Ctrl+K search work in the Virto admin?",
+        "Can modules add results to the admin header search?"
+      ],
+      "anchors": [
+        "GET /api/platform/settings/v2/global/schema",
+        "POST /api/platform/security/users/search",
+        "POST /api/platform/security/roles/search"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
