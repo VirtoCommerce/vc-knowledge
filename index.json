@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T13:46:47.855Z",
-  "count": 1183,
+  "generated": "2026-10-21T13:57:55.647Z",
+  "count": 1184,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14925,6 +14925,27 @@
         "KB-1D885AE7",
         "KB-6161BC89"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8A8FBB97",
+      "path": "entries/KB-8A8FBB97.md",
+      "subject": "Admin SPA main menu collapsed state is stored per user in the MainMenu.State profile setting and survives reload",
+      "question": "Where is the Admin SPA main menu collapsed/expanded state persisted (POST /api/platform/profiles/currentuser, MainMenu.State)?",
+      "questions": [
+        "Does the admin menu stay collapsed after reload?",
+        "Which setting stores the admin main menu collapse state?"
+      ],
+      "anchors": [
+        "POST /api/platform/profiles/currentuser",
+        "/api/platform/settings/v2/me/values"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
