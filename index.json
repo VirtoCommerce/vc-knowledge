@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T16:14:19.481Z",
-  "count": 1194,
+  "generated": "2026-10-21T16:32:43.163Z",
+  "count": 1195,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -21232,6 +21232,27 @@
       "scope": [
         "element=google-analytics",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C196A782",
+      "path": "entries/KB-C196A782.md",
+      "subject": "With VirtoCommerce.MFA installed, POST /connect/token grant_type=mfa and POST /api/mfa/resend answer a bogus two-factor token with invalid_two_factor_token; the grant is advertised in the OIDC discovery document only where the module is installed",
+      "question": "What do the MFA endpoints return for an invalid two-factor token, and how do I know a stand has the MFA grant?",
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/mfa/resend",
+        "POST /api/mfa/signin/send",
+        "GET /.well-known/openid-configuration"
+      ],
+      "scope": [
+        "feature=mfa",
+        "grant=mfa",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
