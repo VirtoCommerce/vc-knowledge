@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T13:58:05.969Z",
-  "count": 1185,
+  "generated": "2026-10-21T14:02:47.923Z",
+  "count": 1186,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4660,6 +4660,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2E5408CA",
+      "path": "entries/KB-2E5408CA.md",
+      "subject": "GET /api/platform/settings/v2/global/schema and POST users/search + roles/search return 403 to a non-admin Manager holding only platform:setting:access + platform:security:access, and 200 once platform:setting:read + platform:security:read are added; no platform:access permission exists to grant",
+      "question": "Which permission does a non-admin back-office user need to call GET /api/platform/settings/v2/global/schema and the users/roles search endpoints — is *:access enough?",
+      "questions": [
+        "Does platform:setting:access allow reading the global settings schema?",
+        "Can a user with platform:security:access but not platform:security:read search users or roles?",
+        "Does a platform:access permission exist to grant to a restricted back-office role?"
+      ],
+      "anchors": [
+        "GET /api/platform/settings/v2/global/schema",
+        "POST /api/platform/security/users/search",
+        "POST /api/platform/security/roles/search",
+        "GET /api/platform/security/permissions"
+      ],
+      "scope": [
+        "actor=back-office-non-admin",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
