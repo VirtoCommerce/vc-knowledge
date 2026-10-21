@@ -1,0 +1,2 @@
+{"at":"2026-10-21T06:46:53.035Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
+{"at":"2026-10-21T06:46:53.166Z","kind":"flush","entries":0,"lines":10,"swept":["38cd1260.jsonl","3e73e189.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
