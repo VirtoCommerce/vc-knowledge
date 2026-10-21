@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T08:22:04.641Z",
-  "count": 1172,
+  "generated": "2026-10-21T08:27:48.050Z",
+  "count": 1175,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2535,6 +2535,29 @@
       "trust": 6,
       "disputed": 0,
       "resolved": 4
+    },
+    {
+      "id": "KB-1730D0BC",
+      "path": "entries/KB-1730D0BC.md",
+      "subject": "salesRepActivities categoryCounts.orders counts cancelled (IsCancelled) rep orders, which salesRepCustomerOrderStatistics excludes",
+      "question": "Does the salesRepActivities Orders category count include cancelled orders that the order statistics exclude?",
+      "questions": [
+        "Why does the activity page Orders badge differ from the dashboard YTD order count for the same rep?",
+        "Are IsCancelled orders included in salesRepActivities orders count?"
+      ],
+      "anchors": [
+        "Query.salesRepActivities",
+        "Query.salesRepCustomerOrderStatistics",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-17555498",
@@ -22283,6 +22306,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-D04F3B53",
+      "path": "entries/KB-D04F3B53.md",
+      "subject": "In German the customer profile's Customer activity widget title breaks mid-word ('KUNDENAKTIVITÄ / T') at 1920 px and at 320 px, and its Last web login date wraps inside the value at 320 px",
+      "question": "Does the Customer activity widget header fit its translated title on /de/company/my-customers/{id}?",
+      "questions": [
+        "Why is 'Kundenaktivität' split across two lines on the sales-rep customer profile?",
+        "Does the Customer activity widget layout hold at 320 px in German?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "locale=de-de",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D080516B",
       "path": "entries/KB-D080516B.md",
       "subject": "organization membership statuses, which of them block sign-in, and how the storefront labels them",
@@ -24432,6 +24477,31 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E7239E4D",
+      "path": "entries/KB-E7239E4D.md",
+      "subject": "Sales-rep activity feeds and the customer activity widget print month-name dates in English for every non-English locale except German, while all UI strings, plurals and numbers are localized",
+      "question": "Are dates in the sales-rep activity feed and customer activity widget localized when the storefront language is French, Russian, Polish or Portuguese?",
+      "questions": [
+        "Why does /fr/company/activities show 'Oct 21, 2026' instead of a French date?",
+        "Which locales localize the date in 'during the hour of' rows on /company/activities?",
+        "Are the plugin's activity strings translated after switching language without reload?",
+        "Do ru/pl sign-in counts on the activity feed use correct plural forms?"
+      ],
+      "anchors": [
+        "/company/activities",
+        "/company/my-customers/{id}/activities",
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
