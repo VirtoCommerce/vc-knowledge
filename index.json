@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T15:15:33.773Z",
-  "count": 1188,
+  "generated": "2026-10-21T15:18:30.018Z",
+  "count": 1189,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -16591,6 +16591,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 8,
+      "disputed": 0
+    },
+    {
+      "id": "KB-97BDC6A5",
+      "path": "entries/KB-97BDC6A5.md",
+      "subject": "On Orders 3.1009.0, a user without order:read_prices gets order total and payment sum zeroed but capture and refund amounts unmasked in both inPayments[].captures/refunds and childrenOperations, and there is no withPrices flag",
+      "question": "On Orders 3.1009.0, does a back-office user without order:read_prices see capture and refund amounts in GET /api/order/customerOrders/{id}?",
+      "questions": [
+        "Was capture/refund amount masking already present before the Orders 3.1018 price protection?",
+        "Which order amounts does Orders 3.1009.0 hide from a role without order:read_prices?",
+        "Is the capture amount exposure to users without read_prices new in Orders 3.1018?"
+      ],
+      "anchors": [
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.orders 3.1009.0",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
