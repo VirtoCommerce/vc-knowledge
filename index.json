@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T15:21:16.123Z",
-  "count": 1189,
+  "generated": "2026-10-21T15:29:07.796Z",
+  "count": 1190,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7120,6 +7120,25 @@
       "trust": 4,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-4582DF34",
+      "path": "entries/KB-4582DF34.md",
+      "subject": "Generic export completes again with BackgroundJobs 3.1052.2",
+      "question": "Does POST /api/export/run (price list, JSON provider) finish on BackgroundJobs 3.1052.2?",
+      "anchors": [
+        "/api/export/run",
+        "/api/platform/pushnotifications"
+      ],
+      "scope": [
+        "module=virtocommerce.backgroundjobs",
+        "module=virtocommerce.export",
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-4593FC41",
