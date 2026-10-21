@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T13:09:26.749Z",
-  "count": 1178,
+  "generated": "2026-10-21T13:24:28.724Z",
+  "count": 1179,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -16409,6 +16409,31 @@
       "trust": 4,
       "disputed": 0,
       "resolved": 4
+    },
+    {
+      "id": "KB-973D7517",
+      "path": "entries/KB-973D7517.md",
+      "subject": "Settings v2 tenant-scoped saves reject unknown and wrong-tenant setting names with 400, but a wrong-typed value still returns 500 and a value outside allowedValues is saved with 204",
+      "question": "What does POST /api/platform/settings/v2/me/values (or tenant/{type}/{id}/values) return for an unknown setting, a setting of another tenant type, a wrong-typed value, or a value outside allowedValues?",
+      "questions": [
+        "Does settings v2 me/values accept a Store setting?",
+        "Is an unknown setting name a 400 or 500 on settings v2 save?",
+        "Does settings v2 validate allowedValues on save?",
+        "Is a mixed settings v2 body saved partially when one name is invalid?"
+      ],
+      "anchors": [
+        "POST /api/platform/settings/v2/me/values",
+        "POST /api/platform/settings/v2/tenant/{id}/{id}/values",
+        "POST /api/platform/settings/v2/global/values"
+      ],
+      "scope": [
+        "role=administrator",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-9751007F",
