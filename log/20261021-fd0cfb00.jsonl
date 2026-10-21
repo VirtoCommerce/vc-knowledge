@@ -1,2 +1,3 @@
 {"at":"2026-10-21T03:46:35.288Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Dan-BV"}
 {"at":"2026-10-21T03:47:34.287Z","kind":"flush","entries":0,"lines":13,"swept":["3d50441c.jsonl","67945945.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
+{"at":"2026-10-21T03:47:46.739Z","kind":"flush","entries":0,"lines":13,"swept":["3d50441c.jsonl","67945945.jsonl"],"retries":1,"ok":true,"convertedToConfirm":0,"who":"Dan-BV"}
