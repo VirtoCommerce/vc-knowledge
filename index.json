@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T13:06:25.858Z",
-  "count": 1177,
+  "generated": "2026-10-21T13:09:26.749Z",
+  "count": 1178,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10799,6 +10799,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6576E964",
+      "path": "entries/KB-6576E964.md",
+      "subject": "To switch the variation on a configured cart line's Variation section, remove the old variation item with removeConfigurationItem, then set the new one; updateConfigurationItem alone appends",
+      "question": "How do I replace the selected variation of a Variation-type configuration section on an existing cart line via xAPI?",
+      "questions": [
+        "Why does updateConfigurationItem keep the old variation on a Variation section?",
+        "Is appending a second variation on updateConfigurationItem intended?",
+        "What key does the cart use to find an existing configuration item per section type?"
+      ],
+      "anchors": [
+        "Mutation.updateConfigurationItem",
+        "Mutation.removeConfigurationItem"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
