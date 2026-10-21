@@ -20,5 +20,14 @@ evidence:
     at: 2026-10-14T14:43:45.361Z
     by: session:6630b76f
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_regression
+    build: 5609fc0c36e7302c
+    conditions: platform=3.1076.7; theme=2.59.0; browser=edge; viewport=375x812
+    at: 2026-10-21T13:42:53.379Z
+    by: session:624d35a1
+    bodyHash: 07eb82579c83
+    who: kutasinaelena
+    note: "Same on Edge at 375x812: the filter button left of the search box is an unnamed button in the accessibility tree and shows only the icon; Playwright locates it by hasText 'Filters'. At 768px the desktop variant is used and the button is named 'Filters'. Source orders/orders-mobile-filters.vue renders VcButton icon with a <span>Filters</span> child and no aria-label; unchanged since 2.58.0."
 ---
 At 375x812 (Firefox) the button left of the orders search box (44x44, filter icon, opens the Filters sidebar) appears in the accessibility snapshot as an unnamed button; its 'Filters' text span is in the DOM (a has-text match finds it) but not exposed as the accessible name. At 1920 the same control is named 'Filters'. Screen-reader users get an unlabelled button.

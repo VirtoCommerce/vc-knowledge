@@ -19,5 +19,14 @@ evidence:
     at: 2026-10-14T14:42:41.275Z
     by: session:6630b76f
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_regression
+    build: 5609fc0c36e7302c
+    conditions: platform=3.1076.7; theme=2.59.0; browser=edge; viewport=375x812
+    at: 2026-10-21T13:43:27.793Z
+    by: session:624d35a1
+    bodyHash: 71852e6f4faf
+    who: kutasinaelena
+    note: "Same on Edge, theme 2.59.0: no chips at 375 or 768 after applying Processing; at 1920 the Processing + Reset filters chips appear. The .orders__chips hidden-below-lg rule is identical in 2.58.0. KB-304B6A52 (queued this session) duplicates this entry and should be merged into it."
 ---
 At 375x812 (Firefox), opened the orders filter sidebar via the filter icon button, ticked Processing, tapped Apply: the sidebar closed and the list showed only the 4 Processing orders, but no chip, badge or Reset filters control appeared above the list and the filter icon button looked identical to its unfiltered state. At 1920 wide the same filter renders a 'Processing' chip plus a 'Reset filters' chip. vc-frontend orders.vue styles .orders__chips as hidden below the lg breakpoint, so this is by design; the only way to see or clear the filter on mobile is to reopen the sidebar (its Reset applies immediately and closes it). The mobile sidebar applies on Apply, not live while open.
