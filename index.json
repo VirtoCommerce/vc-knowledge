@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T11:50:39.245Z",
-  "count": 1176,
+  "generated": "2026-10-21T13:06:25.858Z",
+  "count": 1177,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5416,6 +5416,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-35375A55",
+      "path": "entries/KB-35375A55.md",
+      "subject": "An empty options list on a Variation configuration section is by design: Catalog REST clears options on save, and the storefront theme renders no Variation section",
+      "question": "Is an empty options list on a Variation-type product configuration section a bug or by design?",
+      "questions": [
+        "Why does productConfiguration return options [] for a Variation section?",
+        "Should a Variation configuration section render options on the storefront PDP?",
+        "Where do the choices of a Variation configuration section come from?"
+      ],
+      "anchors": [
+        "POST /api/catalog/products/configurations",
+        "Query.productConfiguration"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "surface=rest-api",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3584A055",
       "path": "entries/KB-3584A055.md",
       "subject": "PUT /api/order/customerOrders with an unknown currency code returns HTTP 500 'Sequence contains no matching element' instead of a 400",
@@ -6166,7 +6190,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -12605,7 +12629,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -15155,7 +15179,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
