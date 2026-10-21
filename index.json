@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-21T14:02:47.923Z",
-  "count": 1186,
+  "generated": "2026-10-21T15:03:28.842Z",
+  "count": 1188,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10031,6 +10031,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5B1912FA",
+      "path": "entries/KB-5B1912FA.md",
+      "subject": "A Store setting saved through settings v2 tenant/Store/{id}/values is not reflected in GET /api/stores/{id}?responseGroup=Full for several minutes (stale store cache), while the v2 GET shows it at once",
+      "question": "After POST /api/platform/settings/v2/tenant/Store/{id}/values, does GET /api/stores/{id} show the new store setting value immediately?",
+      "questions": [
+        "Does the Stores API see a store setting written via settings v2 right away?",
+        "Why does GET /api/stores/{id} still show the old setting after a settings v2 save?",
+        "Is there cache lag between settings v2 tenant writes and the store module?"
+      ],
+      "anchors": [
+        "POST /api/platform/settings/v2/tenant/{id}/{id}/values",
+        "GET /api/stores/{id}"
+      ],
+      "scope": [
+        "role=administrator",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -23758,6 +23781,28 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-DBD2EE69",
+      "path": "entries/KB-DBD2EE69.md",
+      "subject": "Admin header global search shows \"Nothing found\" and stays there when, after a zero-result query, the whole query is replaced in a single input event, although the providers' requests return matches; typing key by key shows them",
+      "question": "Can the Admin SPA header global search show \"Nothing found\" for a query that has matches?",
+      "questions": [
+        "Why does Ctrl+K search say Nothing found for admin when users exist?",
+        "Global search stale empty state after pasting a new query",
+        "Does the Admin global search refresh results when the query is replaced at once?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/users/search"
+      ],
+      "scope": [
+        "role=administrator",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DC2411FF",
