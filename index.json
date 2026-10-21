@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-20T19:32:34.563Z",
-  "count": 1171,
+  "generated": "2026-10-21T08:22:04.641Z",
+  "count": 1172,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -8408,6 +8408,32 @@
       "scope": [
         "browser=firefox",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-503A86A4",
+      "path": "entries/KB-503A86A4.md",
+      "subject": "Sales Rep hub stat-widget KPI cards (customer profile Purchased MTD / Avg order value) clip a 7-digit money value at desktop widths in en and wrap the currency symbol onto its own line from 6 digits in de; activity pages and dashboard count cards hold 123,456 counts and 8-digit money at 320–1440 px",
+      "question": "Do the Sales Rep hub KPI cards and activity surfaces still lay out correctly with very large counts and money values on mobile and desktop?",
+      "questions": [
+        "Does a 7-digit money value fit in the sales-rep customer profile KPI card?",
+        "Why does the $ sign wrap onto its own line in German on the sales-rep KPI cards?",
+        "Do /company/activities tab badges overflow at 320px with six-digit counts?",
+        "Is the money/currency separator in de formatting a breaking space on the storefront?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/company/dashboard",
+        "/company/activities",
+        "/company/my-customers/{id}/activities"
+      ],
+      "scope": [
+        "feature=sales-rep-hub",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
