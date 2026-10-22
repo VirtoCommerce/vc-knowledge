@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T15:17:34.222Z",
-  "count": 1222,
+  "generated": "2026-10-22T15:39:59.747Z",
+  "count": 1224,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10764,6 +10764,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-60BDFB34",
+      "path": "entries/KB-60BDFB34.md",
+      "subject": "On theme 2.61.0-pr-2598-9b6d, the GA4 add_to_wishlist item carries currency equal to the event currency when a product is added to a list from a category card",
+      "question": "Does the GA4 add_to_wishlist item carry a currency, and does it match the event currency?",
+      "questions": [
+        "What fields does the add_to_wishlist event item carry after adding a product to a list from a category card?",
+        "Is currency set on items of the add_to_wishlist GA4 event?"
+      ],
+      "anchors": [
+        "/account/lists/{id}"
+      ],
+      "scope": [
+        "integration=ga4",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-60E718B6",
       "path": "entries/KB-60E718B6.md",
       "subject": "On upstream vc-frontend 2.59.0-pr-2458 a zero-hit /search?barcode= lookup shifts layout on load (signed in: CLS 0.724 at 1920px, 0.798 at 375px), and at 375px it usually flickers empty view to skeletons to empty view (CLS 2.28)",
@@ -13605,6 +13626,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7C2824F4",
+      "path": "entries/KB-7C2824F4.md",
+      "subject": "On a list details page the row's X button (remove-item-button) is exposed to assistive tech as 'Remove from cart', but it removes the line from the list",
+      "question": "What accessible name does the remove (X) button on a /account/lists/{id} product row expose, and what does it do?",
+      "questions": [
+        "Why does a wishlist row say Remove from cart?",
+        "Is the list details remove-item button mislabelled for screen readers?"
+      ],
+      "concepts": [
+        "wishlist"
+      ],
+      "anchors": [
+        "/account/lists/{id}"
+      ],
+      "scope": [
+        "aspect=accessibility",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
