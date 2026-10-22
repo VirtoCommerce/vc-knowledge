@@ -20,3 +20,5 @@
 {"at":"2026-10-21T00:28:50.249Z","kind":"confirm","id":"KB-7E8F96BC","deployment":"local","trust":2,"defect":"ticket","buildMissing":"no-admin-token","client":"7d138f96","via":"mcp","call":"toolu_01S9a2DAyhJebqVnuTDCBeLF","topic":"sales rep call scheduling","who":"yuskithedeveloper","agent":"main"}
 {"at":"2026-10-21T00:28:50.331Z","kind":"confirm","id":"KB-B3E09B90","deployment":"local","trust":2,"defect":"ticket","buildMissing":"no-admin-token","client":"7d138f96","via":"mcp","call":"toolu_01VWYehd6vP3W8Lk9zoVd1RH","topic":"sales rep call scheduling","who":"yuskithedeveloper","agent":"main"}
 {"at":"2026-10-21T00:28:50.425Z","kind":"confirm","id":"KB-C55B3252","deployment":"local","trust":2,"defect":"ticket","buildMissing":"no-admin-token","client":"7d138f96","via":"mcp","call":"toolu_01VhQ83QJSesZd9aBusUydgz","topic":"sales rep call scheduling","who":"yuskithedeveloper","agent":"main"}
+{"at":"2026-10-21T12:45:29.873Z","kind":"restart","why":"state-dropped","who":"yuskithedeveloper"}
+{"at":"2026-10-21T19:45:52.509Z","kind":"restart","why":"state-dropped","who":"yuskithedeveloper"}
