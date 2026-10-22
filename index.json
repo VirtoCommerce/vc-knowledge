@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T13:14:05.872Z",
-  "count": 1207,
+  "generated": "2026-10-22T13:19:59.708Z",
+  "count": 1208,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -17291,6 +17291,30 @@
       "scope": [
         "buyer=authenticated-b2b",
         "module=virtocommerce.ucp 3.1010.0",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9D50E60B",
+      "path": "entries/KB-9D50E60B.md",
+      "subject": "On theme 2.61.0 before PR 2598, select_item, view_item and add_to_wishlist items carry no currency, and select_item items carry no index or item_list_id/item_list_name, while view_item_list items carry all of them",
+      "question": "Which fields does the GA4 select_item / view_item item carry compared with view_item_list items?",
+      "questions": [
+        "Does the select_item item have currency and item_list_id?",
+        "Does the view_item item currency match the event currency?",
+        "Is index sent on the select_item item?",
+        "What does the add_to_wishlist item contain?"
+      ],
+      "anchors": [
+        "/cart",
+        "/product/{id}"
+      ],
+      "scope": [
+        "integration=ga4",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
