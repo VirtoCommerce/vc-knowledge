@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T15:06:18.888Z",
-  "count": 1217,
+  "generated": "2026-10-22T15:09:49.028Z",
+  "count": 1218,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2939,7 +2939,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-1AC3D57E",
@@ -3410,6 +3410,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-20120AE0",
+      "path": "entries/KB-20120AE0.md",
+      "subject": "On theme 2.61.0-pr-2598-9b6d, each GA4 select_item item carries index equal to that product's index in the same list's view_item_list; infinite-scroll category pages are separate lists whose index restarts at 0",
+      "question": "Does the GA4 select_item item carry an index, and what is it relative to (whole list, page, widget)?",
+      "questions": [
+        "What index does select_item report for a product clicked on page 2 of an infinite-scroll category?",
+        "Is index on the select_item event or on its item?",
+        "Does a click on a page-1 product after page 2 has loaded still report the page-1 list id?",
+        "What index does a recommendations widget select_item carry?"
+      ],
+      "anchors": [
+        "/compare",
+        "/product/{id}"
+      ],
+      "scope": [
+        "integration=ga4",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
