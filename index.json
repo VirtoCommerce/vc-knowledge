@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T14:12:32.681Z",
-  "count": 1212,
+  "generated": "2026-10-22T14:34:18.881Z",
+  "count": 1214,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5784,6 +5784,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-3642CE3E",
+      "path": "entries/KB-3642CE3E.md",
+      "subject": "POST /api/page-builder-pages/create-group-page requires a non-empty content envelope; without content it returns 400 text/plain \"StoreId, Name and Content are required.\"",
+      "question": "What body does POST /api/page-builder-pages/create-group-page need and what does it return?",
+      "questions": [
+        "Why does create-group-page return 400 StoreId, Name and Content are required",
+        "Minimal request to create a Page Builder page over REST",
+        "What is the response shape of create-group-page"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/create-group-page",
+        "GET /api/page-builder-pages/languages",
+        "POST /api/page-builder-pages/search"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-36B307D8",
       "path": "entries/KB-36B307D8.md",
       "subject": "When a SQL Queries command times out, the API returns 500 with message \"Unknown error 258\" instead of the SqlClient \"Execution Timeout Expired\" text (Linux platform container).",
@@ -9954,6 +9978,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-58C11A20",
+      "path": "entries/KB-58C11A20.md",
+      "subject": "DELETE /api/page-builder-pages/grouped/{groupId} on a never-published Draft returns 200 {\"pageDeleted\":false,\"indexDeleted\":true}, and the group is gone (GET 404, search 0)",
+      "question": "What does DELETE /api/page-builder-pages/grouped/{groupId} return and does pageDeleted:false mean the page still exists?",
+      "questions": [
+        "How to tear down a Page Builder page via REST",
+        "Is pageDeleted false a failure on page builder delete"
+      ],
+      "anchors": [
+        "DELETE /api/page-builder-pages/grouped/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
