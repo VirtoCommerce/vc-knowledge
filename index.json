@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T15:05:30.011Z",
-  "count": 1215,
+  "generated": "2026-10-22T15:06:18.888Z",
+  "count": 1217,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -21677,6 +21677,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-C301933A",
+      "path": "entries/KB-C301933A.md",
+      "subject": "A page-builder page whose permalink contains a percent escape (e.g. /x%20y) is accepted but 404s at its natural URL, because the storefront router decodes the path before GetSlugInfo",
+      "question": "Does a page builder page with a % in its permalink open on the storefront at that URL?",
+      "questions": [
+        "What permalink does the storefront send to GetSlugInfo for an encoded URL?",
+        "Why does a Cyrillic page permalink open but a %20 permalink 404?",
+        "Is xAPI slugInfo matched against the raw or the decoded permalink?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "POST /api/page-builder-pages/create-group-page"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C34E7A94",
       "path": "entries/KB-C34E7A94.md",
       "subject": "A dateless sales-rep task marked complete on /company/tasks is counted and listed in the Completed tab; Reopen returns it to dateless open (dueDate null)",
@@ -26084,6 +26107,29 @@
       "scope": [
         "module=virtocommerce.xcatalog",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EC76B5AB",
+      "path": "entries/KB-EC76B5AB.md",
+      "subject": "POST grouped/{id}/content-json accepts an invalid settings.permalink (204) into a new Draft; after publish the content's settings.permalink diverges from the group permalink, and routing keeps using the group permalink",
+      "question": "Can the page-builder content-json endpoint store a permalink the group API rejects, and which permalink does the storefront route by?",
+      "questions": [
+        "Does content-json validate settings.permalink?",
+        "Which permalink do pageDocument and slugInfo use when page content settings carry a different permalink?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/grouped/{id}/content-json",
+        "Query.pageDocument",
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
