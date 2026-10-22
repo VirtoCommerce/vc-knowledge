@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T14:34:18.881Z",
-  "count": 1214,
+  "generated": "2026-10-22T14:42:01.994Z",
+  "count": 1215,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15306,6 +15306,30 @@
         "component=header-search-bar",
         "surface=storefront-ui",
         "viewport=desktop"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8AD383A4",
+      "path": "entries/KB-8AD383A4.md",
+      "subject": "Platform restore (POST /api/platform/import) of a PageBuilder package stores an invalid permalink verbatim even on the build whose REST endpoints reject it",
+      "question": "Does importing PageBuilder pages through platform backup/restore apply the permalink validation that the page REST endpoints enforce?",
+      "questions": [
+        "How can a page with an invalid (legacy) permalink be created once create/update reject it?",
+        "What is the PageBuilder module part shape inside a platform backup zip?",
+        "Does PageBuilderExportImport validate permalinks on import?"
+      ],
+      "anchors": [
+        "POST /api/platform/import",
+        "POST /api/platform/export",
+        "GET /api/page-builder-pages/grouped/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
