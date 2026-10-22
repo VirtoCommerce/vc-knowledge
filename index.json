@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T08:39:16.384Z",
-  "count": 1203,
+  "generated": "2026-10-22T08:40:14.356Z",
+  "count": 1204,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9713,6 +9713,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-56832A8E",
+      "path": "entries/KB-56832A8E.md",
+      "subject": "A punchout session returns its cart only once: every later createPunchoutRequisition by the owner gets SessionReturned and sends nothing",
+      "question": "What happens when a punchout buyer tries to create the requisition again after the session has already returned its cart?",
+      "questions": [
+        "Can a punchout session send its cart to the procurement system twice?",
+        "What errorCode does createPunchoutRequisition return for a session that already returned?",
+        "What happens when a punchout buyer presses Back and clicks Create requisition again?",
+        "Is a cart changed after the punchout return sent again?",
+        "What does a second tab get after the first tab returned the punchout cart?"
+      ],
+      "anchors": [
+        "Mutation.createPunchoutRequisition",
+        "/cart"
+      ],
+      "scope": [
+        "channel=punchout-session",
+        "module=punchout",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
