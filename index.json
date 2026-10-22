@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T15:39:59.747Z",
-  "count": 1224,
+  "generated": "2026-10-22T15:47:03.228Z",
+  "count": 1226,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10089,6 +10089,31 @@
       "status": "active",
       "trust": 1,
       "disputed": 2
+    },
+    {
+      "id": "KB-599B0720",
+      "path": "entries/KB-599B0720.md",
+      "subject": "The storefront resolves a page-builder permalink as the DECODED URL path: a stored '/x-100%' 400s at /x-100% (nginx) but renders at /x-100%25, and stored '%2F' / '%3F' permalinks 404 because GetSlugInfo receives '/' and '?'",
+      "question": "Which storefront URL opens a page-builder page whose permalink contains a bare % or an encoded %2F / %3F?",
+      "questions": [
+        "Does a permalink ending in 100% open on the storefront?",
+        "Why does a page with %2F in its permalink 404?",
+        "What permalink does the catch-all route send to GetSlugInfo?"
+      ],
+      "concepts": [
+        "seo-url"
+      ],
+      "anchors": [
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-59E4B5FC",
@@ -20634,6 +20659,27 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B617E312",
+      "path": "entries/KB-B617E312.md",
+      "subject": "vc-frontend boot sends GetPageContext with the raw location.pathname, but the catch-all route sends GetSlugInfo with vue-router's decoded pathMatch, so the seeded slugInfo cache is keyed under a different permalink whenever the path has a percent escape",
+      "question": "Do GetPageContext and GetSlugInfo use the same permalink string on storefront boot?",
+      "questions": [
+        "Why does the storefront send GetSlugInfo after GetPageContext already returned slugInfo?",
+        "Where does the storefront decode the URL path before slug lookup?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageContext"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
