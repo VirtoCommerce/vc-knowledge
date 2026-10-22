@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T15:47:03.228Z",
-  "count": 1226,
+  "generated": "2026-10-22T15:53:19.421Z",
+  "count": 1227,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -18596,6 +18596,29 @@
       "scope": [
         "principal=admin",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A51E21B6",
+      "path": "entries/KB-A51E21B6.md",
+      "subject": "Legacy Admin Design-page blade silently trims leading/trailing whitespace from the permalink before validating and saving it",
+      "question": "What does the legacy Content Pages Design-page blade store when the permalink has a leading or trailing space or tab?",
+      "questions": [
+        "Does the legacy page blade show a format error for a permalink with a leading space?",
+        "Is a trailing space in a page permalink normalized or rejected in Admin Content Pages?",
+        "Does POST /api/content/pages/{store} validate settings.permalink?",
+        "Why does the AngularJS page blade accept ' /my-page' but reject '/my page'?"
+      ],
+      "anchors": [
+        "POST /api/content/pages/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
