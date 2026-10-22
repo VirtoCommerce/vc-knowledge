@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T13:49:21.582Z",
-  "count": 1209,
+  "generated": "2026-10-22T13:50:23.334Z",
+  "count": 1211,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13849,6 +13849,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-7EFFA0AD",
+      "path": "entries/KB-7EFFA0AD.md",
+      "subject": "With global MFA on, a customer password grant with NO storeId answers two_factor_required and sends the code email; user_cannot_login_in_store is only reached with global off",
+      "question": "What does POST /connect/token answer for a customer with no storeId when MultiFactorAuthentication.Enabled is on, and is a code email sent first?",
+      "concepts": [
+        "sign-in"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa",
+        "setting=global-mfa-on",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7F535D52",
       "path": "entries/KB-7F535D52.md",
       "subject": "CyberSource sandbox authorization on the storefront cart is non-deterministic between runs on one build: the same card and amount can authorize cleanly to Processing, or be held for review and leave the order at Payment required.",
@@ -14172,6 +14193,24 @@
         "KB-14F26013",
         "KB-6FAB0205"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-83091BA9",
+      "path": "entries/KB-83091BA9.md",
+      "subject": "Wrong mfa codes feed the platform account lockout: four invalid_code answers, the fifth wrong code (and the right one after it) answers user_is_temporary_locked_out for 900 seconds",
+      "question": "How many wrong codes does the mfa grant accept before it refuses, and what does the refusal look like?",
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa",
+        "grant=mfa",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -18266,7 +18305,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -21447,7 +21486,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {

@@ -50,5 +50,13 @@ evidence:
     note: POST /api/notifications/journal with objectIds=[orderId], objectType=CustomerOrder returned the order's NewOrderStatusEmailNotification and OrderCreateEmailNotification rows with rendered bodies; objectType with the full CLR name returned 0.
     build: ad2e031743ee94a0
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 594519586290ed24
+    at: 2026-10-22T13:49:21.792Z
+    by: session:9b586f75
+    bodyHash: fd5fca579e50
+    who: Lenajava1
+    note: POST /api/notifications/journal keyword=<recipient email> returned MfaSignInEmailNotification rows with the rendered body and the 6-digit code; status Pending at first, Error later (SendGrid credits).
 ---
 POST /api/notifications/journal with {notificationType, keyword: <recipient email>, sort: 'createdDate:desc'} returns EmailNotificationMessage rows that already include from, to, cc, subject, body and tenantIdentity, so GET /api/notifications/journal/{id} is not needed for the body. keyword matched the to field (all hits had that recipient when combined with notificationType); keyword alone matched far more rows, so filter to client-side. On a deployment without SMTP the row is stored with status Error but the rendered body is present. to can hold several recipients separated by '; '.
