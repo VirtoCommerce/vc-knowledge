@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T15:09:49.028Z",
-  "count": 1218,
+  "generated": "2026-10-22T15:17:34.222Z",
+  "count": 1222,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1143,6 +1143,28 @@
       "contested": 1
     },
     {
+      "id": "KB-0B4DAD09",
+      "path": "entries/KB-0B4DAD09.md",
+      "subject": "Platform backup is AES-encrypted by default; restore of it needs the one-time password from the export response, or export with passwordProtect:false",
+      "question": "Why does POST /api/platform/import fail with \"Invalid backup password / No password available for AES encrypted stream\", and how is the backup password supplied?",
+      "questions": [
+        "How do I script a platform backup and restore round trip?",
+        "Where is the platform backup password returned?"
+      ],
+      "anchors": [
+        "POST /api/platform/export",
+        "POST /api/platform/import"
+      ],
+      "scope": [
+        "module=virtocommerce.backuprestore",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0B6067F8",
       "path": "entries/KB-0B6067F8.md",
       "subject": "UserType.lockedState is the storefront-reachable sign-in state",
@@ -1164,6 +1186,29 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0BA0AD5F",
+      "path": "entries/KB-0BA0AD5F.md",
+      "subject": "A PageBuilder permalink longer than 2048 characters returns HTTP 500 with the raw Postgres error instead of a 400",
+      "question": "What happens when a PageBuilder page permalink exceeds the database column length?",
+      "questions": [
+        "Is there a max length on PageBuilder permalinks?",
+        "Why does create-group-page return 500 value too long?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/create-group-page",
+        "PUT /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "db=postgresql",
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4579,7 +4624,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-2C889DD2",
@@ -18746,6 +18791,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-A7CA895E",
+      "path": "entries/KB-A7CA895E.md",
+      "subject": "Legacy PageBuilder page blade keeps a stale \"Other pages have the same permalink\" warning once the permalink becomes format-invalid",
+      "question": "Does the legacy Content Pages blade update the duplicate-permalink warning while the permalink format is invalid?",
+      "anchors": [
+        "POST /api/content/search"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A8067930",
       "path": "entries/KB-A8067930.md",
       "subject": "A vc-shell embedded app renders its own environment badge inside the platform iframe even though the shell knows it is embedded, so the badge appears twice.",
@@ -23179,6 +23241,30 @@
         "engine=chromium",
         "surface=storefront-ui",
         "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D0ED8CDD",
+      "path": "entries/KB-D0ED8CDD.md",
+      "subject": "PageBuilder page REST endpoints reject an invalid permalink with 400 text/plain; PUT validates only a changed permalink, case-only change counts as changed",
+      "question": "What do the PageBuilder page REST endpoints return for a permalink with spaces, ?, #, &, \\, // or ./.. segments, and when does PUT check it?",
+      "questions": [
+        "Does PUT /api/page-builder-pages/grouped re-validate an unchanged legacy permalink?",
+        "Is a 400 on PUT grouped a partial save of the other fields?",
+        "Which permalink characters does create-group-page accept?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/create-group-page",
+        "POST /api/page-builder-pages/grouped",
+        "PUT /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
