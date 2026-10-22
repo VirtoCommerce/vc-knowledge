@@ -25,5 +25,14 @@ evidence:
     at: 2026-10-20T14:14:49.817Z
     by: session:d992339e
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 594519586290ed24
+    conditions: theme=2.61.0-pr-2570-2fc9-2fc9261a; store=B2B-store; browser=chromium
+    at: 2026-10-22T13:13:58.104Z
+    by: session:b1c1bce0
+    bodyHash: 83dafbc53f8c
+    who: Lenajava1
+    note: "Category /printers: view_item_list id category_printers_page_1, name 'Category \"Printers\" (page 1)'; a card-title click pushed one select_item with the same id/name, then view_item. PDP bought-together and cart Recently browsed (new tab) behaved as described."
 ---
 Read window.dataLayer on vcst (theme 3.1.0-pr-11-d67b-d67b0e0a, Chromium 1920/1280). Category /printers/all-in-one as a guest: exactly one view_item_list (item_list_id 'category_printers/all-in-one_page_1', item_list_name 'Category "Inkjet Printers" (page 1)', related_type category), and a click on a product title pushed one select_item with the same id and name before view_item. PDP 'Customers bought together': one view_item_list with item_list_id 'recommended_products_bought-together' and name 'Customers bought together <product name>' (related_type product). A click pushed one select_item with the same id and name. PDP of a product with variations (AGENT-TEST-Variation-Stock-Master): one view_item_list with item_list_id 'variations' and name 'Product variations <name>'. Its items include the master itself next to the variation. Clicking the variation row link pushed only view_item on the variation page, no select_item. /cart signed in: one view_item_list with item_list_id 'recently_browsed_products', name 'Recently browsed', after view_cart and begin_checkout, which both fire on simply loading /cart. A click pushed one select_item with the same id and name, and the link opened in a new tab. No list pushed view_item_list twice for one render.
