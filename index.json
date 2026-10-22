@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T12:16:58.613Z",
-  "count": 1204,
+  "generated": "2026-10-22T12:21:13.856Z",
+  "count": 1205,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14234,6 +14234,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-83C7E8A4",
+      "path": "entries/KB-83C7E8A4.md",
+      "subject": "On a configurable PDP the None-option row's fallback placeholder image has no alt attribute, so axe image-alt (critical) fires once per optional Product section",
+      "question": "Does the None option row image in a configurable PDP Product section have alt text?",
+      "questions": [
+        "Why does axe report image-alt on the configurable product page after expanding the optional sections?",
+        "Is the placeholder image of the None option in Configure the parameters announced or hidden for screen readers?"
+      ],
+      "anchors": [
+        "/product/{id}"
+      ],
+      "scope": [
+        "feature=product-configuration",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8424A640",
       "path": "entries/KB-8424A640.md",
       "subject": "In the sales-rep Schedule call and New task popups each select list opens on keyboard focus and stays open after Tab, so up to four lists pile up and cover the focused Due date, Time or Notes field",
@@ -27985,7 +28006,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
