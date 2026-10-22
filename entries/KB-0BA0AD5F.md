@@ -26,5 +26,14 @@ evidence:
     at: 2026-10-22T15:15:07.074Z
     by: session:2c92b249
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: local
+    build: 3a492aac51b809f5
+    conditions: platform=3.1089.0; module:VirtoCommerce.PageBuilderModule=3.1036.0-pr-178-e4ff; db=postgresql; store=B2B-store
+    at: 2026-10-22T15:43:38.435Z
+    by: session:2c92b249
+    bodyHash: 6270c94488a9
+    who: Aleksandra-Mitricheva
+    note: "Re-run: 2048 -> 200 on all three endpoints; 2049 and 10000 -> 500 application/json {\"message\":\"22001: value too long for type character varying(2048)\",\"stackTrace\":null} on POST create-group-page, POST grouped and PUT grouped. Nothing stored on POST; PUT target permalink and modifiedDate unchanged. Body leaks only the Postgres SQLSTATE+message (no SQL, no stack); the server log holds the full DbUpdateException through GroupedPageService.SaveChangesInternalAsync."
 ---
 On PageBuilderModule 3.1036.0-pr-178 with PostgreSQL, a valid-character permalink of 2048 characters is stored verbatim (200), but 2049 or 10000 characters on POST create-group-page, POST grouped or PUT grouped return 500 application/json {"message":"22001: value too long for type character varying(2048)","stackTrace":null}; the stored page is unchanged. The new permalink validation does not cover length. The Page Builder shell permalink input caps typing at 1024 characters, so the UI cannot reach it, but API/AI-tool callers can.
