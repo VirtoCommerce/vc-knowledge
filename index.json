@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T12:21:13.856Z",
-  "count": 1205,
+  "generated": "2026-10-22T12:26:33.343Z",
+  "count": 1207,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -26005,6 +26005,31 @@
       "resolved": 2
     },
     {
+      "id": "KB-ED048B71",
+      "path": "entries/KB-ED048B71.md",
+      "subject": "With vc-frontend PR 2599 the configurable PDP option radios are named by their own aria-label (the option product name, or the translated None), and axe label reports 0",
+      "question": "On the vc-frontend PR 2599 build, do the option radios of a configurable PDP Product section have an accessible name, and where does it come from?",
+      "questions": [
+        "Does the VCST-6454 fix name the configurable product option radios?",
+        "What does a screen reader announce for the None option radio of a configurable product section after the fix?"
+      ],
+      "concepts": [
+        "configurable-product",
+        "product-page"
+      ],
+      "anchors": [
+        "/product/{id}"
+      ],
+      "scope": [
+        "feature=product-configuration",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-ED1C55C0",
       "path": "entries/KB-ED1C55C0.md",
       "subject": "organizationReturns and returns answer a negative after cursor with an errors[] code SQL and data null; the server does not clamp it",
@@ -26733,6 +26758,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F19B15C1",
+      "path": "entries/KB-F19B15C1.md",
+      "subject": "On the Vintage Wedding cake PDP, switching the storefront language from English (United Kingdom) to English (United States) lands on the 404 Page not found view",
+      "question": "What happens when a shopper switches the storefront language while on a product page reached by its semantic URL?",
+      "questions": [
+        "Does the language selector keep the product page when the product slug does not exist in the target language?",
+        "Why does /en-GB/products-with-options/dreamy-cakes/vintage-wedding-cake show Page not found?"
+      ],
+      "anchors": [
+        "/product/{id}",
+        "/en-GB/products-with-options/dreamy-cakes/vintage-wedding-cake"
+      ],
+      "scope": [
+        "feature=localization",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
