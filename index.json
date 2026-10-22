@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T13:19:59.708Z",
-  "count": 1208,
+  "generated": "2026-10-22T13:25:11.121Z",
+  "count": 1209,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -23033,6 +23033,30 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D173BBB8",
+      "path": "entries/KB-D173BBB8.md",
+      "subject": "PUT /api/sales-rep rewrites the rep contact's organizations to the served list; an org dropped from it loses the rep's whole membership",
+      "question": "Does PUT /api/sales-rep with an organizations list delete the rep's organization memberships for organizations not in that list?",
+      "questions": [
+        "What happens to a sales rep's other organization memberships when the admin edits the rep's served organizations?",
+        "Does removing a served organization from a sales rep remove only the sales-rep role or the whole membership?",
+        "Is it safe to call PUT /api/sales-rep on a user who is also a buyer member of other organizations?"
+      ],
+      "anchors": [
+        "PUT /api/sales-rep",
+        "POST /api/customer/organization-memberships/search",
+        "GET /api/sales-rep/{id}"
+      ],
+      "scope": [
+        "actor=admin",
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
