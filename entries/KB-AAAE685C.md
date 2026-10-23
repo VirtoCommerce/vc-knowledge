@@ -1,0 +1,27 @@
+---
+id: KB-AAAE685C
+subject: Admin Shell Menu Editor discards unsaved changes without a confirmation when the user navigates away (rail item, Ctrl+K search, hash change)
+plane: experiential
+question: Does the Admin Shell Menu Editor ask to confirm before leaving with unsaved changes?
+questions:
+  - text: Are unsaved Admin Shell menu edits lost when navigating to another screen?
+  - text: Which confirmations does the Admin Shell Menu Editor show?
+status: active
+appliesTo:
+  - axis: module
+    value: virtocommerce.adminshell
+  - axis: surface
+    value: admin-ui
+anchors:
+  - coordinate: /apps/admin-shell#/menu-editor
+evidence:
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 4a14ffabb4298717
+    conditions: platform=3.1086.0-pr-3137-8aa4; module:VirtoCommerce.AdminShell=3.1000.0-pr-1-f481; role=administrator; browser=edge
+    defect: suspected
+    at: 2026-10-23T09:20:17.103Z
+    by: session:5de4e186
+    who: kutasinaelena
+---
+As administrator in the Menu Editor, hiding an item enables Save/Reset and marks the item Hidden. Then opening Dashboard from the Home panel, opening Orders via Ctrl+K search + Enter, or changing the URL hash to #/ each navigated immediately with no dialog; returning to the editor shows the change gone and GET /api/admin-shell/menu/global confirms nothing was stored. Undo all changes does show a Confirmation dialog ("Undo all changes to the menu? ...") with Confirm/Cancel, and Undo changes on one row reverts that row only.

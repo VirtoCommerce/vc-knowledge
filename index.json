@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T09:19:21.328Z",
-  "count": 1237,
+  "generated": "2026-10-23T09:25:25.153Z",
+  "count": 1241,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6072,6 +6072,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-38792EBB",
+      "path": "entries/KB-38792EBB.md",
+      "subject": "Admin Shell role patches hide by union: an item or section stays visible unless every role of the user hides it; PUT {} restores, and any roleId string is accepted",
+      "question": "How do AdminShell role menu patches combine for a user with two roles?",
+      "questions": [
+        "Does hiding a section in one role's Admin Shell menu patch hide it for a multi-role user?",
+        "How do I reset an Admin Shell role menu patch?",
+        "Does PUT /api/admin-shell/menu/roles/{roleId} validate the role id?"
+      ],
+      "anchors": [
+        "PUT /api/admin-shell/menu/roles/{id}",
+        "GET /api/admin-shell/menu"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-38E576ED",
       "path": "entries/KB-38E576ED.md",
       "subject": "With Seo 3.1004.2, the Admin seo-list blade enables Delete after Add on an initially empty SEO list and a row is selected",
@@ -10239,6 +10262,30 @@
         "POST /api/sales-rep"
       ],
       "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5A2B8DA9",
+      "path": "entries/KB-5A2B8DA9.md",
+      "subject": "PUT /api/admin-shell/menu/global (and roles/{roleId}, me/prefs) with a malformed or non-JSON body answers 204 and stores an empty patch, wiping the existing layer",
+      "question": "What happens when PUT /api/admin-shell/menu/global receives an invalid JSON body?",
+      "questions": [
+        "Does the Admin Shell menu API validate the patch body?",
+        "Can a bad request reset the global Admin Shell menu customization?",
+        "What does PUT /api/admin-shell/menu/roles/{roleId} do with an unparseable body?"
+      ],
+      "anchors": [
+        "PUT /api/admin-shell/menu/global",
+        "PUT /api/admin-shell/menu/roles/{id}",
+        "PUT /api/admin-shell/menu/me/prefs"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
         "surface=rest"
       ],
       "plane": "experiential",
@@ -19501,6 +19548,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-AAAE685C",
+      "path": "entries/KB-AAAE685C.md",
+      "subject": "Admin Shell Menu Editor discards unsaved changes without a confirmation when the user navigates away (rail item, Ctrl+K search, hash change)",
+      "question": "Does the Admin Shell Menu Editor ask to confirm before leaving with unsaved changes?",
+      "questions": [
+        "Are unsaved Admin Shell menu edits lost when navigating to another screen?",
+        "Which confirmations does the Admin Shell Menu Editor show?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/menu-editor"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AB35BCDC",
       "path": "entries/KB-AB35BCDC.md",
       "subject": "what an order line item stops carrying once the cart becomes an order",
@@ -28192,6 +28260,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F8D5202F",
+      "path": "entries/KB-F8D5202F.md",
+      "subject": "GET /api/order/dashboardStatistics adds two days to the requested end date server-side; the response endDate shows the effective window",
+      "question": "Does GET /api/order/dashboardStatistics use the end date as sent?",
+      "questions": [
+        "What window does dashboardStatistics actually aggregate?",
+        "Is the dashboardStatistics end parameter inclusive or shifted?"
+      ],
+      "anchors": [
+        "GET /api/order/dashboardStatistics"
+      ],
+      "scope": [
+        "module=virtocommerce.orders",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
