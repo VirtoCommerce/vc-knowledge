@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T08:09:15.172Z",
-  "count": 1229,
+  "generated": "2026-10-23T08:36:16.843Z",
+  "count": 1230,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11142,6 +11142,31 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-656BB522",
+      "path": "entries/KB-656BB522.md",
+      "subject": "GET /api/admin-shell/menu returns the composed, permission-filtered Admin Shell menu as {sections, personalization, pinned, recent, hidden}; anonymous gets 401",
+      "question": "What does GET /api/admin-shell/menu return and how is the Admin Shell menu composed?",
+      "questions": [
+        "GET /api/admin-shell/menu response shape",
+        "which target types do Admin Shell menu items use",
+        "does the Admin Shell menu still open AngularJS screens directly",
+        "what does POST /api/admin-shell/menu do"
+      ],
+      "anchors": [
+        "GET /api/admin-shell/menu",
+        "POST /api/admin-shell/menu",
+        "/apps/admin-shell"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-api"
       ],
       "plane": "experiential",
       "status": "active",
