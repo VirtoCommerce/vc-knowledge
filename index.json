@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T12:56:49.341Z",
-  "count": 1264,
+  "generated": "2026-10-23T12:59:47.004Z",
+  "count": 1267,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -823,6 +823,28 @@
       "scope": [
         "module=sales-rep",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0929D604",
+      "path": "entries/KB-0929D604.md",
+      "subject": "With global MFA on, a password grant naming a store whose StoreMode is Disabled issues tokens without a code to any user, including a Manager and a Customer of another store's role holders",
+      "question": "Does MultiFactorAuthentication.StoreMode=Disabled skip the code for every user who names that store, or only that store's own non-administrator customers?",
+      "questions": [
+        "Can a Backoffice Manager get tokens without MFA by passing storeId of a Disabled store",
+        "Does the StoreMode setting description (own customer accounts that are not administrators) match behaviour"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa",
+        "grant=password",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12316,6 +12338,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-6C257B1B",
+      "path": "entries/KB-6C257B1B.md",
+      "subject": "Backoffice MFA verify and logout answer 500 with a SQL truncation message for a username longer than 64 characters, leaving the session alive",
+      "question": "What happens on the Backoffice MFA code step and sign-out for an account whose username is longer than 64 characters?",
+      "questions": [
+        "Why does POST /api/mfa/signin/verify return 500 String or binary data would be truncated",
+        "Why can a Backoffice user not sign out (logout 500 ModifiedBy truncated)",
+        "Does a long email break Backoffice MFA sign-in"
+      ],
+      "anchors": [
+        "POST /api/mfa/signin/verify",
+        "GET /api/platform/security/logout"
+      ],
+      "scope": [
+        "feature=mfa",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6C3FA2B7",
       "path": "entries/KB-6C3FA2B7.md",
       "subject": "Storefront cart keeps its applied coupon across sign-out / sign-in",
@@ -14492,7 +14537,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -28346,6 +28391,28 @@
       "scope": [
         "feature=product-configuration",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F57D86E8",
+      "path": "entries/KB-F57D86E8.md",
+      "subject": "The emailed MFA code stays valid at least 8.5 minutes and is refused as invalid_code by about 9 minutes, before the 10-minute two-factor ticket expires",
+      "question": "How long is the emailed MFA sign-in code valid compared to the two-factor ticket, and what does an expired code or ticket return?",
+      "questions": [
+        "When does POST /connect/token grant_type=mfa return invalid_two_factor_token for an old ticket",
+        "Does an expired MFA code say expired or invalid_code"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa",
+        "grant=mfa",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",

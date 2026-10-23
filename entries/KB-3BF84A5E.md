@@ -27,5 +27,14 @@ evidence:
     by: session:7ed484a4
     who: kutasinaelena
     note: "distinct: KB-7EFFA0AD is about the password step with no storeId under global on; KB-C196A782 about a bogus token. This entry is about a REAL ticket redeemed by a right code and then refused by the store rule (StoreMode Enabled, global off) - ticket spent, retry refused, log reason Unknown."
+  - method: observation
+    deployment: vcst_qa
+    build: d70745c02c9df3fe
+    conditions: platform=3.1090.0-pr-3133-8b4a; module:VirtoCommerce.MFA=3.1000.0-pr-1-cf83; setting:MultiFactorAuthentication.Enabled=false; setting:MultiFactorAuthentication.StoreMode=Enabled (requested store)
+    at: 2026-10-23T12:57:33.949Z
+    by: session:7ed484a4
+    bodyHash: 5e8ad21887c0
+    who: kutasinaelena
+    note: "Re-observed 3x: right code -> user_cannot_login_in_store; same-ticket retry -> invalid_two_factor_token in 2 of 3 trials (one trial answered invalid_code instead, plausibly another instance). POST /api/mfa/resend on the spent ticket still answers 200 succeeded and sends a new code email, but that code on the same ticket answers invalid_two_factor_token. Log reason Unknown, storeId = account's own store."
 ---
 On vcst_qa a customer account belonging to store B was signed in with grant_type=password and storeId of a store A whose MultiFactorAuthentication.StoreMode=Enabled (global setting off). The password step answered 400 two_factor_required with a twoFactorToken and an MfaSignInEmailNotification was written to the journal - the store rule did not refuse at the password step. The right code on grant_type=mfa answered 400 invalid_grant code=user_cannot_login_in_store. Replaying the same two_factor_token + same code (with storeId A, and with storeId B) both answered 400 invalid_two_factor_token, so the ticket was redeemed before the store rule ran. A fresh password step issued a new ticket and a new code; the first code on it answered invalid_code and incremented accessFailedCount. The sign-in log recorded the refused MFA row with failureReason Unknown (not the store-rule reason) and storeId = the account's own store B, not the requested store A.
