@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T08:57:24.910Z",
+  "generated": "2026-10-23T09:19:21.328Z",
   "count": 1237,
   "entries": [
     {
@@ -4073,7 +4073,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-262ADDFB",
