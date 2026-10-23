@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T12:12:14.213Z",
-  "count": 1256,
+  "generated": "2026-10-23T12:37:16.617Z",
+  "count": 1259,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -17588,6 +17588,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-988AA72D",
+      "path": "entries/KB-988AA72D.md",
+      "subject": "POST /api/page-builder-multilanguage-pages accepts a DefaultCultureName that is not a store language (200), while PUT rejects the same change with 400; the languages table then reports it as a store language",
+      "question": "Does creating a Multilanguage Page validate DefaultCultureName against the store languages?",
+      "questions": [
+        "What does POST page-builder-multilanguage-pages return for defaultCultureName xx-XX?",
+        "Can a multilanguage page root have a default language the store does not have?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-multilanguage-pages",
+        "PUT /api/page-builder-multilanguage-pages",
+        "GET /api/page-builder-multilanguage-pages/{id}/languages",
+        "POST /api/page-builder-multilanguage-pages/{id}/link/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-98A231B6",
       "path": "entries/KB-98A231B6.md",
       "subject": "On a B2B store the PDP quantity stepper is the add-to-cart control, and its first increment sends updateCartQuantity — never addItem.",
@@ -19790,6 +19814,31 @@
       ],
       "scope": [
         "surface=background-jobs"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AA9BFC82",
+      "path": "entries/KB-AA9BFC82.md",
+      "subject": "Multilanguage Page fallback (MissingTranslationBehavior=DefaultLanguage) targets the STORE default language version, not the page's own Default language; without a store-default version a missing language resolves to nothing",
+      "question": "Which version does slugInfo return for a missing language when a Multilanguage Page's Default language differs from the store default?",
+      "questions": [
+        "Does the DefaultLanguage missing-translation fallback use the multilanguage page default culture or the store default culture?",
+        "Why does /es/<permalink> show 404 for a multilanguage page with only de-DE and fr-FR published?",
+        "When is x-default emitted for a Page Builder multilanguage page?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageDocument",
+        "/{id}/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pages",
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -22026,6 +22075,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BE24A13A",
+      "path": "entries/KB-BE24A13A.md",
+      "subject": "Page Builder multilanguage hreflang uses full culture codes, absolute hrefs on the store URL, x-default = store-default version, and no rel=canonical",
+      "question": "What hreflang tags does the storefront emit on a Page Builder multilanguage page?",
+      "questions": [
+        "Are hreflang values short (de) or full cultures (de-DE) on Page Builder pages?",
+        "Which locale prefix does the storefront use for nl-NL and nl-BL when both are store languages?"
+      ],
+      "anchors": [
+        "/{id}/{id}",
+        "Query.pageDocument"
+      ],
+      "scope": [
+        "module=virtocommerce.xcms",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -25441,7 +25512,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {

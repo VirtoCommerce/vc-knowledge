@@ -35,5 +35,14 @@ evidence:
     note: "2026-10-08: /fr/qa-return-policy (fr-FR version exists only as Draft) returned the en-US body under FR chrome (breadcrumb 'Accueil'); en-US at /qa-return-policy, de-DE at /de/qa-return-policy. Also observed: /en/ prefix is not a valid locale prefix on this store (/en/ home → 404 page)."
     build: c4000d0bea152759
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_qa
+    build: 706d29d69470a72c
+    conditions: theme=2.61.0-pr-2576-211e3e15; module:VirtoCommerce.Pages=3.1011.0-pr-23-4bcd; module:VirtoCommerce.PageBuilderModule=3.1036.0-pr-175-a3bc; setting:VirtoPages.MissingTranslationBehavior=unset(DefaultLanguage)
+    at: 2026-10-23T12:31:49.387Z
+    by: session:0204f22f
+    bodyHash: c7ca310357eb
+    who: Aleksandra-Mitricheva
+    note: "2026-10-23 on a Multilanguage Page (pagebuilder PR 175): /es/<permalink> with no es-ES version rendered the store-default (en-US) version, html lang es-ES, HTTP 200. Holds only while a store-default-language version is published: with only de-DE+fr-FR published the same URL rendered the 404 view (see the separate capture on the root default language)."
 ---
 When a content page exists but has no version in the requested supported culture, the storefront returns 200 and renders the store default language's page body under site chrome localized to the requested culture. Locale resolution runs URL locale, then pinned locale, then contact culture, then the store default culture. A permalink that does not exist at all (including draft or archived pages) renders the 404 Page not found view. So an untranslated existing page is BY DESIGN a fallback; serving real content in that language needs a page version for that culture.
