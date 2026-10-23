@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T10:47:52.169Z",
-  "count": 1246,
+  "generated": "2026-10-23T10:49:36.408Z",
+  "count": 1247,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1213,7 +1213,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-0BAA4DB6",
@@ -3996,6 +3997,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-254B81CD",
+      "path": "entries/KB-254B81CD.md",
+      "subject": "PageBuilder REST permalink validation accepts astral (non-BMP) Unicode Cf characters that the shell and the legacy blade reject",
+      "question": "Does PageBuilder REST reject an invisible formatting (Cf) character outside the BMP, such as U+E0041, in a permalink?",
+      "questions": [
+        "Are tag characters U+E0001 / U+E0041 allowed in a Page Builder permalink?",
+        "Do the Page Builder shell, the content blade and the REST API agree on which permalinks are invalid?",
+        "Why does a permalink with U+1D173 save through the API but not in the admin UI?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/create-group-page",
+        "POST /api/page-builder-pages/grouped",
+        "PUT /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -19178,7 +19203,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-A8067930",
@@ -26721,7 +26747,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {

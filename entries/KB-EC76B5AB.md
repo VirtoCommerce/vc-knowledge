@@ -24,5 +24,14 @@ evidence:
     at: 2026-10-22T15:05:39.494Z
     by: session:2c92b249
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcst_qa
+    build: 4fd52d6a347c726e
+    conditions: module:VirtoCommerce.PageBuilderModule=3.1036.0-pr-178-add2; store=B2B-store
+    at: 2026-10-23T10:48:21.844Z
+    by: session:562b04df
+    bodyHash: 7c12afc1a449
+    who: Aleksandra-Mitricheva
+    note: "Re-observed on add2 (Draft page only, not published): content-json with settings.permalink '/… bad%<path' returned 204, the draft content stores it verbatim and GET grouped keeps the group permalink. Routing after publish not re-checked."
 ---
 On a published, valid page (/agent-test-6443-4a-journey), GET grouped/{id}/content returned an ETag; POST grouped/{id}/content-json with If-Match and content settings.permalink '/agent-test-6443 4a via content?z' returned 204. GET grouped/{id} kept permalink '/agent-test-6443-4a-journey', status Published, hasChanges true, and a new Draft page appeared beside the Published one; the published xAPI pageDocument was unchanged. After POST grouped/publishing/{id}?publish=true the new page id became the Published one: xAPI pageDocument.permalink and pageDocuments list stay '/agent-test-6443-4a-journey' while pageDocument.content settings.permalink is the invalid value; slugInfo resolves only the group permalink (the invalid value returns null) and the storefront still opens the page at /agent-test-6443-4a-journey. The server-rendered HTML carries no canonical link.
