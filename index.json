@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T14:12:42.689Z",
-  "count": 1285,
+  "generated": "2026-10-23T14:18:41.687Z",
+  "count": 1286,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10523,6 +10523,27 @@
       "status": "active",
       "trust": 1,
       "disputed": 2
+    },
+    {
+      "id": "KB-5972040C",
+      "path": "entries/KB-5972040C.md",
+      "subject": "PUT /api/page-builder-pages/grouped with userGroups sent as a JSON array returns HTTP 500 NullReferenceException instead of a 400; userGroups is a string field",
+      "question": "PUT api/page-builder grouped page userGroups as JSON array returns 500 NullReferenceException",
+      "questions": [
+        "What format does userGroups take on a Page Builder grouped page?",
+        "Why does saving a grouped page with userGroups:[...] return 500?"
+      ],
+      "anchors": [
+        "PUT /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-599B0720",
