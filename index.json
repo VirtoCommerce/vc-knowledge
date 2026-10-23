@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T19:25:27.739Z",
-  "count": 1287,
+  "generated": "2026-10-23T19:27:08.502Z",
+  "count": 1288,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -22802,6 +22802,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C09224C4",
+      "path": "entries/KB-C09224C4.md",
+      "subject": "Backoffice #!/sign-in-code (MFA e8c7): code input focused on arrival and after a wrong code; errors in role=alert but input has no aria-invalid/aria-describedby; 4th wrong code ends the session with CodeAttemptsExceeded and blocks a re-sign-in for a few minutes",
+      "question": "How does the Backoffice MFA code screen handle focus, error announcement and repeated wrong codes?",
+      "questions": [
+        "Is the Backoffice sign-in code input focused when the code screen opens?",
+        "Is the wrong-code error on the Backoffice MFA screen announced to screen readers?",
+        "How many wrong codes does the Backoffice MFA screen allow before Too many incorrect codes?",
+        "What does the sign-in log record for a Backoffice Manager with an unconfirmed email under global MFA?",
+        "What does #!/sign-in-code show when opened with no pending sign-in?"
+      ],
+      "anchors": [
+        "POST /api/mfa/signin/verify",
+        "POST /api/mfa/signin/send",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=mfa-email-sign-in",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
