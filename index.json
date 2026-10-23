@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T08:36:27.139Z",
-  "count": 1231,
+  "generated": "2026-10-23T08:44:12.411Z",
+  "count": 1232,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -20324,6 +20324,28 @@
       "scope": [
         "surface=graphql",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B28C500C",
+      "path": "entries/KB-B28C500C.md",
+      "subject": "GET /api/admin-shell/menu answers 403 without admin-shell:access and, with it, returns only the items whose permission the caller holds (permission-less items always included)",
+      "question": "What does GET /api/admin-shell/menu return for a non-administrator back-office user, with and without admin-shell:access?",
+      "questions": [
+        "Does the Admin Shell menu API filter menu items by the user's permissions?",
+        "What status does a user without admin-shell:access get from the admin-shell menu endpoint?",
+        "With two roles, does the admin-shell menu show the union of both roles' items?"
+      ],
+      "anchors": [
+        "GET /api/admin-shell/menu"
+      ],
+      "scope": [
+        "surface=rest",
+        "user=non-administrator back-office"
       ],
       "plane": "experiential",
       "status": "active",
