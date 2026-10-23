@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-22T15:53:19.421Z",
-  "count": 1227,
+  "generated": "2026-10-23T08:09:15.172Z",
+  "count": 1229,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -17897,6 +17897,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-A05C4283",
+      "path": "entries/KB-A05C4283.md",
+      "subject": "Adding a Text block in the Page Builder Designer fails to load a lazy JS chunk (404), so the rich-text content field does not render",
+      "question": "Does the Text block editor load in the Page Builder Designer?",
+      "anchors": [
+        "page-builder-designer/index.html#/pages"
+      ],
+      "scope": [
+        "surface=admin-pagebuilder-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A06A680C",
       "path": "entries/KB-A06A680C.md",
       "subject": "Debug SEO links Stages rows (including Stage 0: Candidates) are click-only: ng-click on a non-focusable div, never reachable by Tab",
@@ -25392,6 +25408,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E5698E4A",
+      "path": "entries/KB-E5698E4A.md",
+      "subject": "Designer asset picker New folder validation message collapses to a ~21px column below ~650px viewport, pushing the asset grid down",
+      "question": "Does the New folder inline validation error in the Page Builder Designer asset picker move the asset grid?",
+      "questions": [
+        "Is the Designer New folder form layout stable when a validation error is shown?",
+        "How does the picker New folder error row behave on narrow viewports?"
+      ],
+      "anchors": [
+        "page-builder-designer/index.html#/pages",
+        "POST /api/assets/folder"
+      ],
+      "scope": [
+        "surface=admin-pagebuilder-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
