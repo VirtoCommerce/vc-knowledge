@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T12:59:47.004Z",
-  "count": 1267,
+  "generated": "2026-10-23T13:00:03.731Z",
+  "count": 1271,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14541,6 +14541,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-7F2A57D7",
+      "path": "entries/KB-7F2A57D7.md",
+      "subject": "POST /api/page-builder-multilanguage-pages/{id}/clone twice on the same Multilanguage Page creates two roots with the same '(copy)' name and the same '-copy' permalink in every language, with no collision check",
+      "question": "What permalinks does a second Clone of the same Multilanguage Page get?",
+      "questions": [
+        "Does cloning a Multilanguage Page twice produce duplicate permalinks?",
+        "Does multilanguage page clone check permalink usage?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-multilanguage-pages/{id}/clone",
+        "POST /api/page-builder-pages/permalink-usage"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7F535D52",
       "path": "entries/KB-7F535D52.md",
       "subject": "CyberSource sandbox authorization on the storefront cart is non-deterministic between runs on one build: the same card and amount can authorize cleanly to Processing, or be held for review and leave the order at Payment required.",
@@ -17328,6 +17350,28 @@
       "scope": [
         "surface=rest-api",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-962EA165",
+      "path": "entries/KB-962EA165.md",
+      "subject": "In the Page Builder shell 'Link an existing <culture> page' dialog the Landing Page dropdown opens under the modal overlay, so no option can be clicked and Link stays disabled",
+      "question": "Can an admin pick a page in the Link existing dialog of a Multilanguage Page?",
+      "questions": [
+        "Why can't I select a page in Link existing?",
+        "Is Link existing usable in the Page Builder admin UI?"
+      ],
+      "anchors": [
+        "/apps/page-builder-shell",
+        "POST /api/page-builder-multilanguage-pages/{id}/link/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -20330,6 +20374,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-AD416AFF",
+      "path": "entries/KB-AD416AFF.md",
+      "subject": "A Multilanguage Page translation becomes Outdated when the source language is published (single publish or publish-all), not on a source draft save; translation publish and mark-up-to-date clear it; two concurrent publish-all calls can lose the source revision update",
+      "question": "When are Multilanguage Page translations marked Outdated and what clears it?",
+      "questions": [
+        "Does saving a source draft mark translations Outdated?",
+        "Does publish-all mark other languages Outdated?",
+        "What happens with two concurrent publish-all requests?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-multilanguage-pages/{id}/publish-all",
+        "POST /api/page-builder-multilanguage-pages/mark-up-to-date/{id}",
+        "GET /api/page-builder-multilanguage-pages/{id}/languages"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AD528300",
       "path": "entries/KB-AD528300.md",
       "subject": "Event-based product indexation does not take the IndexationJob lock, so a product edit reaches search while a full manual Build is running",
@@ -22735,7 +22803,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -28064,6 +28132,28 @@
       "scope": [
         "feature=localization",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F1DE1B7C",
+      "path": "entries/KB-F1DE1B7C.md",
+      "subject": "Page Builder create endpoints return HTTP 500 with the raw SQL truncation message (database and table names) when Name exceeds 1024 characters",
+      "question": "What does creating a Page Builder page or Multilanguage Page with a Name over 1024 characters return?",
+      "questions": [
+        "Is there a length validation on Page Builder page names?",
+        "Why does page create return 500 for a long name?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-multilanguage-pages",
+        "POST /api/page-builder-pages/create-group-page"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
       ],
       "plane": "experiential",
       "status": "active",
