@@ -24,5 +24,14 @@ evidence:
     at: 2026-10-23T10:42:32.751Z
     by: session:5de4e186
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 4a14ffabb4298717
+    conditions: platform=3.1086.0-pr-3137-8aa4; module:VirtoCommerce.AdminShell=3.1000.0-pr-1-f481; role=order:access+order:read, no admin-shell:access
+    at: 2026-10-23T12:53:42.584Z
+    by: session:5de4e186
+    bodyHash: 00aa4c0535c5
+    who: kutasinaelena
+    note: Reproduced on a full page load. In addition, typing #/orders rendered the Orders list inside the shell for this user.
 ---
 Signed in through the Admin Shell login form as a non-administrator holding order:access/order:read but NOT admin-shell:access, then did a full page load of /apps/admin-shell/. Sign-in succeeded (login 200, /connect/token 200, currentuser 200). POST /api/admin-shell/menu returned 403; the section rail rendered only the logo, Notifications and Account (no Home/Orders/Insights), and a toast showing only the text "403" appeared. No refusal or "no access" screen was shown. The Home dashboard still rendered its five widgets (Recent Orders, Orders to process, Outstanding Payments, Fulfillment, Alerts) with live order data, because the widgets call /api/order/customerOrders/search and /api/order/payments/search, which the user's order permissions allow. So admin-shell:access gates the menu endpoint, not entry to the shell or the dashboard widgets.

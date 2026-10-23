@@ -23,5 +23,14 @@ evidence:
     at: 2026-10-23T09:20:17.103Z
     by: session:5de4e186
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 4a14ffabb4298717
+    conditions: platform=3.1086.0-pr-3137-8aa4; module:VirtoCommerce.AdminShell=3.1000.0-pr-1-f481; role=administrator; browser=edge
+    at: 2026-10-23T12:55:30.213Z
+    by: session:5de4e186
+    bodyHash: 238707002d5b
+    who: kutasinaelena
+    note: "Re-observed with a rename (row chip Changed): leaving via rail Products > Catalogs and via browser Back discards silently; a full document unload shows NO beforeunload dialog either (unlike the Settings screen). No close (X) on the root blade."
 ---
 As administrator in the Menu Editor, hiding an item enables Save/Reset and marks the item Hidden. Then opening Dashboard from the Home panel, opening Orders via Ctrl+K search + Enter, or changing the URL hash to #/ each navigated immediately with no dialog; returning to the editor shows the change gone and GET /api/admin-shell/menu/global confirms nothing was stored. Undo all changes does show a Confirmation dialog ("Undo all changes to the menu? ...") with Confirm/Cancel, and Undo changes on one row reverts that row only.

@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T12:53:07.839Z",
-  "count": 1262,
+  "generated": "2026-10-23T12:56:49.341Z",
+  "count": 1264,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6782,6 +6782,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-3EC6C760",
+      "path": "entries/KB-3EC6C760.md",
+      "subject": "For a role with order:read but no store:read, the classic AngularJS order blade also gets 403 from POST /api/stores/search (and /api/members/search), while the classic Orders list makes no stores/search call",
+      "question": "Does the classic admin order screen call store and member search for an order-reader role without store:read?",
+      "questions": [
+        "Are the Admin Shell Orders 403s on stores/search pre-existing in the classic admin?",
+        "What does the classic admin order blade show for a user without store:read?"
+      ],
+      "anchors": [
+        "POST /api/stores/search",
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "role=order-reader-without-store-read",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3F1DBB6E",
       "path": "entries/KB-3F1DBB6E.md",
       "subject": "Admin product search returns imgSrc only when responseGroup includes ItemAssets; ItemInfo alone omits imgSrc and images",
@@ -7436,6 +7458,30 @@
       ],
       "scope": [
         "module=task-management",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4444126D",
+      "path": "entries/KB-4444126D.md",
+      "subject": "Admin Shell Recent is ranked by a decaying usage score, not by last visit: one visit moves a screen up only a little, and the panel shows the top 5",
+      "question": "How is the Admin Shell Recent list ordered, and why does a just-opened screen not appear in it?",
+      "questions": [
+        "Is Admin Shell Recent most-recent-first?",
+        "How many entries does the Admin Shell Home Recent list show?",
+        "Why does a screen I just opened not show in Admin Shell Recent after reload?"
+      ],
+      "anchors": [
+        "POST /api/admin-shell/menu/me/recent/{id}",
+        "GET /api/admin-shell/menu",
+        "/apps/admin-shell"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
         "surface=admin-ui"
       ],
       "plane": "experiential",
@@ -13257,7 +13303,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -24645,7 +24691,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-D7AF72F3",
