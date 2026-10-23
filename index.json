@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T12:51:41.116Z",
-  "count": 1260,
+  "generated": "2026-10-23T12:53:07.839Z",
+  "count": 1262,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2051,7 +2051,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-1328216A",
@@ -8231,6 +8232,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-4BB8E42E",
+      "path": "entries/KB-4BB8E42E.md",
+      "subject": "A second storefront password step within the 30 s MFA resend cooldown sends no new email, yet the code step still says \"We sent a code\"; the code from the earlier email signs in on the newer ticket",
+      "question": "What happens when a buyer repeats the storefront password step within 30 seconds while MFA is required — is a new code emailed, and which code works?",
+      "questions": [
+        "Is the MFA code bound to the two-factor ticket or to the user?",
+        "Does going Back to sign in and re-entering the password resend the MFA email?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4BC33F51",
       "path": "entries/KB-4BC33F51.md",
       "subject": "A changed SalesRep.Statistics setting is returned by GET /api/platform/settings/{name} on every instance within about two seconds, with no instance seen serving the old value",
@@ -10244,6 +10267,31 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5874C9A4",
+      "path": "entries/KB-5874C9A4.md",
+      "subject": "Storefront MFA code step: after the password it shows \"Enter the sign-in code\" with a masked email, a 30 s Resend countdown and auto-submit at 6 digits; wrong codes 1-3 show \"That code didn't work.\" and clear the field; the next submit returns to the password form with \"Too many incorrect codes\"",
+      "question": "What does the storefront show on the MFA code step after a correct password, for wrong codes, the wrong-code cap and Resend?",
+      "questions": [
+        "How many wrong MFA codes does the storefront allow before it goes back to the password form?",
+        "What message does the storefront show for the third wrong MFA code?",
+        "How does Resend code behave on the storefront MFA step?",
+        "Which endpoint does the storefront MFA Resend call?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token",
+        "POST /api/mfa/resend"
+      ],
+      "scope": [
+        "feature=mfa",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
