@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T11:14:12.208Z",
-  "count": 1250,
+  "generated": "2026-10-23T11:39:23.908Z",
+  "count": 1251,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2469,6 +2469,28 @@
       "trust": 2,
       "disputed": 0,
       "contested": 3
+    },
+    {
+      "id": "KB-1609EA54",
+      "path": "entries/KB-1609EA54.md",
+      "subject": "The mfa grant on /connect/token reads the ticket from form field two_factor_token (snake_case) plus code; a twoFactorToken field answers missing_parameter",
+      "question": "What form parameters does POST /connect/token grant_type=mfa expect for the two-factor ticket and the emailed code?",
+      "questions": [
+        "Why does grant_type=mfa answer invalid_request missing_parameter when I send twoFactorToken and code?",
+        "How do I exchange the twoFactorToken from two_factor_required for tokens?",
+        "Which parameter name carries the MFA ticket on the mfa grant?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-160CE93F",
