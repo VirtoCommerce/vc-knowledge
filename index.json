@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T08:52:15.405Z",
-  "count": 1233,
+  "generated": "2026-10-23T08:57:24.910Z",
+  "count": 1237,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4047,6 +4047,28 @@
       ],
       "scope": [
         "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-25B2510A",
+      "path": "entries/KB-25B2510A.md",
+      "subject": "Admin Shell Home widgets ask GET /api/order/dashboardStatistics for windows whose end date is two days short of the period end (year/month end today-2, each month ends on its last day minus 2)",
+      "question": "What start/end window do the Admin Shell Total Sales and Sales Trends widgets send to GET /api/order/dashboardStatistics?",
+      "questions": [
+        "Do the Admin Shell dashboard sales widgets include the last days of a month?",
+        "Why does the Admin Shell Total Sales widget exclude today's orders?"
+      ],
+      "anchors": [
+        "GET /api/order/dashboardStatistics",
+        "/apps/admin-shell"
+      ],
+      "scope": [
+        "module=virtocommerce.orders",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16420,6 +16442,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-92B2EE06",
+      "path": "entries/KB-92B2EE06.md",
+      "subject": "An Admin Shell menu item's legacy `fallback` is never used for navigation; AngularJS screens open inside the shell only through the #/legacy?url= route (or a menu item of target type legacy)",
+      "question": "When does the Admin Shell open the AngularJS screen behind a Vue menu item's legacy fallback?",
+      "questions": [
+        "How do I reach a classic AngularJS screen inside the Admin Shell?",
+        "What does /apps/admin-shell/#/legacy?url= do?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/legacy",
+        "/apps/admin-shell#/menu-editor"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-92D471EB",
       "path": "entries/KB-92D471EB.md",
       "subject": "On the PDP review form, the first mouse click on a star after the star picker received keyboard focus (Tab) does not set the rating; Submit stays disabled until a second click",
@@ -16593,6 +16637,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-93DF5113",
+      "path": "entries/KB-93DF5113.md",
+      "subject": "The Admin Shell language picker writes VirtoCommerce.Platform.UI.Language to the user's profile via POST /api/platform/settings/v2/me/values",
+      "question": "Does switching language in the Admin Shell account menu persist server-side or only in the browser?",
+      "anchors": [
+        "POST /api/platform/settings/v2/me/values",
+        "/apps/admin-shell"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -18832,6 +18894,25 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A6736A67",
+      "path": "entries/KB-A6736A67.md",
+      "subject": "The Admin Shell panel's Recent list is fixed for the page load: screens opened since are recorded server-side but appear only after a full reload",
+      "question": "Does the Admin Shell Recent list update when the user opens a screen, or only after reload?",
+      "anchors": [
+        "POST /api/admin-shell/menu/me/recent/{id}",
+        "POST /api/admin-shell/menu",
+        "/apps/admin-shell"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
