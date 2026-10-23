@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T11:48:13.502Z",
-  "count": 1254,
+  "generated": "2026-10-23T12:09:35.744Z",
+  "count": 1255,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6154,6 +6154,30 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-386B89B4",
+      "path": "entries/KB-386B89B4.md",
+      "subject": "Page Builder admin pages list is served by POST /api/page-builder-pages/list, one row per Landing page or Multilanguage page, each with type, permalink, status and page.cultureName",
+      "question": "Which request does the Page Builder admin pages list use, and what does each row carry (culture, permalink, status)?",
+      "questions": [
+        "POST /api/page-builder-pages/search grouped page CultureName permalink status",
+        "Does the page-builder-shell pages list still call /api/page-builder-pages/search?",
+        "What fields does POST /api/page-builder-pages/list return per row?",
+        "How is a Multilanguage page represented in the Page Builder pages list API?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/list",
+        "/apps/page-builder-shell"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
       ],
       "plane": "experiential",
       "status": "active",
