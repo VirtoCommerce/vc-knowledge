@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T13:02:22.121Z",
-  "count": 1276,
+  "generated": "2026-10-23T13:13:49.631Z",
+  "count": 1279,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1670,6 +1670,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-0E32A63C",
+      "path": "entries/KB-0E32A63C.md",
+      "subject": "The Admin Shell Profile screen autosaves each preference change with POST /api/platform/profiles/currentuser carrying a subset of the user's profile settings",
+      "question": "How does the Admin Shell Profile screen persist a changed preference, and does a quick series of changes conflict?",
+      "questions": [
+        "Does the Admin Shell Profile 'Changes are saved automatically' screen return 409 on rapid toggles?",
+        "Which endpoint does the Admin Shell Profile 'Show relative dates' switch call?"
+      ],
+      "anchors": [
+        "POST /api/platform/profiles/currentuser",
+        "/apps/admin-shell#/user-profile"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0ECE802D",
       "path": "entries/KB-0ECE802D.md",
       "subject": "Every order email (created, cancelled, status/payment/shipment changed, paid, sent) goes To the first non-empty order address email; the customer's contact/account email is only the fallback",
@@ -2532,6 +2554,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1612C110",
+      "path": "entries/KB-1612C110.md",
+      "subject": "In the Admin Shell order blade under Arabic or Hebrew, the Addresses widget renders a Latin street address with its leading house number moved to the end of the first line",
+      "question": "Does the Admin Shell order blade keep the word order of Latin-script addresses when the shell language is RTL (ar/he)?",
+      "questions": [
+        "Why does '100 Main St' show as 'Main St, New 100' in the Admin Shell in Arabic?",
+        "Are LTR data strings isolated (dir=ltr / bdi) in Admin Shell order widgets in RTL?",
+        "Does the classic admin render order addresses correctly in Hebrew?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/orders/order"
+      ],
+      "scope": [
+        "locale=ar,he",
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8955,6 +9000,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4F041F7A",
+      "path": "entries/KB-4F041F7A.md",
+      "subject": "Admin Shell order line-items table formats Price with the English formatter but Discount/Tax/Total with the UI locale, and in RTL the locale-formatted cells clip without ellipsis",
+      "question": "How are money cells formatted and truncated in the Admin Shell order blade Line items table when the shell language is Arabic or Hebrew?",
+      "questions": [
+        "Why does one order line show '$112.00' next to '89.60 US$' in the Admin Shell?",
+        "Why do order line totals show only '.00' in a narrow order blade in Arabic?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/orders/order"
+      ],
+      "scope": [
+        "locale=ar,he",
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
