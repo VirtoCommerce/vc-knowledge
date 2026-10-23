@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T10:49:36.408Z",
-  "count": 1247,
+  "generated": "2026-10-23T11:06:47.932Z",
+  "count": 1249,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7246,6 +7246,29 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-427A8514",
+      "path": "entries/KB-427A8514.md",
+      "subject": "The Page Builder shell Permalink input accepts at most 1024 characters although the permalink rule and its message allow 2048",
+      "question": "How many characters can be entered in the Page Builder shell Permalink field?",
+      "questions": [
+        "Can a 2048-character permalink be typed in the page builder shell?",
+        "Why is a long permalink truncated in the page builder shell?",
+        "Is the shell's 'at most 2048 characters' permalink error reachable by typing?"
+      ],
+      "anchors": [
+        "/apps/page-builder-shell",
+        "POST /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-429A791E",
@@ -21336,6 +21359,27 @@
       "resolved": 1
     },
     {
+      "id": "KB-B96A2EB1",
+      "path": "entries/KB-B96A2EB1.md",
+      "subject": "The Page Builder shell UI language is set in the shell's own user menu and does not follow the platform user profile language",
+      "question": "How do you switch the Page Builder shell to another UI language?",
+      "questions": [
+        "Does the page builder shell follow the admin profile language?",
+        "Where is the language switcher of the page builder shell?"
+      ],
+      "anchors": [
+        "/apps/page-builder-shell"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B96F15A8",
       "path": "entries/KB-B96F15A8.md",
       "subject": "Storefront return mutations refetch only the queries mounted on screen; no Apollo unknown-query refetch warning",
@@ -22245,7 +22289,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -22322,7 +22366,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
