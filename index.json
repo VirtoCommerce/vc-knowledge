@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T11:06:47.932Z",
-  "count": 1249,
+  "generated": "2026-10-23T11:14:12.208Z",
+  "count": 1250,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13881,6 +13881,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7BDB128B",
+      "path": "entries/KB-7BDB128B.md",
+      "subject": "On PageBuilderModule 3.1036.0-pr-178-add2 the Page Builder shell Permalink field rejects %, spaces and & ? # with an inline error and disabled Save, while Cyrillic saves verbatim",
+      "question": "What does the Page Builder shell page blade do with a permalink containing %, a space or & ? # on PageBuilderModule 3.1036.0-pr-178-add2?",
+      "questions": [
+        "Is percent allowed in a Page Builder permalink in the shell after the add2 rule change?",
+        "What is the inline permalink error text in the Page Builder shell on pr-178-add2?",
+        "Does the Page Builder shell save a Cyrillic permalink unchanged?"
+      ],
+      "anchors": [
+        "/apps/page-builder-shell#/page-builder-draft/details",
+        "POST /api/page-builder-pages/create-group-page",
+        "POST /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
