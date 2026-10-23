@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T10:23:52.392Z",
-  "count": 1242,
+  "generated": "2026-10-23T10:27:19.833Z",
+  "count": 1243,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1161,7 +1161,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4710,6 +4710,27 @@
         "component=vcstatwidget",
         "host=storybook",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2CA7D82C",
+      "path": "entries/KB-2CA7D82C.md",
+      "subject": "create-group-page answers 403 to a non-admin back-office user holding builder:access/read/update but not builder:create, before any body validation",
+      "question": "What does POST /api/page-builder-pages/create-group-page return for a user without builder:create?",
+      "questions": [
+        "Is builder:create checked before the permalink validation on create-group-page?",
+        "Which permission gates PageBuilder page creation via REST?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/create-group-page"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
