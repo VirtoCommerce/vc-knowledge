@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T13:13:49.631Z",
-  "count": 1279,
+  "generated": "2026-10-23T13:21:49.892Z",
+  "count": 1281,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11345,6 +11345,27 @@
       "resolved": 1
     },
     {
+      "id": "KB-61FCFB29",
+      "path": "entries/KB-61FCFB29.md",
+      "subject": "Admin Shell Ctrl+K search: the empty-query listbox holds scope-chip buttons and no options, and a second Escape leaves focus on the document body",
+      "question": "What roles does the Admin Shell Ctrl+K search popover expose, and where does focus go on Escape?",
+      "questions": [
+        "Is the Admin Shell global search accessible to screen readers?",
+        "Where does focus go after closing the Admin Shell Ctrl+K search?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "viewport=desktop"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-628643EB",
       "path": "entries/KB-628643EB.md",
       "subject": "Markup product lists compare items by id when cards carry one and by value when they do not: a changed data-product-price re-sends an id-less list but not an id-keyed one",
@@ -19806,6 +19827,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A8B31349",
+      "path": "entries/KB-A8B31349.md",
+      "subject": "Admin Shell rail button keeps the built-in short label after a Menu Editor section rename; only the panel heading and the rail tooltip show the new title",
+      "question": "Does renaming a section in the Admin Shell Menu Editor change the rail button label?",
+      "questions": [
+        "Why does the Admin Shell rail still say Orders after I renamed the section?",
+        "Which Admin Shell surfaces use a section's patched titles?",
+        "Where does the Admin Shell rail button label come from?"
+      ],
+      "anchors": [
+        "POST /api/admin-shell/menu",
+        "PUT /api/admin-shell/menu/global",
+        "/apps/admin-shell#/menu-editor"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
