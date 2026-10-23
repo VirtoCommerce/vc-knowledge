@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T12:09:35.744Z",
-  "count": 1255,
+  "generated": "2026-10-23T12:12:14.213Z",
+  "count": 1256,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14528,6 +14528,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8105EAF3",
+      "path": "entries/KB-8105EAF3.md",
+      "subject": "POST /api/page-builder-multilanguage-pages answers 403 (not 400) to a builder:access+builder:read-only user even with an empty body; search answers 200",
+      "question": "What does POST /api/page-builder-multilanguage-pages return for a non-admin back-office user holding only builder:access and builder:read?",
+      "anchors": [
+        "POST /api/page-builder-multilanguage-pages",
+        "POST /api/page-builder-multilanguage-pages/search"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
