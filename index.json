@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T08:44:12.411Z",
-  "count": 1232,
+  "generated": "2026-10-23T08:52:15.405Z",
+  "count": 1233,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -26698,6 +26698,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EDAE238D",
+      "path": "entries/KB-EDAE238D.md",
+      "subject": "Designer asset picker New folder posts one POST /api/assets/folder with the current folder as parentUrl, validates the name client-side, then opens the new folder",
+      "question": "How does the New folder action in the Page Builder Designer asset picker behave and validate names?",
+      "questions": [
+        "What folder names does the Page Builder asset picker accept?",
+        "Does double-clicking Create in the asset picker create two folders?",
+        "Who sees New folder and Upload in the Page Builder Designer asset picker?"
+      ],
+      "anchors": [
+        "POST /api/assets/folder",
+        "page-builder-designer/index.html#/pages"
+      ],
+      "scope": [
+        "surface=admin-pagebuilder-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
