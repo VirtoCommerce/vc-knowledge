@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T10:27:19.833Z",
-  "count": 1243,
+  "generated": "2026-10-23T10:42:33.091Z",
+  "count": 1244,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14042,6 +14042,29 @@
       "scope": [
         "module=page-builder",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7D03DE5C",
+      "path": "entries/KB-7D03DE5C.md",
+      "subject": "A user without admin-shell:access who signs in to /apps/admin-shell/ is not refused: the shell boots with an empty section rail, a raw \"403\" toast, and the Home dashboard widgets still load data through the module APIs the user's other permissions allow",
+      "question": "What happens when a user without admin-shell:access signs in to the Admin Shell?",
+      "questions": [
+        "Does the Admin Shell refuse sign-in for a user lacking admin-shell:access?",
+        "What does POST /api/admin-shell/menu return for a user without admin-shell:access and how does the UI react?",
+        "Is the Admin Shell dashboard shown to a user who has order permissions but no admin-shell:access?"
+      ],
+      "anchors": [
+        "/apps/admin-shell",
+        "POST /api/admin-shell/menu"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
