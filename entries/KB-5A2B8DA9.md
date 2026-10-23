@@ -26,5 +26,14 @@ evidence:
     at: 2026-10-23T09:19:34.576Z
     by: session:5de4e186
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 4a14ffabb4298717
+    conditions: platform=3.1086.0-pr-3137-8aa4; module:VirtoCommerce.AdminShell=3.1000.0-pr-1-f481; role=administrator
+    at: 2026-10-23T11:40:53.593Z
+    by: session:5de4e186
+    bodyHash: 3c437e068894
+    who: kutasinaelena
+    note: "Re-observed in regression run: with a stored rename patch, PUT menu/global raw 'not-json' and {\"sections\": []} each -> 204 and GET returned the empty patch; roles/{id} and me/prefs non-JSON -> 204 and wiped a stored hide / pin."
 ---
 As administrator, with a non-empty global patch stored (8 item overrides, 2 added sections, 2 added items), PUT /api/admin-shell/menu/global was sent with Content-Type application/json and bodies: plain text, truncated JSON '{ "sections": ', wrong shape {"sections":[],"items":"x"}, literal null and an empty body. Every one answered 204 No Content, and GET /api/admin-shell/menu/global then returned the empty patch {"sections":{},"items":{},"addSections":[],"addItems":[]} — the whole stored customization was replaced. Only a non-JSON content type (text/plain) was refused, with 415. The same holds for PUT /api/admin-shell/menu/roles/{roleId} (a stored hide was wiped) and PUT /api/admin-shell/menu/me/prefs (a user's pins were wiped). Source: the controller actions are on a plain Controller (no ApiController attribute), so model binding yields null and the action saves `patch ?? new MenuPatch()`. For comparison, POST /api/platform/security/login with a malformed body answers 400. The Menu Editor's own JSON view refuses invalid JSON client-side (Apply disabled).

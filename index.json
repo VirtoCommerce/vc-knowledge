@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T11:40:39.634Z",
-  "count": 1252,
+  "generated": "2026-10-23T11:45:52.059Z",
+  "count": 1253,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -24419,6 +24419,25 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-D66DE162",
+      "path": "entries/KB-D66DE162.md",
+      "subject": "Opening the Admin Shell Orders list or an order blade as a user with only admin-shell:access + order:access + order:read fires POST /api/stores/search (403) and POST /api/platform/dynamic/properties/search (403) with an unhandled rejection in the console",
+      "question": "Does the Admin Shell Orders screen call endpoints a restricted order-reader role is not permitted to use?",
+      "anchors": [
+        "POST /api/stores/search",
+        "POST /api/platform/dynamic/properties/search",
+        "/apps/admin-shell#/orders"
+      ],
+      "scope": [
+        "role=order-reader-without-store-read",
+        "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D7AF72F3",
