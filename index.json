@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T09:25:25.153Z",
-  "count": 1241,
+  "generated": "2026-10-23T09:32:25.149Z",
+  "count": 1242,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4342,6 +4342,27 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-29B269C4",
+      "path": "entries/KB-29B269C4.md",
+      "subject": "The Admin Shell Settings screen discards unsaved setting edits without any confirmation when the user navigates to another menu item",
+      "question": "Does leaving the Admin Shell Settings screen with unsaved changes ask the user to confirm?",
+      "questions": [
+        "Is there a leave guard on the Vue Settings screen in the Admin Shell?",
+        "What happens to an unsaved setting value when I click another menu item in the Admin Shell?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/settings"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-2A7CB639",
