@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T11:39:37.069Z",
-  "count": 1251,
+  "generated": "2026-10-23T11:40:39.634Z",
+  "count": 1252,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -21403,6 +21403,30 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-B8EDAD02",
+      "path": "entries/KB-B8EDAD02.md",
+      "subject": "An OrganizationMembership's status round-trips through a full-row PUT, and lock/unlock act on it by membership id; contact currentOrganizationId is set through PUT /api/members",
+      "question": "How do I set one organization membership of a multi-org contact to Invited/Rejected/Deleted or locked, and pin the contact's current organization, through REST?",
+      "questions": [
+        "Which REST call changes an organization membership status?",
+        "How do I lock a single organization membership of a contact?",
+        "How do I set a contact's current organization via the admin API?"
+      ],
+      "anchors": [
+        "POST /api/customer/organization-memberships/{id}/lock",
+        "PUT /api/customer/organization-memberships/{id}",
+        "PUT /api/members"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-B96A2EB1",
