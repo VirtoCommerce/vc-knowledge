@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T08:36:16.843Z",
-  "count": 1230,
+  "generated": "2026-10-23T08:36:27.139Z",
+  "count": 1231,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2316,6 +2316,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-1470C599",
+      "path": "entries/KB-1470C599.md",
+      "subject": "GET /api/apps/admin-shell/manifest is anonymous and lists one plugin per module that ships plugins/admin-shell/remoteEntry.js",
+      "question": "What does GET /api/apps/admin-shell/manifest return, and does it need authentication?",
+      "questions": [
+        "Admin Shell module federation manifest shape",
+        "where are Admin Shell module remotes served from",
+        "is the admin shell manifest public"
+      ],
+      "anchors": [
+        "GET /api/apps/admin-shell/manifest"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-14811CA6",
