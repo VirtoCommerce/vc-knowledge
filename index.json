@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T12:37:16.617Z",
-  "count": 1259,
+  "generated": "2026-10-23T12:51:41.116Z",
+  "count": 1260,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -22497,6 +22497,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C3108B49",
+      "path": "entries/KB-C3108B49.md",
+      "subject": "The storefront sends organization_id only on the mfa grant; the mfa grant honours it, falls back from a locked organization to the buyer's other organization, and writes the result back to the contact's current organization",
+      "question": "Which organization does a multi-organization buyer land in after storefront password + emailed MFA code sign-in, and is the mfa grant's organization_id honoured?",
+      "questions": [
+        "Does POST /connect/token grant_type=mfa ignore organization_id?",
+        "Does the MFA code sign-in fall back from a locked last-used organization?",
+        "Does the password step of an MFA sign-in carry organization_id from the storefront?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=mfa",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
