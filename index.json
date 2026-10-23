@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T10:42:33.091Z",
-  "count": 1244,
+  "generated": "2026-10-23T10:43:40.463Z",
+  "count": 1246,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6189,6 +6189,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3A7A11EB",
+      "path": "entries/KB-3A7A11EB.md",
+      "subject": "After sign-out and sign-in of a different user in the same Admin Shell tab, the previous user's section rail and Recent items stay rendered even though the new user's POST /api/admin-shell/menu returned 403",
+      "question": "Does the Admin Shell clear the previous user's menu and recent items on sign-out before another user signs in?",
+      "questions": [
+        "Is the Admin Shell menu state reset between users signing in on the same tab?",
+        "Can a second user see the first user's recent menu items in the Admin Shell?"
+      ],
+      "anchors": [
+        "/apps/admin-shell",
+        "POST /api/admin-shell/menu",
+        "GET /api/platform/security/logout"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -23370,6 +23393,25 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-CF229F47",
+      "path": "entries/KB-CF229F47.md",
+      "subject": "For a user whose role lacks Power BI reports permissions, Admin Shell Insights > Reports opens a blade whose iframe is blank white, because GET /api/power-bi-reports/redirect answers 403 with an empty body",
+      "question": "What does the Admin Shell Reports item render for a user without reports permissions?",
+      "anchors": [
+        "/apps/admin-shell",
+        "GET /api/power-bi-reports/redirect",
+        "/apps/reports"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-CF3FAD18",
