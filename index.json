@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T14:18:41.687Z",
-  "count": 1286,
+  "generated": "2026-10-23T19:25:27.739Z",
+  "count": 1287,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6710,6 +6710,30 @@
       "trust": 2,
       "disputed": 1,
       "contested": 1
+    },
+    {
+      "id": "KB-3DCCDC7A",
+      "path": "entries/KB-3DCCDC7A.md",
+      "subject": "With storefront MFA required, Login on behalf asks the operator for a sign-in code only on the signed-out /account/impersonate/{userId} form; a signed-in operator clicking OK in the Company members dialog is impersonated at once with no code",
+      "question": "With MFA required, does a storefront operator have to enter an emailed sign-in code before Login on behalf impersonates a member?",
+      "questions": [
+        "Does the Company members Login on behalf dialog show an MFA code step?",
+        "What does /account/impersonate/{userId} do when the operator is not signed in and MFA is on?",
+        "Does a wrong MFA code on the impersonation form still impersonate the target?"
+      ],
+      "anchors": [
+        "/company/members",
+        "/account/impersonate/{id}",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-3DDFBA81",

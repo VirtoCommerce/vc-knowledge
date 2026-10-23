@@ -24,5 +24,14 @@ evidence:
     at: 2026-10-23T12:52:05.155Z
     by: session:7ed484a4
     who: kutasinaelena
+  - method: observation
+    deployment: vcst_qa
+    build: 5bd367d41cd309ee
+    conditions: platform=3.1090.0-pr-3133-8b4a; module:VirtoCommerce.MFA=3.1000.0-pr-1-e8c7; theme=2.61.0-pr-2570-8619; store=B2B-store; setting:MultiFactorAuthentication.StoreMode=Enabled
+    at: 2026-10-23T19:24:36.196Z
+    by: session:7ed484a4
+    bodyHash: ca21b485c920
+    who: kutasinaelena
+    note: "Unchanged on the newer build: password at 19:10:18Z emailed one code; Back to sign in + Sign in at ~19:10:48Z answered two_factor_required with resendSecondsRemaining=1, no new journal row, UI still \"We sent a code to a***d@example.com.\" with Resend enabled."
 ---
 On vcst_qa 2026-10-23 (B2B-store StoreMode=Enabled): password step at 12:38:07Z emailed one MfaSignInEmailNotification. "Back to sign in" then Sign in again at 12:38:26Z: POST /connect/token answered 400 two_factor_required with a new twoFactorToken and resendSecondsRemaining=11, the journal still held ONE notification, but the code step said "We sent a code to a•••4@example.com." with "Resend code in 11 s". Typing the code from the first email on the second ticket answered 200 and signed in — the code is per user, not per ticket.
