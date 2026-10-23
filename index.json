@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T11:45:52.059Z",
-  "count": 1253,
+  "generated": "2026-10-23T11:48:13.502Z",
+  "count": 1254,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6322,6 +6322,30 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3BF84A5E",
+      "path": "entries/KB-3BF84A5E.md",
+      "subject": "POST /connect/token grant_type=mfa redeems the two-factor ticket on a right code BEFORE the store rule refuses, so a retry with the same ticket and code answers invalid_two_factor_token and the user must redo the password step for a new emailed code",
+      "question": "Is the MFA code or ticket spent when a validator after the code (store rule) refuses the sign-in, and what does a retry return?",
+      "questions": [
+        "Does user_cannot_login_in_store come before or after the MFA code step?",
+        "Can a buyer retry the same MFA code after a store refusal?",
+        "Which failure reason does the sign-in log record when the store rule refuses after the MFA code?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=mfa",
+        "grant=mfa",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
