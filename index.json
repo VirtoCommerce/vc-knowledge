@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T13:21:49.892Z",
-  "count": 1281,
+  "generated": "2026-10-23T13:25:52.831Z",
+  "count": 1283,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13655,6 +13655,26 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7851CD1F",
+      "path": "entries/KB-7851CD1F.md",
+      "subject": "Settings v2 values endpoints never return settings registered IsHidden (e.g. AdminShell.Menu.Recent), whether or not a value is stored",
+      "question": "Can GET /api/platform/settings/v2/tenant/{type}/{id}/values read a hidden setting such as AdminShell.Menu.Recent?",
+      "questions": [
+        "Why does the Settings v2 tenant values response not contain AdminShell.Menu.Recent?",
+        "Where is the Admin Shell Recent history stored and can it be read via the settings API?"
+      ],
+      "anchors": [
+        "GET /api/platform/settings/v2/tenant/{id}/{id}/values"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -28529,6 +28549,26 @@
       "trust": 4,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-F31D1389",
+      "path": "entries/KB-F31D1389.md",
+      "subject": "Order dashboard statistics revenue is the sum of non-cancelled payments created in the window, not of order totals; orderCount counts non-cancelled orders by created date",
+      "question": "What does revenue in the order module dashboard statistics (Admin Shell Home sales widget) sum?",
+      "questions": [
+        "Why is the Home sales widget total lower than the sum of order totals in the period?",
+        "Do orders in status New count toward dashboard revenue?"
+      ],
+      "anchors": [
+        "GET /api/order/dashboardStatistics"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-F320B037",
