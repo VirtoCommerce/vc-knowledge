@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T13:00:03.731Z",
-  "count": 1271,
+  "generated": "2026-10-23T13:02:22.121Z",
+  "count": 1276,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13519,6 +13519,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-77CB2730",
+      "path": "entries/KB-77CB2730.md",
+      "subject": "A multilanguage page version restricted to a user group leaves alternates/hreflang, but slugInfo still resolves its permalink to that version's id, so a visitor outside the group gets the 404 view instead of the default-language fallback",
+      "question": "What happens on the storefront when a language version of a multilanguage page is restricted to a user group the visitor is not in?",
+      "questions": [
+        "Does slugInfo filter user-group restricted page versions?",
+        "Is a user-group restricted translation removed from pageDocument alternates?",
+        "Does MissingTranslationBehavior fallback apply when the translation is hidden by user group?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageDocument",
+        "PUT /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=virtocommerce.pages",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7837F100",
       "path": "entries/KB-7837F100.md",
       "subject": "Barcode lookup hides unpriced products only because the storefront adds a price term; xAPI expansion itself does not",
@@ -16638,6 +16663,29 @@
       "scope": [
         "surface=storefront-ui",
         "theme=2.59.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-912B0774",
+      "path": "entries/KB-912B0774.md",
+      "subject": "After a language switch to the store default language, browser Back to the previous /<locale>/ URL renders the 404 view on every route, because the client router keeps the new locale and sends the locale prefix as part of the permalink",
+      "question": "What does the storefront show when the visitor presses Back after switching language with the language selector?",
+      "questions": [
+        "Does browser Back after a language switch return to the previous language page?",
+        "Why does GetSlugInfo receive permalink fr/<slug> after Back?",
+        "Is the 404 after Back from a language switch specific to Page Builder pages?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "/{id}/{id}",
+        "/search"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -20837,6 +20885,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-B0E3E206",
+      "path": "entries/KB-B0E3E206.md",
+      "subject": "Page Builder pages (plain and multilanguage) emit no og:url meta and keep the generic document title, unlike PDP and category pages which emit og:url",
+      "question": "Does a Page Builder page on the storefront expose og:url and a page title?",
+      "questions": [
+        "Which storefront pages emit meta og:url?",
+        "Is the missing og:url on a multilanguage page specific to the multilanguage feature?",
+        "What document title does a Page Builder page get?"
+      ],
+      "anchors": [
+        "Query.pageDocument"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B0E6284D",
       "path": "entries/KB-B0E6284D.md",
       "subject": "PDP variations widget sends view_item_list per rendered page (not cumulative), never select_item, and does not re-send on list/table switch or full view",
@@ -23658,6 +23727,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-CBBC56F1",
+      "path": "entries/KB-CBBC56F1.md",
+      "subject": "Clone on a language-version blade opened from the Multilanguage Page blade creates a standalone Landing copy but throws an unhandled '[BladeMessaging] Caller blade … not found in stack' rejection",
+      "question": "Does Clone from a Multilanguage language-version blade raise a console error?",
+      "questions": [
+        "What does Clone do on a language version of a Multilanguage Page?",
+        "Why does BladeMessaging Caller blade not found appear in Page Builder?"
+      ],
+      "anchors": [
+        "/apps/page-builder-shell",
+        "POST /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-CC18E96D",
       "path": "entries/KB-CC18E96D.md",
       "subject": "The MFA module's switches are a global Boolean (Settings > Platform > Security > Multi-factor authentication, default off) and a per-store dropdown (Store > Settings > Store > Security, default Use global setting); neither is exposed anonymously through xAPI",
@@ -23900,6 +23991,27 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-CF05CA9A",
+      "path": "entries/KB-CF05CA9A.md",
+      "subject": "PUT /api/page-builder-multilanguage-pages accepts any organizationId string and copies it to every version, and silently ignores a changed storeId (200, store unchanged)",
+      "question": "Does updating a Multilanguage Page validate organizationId and storeId?",
+      "questions": [
+        "Can a Multilanguage Page be moved to another store by PUT?",
+        "Is the Multilanguage Page organization validated?"
+      ],
+      "anchors": [
+        "PUT /api/page-builder-multilanguage-pages"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-CF229F47",
@@ -29285,7 +29397,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-FC1BCACF",

@@ -27,5 +27,14 @@ evidence:
     at: 2026-10-23T12:32:11.450Z
     by: session:0204f22f
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcptcore_qa
+    build: 706d29d69470a72c
+    conditions: theme=2.61.0-pr-2576-211e3e15; module:VirtoCommerce.Pages=3.1011.0-pr-23-4bcd; setting:VirtoPages.MissingTranslationBehavior=unset
+    at: 2026-10-23T13:00:56.774Z
+    by: session:0204f22f
+    bodyHash: ba69327870e5
+    who: Aleksandra-Mitricheva
+    note: "Reproduced on a new de-DE-default page: /es/ and / render the 404 view, hreflang de-DE+fr-FR only, no x-default; after an en-US version is published /es/ serves en-US content and x-default appears."
 ---
 Store default en-US, setting VirtoPages.MissingTranslationBehavior unset (DefaultLanguage). A Multilanguage Page with DefaultCultureName de-DE and only de-DE + fr-FR versions published: slugInfo(permalink, storeId, cultureName=es-ES) and cultureName=en-US both returned entityInfo null; the storefront rendered the 404 view at HTTP 200 for /es/<permalink> and /<permalink>; head had hreflang de-DE and fr-FR only, no x-default. After an en-US version was added and published, es-ES resolved to the en-US version and x-default appeared pointing at the en-US URL. Archiving the en-US version brought the 404 back within 2 s. So the fallback and x-default follow the store default culture; the page's own Default language (the source language for Outdated) does not act as a fallback.
