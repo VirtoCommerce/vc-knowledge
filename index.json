@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-23T13:25:52.831Z",
-  "count": 1283,
+  "generated": "2026-10-23T14:12:42.689Z",
+  "count": 1285,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13580,6 +13580,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-77A6C523",
+      "path": "entries/KB-77A6C523.md",
+      "subject": "slugInfo resolves a Multilanguage Page permalink of one language to the version in the requested cultureName, and pageDocument.alternates lists only published store-language versions, one per language",
+      "question": "slugInfo(permalink, cultureName) on a multilanguage Page Builder page and pageDocument alternates",
+      "questions": [
+        "Does slugInfo return the translation when I pass the French permalink with cultureName en-US?",
+        "Which versions does pageDocument.alternates include for a Multilanguage Page?",
+        "Are draft or archived language versions returned in pageDocument alternates?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageDocument"
+      ],
+      "scope": [
+        "entity=multilanguage-page",
+        "module=virtocommerce.xcms",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-77B581F3",
       "path": "entries/KB-77B581F3.md",
       "subject": "Storefront quote Decline is one click, with no reason and no confirmation",
@@ -19288,6 +19312,29 @@
         "KB-F91252E5"
       ],
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A48DF440",
+      "path": "entries/KB-A48DF440.md",
+      "subject": "On vcptcore B2B-store an anonymous xAPI categories/products query returns HTTP 200 with errors[] Unauthorized and data null",
+      "question": "anonymous xAPI categories / products query on vcptcore B2B-store returns \"Anonymous access denied or access token has expired or is invalid\"?",
+      "questions": [
+        "Can I query catalog categories anonymously on vcptcore B2B-store?",
+        "Why does Query.categories return null without a token on B2B-store?"
+      ],
+      "anchors": [
+        "Query.categories",
+        "Query.products"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "store=b2b-store",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
