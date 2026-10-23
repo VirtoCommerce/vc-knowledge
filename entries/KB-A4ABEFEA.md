@@ -58,5 +58,13 @@ evidence:
     bodyHash: fd5fca579e50
     who: Lenajava1
     note: POST /api/notifications/journal keyword=<recipient email> returned MfaSignInEmailNotification rows with the rendered body and the 6-digit code; status Pending at first, Error later (SendGrid credits).
+  - method: observation
+    deployment: vcst_qa
+    build: d70745c02c9df3fe
+    at: 2026-10-23T11:39:34.493Z
+    by: session:7ed484a4
+    bodyHash: fd5fca579e50
+    who: kutasinaelena
+    note: "2026-10-23: MfaSignInEmailNotification row for the recipient was readable 0.5-0.6 s after the password grant (createdDate 0.2 s after it), status Pending, body carrying the 6-digit code."
 ---
 POST /api/notifications/journal with {notificationType, keyword: <recipient email>, sort: 'createdDate:desc'} returns EmailNotificationMessage rows that already include from, to, cc, subject, body and tenantIdentity, so GET /api/notifications/journal/{id} is not needed for the body. keyword matched the to field (all hits had that recipient when combined with notificationType); keyword alone matched far more rows, so filter to client-side. On a deployment without SMTP the row is stored with status Error but the rendered body is present. to can hold several recipients separated by '; '.
