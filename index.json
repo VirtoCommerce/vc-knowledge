@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T09:34:22.795Z",
-  "count": 1295,
+  "generated": "2026-10-26T09:51:37.915Z",
+  "count": 1296,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4696,6 +4696,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2BA242BB",
+      "path": "entries/KB-2BA242BB.md",
+      "subject": "On theme PR 2604 build, the language selector keeps the slug-owning culture in previousCultureSlug, so a de-DE-only product slug resolves on every en-GB/en-US hop (no 404)",
+      "question": "Does switching language twice on a product whose SEO URL exists in one language only still land on 404 with the PR 2604 fix?",
+      "questions": [
+        "What does sessionStorage previousCultureSlug hold after several language switches on a fallback-shown product page?",
+        "Which cultureName does GetSlugInfo use on an en-US page reached through the language fallback?",
+        "Is VCST-6501 fixed by vc-frontend PR 2604?"
+      ],
+      "anchors": [
+        "/products-with-options/dreamy-cakes/vintage-wedding-cake",
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "feature=localization",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
