@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T23:00:20.398Z",
-  "count": 1315,
+  "generated": "2026-10-26T23:38:06.248Z",
+  "count": 1316,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -24541,6 +24541,31 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CC283A85",
+      "path": "entries/KB-CC283A85.md",
+      "subject": "Profile mutations return one GraphQL error per failed validation rule, with extensions.field (input path) and extensions.errorCode, on ProfileExperienceApi 3.1022.0-pr-150",
+      "question": "What does updateContact / updateMemberAddresses return in errors[].extensions when a name contains a digit?",
+      "questions": [
+        "Which field does a VALIDATION error on Mutation.updateContact name?",
+        "Does updateMemberAddresses report every invalid address or only the first?",
+        "What errorCode values can profile mutations return?",
+        "Does a rejected updateContact leave the rejected name in the contact cache?"
+      ],
+      "anchors": [
+        "Mutation.updateContact",
+        "Mutation.updateMemberAddresses",
+        "Mutation.updatePersonalData"
+      ],
+      "scope": [
+        "account=personal",
+        "surface=graphql-xapi"
       ],
       "plane": "experiential",
       "status": "active",
