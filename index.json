@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T09:51:37.915Z",
-  "count": 1296,
+  "generated": "2026-10-26T09:53:41.886Z",
+  "count": 1297,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -16109,6 +16109,33 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-89D18C23",
+      "path": "entries/KB-89D18C23.md",
+      "subject": "A product SEO URL that exists only in de-DE renders the 404 view when loaded directly in the default en-US culture in a fresh session",
+      "question": "What does the storefront show when a product's semantic URL from another language is opened directly without a language prefix?",
+      "questions": [
+        "Does a de-DE-only product slug resolve at the unprefixed en-US URL in a new tab?",
+        "Is the en-US URL reached through the language-switch fallback shareable?"
+      ],
+      "concepts": [
+        "seo-url",
+        "page-not-found",
+        "localization"
+      ],
+      "anchors": [
+        "/products-with-options/dreamy-cakes/vintage-wedding-cake",
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "feature=localization",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
