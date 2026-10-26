@@ -25,5 +25,12 @@ evidence:
     at: 2026-10-23T11:39:43.414Z
     by: session:7ed484a4
     who: kutasinaelena
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-10-26T18:57:26.040Z
+    by: session:7ed484a4
+    bodyHash: 78954f88e40d
+    who: kutasinaelena
+    note: "Re-observed 2026-10-26 in the MFA creator proof: lock→isLocked true, unlock→false, PUT status Invited then Approved read back, PUT /api/members currentOrganizationId read back."
 ---
 On vcst_qa 2026-10-23 (Customer 3.1030.0), for a fresh AGENT-TEST contact created with organizations=[A,B] and one membership row per org (POST /api/customer/organization-memberships with an org-scoped role): POST /api/customer/organization-memberships/{id}/lock with {lockoutEnd:null} read back isLocked=true, POST .../{id}/unlock read back isLocked=false; GET the row then PUT /api/customer/organization-memberships/{id} with the whole row and status=Invited read back Invited, and the same PUT with Approved restored it. GET /api/members/{contactId}, set currentOrganizationId, PUT /api/members read back the new currentOrganizationId. The other membership was untouched.
