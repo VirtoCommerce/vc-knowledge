@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T19:42:18.821Z",
-  "count": 1309,
+  "generated": "2026-10-26T19:59:56.970Z",
+  "count": 1310,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -18740,6 +18740,24 @@
       "scope": [
         "integration=ga4",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9D6FADFD",
+      "path": "entries/KB-9D6FADFD.md",
+      "subject": "GET /api/platform/security/users/id/{id} for a nonexistent user returns 200 with body null, not 404",
+      "question": "GET /api/platform/security/users/id/{id} for a deleted or nonexistent user: status 204, 404 or 200 empty body?",
+      "anchors": [
+        "GET /api/platform/security/users/id/{id}",
+        "GET /api/platform/security/users/{id}"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
