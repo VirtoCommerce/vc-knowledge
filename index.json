@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T18:47:12.525Z",
-  "count": 1307,
+  "generated": "2026-10-26T18:57:25.411Z",
+  "count": 1308,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -25394,6 +25394,28 @@
       "scope": [
         "role=personal account",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D5083C05",
+      "path": "entries/KB-D5083C05.md",
+      "subject": "An admin refresh_token grant on /connect/token returns a new access token valid 1799 s and a ROTATED refresh_token; the refresh token sent is spent",
+      "question": "Does POST /connect/token grant_type=refresh_token for an admin rotate the refresh token, and how long is the new access token valid?",
+      "questions": [
+        "How long does a platform admin bearer from a refresh_token grant live (expires_in)?",
+        "Do I have to store the new refresh_token after each refresh on the Virto platform?",
+        "Can a long-running admin script keep its bearer alive without a password grant?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "module=platform",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
