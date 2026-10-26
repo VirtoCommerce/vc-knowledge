@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T09:58:55.861Z",
-  "count": 1297,
+  "generated": "2026-10-26T09:59:52.595Z",
+  "count": 1298,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -12302,6 +12302,30 @@
         "feature=customer-activity",
         "module=sales-rep",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-69C4BE5F",
+      "path": "entries/KB-69C4BE5F.md",
+      "subject": "Sign-in log dashboard Sign-ins tile counts every MFA step record (password step Awaiting second factor + each code attempt), not sign-ins; Failed attempts excludes awaiting rows; the attempts chart excludes them",
+      "question": "How does the Backoffice Sign-in log dashboard count MFA sign-ins — is a password step awaiting the second factor counted as a sign-in or a failed attempt?",
+      "questions": [
+        "Why is the Sign-ins tile higher than the number of people who signed in with MFA?",
+        "Does an abandoned MFA sign-in show as a failed attempt on the sign-in log dashboard?",
+        "What does awaitingSecondFactor:false do on POST /api/platform/security/sign-in-log/stats?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/sign-in-log/stats",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=sign-in-log",
+        "surface=admin-spa",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
