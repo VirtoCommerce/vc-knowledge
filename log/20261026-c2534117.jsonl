@@ -1,0 +1,39 @@
+{"at":"2026-10-26T22:17:05.867Z","kind":"ask","q":"SearchPhraseParser (vc-module-search) search phrase: does a single-quoted filter like 'roleId':'role-org-maintainer' work as a filter, and are ' and & dropped from keywords?","verdict":"ambiguous","p":0.47,"f":{"idfCoverage":0.35,"sentenceStrength":0.13,"sentenceMargin":0.31,"margin":0.2},"shown":["KB-7A6171A9","KB-6AFE7618","KB-40B9AEF4"],"state":"ambiguous","ms":10465,"rank":"verdict-1","via":"mcp","call":"toolu_013qZbe6eBj4p7fuWkFmmc3Z","topic":"search phrase grammar special characters","deployment":"vcst_qa","who":"kutasinaelena","agent":"main"}
+{"at":"2026-10-26T22:17:11.672Z","kind":"show","id":"KB-7A6171A9","state":"answer","after":"2026-10-26T22:17:05.867Z","via":"mcp","call":"toolu_01BbH3Yt5RrV2twc2PQVG47Y","topic":"search phrase grammar special characters","who":"kutasinaelena","agent":"main"}
+{"at":"2026-10-26T22:34:17.255Z","kind":"ask","q":"Query.cartPickupLocations keyword with apostrophe or ampersand returns all locations? pickup location search /cart","verdict":"ambiguous","p":0.8,"f":{"idfCoverage":0.87,"sentenceStrength":0.31,"sentenceMargin":0.15,"margin":0.23},"shown":["KB-8D5B9AC9","KB-7A6171A9","KB-A91E80EC"],"state":"ambiguous","ms":2193,"rank":"verdict-1","via":"mcp","call":"toolu_01NbEuiccF9oNduBfqEMCh7C","topic":"pickup location keyword search","deployment":"vcst_qa","who":"kutasinaelena","agent":"qa-frontend-expert"}
+{"at":"2026-10-26T22:34:38.931Z","kind":"show","id":"KB-8D5B9AC9","state":"answer","after":"2026-10-26T22:34:17.255Z","via":"mcp","call":"toolu_012uSCaZwQ2tqC1rUPNqoqQ8","topic":"pickup location keyword search","who":"kutasinaelena","agent":"qa-frontend-expert"}
+{"at":"2026-10-26T22:36:32.164Z","kind":"confirm","id":"KB-7A6171A9","deployment":"vcptcore_regression","trust":2,"defect":"ticket","build":"82521b7bb31c0bcd","client":"692a9c62","via":"mcp","call":"toolu_01Qnoa58v2k688RFtrmoaE6r","topic":"search phrase grammar special characters","who":"kutasinaelena","agent":"main"}
+{"at":"2026-10-26T22:36:32.868Z","kind":"capture","id":"KB-9F8787D7","subject":"With ' and & allowed in the search-phrase SimpleString (vc-module-search PR #159), pickup keywords containing them filter correctly, and single-quoted 'field':'value' filters stop matching","build":"04c60d6136307709","client":"692a9c62","question":"After the VCST-6477 grammar change, what do productPickupLocations / cartPickupLocations return for O'Neil or &, and do single-quoted filters like 'roleId':'x' in organization.contacts searchPhrase still work?","after":"2026-10-26T22:17:05.867Z","afterBy":"handle","related":["KB-27B4CD10","KB-09C378C0","KB-3951B671"],"read":["KB-8D5B9AC9","KB-7A6171A9"],"via":"mcp","call":"toolu_01YFWV6m7GEkJ4cJeAerRGPH","topic":"search phrase grammar special characters","who":"kutasinaelena","agent":"main"}
+{"at":"2026-10-26T22:36:53.862Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:37:17.442Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:37:36.769Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:37:41.337Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:38:39.744Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:39:36.085Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:40:35.920Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:41:38.262Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:41:45.818Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:42:15.802Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:42:38.134Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:43:55.114Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:44:38.706Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:45:08.778Z","kind":"dispute","id":"KB-8D5B9AC9","deployment":"vcst_qa","build":"04c60d6136307709","client":"692a9c62","via":"mcp","call":"toolu_01MXbgbBbaTeqAbeDgftS8oY","topic":"pickup location keyword search","who":"kutasinaelena","agent":"qa-frontend-expert"}
+{"at":"2026-10-26T22:45:30.777Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:45:56.069Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:46:37.695Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:47:15.379Z","kind":"show","id":"KB-8D5B9AC9","state":"answer","verify":true,"via":"mcp","call":"toolu_01P8hcjUaNin7Pu34V77qTta","topic":"search phrase grammar special characters","who":"kutasinaelena","agent":"main"}
+{"at":"2026-10-26T22:47:30.186Z","kind":"confirm","id":"KB-8D5B9AC9","deployment":"vcptcore_regression","trust":2,"defect":"ticket","build":"82521b7bb31c0bcd","client":"692a9c62","via":"mcp","call":"toolu_01AMZ9rKpq5VsWEmg6sSoNu4","topic":"search phrase grammar special characters","who":"kutasinaelena","agent":"main"}
+{"at":"2026-10-26T22:47:39.009Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:47:39.233Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:48:09.400Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:48:35.303Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:48:36.685Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-10-26T22:49:39.227Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:50:54.903Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:51:48.919Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:52:49.884Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:53:51.983Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:54:48.590Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:55:47.699Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-10-26T22:55:47.723Z","kind":"session","session":"c2534117","tools":169,"turns":8,"touchAt":[59,60,127,128,149,150,152],"agents":1,"agentTools":184,"agentTouches":4,"firstAt":"2026-10-26T22:07:11.055Z","lastAt":"2026-10-26T22:55:08.078Z","who":"kutasinaelena"}
+{"at":"2026-10-26T22:55:48.852Z","kind":"flush","entries":1,"lines":44,"swept":["153e3820.jsonl","66a4da1d.jsonl","b3683102.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"kutasinaelena"}

@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T21:33:57.404Z",
-  "count": 1312,
+  "generated": "2026-10-26T22:55:48.852Z",
+  "count": 1313,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -14357,7 +14357,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16821,8 +16821,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0
+      "trust": 2,
+      "disputed": 1
     },
     {
       "id": "KB-8DA09FE8",
@@ -18994,6 +18994,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9F8787D7",
+      "path": "entries/KB-9F8787D7.md",
+      "subject": "With ' and & allowed in the search-phrase SimpleString (vc-module-search PR #159), pickup keywords containing them filter correctly, and single-quoted 'field':'value' filters stop matching",
+      "question": "After the VCST-6477 grammar change, what do productPickupLocations / cartPickupLocations return for O'Neil or &, and do single-quoted filters like 'roleId':'x' in organization.contacts searchPhrase still work?",
+      "questions": [
+        "Do single-quoted filters 'field':'value' work in a VirtoCommerce searchPhrase?",
+        "Why does organization contacts filter 'roleId':'x' return nothing after the Search module update?",
+        "Does pickup location search find a location named with an apostrophe or ampersand?"
+      ],
+      "anchors": [
+        "Query.productPickupLocations",
+        "Query.cartPickupLocations",
+        "Query.organization"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
