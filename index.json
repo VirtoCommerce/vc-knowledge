@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T19:59:56.970Z",
-  "count": 1310,
+  "generated": "2026-10-26T20:18:05.183Z",
+  "count": 1311,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -26246,6 +26246,30 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-DC04ED4B",
+      "path": "entries/KB-DC04ED4B.md",
+      "subject": "On XOrder 3.1016.0 an OR clause in the orders/organizationOrders filter escapes the buyer's customer/organization scope and returns other customers' orders",
+      "question": "Does the storefront xAPI Query.orders filter keyword stay inside the signed-in buyer's customerId/organizationId scope?",
+      "questions": [
+        "Can a buyer see other customers' orders through the order list search?",
+        "What does Query.orders return for filter \"OR status:\\\"Processing\\\"\"?",
+        "Does Query.organizationOrders filter stay inside the organization?",
+        "Why does filter \"OR\" return the whole organization's orders in Query.orders?"
+      ],
+      "anchors": [
+        "Query.orders",
+        "Query.organizationOrders"
+      ],
+      "scope": [
+        "role=storefront-buyer",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DC2411FF",
