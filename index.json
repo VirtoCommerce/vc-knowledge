@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T10:46:27.834Z",
-  "count": 1300,
+  "generated": "2026-10-26T10:56:18.172Z",
+  "count": 1301,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2471,6 +2471,28 @@
       "scope": [
         "module=salesrep",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1529F1CE",
+      "path": "entries/KB-1529F1CE.md",
+      "subject": "In a multi-select Designer asset picker the selection count shows as \"N selected\" at the left of the pager row, the Select button stays a plain \"Select\", and below ~450px viewport the count squeezes the paginator so its range label wraps one character per line",
+      "question": "Where does the Page Builder Designer asset picker show how many assets are selected in multi-select mode, and how does it behave at narrow widths?",
+      "questions": [
+        "Does the asset picker Select button show a count?",
+        "What does the asset picker pager row look like on a phone-width viewport with items selected?",
+        "Is the selected count shown for single-image controls?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-assets/search",
+        "page-builder-designer/index.html#/pages"
+      ],
+      "scope": [
+        "surface=admin-pagebuilder-designer"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16398,7 +16420,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-8B4E880C",
