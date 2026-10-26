@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T12:16:35.673Z",
-  "count": 1306,
+  "generated": "2026-10-26T17:36:21.500Z",
+  "count": 1307,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -5242,6 +5242,26 @@
         "grant=otp_email",
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2EFE023F",
+      "path": "entries/KB-2EFE023F.md",
+      "subject": "On vcptcore_qa1 the /cart 'Pick points' map modal loads Google Maps with BillingNotEnabledMapError: tiles and markers render dimmed with a 'For development purposes only' watermark, and clicking a list location still opens its 'Pick point info' card",
+      "question": "Does the Google Maps map in the /cart pickup-point picker work on vcptcore_qa1?",
+      "questions": [
+        "Which Google Maps error does the BOPIS pick points map show on vcptcore_qa1?",
+        "Is vcptcore_qa1 usable for testing the map-mode pickup picker?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
