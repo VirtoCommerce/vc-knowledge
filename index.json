@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T22:58:02.694Z",
-  "count": 1313,
+  "generated": "2026-10-26T22:59:05.252Z",
+  "count": 1314,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -19881,7 +19881,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-A5219B63",
@@ -20176,7 +20177,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-A8067930",
@@ -23514,6 +23515,29 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C38C3264",
+      "path": "entries/KB-C38C3264.md",
+      "subject": "On PageBuilderModule 3.1036.0-pr-178-61e8 a page whose stored permalink is already invalid can be renamed and saved in the shell, while cloning it returns 400 with the rule text",
+      "question": "What does the Page Builder shell do with a page whose stored permalink violates the new permalink rule: can it be saved, and can it be cloned?",
+      "questions": [
+        "Does a legacy invalid permalink block saving a page builder page?",
+        "What happens when you clone a page builder page with a space in its permalink?"
+      ],
+      "anchors": [
+        "/apps/page-builder-shell",
+        "PUT /api/page-builder-pages/grouped",
+        "POST /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
