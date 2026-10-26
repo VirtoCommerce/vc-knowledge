@@ -25,5 +25,14 @@ evidence:
     at: 2026-10-23T11:12:01.562Z
     by: session:562b04df
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcptcore_qa
+    build: 37f84b650ab7f9a6
+    conditions: module:VirtoCommerce.PageBuilderModule=3.1036.0-pr-178-61e8; store=B2B-store; role=Administrator
+    at: 2026-10-26T22:58:02.457Z
+    by: session:573da9cc
+    bodyHash: 112b8e0baa6e
+    who: Aleksandra-Mitricheva
+    note: "Same on 61e8: space, %20, %, <, {, |, U+200B, ZWJ emoji and leading/trailing space rejected with inline error and disabled Save; Cyrillic and a single emoji saved verbatim."
 ---
 As administrator in /apps/page-builder-shell (store B2B-store), New page blade with Name and Language en-US set: typing '/my page test', '/page&test?q=1#anchor' or (on a reopened saved page) '/страница-тест-50%' marks the Permalink field invalid, shows the alert "Permalink must be at most 2048 characters and cannot contain spaces or invisible characters, the characters ? # & % \ \" < > { } | ^ `, double slashes, or . and .. segments", keeps the typed value unaltered and leaves Save disabled. The REST twin POST /api/page-builder-pages/create-group-page returns 400 text/plain with a differently worded message ("...cannot contain whitespace, control or invisible formatting characters, the characters ? # & % \ ... empty segments ('//') or '.' and '..' segments.") and stores nothing. '/страница-тест' enables Save, POST /api/page-builder-pages/grouped returns 200, and the reopened blade and GET grouped/{id} hold exactly '/страница-тест'. So on add2 '%' is no longer allowed (it was on 3.1036.0-pr-178-e4ff), and the shell and REST messages differ in wording.
