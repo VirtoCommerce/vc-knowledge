@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T08:37:03.721Z",
-  "count": 1288,
+  "generated": "2026-10-26T08:38:40.827Z",
+  "count": 1290,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7148,6 +7148,27 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=page-builder-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-408DDFEC",
+      "path": "entries/KB-408DDFEC.md",
+      "subject": "Page Builder Assets Library sort select offers Name A-Z/Z-A, Recently modified, Largest first (folders always first) and, with 'Sort by' as a prefix, has no accessible name",
+      "question": "How does the Sort by control in the Page Builder Assets Library workspace behave?",
+      "questions": [
+        "What sort options does the Page Builder Assets Library have?",
+        "Are folders sorted before files in the Page Builder Assets Library?",
+        "Does the Assets Library sort select have an accessible label?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-assets/search"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -22642,6 +22663,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BF28C3B2",
+      "path": "entries/KB-BF28C3B2.md",
+      "subject": "Designer asset picker Upload in a single-asset control accepts several files: one POST /api/assets per file into the current folder, and only the last uploaded file ends up selected",
+      "question": "What happens when several files are uploaded at once in the Page Builder Designer asset picker opened from a single-image control?",
+      "questions": [
+        "Can I upload multiple files from a single Image control's asset library picker?",
+        "Which asset is selected after a multi-file drop in the Designer picker?",
+        "Does the Designer asset picker send one upload request per file?"
+      ],
+      "anchors": [
+        "POST /api/assets",
+        "page-builder-designer/index.html#/pages"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
