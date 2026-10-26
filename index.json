@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T10:56:34.304Z",
-  "count": 1303,
+  "generated": "2026-10-26T11:14:24.443Z",
+  "count": 1305,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10863,7 +10863,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-5A3931CE",
@@ -13457,6 +13458,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-735E4909",
+      "path": "entries/KB-735E4909.md",
+      "subject": "Admin Shell Home Fulfillment widget renders the Cancelled bar's percent label in light grey on the cream bar fill, so it is barely readable in Dark appearance (Virto and Warm themes)",
+      "question": "Is the percent label inside the Fulfillment widget's Cancelled bar readable in Dark appearance?",
+      "questions": [
+        "Fulfillment widget 18% label contrast dark theme",
+        "Admin Shell dashboard Cancelled bar text light on light"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/",
+        "GET /api/order/dashboardStatistics"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -20199,7 +20222,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-A8B46253",
@@ -30154,6 +30178,27 @@
       "scope": [
         "element=google-analytics",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FF596520",
+      "path": "entries/KB-FF596520.md",
+      "subject": "At 375 px the Admin Shell Menu Editor move handle ('Drag to move (or use the arrow keys): <item>') is 22x28 CSS px, under a 24 px target width",
+      "question": "How large is the Menu Editor drag/move handle at phone width?",
+      "questions": [
+        "Menu Editor touch target size move control",
+        "admin shell menu editor handle 24x24"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/menu-editor"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "viewport=phone"
       ],
       "plane": "experiential",
       "status": "active",
