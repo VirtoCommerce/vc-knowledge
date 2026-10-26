@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T09:02:09.034Z",
-  "count": 1291,
+  "generated": "2026-10-26T09:09:40.497Z",
+  "count": 1292,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -16245,6 +16245,29 @@
         "actor=sales-rep-zero-customers",
         "module=sales-rep",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8B446634",
+      "path": "entries/KB-8B446634.md",
+      "subject": "A Page Builder images control declared multiple:true opens the Designer asset picker in multi-select mode and saves the chosen assets as a JSON array of plain URL strings in click order. Re-opening the picker appends to the existing list without pre-selecting it, and duplicates are allowed.",
+      "question": "How does the Page Builder Designer asset picker behave for an images control with multiple:true, and how is the value stored?",
+      "questions": [
+        "Does re-opening the Designer asset picker on a multi-image control replace or append the images?",
+        "What shape does a multi-image Page Builder control save in page content?",
+        "Does the Designer picker keep a pending multi-selection across folders and New folder?",
+        "Do files uploaded inside a multi-select picker become selected?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/grouped/{id}/content",
+        "POST /api/page-builder-assets/search"
+      ],
+      "scope": [
+        "surface=admin-designer"
       ],
       "plane": "experiential",
       "status": "active",
