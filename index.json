@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T20:18:05.183Z",
-  "count": 1311,
+  "generated": "2026-10-26T21:33:57.404Z",
+  "count": 1312,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4571,7 +4571,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-2A7CB639",
@@ -8150,6 +8150,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-48B0C66C",
+      "path": "entries/KB-48B0C66C.md",
+      "subject": "The Admin Shell Menu Editor 'AngularJS screens' tab lists Webhooks (/workspace/virtoCommerce.webhooksModule) as not in the menu although the menu already has a Vue Webhooks item",
+      "question": "Does the Menu Editor AngularJS screens tab offer classic screens that already have a Vue twin in the menu?",
+      "anchors": [
+        "/apps/admin-shell#/menu-editor",
+        "GET /api/admin-shell/menu"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
