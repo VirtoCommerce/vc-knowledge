@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T12:12:11.911Z",
-  "count": 1305,
+  "generated": "2026-10-26T12:16:35.673Z",
+  "count": 1306,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10708,6 +10708,28 @@
       "status": "active",
       "trust": 1,
       "disputed": 2
+    },
+    {
+      "id": "KB-592EFFDF",
+      "path": "entries/KB-592EFFDF.md",
+      "subject": "The Page Builder shell Assets Library \"N assets\" counter counts files only; subfolders are excluded",
+      "question": "Does the \"N assets\" counter in the Page Builder shell Assets Library include folders?",
+      "questions": [
+        "Why does a folder with subfolders show 0 assets in the Page Builder Assets Library?",
+        "What does fileCount vs totalCount mean in POST /api/page-builder-assets/search?"
+      ],
+      "anchors": [
+        "/apps/page-builder-shell#/page-builder-assets",
+        "POST /api/page-builder-assets/search"
+      ],
+      "scope": [
+        "module=page-builder",
+        "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-5972040C",
@@ -24764,7 +24786,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
