@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T18:57:25.411Z",
-  "count": 1308,
+  "generated": "2026-10-26T19:00:36.836Z",
+  "count": 1309,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -16761,6 +16761,26 @@
       "scope": [
         "module=virtocommerce.imagetools",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8CF8E62F",
+      "path": "entries/KB-8CF8E62F.md",
+      "subject": "In the Admin Shell, a classic AngularJS screen opened via #/legacy?url= renders in light classic styling regardless of the shell Appearance (dark or light), and the rail highlight does not follow the legacy route",
+      "question": "Does the classic AngularJS frame inside the Admin Shell follow the shell's dark/light appearance, and which rail section is highlighted on #/legacy routes?",
+      "questions": [
+        "Why is the classic orders blade light inside a dark Admin Shell?",
+        "Which rail item is highlighted when opening #/legacy?url=/workspace/orders?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/legacy?url=/workspace/orders"
+      ],
+      "scope": [
+        "surface=admin-shell"
       ],
       "plane": "experiential",
       "status": "active",
