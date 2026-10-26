@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T10:40:20.465Z",
-  "count": 1299,
+  "generated": "2026-10-26T10:46:27.834Z",
+  "count": 1300,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3617,7 +3617,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7847,6 +7847,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-461CDDA9",
+      "path": "entries/KB-461CDDA9.md",
+      "subject": "On theme 2.61.0-pr-2598-608d, a /cart line click pushes select_item with item_list_id 'cart' and item index = the line's position in the page-load view_cart; an in-page line removal does not re-index, a reload does",
+      "question": "What index does a /cart line's GA4 select_item carry, and does it change after a line is removed without reloading?",
+      "questions": [
+        "Does the cart page select_item use item_list_id cart?",
+        "Is the cart select_item index taken from view_cart or from the live cart?",
+        "After removing a cart line, what index do the remaining lines report on click?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "integration=ga4",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
