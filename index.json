@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T22:59:05.252Z",
-  "count": 1314,
+  "generated": "2026-10-26T23:00:20.398Z",
+  "count": 1315,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6533,6 +6533,27 @@
       ],
       "scope": [
         "module=virtocommerce.pushmessages",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3B124D0A",
+      "path": "entries/KB-3B124D0A.md",
+      "subject": "Legacy Design-page blade saves other fields of a page whose stored permalink is invalid, and keeps that permalink verbatim, across repeated in-session saves",
+      "question": "Can a legacy Content page with a stored invalid permalink still be saved from the Admin page blade?",
+      "questions": [
+        "Does the legacy page blade block Save when the stored permalink is already invalid?",
+        "Is the stored legacy permalink rewritten when another field is saved in the Pages blade?"
+      ],
+      "anchors": [
+        "POST /api/content/pages/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
         "surface=admin-ui"
       ],
       "plane": "experiential",
