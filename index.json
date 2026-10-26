@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T10:07:21.197Z",
-  "count": 1298,
+  "generated": "2026-10-26T10:40:20.465Z",
+  "count": 1299,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -24836,6 +24836,28 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D14BFD76",
+      "path": "entries/KB-D14BFD76.md",
+      "subject": "The header search results dropdown stays open while Tab moves through its product links, closes on Tab past its last link or a click outside, but stays open when Shift+Tab moves focus from the search input back to the logo",
+      "question": "When does the storefront header search dropdown close as keyboard focus or a click leaves it?",
+      "questions": [
+        "Does Tab out of the header search dropdown close it?",
+        "Does Shift+Tab from the header search box close the results dropdown?",
+        "Does clicking outside close the header search dropdown?"
+      ],
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "element=header-search",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
