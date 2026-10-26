@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T09:09:40.497Z",
-  "count": 1292,
+  "generated": "2026-10-26T09:24:56.641Z",
+  "count": 1294,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -174,6 +174,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0128A6EB",
+      "path": "entries/KB-0128A6EB.md",
+      "subject": "Shared component usageCount counts every page version holding a componentRef, including each language version, drafts, clones and archived pages; only deleting the page drops it",
+      "question": "How does a shared component's usage count change when its consumer page gets language versions, is cloned, archived or deleted?",
+      "questions": [
+        "Does creating a language version of a page with a shared component increase the component usage count?",
+        "Does archiving a page release its shared component usage?",
+        "Do Create language and Clone copy the componentRef placement?"
+      ],
+      "anchors": [
+        "GET /api/page-builder-shared-components/{id}",
+        "POST /api/page-builder-multilanguage-pages/{id}/languages/{id}",
+        "POST /api/page-builder-multilanguage-pages/{id}/clone",
+        "POST /api/page-builder-pages/grouped/archive"
+      ],
+      "scope": [
+        "entity=shared-component",
+        "module=virtocommerce.pagebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -28442,6 +28468,30 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F0FCB9A2",
+      "path": "entries/KB-F0FCB9A2.md",
+      "subject": "Removing a language from a store drops that language's multilanguage page version from pageDocument.alternates at once, but slugInfo with that culture still resolves the version and pageDocument still serves it",
+      "question": "What happens to a published multilanguage page version when its language is removed from the store?",
+      "questions": [
+        "Does pageDocument.alternates still list a version whose culture is no longer a store language?",
+        "Does slugInfo resolve a permalink for a culture removed from the store?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageDocument",
+        "PUT /api/stores"
+      ],
+      "scope": [
+        "entity=multilanguage-page",
+        "module=virtocommerce.pages",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
