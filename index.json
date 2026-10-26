@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T09:33:27.812Z",
-  "count": 1294,
+  "generated": "2026-10-26T09:34:22.795Z",
+  "count": 1295,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4503,7 +4503,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-2A7CB639",
@@ -20389,7 +20390,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-AB35BCDC",
@@ -21392,7 +21394,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-B2BA7561",
@@ -21598,6 +21601,29 @@
         "module=virtocommerce.backgroundjobs 3.1052.1",
         "module=virtocommerce.export 3.1005.0",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B431EA54",
+      "path": "entries/KB-B431EA54.md",
+      "subject": "Admin Shell entry is decided by the platform PlatformUI:Access policy (currentuser.canAccessAdminUI); with default config any user holding at least one permission enters, and admin-shell:access no longer gates the menu",
+      "question": "Who may open the Admin Shell, and does admin-shell:access still gate it?",
+      "questions": [
+        "What does canAccessAdminUI in /api/platform/security/currentuser mean for the Admin Shell?",
+        "Can a user with only order permissions open /apps/admin-shell/?"
+      ],
+      "anchors": [
+        "/apps/admin-shell",
+        "GET /api/platform/security/currentuser",
+        "POST /api/admin-shell/menu"
+      ],
+      "scope": [
+        "module=virtocommerce.adminshell",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
