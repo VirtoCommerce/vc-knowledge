@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T10:56:18.172Z",
-  "count": 1301,
+  "generated": "2026-10-26T10:56:34.304Z",
+  "count": 1303,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -924,6 +924,28 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-09C6505A",
+      "path": "entries/KB-09C6505A.md",
+      "subject": "On unmerged PR 2598 build 608d, /cart saved-for-later reports its own GA4 list saved_for_later: one view_item_list per distinct set of items (none on Show more or on an empty/non-empty cart flip with an unchanged set) and select_item with the item's index in the latest impression",
+      "question": "On the PR 2598 build, how does the /cart saved-for-later block report GA4 impressions and clicks, and when is its view_item_list re-sent?",
+      "questions": [
+        "Does saved for later on /cart send a view_item_list with item_list_id saved_for_later?",
+        "Is the saved_for_later impression re-sent when the cart becomes empty or non-empty?",
+        "What index does a saved-for-later card click carry?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "integration=ga4",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-09CEE315",
@@ -2843,6 +2865,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-17DD052A",
+      "path": "entries/KB-17DD052A.md",
+      "subject": "/cart re-sends the unchanged recently_browsed_products view_item_list every time the cart switches between empty and non-empty; Move to cart from saved for later pushes no add_to_cart; removing the last line pushes remove_from_cart and clear_cart",
+      "question": "Does /cart re-send the recently browsed impression when the cart becomes empty or non-empty, and which events do moving or removing the last line push?",
+      "questions": [
+        "Is the recently browsed view_item_list sent again when the cart is emptied?",
+        "Does Move to cart from saved for later push add_to_cart?",
+        "What does removing the last cart line push to GA4?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "integration=ga4",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -27238,7 +27282,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
