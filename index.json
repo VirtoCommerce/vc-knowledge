@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T08:38:40.827Z",
-  "count": 1290,
+  "generated": "2026-10-26T09:02:09.034Z",
+  "count": 1291,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -21082,6 +21082,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B0076A35",
+      "path": "entries/KB-B0076A35.md",
+      "subject": "On an Azure-blob asset store, POST /api/assets/folder materialises the new folder with a zero-byte .keep blob, so a freshly created \"empty\" folder lists one child",
+      "question": "Does a folder created with POST /api/assets/folder list as empty, or does it contain a placeholder?",
+      "questions": [
+        "Why does a newly created empty asset folder show totalCount 1?",
+        "What is the .keep file in a Page Builder asset folder?",
+        "Does POST /api/page-builder-assets/search count a folder placeholder blob as a file?"
+      ],
+      "anchors": [
+        "POST /api/assets/folder",
+        "GET /api/assets",
+        "POST /api/page-builder-assets/search"
+      ],
+      "scope": [
+        "storage=azure-blob",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
