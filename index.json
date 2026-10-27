@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T11:17:39.430Z",
-  "count": 1330,
+  "generated": "2026-10-27T11:31:15.080Z",
+  "count": 1332,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11913,6 +11913,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 4
+    },
+    {
+      "id": "KB-63C5B1E6",
+      "path": "entries/KB-63C5B1E6.md",
+      "subject": "A fulfillment center HTML description with a blank line and deep indentation inside a table cell renders the rest of the table as a raw code block, in both the Admin Shell editor and the classic Preview",
+      "question": "Why does a fulfillment center description table show raw HTML and lose rows in the admin editor?",
+      "questions": [
+        "Does the Admin Shell fulfillment center description editor corrupt an HTML table?",
+        "Does the classic admin markdown Preview render fulfillment center HTML descriptions correctly?",
+        "Does saving a fulfillment center from the Admin Shell rewrite the description HTML?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/inventory/fulfillment-center",
+        "PUT /api/inventory/fulfillmentcenters"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-647C63A5",
@@ -27213,6 +27235,26 @@
       ],
       "anchors": [
         "GET /api/platform/security/users"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E1BFA8C8",
+      "path": "entries/KB-E1BFA8C8.md",
+      "subject": "Reloading the browser on an Admin Shell page-builder designer URL shows an empty page with 'Has unsaved changes', and Save then sends nothing",
+      "question": "What happens when the Admin Shell page designer is reloaded on its own URL?",
+      "questions": [
+        "Does the Admin Shell page builder designer survive a browser refresh?",
+        "Can saving after a designer reload overwrite a content page with an empty one?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/content/page-builder-designer"
       ],
       "scope": [
         "surface=admin-ui"
