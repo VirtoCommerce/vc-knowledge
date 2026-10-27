@@ -24,5 +24,16 @@ evidence:
     at: 2026-10-23T13:00:25.757Z
     by: session:0204f22f
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcptcore_qa
+    build: f1db890a6a93d133
+    conditions: module:VirtoCommerce.PageBuilderModule=3.1039.0-pr-175-3d2f; browser=msedge; framework=@vc-shell/framework 2.6.0
+    at: 2026-10-27T19:04:58.293Z
+    by: session:b715861d
+    bodyHash: b5c7821d218b
+    who: Aleksandra-Mitricheva
+    contradicts: true
+    contested: module:VirtoCommerce.PageBuilderModule 3.1039.0-pr-175-3d2f vs 3.1036.0-pr-175-a3bc; virtocommerce.pagebuildermodule 3.1039.0-pr-175-3d2f vs 3.1036.0-pr-175-a3bc; virtocommerce.pages 3.1011.0-pr-23-e50f vs 3.1011.0-pr-23-4bcd
+    note: "On PageBuilderModule 3.1039.0-pr-175-3d2f: Multilanguage Page blade -> 'Open: fr-FR' -> version blade -> Clone created a standalone Draft Landing page '<root name> (copy)' / '<fr permalink>-copy', fr-FR, multilanguagePageId null, and opened it; the console showed no '[BladeMessaging] Caller blade … not found' error (only unrelated SignalR reconnect messages)."
 ---
 Multilanguage Page blade -> language row 'Open' -> version blade (#/page-builder-draft/details/{groupId}) -> Clone: a standalone Draft Landing page '<name> (copy)' / '<permalink>-copy' in the version's culture is created (multilanguagePageId null) and opened, and the console logs '[@vc-shell/framework#global-error-handler] Unhandled rejection: Error: [BladeMessaging] Caller blade 'blade_2_…' not found in stack' from the reload callParent. Opening the same version blade directly by URL and cloning, or cloning a plain Landing page opened from the pages list, logs no error. No visible error toast.

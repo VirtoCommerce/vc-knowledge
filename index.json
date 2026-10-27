@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T19:02:59.023Z",
-  "count": 1342,
+  "generated": "2026-10-27T19:07:11.130Z",
+  "count": 1345,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2308,7 +2308,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -10328,6 +10328,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-5374AC93",
+      "path": "entries/KB-5374AC93.md",
+      "subject": "POST /api/page-builder-multilanguage-pages/mark-up-to-date/{groupId} returns 400 for a translation whose source was never published, for the source version itself, and for a page that is not a language version",
+      "question": "What does mark-up-to-date return when the source language version was never published, or when called on the source?",
+      "questions": [
+        "Can a Multilanguage Page source version be marked up to date?",
+        "Is mark-up-to-date a no-op when nothing was published yet?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-multilanguage-pages/mark-up-to-date/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5394491D",
       "path": "entries/KB-5394491D.md",
       "subject": "xAPI cart LineItemType.showPlacedPrice = IsDiscountAmountRounded: false only when an applied promotion line reward has roundAmountPerItem=false",
@@ -12808,6 +12829,28 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6A3B0C22",
+      "path": "entries/KB-6A3B0C22.md",
+      "subject": "Page Builder content save needs a strong ETag: the content GET's ETag header can arrive weakened (W/) through the stand's edge proxy and is then refused, so read eTag from ?includeVersion=true",
+      "question": "Which ETag must be sent to POST /api/page-builder-pages/grouped/{groupId}/content-json, and why does a header ETag get 400?",
+      "questions": [
+        "Why does content-json return 428 or 400 If-Match?",
+        "How do I save Page Builder page content via REST?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/grouped/{id}/content-json",
+        "GET /api/page-builder-pages/grouped/{id}/content"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -15335,7 +15378,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-7F535D52",
@@ -18314,7 +18358,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-963101C9",
@@ -18730,7 +18775,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-98A231B6",
@@ -21446,8 +21492,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
-      "disputed": 0
+      "trust": 2,
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-AD528300",
@@ -24018,7 +24065,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-C42CA8D0",
@@ -24891,7 +24939,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-CC18E96D",
@@ -25181,7 +25230,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-CF229F47",
@@ -29619,7 +29669,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-F1E057A8",
@@ -29993,6 +30044,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F4E808D1",
+      "path": "entries/KB-F4E808D1.md",
+      "subject": "PUT /api/page-builder-multilanguage-pages with a different storeId returns 400; an arbitrary organizationId is accepted and copied to inheriting versions",
+      "question": "Can a Multilanguage Page root be moved to another store or given any organizationId via PUT?",
+      "questions": [
+        "Is storeId change on a multilanguage root validated?",
+        "Does the root validate organizationId?"
+      ],
+      "anchors": [
+        "PUT /api/page-builder-multilanguage-pages"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
