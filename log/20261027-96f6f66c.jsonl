@@ -7,3 +7,4 @@
 {"at":"2026-10-27T12:57:59.767Z","kind":"restart","why":"transcript-moved","priorTools":27,"who":"Lenajava1"}
 {"at":"2026-10-27T12:59:18.995Z","kind":"restart","why":"transcript-moved","priorTools":0,"who":"Lenajava1"}
 {"at":"2026-10-27T20:36:46.634Z","kind":"session","session":"96f6f66c","tools":1029,"turns":124,"touchAt":[],"agents":78,"agentTools":2601,"agentTouches":1,"firstAt":"2026-10-27T07:24:33.778Z","lastAt":"2026-10-27T19:36:39.069Z","who":"Lenajava1"}
+{"at":"2026-10-27T20:41:20.330Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}

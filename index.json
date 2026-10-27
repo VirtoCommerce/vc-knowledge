@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T21:48:12.719Z",
-  "count": 1363,
+  "generated": "2026-10-27T22:03:04.408Z",
+  "count": 1364,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -30185,6 +30185,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F2DBAF5C",
+      "path": "entries/KB-F2DBAF5C.md",
+      "subject": "On theme 2.61.0-pr-2577 (CSS cascade layers), a keyboard-focused KPI card in /company/dashboard Edit layout shows no focus ring: the SalesRep plugin's unlayered dashed edit outline beats the theme's layered global focus ring",
+      "question": "Does a Tab-focused stat card on /company/dashboard in Edit layout show a visible focus ring on the cascade-layers theme build?",
+      "questions": [
+        "Why is there no focus outline on Sales Rep hub layout blocks in edit mode?",
+        "Is the Sales Rep hub CSS served from the theme or from the VirtoCommerce.SalesRep module plugin?",
+        "Do federated module plugin styles override the layered theme CSS?"
+      ],
+      "anchors": [
+        "/company/dashboard"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-layout",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
