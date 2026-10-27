@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T20:33:12.239Z",
-  "count": 1355,
+  "generated": "2026-10-27T20:36:46.695Z",
+  "count": 1356,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -20078,6 +20078,24 @@
       ],
       "scope": [
         "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A353AF85",
+      "path": "entries/KB-A353AF85.md",
+      "subject": "On a Builder.io page with a products block the storefront h2 renders at the Builder size (20px below lg, 24px at lg+, bold), not the kit h1 variant's size, with text-transform none from the block's own scoped rule",
+      "question": "What font size does the heading of a Builder.io page's products block get, the Builder block rule or the kit typography?",
+      "anchors": [
+        "/predefined-products",
+        "/product-section"
+      ],
+      "scope": [
+        "design=classic",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
