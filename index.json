@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T10:46:12.304Z",
-  "count": 1326,
+  "generated": "2026-10-27T10:48:26.686Z",
+  "count": 1328,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15329,6 +15329,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-81567D01",
+      "path": "entries/KB-81567D01.md",
+      "subject": "A sales rep cannot read, update or delete another rep's task by id, even when both reps serve the task's customer: salesRepTask returns null, updateSalesRepTask and deleteSalesRepTask return \"Task not found.\"",
+      "question": "Can a second sales rep who serves the same customer organization read, update or delete another rep's call by id through salesRepTask / updateSalesRepTask / deleteSalesRepTask?",
+      "questions": [
+        "Are sales rep tasks scoped by creator or by served customer?",
+        "What does deleteSalesRepTask return for a task id owned by another rep?",
+        "Does salesRepTask(id) leak another rep's task?"
+      ],
+      "anchors": [
+        "Query.salesRepTask",
+        "Mutation.updateSalesRepTask",
+        "Mutation.deleteSalesRepTask"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-81D02797",
       "path": "entries/KB-81D02797.md",
       "subject": "On /company/tasks at 1440px the Due dates rail is 280px wide, completed task titles keep the link colour with line-through, and Completed/Overdue status chips use a filled (tonal) background with a dot",
@@ -27954,7 +27979,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -29370,6 +29395,28 @@
         "KB-CFBD95B7"
       ],
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F22F1997",
+      "path": "entries/KB-F22F1997.md",
+      "subject": "salesRepTaskTypes returns [] for a sales rep who serves no customer organization, while a rep with served customers gets the full TaskManagement.TaskTypes list (incl. Call); the gate predates the calls feature",
+      "question": "Why does salesRepTaskTypes return an empty list for a sales rep with no served customers?",
+      "questions": [
+        "Does Query.salesRepTaskTypes depend on the rep serving at least one organization?",
+        "Why is the Type select missing in New task for a rep with zero customers?"
+      ],
+      "anchors": [
+        "Query.salesRepTaskTypes"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

@@ -25,5 +25,14 @@ evidence:
     at: 2026-10-20T14:29:17.137Z
     by: session:70c763de
     who: yuskithedeveloper
+  - method: observation
+    deployment: vcptcore_qa
+    build: 956cfff4cb0a606f
+    conditions: platform=3.1085.0; module:VirtoCommerce.SalesRep=3.1016.0-pr-26-92d4; module:VirtoCommerce.TaskManagement=3.1005.0; store=B2B-store
+    at: 2026-10-27T10:46:30.608Z
+    by: session:e75fe8a4
+    bodyHash: c58661c1d26a
+    who: Aleksandra-Mitricheva
+    note: "Part (1) re-observed on a deployed stand on both /graphql and /graphql/sales-rep: a call linked to a still-served org, updated with id/name/type/priority/dueDate and the customerId key absent, returned and read back customerId:null, customerName:null; an explicit customerId:null gives the identical result. Source at 92d48e1 (SalesRepTaskCommandHandlerBase.ApplyCustomerAsync) treats absent and null the same; only an unserved stored ObjectId is kept."
 ---
 As the owning rep on /graphql/sales-rep: (1) a call linked to a served org, updated with name/type/dueDate/description but no customerId, comes back customerId:null, customerName:null - the link is removed. (2) After an admin removes the org from the rep (PUT /api/sales-rep), reads return customerId/customerName null and the storefront list line says "Customer not assigned"; an update without customerId (UI Edit call unchanged save, which omits customerId, and an API time change) keeps the hidden link - after the org is re-assigned the task names it again. (3) An update while hidden that passes another served org as customerId replaces the hidden link; after re-assignment the task names the new org. The same request shape therefore unlinks or keeps depending on whether the rep currently serves the linked org.
