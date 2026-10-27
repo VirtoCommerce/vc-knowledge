@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T19:56:29.117Z",
-  "count": 1351,
+  "generated": "2026-10-27T20:02:12.104Z",
+  "count": 1352,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -26802,6 +26802,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 4
+    },
+    {
+      "id": "KB-DA25DFB6",
+      "path": "entries/KB-DA25DFB6.md",
+      "subject": "Admin SPA sign-in with a correct password for an account whose password has expired redirects to #!/changepassword and blocks the manager until a new password is set",
+      "question": "What happens when a non-admin manager account with an expired password signs in to the Admin SPA?",
+      "questions": [
+        "Why does Admin login land on #!/changepassword instead of the workspace?",
+        "Can a seeded restricted admin fixture with an expired password still be used for Admin SPA permission tests?",
+        "Does the Admin SPA enforce password expiry at sign-in?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/login"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DA88761E",
