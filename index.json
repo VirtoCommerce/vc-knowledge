@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T10:19:22.981Z",
-  "count": 1322,
+  "generated": "2026-10-27T10:20:35.714Z",
+  "count": 1324,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6588,6 +6588,26 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3BE7E768",
+      "path": "entries/KB-3BE7E768.md",
+      "subject": "Admin Shell quote line items blade can show a line's proposed tier unselected while the classic admin shows it selected",
+      "question": "Does the Admin Shell quote line items blade show the selected proposal tier like the classic admin?",
+      "questions": [
+        "quote request proposal tier radio not selected in vc-shell",
+        "selected tier price quote line item Admin Shell vs classic"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/quotes"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -21047,6 +21067,27 @@
       "scope": [
         "module=virtocommerce.assets 3.1010.0",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AD187A41",
+      "path": "entries/KB-AD187A41.md",
+      "subject": "Loyalty balance and transactions are shown on the contact blade (Loyalty balance widget → operation log); the Admin Shell widget shows a \"99+\" badge instead of the balance",
+      "question": "Where are a customer's loyalty point balance and transactions shown in the admin?",
+      "questions": [
+        "loyalty balance contact widget admin",
+        "loyalty operation log where in back office",
+        "Admin Shell loyalty balance not shown"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/contacts"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
