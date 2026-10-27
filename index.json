@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T16:30:50.967Z",
-  "count": 1335,
+  "generated": "2026-10-27T16:49:04.107Z",
+  "count": 1336,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -9847,6 +9847,27 @@
       "trust": 0,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-51601066",
+      "path": "entries/KB-51601066.md",
+      "subject": "addOrUpdateCartShipment with FixedRate fails with a generic VALIDATION error when the shipment carries no price/deliveryAddress, although availableShippingMethods lists FixedRate",
+      "question": "Why does Mutation.addOrUpdateCartShipment with shipmentMethodCode FixedRate return a VALIDATION error while the cart's availableShippingMethods lists FixedRate?",
+      "questions": [
+        "How do I set a FixedRate shipment on a cart via xAPI without a VALIDATION error?",
+        "addOrUpdateCartShipment returns 'Error trying to resolve field' with code VALIDATION — what is missing?",
+        "Does addOrUpdateCartShipment require the shipment price to equal the method rate?"
+      ],
+      "anchors": [
+        "Mutation.addOrUpdateCartShipment"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-51888868",
