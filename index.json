@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T07:56:47.508Z",
-  "count": 1318,
+  "generated": "2026-10-27T09:46:40.763Z",
+  "count": 1319,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -25873,6 +25873,23 @@
         "db=postgresql",
         "module=taskmanagement",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D825E793",
+      "path": "entries/KB-D825E793.md",
+      "subject": "Admin Shell store Settings child blade (#/stores/store-settings/{storeId}) offers only Save/Reset: no search, no module>group tree, no modified indicator, no per-setting reset and no Edit as JSON, while the global Settings blade (#/settings) in the same shell has all of these",
+      "question": "What can an admin do on the store Settings blade in the Admin Shell compared with the classic store settings widget and the shell's global Settings?",
+      "anchors": [
+        "/apps/admin-shell#/stores/store-settings/{storeId}",
+        "/apps/admin-shell#/settings"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
