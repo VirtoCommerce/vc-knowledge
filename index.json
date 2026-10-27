@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T15:52:18.700Z",
-  "count": 1334,
+  "generated": "2026-10-27T16:17:53.061Z",
+  "count": 1335,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -10911,6 +10911,28 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-59C8EB4D",
+      "path": "entries/KB-59C8EB4D.md",
+      "subject": "Admin shipping and payment method search filter by storeId, isActive and codes; payment search also returns unsaved methods with storeId null",
+      "question": "Which request fields of POST /api/shipping/search and POST /api/payment/search filter by store, and does the result contain only the store's saved methods?",
+      "questions": [
+        "How do I check whether a shipping method code is active in a store via REST?",
+        "Why does /api/payment/search return payment methods with storeId null?",
+        "How to verify a store's active payment method codes through the admin API?"
+      ],
+      "anchors": [
+        "POST /api/shipping/search",
+        "POST /api/payment/search"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
