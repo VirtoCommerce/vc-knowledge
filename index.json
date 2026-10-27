@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T07:27:00.722Z",
-  "count": 1317,
+  "generated": "2026-10-27T07:56:47.508Z",
+  "count": 1318,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -7730,6 +7730,29 @@
       "scope": [
         "module=task-management",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4358B2EC",
+      "path": "entries/KB-4358B2EC.md",
+      "subject": "After a module redeploy, the CDN can keep serving a storefront plugin's unhashed remoteEntry.js from the previous build for up to 4 hours, so the plugin's lazy chunks 404 and its pages never render",
+      "question": "Why does the Sales Rep hub stay on \"Loading page…\" with 404s on its plugin chunks right after the sales-rep module was redeployed?",
+      "questions": [
+        "Why do /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/assets/*.js chunks return 404 in the browser but the same plugin loads from curl?",
+        "Is a module storefront plugin's remoteEntry.js cached by the CDN after a deploy?",
+        "Sales rep hub dashboard falls back to /account/dashboard and My customers is missing after a module update - what is wrong?"
+      ],
+      "anchors": [
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "layer=cdn",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
