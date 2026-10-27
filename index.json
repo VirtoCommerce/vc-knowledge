@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T12:33:28.125Z",
-  "count": 1332,
+  "generated": "2026-10-27T13:52:24.002Z",
+  "count": 1333,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -660,6 +660,27 @@
       "scope": [
         "component=vcstatwidget",
         "host=storybook",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-06A3A50F",
+      "path": "entries/KB-06A3A50F.md",
+      "subject": "The catalog's results count beside the category title never wraps or truncates; with doubled text at 320px it pushes the page wider than the viewport",
+      "question": "On /catalog, does the results count beside the category title (sup.category__products-count) wrap or truncate at 320px, or can it overflow the page?",
+      "questions": [
+        "Why does /de/catalog scroll horizontally at 320px under a text-expansion stress?",
+        "Is the catalog results-count label white-space nowrap?",
+        "Does the storefront catalog header fit long translations at 320px?"
+      ],
+      "anchors": [
+        "/catalog"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",

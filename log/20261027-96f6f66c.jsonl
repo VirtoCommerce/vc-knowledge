@@ -1,1 +1,8 @@
 {"at":"2026-10-27T07:18:52.482Z","kind":"flush","ok":false,"attempts":3,"reason":"conflict","code":"conflict","who":"Lenajava1"}
+{"at":"2026-10-27T07:25:43.725Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
+{"at":"2026-10-27T12:54:56.433Z","kind":"restart","why":"transcript-moved","priorTools":336,"who":"Lenajava1"}
+{"at":"2026-10-27T12:55:39.022Z","kind":"restart","why":"transcript-moved","priorTools":17,"who":"Lenajava1"}
+{"at":"2026-10-27T12:57:06.702Z","kind":"restart","why":"transcript-moved","priorTools":3,"who":"Lenajava1"}
+{"at":"2026-10-27T12:57:27.398Z","kind":"restart","why":"transcript-moved","priorTools":14,"who":"Lenajava1"}
+{"at":"2026-10-27T12:57:59.767Z","kind":"restart","why":"transcript-moved","priorTools":27,"who":"Lenajava1"}
+{"at":"2026-10-27T12:59:18.995Z","kind":"restart","why":"transcript-moved","priorTools":0,"who":"Lenajava1"}
