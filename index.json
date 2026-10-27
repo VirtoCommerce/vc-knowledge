@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T09:53:08.689Z",
-  "count": 1321,
+  "generated": "2026-10-27T10:19:22.981Z",
+  "count": 1322,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -30402,6 +30402,26 @@
         "feature=organization-fallback",
         "persona=multi-org",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FCAEBC07",
+      "path": "entries/KB-FCAEBC07.md",
+      "subject": "Admin Shell fulfillment center blade shows only Products and Audit log widgets; the classic blade also has a Dynamic properties widget",
+      "question": "Which widgets does the fulfillment center blade have in the Admin Shell compared with the classic admin?",
+      "questions": [
+        "Does the Admin Shell fulfillment center blade have dynamic properties?",
+        "fulfillment center widgets vc-shell vs AngularJS admin"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/inventory"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
