@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T18:59:35.962Z",
-  "count": 1340,
+  "generated": "2026-10-27T19:02:04.310Z",
+  "count": 1342,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -70,6 +70,30 @@
         "module=sales-rep",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-007F10F7",
+      "path": "entries/KB-007F10F7.md",
+      "subject": "Page Builder Visibility off (visibility:false, Private) hides a page from anonymous visitors only; a signed-in buyer still resolves it, and for a multilanguage translation the anonymous visitor falls back to the default-language version",
+      "question": "Who can see a Page Builder page or multilanguage translation whose Visibility is switched off?",
+      "questions": [
+        "What does visibility:false mean on a page-builder grouped page?",
+        "Does slugInfo return a Private page to an anonymous visitor?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageDocument",
+        "PUT /api/page-builder-pages/grouped",
+        "POST /api/page-builder-multilanguage-pages"
+      ],
+      "scope": [
+        "module=virtocommerce.pages",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14245,7 +14269,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-7837F100",
@@ -21030,7 +21055,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-AAAE685C",
@@ -29662,6 +29688,29 @@
         "module=salesrep",
         "role=sales-rep",
         "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F2888890",
+      "path": "entries/KB-F2888890.md",
+      "subject": "A multilanguage page translation with a future Start date is not resolved by its own permalink at all — slugInfo returns null instead of falling back to the default-language version; it reappears in alternates once the Start date is past",
+      "question": "What does slugInfo return for the permalink of a multilanguage page translation whose Start date is in the future?",
+      "questions": [
+        "Does a scheduled (not yet started) translation fall back to the default language version?",
+        "Is a future-dated fr-FR version listed in pageDocument alternates?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageDocument",
+        "PUT /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=virtocommerce.pages",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
