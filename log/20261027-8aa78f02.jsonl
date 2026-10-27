@@ -7,3 +7,4 @@
 {"at":"2026-10-27T14:46:05.569Z","kind":"flush","entries":1,"lines":11,"swept":["38cd1260.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
 {"at":"2026-10-27T14:51:52.976Z","kind":"show","id":"KB-4F298EB0","state":"answer","verify":true,"via":"mcp","call":"toolu_01G8Uwzh5x9jPMvASCgzD1S4","topic":"layout stability suite guards","who":"Lenajava1","agent":"main"}
 {"at":"2026-10-27T14:51:59.261Z","kind":"confirm","id":"KB-29A75D95","deployment":"vcst_qa","trust":4,"build":"24b60c4b061158d9","client":"88cc9236","via":"mcp","call":"toolu_01NUFSfQTzf4du1LhsxfuhQN","topic":"layout stability suite guards","who":"Lenajava1","agent":"main"}
+{"at":"2026-10-27T15:31:18.300Z","kind":"restart","why":"transcript-moved","priorTools":115,"who":"Lenajava1"}
