@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T11:31:15.080Z",
+  "generated": "2026-10-27T11:51:30.674Z",
   "count": 1332,
   "entries": [
     {
@@ -2571,7 +2571,7 @@
     {
       "id": "KB-159E3137",
       "path": "entries/KB-159E3137.md",
-      "subject": "PDP related-products view_item_list items[] depends on width (grid below lg renders 4 of 10, carousel at lg+ renders all 10) and is re-sent on every lg crossing",
+      "subject": "PDP related-products view_item_list sends the whole related list once at every width from vc-frontend fdabd62d (released in 2.60.0); only the pre-fix PR build 01276486 sent the rendered cards (4 of 10 below lg) and re-sent on every lg crossing",
       "question": "What does the PDP related products widget send as view_item_list at different widths and when the window crosses the lg breakpoint?",
       "anchors": [
         "/seed-test-fixtures/agent-test-ga4-related-anchor"
@@ -2584,7 +2584,7 @@
       "status": "active",
       "trust": 2,
       "disputed": 0,
-      "contested": 3
+      "resolved": 3
     },
     {
       "id": "KB-1609EA54",
