@@ -33,5 +33,14 @@ evidence:
     bodyHash: 35025d5fc6a1
     who: yuskithedeveloper
     note: "Scope of this confirmation: the refused-save half only (calendar export was not re-observed). Firefox, 1920 px, a freshly created Sales Representative serving two sample orgs; Schedule call opened on the second org's /company/my-customers/{id}, that org unassigned through PUT /api/sales-rep while the dialog was open. Save x3 (typed date; same dialog saved again; date picked with Google Calendar ticked): every createSalesRepTask returned HTTP 200 errors[0].message \"Customer not found.\" with no extensions code, the only feedback was the toast \"Something went wrong. Please try again later.\" with Report a problem, the dialog stayed open and filled with Save enabled and no inline message, only one browser tab remained after the Google-ticked attempt, and no task row was written. Re-assigning the org with the dialog still open and saving the same draft succeeded (\"Task saved\", dialog closed)."
+  - method: observation
+    deployment: vcptcore_qa
+    build: 956cfff4cb0a606f
+    conditions: platform=3.1085.0; module:VirtoCommerce.SalesRep=3.1016.0-pr-26-92d4; browser=firefox; browser-timezone=UTC+03:00; role=Sales Representative
+    at: 2026-10-27T10:33:05.967Z
+    by: session:e75fe8a4
+    bodyHash: 35025d5fc6a1
+    who: Aleksandra-Mitricheva
+    note: "Re-observed at UTC+3. Google text is \"<Title field> — <customer>\" (the default Title is Call; a custom title \"AGENT-TEST-…-both, a;b\\c\" went through verbatim), dates 20261029T060000Z/20261029T063000Z for a 9:00 AM call, details=Notes, no details param when Notes empty. call.ics: PRODID -//Virto Commerce//Sales Rep Hub//EN, METHOD PUBLISH, UID = task id, DTSTAMP, DTSTART/DTEND UTC +30 min, SUMMARY escapes , ; \\ and DESCRIPTION escapes newline. Both ticked → both exports fire on one Save. Double-click Save created one call."
 ---
 In Firefox (default pop-up settings) Save with Google Calendar ticked opens a tab whose calendar render URL carries action=TEMPLATE, text "Call — <customer name>", dates <dueDate UTC>/<dueDate +30 min UTC> and details = Notes; an 11:45 PM call picked at UTC-6 gave 05:45Z of the next day, and the list showed it on the picked day. Apple Calendar downloads call.ics: CRLF lines, UID = the saved task id, DTSTART/DTEND in UTC (+30 min), SUMMARY "Call — <customer>" with the comma escaped, DESCRIPTION with ; , \ and newline escaped; long lines are not folded. When the org was unassigned while the dialog was open, Save (createSalesRepTask answers "Customer not found.") shows only the toast "Something went wrong. Please try again later.", keeps the dialog filled, closes the pre-opened tab and writes nothing; Save again after re-assignment succeeds and opens a fresh tab. A double-click on Save creates one call.

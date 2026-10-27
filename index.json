@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T10:32:43.671Z",
-  "count": 1324,
+  "generated": "2026-10-27T10:38:38.647Z",
+  "count": 1326,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2497,7 +2497,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-1529F1CE",
@@ -8480,7 +8481,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11539,6 +11540,28 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5FC22406",
+      "path": "entries/KB-5FC22406.md",
+      "subject": "For a sales rep with zero served organizations the /company/tasks New task popup has no Type select (salesRepTaskTypes is empty), so a Call cannot be created",
+      "question": "What does the New task popup on /company/tasks show to a sales rep who serves no organizations, and can that rep create a Call?",
+      "questions": [
+        "Can a sales rep with no customers create a Call task?",
+        "Why is the Type field missing in the New task popup on /company/tasks?"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTaskTypes"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14728,7 +14751,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -20170,7 +20193,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -23520,6 +23543,28 @@
       ],
       "scope": [
         "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C27D9FF1",
+      "path": "entries/KB-C27D9FF1.md",
+      "subject": "'Edit task' on a non-call task lets the rep change Type to Call, which adds Customer and Time (no Add to calendar); once saved the task reopens as 'Edit call' with no Type, so the change is one-way",
+      "question": "Can the Edit task dialog on /company/tasks turn an existing non-call task into a Call, and can it be turned back?",
+      "questions": [
+        "Can a task's type be changed to Call after creation?",
+        "Why can I not change a call back to another type?"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Mutation.updateSalesRepTask"
+      ],
+      "scope": [
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
