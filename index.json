@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T19:38:59.751Z",
-  "count": 1348,
+  "generated": "2026-10-27T19:40:12.141Z",
+  "count": 1349,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6191,7 +6191,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14506,7 +14506,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21974,6 +21974,30 @@
       "scope": [
         "storage=azure-blob",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B02031AD",
+      "path": "entries/KB-B02031AD.md",
+      "subject": "The Sales Rep admin app shows no success toast after a successful create, save, document upload, metadata edit or delete; only failures raise a toast",
+      "question": "Does the Sales Rep admin embedded app (/apps/vc-sales-rep) show a success toast after Save, Upload or Delete?",
+      "questions": [
+        "Is there a success notification after creating a sales rep in the admin app?",
+        "What feedback does the Documents library give after upload or delete?"
+      ],
+      "anchors": [
+        "/apps/vc-sales-rep",
+        "POST /api/sales-rep",
+        "POST /api/sales-rep/documents",
+        "DELETE /api/sales-rep/documents"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
