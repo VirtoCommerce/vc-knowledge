@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T18:47:21.058Z",
-  "count": 1336,
+  "generated": "2026-10-27T18:48:28.428Z",
+  "count": 1340,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -249,6 +249,34 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0237DF10",
+      "path": "entries/KB-0237DF10.md",
+      "subject": "A signed-in non-rep buyer reading salesRepTasks, salesRepTaskTypes or salesRepCustomers gets an empty result with no error; an anonymous caller gets Unauthorized; identical on /graphql and /graphql/sales-rep",
+      "question": "What do Query.salesRepTasks, Query.salesRepTaskTypes and Query.salesRepCustomers return to a buyer without sales-rep:access, and to an anonymous caller?",
+      "questions": [
+        "Do sales rep task read queries leak data to a storefront buyer who is not a sales rep?",
+        "Is salesRepTaskTypes refused or empty for a customer token?",
+        "Does /graphql/sales-rep behave differently from /graphql for non-rep callers?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "permission"
+      ],
+      "anchors": [
+        "Query.salesRepTasks",
+        "Query.salesRepTaskTypes",
+        "Query.salesRepCustomers"
+      ],
+      "scope": [
+        "module=salesrep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -1364,6 +1392,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-0BCF788E",
+      "path": "entries/KB-0BCF788E.md",
+      "subject": "An admin-REST WorkTask with objectType CustomerOrder and responsibleId = the rep's contact id is listed by the rep's salesRepTasks with customerId and customerName null",
+      "question": "Does a sales rep see a task created via POST /api/task-management that is linked to an order (objectType CustomerOrder) rather than to a customer, and what customer does it show?",
+      "questions": [
+        "How do I create a sales-rep call linked to an order instead of an organization?",
+        "What does salesRepTasks return for a task whose ObjectType is not the customer link?"
+      ],
+      "anchors": [
+        "POST /api/task-management",
+        "Query.salesRepTasks",
+        "Query.salesRepTaskTypes"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "surface=platform-rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0BE09FF7",
       "path": "entries/KB-0BE09FF7.md",
       "subject": "The dashboard My activity widget shows hour-bucket rows as '~N hours ago' for anything under 24 hours old, even when it fell on the previous calendar day; only from 24 hours on does it count calendar days ('~yesterday', '2 days ago')",
@@ -1868,7 +1920,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9998,7 +10050,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-51F5CFD6",
@@ -11070,6 +11123,27 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-5A37D971",
+      "path": "entries/KB-5A37D971.md",
+      "subject": "On a stand whose TaskManagement.TaskTypes list was already saved, SalesRep PR #26 appends Call to the saved list; stands still on SalesRep 3.1015.0 hold a saved list without Call",
+      "question": "Does TaskManagement.TaskTypes on a deployed stand contain Call, and is it the built-in list or a saved one (GET /api/platform/settings/TaskManagement.TaskTypes)?",
+      "questions": [
+        "How do I tell whether TaskManagement.TaskTypes is a saved dictionary or the built-in default?",
+        "Which stand can exercise the SalesRep EnsureCallTypeAsync saved-list branch?"
+      ],
+      "anchors": [
+        "GET /api/platform/settings/TaskManagement.TaskTypes"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-5A3931CE",
@@ -16313,7 +16387,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -29969,6 +30043,27 @@
       "trust": 1,
       "disputed": 0,
       "contested": 2
+    },
+    {
+      "id": "KB-F6BB1479",
+      "path": "entries/KB-F6BB1479.md",
+      "subject": "VirtoCommerce.SalesRep declares VirtoCommerce.TaskManagement as an OPTIONAL dependency, so a stand may run SalesRep without TaskManagement",
+      "question": "Is TaskManagement a required or an optional dependency of the SalesRep module (GET /api/platform/modules)?",
+      "questions": [
+        "Can the Sales Rep module load on a stand without Task Management?",
+        "Which Sales Rep dependencies are optional?"
+      ],
+      "anchors": [
+        "GET /api/platform/modules"
+      ],
+      "scope": [
+        "module=salesrep",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-F6EDA2F4",
