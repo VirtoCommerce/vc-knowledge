@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T09:46:40.763Z",
-  "count": 1319,
+  "generated": "2026-10-27T09:53:08.689Z",
+  "count": 1321,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -4283,6 +4283,22 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-25F11FF2",
+      "path": "entries/KB-25F11FF2.md",
+      "subject": "Admin Shell promotion Storefront texts show the promotion name and description in the en-US Display name / Customer description fields while the classic blade shows those localized fields empty",
+      "question": "Do the Admin Shell promotion Storefront texts fields show stored localized values or fall back to the non-localized name and description?",
+      "anchors": [
+        "/apps/admin-shell#/marketing/promotion"
+      ],
+      "scope": [
+        "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-262ADDFB",
@@ -11255,6 +11271,22 @@
       "scope": [
         "module=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5E30CF5F",
+      "path": "entries/KB-5E30CF5F.md",
+      "subject": "Admin Shell order list column chooser offers raw model properties but no Currency or Confirmed/IsApproved column that the classic order grid shows by default",
+      "question": "Which columns can the Admin Shell orders list show compared to the classic admin order grid?",
+      "anchors": [
+        "/apps/admin-shell#/orders"
+      ],
+      "scope": [
+        "surface=admin-shell"
       ],
       "plane": "experiential",
       "status": "active",
