@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-26T23:38:06.248Z",
-  "count": 1316,
+  "generated": "2026-10-27T07:27:00.722Z",
+  "count": 1317,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -26811,6 +26811,30 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E0D6EA2B",
+      "path": "entries/KB-E0D6EA2B.md",
+      "subject": "Storefront /account/profile and the /account/addresses dialog show a rejected name or address field inline on its input (theme 2.61.0-pr-2597); the header Ship-to \"Add new\" dialog shows only a toast",
+      "question": "How does the storefront show an updateContact or updateMemberAddresses validation error on /account/profile and the address dialog?",
+      "questions": [
+        "Does /account/profile flag the Last name input when the name contains a digit?",
+        "Why does the Ship to Add new address dialog show only a toast for an invalid name?",
+        "What does the address dialog show when the first name contains a digit?"
+      ],
+      "anchors": [
+        "/account/profile",
+        "/account/addresses",
+        "Mutation.updateMemberAddresses"
+      ],
+      "scope": [
+        "account=personal",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
