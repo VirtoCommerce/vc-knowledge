@@ -1,3 +1,9 @@
 {"at":"2026-10-26T10:40:20.370Z","kind":"session","session":"38cd1260","tools":122,"turns":11,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-10-26T08:54:31.541Z","lastAt":"2026-10-26T10:08:27.720Z","who":"Lenajava1"}
 {"at":"2026-10-26T08:58:58.592Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
 {"at":"2026-10-26T09:25:53.968Z","kind":"restart","why":"transcript-moved","priorTools":80,"who":"Lenajava1"}
+{"at":"2026-10-26T13:36:51.487Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
+{"at":"2026-10-26T14:06:18.135Z","kind":"restart","why":"transcript-moved","priorTools":191,"who":"Lenajava1"}
+{"at":"2026-10-26T14:55:48.499Z","kind":"restart","why":"transcript-moved","priorTools":126,"who":"Lenajava1"}
+{"at":"2026-10-26T16:25:51.501Z","kind":"restart","why":"transcript-moved","priorTools":176,"who":"Lenajava1"}
+{"at":"2026-10-26T18:25:53.176Z","kind":"restart","why":"transcript-moved","priorTools":101,"who":"Lenajava1"}
+{"at":"2026-10-26T18:37:32.682Z","kind":"restart","why":"transcript-moved","priorTools":32,"who":"Lenajava1"}
