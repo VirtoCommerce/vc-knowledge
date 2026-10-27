@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T21:04:12.381Z",
-  "count": 1359,
+  "generated": "2026-10-27T21:17:23.874Z",
+  "count": 1360,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3034,6 +3034,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1836AD77",
+      "path": "entries/KB-1836AD77.md",
+      "subject": "GET /api/assets?folderUrl=/ returns 500 'length (-1) must be a non-negative value' while an empty or omitted folderUrl lists the root",
+      "question": "What does GET /api/assets return when folderUrl is a single slash?",
+      "questions": [
+        "How do I list the root of the asset storage over REST?",
+        "Why does the assets API answer 500 for folderUrl=/?"
+      ],
+      "anchors": [
+        "GET /api/assets"
+      ],
+      "scope": [
+        "auth=admin",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -9271,7 +9292,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -20979,7 +21000,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
