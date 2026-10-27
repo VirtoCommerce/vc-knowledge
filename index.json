@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T22:03:04.408Z",
-  "count": 1364,
+  "generated": "2026-10-27T22:08:14.766Z",
+  "count": 1365,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -2656,7 +2656,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -8368,7 +8368,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -23559,6 +23559,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-BBF23DF4",
+      "path": "entries/KB-BBF23DF4.md",
+      "subject": "Opening another user's /account/quotes/{id}/edit shows an endless spinner and a 'Save changes? Would you like to save changes?' prompt before landing on /403",
+      "question": "What does the storefront show when a signed-in buyer opens the edit URL of a quote request that belongs to someone else?",
+      "questions": [
+        "Why does a Save changes dialog appear on a quote I cannot access?",
+        "Does /account/quotes/{id}/edit redirect to 403 for a foreign quote?"
+      ],
+      "anchors": [
+        "/account/quotes/{id}/edit",
+        "Query.quote"
+      ],
+      "scope": [
+        "module=virtocommerce.quote",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-BC55C4F0",
