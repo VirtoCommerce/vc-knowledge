@@ -42,5 +42,16 @@ evidence:
     bodyHash: 35025d5fc6a1
     who: Aleksandra-Mitricheva
     note: "Re-observed at UTC+3. Google text is \"<Title field> — <customer>\" (the default Title is Call; a custom title \"AGENT-TEST-…-both, a;b\\c\" went through verbatim), dates 20261029T060000Z/20261029T063000Z for a 9:00 AM call, details=Notes, no details param when Notes empty. call.ics: PRODID -//Virto Commerce//Sales Rep Hub//EN, METHOD PUBLISH, UID = task id, DTSTAMP, DTSTART/DTEND UTC +30 min, SUMMARY escapes , ; \\ and DESCRIPTION escapes newline. Both ticked → both exports fire on one Save. Double-click Save created one call."
+  - method: observation
+    deployment: vcptcore_qa
+    build: 1daf7ccef257ac50
+    conditions: platform=3.1085.0; module:VirtoCommerce.SalesRep=3.1016.0-pr-26-92d4; theme=2.61.0-pr-2576-be2c; browser=firefox; browser-timezone=UTC+03:00
+    at: 2026-10-27T20:20:05.656Z
+    by: session:e75fe8a4
+    bodyHash: 35025d5fc6a1
+    who: Aleksandra-Mitricheva
+    contradicts: true
+    contested: theme 2.61.0-pr-2576-be2c-be2c7cc0 vs 2.61.0-pr-2597-372a-372a1bfd; virtocommerce.xcms 3.1009.0-pr-27-a8d6 vs 3.1009.0-pr-27-bb4c
+    note: "call.ics DOES fold long lines: SUMMARY 'AGENT-TEST-CALL sr106-036\\, a\\;b\\\\c — AGENT-TEST-Org-AcmeCorp-20260310' was emitted as 'SUMMARY:...AGENT-TEST-Org-AcmeCorp-202' CRLF ' 60310' (RFC 5545 continuation with a leading space, ~75 octets). Rest of the entry held: CRLF lines, UID = task id, DTSTART/DTEND UTC +30 min, , ; \\ escaped, newline as \\n, both exports on one Save."
 ---
 In Firefox (default pop-up settings) Save with Google Calendar ticked opens a tab whose calendar render URL carries action=TEMPLATE, text "Call — <customer name>", dates <dueDate UTC>/<dueDate +30 min UTC> and details = Notes; an 11:45 PM call picked at UTC-6 gave 05:45Z of the next day, and the list showed it on the picked day. Apple Calendar downloads call.ics: CRLF lines, UID = the saved task id, DTSTART/DTEND in UTC (+30 min), SUMMARY "Call — <customer>" with the comma escaped, DESCRIPTION with ; , \ and newline escaped; long lines are not folded. When the org was unassigned while the dialog was open, Save (createSalesRepTask answers "Customer not found.") shows only the toast "Something went wrong. Please try again later.", keeps the dialog filled, closes the pre-opened tab and writes nothing; Save again after re-assignment succeeds and opens a fresh tab. A double-click on Save creates one call.

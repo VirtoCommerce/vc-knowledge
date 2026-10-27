@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T20:04:32.172Z",
-  "count": 1353,
+  "generated": "2026-10-27T20:20:07.365Z",
+  "count": 1354,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3924,7 +3924,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -7722,7 +7722,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13659,6 +13659,29 @@
       "disputed": 1
     },
     {
+      "id": "KB-6FDCC859",
+      "path": "entries/KB-6FDCC859.md",
+      "subject": "The Sales Rep customer-orders grid pager stops at page 100 even when totalCount implies more pages",
+      "question": "Is the page count on /company/customer-orders capped at 100 pages?",
+      "questions": [
+        "Can a sales rep page past page 100 of customer orders?",
+        "Why does the customer orders pager show 100 as the last page when there are more orders?",
+        "Does salesRepCustomerOrders paging reach every order in the storefront grid?"
+      ],
+      "anchors": [
+        "/company/customer-orders",
+        "Query.salesRepCustomerOrders"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-700E5D52",
       "path": "entries/KB-700E5D52.md",
       "subject": "POST /api/return/{id}/authorize requires return:authorize; return:update alone gets 403",
@@ -19376,7 +19399,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -20600,7 +20623,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-A6E1D965",
@@ -22860,7 +22884,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -29526,7 +29550,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {

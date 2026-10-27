@@ -29,5 +29,14 @@ evidence:
     bodyHash: b049b7a23684
     who: yuskithedeveloper
     note: "Only the rep-created half was observed: all five rows of /company/my-customers/{orgId}/orders were orders whose CustomerId is the rep's user id, every row linked to /account/orders/{orderId}, and opening the first one rendered the host order page (H1 'Order #<number>', breadcrumbs Home / Account / Orders, no left account rail). The plugin source (salesRepOrderRoute in StorefrontApp/src/utils.ts) routes isOwn orders to the host OrderDetails route and all others to SalesRepCustomerOrder."
+  - method: observation
+    deployment: vcptcore_qa
+    build: 1daf7ccef257ac50
+    conditions: platform=3.1085.0; theme=2.61.0-pr-2576-be2c; module:VirtoCommerce.SalesRep=3.1016.0-pr-26-92d4
+    at: 2026-10-27T20:15:24.071Z
+    by: session:e75fe8a4
+    bodyHash: b049b7a23684
+    who: Aleksandra-Mitricheva
+    note: "Both halves observed: rep-created row -> /account/orders/{id} with Pay now; buyer-placed row -> hub page with only Print order."
 ---
 On vcst_qa (theme 2.60.0-alpha.2579, hub from the SalesRep plugin), signed in as a rep, /company/my-customers/{orgId}/orders listed all the customer's orders (creator-agnostic). Rows for orders the rep itself created (the same order shown as "My last order" on My customers) are links to /account/orders/{orderId}, which opens the account order page; rows for orders created by someone else link to /company/my-customers/{orgId}/orders/{orderId}, which renders the hub order page (heading "Order #<number>", Created date, status, totals) with no redirect. The "My last order" date on My customers matched the linked order's Created date.
