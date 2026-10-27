@@ -25,5 +25,14 @@ evidence:
     at: 2026-10-22T13:21:15.154Z
     by: session:da35f399
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_qa
+    build: f1db890a6a93d133
+    conditions: module:VirtoCommerce.SalesRep=3.1016.0-pr-26-92d4; module:VirtoCommerce.Customer=3.1029.0; role=Sales Representative; store=B2B-store
+    at: 2026-10-27T19:02:58.779Z
+    by: session:e75fe8a4
+    bodyHash: fe39c5df0d36
+    who: Aleksandra-Mitricheva
+    note: "Rep with exactly 2 sales-rep memberships (no others). GET -> drop one org -> PUT: that org's membership was deleted (memberships search by userId returned only the other one); salesRepCustomers totalCount 2 -> 1. PUT with the org re-added created a NEW membership id; totalCount back to 2."
 ---
 Rep account (Advanced Sales Representative) with 10 organization memberships, only 2 of them carrying the sales-rep role, so GET /api/sales-rep/{id} listed 2 served orgs. (1) PUT /api/sales-rep echoing the same organizations back: nothing changed. (2) PUT adding one org where the user already had a buyer membership (Organization maintainer + Organization returns manager): the sales-rep role was ADDED to that membership, the other roles kept, all 10 memberships survived; the contact's organizations[] was overwritten to exactly the 3 served orgs. (3) PUT removing that org again: the WHOLE membership was deleted, buyer roles included, not just the sales-rep role. The other 7 non-served memberships survived both single-org calls. Earlier, a PUT that added 3 orgs to this rep, at a time when the contact's organizations[] listed 12 orgs, was followed by 8 of the user's non-served memberships disappearing; consistent with memberships following the contact's organizations[] when it shrinks. So treat PUT /api/sales-rep as destructive to any membership the rep holds outside the served list, and re-check memberships after it.
