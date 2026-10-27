@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T20:20:23.938Z",
-  "count": 1354,
+  "generated": "2026-10-27T20:26:12.284Z",
+  "count": 1355,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1868,7 +1868,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -27803,6 +27803,28 @@
         "/catalog"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E3BEB939",
+      "path": "entries/KB-E3BEB939.md",
+      "subject": "/company/tasks?filter=<unknown token> for a sales rep with tasks falls back to the Today scope and cleans the URL to /company/tasks; a calendar day pick from a tab also drops ?filter",
+      "question": "What does /company/tasks do with an unknown ?filter value for a sales rep who has tasks?",
+      "questions": [
+        "Does /company/tasks?filter=zzz show an empty list or a fallback scope?",
+        "Is the filter query removed from the URL when a day is picked on /company/tasks?"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
