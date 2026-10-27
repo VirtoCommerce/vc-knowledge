@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T19:07:11.130Z",
-  "count": 1345,
+  "generated": "2026-10-27T19:08:12.158Z",
+  "count": 1346,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3366,7 +3366,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 2
     },
     {
@@ -9302,7 +9302,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -17159,6 +17159,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-8CDB8E6B",
+      "path": "entries/KB-8CDB8E6B.md",
+      "subject": "A Sales Rep task dialog left open when the session is revoked stays open over /sign-in, and its Save keeps sending the mutation anonymously",
+      "question": "What happens to an open Sales Rep Schedule call dialog when the rep's storefront session is revoked and the app routes to /sign-in?",
+      "questions": [
+        "Does the Schedule call modal close when the storefront signs the rep out?",
+        "What does Save in the task dialog do after the access token was revoked?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/sign-in",
+        "Mutation.createSalesRepTask"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8CF8E62F",
       "path": "entries/KB-8CF8E62F.md",
       "subject": "In the Admin Shell, a classic AngularJS screen opened via #/legacy?url= renders in light classic styling regardless of the shell Appearance (dark or light), and the rail highlight does not follow the legacy route",
@@ -22790,7 +22814,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
