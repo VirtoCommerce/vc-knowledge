@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T19:56:12.098Z",
-  "count": 1350,
+  "generated": "2026-10-27T19:56:29.117Z",
+  "count": 1351,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -6616,6 +6616,27 @@
       "scope": [
         "module=virtocommerce.adminshell",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3ACF9E6E",
+      "path": "entries/KB-3ACF9E6E.md",
+      "subject": "On vcst_qa the storefront /account/purchase-requests page is a 404 because the AI document-processing module is not installed, not because a setting is off",
+      "question": "/account/purchase-requests returns 404 on the storefront — is AIDocumentProcessing.EnablePurchaseRequests off, or is the module missing?",
+      "questions": [
+        "Why is the purchase requests page not found on vcst?",
+        "Is AIDocumentProcessing.EnablePurchaseRequests a registered platform setting on vcst?"
+      ],
+      "anchors": [
+        "/account/purchase-requests",
+        "GET /api/platform/modules"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
