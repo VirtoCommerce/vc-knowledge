@@ -20,5 +20,14 @@ evidence:
     at: 2026-10-14T18:07:50.587Z
     by: session:6630b76f
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_qa
+    build: 1daf7ccef257ac50
+    conditions: platform=3.1085.0; theme=2.61.0-pr-2576-be2c; module:VirtoCommerce.SalesRep=3.1016.0-pr-26-92d4; role=sales-rep
+    at: 2026-10-27T19:29:20.794Z
+    by: session:e75fe8a4
+    bodyHash: 5e7af87fea95
+    who: Aleksandra-Mitricheva
+    note: "Same on vcptcore: rail Dashboard -> My customers round trip refired SalesRepCustomers with byte-identical variables; SalesRepCustomersCount did not refire; badge 7 == 7 rows."
 ---
 Signed in as a sales rep serving 5 orgs, loaded /company/my-customers (SalesRepCustomersCount + SalesRepCustomers fired), then client-side navigated to /company/dashboard via the Sales Rep hub rail and back via the rail 'My customers' link. On re-entry a fresh SalesRepCustomers request fired whose variables and query text were byte-identical to the first mount. SalesRepCustomersCount did not fire again during the round trip (the dashboard round sent SalesRepLayout, SalesRepCustomerOrderStatistics, SalesRepCustomerCartStatistics, SalesRepCustomerCounts, SalesRep order/top-seller/task queries only). The rail badge is rendered by the persistent account layout, so it refreshes only when that layout mounts (full load), not on in-hub route changes. Badge (5) and rendered rows (5) still agreed because nothing changed in between.

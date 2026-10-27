@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T19:08:12.158Z",
-  "count": 1346,
+  "generated": "2026-10-27T19:32:12.131Z",
+  "count": 1347,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -13931,7 +13931,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21284,6 +21284,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-AC763A7D",
+      "path": "entries/KB-AC763A7D.md",
+      "subject": "On /company/sales-reps the search applies only on Enter or the search button, only the Name column sorts (desc first, then asc), and the search input is capped at 64 characters",
+      "question": "How do search and sorting behave on the buyer-facing /company/sales-reps table?",
+      "questions": [
+        "Does the sales reps search filter while typing?",
+        "Which columns of the Sales reps table are sortable?",
+        "What is the max length of the sales reps search box?"
+      ],
+      "anchors": [
+        "/company/sales-reps",
+        "Query.customerSalesReps"
+      ],
+      "scope": [
+        "actor=buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AC877AA9",
       "path": "entries/KB-AC877AA9.md",
       "subject": "A cart line whose product was deleted is flagged CART_PRODUCT_UNAVAILABLE under validationErrors ruleSet \"*\" but not under ruleSet \"default\"",
@@ -22714,7 +22737,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
