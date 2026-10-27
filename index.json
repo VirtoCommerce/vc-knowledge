@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T20:02:12.104Z",
-  "count": 1352,
+  "generated": "2026-10-27T20:04:32.172Z",
+  "count": 1353,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -11448,6 +11448,26 @@
       ],
       "scope": [
         "feature=sales-rep-list-sharing",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5D6746FB",
+      "path": "entries/KB-5D6746FB.md",
+      "subject": "With design classic the storefront sets html data-design=\"classic\", writes no data-preset attribute, and its colour tokens equal the store preset's bundled light/dark maps",
+      "question": "storefront /cart html data-design and preset colour tokens light and dark: what do --color-primary-500 and the other --color-* tokens resolve to, and is data-preset set?",
+      "questions": [
+        "Does the storefront write <html data-preset> with the active colour preset?",
+        "Does the classic design change any colour token of the store preset?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
