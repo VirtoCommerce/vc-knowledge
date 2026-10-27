@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T19:32:12.131Z",
-  "count": 1347,
+  "generated": "2026-10-27T19:38:59.751Z",
+  "count": 1348,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -3737,6 +3737,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1FF0D0F2",
+      "path": "entries/KB-1FF0D0F2.md",
+      "subject": "A storefront order placed with the Manual payment method lands on /account/orders/{id}/payment with a note that the method does not support online payment; switching it to Authorize.Net through the page's Edit modal shows the card form and a Pay now button",
+      "question": "How do I get an order to a state where /account/orders/{id}/payment shows Edit buttons and a Pay now button?",
+      "anchors": [
+        "/account/orders/{id}/payment",
+        "/cart"
+      ],
+      "scope": [
+        "role=buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
