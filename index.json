@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T20:36:46.695Z",
-  "count": 1356,
+  "generated": "2026-10-27T20:42:12.274Z",
+  "count": 1358,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1529,7 +1529,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0,
       "resolved": 1
     },
@@ -4894,7 +4894,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -7098,6 +7098,27 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3E22F04A",
+      "path": "entries/KB-3E22F04A.md",
+      "subject": "GET /api/platform/modules entries carry isInstalled, installedVersion and validationErrors, but no state field",
+      "question": "Does each entry of GET /api/platform/modules have a state field such as 'Installed'?",
+      "questions": [
+        "How do I tell from the modules API whether a module is installed or broken?",
+        "What fields does a module descriptor from /api/platform/modules contain?"
+      ],
+      "anchors": [
+        "GET /api/platform/modules"
+      ],
+      "scope": [
+        "auth=admin",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14207,6 +14228,23 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-7568FFBB",
+      "path": "entries/KB-7568FFBB.md",
+      "subject": "On vcptcore-qa three recurring Hangfire jobs fail every day: AutoAccountLockoutJob and PruneExpiredTokensJob (abstract class instantiation) and AbandonedCartReminderJob.Process, accumulating 612 failed jobs",
+      "question": "Which recurring Hangfire jobs fail daily on vcptcore and why is the Failed count in the hundreds?",
+      "anchors": [
+        "/hangfire/jobs/failed"
+      ],
+      "scope": [
+        "account=admin",
+        "surface=hangfire-dashboard"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-75B67E06",
