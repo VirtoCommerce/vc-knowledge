@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T13:52:24.002Z",
-  "count": 1333,
+  "generated": "2026-10-27T14:46:05.569Z",
+  "count": 1334,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -17563,6 +17563,27 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-91F2599D",
+      "path": "entries/KB-91F2599D.md",
+      "subject": "The storefront catalog renders VcEmptyView inside .category-products when its product list is empty, with no data-test-id of its own",
+      "question": "What does /catalog render when a category or the catalog returns no products, and which selector reaches the empty state?",
+      "questions": [
+        "Which selector waits for the catalog's empty state in a regression case?",
+        "Does the catalog page show an empty view or nothing when no products match?"
+      ],
+      "anchors": [
+        "/catalog",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-91FDB560",

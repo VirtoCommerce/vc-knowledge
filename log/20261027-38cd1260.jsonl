@@ -1,1 +1,5 @@
 {"at":"2026-10-27T07:18:43.070Z","kind":"flush","entries":0,"lines":19,"swept":["1dafe62d.jsonl","77840233.jsonl","da2e2a66.jsonl"],"retries":2,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
+{"at":"2026-10-27T09:55:34.031Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
+{"at":"2026-10-27T13:34:05.412Z","kind":"restart","why":"transcript-moved","priorTools":148,"who":"Lenajava1"}
+{"at":"2026-10-27T13:47:46.393Z","kind":"restart","why":"transcript-moved","priorTools":28,"who":"Lenajava1"}
+{"at":"2026-10-27T14:14:53.120Z","kind":"restart","why":"transcript-moved","priorTools":40,"who":"Lenajava1"}
