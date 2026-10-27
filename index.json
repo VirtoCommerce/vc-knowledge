@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T21:34:12.549Z",
-  "count": 1360,
+  "generated": "2026-10-27T21:42:12.697Z",
+  "count": 1363,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -1645,6 +1645,23 @@
       "trust": 4,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-0CEA0C0C",
+      "path": "entries/KB-0CEA0C0C.md",
+      "subject": "Opening Admin Customers > Add > Contact logs an unhandled TypeError \"Cannot set properties of undefined (setting 'status')\" from the Customer module, but the blade still works and Create succeeds",
+      "question": "Does the Admin New contact blade throw a console error when it opens?",
+      "anchors": [
+        "POST /api/members"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-0D49339D",
@@ -10797,7 +10814,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -14604,6 +14621,27 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7901ECD9",
+      "path": "entries/KB-7901ECD9.md",
+      "subject": "Promotion search keyword matches the promotion Name OR Description, in both the Admin Promotions blade and POST /api/marketing/promotions/search",
+      "question": "Does the promotion keyword search match only the name, or also the description?",
+      "questions": [
+        "Why does the Admin Promotions search return promotions whose name does not contain the keyword?",
+        "What fields does POST /api/marketing/promotions/search keyword filter on?"
+      ],
+      "anchors": [
+        "POST /api/marketing/promotions/search"
+      ],
+      "scope": [
+        "module=marketing",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -18656,7 +18694,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19519,6 +19557,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-9E453D17",
+      "path": "entries/KB-9E453D17.md",
+      "subject": "GET /api/catalog/products/prices/search returns 500 NullReference when keyword is set and sort is omitted; with sort it returns 200",
+      "question": "Why does GET /api/catalog/products/prices/search with a keyword return 500?",
+      "questions": [
+        "How do I search a price list's prices by keyword over REST?",
+        "Does the Admin price list prices search hit a 500?"
+      ],
+      "anchors": [
+        "GET /api/catalog/products/prices/search"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9E7315D1",
       "path": "entries/KB-9E7315D1.md",
       "subject": "an empty promotion store list means the promotion applies in every store",
@@ -20207,7 +20265,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0,
       "resolved": 1
     },
@@ -23443,7 +23501,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
