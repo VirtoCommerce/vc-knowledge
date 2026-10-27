@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T11:14:54.653Z",
-  "count": 1329,
+  "generated": "2026-10-27T11:17:39.430Z",
+  "count": 1330,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -15711,7 +15711,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -26159,6 +26159,30 @@
         "file-scope=product-configuration",
         "owner=empty",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D89CB35F",
+      "path": "entries/KB-D89CB35F.md",
+      "subject": "With the Sales Rep plugin delivered by Module Federation, /company/customer-orders renders the plugin's own customer-orders chunk, so a theme-only build of a vc-frontend sales-rep change does not reach that page",
+      "question": "Does a vc-frontend theme build that changes client-app/modules/sales-rep change what the sales-rep orders page renders, or does the page come from the SalesRep module plugin?",
+      "questions": [
+        "Why does a PR theme build not show a sales-rep hub fix?",
+        "Which customer-orders chunk loads on /company/customer-orders when the sales-rep plugin is present?",
+        "Can a sales-rep storefront fix be verified with a theme-only PR artifact?"
+      ],
+      "anchors": [
+        "/company/customer-orders",
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json"
+      ],
+      "scope": [
+        "feature=module-federation-plugin-delivery",
+        "module=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
