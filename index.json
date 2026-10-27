@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T19:40:12.141Z",
-  "count": 1349,
+  "generated": "2026-10-27T19:45:58.322Z",
+  "count": 1350,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -18309,6 +18309,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-95A9EFA4",
+      "path": "entries/KB-95A9EFA4.md",
+      "subject": "Anonymous Query.whiteLabelingSettings(storeId) answers themePresetName on POST /graphql of the platform; /xapi/graphql returns 404 on both platform and storefront hosts",
+      "question": "Which URL serves the xAPI GraphQL endpoint on the QA stand, and can an anonymous caller read the store's theme preset name?",
+      "questions": [
+        "what is the GraphQL endpoint path for xapi on the stand",
+        "does whiteLabelingSettings need a token"
+      ],
+      "anchors": [
+        "POST /graphql",
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
