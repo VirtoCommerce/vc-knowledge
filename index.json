@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T20:07:43.972Z",
-  "count": 1439,
+  "generated": "2026-10-28T20:09:19.234Z",
+  "count": 1440,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11410,6 +11410,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5633282F",
+      "path": "entries/KB-5633282F.md",
+      "subject": "Storefront /bulk-order pad is a plain SKU + quantity grid with Copy&Paste and Manually modes; no per-row product lookup, autocomplete or CSV upload",
+      "question": "/bulk-order Bulk order pad: does a SKU row show product info, autocomplete, CSV file upload, or an Add All to Cart button?",
+      "anchors": [
+        "/bulk-order"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
