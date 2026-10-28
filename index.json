@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-27T22:08:14.766Z",
-  "count": 1365,
+  "generated": "2026-10-28T00:02:12.254Z",
+  "count": 1366,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -908,6 +908,29 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-08DE22F1",
+      "path": "entries/KB-08DE22F1.md",
+      "subject": "When two catalog products carry the same en-US semanticUrl and only one has a de-DE record, slugInfo resolves the slug to a different product per culture, so a language switch on that PDP shows another product",
+      "question": "Which product does slugInfo return when two products share one en-US semantic URL and the request culture is not en-US?",
+      "questions": [
+        "Why does a PDP show a different product after switching language?",
+        "How is a duplicate product slug resolved across cultures?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "/{id}/{id}"
+      ],
+      "scope": [
+        "entity=catalog-product-seo",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-08FAC65C",
@@ -14417,7 +14440,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
