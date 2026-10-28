@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T13:20:25.447Z",
-  "count": 1406,
+  "generated": "2026-10-28T13:28:45.582Z",
+  "count": 1407,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26080,6 +26080,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CD356AF4",
+      "path": "entries/KB-CD356AF4.md",
+      "subject": "Storefront /sign-in auto-fires a passkey conditional-mediation attempt on page load: a grant_type=passkey POST /connect/token runs unprompted, and a stale/removed resident credential returns 400 login_failed plus a visible console error.",
+      "question": "Does the storefront /sign-in page attempt a passkey sign-in automatically on load (conditional mediation), and what happens with a stale credential?",
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token",
+        "Query.passkeyRequestOptions"
+      ],
+      "scope": [
+        "feature=passkey-signin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
