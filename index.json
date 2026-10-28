@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T15:11:10.888Z",
-  "count": 1426,
+  "generated": "2026-10-28T15:21:37.198Z",
+  "count": 1428,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17817,6 +17817,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-8AF47E45",
+      "path": "entries/KB-8AF47E45.md",
+      "subject": "slugInfo among published pages on one permalink: user-group page beats general for members, registered-only beats public for signed-in visitors, anonymous never gets group pages, and between equally specific pages the most recently changed wins deterministically",
+      "question": "Which page does Query.slugInfo return when several published Page Builder pages share a permalink with different user groups or visibility, and how is a tie broken?",
+      "questions": [
+        "Does an anonymous visitor ever get a user-group page from slugInfo?",
+        "Which of two equally specific pages does the storefront show?",
+        "Does republishing an older duplicate page make it win?",
+        "Registered-only vs public page on the same permalink"
+      ],
+      "anchors": [
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "module=pages",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8B3C6CE5",
       "path": "entries/KB-8B3C6CE5.md",
       "subject": "salesRepActivities returns data null with no errors for a sales rep who serves zero organizations, while salesRepCustomers returns totalCount 0 for the same caller",
@@ -17909,6 +17932,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8B811D0D",
+      "path": "entries/KB-8B811D0D.md",
+      "subject": "Publishing over a Certain conflict whose other page has unpublished changes returns 409 even with unpublishConflicting=true and changes nothing; permalink-usages lists Draft and Published others (not Archived, not self) and the 409 conflicts[] holds only Certain pages",
+      "question": "What does POST grouped/publishing/{id}?publish=true return when the conflicting published page has unpublished changes, and which pages do permalink-usages and the 409 conflicts list?",
+      "questions": [
+        "Can unpublishConflicting=true override a conflicting page that has a pending draft?",
+        "Does permalink-usages include archived or draft pages?",
+        "Does the 409 publish-conflict body list Possible conflicts too?",
+        "What does the page builder 409 error text say?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/grouped/publishing/{id}",
+        "POST /api/page-builder-pages/grouped/permalink-usages"
+      ],
+      "scope": [
+        "module=page-builder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
