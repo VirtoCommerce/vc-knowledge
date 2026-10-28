@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T09:39:35.557Z",
-  "count": 1377,
+  "generated": "2026-10-28T09:51:31.165Z",
+  "count": 1379,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3416,6 +3416,23 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-1A7FBDA2",
+      "path": "entries/KB-1A7FBDA2.md",
+      "subject": "Sales rep customer profile Quick actions: 'Schedule call' tile is enabled and opens a 'Schedule call' task popup (VCST-6314); only 'Order on behalf' and 'Create quote' are disabled",
+      "question": "Is the Schedule call tile on the sales rep customer profile Quick actions disabled or does it do something?",
+      "anchors": [
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-1AC3D57E",
@@ -7219,7 +7236,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8558,6 +8575,26 @@
       "scope": [
         "module=virtocommerce.adminshell",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-48C4B8A4",
+      "path": "entries/KB-48C4B8A4.md",
+      "subject": "Impersonating a Locked (blocked) target from a signed-in operator: /connect/token impersonate returns 200, storefront redirects to /blocked and signs the operator out",
+      "question": "What happens when a Login-on-behalf operator opens /account/impersonate/{userId} for a Locked (blocked) customer account?",
+      "anchors": [
+        "/account/impersonate/{id}",
+        "POST /connect/token",
+        "/blocked"
+      ],
+      "scope": [
+        "grant=impersonate",
+        "surface=storefront-ui",
+        "target=locked-user"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11904,7 +11941,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -28076,7 +28113,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
