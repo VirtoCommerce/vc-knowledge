@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T13:18:29.842Z",
-  "count": 1403,
+  "generated": "2026-10-28T13:20:25.447Z",
+  "count": 1406,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9656,6 +9656,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-4E12E506",
+      "path": "entries/KB-4E12E506.md",
+      "subject": "REST DELETE of a passkey ends the user's other token sessions and refresh tokens but keeps the calling browser session",
+      "question": "Does DELETE /api/platform/security/currentuser/sign-in-methods/Passkey/keys/{id} terminate the user's other sessions and refresh tokens?",
+      "questions": [
+        "After deleting a passkey in the back office, is a second access token still valid?",
+        "Does removing a passkey revoke refresh tokens?"
+      ],
+      "anchors": [
+        "DELETE /api/platform/security/currentuser/sign-in-methods/{id}/keys/{id}",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4E1FD1E8",
       "path": "entries/KB-4E1FD1E8.md",
       "subject": "The impersonate OAuth grant gates on the operator's loginOnBehalf permission but applies NO guard on the target user (existence only) and mints the token from the target's identity, so impersonating an Administrator yields a token carrying the target's Administrator role",
@@ -11855,6 +11877,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5B5D8A99",
+      "path": "entries/KB-5B5D8A99.md",
+      "subject": "Both back-office UIs register and sign in with passkeys; Admin Shell disables the last sign-in key's Delete, AngularJS offers it and shows a generic 400 banner",
+      "question": "How do the AngularJS admin and the Admin Shell handle passkeys and the last sign-in key on the Sign-in methods blade?",
+      "questions": [
+        "Does the Admin Shell login page show a passkey button?",
+        "Can a back-office user delete their password when they have a passkey?",
+        "What happens when the last sign-in key is deleted in the AngularJS admin?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/user-profile/sign-in-methods",
+        "DELETE /api/platform/security/currentuser/sign-in-methods/{id}/keys/{id}",
+        "POST /api/platform/security/sign-in"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -23750,6 +23795,30 @@
       "scope": [
         "module=customer",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B93A97C4",
+      "path": "entries/KB-B93A97C4.md",
+      "subject": "An impersonated storefront token is refused passkey management in xAPI (Access denied) but xAPI changePassword is not impersonation-guarded",
+      "question": "Can an impersonated storefront session (grant_type=impersonate) create, rename or delete passkeys via xAPI createPasskey / renameSignInKey / deleteSignInKey?",
+      "questions": [
+        "Does the Security page show passkey controls during login on behalf?",
+        "Can an impersonating operator change the target's password through xAPI?"
+      ],
+      "anchors": [
+        "Mutation.createPasskey",
+        "Mutation.changePassword",
+        "/account/security"
+      ],
+      "scope": [
+        "auth=impersonation",
+        "surface=graphql",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
