@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T06:47:19.351Z",
+  "generated": "2026-10-28T06:51:46.973Z",
   "count": 1370,
   "entries": [
     {
@@ -22552,7 +22552,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-B2BA7561",
