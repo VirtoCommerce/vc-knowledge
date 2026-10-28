@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T08:21:23.617Z",
-  "count": 1376,
+  "generated": "2026-10-28T09:15:08.797Z",
+  "count": 1377,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -25682,6 +25682,24 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CDC77925",
+      "path": "entries/KB-CDC77925.md",
+      "subject": "POST /api/order/payments/payment/capture and /refund reject a payment not in a capturable/refundable status with HTTP 200 and succeeded:false; status unchanged",
+      "question": "What does POST /api/order/payments/payment/capture return for a Pending, Voided or Refunded payment, and a refund of a Refunded payment?",
+      "anchors": [
+        "POST /api/order/payments/payment/capture",
+        "POST /api/order/payments/payment/refund"
+      ],
+      "scope": [
+        "payment-method=defaultmanualpaymentmethod",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
