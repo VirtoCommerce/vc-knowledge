@@ -40,5 +40,13 @@ evidence:
     defect: none
     who: Lenajava1
     note: "Defect marker withdrawn: the QA team judged this behaviour by design (team decision, no doc page cited). An unsubscribed product stays in /account/back-in-stock with isActive=false and a 'Stock alert' button to re-subscribe; the claim is unchanged."
+  - method: source
+    deployment: vc-frontend@dev
+    at: 2026-10-28T21:23:43.437Z
+    by: session:ccf68ec7
+    bodyHash: c1a6f87da2a5
+    defect: none
+    who: Lenajava1
+    note: "Intended: feature story VCST-2557 (PR vc-frontend#1544) — developer decision 2025-01-31 to hide Remove buttons and keep rows with the Notify / 'You'll be notified' toggle so users can renew a subscription. client-app/modules/back-in-stock/pages/subscriptions.vue renders inactive rows with BackInStockNotifyButton; useBackInStockSubscriptions.ts sorts by isActive deliberately; xAPI isActive filter is optional. VCST-6612 is being closed as works-as-designed."
 ---
 Subscribed to QA-OOS-001 from its PDP (Stock alert -> 'You'll be notified'), opened /account/back-in-stock (row with name, image, price and the 'You'll be notified' button), clicked that button: it flips to 'Stock alert' and the PDP shows the unsubscribed state, but the row remains in the list immediately and after a full reload. A list with zero subscriptions shows 'Your list is empty'.
