@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T15:46:15.994Z",
-  "count": 1429,
+  "generated": "2026-10-28T15:49:24.790Z",
+  "count": 1430,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8968,6 +8968,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-49540DA1",
+      "path": "entries/KB-49540DA1.md",
+      "subject": "The back-office Sign-in log list Type filter offers no Passkey option, although grid rows and row details show Type 'Passkey'",
+      "question": "Can the Admin SPA sign-in log list be filtered to passkey sign-ins with its Type filter?",
+      "questions": [
+        "Does the Sign-in log Type dropdown list Passkey?",
+        "Which types does the back-office sign-in log Type filter offer?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=passkey-sign-in",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

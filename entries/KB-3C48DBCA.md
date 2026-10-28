@@ -23,5 +23,13 @@ evidence:
     at: 2026-10-28T14:01:52.406Z
     by: session:56fb99bb
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_qa
+    build: a5a20e99d84d8f1b
+    at: 2026-10-28T15:44:07.897Z
+    by: session:56fb99bb
+    bodyHash: 7aea8100d86a
+    who: Lenajava1
+    note: "Suite 115 PKA-010: signInTypes [Passkey] returns only Passkey rows; [Password] for the buyer returns no Passkey rows."
 ---
 Admin token: POST /api/platform/security/sign-in-log/search {signInTypes:["Passkey"], take:200} -> 200, totalCount 73 of 3388 rows, every row signInType 'Passkey'; succeeded true 28, false with failureReason InvalidPasskey 34, LockedOut 6, MissingParameter 5. Criteria fields (swagger UserSignInLogSearchCriteria): userId, userName, succeeded, awaitingSecondFactor, signInTypes[], failureReasons[], ipAddress, storeId, withoutStore, organizationId, startDate, endDate. LockedOut does not distinguish a temporary lock from an admin lock (both seen as LockedOut, with user and store). Three non-admin Managers (roles 'Store access' with store:access/store:read, and a role holding only platform:security:loginOnBehalf) get 403 on the same endpoint, so the Admin sign-in log blade cannot be exercised with them.
