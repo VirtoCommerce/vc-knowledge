@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T07:16:23.039Z",
-  "count": 1372,
+  "generated": "2026-10-28T07:35:50.300Z",
+  "count": 1373,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26653,6 +26653,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-D66309A7",
+      "path": "entries/KB-D66309A7.md",
+      "subject": "POST /api/pages/sanity accepts only requests signed with a Sanity:WebhookSecrets secret and a ms timestamp within 5 minutes; everything else is 401",
+      "question": "How is the Sanity webhook POST /api/pages/sanity authenticated, and what does it reject?",
+      "questions": [
+        "Does the Sanity webhook still accept api_key and storeId in the URL?",
+        "Can a Sanity webhook secret be rotated without downtime?",
+        "What does the Sanity webhook return for a stale or replayed signature?"
+      ],
+      "anchors": [
+        "POST /api/pages/sanity"
+      ],
+      "scope": [
+        "module=virtocommerce.sanity",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D66DE162",
