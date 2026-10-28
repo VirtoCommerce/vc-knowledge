@@ -55,5 +55,13 @@ evidence:
     defect: suspected
     who: Lenajava1
     note: "Live, storefront flow: non-admin Organization maintainer with loginOnBehalf opened /account/impersonate/{id} of an Administrator-type user (isAdministrator=true, role Store administrator); POST /connect/token grant_type=impersonate answered 200 and the new session's GetPageContext user returned isAdministrator: true with operator = the org maintainer. Reverted with 'Back to'. Closes the 'live check pending' gap: the session does carry administrator status."
+  - method: source
+    deployment: vc-platform@dev
+    at: 2026-10-28T21:23:43.265Z
+    by: session:ccf68ec7
+    bodyHash: 3ae5a715e779
+    defect: none
+    who: Lenajava1
+    note: "Behaviour is documented as intended: vc-platform docs/user-guide/login-on-behalf.md (PR #3117, VCST-5898) says an operator holding loginOnBehalf can sign in as any user, including an administrator; the activity is recorded for audit, not restricted. vc-docs security/login-on-behalf.md agrees. No AC restricts target account type; BL-AUTH-005/006 do not say admins are non-impersonable. VCST-6608 is being closed as by design. The mechanism in the claim is accurate; the defect reading is withdrawn."
 ---
 On vcst (Platform 3.1076.0) regression run REG-2026-10-02-2022 (suite 082 / IMP-022): a storefront operator holding only platform:security:loginOnBehalf (role 'Organization maintainer', non-admin) opened the built-in Administrator user record in the Admin SPA, which showed an ENABLED 'Login on behalf' button, and successfully switched the storefront into the admin account's session (banner 'John Mitchell logged in as admin'; target userId 1eb2fa8ac6574541afdb525833dadb46). Source confirms the mechanism: vc-platform AuthorizationController.Exchange() impersonate-grant block (POST /connect/token grant_type=impersonate) authorizes the OPERATOR's SecurityLoginOnBehalf permission (skipped for nested impersonation) but validates the TARGET only for existence — no IsAdministrator / user-type / lock-state / privilege guard — and builds the token from the target (context.User = impersonatedUser.CloneTyped(); CreateTicketAsync(impersonatedUser,...)), so the issued token carries the target's roles incl. Administrator. Same class as the punchout escalation in KB-ACC12F26 (that sibling grant was live-observed to yield role=__administrator / currentuser isAdministrator:true). NOT yet live-verified on 3.1076.0: calling an admin-only platform API with the admin impersonation token to read isAdministrator first-hand (the read-only repro was blocked by the test harness this session). Candidate privilege-escalation bug; contradicts BL-AUTH-005/006 and IMP-022 oracle (admins must not be impersonable).
