@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T23:31:03.775Z",
-  "count": 1450,
+  "generated": "2026-10-28T23:45:13.786Z",
+  "count": 1451,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28708,6 +28708,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DADDA418",
+      "path": "entries/KB-DADDA418.md",
+      "subject": "Contact.selectedAddressId is a per-user, per-organization customer preference; updateContact with selectedAddressId \"\" stores an empty string (me returns \"\" not null), and only deleting the preference row restores null",
+      "question": "How is me.contact.selectedAddressId stored and scoped, and how do you clear it back to null?",
+      "questions": [
+        "Does the selected ship-to address follow the active organization after an organization switch?",
+        "Why does me.contact.selectedAddressId return an empty string instead of null?",
+        "Where is the SelectedAddressId preference stored on the platform?"
+      ],
+      "anchors": [
+        "Mutation.updateContact",
+        "Query.me",
+        "POST /api/customer-preferences/search",
+        "DELETE /api/customer-preferences"
+      ],
+      "scope": [
+        "module=profile-experience-api",
+        "surface=xapi-graphql",
+        "user=organization-member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
