@@ -55,5 +55,14 @@ evidence:
     defect: suspected
     who: Lenajava1
     note: "Suite 115 PKA-003/PKA-012 15:17-15:20Z: temp lock -> passkey 400 user_is_temporary_locked_out, admin lock -> user_is_locked_out (log LockedOut + user + store); 4 wrong -> passkey 200 -> count stays 4 -> 1 wrong locks, right password then refused."
+  - method: source
+    deployment: aspnetcore@6f58315633
+    conditions: platform=3.1091.0-pr-3144-e637; module:VirtoCommerce.Passkeys=3.1000.0-pr-1-a25f; framework=Microsoft.AspNetCore.Identity release/10.0 SignInManager.cs
+    at: 2026-10-28T16:00:15.581Z
+    by: session:56fb99bb
+    bodyHash: 57e36aeedca8
+    who: Lenajava1
+    contradicts: true
+    note: "The observation itself holds; the 'suspected defect' flag does not. ASP.NET Core Identity (release/10.0, SignInManager.cs) PasskeySignInAsync -> PasskeySignInCoreAsync performs the assertion, PreSignInCheck, AddOrUpdatePasskeyAsync, then SignInOrTwoFactorAsync(bypassTwoFactor: true) and never calls ResetLockout; the framework resets accessFailedCount only in CheckPasswordSignInAsync (password success) and DoTwoFactorSignInAsync (second-factor success). The VirtoCommerce passkey grant follows the framework, and the module developer states the counter is intentionally not reset by a passkey sign-in (it is not a password sign-in). Treat 'passkey success leaves accessFailedCount unchanged' as by-design, not a defect. The platform's OTP grant does reset on success - methods differ."
 ---
 On a storefront B2B buyer with lockout enabled (lock after 5 failures): (1) temporary lock (5 wrong password grants) -> grant_type=passkey on POST /connect/token returns 400 invalid_grant code user_is_temporary_locked_out (storefront shows 'Your account has been temporarily locked. Please try again later.'); (2) admin lock via POST /api/platform/security/users/{id}/lock -> passkey grant returns 400 code user_is_locked_out; both logged in the sign-in log as Type Passkey, failureReason LockedOut, with user and store. (3) Counter: unlock, 4 wrong passwords (accessFailedCount=4), a SUCCESSFUL passkey sign-in left accessFailedCount at 4, and the next single wrong password locked the account (user_is_temporary_locked_out). Control on the same account: 4 wrong passwords then a successful password grant reset accessFailedCount to 0, and one more wrong password gave login_failed with count 1. So the passkey success path skips the reset that the password path performs.
