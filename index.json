@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T14:36:53.077Z",
-  "count": 1419,
+  "generated": "2026-10-28T15:03:10.617Z",
+  "count": 1420,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -31055,6 +31055,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F14CF806",
+      "path": "entries/KB-F14CF806.md",
+      "subject": "The passkey grant at POST /connect/token issues a token even while the store's Passkey authentication scheme is switched off",
+      "question": "Is a passkey sign-in refused at the token endpoint when the store has switched its Passkey authentication scheme off?",
+      "questions": [
+        "Does grant_type=passkey check the store authentication schemes?",
+        "Can a /sign-in tab loaded before the store disabled passkeys still sign in with a passkey?",
+        "Is the per-store passkey switch enforced server-side or only by hiding the button?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "PUT /api/store-authentication-schemes/{id}",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=passkey-signin",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
