@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T16:25:13.226Z",
-  "count": 1435,
+  "generated": "2026-10-28T17:00:31.371Z",
+  "count": 1436,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24900,6 +24900,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BEC9CFB5",
+      "path": "entries/KB-BEC9CFB5.md",
+      "subject": "Page Builder shell page form warns under Permalink with plain-text names of other same-permalink pages and gates Publish with Certain/Possible/refused dialogs",
+      "question": "page-builder-shell admin: what happens when a page permalink is used by another page — warning under permalink, publish dialogs",
+      "questions": [
+        "What does the page builder admin show when two pages share a permalink?",
+        "What dialog appears when publishing a page whose permalink is already published?",
+        "Does the page builder UI block saving a page with a duplicate permalink?",
+        "What happens when publishing over a page that has unpublished changes in the page builder UI?"
+      ],
+      "anchors": [
+        "/apps/page-builder-shell",
+        "POST /api/page-builder-pages/grouped/permalink-usages",
+        "POST /api/page-builder-pages/grouped/publishing/{id}"
+      ],
+      "scope": [
+        "app=page-builder-shell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
