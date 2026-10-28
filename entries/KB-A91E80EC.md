@@ -20,5 +20,13 @@ evidence:
     at: 2026-10-14T22:45:15.916Z
     by: session:624d35a1
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_regression
+    build: 99880d06bbb9b4cf
+    at: 2026-10-28T07:16:25.152Z
+    by: session:624d35a1
+    bodyHash: 97244d034f72
+    who: kutasinaelena
+    note: "2026-10-28: after deleting and re-creating the 101-location pool bound to the stocking FFC, productPickupLocations again returned totalCount 102 while store-level pickupLocations returned 127."
 ---
 On vcptcore_regression (2026-10-14) B2B-store had 13 active pickup locations; Query.pickupLocations(storeId) returned all 13, but Query.productPickupLocations(productId) for a product whose only inventory row was on one fulfillment center returned exactly 1 location — the one whose fulfillmentCenterId was that FFC — with availabilityType Today and availableQuantity equal to that FFC's stock. After creating 101 more active locations via POST /api/shipping/pickup-locations with fulfillmentCenterId set to that same FFC, productPickupLocations returned totalCount 102 (store-level pickupLocations 114) within seconds, default order ascending by name. Source agrees: vc-module-x-pickup SearchCartPickupLocationsQueryHandler builds MultipleProductsPickupLocationSearchCriteria from the cart's selected items and passes it to ProductPickupLocationService (availability types Today / Transfer / GlobalTransfer). So a pagination fixture for the cart pickup dialog must bind its locations to an FFC that stocks the cart's product (or list it in transferFulfillmentCenterIds); the store-level count says nothing about how many a cart will see.
