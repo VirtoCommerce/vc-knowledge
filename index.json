@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T14:00:02.414Z",
-  "count": 1407,
+  "generated": "2026-10-28T14:05:21.783Z",
+  "count": 1410,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2365,7 +2365,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-1328216A",
@@ -7959,6 +7959,28 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-416B0E02",
+      "path": "entries/KB-416B0E02.md",
+      "subject": "Through the storefront host /connect/token grant_type=passkey and /api/mfa/resend reach the platform, but the cookie sign-in POST /api/platform/security/sign-in answers an nginx 405 (it is served only on the back-office host)",
+      "question": "Which sign-in endpoints does the storefront host route to the platform for passkey and MFA?",
+      "concepts": [
+        "sign-in"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/mfa/resend",
+        "POST /api/platform/security/sign-in"
+      ],
+      "scope": [
+        "feature=passkey-sign-in",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14016,6 +14038,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-6F34216D",
+      "path": "entries/KB-6F34216D.md",
+      "subject": "Customer module PR 324 lets every grant except a refresh_token that carries organization_id fall back to an accessible organization (source: passkey, otp_email, mfa, impersonate and refresh without an explicit org)",
+      "question": "Which token grants fall back to another organization when the requested or last-used organization is unavailable after the VCST-6121 customer change?",
+      "concepts": [
+        "sign-in"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=organization-fallback",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6F5067F2",
       "path": "entries/KB-6F5067F2.md",
       "subject": "A full-body PUT /api/stores can return the settings array in a different order, so compare store settings by name, not by index",
@@ -16515,6 +16557,24 @@
         "module=salesrep",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-84366C59",
+      "path": "entries/KB-84366C59.md",
+      "subject": "The sign-in log on a stand with passkeys and MFA records signInType Password, Passkey, MFA, External, Impersonation, ImpersonationRevert and Logout, and failure reasons that include InvalidPasskey, NotAllowed and InvalidTwoFactorToken",
+      "question": "Which signInType and failureReason values does the sign-in log hold once passkey and MFA are installed?",
+      "anchors": [
+        "POST /api/platform/security/sign-in-log/search",
+        "POST /api/platform/security/sign-in-log/stats"
+      ],
+      "scope": [
+        "feature=sign-in-log",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -24743,7 +24803,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -25686,7 +25746,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
