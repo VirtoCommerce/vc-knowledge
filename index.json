@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T07:50:51.285Z",
-  "count": 1375,
+  "generated": "2026-10-28T08:21:23.617Z",
+  "count": 1376,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -15509,6 +15509,30 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-7D27A614",
+      "path": "entries/KB-7D27A614.md",
+      "subject": "Sanity.Projects sources are indexed in priority order (isPriority dataset first, else configured order) and per-dataset documentTypes filter what each dataset contributes; an empty Sanity.Projects falls back to ProjectId/Dataset/DocumentTypes, then the stored PageType",
+      "question": "Which Sanity documents does a Pages index rebuild pick up when a store has Sanity.Projects, Sanity.DocumentTypes or only the legacy settings?",
+      "questions": [
+        "Which dataset wins when the same Sanity document id exists in two datasets?",
+        "Does Sanity.DocumentTypes accept spaces and semicolons?",
+        "What happens to a Sanity.Projects entry whose ${name} token is not defined?",
+        "Does an invalid Sanity.Projects JSON stop Sanity indexing?"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "POST /api/pages/search"
+      ],
+      "scope": [
+        "module=virtocommerce.sanity",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-7DA9B0B7",
