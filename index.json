@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T15:29:52.945Z",
-  "count": 1428,
+  "generated": "2026-10-28T15:46:15.994Z",
+  "count": 1429,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -27659,6 +27659,28 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-D70A146D",
+      "path": "entries/KB-D70A146D.md",
+      "subject": "slugInfo tie-break between equally specific published pages follows the published page row's modifiedDate (pages[].modifiedDate), not the page group's modifiedDate",
+      "question": "Which modified date decides the slugInfo tie-break between equally specific Page Builder pages on one permalink: the published page row or the page group?",
+      "questions": [
+        "Does the page group's modifiedDate from /api/page-builder-pages/search predict which duplicate page the storefront shows?",
+        "How to predict which of two duplicate published pages slugInfo returns on existing data"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "POST /api/page-builder-pages/search"
+      ],
+      "scope": [
+        "module=pages",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D7AF72F3",
