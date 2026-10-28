@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T10:43:31.555Z",
-  "count": 1389,
+  "generated": "2026-10-28T10:51:31.692Z",
+  "count": 1391,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1044,6 +1044,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0986CF16",
+      "path": "entries/KB-0986CF16.md",
+      "subject": "/account/addresses for a personal account lists addresses in a table whose row Actions menu offers only Edit and Delete; there is no Default badge and no Set-as-default action",
+      "question": "Can a personal shopper mark or change a default address on /account/addresses?",
+      "anchors": [
+        "/account/addresses"
+      ],
+      "scope": [
+        "account=personal",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -2291,7 +2308,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -18723,6 +18740,23 @@
       ],
       "scope": [
         "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-955C8CAC",
+      "path": "entries/KB-955C8CAC.md",
+      "subject": "Unsubscribing in /account/back-in-stock toggles the button to 'Stock alert' but leaves the product in the list, also after reload",
+      "question": "Is a product removed from /account/back-in-stock when the shopper unsubscribes?",
+      "anchors": [
+        "/account/back-in-stock"
+      ],
+      "scope": [
+        "account=personal",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
