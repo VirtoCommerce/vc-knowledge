@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T06:51:46.973Z",
-  "count": 1370,
+  "generated": "2026-10-28T07:16:12.770Z",
+  "count": 1371,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29897,6 +29897,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EFEACF3F",
+      "path": "entries/KB-EFEACF3F.md",
+      "subject": "ConfigurationSectionInput takes customText directly; a textDetails wrapper is rejected as an undefined field",
+      "question": "How is custom text for a Text section passed to addItem configurationSections?",
+      "questions": [
+        "Is textDetails a field of ConfigurationSectionInput?",
+        "addItem configurable Text section customText input shape"
+      ],
+      "anchors": [
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
