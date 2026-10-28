@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T15:49:24.790Z",
-  "count": 1430,
+  "generated": "2026-10-28T15:57:24.797Z",
+  "count": 1431,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24314,6 +24314,32 @@
         "KB-2C4FA5E9",
         "KB-92A03E82"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B9DB6FC4",
+      "path": "entries/KB-B9DB6FC4.md",
+      "subject": "On a store with MultiFactorAuthentication.StoreMode=Enabled, a storefront passkey sign-in (grant_type=passkey) completes with no emailed code step and sends no MfaSignInEmailNotification, while a password sign-in on the same store is challenged",
+      "question": "Does a storefront passkey sign-in on a store that requires MFA by email still ask for an emailed one-time code?",
+      "questions": [
+        "Is a passkey treated as satisfying store MFA on the storefront?",
+        "Does grant_type=passkey answer two_factor_required when the store's StoreMode is Enabled?",
+        "Is an MFA sign-in email sent after a passkey sign-in on an MFA store?",
+        "Which sign-in log rows does a passkey sign-in write on an MFA-enabled store?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "/sign-in",
+        "POST /api/notifications/journal",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "store-setting=multifactorauthentication.storemode=enabled",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
