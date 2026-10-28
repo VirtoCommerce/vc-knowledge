@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T15:10:52.876Z",
-  "count": 1425,
+  "generated": "2026-10-28T15:11:10.888Z",
+  "count": 1426,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16160,6 +16160,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7E81B605",
+      "path": "entries/KB-7E81B605.md",
+      "subject": "Classic admin Sign-in methods blade: Add/Edit/Delete icon links show no focus indicator (outline none, 2.44:1 icons) and the passkey rename input #signInKeyName has no accessible name",
+      "question": "Is keyboard focus visible on the classic admin Sign-in methods blade, and is the passkey rename field labelled?",
+      "questions": [
+        "What focus style do the Sign-in methods blade icon links have in the AngularJS admin?",
+        "Does the classic admin passkey rename input signInKeyName have a label?"
+      ],
+      "anchors": [
+        "GET /api/platform/security/currentuser/sign-in-methods"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "ui=classic-angularjs"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
