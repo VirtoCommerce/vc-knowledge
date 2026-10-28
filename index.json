@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T00:19:02.929Z",
-  "count": 1367,
+  "generated": "2026-10-28T06:23:14.529Z",
+  "count": 1368,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -16665,6 +16665,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-884B1A23",
+      "path": "entries/KB-884B1A23.md",
+      "subject": "A Punchout cXML OrderRequest creates an order whose payment sum is the cart total as loaded, before line selection and the default shipment are applied",
+      "question": "Does the payment on an order created by POST /api/punchout/cxml OrderRequest equal the order total?",
+      "questions": [
+        "What amount does the Punchout OrderRequest put on the order's PaymentIn.sum?",
+        "Why does a Punchout order's payment not include the default shipping price?",
+        "Partial Punchout OrderRequest: is the payment for the ordered lines or the whole cart?"
+      ],
+      "anchors": [
+        "POST /api/punchout/cxml",
+        "PaymentIn.sum"
+      ],
+      "scope": [
+        "feature=punchout-order-request",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
