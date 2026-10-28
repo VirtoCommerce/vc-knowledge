@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T15:08:24.456Z",
-  "count": 1422,
+  "generated": "2026-10-28T15:10:52.876Z",
+  "count": 1425,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5868,6 +5868,30 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-304E47CC",
+      "path": "entries/KB-304E47CC.md",
+      "subject": "POST /api/page-builder-pages/grouped with status Published creates a published page without the permalink conflict check, leaving two equally specific pages live",
+      "question": "Do other Page Builder write paths than grouped/publishing enforce the permalink publish-conflict check?",
+      "questions": [
+        "Can POST /api/page-builder-pages/grouped bypass the 409 permalink conflict?",
+        "Is the permalink conflict check only in PublishGroup?",
+        "How can two Certain-conflict pages both be published?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/grouped",
+        "POST /api/page-builder-pages/grouped/publishing/{id}",
+        "POST /api/page-builder-pages/grouped/permalink-usages"
+      ],
+      "scope": [
+        "module=page-builder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -20092,6 +20116,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-9C945CB3",
+      "path": "entries/KB-9C945CB3.md",
+      "subject": "slugInfo prefers a page in the store default language over an any-language page for every visitor language without its own page; organization comes from the token only",
+      "question": "Which page does Query.slugInfo pick between an any-language page and a store-default-language page, and can a client argument change the organization used by pageDocument/pageDocuments?",
+      "questions": [
+        "Does a de-DE visitor get the en-US page or the any-language page?",
+        "Does slugInfo userId argument expose an organization-targeted page?",
+        "Does organization_id on /connect/token give access to another organization's pages?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageDocument",
+        "Query.pageDocuments"
+      ],
+      "scope": [
+        "module=pages",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9CD03E2B",
       "path": "entries/KB-9CD03E2B.md",
       "subject": "On /search?barcode= the first barcode value wins and a q keyword is ignored",
@@ -27991,6 +28039,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DA0955FC",
+      "path": "entries/KB-DA0955FC.md",
+      "subject": "Page Builder publish-conflict classification observed live: group superset over subset is Certain, subset over superset Possible, touching dates Possible, +1s None; check-then-act race can publish two Certain pages",
+      "question": "How does POST /api/page-builder-pages/grouped/permalink-usages classify user-group direction, touching dates and concurrent publishes?",
+      "questions": [
+        "Is publishing {vip,gold} over a published {gold} page a Certain conflict?",
+        "Do touching dates count as overlapping for permalink conflicts?",
+        "Can two concurrent publishes of Certain-conflicting pages both succeed?",
+        "Does an any-language page conflict with a store-default-language page?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/grouped/permalink-usages",
+        "POST /api/page-builder-pages/grouped/publishing/{id}"
+      ],
+      "scope": [
+        "module=page-builder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
