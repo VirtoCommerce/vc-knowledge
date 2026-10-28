@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T11:29:31.953Z",
-  "count": 1402,
+  "generated": "2026-10-28T13:18:29.842Z",
+  "count": 1403,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -25680,6 +25680,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CA7DBAD0",
+      "path": "entries/KB-CA7DBAD0.md",
+      "subject": "A successful passkey sign-in does not reset accessFailedCount, while a successful password sign-in does",
+      "question": "Does a successful passkey sign-in reset the failed-attempt counter (accessFailedCount)?",
+      "questions": [
+        "Can a passkey sign-in sign in a temporarily locked or admin-locked account?",
+        "After 4 wrong passwords and a passkey success, does one more wrong password lock the account?",
+        "What does POST /connect/token grant_type=passkey return for a locked-out account?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/platform/security/users/{id}/lock"
+      ],
+      "scope": [
+        "grant=passkey",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
