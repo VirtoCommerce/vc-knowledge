@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T00:02:12.254Z",
-  "count": 1366,
+  "generated": "2026-10-28T00:09:13.389Z",
+  "count": 1367,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -223,7 +223,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2103,6 +2103,30 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-116F5DC4",
+      "path": "entries/KB-116F5DC4.md",
+      "subject": "Convert refuses a Landing page with a non-store culture, a null culture, or one already linked to a multilanguage page with 400, and creates no root on refusal",
+      "question": "What does POST /api/page-builder-multilanguage-pages/convert/{groupId} return for a page with a non-store culture, a null culture, or one that is already a language version, and does it leave an orphan root?",
+      "questions": [
+        "Can a Landing page with no culture be converted to a multilanguage page?",
+        "Does a refused Convert leave an empty multilanguage root behind?",
+        "What happens when Convert is called twice on the same page?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-multilanguage-pages/convert/{id}",
+        "POST /api/page-builder-multilanguage-pages/search"
+      ],
+      "scope": [
+        "entity=multilanguage-page",
+        "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
