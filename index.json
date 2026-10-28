@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T10:32:31.515Z",
-  "count": 1386,
+  "generated": "2026-10-28T10:34:22.177Z",
+  "count": 1389,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2452,6 +2452,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-1359749E",
+      "path": "entries/KB-1359749E.md",
+      "subject": "passkeyRequestOptions is anonymous, derives rpId from the request host, requires user verification and returns no allowCredentials; REST /api/passkeys/request-options is 405 through the storefront origin",
+      "question": "Does Query.passkeyRequestOptions answer anonymously and which rpId does it return for the storefront host versus the platform host?",
+      "anchors": [
+        "Query.passkeyRequestOptions",
+        "Query.passkeyCreationOptions",
+        "POST /api/passkeys/request-options"
+      ],
+      "scope": [
+        "feature=passkey-sign-in",
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-13838BF5",
       "path": "entries/KB-13838BF5.md",
       "subject": "The organization returns tab strips a 'Draft' status from the URL only in that exact spelling; a lower-case 'draft' is sent to organizationReturns and yields an empty list",
@@ -4316,6 +4336,26 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2338B876",
+      "path": "entries/KB-2338B876.md",
+      "subject": "With the passkey module installed every store lists Passkey, active by default and unsaved; stores without saved schemes sort Passkey before Password, a store with saved schemes appends it last",
+      "question": "Does store.settings.authenticationTypes list Passkey and in what order relative to Password after the sign-in-methods change?",
+      "anchors": [
+        "Query.store",
+        "GET /api/store-authentication-schemes/{id}",
+        "GET /api/platform/security/sign-in-methods"
+      ],
+      "scope": [
+        "feature=authentication-types",
+        "surface=rest",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -25350,6 +25390,24 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CA0059B2",
+      "path": "entries/KB-CA0059B2.md",
+      "subject": "POST /api/platform/security/sign-in (cookie sign-in) refuses password, refresh_token, client_credentials, impersonate and external_sign_in with 400 unsupported_grant_type; only handler-based grants such as passkey are served",
+      "question": "Which grant types does POST /api/platform/security/sign-in accept and what does a malformed body return?",
+      "anchors": [
+        "POST /api/platform/security/sign-in",
+        "PUT /api/platform/security/currentuser/sign-in-methods/{id}/keys/{id}"
+      ],
+      "scope": [
+        "feature=passkey-sign-in",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
