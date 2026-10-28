@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T22:58:01.246Z",
-  "count": 1446,
+  "generated": "2026-10-28T23:21:18.665Z",
+  "count": 1447,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30584,6 +30584,29 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EBBD7349",
+      "path": "entries/KB-EBBD7349.md",
+      "subject": "With PR #149, a wrong-type member id in contact(id)/organization(id) answers Forbidden like a nonexistent member, and an Employee user's me.contact is null with no errors",
+      "question": "What do Query.contact(id) with an Organization id, Query.organization(id) with a Contact id, and me.contact for an Employee user return on xAPI with PR #149?",
+      "questions": [
+        "Does contact(id) with an organization id still error on the PR #149 build?",
+        "Is me.contact null for an Employee storefront user?"
+      ],
+      "anchors": [
+        "Query.contact",
+        "Query.organization",
+        "Query.me"
+      ],
+      "scope": [
+        "module=profile-experience-api",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
