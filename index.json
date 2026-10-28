@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T15:03:10.617Z",
-  "count": 1420,
+  "generated": "2026-10-28T15:08:24.456Z",
+  "count": 1422,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7846,6 +7846,27 @@
       "scope": [
         "surface=admin-ui",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-400C576B",
+      "path": "entries/KB-400C576B.md",
+      "subject": "Admin Shell login: the passkey and Google provider buttons show only a 15% amber box-shadow on keyboard focus (about 1.3:1), no outline",
+      "question": "What focus indicator do the Sign in with a passkey and Continue with Google buttons show on the Admin Shell login page?",
+      "questions": [
+        "Is keyboard focus visible on the Admin Shell login provider buttons?",
+        "What does .as-auth__provider:focus-visible render on /apps/admin-shell/#/login?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/login"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "theme=dark"
       ],
       "plane": "experiential",
       "status": "active",
@@ -31575,6 +31596,28 @@
         "store=b2b-store",
         "surface=storefront-ui",
         "user=anonymous"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F438ABE9",
+      "path": "entries/KB-F438ABE9.md",
+      "subject": "GET /api/platform/security/currentuser answers 200 with an empty user, not 401, for a missing, garbage or signed-out bearer token",
+      "question": "Does GET /api/platform/security/currentuser answer 401 when the bearer token is invalid or belongs to a signed-out session?",
+      "questions": [
+        "Can currentuser be used to prove a token was revoked after sign-out?",
+        "What does currentuser return without an Authorization header?",
+        "Is a 200 from currentuser proof that a token is valid?"
+      ],
+      "anchors": [
+        "GET /api/platform/security/currentuser"
+      ],
+      "scope": [
+        "auth=customer",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
