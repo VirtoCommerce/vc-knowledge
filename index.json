@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T06:23:14.529Z",
-  "count": 1368,
+  "generated": "2026-10-28T06:42:34.305Z",
+  "count": 1369,
   "entries": [
     {
       "id": "KB-001183CF",
@@ -25446,6 +25446,28 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CC9B2220",
+      "path": "entries/KB-CC9B2220.md",
+      "subject": "A Punchout cXML OrderRequest whose cart fails checkout validation returns Status 500 with no message and leaves the cart mutated; no order is created",
+      "question": "What does POST /api/punchout/cxml return for an OrderRequest that reconciles with the cart but fails checkout validation (out of stock, product not buyable)?",
+      "questions": [
+        "Punchout OrderRequest out of stock response code",
+        "Does a failed punchout OrderRequest change the buyer cart?",
+        "Can a punchout OrderRequest be resent after checkout validation fails?"
+      ],
+      "anchors": [
+        "POST /api/punchout/cxml"
+      ],
+      "scope": [
+        "operation=cxml orderrequest",
+        "surface=platform-rest-api"
       ],
       "plane": "experiential",
       "status": "active",
