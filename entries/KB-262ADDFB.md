@@ -25,5 +25,14 @@ evidence:
     by: session:5fa7c31a
     who: Lenajava1
     note: "distinct: KB-444EF3F4 is the PERMANENT platform lock (code user_is_locked_out). This is the TEMPORARY failed-attempt lockout, which uses a different code (user_is_temporary_locked_out) and adds the response-shape detail that lockoutSecondsRemaining is present but null on the password grant."
+  - method: observation
+    deployment: vcptcore_qa
+    build: a5a20e99d84d8f1b
+    conditions: platform=3.1091.0-pr-3144-e637; module:VirtoCommerce.Customer=3.1032.0-pr-324-b30b; store=B2B-store; account=storefront buyer
+    at: 2026-10-28T14:28:25.245Z
+    by: session:56fb99bb
+    bodyHash: 2d9af5f2ad99
+    who: Lenajava1
+    note: "Same shape on a storefront buyer's password grant with storeId and organization_id: 400 invalid_grant, code user_is_temporary_locked_out, one errors[] entry, lockoutSecondsRemaining null, userId null, count 3, while the user record showed a lockoutEnd about 2 minutes out. After lockoutEnd passed, one more attempt with the same (wrong) password returned 400 login_failed."
 ---
 On vcst_qa on 2026-10-21, I sent one form-encoded POST /connect/token (grant_type=password, scope=offline_access) for the platform admin account, which was already temporarily locked out. It returned HTTP 400. The body had error=invalid_grant and code=user_is_temporary_locked_out, with the description "Your account has been temporarily locked. Please try again after some time." It also had an errors[] array with one entry carrying the same code. The response also carried lockoutSecondsRemaining: null and userId: null. So on this build the password-grant refusal uses the same response model that carries lockoutSecondsRemaining on the OTP grant. A client cannot read a countdown from it here, because the value is null even while the account is locked. The count field on the response was 3, which is the token response's parameter count, not an error count. I did not establish why the account was locked, and I did not retry.

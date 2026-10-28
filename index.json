@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T14:14:29.953Z",
-  "count": 1416,
+  "generated": "2026-10-28T14:29:24.102Z",
+  "count": 1418,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4713,7 +4713,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14466,6 +14466,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7213F51A",
+      "path": "entries/KB-7213F51A.md",
+      "subject": "When OTP sign-in is disabled for the store, POST /api/otp/request answers HTTP 200 with succeeded=false and error.code otp_disabled, not a 4xx",
+      "question": "What does POST /api/otp/request return when OTP sign-in is disabled for the store?",
+      "questions": [
+        "Does the OTP request endpoint return an error status when OtpSignIn.Enabled is off?",
+        "How to detect from the API that one-time-code sign-in is off for a store?",
+        "What is the otp_disabled error of the OTP request endpoint?"
+      ],
+      "anchors": [
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -28675,6 +28697,32 @@
       "scope": [
         "auth=guest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E0E344A8",
+      "path": "entries/KB-E0E344A8.md",
+      "subject": "A password grant on POST /connect/token naming a nonexistent GUID or an organization the user is not a member of returns 200 with the organization_id claim silently substituted to an accessible org, and the sign-in persists that org as the contact's currentOrganizationId",
+      "question": "What does POST /connect/token grant_type=password return when organization_id is a random nonexistent GUID or a real organization the user does not belong to?",
+      "questions": [
+        "Is an unresolvable organization_id refused on a password sign-in or substituted?",
+        "Which organization does the token carry when the requested organization_id is foreign to the user?",
+        "Does a password grant with a bogus organization_id return invalid_organization_id?",
+        "Does signing in via /connect/token write contact.currentOrganizationId?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/members/search",
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "feature=organization-access-resolution",
+        "grant=password",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
