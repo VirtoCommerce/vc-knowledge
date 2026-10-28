@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T11:06:04.804Z",
-  "count": 1397,
+  "generated": "2026-10-28T11:11:26.733Z",
+  "count": 1399,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9174,6 +9174,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-4BDF14A7",
+      "path": "entries/KB-4BDF14A7.md",
+      "subject": "The storefront /account/change-password form shows no warning that changing the password signs the user out of other sessions",
+      "question": "Does the storefront Change password page warn that other sessions will be signed out?",
+      "anchors": [
+        "/account/change-password"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4BFCE2B2",
       "path": "entries/KB-4BFCE2B2.md",
       "subject": "Push Messages audience builder: field to member-index phrase mapping",
@@ -13156,7 +13172,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -28028,6 +28044,25 @@
       "scope": [
         "feature=loyalty-missions",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DE781776",
+      "path": "entries/KB-DE781776.md",
+      "subject": "On desktop, clicking the header search Clear (X) button empties the input and closes the dropdown instead of returning to the Hints state",
+      "question": "What does the header search dropdown show after the Clear (X) button is clicked on desktop?",
+      "anchors": [
+        "/contacts",
+        "Query.products"
+      ],
+      "scope": [
+        "browser=firefox",
+        "surface=storefront-ui",
+        "viewport=desktop"
       ],
       "plane": "experiential",
       "status": "active",

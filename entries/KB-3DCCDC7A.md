@@ -34,5 +34,13 @@ evidence:
     bodyHash: baa9a82d4f77
     who: Lenajava1
     note: "REG-2026-10-28-1013 (suite 082): confirm dialog on /company/members has only Cancel/OK (Cancel closes, no token POST); 'Back to <operator>' (account menu and mobile menu) restored the operator and landed on /company/members from /, /account/orders and /de/ pages (7 of 7 reverts). MFA code step not exercised (form flow signed in with password only, no code asked)."
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    at: 2026-10-28T11:06:18.036Z
+    by: session:7e8ea7fb
+    bodyHash: baa9a82d4f77
+    who: Lenajava1
+    note: "REG-2026-10-28-1013 suite 031 AUTH-028: same Cancel/OK dialog on /company/members; OK -> /account/impersonate/<id> -> / with 'John Mitchell logged in as Lisa Wang'; account-menu sign out ended the session."
 ---
 On vcst_qa 2026-10-23 (B2B-store StoreMode=Enabled), an org maintainer signed in with password + emailed code (amr=mfa). On /company/members, Actions -> Login on behalf opened a confirm dialog with only Cancel/OK and no code field. Cancel closed it and sent no request. OK went to /account/impersonate/{targetUserId} ("Security verification"), which immediately POSTed grant_type=impersonate (200) and landed on / with the "<operator> logged in as <target>" banner; the token carried vc_operator_user_id and no amr. "Back to <operator>" restored the operator and went to /company/members. Signed out, opening /account/impersonate/{targetUserId} showed a "Security verification" form (operator email + password, Verify and continue / Cancel). Submitting it answered two_factor_required and showed the same 6-cell code step with a Cancel link. A wrong code showed "That code didn't work." and sent no impersonate request. Cancel went to / still signed out. The right code sent grant_type=mfa (200) then grant_type=impersonate (200) and showed the impersonation banner.
