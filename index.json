@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T23:21:18.665Z",
-  "count": 1447,
+  "generated": "2026-10-28T23:21:33.152Z",
+  "count": 1448,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26605,6 +26605,35 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CBA98E35",
+      "path": "entries/KB-CBA98E35.md",
+      "subject": "On ProfileExperienceApi 3.1022.0 (no PR #149), a member id of the wrong type in contact(id)/organization(id) answers NULL_REFERENCE, and an Employee user's me.contact is an object whose Contact fields fail",
+      "question": "What do Query.contact(id) with an Organization id, Query.organization(id) with a Contact id, and me.contact for an Employee user return on xAPI without PR #149?",
+      "questions": [
+        "Why does contact(id) return NULL_REFERENCE 'Error trying to resolve field contact'?",
+        "What does me.contact return for a storefront user whose member is an Employee?",
+        "Does organization(id) accept a contact id?"
+      ],
+      "concepts": [
+        "graphql-api",
+        "contact",
+        "organization"
+      ],
+      "anchors": [
+        "Query.contact",
+        "Query.organization",
+        "Query.me"
+      ],
+      "scope": [
+        "module=profile-experience-api",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
