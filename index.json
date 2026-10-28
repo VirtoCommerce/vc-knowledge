@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T16:22:25.022Z",
-  "count": 1434,
+  "generated": "2026-10-28T16:25:13.226Z",
+  "count": 1435,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4762,6 +4762,28 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-26E71681",
+      "path": "entries/KB-26E71681.md",
+      "subject": "On storefront /account/security keyboard focus falls to the document body after Add passkey completes and after Delete then OK",
+      "question": "Where does keyboard focus go on /account/security after Add passkey completes and after deleting a passkey?",
+      "questions": [
+        "Is focus kept on the Add passkey button after a passkey is registered on the storefront Security page?",
+        "After confirming Delete key on /account/security, where does the next Tab land?",
+        "Does the storefront Security page return focus after the delete passkey dialog closes?"
+      ],
+      "anchors": [
+        "/account/security"
+      ],
+      "scope": [
+        "feature=passkey-management",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
