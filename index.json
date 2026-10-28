@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T17:00:42.288Z",
-  "count": 1436,
+  "generated": "2026-10-28T18:14:58.258Z",
+  "count": 1437,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7026,6 +7026,28 @@
       "scope": [
         "module=virtocommerce.adminshell",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3AADFF24",
+      "path": "entries/KB-3AADFF24.md",
+      "subject": "A failed password sign-in on /sign-in sends exactly one GA4 login hit with ep.success=false and ep.errors naming the token error code, from an anonymous session",
+      "question": "What GA4 collect request does a failed password sign-in on the storefront /sign-in page send?",
+      "questions": [
+        "Does a wrong password on /sign-in fire en=login with success=false?",
+        "Is a locked-out sign-in reported to GA, and with which error?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "integration=google-analytics-4",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
