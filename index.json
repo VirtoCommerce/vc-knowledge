@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T21:25:05.973Z",
-  "count": 1441,
+  "generated": "2026-10-28T21:26:25.200Z",
+  "count": 1442,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3651,6 +3651,30 @@
       "trust": 4,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-1B8EF9DC",
+      "path": "entries/KB-1B8EF9DC.md",
+      "subject": "A Punchout OrderRequest is accepted only for lines of a Returned requisition; SupplierPartAuxiliaryID is \"{LineItemId};{SessionId}\" and the cart is cleared after the order",
+      "question": "Which punchout requisition must a cXML OrderRequest on POST /api/punchout/cxml match, and what happens to the cart afterwards?",
+      "questions": [
+        "Can an ERP order cart lines that were never sent in a PunchOutOrderMessage?",
+        "What is the format of SupplierPartAuxiliaryID in a Virto PunchOutOrderMessage?",
+        "Why does an OrderRequest answer 'No punchout requisition was returned for the order.'?",
+        "Do unordered cart lines stay in the cart after a punchout OrderRequest?"
+      ],
+      "anchors": [
+        "POST /api/punchout/cxml",
+        "Mutation.createPunchoutRequisition"
+      ],
+      "scope": [
+        "feature=punchout-order-request",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-1C28E89D",
@@ -17509,7 +17533,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-8857D430",
@@ -18191,8 +18215,8 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
-      "disputed": 0
+      "trust": 1,
+      "disputed": 1
     },
     {
       "id": "KB-8C3E463D",
@@ -26643,7 +26667,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-CCFCAEEB",
