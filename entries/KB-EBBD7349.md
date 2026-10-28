@@ -24,5 +24,14 @@ evidence:
     at: 2026-10-28T23:21:17.473Z
     by: session:faa575c7
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 0361e2adb11cbebb
+    conditions: module:VirtoCommerce.ProfileExperienceApiModule=3.1022.0-pr-149-2242; module:VirtoCommerce.Customer=3.1031.0; module:VirtoCommerce.Xapi=3.1028.0; store=B2B-store
+    at: 2026-10-28T23:44:16.095Z
+    by: session:faa575c7
+    bodyHash: 1ef0e1896186
+    who: kutasinaelena
+    note: "Re-run independently: contact(id:<Organization id>), organization(id:<Contact id>), contact(id:<Employee id>), contact(id:<Vendor id>) and organization(id:<Employee id>) all Forbidden like a nonexistent GUID; Employee me.contact null with no errors also for organizationId/selectedAddressId/fullName selections; updatePersonalData for the Employee succeeded, persisted the email and left the member's names unchanged."
 ---
 On the PR #149 build, signed in as a single-org storefront buyer (B2B-store), contact(id:<own Organization id>), organization(id:<own Contact id>) and contact(id:<Employee member id>) each returned Forbidden, the same answer as contact(id:<nonexistent GUID>), with no NULL_REFERENCE. Signed in as a storefront user whose member is an Employee, me{id memberId contact{id memberType}} returned contact null and no errors. The factory now returns null for a member of another type, so these lookups take the not-found path.
