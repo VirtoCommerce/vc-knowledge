@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T22:51:45.358Z",
-  "count": 1444,
+  "generated": "2026-10-28T22:52:23.468Z",
+  "count": 1445,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10721,6 +10721,25 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-51624775",
+      "path": "entries/KB-51624775.md",
+      "subject": "A Store setting saved via POST /api/platform/settings (v1) is used by the Pages indexer at once but GET /api/stores/{id} kept returning the old value for at least 95 s",
+      "question": "After POST /api/platform/settings changes a Store-scoped setting such as Sanity.DocumentTypes, does GET /api/stores/{id} show it, and does the indexer use it?",
+      "anchors": [
+        "POST /api/platform/settings",
+        "GET /api/stores/{id}",
+        "POST /api/search/indexes/index"
+      ],
+      "scope": [
+        "role=administrator",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
