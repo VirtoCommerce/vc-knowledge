@@ -25,5 +25,14 @@ evidence:
     at: 2026-10-28T14:51:21.285Z
     by: session:44c579c3
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcptcore_qa
+    build: 23e5874137c52ea7
+    conditions: module:VirtoCommerce.PageBuilderModule=3.1039.0-pr-179-5c9d; store-default-language=en-US
+    at: 2026-10-28T15:19:59.723Z
+    by: session:44c579c3
+    bodyHash: 3b71169677e0
+    who: Aleksandra-Mitricheva
+    note: "Re-observed via REST: {VIP,gold} over published {gold} -> Certain, publish 409; {gold} over {VIP,gold} -> Possible, 200, both stay Published; {VIP} over {gold} -> Possible, 200. Also: dated over evergreen Possible/200, evergreen over dated Certain/409; any-language vs en-US (store default) Certain/409; any vs de-DE None."
 ---
 Observed on one store (default en-US), same permalink, same org/language: new {vip,gold} vs published {gold} -> Certain, publish without flag 409; new {gold} vs published {vip,gold} -> Possible, publish 200 and both stay Published; {VIP} vs {gold} -> Possible. Other page ends at T, new page starts at T -> Possible; starts T+1s -> None (inclusive bounds). Any-language evergreen vs en-US dated -> Possible; any-language vs de-DE -> None. Permalink match is case-insensitive and leading-slash-insensitive ("Agent-Test-X" vs "/agent-test-x" -> Certain); whitespace and "//" are rejected at create with 400. Two Certain-equal drafts published concurrently without unpublishConflicting: 3 of 4 trials 200+409, 1 trial 200+200 leaving both Published (no lock between check and save). Draft rows in usages report canUnpublish=false.
