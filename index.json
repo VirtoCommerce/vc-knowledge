@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T10:59:31.796Z",
-  "count": 1392,
+  "generated": "2026-10-28T11:00:05.110Z",
+  "count": 1395,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4817,6 +4817,28 @@
       "scope": [
         "store=b2b-store",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-28DB8660",
+      "path": "entries/KB-28DB8660.md",
+      "subject": "A non-admin Manager whose only global role holds platform:security:loginOnBehalf can mint an impersonate token for a B2B Customer it has no organization relation to",
+      "question": "Does the impersonate grant need the operator to share an organization with the target, or is a global loginOnBehalf permission enough?",
+      "questions": [
+        "Can a back-office Manager with loginOnBehalf impersonate any storefront buyer?",
+        "Is POST /connect/token grant_type=impersonate scoped to the operator's organization?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "GET /api/platform/security/currentuser"
+      ],
+      "scope": [
+        "grant=impersonate",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -9651,6 +9673,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4E40858D",
+      "path": "entries/KB-4E40858D.md",
+      "subject": "REST GET currentuser/sign-in-methods answers 403 to a Customer token and 200 to a Manager; xAPI Query.signInMethods returns the Customer's passkeys",
+      "question": "How does a storefront Customer read or delete its own passkeys through the API — REST currentuser/sign-in-methods or xAPI signInMethods?",
+      "questions": [
+        "Why does GET /api/platform/security/currentuser/sign-in-methods return 403 for a customer?",
+        "Which API lists a customer's passkey keys?"
+      ],
+      "anchors": [
+        "GET /api/platform/security/currentuser/sign-in-methods",
+        "Query.signInMethods",
+        "Mutation.deleteSignInKey"
+      ],
+      "scope": [
+        "feature=passkeys",
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -15107,7 +15153,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0,
       "resolved": 1
     },
@@ -23085,7 +23131,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -25864,6 +25910,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CD888E52",
+      "path": "entries/KB-CD888E52.md",
+      "subject": "A non-admin Manager account gets a password-grant token both with storeId and without; only Customer accounts are held to the store rule",
+      "question": "Is a Manager (back-office, non-administrator) account refused with user_cannot_login_in_store on POST /connect/token password grant?",
+      "questions": [
+        "Can a back-office Manager sign in to the storefront store with a password grant?",
+        "Does the store rule on /connect/token apply to Manager userType accounts?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "actor=back-office-non-admin",
+        "grant=password",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
