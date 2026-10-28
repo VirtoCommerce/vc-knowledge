@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T14:05:21.783Z",
-  "count": 1410,
+  "generated": "2026-10-28T14:05:36.200Z",
+  "count": 1413,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3007,6 +3007,28 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1700428D",
+      "path": "entries/KB-1700428D.md",
+      "subject": "Back-office cookie password login POST /api/platform/security/login succeeds for a storefront Customer (0 permissions), while the passkey routes refuse a Customer with 403",
+      "question": "Can a storefront Customer account open a back-office cookie session, and what can it reach there?",
+      "questions": [
+        "Does the Admin SPA login endpoint refuse userType Customer?",
+        "Can a Customer create a platform-host passkey via /api/passkeys/creation-options?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/login",
+        "POST /api/passkeys/creation-options"
+      ],
+      "scope": [
+        "surface=rest",
+        "user-type=customer"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7088,6 +7110,28 @@
       "scope": [
         "element=products-filter-field-names",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3C48DBCA",
+      "path": "entries/KB-3C48DBCA.md",
+      "subject": "Sign-in log search with signInTypes [\"Passkey\"] returns only Passkey rows with failure reasons InvalidPasskey / LockedOut / MissingParameter; Manager accounts without the sign-in-log permission get 403",
+      "question": "How does POST /api/platform/security/sign-in-log/search filter passkey sign-ins, and who may call it?",
+      "questions": [
+        "Which failureReason values does the sign-in log record for passkey sign-ins?",
+        "Can a Store access manager read the sign-in log?",
+        "Does the sign-in log filter by signInTypes Passkey?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=passkey-sign-in",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -23883,7 +23927,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-B96A2EB1",
@@ -25468,6 +25513,31 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C6E9866D",
+      "path": "entries/KB-C6E9866D.md",
+      "subject": "A failed xAPI changePassword (wrong old password) increments the target's accessFailedCount, also when sent from an impersonated (loginOnBehalf) session",
+      "question": "Does a failed Mutation.changePassword increment the user's accessFailedCount, and can an impersonating operator move the target's lockout counter that way?",
+      "questions": [
+        "Can an operator lock out a customer by calling changePassword with wrong old passwords while impersonating?",
+        "Does changePassword PasswordMismatch count as a failed sign-in attempt?",
+        "Is xAPI changePassword guarded against impersonated tokens?"
+      ],
+      "anchors": [
+        "Mutation.changePassword",
+        "/account/change-password",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "auth=impersonation",
+        "surface=graphql",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
