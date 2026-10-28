@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T23:21:33.152Z",
-  "count": 1448,
+  "generated": "2026-10-28T23:30:51.518Z",
+  "count": 1449,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9352,6 +9352,31 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4AC4C5AD",
+      "path": "entries/KB-4AC4C5AD.md",
+      "subject": "A storefront user whose member is an Employee signs in normally once GetMe returns me.contact null (PR #149 build); on the build without it the whole storefront renders blank after sign-in",
+      "question": "What happens on the storefront when a user whose member is an Employee (not a Contact) signs in?",
+      "questions": [
+        "Does an Employee-type member with a storefront login break GetMe?",
+        "Why is the storefront blank after an Employee user signs in?",
+        "What does me.contact return for an Employee user?"
+      ],
+      "anchors": [
+        "Query.me",
+        "/sign-in",
+        "/account/dashboard",
+        "/account/profile"
+      ],
+      "scope": [
+        "member-type=employee",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
