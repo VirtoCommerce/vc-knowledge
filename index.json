@@ -1,8 +1,29 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T06:42:34.305Z",
-  "count": 1369,
+  "generated": "2026-10-28T06:47:19.351Z",
+  "count": 1370,
   "entries": [
+    {
+      "id": "KB-000A4C85",
+      "path": "entries/KB-000A4C85.md",
+      "subject": "Punchout OrderRequest matches SupplierPartAuxiliaryID (cart line id) and SupplierPartID (SKU) case-insensitively",
+      "question": "POST /api/punchout/cxml OrderRequest: are SupplierPartID and SupplierPartAuxiliaryID matched against cart line ids and SKUs case-insensitively?",
+      "questions": [
+        "Does a Punchout OrderRequest with an upper-cased SupplierPartAuxiliaryID still find the cart?",
+        "Is a lower-case SKU in a cXML OrderRequest ItemOut accepted by the punchout reconcile?",
+        "Why did an OrderRequest answer 'The order items do not match any cart.' for an upper-cased line id?"
+      ],
+      "anchors": [
+        "POST /api/punchout/cxml"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
     {
       "id": "KB-001183CF",
       "path": "entries/KB-001183CF.md",
