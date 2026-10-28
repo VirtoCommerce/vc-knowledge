@@ -30,5 +30,15 @@ evidence:
     defect: VCST-6612
     who: Lenajava1
     note: Re-observed on Chromium with a different personal account. The list query GetBackInStockSubscriptions sends no isActive (sort isActive:asc;createdDate:desc) and returns the deactivated row with isActive:false; REST subscriptions/search shows isActive=false stored.
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    conditions: platform=3.1090.0; theme=2.61.0-alpha.2605
+    at: 2026-10-28T21:24:53.312Z
+    by: session:042feeaa
+    bodyHash: c1a6f87da2a5
+    defect: none
+    who: Lenajava1
+    note: "Defect marker withdrawn: the QA team judged this behaviour by design (team decision, no doc page cited). An unsubscribed product stays in /account/back-in-stock with isActive=false and a 'Stock alert' button to re-subscribe; the claim is unchanged."
 ---
 Subscribed to QA-OOS-001 from its PDP (Stock alert -> 'You'll be notified'), opened /account/back-in-stock (row with name, image, price and the 'You'll be notified' button), clicked that button: it flips to 'Stock alert' and the PDP shows the unsubscribed state, but the row remains in the list immediately and after a full reload. A list with zero subscriptions shows 'Your list is empty'.
