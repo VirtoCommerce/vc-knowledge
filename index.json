@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T10:05:31.324Z",
-  "count": 1379,
+  "generated": "2026-10-28T10:12:31.332Z",
+  "count": 1381,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7917,6 +7917,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-41997FE5",
+      "path": "entries/KB-41997FE5.md",
+      "subject": "Storefront /sign-in code step shows the raw server text, including the organization GUID, when every membership is Rejected",
+      "question": "What does the storefront OTP code step show when a multi-org buyer is Rejected in all organizations?",
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "persona=multi-org",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -19755,6 +19774,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9E0FCF52",
+      "path": "entries/KB-9E0FCF52.md",
+      "subject": "An applied cart coupon stays on the cart after its items are removed and the cart is cleared; the next item added is discounted by it",
+      "question": "Does a coupon applied on /cart survive emptying the cart, so a later item added gets the discount automatically?",
+      "anchors": [
+        "/cart",
+        "Mutation.addCoupon",
+        "Mutation.clearCart"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
