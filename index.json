@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T14:29:24.102Z",
-  "count": 1418,
+  "generated": "2026-10-28T14:36:53.077Z",
+  "count": 1419,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5411,6 +5411,30 @@
       ],
       "scope": [
         "module=virtocommerce.pagebuildermodule",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2CAAAA84",
+      "path": "entries/KB-2CAAAA84.md",
+      "subject": "Page Builder authorization is not permission-scoped: builder:* permissions have no availableScopes, and the resource check only compares the page's StoreId with the user's own StoreId (Administrators bypass)",
+      "question": "Can a Page Builder role be scoped to a store, and what makes POST /api/page-builder-pages/grouped/publishing/{groupId}?unpublishConflicting=true return 403 for the conflicting pages?",
+      "questions": [
+        "Are builder:publish / builder:update store-scoped permissions?",
+        "How does PageBuilderAuthorizationHandler decide access to a page?",
+        "Can an admin user publish a page but lack rights on a conflicting page of the same permalink?",
+        "Why does a non-admin back-office user get 403 on every page builder route?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/grouped/publishing/{id}",
+        "GET /api/platform/security/permissions"
+      ],
+      "scope": [
+        "module=pagebuilder",
         "surface=rest-api"
       ],
       "plane": "experiential",
