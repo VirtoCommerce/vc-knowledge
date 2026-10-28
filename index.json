@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T07:35:50.300Z",
-  "count": 1373,
+  "generated": "2026-10-28T07:46:19.612Z",
+  "count": 1374,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3984,6 +3984,33 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-210A4291",
+      "path": "entries/KB-210A4291.md",
+      "subject": "A value mapping saved through /api/search/index-field-settings is applied only at the next index build: matching String values (case-insensitive) are replaced by the mapping value, and field-values then lists the merged value instead of its synonyms",
+      "question": "How does a value mapping (index field setting) change the indexed values of a field, and when does it take effect?",
+      "questions": [
+        "Does /api/search/field-values show synonyms merged into the mapping value after a Product index build?",
+        "Is the value-mapping synonym match case-sensitive?",
+        "Does editing or deleting a value mapping take effect without rebuilding the index?",
+        "Does writing VirtoCommerce.Search.IndexSettings directly through the platform settings API change what the index-field-settings search returns?"
+      ],
+      "anchors": [
+        "POST /api/search/index-field-settings",
+        "POST /api/search/index-field-settings/search",
+        "GET /api/search/field-values",
+        "POST /api/search/indexes/index",
+        "POST /api/platform/settings"
+      ],
+      "scope": [
+        "documenttype=product",
+        "surface=admin-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
