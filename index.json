@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T20:45:18.208Z",
-  "count": 1440,
+  "generated": "2026-10-28T20:59:59.016Z",
+  "count": 1441,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20179,6 +20179,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9B4DBE9F",
+      "path": "entries/KB-9B4DBE9F.md",
+      "subject": "POST /api/pages/search filters by objectIds (IdsFilter), storeId, permalink, status, visibility; keyword searches the Content field",
+      "question": "Which filter fields does POST /api/pages/search accept to narrow the result to specific page documents?",
+      "questions": [
+        "How do I fetch one indexed page document by id from /api/pages/search?",
+        "Does /api/pages/search support paging with skip and take?"
+      ],
+      "anchors": [
+        "POST /api/pages/search"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

@@ -3,3 +3,4 @@
 {"at":"2026-10-28T06:51:23.610Z","kind":"show","id":"KB-B28C500C","state":"answer","after":"2026-10-28T06:51:17.539Z","via":"mcp","call":"toolu_01J6tMSFpC74tKNNvwsYJRCW","topic":"admin shell access permission","who":"kutasinaelena","agent":"main"}
 {"at":"2026-10-28T06:51:30.037Z","kind":"dispute","id":"KB-B28C500C","deployment":"vcptcore_qa1","build":"415a9cc10488d643","client":"5f271486","soft":true,"via":"mcp","call":"toolu_01WuuQLq17f1zkCktjFANt3p","topic":"admin shell access permission","who":"kutasinaelena","agent":"main"}
 {"at":"2026-10-28T06:51:46.973Z","kind":"flush","entries":0,"lines":7,"swept":["66a4da1d.jsonl","c2534117.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"kutasinaelena"}
+{"at":"2026-10-28T09:10:32.430Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
