@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T10:29:09.522Z",
-  "count": 1383,
+  "generated": "2026-10-28T10:32:31.515Z",
+  "count": 1386,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20500,6 +20500,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-A370A56A",
+      "path": "entries/KB-A370A56A.md",
+      "subject": "/cart New address dialog accepts any ZIP and phone, and Select address search only runs on submit",
+      "question": "Does the cart New address form validate ZIP/postal code and phone format, and does the Select address search filter while typing?",
+      "anchors": [
+        "/cart",
+        "Mutation.addOrUpdateCartPayment",
+        "Query.currentCustomerAddresses"
+      ],
+      "scope": [
+        "component=select-address-modal",
+        "surface=storefront-ui",
+        "user=personal account"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A3744332",
       "path": "entries/KB-A3744332.md",
       "subject": "xAPI SeoInfo declares id, semanticUrl, objectId, objectType and isActive non-null, but items with no applicable SEO record get a fallback SeoInfo, so selecting seoInfo{id} or seoInfo{objectType} errors on those items",
@@ -28902,7 +28922,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -28944,6 +28964,24 @@
       ],
       "scope": [
         "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E9C45473",
+      "path": "entries/KB-E9C45473.md",
+      "subject": "VcVariantPicker option buttons carry no aria-checked/aria-selected/aria-pressed after selection",
+      "question": "Does the product page variant picker expose the selected option programmatically?",
+      "anchors": [
+        "/products-with-options/configurable-caps-shirts/vintage-california-beach-pullover-hoodie"
+      ],
+      "scope": [
+        "component=vcvariantpicker",
+        "surface=storefront-ui",
+        "user=anonymous"
       ],
       "plane": "experiential",
       "status": "active",
@@ -30829,6 +30867,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F3DE7482",
+      "path": "entries/KB-F3DE7482.md",
+      "subject": "Explicit /en/ deep links while a non-default locale (de) is active are rewritten to /de/en/... and render the 404 page",
+      "question": "What happens when I navigate to /en/, /en/<category> or /en/search?q=x while German is the active storefront locale?",
+      "anchors": [
+        "GET /en",
+        "GET /de/en",
+        "GET /de/accessories"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui",
+        "user=anonymous"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
