@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T11:00:05.110Z",
-  "count": 1395,
+  "generated": "2026-10-28T11:06:04.804Z",
+  "count": 1397,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4817,6 +4817,24 @@
       "scope": [
         "store=b2b-store",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-28763B85",
+      "path": "entries/KB-28763B85.md",
+      "subject": "Saving a company address with HTML in Description, City and Address shows the toast 'Some of the addresses are not valid' and persists nothing",
+      "question": "What does /company/info show when an org address with HTML tags in Description/City/Address is saved?",
+      "anchors": [
+        "/company/info",
+        "Mutation.updateMemberAddresses"
+      ],
+      "scope": [
+        "role=org editor",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -17530,6 +17548,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-8BE75346",
+      "path": "entries/KB-8BE75346.md",
+      "subject": "The storefront account-menu Organizations listbox always renders the ACTIVE organization first, so option order changes on every organization switch; the active org is shown even when it does not match the search text",
+      "question": "In the storefront account menu Organizations listbox, is the option order stable across switches, and does the organizations-search filter hide the active org?",
+      "anchors": [
+        "/account/dashboard",
+        "Query.me"
+      ],
+      "scope": [
+        "component=account-menu-organizations",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8BE777BB",
       "path": "entries/KB-8BE777BB.md",
       "subject": "Switching organization relabels the storefront header account control at once; the control renders empty only on pages where an injected ProductGuide widget hides it",
@@ -26540,7 +26576,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
