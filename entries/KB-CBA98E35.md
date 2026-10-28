@@ -39,5 +39,14 @@ evidence:
     bodyHash: 326d2df70945
     who: kutasinaelena
     note: "Re-run independently: also contact(id:<Vendor id>) and organization(id:<Employee id>) answer NULL_REFERENCE; a nonexistent GUID answers Forbidden."
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    conditions: module:VirtoCommerce.ProfileExperienceApiModule=3.1022.0; theme=2.61.0-alpha.2605; store=B2B-store
+    at: 2026-10-28T23:45:14.704Z
+    by: session:faa575c7
+    bodyHash: 326d2df70945
+    who: kutasinaelena
+    note: "Storefront sign-in as an Employee-member user: GetMe and GetPageContext both return 200 with nine NULL_REFERENCE errors on me.contact fields (firstName..organizations); the storefront renders a blank page."
 ---
 Signed in as a single-org storefront buyer (B2B-store), POST /graphql contact(id:<the buyer's Organization id>), organization(id:<the buyer's Contact id>) and contact(id:<an Employee member id>) each returned data null with errors[] NULL_REFERENCE "Error trying to resolve field 'contact'/'organization'" (an NRE inside the profile authorization handler, which dereferences the aggregate's null Contact/Organization). contact(id:<nonexistent GUID>) returned Forbidden instead. Signed in as a storefront user whose member is an Employee, me{contact{id memberType}} returned an object with memberType Employee, and me{contact{organizationId selectedAddressId fullName}} returned three NULL_REFERENCE errors. Cause: MemberAggregateFactory.Create<T> wrapped any member type. Addressed by vc-module-profile-experience-api PR #149 (VCST-6280), unmerged as of 2026-10-29.

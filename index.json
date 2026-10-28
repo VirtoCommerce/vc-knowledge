@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T23:45:13.786Z",
-  "count": 1451,
+  "generated": "2026-10-28T23:47:09.702Z",
+  "count": 1452,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14773,6 +14773,28 @@
       "scope": [
         "feature=otp-sign-in",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7294127C",
+      "path": "entries/KB-7294127C.md",
+      "subject": "On /account/profile, Update for a user with me.contact = null shows \"Profile successfully updated!\" but sends no updatePersonalData request",
+      "question": "What does Update on /account/profile do for a storefront user whose me.contact is null (Employee member)?",
+      "questions": [
+        "Does the storefront profile page call updatePersonalData when the user has no contact?",
+        "Why do First/Last name stay empty after a successful profile update for an Employee user?"
+      ],
+      "anchors": [
+        "/account/profile",
+        "Mutation.updatePersonalData"
+      ],
+      "scope": [
+        "member-type=employee",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
