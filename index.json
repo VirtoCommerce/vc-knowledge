@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T10:51:31.692Z",
-  "count": 1391,
+  "generated": "2026-10-28T10:59:31.796Z",
+  "count": 1392,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -15668,6 +15668,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-7D877EBE",
+      "path": "entries/KB-7D877EBE.md",
+      "subject": "/account/orders Start-only date filter sends an open-ended createddate range with no upper bound, and End-only sends none for the lower",
+      "question": "What GetOrders filter does /account/orders send when only the Start date is applied in the Filters popover?",
+      "anchors": [
+        "/account/orders",
+        "Query.orders"
+      ],
+      "scope": [
+        "feature=orders-date-filter",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7DA9B0B7",
       "path": "entries/KB-7DA9B0B7.md",
       "subject": "platform REST APIs reject a store- or organization-scoped token with 401",
@@ -19489,7 +19507,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
