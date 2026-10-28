@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T18:14:58.258Z",
-  "count": 1437,
+  "generated": "2026-10-28T20:07:43.972Z",
+  "count": 1439,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29662,6 +29662,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-E6E81764",
+      "path": "entries/KB-E6E81764.md",
+      "subject": "The storefront bulk order pad (/bulk-order) is a bare SKU + quantity form: two input modes, no per-row product lookup, no file upload, no SKU autocomplete",
+      "question": "What does the /bulk-order bulk order pad offer: input modes, per-row product info, CSV file upload, SKU autocomplete?",
+      "questions": [
+        "Does the quick order / bulk order page show product info after entering a SKU?",
+        "Can a CSV file be uploaded on /bulk-order?",
+        "Does the bulk order SKU field autocomplete?"
+      ],
+      "anchors": [
+        "/bulk-order"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E7007F44",
       "path": "entries/KB-E7007F44.md",
       "subject": "loyaltyMissionProgress returns items[].product null for a PerSku target whose product was deleted; an inactive product still returns flags",
@@ -30393,6 +30414,26 @@
       "scope": [
         "principal=customer",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EBAE1172",
+      "path": "entries/KB-EBAE1172.md",
+      "subject": "The account dashboard 'Monthly spend report' widget shows fixed Budget/Totally spent figures with no period label that do not follow the buyer's orders",
+      "question": "What do Budget and Totally spent in the /account/dashboard Monthly spend report widget reflect?",
+      "questions": [
+        "Is the dashboard spend widget computed from orders?",
+        "Why does Monthly spend report not match order history?"
+      ],
+      "anchors": [
+        "/account/dashboard"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
