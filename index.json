@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T10:27:10.911Z",
-  "count": 1382,
+  "generated": "2026-10-28T10:29:09.522Z",
+  "count": 1383,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8399,6 +8399,24 @@
       "scope": [
         "build=platform-3.1084.0-pr-3142",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4696F47F",
+      "path": "entries/KB-4696F47F.md",
+      "subject": "POST /connect/token grant_type=passkey: missing credential is 400 invalid_request/missing_parameters, any present-but-invalid credential is 400 invalid_grant/login_failed, and the sign-in log records Passkey rows with no user and no store",
+      "question": "What does POST /connect/token grant_type=passkey return for a missing or bogus credential, and what does the sign-in log record?",
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=passkey-sign-in",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
