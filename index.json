@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T11:16:31.941Z",
-  "count": 1400,
+  "generated": "2026-10-28T11:23:12.689Z",
+  "count": 1401,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8324,6 +8324,25 @@
       "scope": [
         "page=list-details",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-44FA2B09",
+      "path": "entries/KB-44FA2B09.md",
+      "subject": "On /search with zero results, 'Reset search' clears the keyword (goes to /catalog) but keeps the active facet",
+      "question": "What does the 'Reset search' button on the storefront zero-results page do when a facet filter is active?",
+      "anchors": [
+        "/search",
+        "/catalog",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend 2.61"
       ],
       "plane": "experiential",
       "status": "active",
