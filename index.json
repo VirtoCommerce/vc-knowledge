@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T10:12:31.332Z",
-  "count": 1381,
+  "generated": "2026-10-28T10:19:13.990Z",
+  "count": 1382,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19447,7 +19447,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -30330,7 +30330,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -31604,6 +31604,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FAB9B449",
+      "path": "entries/KB-FAB9B449.md",
+      "subject": "On /cart the pickup-point row shows only the selected location's address line, never its name; the Pick points map modal reopens with the selected location first and checked",
+      "question": "What does the cart Pickup point row show after choosing a location in the Pick points modal, and how does the modal look when reopened?",
+      "concepts": [
+        "cart"
+      ],
+      "anchors": [
+        "/cart",
+        "Query.cartPickupLocations"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
