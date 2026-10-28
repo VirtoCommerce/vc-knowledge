@@ -50,5 +50,13 @@ evidence:
     contradicts: true
     contested: virtocommerce.content 3.1007.0 vs 3.1006.0; virtocommerce.pagebuildermodule 3.1039.0-pr-175-3d2f vs 3.1033.0-pr-170-236e; virtocommerce.pages 3.1011.0-pr-23-e50f vs 3.1010.0
     note: "On PageBuilderModule 3.1039.0-pr-175-3d2f the copy name is computed server-side by GET /api/page-builder-pages/grouped/{groupId}/copy-name (documented as what Clone saves the copy with): for a Landing page 'X' it returns 'X (copy)'/'-copy'; after a page with those values exists it returns 'X (copy 2)'/'-copy-2' for the original, and 'X (copy 3)'/'-copy-3' for the copy. So cloning the original twice no longer yields duplicate names/permalinks. Observed via REST, not by clicking Clone twice in the shell."
+  - method: observation
+    deployment: vcptcore_qa
+    conditions: module:VirtoCommerce.PageBuilderModule=3.1039.0-pr-179-5c9d
+    at: 2026-10-28T17:00:40.303Z
+    by: session:44c579c3
+    bodyHash: dc8b4e2fdf71
+    who: Aleksandra-Mitricheva
+    note: "First clone of a Published page via the shell Clone button: Draft '<name> (copy)' / '<permalink>-copy', no permalink warning on the copy. Second-clone behaviour not re-checked."
 ---
 On PageBuilderModule 3.1033.0-pr-170-236e: Clone of 'X' creates a Draft page 'X (copy)' with permalink '<p>-copy' and identical content (POST /api/page-builder-pages/grouped then content copy). Cloning 'X (copy)' produces 'X (copy 2)' / '-copy-2' (not '(copy) (copy)'); cloning that gives '(copy 3)'. Cloning the original 'X' again while 'X (copy)' exists creates a second 'X (copy)' with the same '-copy' permalink — no collision check, no error, both Drafts coexist. A clone of a Published page is created as Draft. Naming logic: incrementCopyName/incrementCopyPermalink in the shell's usePageBuilderDetails composable, applied to the source's own name only.
