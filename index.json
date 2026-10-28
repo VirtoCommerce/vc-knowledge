@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T14:05:36.200Z",
-  "count": 1413,
+  "generated": "2026-10-28T14:14:29.953Z",
+  "count": 1416,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -245,6 +245,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-01950023",
+      "path": "entries/KB-01950023.md",
+      "subject": "A passkey grant for a store the user may not sign in to is refused user_cannot_login_in_store, but the sign-in log row says failureReason Unknown and carries the user's own store, not the requested one",
+      "question": "What does the sign-in log record when a passkey grant is refused with user_cannot_login_in_store?",
+      "questions": [
+        "Which failureReason does a store-restricted passkey sign-in log?",
+        "Does a passkey grant honour store trusted groups like the password grant?"
+      ],
+      "concepts": [
+        "sign-in"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=passkey-sign-in",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8028,7 +8053,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12924,6 +12949,31 @@
       "scope": [
         "state=reload-or-direct-load",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-65F26B96",
+      "path": "entries/KB-65F26B96.md",
+      "subject": "xAPI deleteSignInKey of a passkey leaves the user's other access tokens and refresh tokens valid",
+      "question": "Does Mutation.deleteSignInKey (xAPI) on a passkey end the user's other sessions?",
+      "questions": [
+        "Does deleting a passkey on the storefront revoke other sessions?",
+        "Is there a session-revocation difference between xAPI and REST passkey delete?"
+      ],
+      "concepts": [
+        "session"
+      ],
+      "anchors": [
+        "Mutation.deleteSignInKey",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=passkeys",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -31668,6 +31718,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F71D8D4D",
+      "path": "entries/KB-F71D8D4D.md",
+      "subject": "A passkey grant is accepted only when the POST carries an Origin header matching the assertion's origin; a refused attempt burns the challenge, a used assertion replays as login_failed, and a challenge 327 s old (options timeout 300000) was still accepted",
+      "question": "What must accompany a valid passkey assertion on POST /connect/token grant_type=passkey, is it single-use, and does the challenge expire at the 300 s options timeout?",
+      "questions": [
+        "Why does a captured valid passkey assertion fail when posted from a script?",
+        "Is a passkey assertion replay refused at /connect/token?",
+        "Does the server enforce passkey challenge expiry?",
+        "Does a failed passkey grant consume the challenge?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/platform/security/sign-in",
+        "Query.passkeyRequestOptions"
+      ],
+      "scope": [
+        "feature=passkey-sign-in",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
