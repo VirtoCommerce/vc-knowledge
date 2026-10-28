@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T16:06:07.563Z",
-  "count": 1432,
+  "generated": "2026-10-28T16:13:55.915Z",
+  "count": 1433,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8616,6 +8616,30 @@
         "browser=chrome",
         "framework=@vc-shell/framework@2.6.1",
         "surface=vendor-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-45981F33",
+      "path": "entries/KB-45981F33.md",
+      "subject": "After a page-builder page is republished, the storefront can render its 404 page for that live permalink: a cached or racing slugInfo still points at the old page id, getPageDocument(oldId) returns null, and the view does not retry",
+      "question": "Can a storefront visitor see 404 on a page-builder permalink right after the page is republished?",
+      "questions": [
+        "Does the storefront re-resolve slugInfo when navigating back to a page builder page that was republished?",
+        "Why does a republished page builder page show Page not found in an open storefront tab?",
+        "Is there a window during page builder publish when pageDocument returns null for the slug's id?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.pageDocument",
+        "POST /api/page-builder-pages/grouped/publishing/{id}"
+      ],
+      "scope": [
+        "module=pagebuilder",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
