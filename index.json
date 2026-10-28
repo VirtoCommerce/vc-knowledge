@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T23:30:51.518Z",
-  "count": 1449,
+  "generated": "2026-10-28T23:31:03.775Z",
+  "count": 1450,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20418,6 +20418,27 @@
         "mode=light",
         "preset=black-gold",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9C631367",
+      "path": "entries/KB-9C631367.md",
+      "subject": "Two aliased root contact(id) (or two organization(id)) lookups in one xAPI request fail one alias with ARGUMENT about 19 times in 20",
+      "question": "Can one GraphQL request look up the same root contact or organization twice under two aliases?",
+      "questions": [
+        "Why does {a: contact(id) b: contact(id)} return Error trying to resolve field with code ARGUMENT?",
+        "Are aliased duplicate member lookups in xAPI safe?"
+      ],
+      "anchors": [
+        "Query.contact",
+        "Query.organization"
+      ],
+      "scope": [
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
