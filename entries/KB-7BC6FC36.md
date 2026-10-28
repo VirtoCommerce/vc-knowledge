@@ -35,5 +35,15 @@ evidence:
     bodyHash: 7d17b2f3b058
     who: Lenajava1
     note: "Theme 2.61.0-alpha.2605: USD->EUR on Birra Moretti 24x33cl Can PDP (USD-only) shows 'Price: €0.00', disabled stepper, no unavailability message; related-product cards also €0.00. Product with EUR price (AGENT-TEST-MultiCurrency-Fixture) shows EUR 22.49 vs USD 24.99 (price-list values). Suite case CAT-054 asserts the opposite (no zero placeholder), so it fails against this behaviour."
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    conditions: theme=2.61.0-alpha.2605; platform=3.1090.0; store=B2B-store; role=personal account
+    at: 2026-10-28T20:43:33.596Z
+    by: session:ccf68ec7
+    bodyHash: 7d17b2f3b058
+    defect: VCST-6605
+    who: Lenajava1
+    note: "Re-observed in Firefox: USD->EUR on the USD-only PDP shows Price EUR 0.00, disabled stepper, in-stock badge, no unavailability message. Query.product (currencyCode EUR) returns price.actual.amount 0 with availabilityData.isAvailable=false, isBuyable=false, isInStock=true, so the storefront ignores the availability flags. Filed as VCST-6605."
 ---
 Signed-in buyer, store with USD+EUR. Product priced only in USD (xAPI EUR price.actual 0, isBuyable false). Header currency -> EUR: product page 'Price and delivery' reads 'Price: €0.00', quantity stepper and input disabled, in-stock badge still shown, no message that the product is unavailable in this currency. The cart (converted to EUR) shows that line at €0.00; catalog cards show '€0.00'. A product with an EUR price shows its EUR price-list value, not a conversion.
