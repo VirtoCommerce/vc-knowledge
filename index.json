@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T16:00:51.415Z",
-  "count": 1431,
+  "generated": "2026-10-28T16:06:07.563Z",
+  "count": 1432,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14053,7 +14053,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0,
       "resolved": 2
     },
@@ -14492,7 +14492,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -24927,6 +24927,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BFCC9F15",
+      "path": "entries/KB-BFCC9F15.md",
+      "subject": "With OtpSignIn.Enabled on, the storefront /sign-in code view still offers 'Sign in with Passkey', and a passkey sign-in completes with no emailed code step",
+      "question": "On a store with OTP sign-in enabled, is the passkey button still shown on /sign-in and does a passkey sign-in skip the code step?",
+      "questions": [
+        "Does turning OtpSignIn.Enabled on hide the Sign in with Passkey button?",
+        "Does a passkey sign-in on an OTP store ask for an emailed code?",
+        "Which signInType rows does the sign-in log record for OTP and passkey sign-ins?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "feature=passkey-sign-in",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

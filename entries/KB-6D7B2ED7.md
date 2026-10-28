@@ -108,6 +108,15 @@ evidence:
     bodyHash: e517fd4d18a1
     build: c55c1a124b302d3b
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_qa
+    build: a5a20e99d84d8f1b
+    conditions: platform=3.1091.0-pr-3144; theme=2.61.0-pr-2601-8058; module:VirtoCommerce.OTP=3.1001.0; store=B2B-store; setting:OtpSignIn.Enabled=true; ingress:/api/otp=routed
+    at: 2026-10-28T16:01:52.029Z
+    by: session:56fb99bb
+    bodyHash: e517fd4d18a1
+    who: Lenajava1
+    note: "2026-10-28: vcptcore_qa now carries the OTP module and routes the storefront /api/otp (POST answers 200 application/json). With OtpSignIn.Enabled on, /sign-in opened on the code view at the first load after the setting PUT (no cache lag), Continue moved to 'Check your email' with a masked address and six code cells, the OtpSignInEmailNotification was journaled ~3s later, and typing the code auto-submitted and signed in (sign-in log signInType OTP, succeeded)."
 ---
 With OtpSignIn.Enabled on the store, /sign-in opens on the one-time-code view ("We'll email you a code. No password needed.", Email, Continue, "Sign in with a password instead"). Continue validates the email client-side - empty: "This field is required"; "john@" or an address with a space: "Enter a valid email address, e.g. johndoe@gmail.com" - and sends nothing until it is valid. Then it POSTs /api/otp/request RELATIVE TO THE STOREFRONT ORIGIN, so it only reaches the platform if the storefront's ingress routes /api/otp to it.
 
