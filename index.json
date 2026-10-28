@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T07:46:19.612Z",
-  "count": 1374,
+  "generated": "2026-10-28T07:50:51.285Z",
+  "count": 1375,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -353,6 +353,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-038B814D",
+      "path": "entries/KB-038B814D.md",
+      "subject": "A value mapping whose Synonyms is missing (null) in the stored VirtoCommerce.Search.IndexSettings JSON makes every Product index build fail with ArgumentNullException in FieldValueConverter and index nothing",
+      "question": "What happens to a Product index build when a value mapping in VirtoCommerce.Search.IndexSettings has no Synonyms array?",
+      "questions": [
+        "Why does a Product index build finish with 0/0 processed and an ArgumentNullException from FieldValueConverter?",
+        "Can an out-of-band edit of the index settings JSON break indexation?"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "POST /api/platform/settings"
+      ],
+      "scope": [
+        "documenttype=product",
+        "surface=admin-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
