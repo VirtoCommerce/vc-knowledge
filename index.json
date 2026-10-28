@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T07:16:12.770Z",
-  "count": 1371,
+  "generated": "2026-10-28T07:16:23.039Z",
+  "count": 1372,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10347,6 +10347,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-52C3F83E",
+      "path": "entries/KB-52C3F83E.md",
+      "subject": "PUT /api/products/prices rejects a price row whose list price is 0 with 400 \"List price must be greater than 0\"",
+      "question": "Can a zero list price be saved through PUT /api/products/prices?",
+      "questions": [
+        "How do I seed a $0 option product price?",
+        "Why does PUT /api/products/prices return 400 List price must be greater than 0"
+      ],
+      "anchors": [
+        "PUT /api/products/prices"
+      ],
+      "scope": [
+        "feature=pricing",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
