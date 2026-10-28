@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T11:23:12.689Z",
-  "count": 1401,
+  "generated": "2026-10-28T11:29:31.953Z",
+  "count": 1402,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -15473,7 +15473,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -24396,6 +24396,24 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BF456194",
+      "path": "entries/KB-BF456194.md",
+      "subject": "Compare is limited to 5 products per category: the 6th add of that category is rejected with a toast and the header Compare badge counts all categories",
+      "question": "What is the compare limit on the storefront and what happens when it is exceeded?",
+      "anchors": [
+        "/compare",
+        "/catalog"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=2.61.0-alpha.2605"
       ],
       "plane": "experiential",
       "status": "active",
