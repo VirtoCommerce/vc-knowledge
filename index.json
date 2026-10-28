@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T22:24:23.809Z",
-  "count": 1442,
+  "generated": "2026-10-28T22:30:13.375Z",
+  "count": 1443,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16275,6 +16275,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-7E0027AC",
+      "path": "entries/KB-7E0027AC.md",
+      "subject": "A Returned punchout session cannot be deleted or reset; an OrderRequest finds it by store + configuration + user id, so only a new user id clears \"has returned a requisition\"",
+      "question": "can a punchout session be deleted or reset via REST (PunchoutSession Returned status per user)",
+      "questions": [
+        "how do I give a punchout buyer a clean state with no returned requisition",
+        "how does a punchout OrderRequest find the session whose requisition it orders",
+        "is there an API to list or delete PunchoutSession rows"
+      ],
+      "anchors": [
+        "POST /api/punchout/cxml"
+      ],
+      "scope": [
+        "feature=punchout",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7E35E6BC",
       "path": "entries/KB-7E35E6BC.md",
       "subject": "Admin renders order timestamps in local time while the API returns UTC",
@@ -31322,7 +31344,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
