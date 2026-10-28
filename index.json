@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-28T22:52:23.468Z",
-  "count": 1445,
+  "generated": "2026-10-28T22:58:01.246Z",
+  "count": 1446,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8932,6 +8932,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4888AFB1",
+      "path": "entries/KB-4888AFB1.md",
+      "subject": "A list price with three decimals (12.346 USD) is served rounded to the currency's 2 decimal digits in xAPI product price and in the cart placedPrice; a 10% item promotion gives placedPrice 11.12 but extendedPrice 11.11",
+      "question": "Can an xAPI cart line hold a placed price with three decimals (e.g. 12.346) when the price list stores one?",
+      "questions": [
+        "xAPI cart items.placedPrice.amount rounding 3 decimals",
+        "is a 3-decimal price list amount rounded in the storefront cart",
+        "does a percent promotion produce a 3-decimal placed price in the cart",
+        "why does extendedPrice differ from placedPrice for quantity 1 after a percent discount"
+      ],
+      "anchors": [
+        "Mutation.addItem",
+        "Query.product",
+        "PUT /api/products/prices"
+      ],
+      "scope": [
+        "module=virtocommerce.xcart",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
