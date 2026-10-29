@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T13:22:36.868Z",
-  "count": 1477,
+  "generated": "2026-10-29T13:22:48.238Z",
+  "count": 1478,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22180,6 +22180,27 @@
         "Mutation.unSelectAllCartItems"
       ],
       "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A670C644",
+      "path": "entries/KB-A670C644.md",
+      "subject": "pageDocument alternates are filtered by the visitor's organization (FilterByOrganization forced on), so an anonymous or other-organization visitor gets no alternates of a page made for an organization",
+      "question": "Query.pageDocument alternates for a page made for an organization — returned to anonymous or other-organization visitor?",
+      "questions": [
+        "Are Multilanguage Page language versions made for one organization listed in pageDocument alternates for other visitors?",
+        "Does xAPI CMS filter page alternates by organization like pageDocuments?"
+      ],
+      "anchors": [
+        "Query.pageDocument"
+      ],
+      "scope": [
+        "module=virtocommerce.xcms",
         "surface=xapi"
       ],
       "plane": "experiential",
