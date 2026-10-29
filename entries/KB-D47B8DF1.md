@@ -38,5 +38,14 @@ evidence:
     bodyHash: 3338a39b7f67
     who: Aleksandra-Mitricheva
     note: "Expired half re-observed 2026-10-29 on theme 2.61.0-alpha.2605: detail page of a 'Proposal sent' quote 3 days past expirationDate shows Approve and Decline enabled and no expiration date; Approve sent ApproveQuoteRequest, got an orderId and redirected to the new order. Out-of-stock half not re-checked."
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    conditions: platform=3.1090.0; theme=2.61.0-alpha.2605; module:VirtoCommerce.Quote=3.1005.0; module:VirtoCommerce.Orders=3.1019.0; module:VirtoCommerce.XOrder=3.1017.0; module:VirtoCommerce.XCart=3.1042.0
+    at: 2026-10-29T09:05:31.209Z
+    by: session:ce3cfc2a
+    bodyHash: 3338a39b7f67
+    who: Aleksandra-Mitricheva
+    note: "Out-of-stock half re-checked 2026-10-29: tracked product, stock 0, no backorder/preorder; Approve placed a New order with the OOS line, no warning, and stock went 0 -> -1. The same product is refused by normal checkout (addItem PRODUCT_FFC_QTY)."
 ---
 On vcst (theme 2.60.0-alpha.2579) quotes in Proposal sent with expirationDate in the past or future both show status 'Proposal sent' in /account/quotes and on the detail page; the 'Quote data' block lists only Created and Status, never the expiration date, and there is no 'Expired' status. Approve on a quote whose expiration date had passed placed a New order with no error. Approve on a quote whose line was a permanently out-of-stock product placed an order containing that line with no warning. vc-module-quote ApproveQuoteCommandHandler checks only Status == 'Proposal sent' before ConvertToCartWithTax + PlaceCustomerOrderFromCartAsync, with no expiration or inventory check.

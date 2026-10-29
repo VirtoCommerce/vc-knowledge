@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T09:03:47.387Z",
-  "count": 1467,
+  "generated": "2026-10-29T09:06:55.425Z",
+  "count": 1468,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5877,6 +5877,31 @@
       "trust": 12,
       "disputed": 0,
       "resolved": 4
+    },
+    {
+      "id": "KB-2F7FEBE2",
+      "path": "entries/KB-2F7FEBE2.md",
+      "subject": "Quote approval places the order without any cart validation, so an out-of-stock tracked line is ordered and its stock goes negative, although checkout refuses the same product",
+      "question": "Does Mutation.approveQuoteRequest run the same cart validation (inventory, product availability) as Mutation.createOrderFromCart before placing the order?",
+      "questions": [
+        "Can a buyer order an out-of-stock product by approving a quote?",
+        "Does approving a quote decrement inventory below zero?",
+        "Why does createOrderFromCart reject an out-of-stock product that a quote approval accepts?"
+      ],
+      "anchors": [
+        "Mutation.approveQuoteRequest",
+        "Mutation.createOrderFromCart",
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "module=quote",
+        "store=b2b-store",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-2FECA0AC",
