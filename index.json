@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T09:06:55.425Z",
-  "count": 1468,
+  "generated": "2026-10-29T09:12:21.845Z",
+  "count": 1469,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3557,7 +3557,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -32262,6 +32262,28 @@
         "KB-CFBD95B7"
       ],
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F2283F08",
+      "path": "entries/KB-F2283F08.md",
+      "subject": "On /company/tasks, the Delete task confirmation opened from Edit task never receives keyboard focus; Tab stays cycling inside the Edit task dialog behind it, so OK is not reachable by keyboard",
+      "question": "Can a keyboard user confirm Delete from the Edit task dialog on /company/tasks?",
+      "questions": [
+        "Where does focus go when the Delete task confirmation opens over Edit task?",
+        "Is the Delete task confirm dialog keyboard reachable on the sales rep Tasks page?",
+        "Does the stacked confirmation modal on /company/tasks trap focus correctly?"
+      ],
+      "anchors": [
+        "/company/tasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
