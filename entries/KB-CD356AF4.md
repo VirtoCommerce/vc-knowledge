@@ -59,5 +59,14 @@ evidence:
     bodyHash: da6bae083a93
     who: Lenajava1
     note: "vcst_qa 2026-10-29 Edge, presence ON: anonymous /account/security -> guard -> /sign-in?returnUrl=/account/security; with a valid resident credential the load-time request signed the buyer in with no click (one grant_type=passkey 200, one Passkey log row) and returned to /account/security. The same happens straight after signing out while on a protected page."
+  - method: observation
+    deployment: vcst_qa
+    build: 1489bcaaf835d77b
+    at: 2026-10-29T18:18:48.038Z
+    by: session:e80d36e0
+    bodyHash: da6bae083a93
+    defect: VCST-6631
+    who: Lenajava1
+    note: Filed as VCST-6631 (stale credential on /sign-in load surfaces an error alert, toast and console 400). The valid-credential silent sign-in half is not part of the defect.
 ---
 On vcptcore QA storefront (theme 2.61.0-pr-2601, Passkeys plugin 1.23.3) loading /sign-in fetches GetPasskeyRequestOptions and the host code runs a WebAuthn conditional-mediation get; when a resident passkey credential exists in the browser but no longer maps to a server-side sign-in key (e.g. after the key was deleted/re-seeded), the browser silently posts grant_type=passkey&scope=offline_access&storeId=B2B-store to /connect/token, which returns HTTP 400 {code:login_failed} and logs a console ERROR 'Failed to load resource: 400 /connect/token' on the public sign-in page. With a valid resident credential the same flow signs the user in with no button press. The passkeys MFE bundle itself contains only navigator.credentials.create (registration); the authentication navigator.credentials.get lives in host/core code.
