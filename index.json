@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T07:56:10.240Z",
-  "count": 1462,
+  "generated": "2026-10-29T08:10:24.939Z",
+  "count": 1463,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32508,6 +32508,27 @@
         "store=b2b-store",
         "surface=storefront-ui",
         "user=anonymous"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F434EE39",
+      "path": "entries/KB-F434EE39.md",
+      "subject": "The Sales Rep hub dashboard has no period filter; order statistics use fixed WEEK / MTD / YTD windows",
+      "question": "/company/dashboard sales rep hub: is there a period filter control, or fixed WEEK / MTD / YTD order statistic windows?",
+      "questions": [
+        "Can a sales rep change the reporting period on the hub dashboard?",
+        "Do the sales rep dashboard widgets share one date range filter?"
+      ],
+      "anchors": [
+        "/company/dashboard"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
