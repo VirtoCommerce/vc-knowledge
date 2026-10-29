@@ -20,5 +20,15 @@ evidence:
     at: 2026-10-15T11:10:54.596Z
     by: session:10db9d7d
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    conditions: theme=2.61.0-alpha.2605; role=Organization maintainer
+    at: 2026-10-29T13:26:30.648Z
+    by: session:0a5c9007
+    bodyHash: 19845b65b6e4
+    defect: VCST-6288
+    who: Lenajava1
+    note: "Reproduced on 3 of 3 loads of /company/info: TypeError (reading 'status') + 1-2x SyntaxError: 26 per load in App Insights exceptions, 0 errors in browser_console_messages. A PR build of the theme (vc-frontend PR #2612) produced 0 exceptions over 4 loads with the same backend."
 ---
 Signed in as an Organization maintainer (can edit the organization), opening /company/info twice produced, each time, an App Insights browser exception TypeError "Cannot read properties of undefined (reading 'status')" (computed files.value[0].status === 'uploading' read while the logo uploader file list is empty) and vue-i18n "SyntaxError: 26" (useI18n called inside a computed that re-runs; one more fired on Logout from the page). A purchasing agent without edit rights produced none (the logo widget is editor-only). The page still renders, the logo widget shows an enabled "Browse your files" button, and no user-visible impact was seen. browser_console_messages showed 0 errors because the app's App Insights Vue plugin installs its own app.config.errorHandler, so a console-based no-errors assertion cannot catch these; they are recurring on vcst since 2026-09-18 (App Insights, vcst-qa-storefront). All /graphql calls returned 200.
