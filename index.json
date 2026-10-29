@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T09:20:36.422Z",
-  "count": 1470,
+  "generated": "2026-10-29T10:05:22.679Z",
+  "count": 1472,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1726,6 +1726,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0CB8AB36",
+      "path": "entries/KB-0CB8AB36.md",
+      "subject": "Unchecking the auto-promotion gift on /cart (RejectGiftItems) keeps the gift line in the stored cart with isRejected true, and createQuoteFromCart leaves it out of the quote",
+      "question": "/cart page \"+ Add a gift\" checkbox: does unchecking it remove the isGift line from the stored cart (Mutation.rejectGiftItems)?",
+      "anchors": [
+        "Mutation.rejectGiftItems",
+        "POST /api/carts/search",
+        "Mutation.createQuoteFromCart",
+        "/cart"
+      ],
+      "scope": [
+        "promotion=auto gift (no coupon)",
+        "store=b2b-store",
+        "surface=rest",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -23204,6 +23227,36 @@
       "disputed": 0
     },
     {
+      "id": "KB-AD392FC5",
+      "path": "entries/KB-AD392FC5.md",
+      "subject": "A product added to the cart as a new line from the search-results quantity stepper is persisted with list/sale/placed price 0; a later priced save (e.g. AddOrUpdateCartPayment) fixes it",
+      "question": "Why does the stored cart (REST) hold 0 line prices while Query.cart shows catalog prices?",
+      "questions": [
+        "When does Mutation.changeCartItemsQuantity / UpdateShortCartItemQuantity save a cart line without prices?",
+        "Why does /cart sometimes re-save the cart on page load?",
+        "Which cart save repairs zero persisted line prices?"
+      ],
+      "anchors": [
+        "POST /api/carts/search",
+        "Mutation.changeCartItemsQuantity",
+        "Mutation.addOrUpdateCartPayment",
+        "Mutation.createQuoteFromCart",
+        "/search",
+        "/cart"
+      ],
+      "scope": [
+        "module=virtocommerce.xcart",
+        "store=b2b-store",
+        "surface=rest",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AD416AFF",
       "path": "entries/KB-AD416AFF.md",
       "subject": "A Multilanguage Page translation becomes Outdated when the source language is published (single publish or publish-all), not on a source draft save; translation publish and mark-up-to-date clear it; two concurrent publish-all calls can lose the source revision update",
@@ -23935,7 +23988,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-B28C500C",
