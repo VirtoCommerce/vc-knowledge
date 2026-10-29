@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T09:19:34.401Z",
-  "count": 1469,
+  "generated": "2026-10-29T09:20:36.422Z",
+  "count": 1470,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -23901,6 +23901,36 @@
       "scope": [
         "surface=graphql",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B27E3CAF",
+      "path": "entries/KB-B27E3CAF.md",
+      "subject": "Save changes on a draft quote request does not reprice lines; a $0.00 RFQ total comes from zero line prices stored at createQuoteFromCart, intermittently",
+      "question": "Why do some quote requests created from the cart show Total $0.00 in /account/quotes while others show the calculated total, and does clicking Save changes before Submit fix it?",
+      "questions": [
+        "Does Save changes on the quote request edit page recalculate quote prices or totals?",
+        "Are quote request totals stored or calculated on read?",
+        "Why is a submitted RFQ total 0.00 for a buyer?",
+        "Is createQuoteFromCart pricing deterministic?"
+      ],
+      "anchors": [
+        "Mutation.createQuoteFromCart",
+        "Mutation.changeQuoteComment",
+        "Mutation.updateQuoteAddresses",
+        "/account/quotes",
+        "GET /api/quote/requests/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.quote",
+        "module=virtocommerce.xcart",
+        "surface=rest",
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
