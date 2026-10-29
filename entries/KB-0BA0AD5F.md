@@ -51,7 +51,7 @@ evidence:
     resolvedBy: session:4d39d1e8
     resolvedIn: judge/batch-20261029-1343
     resolution: PR 178 commit add254f0 adds a Length > 2048 check in PageBuilderPermalink (released 3.1038.0), so the request is refused with 400 before the DB; on 3.1038.0 on vcst_qa (2026-10-29) 2049 characters returned 400 on all three endpoints and 2048 returned 200.
-    defect: suspected
+    defect: VCST-6443
     fixedIn: VirtoCommerce.PageBuilderModule@3.1038.0
   - method: observation
     deployment: vcst_qa

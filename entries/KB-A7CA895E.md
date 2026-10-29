@@ -36,7 +36,7 @@ evidence:
     resolvedBy: session:4d39d1e8
     resolvedIn: judge/batch-20261029-1343
     resolution: PR 178 commit add254f0 gates the duplicate warning with ng-if !$error.permalinkFormat in edit-page.tpl.html (released in 3.1038.0); on 3.1038.0 on vcst_qa (2026-10-29) the warning disappears while the permalink is format-invalid and returns when it is valid again.
-    defect: suspected
+    defect: VCST-6443
     fixedIn: VirtoCommerce.PageBuilderModule@3.1038.0
   - method: observation
     deployment: vcptcore_qa
@@ -54,7 +54,7 @@ evidence:
     resolvedBy: session:4d39d1e8
     resolvedIn: judge/batch-20261029-1343
     resolution: PR 178 commit add254f0 gates the duplicate warning with ng-if !$error.permalinkFormat in edit-page.tpl.html (released in 3.1038.0); on 3.1038.0 on vcst_qa (2026-10-29) the warning disappears while the permalink is format-invalid and returns when it is valid again.
-    defect: suspected
+    defect: VCST-6443
     fixedIn: VirtoCommerce.PageBuilderModule@3.1038.0
   - method: observation
     deployment: vcst_qa
