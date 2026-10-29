@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T07:55:50.418Z",
-  "count": 1460,
+  "generated": "2026-10-29T07:56:10.240Z",
+  "count": 1462,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4489,6 +4489,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-242BDC14",
+      "path": "entries/KB-242BDC14.md",
+      "subject": "Sales-rep hub text links are 14-18 px tall at 768 px and below, under the 24 px BL-UI-006 target floor",
+      "question": "/company/my-customers sales-rep hub: are the 'All activity' / 'All orders' / order-number text links at least 24 px tall on narrow viewports?",
+      "questions": [
+        "Sales rep hub widget header links touch target size at 320-768 px",
+        "Do sales-rep dashboard links meet the 24px minimum target size on mobile?"
+      ],
+      "anchors": [
+        "/company/my-customers",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -22613,6 +22635,27 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AA5BBA6A",
+      "path": "entries/KB-AA5BBA6A.md",
+      "subject": "The storefront has no organization search page; the only org search is the text box inside the org switcher, and picking a result switches the active organization",
+      "question": "Is there an organization search page with industry / location filters on the B2B storefront, or only the org switcher search?",
+      "questions": [
+        "Where can a multi-organization user search organizations on the storefront?",
+        "Does selecting an organization in the storefront org search open an organization detail page?"
+      ],
+      "anchors": [
+        "/account/dashboard"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
