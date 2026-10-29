@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T10:01:05.339Z",
+  "generated": "2026-10-29T10:01:30.416Z",
   "count": 1470,
   "entries": [
     {
@@ -11109,7 +11109,7 @@
     {
       "id": "KB-527B0F06",
       "path": "entries/KB-527B0F06.md",
-      "subject": "A VcStatWidget card never shrinks below its figure's width: in the Row story the flex row wraps instead of letting a long figure overflow, figures sit at one line with or without the optional parts, and a valueSuffix wraps onto its own line under a long figure",
+      "subject": "In a flex row (the Row story) a VcStatWidget card never shrinks below its figure's width, but in a grid (Colors, DeltaColors) a long figure overflows the card: in the Row story the flex row wraps instead of letting a long figure overflow, figures sit at one line with or without the optional parts, and a valueSuffix wraps onto its own line under a long figure",
       "question": "How do VcStatWidget cards lay out in a row at narrow widths and with optional parts missing?",
       "questions": [
         "Does a long VcStatWidget figure overflow the card at narrow widths?",
@@ -11130,7 +11130,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 1
+      "resolved": 1
     },
     {
       "id": "KB-52A684A6",
