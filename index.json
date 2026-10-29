@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T13:38:01.417Z",
-  "count": 1479,
+  "generated": "2026-10-29T13:50:40.351Z",
+  "count": 1481,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5674,6 +5674,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2DB25BC2",
+      "path": "entries/KB-2DB25BC2.md",
+      "subject": "Publish all on a Multilanguage Page reports conflicting languages in a role=alert toast that auto-dismisses after about 3.2 s (paused while hovered) and stays English when the shell language is German",
+      "question": "How does the page builder shell report languages that Publish all could not publish because of a permalink conflict?",
+      "questions": [
+        "How long does the Not published toast stay on screen after Publish all?",
+        "Is the Publish all result message localized in the page builder shell?",
+        "Is the Publish all conflict message announced to screen readers?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-multilanguage-pages/{id}/publish-all",
+        "/apps/page-builder-shell"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -24912,7 +24934,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -30168,6 +30190,27 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E3CF4CB5",
+      "path": "entries/KB-E3CF4CB5.md",
+      "subject": "The Page Builder shell shows an empty full-viewport screen at viewport width 1024 px or less; at 1025 px it renders normally",
+      "question": "Does the Page Builder shell work at a 1024 px wide viewport?",
+      "questions": [
+        "Why is the page builder shell blank on a tablet-width window?",
+        "At which width does the page builder shell switch to its mobile layout?"
+      ],
+      "anchors": [
+        "/apps/page-builder-shell"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "viewport=1024"
       ],
       "plane": "experiential",
       "status": "active",
