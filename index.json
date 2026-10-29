@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T10:31:02.112Z",
-  "count": 1472,
+  "generated": "2026-10-29T10:45:10.447Z",
+  "count": 1473,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26773,6 +26773,29 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C9D04716",
+      "path": "entries/KB-C9D04716.md",
+      "subject": "The impersonate grant on /connect/token issues a token for a globally locked-out target user when the target's organization membership is locked too",
+      "question": "Does POST /connect/token grant_type=impersonate refuse a target user who is locked out (lockoutEnd set, /locked = true)?",
+      "questions": [
+        "Can an operator log in on behalf of a locked user?",
+        "What happens on the storefront when you impersonate a blocked account?",
+        "Does login on behalf honour the user lockout?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "/account/impersonate/{id}",
+        "/blocked"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
