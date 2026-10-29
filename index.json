@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T14:39:43.378Z",
-  "count": 1485,
+  "generated": "2026-10-29T14:53:52.758Z",
+  "count": 1486,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8751,6 +8751,27 @@
       ],
       "scope": [
         "page=list-details",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-44DA3343",
+      "path": "entries/KB-44DA3343.md",
+      "subject": "After a passkey or email-code sign-in, an account whose password is expired gets me.passwordExpired true and the storefront forces Change Password; only SSO sign-in skips the check",
+      "question": "Does Query.me return passwordExpired true, and does the storefront force a password change, when a user whose password is expired signs in with a passkey or an email code (OTP) instead of a password?",
+      "questions": [
+        "Why does a passkey sign-in send the user to the Change Password page?",
+        "Is the expired password checked on OTP email-code sign-in?",
+        "Which sign-in methods skip the password expiry check?"
+      ],
+      "anchors": [
+        "Query.me"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
