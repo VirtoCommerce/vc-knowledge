@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T18:13:45.185Z",
-  "count": 1492,
+  "generated": "2026-10-29T18:21:49.668Z",
+  "count": 1493,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17403,6 +17403,29 @@
         "operation=path-traversal-rejection",
         "provider=filesystem",
         "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-836D3DE3",
+      "path": "entries/KB-836D3DE3.md",
+      "subject": "POST /api/stores/search returns each store's trustedGroups as an array of plain store ids; a customer of a store absent from both sides' trustedGroups is refused on the other store",
+      "question": "What does trustedGroups hold in POST /api/stores/search, and how do I find a store whose customers cannot sign in to the run store?",
+      "questions": [
+        "Which stores are trusted by a store for cross-store sign-in?",
+        "How do I pick a foreign store for a store-rule test?"
+      ],
+      "anchors": [
+        "POST /api/stores/search",
+        "GET /api/store-authentication-schemes/{id}",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=store-access",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
