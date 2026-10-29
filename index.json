@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T08:59:43.857Z",
-  "count": 1465,
+  "generated": "2026-10-29T09:03:47.387Z",
+  "count": 1467,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4511,7 +4511,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-2484DEB4",
@@ -23781,6 +23781,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-B151328B",
+      "path": "entries/KB-B151328B.md",
+      "subject": "At 375px the sales-rep customer orders Filters panel is a page-anchored popover whose controls pass WCAG 2.5.8 target size (axe 0 violations) and whose Reset/Apply footer is reached by scrolling the page",
+      "question": "At 375px, are the controls of the Filters panel on /company/my-customers/{orgId}/orders big enough and reachable?",
+      "questions": [
+        "Are Apply and Reset reachable in the sales rep orders filters at mobile width?",
+        "What size are the status checkboxes in the sales rep customer orders filter?",
+        "Does axe target-size pass on the sales rep orders Filters dialog?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/orders"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B1778256",
       "path": "entries/KB-B1778256.md",
       "subject": "GA4 place_order items[] includes automatic-promotion gift lines as their own items, at price 0 with promotion fields, one item per order line",
@@ -28319,6 +28341,28 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-D672602E",
+      "path": "entries/KB-D672602E.md",
+      "subject": "At 375 px the breadcrumb trail on a Sales Rep hub customer profile wraps to two lines 18 px apart and axe-core target-size flags three of its links",
+      "question": "Do the breadcrumb links on /company/my-customers/{id} pass WCAG 2.5.8 target size at 375 px?",
+      "questions": [
+        "Does the vc-breadcrumbs trail wrap on narrow viewports and crowd its links?",
+        "Which targets fail axe target-size on the sales rep customer profile on mobile?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui",
+        "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D70A146D",
