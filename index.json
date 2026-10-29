@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T12:10:16.115Z",
-  "count": 1475,
+  "generated": "2026-10-29T12:19:04.072Z",
+  "count": 1476,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19602,6 +19602,28 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-9470BF7B",
+      "path": "entries/KB-9470BF7B.md",
+      "subject": "On /account/saved-for-later, \"Add all to cart\" opens the \"Adding products to cart result\" modal (View cart, Print, OK) and moves the items out of Saved for later; at 460px wide View cart takes its own full-width row above Print and OK",
+      "question": "What happens when a signed-in buyer clicks \"Add all to cart\" on /account/saved-for-later, and how does the result modal lay out its buttons on a narrow (mobile) viewport?",
+      "questions": [
+        "Which storefront flow opens the Adding products to cart result modal?",
+        "Does Add all to cart on Saved for later leave the items in Saved for later?",
+        "Is the View cart button full width in the add-to-cart result modal on mobile?"
+      ],
+      "anchors": [
+        "/account/saved-for-later"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=460x900"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-94C2ADCC",
