@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T18:09:25.818Z",
-  "count": 1491,
+  "generated": "2026-10-29T18:13:45.185Z",
+  "count": 1492,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -31067,6 +31067,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E96D89AB",
+      "path": "entries/KB-E96D89AB.md",
+      "subject": "A token minted on the platform host /connect/token is ignored by the storefront host /graphql (Query.me answers Anonymous), while the platform /graphql honours it",
+      "question": "Can a runner call the storefront host /graphql with a Bearer token obtained from the platform host /connect/token?",
+      "questions": [
+        "Why does Query.me return userName Anonymous with a valid Bearer on the storefront /graphql?",
+        "Which /graphql host should a test runner use with a password-grant token?"
+      ],
+      "anchors": [
+        "POST /graphql",
+        "POST /connect/token",
+        "Query.me"
+      ],
+      "scope": [
+        "client=runner",
+        "host=storefront",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
