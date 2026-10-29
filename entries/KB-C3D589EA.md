@@ -58,5 +58,14 @@ evidence:
     bodyHash: dc8b4e2fdf71
     who: Aleksandra-Mitricheva
     note: "First clone of a Published page via the shell Clone button: Draft '<name> (copy)' / '<permalink>-copy', no permalink warning on the copy. Second-clone behaviour not re-checked."
+  - method: observation
+    deployment: vcptcore_qa
+    build: ed1246f57f06adbd
+    conditions: module:VirtoCommerce.PageBuilderModule=3.1041.0-pr-179-5e6c; module:VirtoCommerce.Pages=3.1013.0-alpha.93-vcst-6442
+    at: 2026-10-29T14:34:03.065Z
+    by: session:9b657bc7
+    bodyHash: dc8b4e2fdf71
+    who: Aleksandra-Mitricheva
+    note: Shell Clone of a Published page 'X' -> Draft 'X (copy)' / '/<p>-copy' (toast 'Page cloned successfully', POST grouped 200 + POST grouped/{new}/content/{src} 204 after GET .../copy-name); Clone of that copy -> 'X (copy 2)' / '-copy-2', identical content.
 ---
 On PageBuilderModule 3.1033.0-pr-170-236e: Clone of 'X' creates a Draft page 'X (copy)' with permalink '<p>-copy' and identical content (POST /api/page-builder-pages/grouped then content copy). Cloning 'X (copy)' produces 'X (copy 2)' / '-copy-2' (not '(copy) (copy)'); cloning that gives '(copy 3)'. Cloning the original 'X' again while 'X (copy)' exists creates a second 'X (copy)' with the same '-copy' permalink — no collision check, no error, both Drafts coexist. A clone of a Published page is created as Draft. Naming logic: incrementCopyName/incrementCopyPermalink in the shell's usePageBuilderDetails composable, applied to the source's own name only.
