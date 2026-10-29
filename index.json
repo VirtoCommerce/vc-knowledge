@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T00:50:40.194Z",
-  "count": 1458,
+  "generated": "2026-10-29T00:55:33.286Z",
+  "count": 1459,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24907,6 +24907,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BB991364",
+      "path": "entries/KB-BB991364.md",
+      "subject": "/account/quotes offers only a 'Search by number or status' box and sortable column headers; there is no Filters button and no date-range filter",
+      "question": "Does /account/quotes on the storefront have a Filters button or date range filter, or only the search box?",
+      "questions": [
+        "Is there a date picker filter on the storefront quote requests list?",
+        "How can a buyer filter quote requests on /account/quotes?"
+      ],
+      "anchors": [
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
