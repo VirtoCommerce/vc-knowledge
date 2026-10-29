@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T17:50:20.326Z",
-  "count": 1489,
+  "generated": "2026-10-29T17:58:11.113Z",
+  "count": 1490,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6813,6 +6813,33 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-35EAC87B",
+      "path": "entries/KB-35EAC87B.md",
+      "subject": "A storefront passkey sign-in started from /sign-in?returnUrl=/account/security returns the buyer to /account/security, on the button path and on the load-time autofill path",
+      "question": "storefront /sign-in?returnUrl after sign-in: does the app return to the page the user came from after a passkey sign-in?",
+      "questions": [
+        "After 'Sign in with Passkey' from a protected page, where does the storefront land?",
+        "Does the passkey sign-in honour returnUrl or go to the dashboard/home page?",
+        "Does the auth guard redirect to /sign-in carry a returnUrl for /account/security?",
+        "Does the autofill (conditional mediation) passkey sign-in return to the protected page?"
+      ],
+      "anchors": [
+        "/sign-in?returnUrl",
+        "POST /connect/token",
+        "/account/security",
+        "Query.passkeyRequestOptions"
+      ],
+      "scope": [
+        "feature=passkey-signin",
+        "grant_type=passkey",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
