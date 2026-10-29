@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T13:58:43.285Z",
-  "count": 1483,
+  "generated": "2026-10-29T13:59:14.371Z",
+  "count": 1484,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9399,6 +9399,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-49D1A62C",
+      "path": "entries/KB-49D1A62C.md",
+      "subject": "A Multilanguage root created through POST /api/page-builder-multilanguage-pages without visibility is stored visibility:false, its language versions inherit visibility:false, and such versions never conflict with a live everyone page on the same permalink",
+      "question": "Why does publish-all publish a language version over a live equally targeted page instead of skipping it?",
+      "questions": [
+        "Does POST page-builder-multilanguage-pages default visibility to true?",
+        "Are visibility:false pages part of the permalink publish conflict check?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-multilanguage-pages",
+        "POST /api/page-builder-multilanguage-pages/{id}/publish-all",
+        "POST /api/page-builder-pages/grouped/publishing/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
