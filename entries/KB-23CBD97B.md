@@ -30,5 +30,14 @@ evidence:
     defect: VCST-6196
     who: Aleksandra-Mitricheva
     note: "vcst_qa 1/1: en -> Deutsch via header switcher on /company/customer-orders, Filter -> combobox 'Erstellungsdatum' reads the raw key."
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    conditions: theme=2.61.0-alpha.2605; culture=de
+    at: 2026-10-28T23:59:50.578Z
+    by: session:ce3cfc2a
+    bodyHash: 227876042ff6
+    who: Aleksandra-Mitricheva
+    note: en -> Deutsch via header switcher on /company/customer-orders, Filter drawer combobox 'Erstellungsdatum' reads the raw key; persists after applying a calendar-picked custom range and reopening the drawer.
 ---
 Storefront 2.59.0-pr-2519: on /company/customer-orders or /company/my-customers/<org>/orders, switching language via the header switcher (en->de, de->fr) and then opening Filters shows the Created date combobox value as the raw key "sales_rep.customer_orders.filters.custom_date". The listbox options themselves are translated ("Benutzerdefiniertes Datum"), and selecting an option fixes the label. A direct page load in that language (/de/company/customer-orders) shows the translated value, so only the initially selected value captured before the new locale messages load is affected. Reproduced 2/2.
