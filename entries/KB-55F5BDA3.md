@@ -20,5 +20,13 @@ evidence:
     at: 2026-10-20T15:12:10.480Z
     by: session:d992339e
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    at: 2026-10-29T00:29:24.612Z
+    by: session:ce3cfc2a
+    bodyHash: 48343e277a7f
+    who: Aleksandra-Mitricheva
+    note: "REG-2026-10-28-1915 GA-015/025: place_order and purchase (Datatrans) value 20 = order subTotal BEFORE the $4 discount, shipping 150, tax 33.2; displayed Total 199.20 (= 20-4+150+33.2). So value is the pre-discount subtotal, and value+shipping+tax != Total when a discount applies."
 ---
 Signed-in personal user, one 167.00 product plus an auto-gift, Fixed Rate (Ground) shipping 150.00, Manual payment, cart Total shown 380.40: window.dataLayer place_order had currency USD, value 167, shipping 150, tax 63.4, transaction_id set and items 2 (gift at price 0 plus the product). So value excludes shipping and tax and value+shipping+tax equals the displayed total. Consistent with BL-GA4-003 and the developer docs; a test asserting value equals the order total would be stale. begin_checkout on /cart load, by contrast, carried value 200.4 = cart Total (tax included, no shipping chosen yet).
