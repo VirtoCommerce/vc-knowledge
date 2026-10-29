@@ -45,5 +45,14 @@ evidence:
     defect: VCST-6605
     who: Lenajava1
     note: "Re-observed in Firefox: USD->EUR on the USD-only PDP shows Price EUR 0.00, disabled stepper, in-stock badge, no unavailability message. Query.product (currencyCode EUR) returns price.actual.amount 0 with availabilityData.isAvailable=false, isBuyable=false, isInStock=true, so the storefront ignores the availability flags. Filed as VCST-6605."
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    conditions: theme=2.61.0-alpha.2605; store=B2B-store; role=personal account
+    at: 2026-10-29T00:21:44.736Z
+    by: session:ce3cfc2a
+    bodyHash: 7d17b2f3b058
+    who: Aleksandra-Mitricheva
+    note: "REG-2026-10-28-1915 chrome: USD->EUR on a USD-only fixture PDP shows Price EUR 0.00, disabled stepper, in-stock badge, no unavailability message (suite case CAT-054)."
 ---
 Signed-in buyer, store with USD+EUR. Product priced only in USD (xAPI EUR price.actual 0, isBuyable false). Header currency -> EUR: product page 'Price and delivery' reads 'Price: €0.00', quantity stepper and input disabled, in-stock badge still shown, no message that the product is unavailable in this currency. The cart (converted to EUR) shows that line at €0.00; catalog cards show '€0.00'. A product with an EUR price shows its EUR price-list value, not a conversion.

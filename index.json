@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T00:21:10.374Z",
-  "count": 1454,
+  "generated": "2026-10-29T00:26:20.029Z",
+  "count": 1455,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16036,7 +16036,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -19995,7 +19995,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21000,6 +21000,28 @@
       ],
       "scope": [
         "component=ui-kit",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A01F868D",
+      "path": "entries/KB-A01F868D.md",
+      "subject": "GA4 view_cart and begin_checkout value on /cart is the cart grand total (after discount, with tax), not the subtotal",
+      "question": "What amount does the GA4 view_cart event carry as value on the storefront cart page?",
+      "questions": [
+        "Is GA4 view_cart value the cart subtotal or the total?",
+        "Does begin_checkout value include tax on /cart?"
+      ],
+      "anchors": [
+        "/cart",
+        "window.dataLayer"
+      ],
+      "scope": [
+        "event=view_cart",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
