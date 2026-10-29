@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T00:16:25.234Z",
-  "count": 1453,
+  "generated": "2026-10-29T00:21:10.374Z",
+  "count": 1454,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -15098,6 +15098,32 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-74A01579",
+      "path": "entries/KB-74A01579.md",
+      "subject": "updateContact(id) and lockOrganizationContact(memberId) given the caller's own identity-user id fail with a field error (NULL_REFERENCE / INVALID_OPERATION), while a random GUID or an Organization id is refused Forbidden",
+      "question": "What do the xAPI mutations updateContact and lockOrganizationContact return when the id passed is the caller's own user id instead of a contact id?",
+      "questions": [
+        "Why does updateContact return NULL_REFERENCE 'Error trying to resolve field updateContact'?",
+        "Is a nonexistent id refused the same way by updateContact and lockOrganizationContact?"
+      ],
+      "concepts": [
+        "graphql-api",
+        "contact"
+      ],
+      "anchors": [
+        "Mutation.updateContact",
+        "Mutation.lockOrganizationContact"
+      ],
+      "scope": [
+        "module=profile-experience-api",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
