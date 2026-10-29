@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T13:50:40.351Z",
-  "count": 1481,
+  "generated": "2026-10-29T13:55:52.062Z",
+  "count": 1482,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8483,6 +8483,29 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-428C15C6",
+      "path": "entries/KB-428C15C6.md",
+      "subject": "With the Passkeys module installed and 'Passkey' in store authenticationTypes, /sign-in shows no 'Sign in with Passkey' button when the theme predates vc-frontend#2601 (identityProviders extension point)",
+      "question": "Why is the passkey sign-in button missing on /sign-in although the Passkeys module is installed?",
+      "questions": [
+        "What does the storefront need to render the Sign in with Passkey button?",
+        "Passkeys plugin loads but no passkey button on sign-in page",
+        "Which theme version is required for the passkey sign-in button?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "Query.store"
+      ],
+      "scope": [
+        "feature=passkey-sign-in",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-429A791E",
