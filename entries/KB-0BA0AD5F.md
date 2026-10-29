@@ -46,5 +46,20 @@ evidence:
     contradicts: true
     contested: platform 3.1090.0-pr-3133-8b4a vs 3.1089.0; module:VirtoCommerce.PageBuilderModule 3.1036.0-pr-178-add2 vs 3.1036.0-pr-178-e4ff; virtocommerce.pagebuildermodule 3.1036.0-pr-178-add2 vs 3.1036.0-pr-178-e4ff
     note: "Fixed on VirtoCommerce.PageBuilderModule 3.1036.0-pr-178-add2: a 2049-character permalink (with or without leading slash) returns 400 text/plain with the permalink InvalidMessage on create-group-page, POST grouped and PUT grouped (never 500); 2048 returns 200 and is stored verbatim on all three; a rejected PUT leaves the stored group byte-identical."
+    resolved: defect-fixed
+    resolvedAt: 2026-10-29T10:01:00.231Z
+    resolvedBy: session:4d39d1e8
+    resolvedIn: judge/batch-20261029-1343
+    resolution: PR 178 commit add254f0 adds a Length > 2048 check in PageBuilderPermalink (released 3.1038.0), so the request is refused with 400 before the DB; on 3.1038.0 on vcst_qa (2026-10-29) 2049 characters returned 400 on all three endpoints and 2048 returned 200.
+    defect: suspected
+    fixedIn: VirtoCommerce.PageBuilderModule@3.1038.0
+  - method: observation
+    deployment: vcst_qa
+    conditions: platform=3.1090.0; module:VirtoCommerce.PageBuilderModule=3.1038.0; store=B2B-store; role=administrator; db=SqlServer
+    at: 2026-10-29T10:00:57.620Z
+    by: session:4d39d1e8
+    note: "2026-10-29: a 2049-character permalink returned 400 text/plain with the permalink InvalidMessage on create-group-page, POST grouped and PUT grouped (never 500); 2048 returned 200 and was stored at full length; the rejected PUT left the page unchanged. Stand DB is SqlServer, so the Postgres 22001 path was not reachable here; the 400 comes from the module's own length check before the DB."
+    investigation: true
+    bodyHash: 6270c94488a9
 ---
 On PageBuilderModule 3.1036.0-pr-178 with PostgreSQL, a valid-character permalink of 2048 characters is stored verbatim (200), but 2049 or 10000 characters on POST create-group-page, POST grouped or PUT grouped return 500 application/json {"message":"22001: value too long for type character varying(2048)","stackTrace":null}; the stored page is unchanged. The new permalink validation does not cover length. The Page Builder shell permalink input caps typing at 1024 characters, so the UI cannot reach it, but API/AI-tool callers can.
