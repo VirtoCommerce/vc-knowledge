@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T00:10:14.251Z",
-  "count": 1452,
+  "generated": "2026-10-29T00:16:25.234Z",
+  "count": 1453,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4227,7 +4227,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -7034,6 +7034,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-39C3C291",
+      "path": "entries/KB-39C3C291.md",
+      "subject": "salesRepTopSellers returns at most 10 items even when the client requests take:25",
+      "question": "Does the backend cap salesRepTopSellers take at 10 when a client asks for more?",
+      "questions": [
+        "What is the maximum number of rows salesRepTopSellers returns?",
+        "Is the Top sellers take limit enforced server-side or only by the dashboard default of 5?"
+      ],
+      "anchors": [
+        "Query.salesRepTopSellers",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3A7A11EB",
       "path": "entries/KB-3A7A11EB.md",
       "subject": "After sign-out and sign-in of a different user in the same Admin Shell tab, the previous user's section rail and Recent items stay rendered even though the new user's POST /api/admin-shell/menu returned 403",
@@ -9614,7 +9637,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -22757,7 +22780,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -24239,7 +24262,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -31341,7 +31364,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {

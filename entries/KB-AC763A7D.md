@@ -24,5 +24,14 @@ evidence:
     at: 2026-10-27T19:26:53.553Z
     by: session:e75fe8a4
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    conditions: theme=2.61.0-alpha.2605; store=B2B-store; role=corporate member
+    at: 2026-10-29T00:15:16.332Z
+    by: session:ce3cfc2a
+    bodyHash: a08ee701108c
+    who: Aleksandra-Mitricheva
+    note: "Regression run: Enter and button search, no-match + Reset, Name sort desc then asc, Email/Phone inert, 64-char cap, SPA remount refires identical variables — all held."
 ---
 Signed in as a Purchasing agent: typing a keyword alone does not refetch; Enter or the "Search sales reps" button sends customerSalesReps with the keyword (case-insensitive substring match on name). A no-match keyword shows "No sales reps match your search" with a "Reset search" button, which clears the input and restores the full list. The Name header is a button: first click sends sort name:desc, second name:asc (default load is name:asc). Email and Phone headers are plain, clicking them sends nothing and leaves the order unchanged. Typing key-by-key accepts 64 characters and drops the 65th. Revisiting the page by SPA navigation refires customerSalesReps with byte-identical variables (first:10, after:"0", keyword:"", sort:"name:asc").
