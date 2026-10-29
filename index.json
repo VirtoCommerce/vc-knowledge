@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T18:09:11.181Z",
-  "count": 1490,
+  "generated": "2026-10-29T18:09:25.818Z",
+  "count": 1491,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18513,6 +18513,33 @@
       "scope": [
         "module=pages",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8B32607E",
+      "path": "entries/KB-8B32607E.md",
+      "subject": "A storefront passkey sign-in on an account whose password is expired is sent to /change-password and its session gets errors[].code PasswordExpired, exactly like the password sign-in",
+      "question": "Is a passkey sign-in (POST /connect/token grant_type=passkey) on an expired-password account sent to Change Password on the storefront?",
+      "questions": [
+        "Does the password-expiry check apply to a passkey session?",
+        "After resetpassword forcePasswordChangeOnNextSignIn true, where does a passkey sign-in land?",
+        "Does xAPI answer PasswordExpired for a passkey-signed-in buyer?",
+        "What URL does the storefront use for the forced password change?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "/change-password",
+        "Query.cart",
+        "POST /api/platform/security/users/{id}/resetpassword"
+      ],
+      "scope": [
+        "feature=password-expiry",
+        "grant_type=passkey",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
