@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T13:26:30.702Z",
-  "count": 1478,
+  "generated": "2026-10-29T13:29:12.795Z",
+  "count": 1479,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12416,6 +12416,27 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5BC4EC37",
+      "path": "entries/KB-5BC4EC37.md",
+      "subject": "On /company/info, picking a non-JPG/PNG file in the Company logo picker shows \"File format is not allowed\", sends no upload, and throws a hidden TypeError (reading 'url')",
+      "question": "What happens when an organization maintainer picks a file of a disallowed type in the Company logo picker on /company/info?",
+      "questions": [
+        "Does the company logo uploader reject a .txt file client-side?",
+        "Does a rejected logo file throw a browser exception on /company/info?"
+      ],
+      "anchors": [
+        "/company/info"
+      ],
+      "scope": [
+        "role=organization-maintainer",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
