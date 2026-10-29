@@ -77,5 +77,14 @@ evidence:
     defect: none
     who: Lenajava1
     note: Defect marker withdrawn (VCST-6631 cancelled as not a bug). The "no user action" part comes from the virtual authenticator's automaticPresenceSimulation answering the conditional request. On a real device the request completes only after the user picks the passkey from the autofill list, so "Login attempt failed" for a stale key is correct feedback. A valid credential likewise signs in only after the user picks it, not silently on load.
+  - method: observation
+    deployment: vcst_qa
+    build: 1489bcaaf835d77b
+    conditions: platform=3.1091.0-pr-3144-9e58; module:VirtoCommerce.Passkeys=3.1000.0-pr-1-a25f; theme=2.61.0; store=B2B-store
+    at: 2026-10-29T18:43:48.217Z
+    by: session:e80d36e0
+    bodyHash: da6bae083a93
+    who: Lenajava1
+    note: "Round 2, 2026-10-29T18:35Z (presence ON, virtual authenticator): valid credential -> one grant 200, silent sign-in; server key deleted -> one grant_type=passkey 400 invalid_grant code login_failed 'Login attempt failed. Please check your credentials.', no token, console 400, the inline message 'Login attempt failed. Check your credentials' is a role=alert element (class vc-alert) with NO data-test-id; password sign-in afterwards works."
 ---
 On vcptcore QA storefront (theme 2.61.0-pr-2601, Passkeys plugin 1.23.3) loading /sign-in fetches GetPasskeyRequestOptions and the host code runs a WebAuthn conditional-mediation get; when a resident passkey credential exists in the browser but no longer maps to a server-side sign-in key (e.g. after the key was deleted/re-seeded), the browser silently posts grant_type=passkey&scope=offline_access&storeId=B2B-store to /connect/token, which returns HTTP 400 {code:login_failed} and logs a console ERROR 'Failed to load resource: 400 /connect/token' on the public sign-in page. With a valid resident credential the same flow signs the user in with no button press. The passkeys MFE bundle itself contains only navigator.credentials.create (registration); the authentication navigator.credentials.get lives in host/core code.

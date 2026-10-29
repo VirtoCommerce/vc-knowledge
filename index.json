@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T18:43:27.614Z",
-  "count": 1493,
+  "generated": "2026-10-29T18:45:39.369Z",
+  "count": 1494,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11310,7 +11310,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -17057,6 +17057,32 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8052D807",
+      "path": "entries/KB-8052D807.md",
+      "subject": "A runner (no browser) can register and use a passkey on the storefront only if it carries the Identity.TwoFactorUserId cookie set by the options query and sends an Origin header of the storefront host",
+      "question": "How does a non-browser runner call createPasskey and the passkey grant against the storefront host?",
+      "questions": [
+        "Why does createPasskey answer INVALID_OPERATION with a well-formed credential from a script?",
+        "createPasskey invalid_passkey_attestation 'The authenticator response had an invalid origin'",
+        "Does passkeyCreationOptions / passkeyRequestOptions keep ceremony state in a cookie?"
+      ],
+      "anchors": [
+        "Mutation.createPasskey",
+        "Query.passkeyCreationOptions",
+        "Query.passkeyRequestOptions",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "client=runner",
+        "feature=passkey",
+        "host=storefront"
       ],
       "plane": "experiential",
       "status": "active",
