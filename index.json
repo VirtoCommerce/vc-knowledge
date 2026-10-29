@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T10:45:10.447Z",
-  "count": 1473,
+  "generated": "2026-10-29T10:55:59.092Z",
+  "count": 1474,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -31447,6 +31447,32 @@
       "scope": [
         "feature=product-configuration",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ED1C3F63",
+      "path": "entries/KB-ED1C3F63.md",
+      "subject": "An operator whose loginOnBehalf comes only from an organization-scoped role can impersonate a user of another organization: the impersonate grant does not apply the role's organization scope",
+      "question": "Can a storefront operator whose loginOnBehalf comes from an organization-scoped role (OrganizationMembership) impersonate a user from a different organization via POST /connect/token grant_type=impersonate?",
+      "questions": [
+        "Is login on behalf limited to the operator's own organization?",
+        "Does an org-scoped Organization maintainer role let you impersonate users in other companies?",
+        "Cross-organization impersonation from the storefront"
+      ],
+      "concepts": [
+        "impersonation",
+        "organization-membership"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "/account/impersonate/{id}"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
