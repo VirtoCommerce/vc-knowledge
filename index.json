@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T00:32:30.507Z",
-  "count": 1457,
+  "generated": "2026-10-29T00:38:44.722Z",
+  "count": 1458,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18778,6 +18778,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-903975AB",
+      "path": "entries/KB-903975AB.md",
+      "subject": "A plain-HTML data-vc-track product-link on a Page Builder HTML block is an ordinary <a href>, so a plain click hard-navigates and resets window.dataLayer; its select_item is only observable on the source page via ctrl-click (or on /g/collect)",
+      "question": "Can the select_item of a plain HTML product-link click be read from window.dataLayer after the click?",
+      "questions": [
+        "Why is select_item missing after clicking a link in the HTML product list fixture?",
+        "Does the markup HTML product-link navigate in-app?"
+      ],
+      "anchors": [
+        "/agent-test-ga4-html-product-lists",
+        "window.dataLayer"
+      ],
+      "scope": [
+        "event=select_item",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-903E980C",
       "path": "entries/KB-903E980C.md",
       "subject": "OTP request outcome for a contact whose account storeId names no existing store",
@@ -30287,7 +30309,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-E8984A18",

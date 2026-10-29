@@ -81,5 +81,16 @@ evidence:
     bodyHash: c59e429335ed
     who: Lenajava1
     note: "Re-observed 2026-10-26 on the deployed vcst_qa storefront as the pre-fix baseline: cold /cart load pushed RB view_item_list and no saved-for-later impression; an SFL title click (Barths 151682) pushed select_item item_list_id recently_browsed_products with no index, no currency and no item_category. Unmerged PR 2598 build 608d changes this (separate entry)."
+  - method: observation
+    deployment: vcst_qa
+    build: 33c85ff2161bc1fc
+    conditions: theme=2.61.0-alpha.2605; browser=firefox; role=signed-in customer
+    at: 2026-10-29T00:34:35.571Z
+    by: session:ce3cfc2a
+    bodyHash: c59e429335ed
+    who: Aleksandra-Mitricheva
+    contradicts: true
+    contested: theme 2.61.0-alpha.2605 vs 3.1.0-pr-11-d67b-d67b0e0a; browser firefox vs chromium; virtocommerce.cart 3.1013.0 vs 3.1012.0; virtocommerce.pages 3.1011.0 vs 3.1010.0; virtocommerce.profileexperienceapimodule 3.1022.0 vs 3.1021.0; virtocommerce.xapi 3.1028.0 vs 3.1027.0; …
+    note: "Theme Ver. 2.61.0-alpha.2605 (2026-10-29), signed-in, after seed:ga4-lists:cart: /cart cold load pushed view_item_list recently_browsed_products (6 seeded codes) AND a separate view_item_list item_list_id saved_for_later ('Saved for later', 8 items). SFL title click (Fosters 152078, opens new tab) pushed one select_item with item_list_id saved_for_later — not recently_browsed_products. RB not re-sent on qty +1 or on SFL Show more (still holds)."
 ---
 Signed in on /cart with 6 recently browsed and 8 saved-for-later products (disjoint): cold load pushed one view_item_list recently_browsed_products ('Recently browsed') with exactly the 6 RB products and none of the SFL products. Saved-for-later Show more (6 -> 8 cards) pushed no event. A cart line quantity +1 pushed update_cart_item and add_shipping_info but no RB re-send. An SFL card title click pushed one select_item with item_list_id recently_browsed_products (the SFL block reuses that id, manual call); an RB card title click pushed one select_item for that product. Cart-page product links open in a new tab. The RB list is re-sent on resize when the grid's rendered count changes (1920->390->800->1920 gave 6, 4, 6).
