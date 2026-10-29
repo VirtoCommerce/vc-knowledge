@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T04:43:52.233Z",
-  "count": 1459,
+  "generated": "2026-10-29T07:55:50.418Z",
+  "count": 1460,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9441,6 +9441,29 @@
       ],
       "scope": [
         "gateway=cybersource",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4B42243F",
+      "path": "entries/KB-4B42243F.md",
+      "subject": "Paying an already-placed unpaid order via Pay now fires a second GA4 purchase event for the same order",
+      "question": "/account/orders Pay now on an already-placed unpaid order: does the storefront push another GA4 purchase event to dataLayer?",
+      "questions": [
+        "Does re-paying an unpaid order from the order history duplicate the GA4 purchase event?",
+        "GA4 purchase fired twice for one order after Pay now CyberSource payment page"
+      ],
+      "anchors": [
+        "/account/orders",
+        "window.dataLayer"
+      ],
+      "scope": [
+        "event=purchase",
+        "payment-method=cybersourcepaymentmethod",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
