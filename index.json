@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T00:26:20.029Z",
-  "count": 1455,
+  "generated": "2026-10-29T00:29:00.685Z",
+  "count": 1457,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20879,7 +20879,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21976,6 +21976,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-A5FA3A12",
+      "path": "entries/KB-A5FA3A12.md",
+      "subject": "On single-step /cart, GA4 add_payment_info fires only once payment method AND billing address are both set; selecting the payment method with no billing address sends nothing",
+      "question": "When does GA4 add_payment_info fire on the storefront cart page?",
+      "questions": [
+        "Why is there no add_payment_info after picking a payment method on /cart?",
+        "Does add_payment_info need a billing address?"
+      ],
+      "anchors": [
+        "/cart",
+        "window.dataLayer",
+        "Mutation.addOrUpdateCartPayment"
+      ],
+      "scope": [
+        "event=add_payment_info",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A613223B",
       "path": "entries/KB-A613223B.md",
       "subject": "addItem's own response can list no items even when the add succeeded",
@@ -22915,7 +22938,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -28876,6 +28899,29 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-DB8C239A",
+      "path": "entries/KB-DB8C239A.md",
+      "subject": "With storefront culture el (no Sales Rep plugin locale), the hub rail, dashboard and the buyer's Corporate 'Sales reps' link render in English with no raw i18n keys; de and es render translated labels",
+      "question": "What do the Sales Rep hub rail and the Corporate Sales reps link show in Greek (el), a culture the plugin ships no locale for?",
+      "questions": [
+        "Does the sales rep hub fall back to English when the storefront language has no plugin translation?",
+        "What are the German and Spanish labels of the Sales Rep hub rail and the Corporate Sales reps link?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "/account/dashboard",
+        "/company/sales-reps"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DBA1110A",
