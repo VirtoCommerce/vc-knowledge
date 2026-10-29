@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T12:19:04.072Z",
-  "count": 1476,
+  "generated": "2026-10-29T13:22:36.868Z",
+  "count": 1477,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30885,6 +30885,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EA066499",
+      "path": "entries/KB-EA066499.md",
+      "subject": "Updating a Multilanguage Page root copies Permalink, Visibility, UserGroups, OrganizationId, StartDate and EndDate into its non-overridden language versions without calling the permalink publish-conflict check",
+      "question": "PUT /api/page-builder-multilanguage-pages root permalink change propagated to published language versions — is the permalink publish conflict check applied?",
+      "questions": [
+        "Does changing the permalink of a Multilanguage Page root check permalink conflicts for its published language versions?",
+        "Can a published language version get a conflicting permalink through the Multilanguage Page root without grouped/publishing?",
+        "Which fields does a Multilanguage Page root propagate to its language versions on save?"
+      ],
+      "anchors": [
+        "PUT /api/page-builder-multilanguage-pages"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
