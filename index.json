@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T13:59:14.371Z",
-  "count": 1484,
+  "generated": "2026-10-29T14:10:43.310Z",
+  "count": 1485,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7779,6 +7779,28 @@
         "module=sales-rep",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3E6ED139",
+      "path": "entries/KB-3E6ED139.md",
+      "subject": "Clone in the page builder shell builds the copy from the STORED page, not from unsaved form edits: an unsaved invalid permalink in the form is ignored and the clone is created with '<stored permalink>-copy' (200)",
+      "question": "Does Clone use the unsaved (dirty) permalink in the page builder form or the stored permalink?",
+      "questions": [
+        "Is cloning a page with an unsaved invalid permalink rejected with 400?",
+        "Which permalink does the shell Clone send in POST /api/page-builder-pages/grouped?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/grouped",
+        "/apps/page-builder-shell"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
