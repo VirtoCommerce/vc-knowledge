@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T13:55:52.062Z",
-  "count": 1482,
+  "generated": "2026-10-29T13:58:43.285Z",
+  "count": 1483,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2738,6 +2738,23 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-14DCAC52",
+      "path": "entries/KB-14DCAC52.md",
+      "subject": "GET /api/page-builder-pages/grouped/publish-status/{groupId} returns 500 NullReference for an unknown or deleted groupId instead of 404",
+      "question": "What does the publish-status endpoint return for a groupId that does not exist?",
+      "anchors": [
+        "GET /api/page-builder-pages/grouped/publish-status/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-14F26013",
@@ -11403,7 +11420,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
