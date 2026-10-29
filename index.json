@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T17:47:52.348Z",
-  "count": 1487,
+  "generated": "2026-10-29T17:50:20.326Z",
+  "count": 1489,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3079,6 +3079,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-16F80EE0",
+      "path": "entries/KB-16F80EE0.md",
+      "subject": "A Customer of a store other than the storefront's store, holding its own password token (storeId = its store), is issued passkeyCreationOptions with rp.id = the storefront host, and createPasskey reaches the resolver",
+      "question": "Can a customer whose account belongs to a different, non-trusted store get passkey creation options and call createPasskey on this storefront?",
+      "questions": [
+        "What rp.id does Query.passkeyCreationOptions return for a token issued for another store?",
+        "Is passkey registration gated by the store the token was issued for?",
+        "Can a foreign-store contact register a passkey on the run storefront host?"
+      ],
+      "anchors": [
+        "Query.passkeyCreationOptions",
+        "Mutation.createPasskey",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=passkey",
+        "feature=store-access",
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1700428D",
       "path": "entries/KB-1700428D.md",
       "subject": "Back-office cookie password login POST /api/platform/security/login succeeds for a storefront Customer (0 permissions), while the passkey routes refuse a Customer with 403",
@@ -4217,6 +4242,29 @@
       "scope": [
         "documenttype=product",
         "surface=admin-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2137EAA6",
+      "path": "entries/KB-2137EAA6.md",
+      "subject": "The impersonate grant issues a token for a Customer target whose own password grant is refused by the store rule (user_cannot_login_in_store)",
+      "question": "Does POST /connect/token grant_type=impersonate apply the store rule (user_cannot_login_in_store) to the target user?",
+      "questions": [
+        "Can an operator impersonate a customer of a foreign or nonexistent store?",
+        "Is user_cannot_login_in_store checked for the impersonated user?",
+        "Can impersonation be used to get a token for an account that cannot sign in to this store?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=store-access",
+        "grant=impersonate",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16079,7 +16127,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0,
       "resolved": 1
     },
@@ -21963,7 +22011,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
