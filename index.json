@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T17:28:45.097Z",
-  "count": 1486,
+  "generated": "2026-10-29T17:34:10.931Z",
+  "count": 1487,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9350,7 +9350,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12027,6 +12027,31 @@
       ],
       "scope": [
         "feature=mfa",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-588D169F",
+      "path": "entries/KB-588D169F.md",
+      "subject": "After a successful 'Sign in with Passkey' click the /sign-in page re-arms conditional mediation: one more GetPasskeyRequestOptions query and, with presence auto-answered, a second grant_type=passkey POST /connect/token that carries the new Bearer and never completes; the server logs one Passkey row per click",
+      "question": "How many grant_type=passkey requests does one (or a double) click on 'Sign in with Passkey' produce, and how many sign-in log rows?",
+      "questions": [
+        "Does double-clicking Sign in with Passkey send two passkey grants?",
+        "Why does the network log show two POST /connect/token passkey grants after one click?",
+        "Is conditional mediation restarted after a button passkey sign-in?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token",
+        "Query.passkeyRequestOptions",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=passkey-signin",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
