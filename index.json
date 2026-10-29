@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T10:55:59.092Z",
-  "count": 1474,
+  "generated": "2026-10-29T12:07:45.352Z",
+  "count": 1475,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30222,6 +30222,28 @@
       ],
       "scope": [
         "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E5089A10",
+      "path": "entries/KB-E5089A10.md",
+      "subject": "On /bulk-order, an all-valid Copy&Paste submit redirects straight to /cart; any invalid SKU opens an \"Add to cart SKU errors\" modal with only Close, never the View cart results modal",
+      "question": "What does the storefront show after Add to cart on /bulk-order (Copy&Paste) — the results modal with View cart, or something else?",
+      "questions": [
+        "Does bulk order open the Adding products to cart result modal?",
+        "How do I open the bulk add-to-cart results modal with a View cart button?",
+        "What happens on /bulk-order when one SKU is invalid?"
+      ],
+      "anchors": [
+        "/bulk-order",
+        "/account/saved-for-later"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
