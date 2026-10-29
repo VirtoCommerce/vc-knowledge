@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T10:01:30.416Z",
-  "count": 1470,
+  "generated": "2026-10-29T10:31:02.112Z",
+  "count": 1472,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1154,7 +1154,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1372,7 +1372,7 @@
         "KB-C4346EB2",
         "KB-ADF1DE84"
       ],
-      "trust": 4,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1588,7 +1588,7 @@
         "KB-ADA91F7B",
         "KB-6E63AFF4"
       ],
-      "trust": 6,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -1729,6 +1729,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-0CB8AB36",
+      "path": "entries/KB-0CB8AB36.md",
+      "subject": "Unchecking the auto-promotion gift on /cart (RejectGiftItems) keeps the gift line in the stored cart with isRejected true, and createQuoteFromCart leaves it out of the quote",
+      "question": "/cart page \"+ Add a gift\" checkbox: does unchecking it remove the isGift line from the stored cart (Mutation.rejectGiftItems)?",
+      "anchors": [
+        "Mutation.rejectGiftItems",
+        "POST /api/carts/search",
+        "Mutation.createQuoteFromCart",
+        "/cart"
+      ],
+      "scope": [
+        "promotion=auto gift (no coupon)",
+        "store=b2b-store",
+        "surface=rest",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0CE38D75",
       "path": "entries/KB-0CE38D75.md",
       "subject": "The list share message is capped at 250 typed characters, not link-aware, while a longer stored message shows an over-cap counter",
@@ -1833,7 +1856,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -2050,7 +2073,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -2107,7 +2130,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -2165,7 +2188,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -2246,7 +2269,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -2490,7 +2513,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -2527,7 +2550,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2713,7 +2736,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 1
     },
     {
@@ -2739,7 +2762,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3004,7 +3027,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3091,7 +3114,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 3,
       "disputed": 0,
       "resolved": 4
     },
@@ -3266,7 +3289,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -3402,7 +3425,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 2,
       "disputed": 0,
       "resolved": 1
     },
@@ -3590,7 +3613,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4365,7 +4388,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4383,7 +4406,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -4429,7 +4452,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4681,7 +4704,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 4,
       "disputed": 0,
       "resolved": 2
     },
@@ -4853,7 +4876,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5391,7 +5414,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5441,7 +5464,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -5736,7 +5759,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -6105,7 +6128,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -6268,7 +6291,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -6582,7 +6605,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -6923,7 +6946,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7040,7 +7063,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7077,7 +7100,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7568,7 +7591,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7917,7 +7940,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8158,7 +8181,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -8243,7 +8266,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -8926,7 +8949,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -9261,7 +9284,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -9417,7 +9440,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -9577,7 +9600,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -9837,7 +9860,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -10015,7 +10038,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10296,7 +10319,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11148,7 +11171,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11186,7 +11209,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11203,7 +11226,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11496,7 +11519,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -12119,7 +12142,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -12311,7 +12334,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -12373,7 +12396,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -12413,7 +12436,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0,
       "contested": 1
     },
@@ -12745,7 +12768,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13016,7 +13039,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -13185,7 +13208,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -13452,7 +13475,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -13708,7 +13731,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -14276,7 +14299,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -14447,7 +14470,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 7,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -14596,7 +14619,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14871,7 +14894,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -14992,7 +15015,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -15023,7 +15046,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -16566,7 +16589,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -17093,7 +17116,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -17393,7 +17416,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -17429,7 +17452,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -17664,7 +17687,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -17765,7 +17788,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -17897,7 +17920,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -17933,7 +17956,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -18338,7 +18361,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -18430,7 +18453,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -18552,8 +18575,9 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
-      "disputed": 1
+      "trust": 2,
+      "disputed": 0,
+      "resolved": 1
     },
     {
       "id": "KB-8CC2B45E",
@@ -19061,7 +19085,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19125,7 +19149,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -19557,7 +19581,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19744,7 +19768,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -20161,7 +20185,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 8,
+      "trust": 7,
       "disputed": 0
     },
     {
@@ -20231,7 +20255,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -22059,7 +22083,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -22381,7 +22405,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -22567,7 +22591,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -22948,7 +22972,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -23204,6 +23228,36 @@
       "disputed": 0
     },
     {
+      "id": "KB-AD392FC5",
+      "path": "entries/KB-AD392FC5.md",
+      "subject": "A product added to the cart as a new line from the search-results quantity stepper is persisted with list/sale/placed price 0; a later priced save (e.g. AddOrUpdateCartPayment) fixes it",
+      "question": "Why does the stored cart (REST) hold 0 line prices while Query.cart shows catalog prices?",
+      "questions": [
+        "When does Mutation.changeCartItemsQuantity / UpdateShortCartItemQuantity save a cart line without prices?",
+        "Why does /cart sometimes re-save the cart on page load?",
+        "Which cart save repairs zero persisted line prices?"
+      ],
+      "anchors": [
+        "POST /api/carts/search",
+        "Mutation.changeCartItemsQuantity",
+        "Mutation.addOrUpdateCartPayment",
+        "Mutation.createQuoteFromCart",
+        "/search",
+        "/cart"
+      ],
+      "scope": [
+        "module=virtocommerce.xcart",
+        "store=b2b-store",
+        "surface=rest",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AD416AFF",
       "path": "entries/KB-AD416AFF.md",
       "subject": "A Multilanguage Page translation becomes Outdated when the source language is published (single publish or publish-all), not on a source draft save; translation publish and mark-up-to-date clear it; two concurrent publish-all calls can lose the source revision update",
@@ -23309,7 +23363,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 10,
+      "trust": 9,
       "disputed": 0
     },
     {
@@ -23365,7 +23419,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -23935,7 +23989,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-B28C500C",
@@ -24218,7 +24272,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -24464,7 +24518,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -25290,7 +25344,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -25356,7 +25410,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -25607,7 +25661,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -25646,7 +25700,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -25893,7 +25947,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -26038,7 +26092,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -26078,7 +26132,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -26113,7 +26167,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -26218,7 +26272,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -26599,7 +26653,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -26891,7 +26945,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -27537,7 +27591,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -27958,7 +28012,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -28006,7 +28060,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -28082,7 +28136,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 1,
       "disputed": 0,
       "contested": 4
     },
@@ -28834,7 +28888,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -29528,7 +29582,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -29800,7 +29854,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -30205,7 +30259,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -31659,7 +31713,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -31695,7 +31749,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -32195,7 +32249,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -32291,7 +32345,7 @@
         "KB-4105EEBE",
         "KB-CFBD95B7"
       ],
-      "trust": 4,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -32544,7 +32598,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -32588,7 +32642,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -32615,7 +32669,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 9,
+      "trust": 8,
       "disputed": 0
     },
     {
@@ -32915,7 +32969,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -33540,7 +33594,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -33691,7 +33745,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 1,
       "disputed": 0
     },
     {
