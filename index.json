@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T08:10:24.939Z",
-  "count": 1463,
+  "generated": "2026-10-29T08:24:09.044Z",
+  "count": 1464,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30102,6 +30102,29 @@
         "feature=list-sharing",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E631FC17",
+      "path": "entries/KB-E631FC17.md",
+      "subject": "A store tenant id that differs only in case does not match the store-level notification; the global template is used instead, and an empty global body fails the send with 'Body' must not be empty",
+      "question": "If a notification is raised for store tenant id 'b2b-store' while the store and its notification override are 'B2B-store', which template is rendered?",
+      "questions": [
+        "Is the Store tenantId in GET /api/notifications/{type} matched case-sensitively?",
+        "Why does AbandonedCartEmailNotification fail with 'Body' must not be empty when the store's template has a body?",
+        "When does a notification journal row get 'Body' must not be empty?"
+      ],
+      "anchors": [
+        "GET /api/notifications/{id}",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "module=notifications",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
