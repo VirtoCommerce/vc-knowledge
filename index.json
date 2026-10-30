@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-30T13:48:51.485Z",
-  "count": 1495,
+  "generated": "2026-10-30T13:49:28.115Z",
+  "count": 1496,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1196,6 +1196,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0A4AAC81",
+      "path": "entries/KB-0A4AAC81.md",
+      "subject": "Clicking \"Sign in with Passkey\" on storefront /sign-in signs a buyer who has a passkey in with no email or password typed, and lands on the home page with the buyer's name in the header",
+      "question": "Does the storefront Sign in with Passkey button sign the customer in without typing an email or password?",
+      "questions": [
+        "Where does a storefront passkey sign-in land when /sign-in was opened directly?",
+        "Does passkey sign-in on the storefront need the email first?"
+      ],
+      "anchors": [
+        "/sign-in"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
