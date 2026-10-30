@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-30T17:10:37.228Z",
-  "count": 1498,
+  "generated": "2026-10-30T17:10:49.335Z",
+  "count": 1499,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -270,6 +270,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-01EFC061",
+      "path": "entries/KB-01EFC061.md",
+      "subject": "Query.products without currencyCode resolves price in a non-default currency for products that carry it, while the store default is USD",
+      "question": "Query.products — which currency does price.actual use when currencyCode is omitted on a store whose default currency is USD?",
+      "questions": [
+        "Why does the xAPI products query return EUR prices when the store default currency is USD?",
+        "Does Query.products fall back to the store default currency when currencyCode is not passed?"
+      ],
+      "anchors": [
+        "Query.products",
+        "POST /graphql"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7828,7 +7850,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
