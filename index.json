@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-30T13:49:28.115Z",
-  "count": 1496,
+  "generated": "2026-10-30T17:10:37.228Z",
+  "count": 1498,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9147,6 +9147,32 @@
         "feature=google-analytics-user-properties",
         "surface=storefront-ui",
         "user=multi-organization-member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-47B010B6",
+      "path": "entries/KB-47B010B6.md",
+      "subject": "Removing the only line on /cart sends Mutation.removeCartItems, zeroes every total, and the page switches to a \"Your cart is empty\" state with Continue shopping and Add with bulk order links",
+      "question": "What happens on /cart when an anonymous shopper removes the last line item?",
+      "questions": [
+        "What does the empty cart state show on /cart?",
+        "Does removeCartItems on the last line return validation errors?",
+        "Are cart totals zeroed after removing the last line?"
+      ],
+      "concepts": [
+        "cart"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.removeCartItems"
+      ],
+      "scope": [
+        "actor=anonymous",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -20719,7 +20745,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -32481,6 +32507,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EFCFCEE0",
+      "path": "entries/KB-EFCFCEE0.md",
+      "subject": "On the storefront product page, an anonymous shopper's first Increase quantity click adds the item to the cart through Mutation.updateCartQuantity, and that response already lists the settled line item",
+      "question": "How does the product page add an item to the cart for an anonymous shopper, and does the mutation's own response list the new line?",
+      "questions": [
+        "Which GraphQL mutation does the product page quantity stepper send?",
+        "Can an anonymous shopper add to cart from /product/{id} without signing in?",
+        "Does updateCartQuantity return the line item id right after adding?"
+      ],
+      "anchors": [
+        "/product/{id}",
+        "Mutation.updateCartQuantity"
+      ],
+      "scope": [
+        "actor=anonymous",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
