@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-30T17:10:49.335Z",
-  "count": 1499,
+  "generated": "2026-10-30T17:16:00.976Z",
+  "count": 1503,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7151,6 +7151,28 @@
         "Mutation.updateSalesRepTask"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-37DC3049",
+      "path": "entries/KB-37DC3049.md",
+      "subject": "An anonymous one-line cart on /cart shows Subtotal = line total, Tax added on top, and Total = subtotal - discount + shipping + tax, with Place order disabled until shipping details are given",
+      "question": "What totals does /cart show for an anonymous cart with one non-discounted line?",
+      "questions": [
+        "Is tax included in the cart subtotal on the storefront cart page?",
+        "Is Place order enabled on /cart for an anonymous shopper right after adding one item?"
+      ],
+      "anchors": [
+        "/cart",
+        "Query.cart"
+      ],
+      "scope": [
+        "actor=anonymous",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -18325,7 +18347,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -25189,7 +25211,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -26322,6 +26344,29 @@
         "module=salesrep",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C23196B5",
+      "path": "entries/KB-C23196B5.md",
+      "subject": "Query.products for the default store answers anonymously with prices and no errors, and an admin token returns the same first page",
+      "question": "What does Query.products return for the default store's first page of items with id, name and price?",
+      "questions": [
+        "Does the xAPI products query need a token for the default store?",
+        "Does products return price.actual and price.list anonymously?",
+        "Does an admin token change the products result for the storefront store?"
+      ],
+      "anchors": [
+        "Query.products",
+        "POST /graphql"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -30213,6 +30258,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-E0935CF5",
+      "path": "entries/KB-E0935CF5.md",
+      "subject": "Anonymous GET /health answers 200 JSON with six named checks, each carrying its own Status",
+      "question": "What does the platform GET /health endpoint return when the platform is healthy?",
+      "questions": [
+        "Which health checks does /health report?",
+        "Does /health need authentication?",
+        "How do I tell from /health which background-job engine is active?"
+      ],
+      "anchors": [
+        "GET /health"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E0D6EA2B",
       "path": "entries/KB-E0D6EA2B.md",
       "subject": "Storefront /account/profile and the /account/addresses dialog show a rejected name or address field inline on its input (theme 2.61.0-pr-2597); the header Ship-to \"Add new\" dialog shows only a toast",
@@ -31974,6 +32041,26 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-ED02208A",
+      "path": "entries/KB-ED02208A.md",
+      "subject": "Clicking a top-level category in the storefront main navigation opens its SEO-slug route with an H1 and a results count, and every Soft drinks product image there points at an unresolvable host",
+      "question": "What does an anonymous shopper see after opening a top-level category from the main navigation menubar?",
+      "questions": [
+        "Why do product images on the Soft drinks category and its product pages fail to load on vcst_qa?"
+      ],
+      "anchors": [
+        "/soft-drinks"
+      ],
+      "scope": [
+        "actor=anonymous",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-ED048B71",
