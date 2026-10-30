@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-29T18:45:39.369Z",
-  "count": 1494,
+  "generated": "2026-10-30T13:48:51.485Z",
+  "count": 1495,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16725,6 +16725,27 @@
       ],
       "scope": [
         "feature=orders-date-filter",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7D9B2443",
+      "path": "entries/KB-7D9B2443.md",
+      "subject": "On storefront /account/security, Add passkey adds a row that shows the authenticator's name (or \"Unnamed key\") and \"Device only · Created <date, time>\"",
+      "question": "What does the Passkeys section on /account/security show right after Add passkey succeeds?",
+      "questions": [
+        "What row appears after adding a passkey on the storefront Security page?",
+        "What is a new passkey called on /account/security when the buyer gave it no name?",
+        "Does the passkey row show a backup state and a created date?"
+      ],
+      "anchors": [
+        "/account/security"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
