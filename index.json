@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T11:28:29.715Z",
-  "count": 1521,
+  "generated": "2026-11-02T12:40:21.246Z",
+  "count": 1523,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19285,6 +19285,27 @@
       "disputed": 1
     },
     {
+      "id": "KB-8D5D121F",
+      "path": "entries/KB-8D5D121F.md",
+      "subject": "On /cart the pencil button that changes the shipping address has no accessible name",
+      "question": "What does a screen reader announce for the edit-shipping-address pencil button on /cart?",
+      "questions": [
+        "Does .vc-address-selection__button have an aria-label?",
+        "Why does axe report button-name on the cart page?",
+        "Is the change-address button in checkout labelled?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8DA09FE8",
       "path": "entries/KB-8DA09FE8.md",
       "subject": "Push Messages advanced query: a malformed member query is rejected in the UI and holds Save/Send",
@@ -29853,6 +29874,27 @@
       "scope": [
         "module=platform-security",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DA64747C",
+      "path": "entries/KB-DA64747C.md",
+      "subject": "/company/members desktop table does not shrink or scroll inside its card, so long member names push the page sideways between 1024 and about 1106 px",
+      "question": "Does /company/members scroll horizontally at 1024 px when members have long names?",
+      "questions": [
+        "Why does the company members table stick out of its card at 1024 px?",
+        "Why does the Active column get cut off on /company/members on a small laptop?",
+        "Does the truncate class on the members Name column actually truncate?"
+      ],
+      "anchors": [
+        "/company/members"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
