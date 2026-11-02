@@ -25,5 +25,14 @@ evidence:
     by: session:75d360f6
     who: Aleksandra-Mitricheva
     note: "distinct: KB-B9DB6FC4 is about passkey sign-in with StoreMode=Enabled; this is about a password sign-in with every MFA setting OFF, where only the per-user twoFactorEnabled flag triggers the challenge."
+  - method: observation
+    deployment: vcptcore_qa
+    build: 023779f193646d5e
+    conditions: theme=3.2.0-pr-19-4507-4507f3ae; module:VirtoCommerce.MFA=3.1000.1
+    at: 2026-11-02T19:53:07.482Z
+    by: session:75d360f6
+    bodyHash: 38e51a5ff350
+    who: Aleksandra-Mitricheva
+    note: "Confirmed through the storefront UI: the per-user 2FA buyer's password sign-in on /sign-in returned two_factor_required and showed the code step, with no store or global MFA setting changed."
 ---
 With global MultiFactorAuthentication.Enabled unset (default false) and the B2B store's MultiFactorAuthentication.StoreMode unset (null), a new Customer account bound to that store with emailConfirmed=true and twoFactorEnabled=true sent POST /connect/token grant_type=password with storeId. Answer: 400 invalid_grant, code two_factor_required, a twoFactorToken, provider Email. A MfaSignInEmailNotification row appeared in the notification journal (POST /api/notifications/journal) within a second, its 6-digit code readable from the rendered body even though the send status was Error (no mail provider). The mfa grant with that code returned 200 with access and refresh tokens and amr=mfa. So a per-user flag is enough to exercise the storefront code step without changing any shared store or global setting.

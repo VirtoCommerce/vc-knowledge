@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T19:51:00.002Z",
-  "count": 1527,
+  "generated": "2026-11-02T19:55:15.084Z",
+  "count": 1528,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3629,7 +3629,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7293,6 +7293,29 @@
       "scope": [
         "module=virtocommerce.adminshell",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-38B0EAE3",
+      "path": "entries/KB-38B0EAE3.md",
+      "subject": "A second OTP request for the same email within a short window emails the same 6-digit code again rather than a new one",
+      "question": "Does a repeated POST /api/otp/request for the same email issue a new OTP code or re-send the previous one?",
+      "questions": [
+        "Is the OTP code regenerated on every Continue on the storefront sign-in?",
+        "Why do two OtpSignInEmailNotification rows carry the same code?"
+      ],
+      "anchors": [
+        "POST /api/otp/request",
+        "POST /connect/token",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12314,7 +12337,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -23289,7 +23312,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -26552,7 +26575,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -28009,7 +28032,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -30692,7 +30715,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
