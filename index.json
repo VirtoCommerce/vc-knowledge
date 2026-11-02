@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T08:58:19.433Z",
-  "count": 1510,
+  "generated": "2026-11-02T09:06:58.379Z",
+  "count": 1511,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -21087,6 +21087,30 @@
       "supersededBy": [
         "KB-17555498"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9BCB34C7",
+      "path": "entries/KB-9BCB34C7.md",
+      "subject": "Design soft in vc-frontend PR 2600 sets only --vc-radius (1rem), --vc-base-font-family (Inter) and --vc-heading-font-family (Geologica), plus footer column titles text-transform none; every scale token (--vc-radius-*, --vc-shadow-*, --vc-font-size-*, --vc-line-height-*, --vc-font-weight-*, --vc-letter-spacing-*) and heading role token stays unset, so it falls back to the classic value",
+      "question": "With design soft on vc-frontend, which shape and typography tokens take soft values and which keep classic values?",
+      "questions": [
+        "Does the soft design change shadows, font sizes, weights or letter spacing?",
+        "Which --vc-* tokens does client-app/designs/soft set?",
+        "Do Tailwind rounded-* utilities change under design soft?",
+        "Does soft have separate dark-mode shape or typography values?"
+      ],
+      "anchors": [
+        "/designs/soft/_tokens.scss",
+        "/designs/soft/blocks/footer-links.scss"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
