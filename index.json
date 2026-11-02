@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T12:40:21.246Z",
-  "count": 1523,
+  "generated": "2026-11-02T12:57:17.019Z",
+  "count": 1524,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32082,6 +32082,29 @@
         "role=sales-rep",
         "surface=storefront-ui",
         "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EAE27E77",
+      "path": "entries/KB-EAE27E77.md",
+      "subject": "A storefront customer whose Identity flag twoFactorEnabled=true is challenged with an emailed code on password sign-in even when global MultiFactorAuthentication.Enabled is off and the store has no StoreMode override",
+      "question": "Does per-user twoFactorEnabled=true make a storefront password grant ask for an email code when neither the global MFA setting nor the store's StoreMode is enabled?",
+      "questions": [
+        "How do I get a storefront user to see the MFA code step without enabling MFA for the whole store?",
+        "Does POST /connect/token answer two_factor_required for a user with twoFactorEnabled when MFA settings are off?",
+        "Is the per-user two-factor flag honoured by the MFA module on a customer sign-in?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "surface=rest",
+        "user-flag=twofactorenabled"
       ],
       "plane": "experiential",
       "status": "active",
