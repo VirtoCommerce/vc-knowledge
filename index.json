@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T09:06:58.379Z",
-  "count": 1511,
+  "generated": "2026-11-02T09:07:52.200Z",
+  "count": 1513,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4875,6 +4875,34 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-25E8DA24",
+      "path": "entries/KB-25E8DA24.md",
+      "subject": "On an account whose password is expired, a storefront passkey or email-code (OTP) sign-in is not sent to Change Password: me.passwordExpired is false in that session and gated xAPI operations answer without PasswordExpired",
+      "question": "Is a passkey (grant_type=passkey) or email-code (grant_type=otp_email) sign-in on an expired-password account forced to Change Password, and does Query.me report passwordExpired for that session?",
+      "questions": [
+        "Does POST /connect/token grant_type=otp_email on an expired-password account give me.passwordExpired true?",
+        "After a passkey sign-in, does the storefront redirect an expired-password user to /change-password?",
+        "Does Query.cart answer errors[].code PasswordExpired for a passkey or OTP session?",
+        "Is password expiry enforced only on the password grant?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "Query.me",
+        "Query.cart",
+        "/change-password"
+      ],
+      "scope": [
+        "feature=password-expiry",
+        "grant_type=otp_email",
+        "grant_type=passkey",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-25F11FF2",
@@ -16282,6 +16310,28 @@
         "principal=anonymous",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7A236504",
+      "path": "entries/KB-7A236504.md",
+      "subject": "A storefront passkey sign-in token (grant_type=passkey) carries the authenticationmethod claim \"Passkey\"",
+      "question": "Which authentication-method claim does a passkey-grant access token carry?",
+      "questions": [
+        "What is the http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod value after Sign in with Passkey?",
+        "Does a passkey sign-in token say it was a password sign-in?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=password-expiry",
+        "grant_type=passkey",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",

@@ -38,6 +38,15 @@ evidence:
     bodyHash: 9752103acf0f
     who: Lenajava1
     note: "2026-11-02: after resetpassword forcePasswordChangeOnNextSignIn:true, grant_type=password (with and without storeId) answered 200 with tokens; Query.organizations and Query.cart answered errors[].code PasswordExpired; me.passwordExpired true. Same for a back-office (Manager) account."
+  - method: observation
+    deployment: vcst_qa
+    build: 0940c86d8a29dd8a
+    conditions: platform=3.1093.0-pr-3154-4607; module:VirtoCommerce.Xapi=3.1029.0; module:VirtoCommerce.MFA=3.1001.0-pr-4-b211; theme=2.62.0-pr-2600-a4f2-a4f29534; store=B2B-store
+    at: 2026-11-02T09:04:45.498Z
+    by: session:44093462
+    bodyHash: 9752103acf0f
+    who: Lenajava1
+    note: "2026-11-02 after vc-platform#3154: storefront password sign-in on an account with resetpassword forcePasswordChangeOnNextSignIn:true -> POST /connect/token grant_type=password 200, browser lands on /change-password?returnUrl=/, GetPageContext user.passwordExpired true, Query.cart errors[].code PasswordExpired. A refresh_token grant from that session's refresh token also answers 200 and the refreshed token is still gated (me.passwordExpired true, Query.cart PasswordExpired)."
 ---
 On vcptcore_dev (platform 3.1079.0-alpha.13411, Xapi 3.1027.0-alpha.216, Return 3.1005.0-pr-28-fb4f), 2026-10-09:
 - An admin POST /api/platform/security/users/{userName}/resetpassword {newPassword, forcePasswordChangeOnNextSignIn:true} answered 200 succeeded:true, and the re-read showed passwordExpired=true.
