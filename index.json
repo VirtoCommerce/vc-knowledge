@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T19:41:38.634Z",
-  "count": 1525,
+  "generated": "2026-11-02T19:47:30.671Z",
+  "count": 1526,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19732,7 +19732,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -23952,7 +23952,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -26439,6 +26439,29 @@
       ],
       "scope": [
         "component=vcstatwidget",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C05C9D27",
+      "path": "entries/KB-C05C9D27.md",
+      "subject": "With Deutsch stored as the session language, a direct load of an unprefixed en-US PDP URL is redirected to /de/<en slug> and renders 404 when the product has a different de-DE slug",
+      "question": "What happens when a signed-in buyer whose stored language is de-DE opens an English (unprefixed) product URL whose de-DE slug differs?",
+      "questions": [
+        "Does a stored language preference redirect an unprefixed PDP URL to the /de/ prefix?",
+        "Why does an English product link show 404 after switching the storefront to German?",
+        "Is the en slug resolved in its own culture when the URL is redirected to a locale prefix?"
+      ],
+      "anchors": [
+        "/de/{id}/{id}",
+        "Query.pageContext"
+      ],
+      "scope": [
+        "entity=catalog-product-seo",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
