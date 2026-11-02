@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T08:34:36.335Z",
-  "count": 1506,
+  "generated": "2026-11-02T08:57:13.264Z",
+  "count": 1507,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22813,6 +22813,31 @@
         "page=home",
         "surface=storefront-ui",
         "theme=vc-frontend-next"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A7BECD3E",
+      "path": "entries/KB-A7BECD3E.md",
+      "subject": "A password-grant access token carries the authenticationmethod claim \"Password\", a refresh keeps it, and an expired password is then enforced on currentuser and xAPI",
+      "question": "Which authentication-method claim does a password-grant token carry, and is an expired password enforced on it and on its refreshed token?",
+      "questions": [
+        "Does a refresh_token grant keep the authentication method of the original password sign-in?",
+        "What does GET /api/platform/security/currentuser return for isPasswordSignIn with an expired password?",
+        "Does grant_type=mfa stamp the Password authentication method?",
+        "Does Basic authentication count as a password sign-in for password expiry?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "GET /api/platform/security/currentuser",
+        "Query.me"
+      ],
+      "scope": [
+        "feature=password-expiry",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
