@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T22:09:27.571Z",
-  "count": 1528,
+  "generated": "2026-11-02T22:11:09.008Z",
+  "count": 1529,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -35074,6 +35074,27 @@
       ],
       "scope": [
         "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FE21465E",
+      "path": "entries/KB-FE21465E.md",
+      "subject": "On /bulk-order Copy&Paste, a malformed line (trailing comma, quantity over 9 digits) makes Add to cart do nothing: no mutation is sent and no message is shown",
+      "question": "What does /bulk-order Copy&Paste show when a pasted line is malformed (trailing comma, 10-digit quantity)?",
+      "questions": [
+        "Does the bulk order paste show a format error message?",
+        "Is a 10-digit quantity accepted in bulk order Copy&Paste?",
+        "Are extra spaces and blank lines allowed in bulk order Copy&Paste?"
+      ],
+      "anchors": [
+        "/bulk-order"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
