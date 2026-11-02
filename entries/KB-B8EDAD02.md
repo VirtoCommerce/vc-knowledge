@@ -32,5 +32,14 @@ evidence:
     bodyHash: 78954f88e40d
     who: kutasinaelena
     note: "Re-observed 2026-10-26 in the MFA creator proof: lock→isLocked true, unlock→false, PUT status Invited then Approved read back, PUT /api/members currentOrganizationId read back."
+  - method: observation
+    deployment: vcptcore_qa
+    build: 023779f193646d5e
+    conditions: module:VirtoCommerce.Customer=3.1032.0-pr-324-b30b
+    at: 2026-11-02T22:38:15.408Z
+    by: session:75d360f6
+    bodyHash: 78954f88e40d
+    who: Aleksandra-Mitricheva
+    note: "Re-observed 2026-11-03: GET /api/members/{contactId}, set currentOrganizationId to an org the contact holds a membership in, PUT /api/members read back the pin; setting it back to null read back null."
 ---
 On vcst_qa 2026-10-23 (Customer 3.1030.0), for a fresh AGENT-TEST contact created with organizations=[A,B] and one membership row per org (POST /api/customer/organization-memberships with an org-scoped role): POST /api/customer/organization-memberships/{id}/lock with {lockoutEnd:null} read back isLocked=true, POST .../{id}/unlock read back isLocked=false; GET the row then PUT /api/customer/organization-memberships/{id} with the whole row and status=Invited read back Invited, and the same PUT with Approved restored it. GET /api/members/{contactId}, set currentOrganizationId, PUT /api/members read back the new currentOrganizationId. The other membership was untouched.
