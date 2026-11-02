@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T09:26:46.577Z",
-  "count": 1514,
+  "generated": "2026-11-02T09:32:41.015Z",
+  "count": 1516,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19525,6 +19525,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-9045E101",
+      "path": "entries/KB-9045E101.md",
+      "subject": "Under design soft the CyberSource card number and security code wrappers on /cart keep a literal 3px radius while the neighbouring cardholder and expiry inputs turn 16px",
+      "question": "Do the CyberSource card fields on /cart follow the design radius token?",
+      "questions": [
+        "Why are the card number and CVV fields square next to rounded inputs in the soft design?",
+        "Which radius do .cyber-source-input-wrap fields use?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "design=soft",
+        "payment=cybersource",
+        "surface=storefront-ui",
+        "theme=vc-frontend"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-90635C64",
       "path": "entries/KB-90635C64.md",
       "subject": "The two-role docs-writer sales rep fixture carries sales-rep-documents:read, so it sees the Document library widget",
@@ -31050,6 +31073,28 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-E5C34501",
+      "path": "entries/KB-E5C34501.md",
+      "subject": "With design soft in the ru-RU locale, the Inter and Geologica Cyrillic subsets load and Cyrillic text renders in the design faces with no fallback",
+      "question": "Do the soft design fonts render Cyrillic text, or does it fall back to another face?",
+      "questions": [
+        "Does Geologica cover Cyrillic headings on the storefront?",
+        "Is there tofu or a fallback font in Russian under the soft design?"
+      ],
+      "anchors": [
+        "/ru/catalog"
+      ],
+      "scope": [
+        "design=soft",
+        "surface=storefront-ui",
+        "theme=vc-frontend"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-E5F5442C",
