@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T09:07:52.200Z",
-  "count": 1513,
+  "generated": "2026-11-02T09:26:46.577Z",
+  "count": 1514,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13231,6 +13231,30 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-605B159A",
+      "path": "entries/KB-605B159A.md",
+      "subject": "With design soft, Builder.io text blocks keep the Lato font stack set by the Builder SDK's per-block unlayered style, while real h2 headings inside .builder-block take Geologica",
+      "question": "Do Builder.io CMS headings and text blocks follow the soft design fonts on the vc-frontend storefront?",
+      "questions": [
+        "Why is some home page text still Lato under design soft?",
+        "Does the soft heading font reach Builder.io content?",
+        "Which font do builder-text blocks render with when the theme design is soft?"
+      ],
+      "anchors": [
+        "/predefined-products",
+        "/product-section"
+      ],
+      "scope": [
+        "design=soft",
+        "surface=storefront-ui",
+        "theme=vc-frontend"
       ],
       "plane": "experiential",
       "status": "active",
