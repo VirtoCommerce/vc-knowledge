@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T12:57:17.019Z",
-  "count": 1524,
+  "generated": "2026-11-02T19:23:30.420Z",
+  "count": 1525,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33287,6 +33287,26 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F10F9679",
+      "path": "entries/KB-F10F9679.md",
+      "subject": "POST /api/page-builder-pages/search returns at most 200 results per call regardless of a larger take; totalCount reports the full number, so callers must page with skip",
+      "question": "Does the PageBuilder page search honour take above 200, or must it be paged?",
+      "questions": [
+        "Why does a page-builder page search miss pages that exist?",
+        "What is the max page size of POST /api/page-builder-pages/search?"
+      ],
+      "anchors": [
+        "POST /api/page-builder-pages/search"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",

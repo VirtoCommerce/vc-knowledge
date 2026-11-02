@@ -13,5 +13,76 @@
 {"at":"2026-11-02T12:56:58.568Z","kind":"capture-invalid","subject":"A storefront customer whose Identity flag twoFactorEnabled=true is challenged with an emailed code on password sign-in even when global MultiFactorAuthentication.Enabled is off and the store has no StoreMode override","why":"unknown surface \"storefront-api\": use one of storefront-ui, xapi, rest, admin-ui, ucp, vendor-ui","after":"2026-11-02T12:48:59.920Z","afterBy":"handle","via":"mcp","call":"toolu_019Egn4wopXgp8B8R2FVMW4y","topic":"storefront MFA sign-in test data","who":"Aleksandra-Mitricheva","agent":"test-data-engineer"}
 {"at":"2026-11-02T12:57:06.132Z","kind":"capture-held","dupeOf":"KB-B9DB6FC4","subject":"A storefront customer whose Identity flag twoFactorEnabled=true is challenged with an emailed code on password sign-in even when global MultiFactorAuthentication.Enabled is off and the store has no StoreMode override","why":"similar","when":"call","similar":["KB-B9DB6FC4"],"after":"2026-11-02T12:48:59.920Z","afterBy":"handle","via":"mcp","call":"toolu_01XtfXETLUcEtixzKA9g53Da","topic":"storefront MFA sign-in test data","who":"Aleksandra-Mitricheva","agent":"test-data-engineer"}
 {"at":"2026-11-02T12:57:16.885Z","kind":"capture","id":"KB-EAE27E77","subject":"A storefront customer whose Identity flag twoFactorEnabled=true is challenged with an emailed code on password sign-in even when global MultiFactorAuthentication.Enabled is off and the store has no StoreMode override","build":"023779f193646d5e","client":"9578699c","question":"Does per-user twoFactorEnabled=true make a storefront password grant ask for an email code when neither the global MFA setting nor the store's StoreMode is enabled?","after":"2026-11-02T12:48:59.920Z","afterBy":"handle","related":["KB-44DA3343","KB-CC18E96D","KB-A3E16349"],"read":["KB-847622A8","KB-20120AE0","KB-2BA242BB","KB-B9DB6FC4"],"via":"mcp","call":"toolu_01YKQaRdSJSwQEtoP22wgVVY","topic":"storefront MFA sign-in test data","who":"Aleksandra-Mitricheva","agent":"test-data-engineer"}
-{"at":"2026-11-02T12:57:16.908Z","kind":"session","session":"75d360f6","tools":74,"turns":4,"touchAt":[],"agents":4,"agentTools":242,"agentTouches":12,"firstAt":"2026-11-02T12:37:31.217Z","lastAt":"2026-11-02T12:53:04.575Z","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T19:23:30.353Z","kind":"session","session":"75d360f6","tools":145,"turns":8,"touchAt":[127],"agents":5,"agentTools":347,"agentTouches":19,"firstAt":"2026-11-02T12:37:31.217Z","lastAt":"2026-11-02T13:59:36.345Z","who":"Aleksandra-Mitricheva"}
 {"at":"2026-11-02T12:57:17.019Z","kind":"flush","entries":1,"lines":18,"swept":["59ab094f.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:02:34.237Z","kind":"show","id":"KB-20120AE0","state":"answer","after":"2026-11-02T12:50:04.220Z","via":"mcp","call":"toolu_017YfKAJ6cbfabZygZTioyTC","topic":"storefront upstream release merge GA4 lists","who":"Aleksandra-Mitricheva","agent":"main"}
+{"at":"2026-11-02T13:02:47.630Z","kind":"capture","id":"KB-F10F9679","subject":"POST /api/page-builder-pages/search returns at most 200 results per call regardless of a larger take; totalCount reports the full number, so callers must page with skip","build":"023779f193646d5e","client":"9578699c","question":"Does the PageBuilder page search honour take above 200, or must it be paged?","related":["KB-7D01E399","KB-8105EAF3","KB-58C11A20"],"read":["KB-20120AE0"],"via":"mcp","call":"toolu_01Dkg1yyBy1mK4DtcJq85WAB","topic":"storefront MFA sign-in test data","who":"Aleksandra-Mitricheva","agent":"test-data-engineer"}
+{"at":"2026-11-02T13:04:33.496Z","kind":"show","id":"KB-912B0774","state":"answer","verify":true,"via":"mcp","call":"toolu_0198o34Md7wLFwb9yGgqPCuy","topic":"storefront language switch","who":"Aleksandra-Mitricheva","agent":"qa-testing-expert"}
+{"at":"2026-11-02T13:04:34.293Z","kind":"show","id":"KB-2BA242BB","state":"answer","verify":true,"via":"mcp","call":"toolu_01G8pWoiZi4JRrBR6UucDyQ8","topic":"storefront language switch","who":"Aleksandra-Mitricheva","agent":"qa-testing-expert"}
+{"at":"2026-11-02T13:04:34.800Z","kind":"show","id":"KB-1A452441","state":"answer","verify":true,"via":"mcp","call":"toolu_01LeNP8pWAZz3WJrPRLe5TSX","topic":"storefront language switch","who":"Aleksandra-Mitricheva","agent":"qa-testing-expert"}
+{"at":"2026-11-02T13:08:13.057Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:09:23.288Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:10:23.325Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:11:23.393Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:12:23.295Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:13:23.351Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:14:23.329Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:15:23.315Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:16:23.363Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:17:23.342Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:18:23.291Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:19:23.327Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:20:23.309Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:21:28.607Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:22:23.394Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:23:12.759Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:24:12.795Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:25:12.797Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:26:23.371Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:27:23.488Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:28:12.798Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:29:23.457Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:30:23.414Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:31:23.498Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:32:23.449Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:33:23.502Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:34:23.493Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:35:23.456Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:36:23.530Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:37:43.695Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:38:23.549Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:39:23.559Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:40:23.569Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:41:23.575Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:43:00.036Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:43:23.588Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:44:23.517Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:45:23.596Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:46:42.321Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:47:23.630Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:48:23.603Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:49:36.424Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:50:01.090Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:55:19.688Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:55:19.721Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:57:04.027Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:57:30.341Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T13:59:08.524Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:00:06.525Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:00:06.536Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:00:30.404Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:00:47.939Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:01:30.342Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:03:09.785Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:03:29.947Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:04:30.438Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:05:30.473Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:06:30.488Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:07:30.538Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:08:30.479Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:09:30.435Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:10:30.397Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T14:23:53.946Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T16:39:17.749Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T19:21:43.877Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-02T19:22:51.347Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
