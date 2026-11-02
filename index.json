@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-10-30T17:16:00.976Z",
-  "count": 1503,
+  "generated": "2026-11-02T08:34:36.335Z",
+  "count": 1506,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1359,7 +1359,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4959,6 +4959,29 @@
       ],
       "scope": [
         "feature=passkey-management",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-279E8887",
+      "path": "entries/KB-279E8887.md",
+      "subject": "On vcst_qa the storefront's Google Fonts Lato link is rewritten by the CDN into inline @font-face rules served from /cf-fonts/, so no request reaches fonts.googleapis.com or fonts.gstatic.com",
+      "question": "Which web font requests does the storefront make on vcst_qa, and does it call fonts.googleapis.com?",
+      "questions": [
+        "Why is there no fonts.googleapis.com request on the vcst storefront?",
+        "Where does the Lato font come from on vcst_qa?",
+        "Is the index.html Google Fonts stylesheet link present in the served HTML on vcst?"
+      ],
+      "anchors": [
+        "/cart",
+        "GET /cf-fonts/s/lato/5.2.7/latin/{id}/normal.woff2"
+      ],
+      "scope": [
+        "layer=edge-cdn",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -14811,6 +14834,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6E8D796E",
+      "path": "entries/KB-6E8D796E.md",
+      "subject": "With design soft (vc-frontend PR 2600) the storefront adds one runtime link[data-design-fonts] stylesheet for Inter + Geologica, keeps the index.html Lato stylesheet, does not wait for the new stylesheet, and falls back to the generic sans-serif when it is blocked",
+      "question": "How does the soft design load its fonts, and what happens when the design-fonts stylesheet is slow or blocked?",
+      "questions": [
+        "What is link[data-design-fonts] on the storefront?",
+        "Does the storefront wait for design fonts before rendering?",
+        "Is Lato still requested with design soft?"
+      ],
+      "anchors": [
+        "GET /css2?family=Inter",
+        "/cart"
+      ],
+      "scope": [
+        "design=soft",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -33868,6 +33914,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F7D6C16B",
+      "path": "entries/KB-F7D6C16B.md",
+      "subject": "Storefront footer column titles (.footer-links__title) compute text-transform uppercase in design classic and none in design soft (vc-frontend PR 2600)",
+      "question": "Are the storefront footer column titles uppercase, and does that depend on the design?",
+      "questions": [
+        "What text-transform do footer link-list headers have on the storefront?",
+        "Does the soft design change the footer column title case?"
+      ],
+      "anchors": [
+        "/cart",
+        "/account/orders/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
