@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T09:54:55.582Z",
-  "count": 1517,
+  "generated": "2026-11-02T10:06:41.304Z",
+  "count": 1518,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4914,6 +4914,26 @@
       ],
       "scope": [
         "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-261CE805",
+      "path": "entries/KB-261CE805.md",
+      "subject": "With design classic, vc-frontend PR 2600 renders computed-style identical to dev@4ce61d0c on storefront pages, light and dark, 1280 and 375: 0 differences in type, shape, shadow and --color-*",
+      "question": "Does vc-frontend PR 2600 change anything a shopper sees in design classic (fonts, radius, shadows, colours), in any mode or viewport?",
+      "anchors": [
+        "/catalog",
+        "/cart",
+        "/account/orders"
+      ],
+      "scope": [
+        "design=classic",
+        "surface=storefront-ui",
+        "theme=vc-frontend"
       ],
       "plane": "experiential",
       "status": "active",
