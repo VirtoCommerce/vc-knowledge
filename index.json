@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T11:21:39.063Z",
-  "count": 1520,
+  "generated": "2026-11-02T11:28:29.715Z",
+  "count": 1521,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28412,6 +28412,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D04A9D30",
+      "path": "entries/KB-D04A9D30.md",
+      "subject": "On theme 2.61.0 (PR 2608 build) the Filters popover on /company/customer-orders reopens at 375px without horizontal page scroll; focus moves into the panel and page scroll is preserved",
+      "question": "Does reopening the Filters popover on /company/customer-orders at 375px make the page scroll horizontally?",
+      "questions": [
+        "Where does the sales-rep orders Filters panel land at 375px on every reopen?",
+        "Does opening a role=dialog VcPopover scroll the page?",
+        "Is VCST-6197 horizontal overflow on the customer-orders filter drawer fixed?"
+      ],
+      "anchors": [
+        "/company/customer-orders",
+        "/account/orders"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
