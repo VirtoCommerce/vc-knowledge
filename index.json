@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T22:38:15.724Z",
-  "count": 1529,
+  "generated": "2026-11-02T22:39:00.050Z",
+  "count": 1531,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11282,6 +11282,30 @@
       "disputed": 4
     },
     {
+      "id": "KB-5145B031",
+      "path": "entries/KB-5145B031.md",
+      "subject": "With store setting Stores.AllowAnonymousUsers=false, xAPI store.settings.anonymousUsersAllowed reads false and a token-less products query is refused with an Unauthorized GraphQL error at HTTP 200",
+      "question": "Which store setting makes the storefront send anonymous visitors to /sign-in, and what does a guest xAPI catalog query return then?",
+      "questions": [
+        "Why does an anonymous GraphQL products query return Unauthorized?",
+        "Where is anonymousUsersAllowed configured for a store?",
+        "Is the B2B store's anonymous browsing a theme setting or a store setting?"
+      ],
+      "anchors": [
+        "Query.store",
+        "Query.products",
+        "GET /api/stores/{id}"
+      ],
+      "scope": [
+        "actor=anonymous",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-515D41EC",
       "path": "entries/KB-515D41EC.md",
       "subject": "Barcode scanner blade lists the saved (checked) fields first, then the rest, each group sorted alphabetically by display label - not in stored order",
@@ -21569,6 +21593,28 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9DB0A0A2",
+      "path": "entries/KB-9DB0A0A2.md",
+      "subject": "slugInfo for a Page Builder page published only in en-US resolves to that en-US page for de-DE and fr-FR too",
+      "question": "What does slugInfo return in another culture for a Page Builder page that exists in en-US only?",
+      "questions": [
+        "Does a single-language Page Builder page 404 in other storefront languages?",
+        "Which languageCode does slugInfo report for a page with no translation?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "POST /api/page-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=pagebuilder",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
