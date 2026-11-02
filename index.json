@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T10:06:41.304Z",
-  "count": 1518,
+  "generated": "2026-11-02T11:21:39.063Z",
+  "count": 1520,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16834,6 +16834,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-7CAAD492",
+      "path": "entries/KB-7CAAD492.md",
+      "subject": "With design soft (vc-frontend PR 2600) the /cart Discount & coupons widget turns 16px while its coupon cards stay 4px, and the /account/orders active nav item stays 6px inside a 16px widget, because Tailwind rounded-* utilities read the unset --vc-radius-* scale, not --vc-radius",
+      "question": "Under the soft design, do cart coupon cards and the account nav follow the widget's 16px radius?",
+      "questions": [
+        "Why are coupon cards 4px in a 16px widget with design soft?",
+        "Do Tailwind rounded utilities follow --vc-radius in the soft design?",
+        "Is the active account navigation item rounded like its widget under soft?"
+      ],
+      "anchors": [
+        "/cart",
+        "/account/orders"
+      ],
+      "scope": [
+        "design=soft",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7CC25D4A",
       "path": "entries/KB-7CC25D4A.md",
       "subject": "A Draft row in the storefront returns list opens the /edit wizard step, which has no cancel/discard control; Cancel return exists only on /account/returns/:id",
@@ -32096,6 +32119,28 @@
       "scope": [
         "module=profile-experience-api",
         "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EBF47FCB",
+      "path": "entries/KB-EBF47FCB.md",
+      "subject": "With design soft (vc-frontend PR 2600) the disabled Email input on /account/profile silently clips a long address at 375 and 1024 px: Inter widens the text past the box and the field shows no ellipsis and cannot be scrolled; classic Lato fits",
+      "question": "Does the disabled email field on /account/profile fit a long address under the soft design?",
+      "questions": [
+        "Is the /account/profile email clipped with the soft Inter font?",
+        "Does the soft design cause text overflow on the profile page?",
+        "Why is the account profile email cut off on narrow screens with design soft?"
+      ],
+      "anchors": [
+        "/account/profile"
+      ],
+      "scope": [
+        "design=soft",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
