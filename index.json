@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T09:32:41.015Z",
-  "count": 1516,
+  "generated": "2026-11-02T09:50:18.933Z",
+  "count": 1517,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1359,7 +1359,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -5015,7 +5015,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14932,7 +14932,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -34172,7 +34172,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -34602,6 +34602,30 @@
       "scope": [
         "module=sitemaps",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FAA9EF27",
+      "path": "entries/KB-FAA9EF27.md",
+      "subject": "In print media the storefront keeps the active design's fonts and radius tokens (soft prints Inter/Geologica with 16px containers), and classic print of /cart and order details is unchanged by vc-frontend PR 2600",
+      "question": "Does printing /cart or an order details page use the design's typography and shape tokens, and did PR 2600 change classic print?",
+      "questions": [
+        "What fonts does the storefront print in with design soft?",
+        "Is the print view of the cart the same on classic before and after the token refactor?",
+        "Does the print stylesheet override --vc-radius or the font tokens?"
+      ],
+      "anchors": [
+        "/cart",
+        "/account/orders/{id}"
+      ],
+      "scope": [
+        "media=print",
+        "surface=storefront-ui",
+        "theme=vc-frontend"
       ],
       "plane": "experiential",
       "status": "active",

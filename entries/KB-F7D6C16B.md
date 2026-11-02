@@ -23,5 +23,14 @@ evidence:
     at: 2026-11-02T08:33:17.508Z
     by: session:a1013b77
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 0940c86d8a29dd8a
+    conditions: theme=vc-frontend PR 2600 @ a4f29534; setting:design=soft (local build) vs classic-BASE dev@4ce61d0c and vcst classic-PR; browser=chromium 1920x1080
+    at: 2026-11-02T09:46:05.629Z
+    by: session:be9f7d04
+    bodyHash: 38e23f63850e
+    who: Lenajava1
+    note: "Chromium: .footer-links__title text-transform none (Inter) on soft home, /catalog, PDP, /cart, /account/orders, light and dark; uppercase (Lato) on classic-BASE home/cart (light and dark) and on vcst classic-PR /cart."
 ---
 At 1920 px, every visible footer column title span.footer-links__title (7 columns: Account details, About us, Popular categories, Online resources, External links, Customer support, Brands) computes text-transform uppercase, Lato 700 14px, on vcst_qa (theme 2.62.0-pr-2600, design classic), on the home page and /cart. The wrapper span.footer-links__header is text-transform none. On a production build of the same PR with design soft, proxied to the same backend, the same 7 titles compute text-transform none in Inter, on the home page and an order details page. The case of the titles comes from the design, not from the footer component.
