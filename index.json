@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T19:47:30.671Z",
-  "count": 1526,
+  "generated": "2026-11-02T19:51:00.002Z",
+  "count": 1527,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11944,6 +11944,29 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-553F411E",
+      "path": "entries/KB-553F411E.md",
+      "subject": "At 375 px a full load of a short storefront page shifts the app footer as content and footer links resolve, CLS 0.18-0.47",
+      "question": "Does the storefront footer cause a layout shift on initial load at 375 px?",
+      "questions": [
+        "Why is CLS above 0.1 on /account/security at mobile width?",
+        "What element causes layout shift on /cart and /account/profile at 375 px?"
+      ],
+      "anchors": [
+        "/account/security",
+        "/account/profile",
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=375"
       ],
       "plane": "experiential",
       "status": "active",
