@@ -1,0 +1,2 @@
+{"at":"2026-11-02T10:08:22.088Z","kind":"ask","q":"/company/customer-orders filters drawer at 375px horizontal scroll on reopen (VcPopover role=dialog focus)","state":"unreachable","why":"could not read kb.json: timeout: The operation was aborted due to timeout","rank":"floor-1","via":"mcp","call":"toolu_01KN7XQszGDWFL7sKE7Kre2w","topic":"sales rep orders filters popover","deployment":"vcptcore_qa","who":"Aleksandra-Mitricheva","agent":"qa-frontend-expert"}
+{"at":"2026-11-02T11:19:35.090Z","kind":"restart","why":"state-dropped","who":"Aleksandra-Mitricheva"}
