@@ -29,6 +29,15 @@ evidence:
     bodyHash: 9752103acf0f
     who: Lenajava1
     note: "vcst_qa 2026-10-29: after resetpassword forcePasswordChangeOnNextSignIn:true the password grant (storeId B2B-store) answered 200 with a token, backend Query.me returned passwordExpired true, and the storefront xAPI Query.cart answered errors[].code PasswordExpired."
+  - method: observation
+    deployment: vcst_qa
+    build: 0940c86d8a29dd8a
+    conditions: platform=3.1093.0-pr-3154-4607; module:VirtoCommerce.Xapi=3.1029.0; store=B2B-store
+    at: 2026-11-02T08:57:36.447Z
+    by: session:44093462
+    bodyHash: 9752103acf0f
+    who: Lenajava1
+    note: "2026-11-02: after resetpassword forcePasswordChangeOnNextSignIn:true, grant_type=password (with and without storeId) answered 200 with tokens; Query.organizations and Query.cart answered errors[].code PasswordExpired; me.passwordExpired true. Same for a back-office (Manager) account."
 ---
 On vcptcore_dev (platform 3.1079.0-alpha.13411, Xapi 3.1027.0-alpha.216, Return 3.1005.0-pr-28-fb4f), 2026-10-09:
 - An admin POST /api/platform/security/users/{userName}/resetpassword {newPassword, forcePasswordChangeOnNextSignIn:true} answered 200 succeeded:true, and the re-read showed passwordExpired=true.

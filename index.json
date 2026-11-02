@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T08:57:13.264Z",
-  "count": 1507,
+  "generated": "2026-11-02T08:58:19.433Z",
+  "count": 1510,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1679,7 +1679,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0,
       "resolved": 1
     },
@@ -2954,7 +2954,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-160CE93F",
@@ -9240,6 +9241,29 @@
       "scope": [
         "actor=anonymous",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-47B9B5E5",
+      "path": "entries/KB-47B9B5E5.md",
+      "subject": "An otp_email token carries authenticationmethod \"OTP\" and an expired password is not enforced on it or its refresh",
+      "question": "Is an expired password enforced on an email-code (otp_email) sign-in token?",
+      "questions": [
+        "What does currentuser return for isPasswordSignIn after an OTP email sign-in?",
+        "Does me.passwordExpired stay false for an OTP sign-in of an expired-password customer?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/otp/request",
+        "GET /api/platform/security/currentuser"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -28661,6 +28685,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-D33FDD89",
+      "path": "entries/KB-D33FDD89.md",
+      "subject": "POST /connect/session refuses a password-sign-in token of an expired user and an impersonation token, and creates the cookie session for an OTP token of the same expired user",
+      "question": "When does POST /connect/session (bearer token to platform cookie session) refuse an expired-password user?",
+      "questions": [
+        "How do I call /connect/session with a bearer token — antiforgery header and returnUrl?",
+        "Does /connect/session accept an impersonation token?"
+      ],
+      "anchors": [
+        "POST /connect/session",
+        "GET /connect/session"
+      ],
+      "scope": [
+        "feature=password-expiry",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D3B7A017",
       "path": "entries/KB-D3B7A017.md",
       "subject": "The Tasks app grid range label is wrong on a short last page: rows 21–29 of a 29-row list are labelled '16–24 of 29'",
@@ -31151,6 +31197,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-E7BBCECF",
+      "path": "entries/KB-E7BBCECF.md",
+      "subject": "An impersonation token of an expired-password customer carries no authentication-method claim and the expiry is not enforced on it or on its refresh",
+      "question": "Is an expired password enforced on a session opened with grant_type=impersonate?",
+      "questions": [
+        "What does me.passwordExpired return in an impersonated session of an expired-password user?",
+        "Does an impersonate-grant token carry the authenticationmethod claim?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "GET /api/platform/security/currentuser",
+        "Query.me"
+      ],
+      "scope": [
+        "feature=impersonation",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E7DF9B84",
       "path": "entries/KB-E7DF9B84.md",
       "subject": "the storefront footer renders top-level link-list entries as section headers and only their children as links",
@@ -31483,7 +31552,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
