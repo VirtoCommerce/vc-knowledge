@@ -60,5 +60,14 @@ evidence:
     bodyHash: 61d925a4da52
     who: Lenajava1
     note: "Chromium/Edge, element-paired by DOM path, soft vs classic-BASE home light 1461 pairs / dark 1443 / /cart 1625 / /account/orders 1322: only font-family, --vc-radius consumers (8->16, 6->14) and 7 footer titles (uppercase->none) differ; font-size, line-height (computed string), font-weight, letter-spacing, font-style, box-shadow 0 differences; runtime --color-* 0 differences light and dark (230 of 238 differ light->dark inside each build, so the comparison is mode-sensitive). Of 242 sampled root custom properties only --vc-radius, --vc-base-font-family, --vc-heading-font-family (plus the font-family alias) differ. Storybook h1-h6 (VcMarkdownRender headings story): soft changes family only (Lato->Geologica), size/line-height/weight/case/spacing equal classic."
+  - method: observation
+    deployment: vcst_qa
+    build: e9956932af8d8459
+    conditions: theme=vc-frontend PR 2600 @ a4f29534; setting:design=soft (local build); browser=Edge (Chromium) 1280+375, light+dark, anonymous and signed-in; baseline=vc-frontend dev@4ce61d0c classic
+    at: 2026-11-02T10:15:19.775Z
+    by: session:9e59a9c2
+    bodyHash: 61d925a4da52
+    who: Lenajava1
+    note: "Edge: 11 anonymous + 11 signed-in pages in P x 1280/375 x light/dark, element-paired by DOM path, soft vs classic-BASE: only font-family, --vc-radius consumers and 7 footer titles differ; --vc-color-* 0 differences in every cell. Source grep: 0 colour properties in client-app/designs/soft. Classic-PR (vcst) vs classic-BASE: 0 differences in every cell."
 ---
 Read at vc-frontend PR 2600 head a4f29534 (applies to every storefront page, home included). client-app/designs/soft/_tokens.scss sets, on html[data-design="soft"], exactly three tokens: --vc-radius: 1rem, --vc-base-font-family: Inter, sans-serif and --vc-heading-font-family: Geologica, sans-serif. client-app/designs/soft/blocks/footer-links.scss (layer vc.design) removes the uppercase of .footer-links__title. tailwind.config.ts wraps the radius (except none/full), shadow (one token per shadow part), font-size + line-height, line-height, font-weight and letter-spacing scales as var(--vc-<property>-<key>, <previous literal>). The heading rule in _typography-roles.scss reads --vc-heading-font-weight/-font-style/-text-transform/-letter-spacing with fallback inherit. Soft sets none of these scale or role tokens, so under soft they all resolve to the classic values. Tailwind rounded-* utilities therefore stay classic, and only component SCSS that reads var(--vc-radius) directly turns 1rem. No soft value is scoped to dark mode.
