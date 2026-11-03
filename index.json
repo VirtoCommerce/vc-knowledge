@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T16:57:54.763Z",
-  "count": 1552,
+  "generated": "2026-11-03T17:04:11.104Z",
+  "count": 1554,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7618,6 +7618,25 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3B64A70B",
+      "path": "entries/KB-3B64A70B.md",
+      "subject": "salesRepActivities reports isAnalyticsAvailable false for three reps on a store that has GA tracking enabled and a Data-API property id, and the storefront shows (–) on every GA tab with an incomplete-data notice",
+      "question": "Why do the My activity GA tabs show (–) on the QA stand although the store has Google Analytics tracking enabled?",
+      "anchors": [
+        "Query.salesRepActivities",
+        "/company/activities"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -34893,6 +34912,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F7BA392B",
+      "path": "entries/KB-F7BA392B.md",
+      "subject": "GET /api/platform/settings/modules/VirtoCommerce.SalesRep returns 9 module settings: SalesRep.Enabled plus four Statistics cache-expiration minutes (default 5) and four InvalidateOnChange flags",
+      "question": "Where are the Sales Rep Statistics cache-expiration settings stored and what are the module's settings and defaults?",
+      "anchors": [
+        "GET /api/platform/settings/modules/VirtoCommerce.SalesRep"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=administrator",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
