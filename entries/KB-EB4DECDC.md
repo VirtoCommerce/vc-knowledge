@@ -42,5 +42,14 @@ evidence:
     bodyHash: 244746d5630a
     who: Lenajava1
     note: "Via the GraphQL runner as ORG_USER (B2B org member) merging USER2's named and default carts: Forbidden, victim intact; USER2's own Electronics cart into a B2B-store target: Forbidden, source and target unchanged; a removed cart's id as secondCartId: no error, target unchanged; own named cart merge: allowed."
+  - method: observation
+    deployment: vcst_qa
+    build: 8cc253c1304af90a
+    conditions: platform=3.1093.0-pr-3154-4607; theme=2.62.0-pr-2600-a4f2-a4f29534; module:VirtoCommerce.XCart=3.1045.0-pr-153-ec03; store=B2B-store; role=personal customer
+    at: 2026-11-03T15:28:40.365Z
+    by: session:3107e574
+    bodyHash: 244746d5630a
+    who: Lenajava1
+    note: "Storefront /graphql from the page: anonymous mergeCart (no Authorization, cookies omitted) on a signed-in customer's named cart -> HTTP 200, mergeCart null, Unauthorized; victim intact, anonymous target never created. Runner CRL-GQL-130/131: signed-in non-owner Forbidden, own cart of another store Forbidden. A signed-in customer merging an isAnonymous=true guest cart by secondCartId is allowed: both products in the target, guest cart deleted."
 ---
 On XCart 3.1045.0-pr-153-ec03 (VCST-6185 fix) I signed in on the storefront as two personal customers and called Mutation.mergeCart through the storefront /graphql. (1) User B merging user A's named B2B-store cart (secondCartId = A's cart id, userId = B, cartName = B's named cart, deleteAfterMerge omitted or false) got HTTP 200 with data.mergeCart = null and errors[0] {message "Access denied.", extensions.code "Forbidden"}, 3 of 3 times. A's cart still existed with the same item and quantity, and B's target cart was unchanged. (2) An anonymous call (no Authorization header, or the storefront's anonymous-session token) with A's cart id got errors[0] code "Unauthorized", message "Anonymous access denied or access token has expired or is invalid."; A's cart was intact. (3) B merging B's OWN cart from another store (Electronics) into a B2B-store target got "Forbidden", and the source was left in place. (4) B merging B's own same-store named cart succeeded: the items arrived in the target and the source was deleted (deleteAfterMerge default). (5) A secondCartId matching no cart (a random GUID) returned the unchanged target cart with no error. Before the fix, the same call from (1) succeeded and deleted the victim cart.
