@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T17:40:43.804Z",
-  "count": 1554,
+  "generated": "2026-11-03T17:44:40.485Z",
+  "count": 1555,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3396,6 +3396,30 @@
       "scope": [
         "auth=admin",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-18660449",
+      "path": "entries/KB-18660449.md",
+      "subject": "A sales rep's REST organizations[] (GET /api/sales-rep/{id}) and its xAPI salesRepCustomers list the same live organizations",
+      "question": "Does salesRepCustomers on /graphql/sales-rep return the same organizations as GET /api/sales-rep/{id} organizations[] for that rep?",
+      "questions": [
+        "How do I prove a sales rep serves an organization without admin rights?",
+        "Is GET /api/sales-rep/{id} organizations[] a reliable source for which orgs salesRepCustomers returns?",
+        "Does an organization served by one rep show up in another rep's salesRepCustomers?"
+      ],
+      "anchors": [
+        "GET /api/sales-rep/{id}",
+        "Query.salesRepCustomers",
+        "GET /api/members/{id}"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
