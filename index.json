@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T15:17:17.712Z",
-  "count": 1537,
+  "generated": "2026-11-03T15:20:54.219Z",
+  "count": 1538,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28966,6 +28966,27 @@
         "KB-2F64A447"
       ],
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D1E22FE7",
+      "path": "entries/KB-D1E22FE7.md",
+      "subject": "mergeCart lets an administrator merge another customer's same-store cart, but still refuses a cart of another store with Forbidden",
+      "question": "Can an administrator merge another customer's cart with mergeCart secondCartId, and is a cart of another store refused for an administrator too?",
+      "concepts": [
+        "cart"
+      ],
+      "anchors": [
+        "Mutation.mergeCart",
+        "InputMergeCartType.secondCartId"
+      ],
+      "scope": [
+        "role=administrator",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
