@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T17:55:51.520Z",
-  "count": 1560,
+  "generated": "2026-11-03T17:59:43.935Z",
+  "count": 1561,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -25829,6 +25829,30 @@
       "scope": [
         "module=background-jobs",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B6E151FC",
+      "path": "entries/KB-B6E151FC.md",
+      "subject": "SaveSalesRepLayout for scope customerProfile sends {scope, storeId, schemaVersion:1, regions} with no organizationId, and the coupons block in mainLeft carries a maxRows setting (default 5) like orders and top_sellers",
+      "question": "What does the customer-profile Save layout send in SaveSalesRepLayout, and which blocks carry a maxRows setting?",
+      "questions": [
+        "Does the customerProfile layout save carry an organizationId?",
+        "Is the Available coupons widget configurable with Max rows on the customer profile?",
+        "What regions and blocks does SaveSalesRepLayout emit for scope customerProfile?"
+      ],
+      "anchors": [
+        "Mutation.saveSalesRepLayout",
+        "/company/my-customers/{id}",
+        "Query.salesRepCoupons"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
