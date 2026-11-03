@@ -22,5 +22,14 @@ evidence:
     who: Aleksandra-Mitricheva
     build: 4cf2388dc319408b
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_qa
+    build: 7b487e2da4bd961b
+    conditions: theme=2.62.0-pr-2627-92b1-92b10c04; module:VirtoCommerce.SalesRep=3.1017.0-pr-31-efa5; store=B2B-store
+    at: 2026-11-03T14:13:42.100Z
+    by: session:571829f4
+    bodyHash: 97296260592f
+    who: Aleksandra-Mitricheva
+    note: "Held: nl-BL and nl-NL render the header link, rail title and breadcrumb as 'Sales Rep Hub' (English), host labels English too, no raw keys; zh/ja/it/pt/pl/es/fr/de/ru translated, en-GB English."
 ---
 Theme 2.59.0 PR build 2539, B2B-store whose language switcher lists two entries labelled "Nederlands" (cultures nl-BL and nl-NL) plus two labelled "English" (en-US, en-GB). Selecting either Dutch entry (in-session via switcher, which does a full reload to /nl-NL/... or /nl-BL/...) and cold-loading /nl-NL/company/dashboard both render html lang=nl-*, but every Sales Rep hub string (sidebar 'Sales Rep hub', H1 'Dashboard', the 'All blocks are hidden' empty state and its buttons) is the English text; no raw sales_rep.* keys appear. The same page in de/es/fr/it/ja/pl/pt/ru/zh renders translated strings. So Dutch is an English fallback, consistent across the hub, not a partial translation.
