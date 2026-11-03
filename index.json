@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T16:21:56.230Z",
-  "count": 1543,
+  "generated": "2026-11-03T16:29:39.947Z",
+  "count": 1544,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9331,6 +9331,30 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-471859D5",
+      "path": "entries/KB-471859D5.md",
+      "subject": "A promotion usage is recorded only by placing an order whose discount carries the coupon; no REST endpoint writes one",
+      "question": "How do I record a coupon use (a PromotionUsage) through the API so a coupon's usage count goes up?",
+      "questions": [
+        "Is there a REST endpoint for promotion usages in the Marketing module?",
+        "How do I make a capped coupon partially or fully used up for a test fixture?",
+        "Does POST /api/order/customerOrders with a coupon discount count as a coupon use?",
+        "How long after an order is created does the coupon's totalUsesCount change?"
+      ],
+      "anchors": [
+        "POST /api/order/customerOrders",
+        "POST /api/marketing/promotions/coupons/search"
+      ],
+      "scope": [
+        "module=marketing",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
