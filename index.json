@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T20:19:32.075Z",
-  "count": 1566,
+  "generated": "2026-11-03T20:22:47.466Z",
+  "count": 1568,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19129,6 +19129,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-8A0499D7",
+      "path": "entries/KB-8A0499D7.md",
+      "subject": "A canceled index build still advances the document type's lastIndexationDate in GET /api/search/indexes and the admin Search index grid",
+      "question": "Does canceling a running index build change the 'Last indexed' date of the index?",
+      "questions": [
+        "Can the Last indexed column tell a canceled build from a completed one?",
+        "What does GET /api/search/indexes report after an indexation is canceled?"
+      ],
+      "concepts": [
+        "search-index"
+      ],
+      "anchors": [
+        "GET /api/search/indexes",
+        "POST /api/search/indexes/index",
+        "GET /api/search/indexes/tasks/{id}/cancel"
+      ],
+      "scope": [
+        "surface=admin-rest",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8A1B3406",
       "path": "entries/KB-8A1B3406.md",
       "subject": "Header search dropdown pushes one view_item_list search_bar per open with a phrase; Escape clears the box and a reopen with it empty shows the previous phrase's results and pushes nothing",
@@ -28964,6 +28990,27 @@
       ],
       "scope": [
         "module=virtocommerce.adminshell",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CF3D4DCD",
+      "path": "entries/KB-CF3D4DCD.md",
+      "subject": "In the admin Search index blade, Swap indices is a context-menu action on the backup row, applied immediately without confirmation",
+      "question": "Where is the swap-indexes action in the admin Search index blade and does it ask for confirmation?",
+      "questions": [
+        "How do I swap active and backup search indexes in the Virto admin?",
+        "Does Swap indices show a confirmation dialog?"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/swapIndex",
+        "GET /api/search/indexes"
+      ],
+      "scope": [
         "surface=admin-ui"
       ],
       "plane": "experiential",
