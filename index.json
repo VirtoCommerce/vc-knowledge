@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T17:44:40.485Z",
-  "count": 1555,
+  "generated": "2026-11-03T17:50:43.874Z",
+  "count": 1557,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14425,7 +14425,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -32614,6 +32614,29 @@
       "resolved": 1
     },
     {
+      "id": "KB-EACB5F0A",
+      "path": "entries/KB-EACB5F0A.md",
+      "subject": "Query.promotionCoupons refuses an anonymous caller with extensions.code Unauthorized and data null",
+      "question": "Can an anonymous caller query promotionCoupons?",
+      "questions": [
+        "Why does promotionCoupons return Unauthorized in GraphiQL?",
+        "Does promotionCoupons need a signed-in user token?",
+        "What does promotionCoupons return without a bearer token?"
+      ],
+      "anchors": [
+        "Query.promotionCoupons",
+        "POST /graphql"
+      ],
+      "scope": [
+        "principal=anonymous",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EAD1674C",
       "path": "entries/KB-EAD1674C.md",
       "subject": "TaskManagement REST finish with completed=false closes a task as isActive=false, completed=false, and the owning sales rep still lists it and can delete it",
@@ -34547,6 +34570,29 @@
       "scope": [
         "auth=customer",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F490DA8B",
+      "path": "entries/KB-F490DA8B.md",
+      "subject": "promotionCoupons and /account/coupons still list a coupon whose own expiration date has passed while its promotion is active, showing the promotion's endDate",
+      "question": "Is a coupon with a past coupon expiration date (promotion still active) listed on /account/coupons?",
+      "questions": [
+        "Does promotionCoupons filter on the coupon's expirationDate or only the promotion's endDate?",
+        "Why does an expired coupon still show on the account coupons page?",
+        "Which Expires date does the coupon card show — coupon or promotion?"
+      ],
+      "anchors": [
+        "Query.promotionCoupons",
+        "/account/coupons"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
