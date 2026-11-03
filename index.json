@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T17:59:43.935Z",
-  "count": 1561,
+  "generated": "2026-11-03T18:06:14.811Z",
+  "count": 1563,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13589,6 +13589,28 @@
       "anchors": [
         "/company/tasks",
         "Query.salesRepTaskTypes"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-60073765",
+      "path": "entries/KB-60073765.md",
+      "subject": "On the rep coupons page, paging refetches salesRepCoupons, so a total that shrank while the rep sat on the last page is picked up on the next page change and the pager drops the vanished page",
+      "question": "What does /company/my-customers/{id}/coupons show when the coupon total shrinks by one while the rep is on a last page that held one coupon?",
+      "questions": [
+        "Does the sales rep coupons pager clamp when the last page disappears?",
+        "Does the rep coupons page serve a cached totalCount when paging back and forth?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/coupons",
+        "Query.salesRepCoupons"
       ],
       "scope": [
         "role=sales-rep",
@@ -31237,6 +31259,27 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E0336E34",
+      "path": "entries/KB-E0336E34.md",
+      "subject": "A coupon whose MemberId is an organization applies on /cart only for a buyer of that organization; a buyer of another organization gets \"This code is not valid\"",
+      "question": "Who can redeem a coupon registered to an organization (coupon MemberId = organization id) in the storefront cart?",
+      "questions": [
+        "Does a member-bound coupon work for buyers of other organizations?",
+        "What does the cart Custom code field show for a coupon bound to another organization?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.addCoupon"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
