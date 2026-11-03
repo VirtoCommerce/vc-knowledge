@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T15:29:43.407Z",
-  "count": 1540,
+  "generated": "2026-11-03T15:37:46.325Z",
+  "count": 1541,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6709,6 +6709,30 @@
       "scope": [
         "surface=graphql",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-34175B44",
+      "path": "entries/KB-34175B44.md",
+      "subject": "A signed-in customer reading Query.cart by another user's userId (a guest id) and cartName gets Forbidden; the same read sent anonymously is answered (null once the cart is gone)",
+      "question": "Can a signed-in customer read a guest's cart by passing the guest's userId and cartName to Query.cart?",
+      "questions": [
+        "Why does a cart-by-name read with a guest userId return Access denied after sign-in?",
+        "How do I check that a guest's named cart is gone after a merge?"
+      ],
+      "concepts": [
+        "cart"
+      ],
+      "anchors": [
+        "Query.cart"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
