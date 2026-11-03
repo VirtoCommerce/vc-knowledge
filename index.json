@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T20:41:51.268Z",
-  "count": 1570,
+  "generated": "2026-11-03T20:44:50.908Z",
+  "count": 1571,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2534,6 +2534,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1249F34B",
+      "path": "entries/KB-1249F34B.md",
+      "subject": "Storefront renders numeric Range facets (price, Volume_ml) as a slider with Start/End inputs, not a bucket list, when theme setting range_filter_type is slider",
+      "question": "How does the storefront catalog sidebar render a numeric Range facet configured in Admin, as clickable buckets or a slider?",
+      "questions": [
+        "Why does a Range facet configured with bounds show a slider instead of bucket labels on the storefront?",
+        "What does range_filter_type do in vc-frontend?"
+      ],
+      "anchors": [
+        "/catalog",
+        "Query.products"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
