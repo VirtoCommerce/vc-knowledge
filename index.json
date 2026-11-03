@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T20:44:50.908Z",
-  "count": 1571,
+  "generated": "2026-11-03T21:18:32.158Z",
+  "count": 1576,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11942,6 +11942,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-52EAADEE",
+      "path": "entries/KB-52EAADEE.md",
+      "subject": "A catalog product property is indexed under its lowercased name in the shared Product index, so a property named like a typed field (Price → price double, Size → size integer) with a non-numeric value gets the whole document rejected",
+      "question": "Why does a Product index build reject a document with \"failed to parse field [price] of type [double]\" or \"[size] of type [integer]\" when the product has a text property called Price or Size?",
+      "questions": [
+        "How are product property names mapped to Elasticsearch field names in the Product index?",
+        "Can a catalog property named Price or Size break indexing of a product?",
+        "Is the Product index mapping shared across catalogs and stores?"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "POST /api/catalog/products"
+      ],
+      "scope": [
+        "module=catalog",
+        "subsystem=search-index",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-53083E6B",
       "path": "entries/KB-53083E6B.md",
       "subject": "Query.orders hides a buyer's own order whose organizationId is null when the buyer has a current organization",
@@ -17750,6 +17774,28 @@
       "contested": 1
     },
     {
+      "id": "KB-7F3640D6",
+      "path": "entries/KB-7F3640D6.md",
+      "subject": "A CATEGORY-level property of a physical catalog linked into the store's virtual catalog is offered in the store's Facets list (GET aggregationproperties/{storeId}/properties)",
+      "question": "Which catalog properties does GET /api/catalog/aggregationproperties/{storeId}/properties offer for a store whose catalog is virtual?",
+      "questions": [
+        "Can I make a property available as a store facet without defining it on the whole catalog?",
+        "Does the store Search configuration Facets list include inline product properties?"
+      ],
+      "anchors": [
+        "GET /api/catalog/aggregationproperties/{id}/properties",
+        "POST /api/catalog/properties"
+      ],
+      "scope": [
+        "module=catalog",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7F535D52",
       "path": "entries/KB-7F535D52.md",
       "subject": "CyberSource sandbox authorization on the storefront cart is non-deterministic between runs on one build: the same card and amount can authorize cleanly to Processing, or be held for review and leave the order at Payment required.",
@@ -18663,6 +18709,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-865DD4C8",
+      "path": "entries/KB-865DD4C8.md",
+      "subject": "POST /api/catalog/products that renames or retypes an inline property value updates the same value row in place (same value id), with no second value left behind",
+      "question": "If I change an inline product property's name or valueType through POST /api/catalog/products, is the old value replaced or kept beside the new one?",
+      "anchors": [
+        "POST /api/catalog/products"
+      ],
+      "scope": [
+        "module=catalog",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-866853C8",
       "path": "entries/KB-866853C8.md",
       "subject": "sales-rep activity queries return null for an organization whose rep membership is locked, for a storeId the user cannot sign in to, and for an unknown storeId; a rep in a store-trusted group gets data for the other store",
@@ -19509,6 +19572,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-8B57620C",
+      "path": "entries/KB-8B57620C.md",
+      "subject": "xAPI Query.products ignores filter when productIds is given: every listed id comes back whatever the filter says",
+      "question": "Does Query.products apply its filter argument to the products named in productIds?",
+      "questions": [
+        "Why does products(productIds, filter) return products that do not match the filter?",
+        "How do I check a numeric range filter against a known set of products in xAPI?"
+      ],
+      "anchors": [
+        "Query.products"
+      ],
+      "scope": [
+        "module=xcatalog",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8B7F9409",
       "path": "entries/KB-8B7F9409.md",
       "subject": "On /company/tasks the day heading and the per-row due date stay in en-US format (\"Oct 8, 2026\") in ru, es, fr, it, pl, pt and sv; only de renders a localized date (\"8. Okt. 2026\")",
@@ -20034,6 +20118,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8F39409E",
+      "path": "entries/KB-8F39409E.md",
+      "subject": "A Product build with deleteExistingIndex false updates the active index in place: a document Elasticsearch rejects keeps its previous indexed version, and existing field mappings persist",
+      "question": "After a Product index build (deleteExistingIndex false) reports a document as rejected, is the document missing from search, or does an older version stay searchable?",
+      "questions": [
+        "Does Build (without delete) swap to a fresh index or write into the existing one?",
+        "Why is a product that every build rejects still found by xAPI search?",
+        "Is POST /api/search/indexes the endpoint that starts an index build?"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "GET /api/search/indexes/index/Product/{id}"
+      ],
+      "scope": [
+        "subsystem=search-index",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
