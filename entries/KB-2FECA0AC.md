@@ -34,5 +34,14 @@ evidence:
     by: session:e75fe8a4
     bodyHash: c6464c687c0f
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcst_qa
+    build: e967c68919b4671e
+    conditions: theme=2.62.0-pr-2596-e749-e749b47f; module:VirtoCommerce.SalesRep=3.1017.0-pr-30-1e10; browser=edge; role=Sales Representative
+    at: 2026-11-03T16:49:52.093Z
+    by: session:c3b82fae
+    bodyHash: c6464c687c0f
+    who: Lenajava1
+    note: On the deployed stand /company/calendar stays at that URL and renders title 'QA & 404 Page not found'; the rail has Tasks -> /company/tasks. Deployed build now matches the rename.
 ---
 Signed in as a seeded sales rep serving 4 organizations, Edge 1440x1080, theme 2.60.0 (footer label), Sales Rep hub from the SalesRep storefront plugin. On /company/dashboard the 'Tasks & due dates' widget's 'All tasks' link has href /company/tasks, and the 'Sales Rep hub' rail lists Dashboard, My customers, Tasks with the Tasks item at href /company/tasks. Clicking that rail item and loading /company/tasks directly both stay at /company/tasks with h1 'Tasks' and breadcrumb Home / Account / Sales Rep hub / Tasks. Loading /company/calendar directly keeps that URL and renders the host 404 page: h1 '404', h2 'Page not found', text 'An error occurred. Should we take you back to home page?', document.title 'B2B-store 404 Page not found'. There is no redirect and the Tasks page is not shown. None of the 40 links on /company/dashboard (header, rail, widgets, footer) has an href containing /company/calendar.
