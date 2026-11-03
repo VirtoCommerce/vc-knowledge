@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T15:12:36.095Z",
-  "count": 1536,
+  "generated": "2026-11-03T15:17:17.712Z",
+  "count": 1537,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34894,6 +34894,30 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F9CA5597",
+      "path": "entries/KB-F9CA5597.md",
+      "subject": "On vc-frontend-next 3.2.0 a desktop header icon-row link caption longer than 128 px is clipped to its first line with no ellipsis, so the translated Sales Rep Hub caption is cut in de, fr, it, pt, pl, es and ru",
+      "question": "Is a long translated caption in the vc-frontend-next desktop header icon row (e.g. the Sales Rep Hub link) shown in full?",
+      "questions": [
+        "Why does the Sales Rep Hub header caption read 'Vertriebsmitarbeiter-' in German on vc-frontend-next?",
+        "Does the vc-frontend-next header link label wrap or truncate long text?",
+        "What max width does the header icon-row label have on vc-frontend-next?"
+      ],
+      "anchors": [
+        "/de/company/tasks",
+        "/fr/company/tasks"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
