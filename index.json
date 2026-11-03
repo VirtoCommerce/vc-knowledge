@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T16:49:58.843Z",
-  "count": 1547,
+  "generated": "2026-11-03T16:54:37.843Z",
+  "count": 1549,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19512,6 +19512,35 @@
       "disputed": 0
     },
     {
+      "id": "KB-8CFB57D0",
+      "path": "entries/KB-8CFB57D0.md",
+      "subject": "salesRepCoupons: anonymous gets Unauthorized in HTTP 200, a non-rep buyer and an empty or unknown storeId get an empty list, and label is null when cultureName is omitted",
+      "question": "What does Query.salesRepCoupons return to an anonymous caller, a non-rep buyer, an empty or unknown storeId, or a request without cultureName?",
+      "questions": [
+        "Is salesRepCoupons protected against anonymous callers?",
+        "Does salesRepCoupons with storeId empty return every store's coupons?",
+        "Why is label null on salesRepCoupons items?",
+        "How does salesRepCoupons localize name, description and label?"
+      ],
+      "concepts": [
+        "coupon",
+        "sales-rep",
+        "graphql-api"
+      ],
+      "anchors": [
+        "Query.salesRepCoupons",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8D5B9AC9",
       "path": "entries/KB-8D5B9AC9.md",
       "subject": "productPickupLocations / cartPickupLocations ignore a keyword that contains an apostrophe (or is only '&') and return every location, while Query.pickupLocations returns 0 for the same keyword",
@@ -34233,6 +34262,31 @@
       "scope": [
         "module=task-management",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F37AB317",
+      "path": "entries/KB-F37AB317.md",
+      "subject": "salesRepCoupons lists the store's active public single-coupon promotions minus expired, used-up and member-bound coupons, sorted by earliest end with no-end last and ties by id",
+      "question": "Which coupons does Query.salesRepCoupons on /graphql/sales-rep return, and in what order?",
+      "questions": [
+        "Why is a coupon missing from the sales rep coupons list?",
+        "How is endDate computed on salesRepCoupons items?",
+        "How does salesRepCoupons page with first and after?",
+        "Does salesRepCoupons hide a coupon as soon as its usage cap is reached?"
+      ],
+      "anchors": [
+        "Query.salesRepCoupons",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "actor=sales-rep",
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
