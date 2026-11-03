@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T15:55:10.490Z",
-  "count": 1541,
+  "generated": "2026-11-03T16:21:56.230Z",
+  "count": 1543,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3919,6 +3919,23 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1DC8BF84",
+      "path": "entries/KB-1DC8BF84.md",
+      "subject": "UCP anonymous-to-authenticated cart merge: replaying the saved anonymous buyer_id under an authenticated token merges, and a second replay is an idempotent no-op",
+      "question": "What happens when the saved anonymous buyer_id is replayed through UCP /ucp/mcp update_cart under an authenticated token, and then replayed a second time?",
+      "anchors": [
+        "Mutation.mergeCart"
+      ],
+      "scope": [
+        "buyer=signed-in",
+        "surface=ucp-mcp"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14400,6 +14417,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-68EA35A2",
+      "path": "entries/KB-68EA35A2.md",
+      "subject": "mergeCart of a B2B org member's own named cart with a configurable product into its default cart keeps the configuration sections",
+      "question": "Does Mutation.mergeCart preserve a configurable line item's configurationItems when an own named cart is merged into the default cart?",
+      "anchors": [
+        "Mutation.mergeCart",
+        "InputMergeCartType.secondCartId"
+      ],
+      "scope": [
+        "product-type=configurable",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
