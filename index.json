@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T15:27:30.068Z",
-  "count": 1539,
+  "generated": "2026-11-03T15:29:43.407Z",
+  "count": 1540,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -925,6 +925,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-07721573",
+      "path": "entries/KB-07721573.md",
+      "subject": "On sign-in the storefront sends MergeCart with the guest's current cart as secondCartId, and a guest's NAMED cart can be that current cart, so it is merged into the user's default cart and deleted",
+      "question": "Which guest cart does the storefront merge into the account at sign-in, and can a named guest cart be consumed by it?",
+      "questions": [
+        "Does a named anonymous cart survive the guest signing in?",
+        "Why is a guest cart gone before I call mergeCart myself after sign-in?",
+        "Does the storefront call mergeCart explicitly when a guest signs in?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "Mutation.mergeCart"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -25225,7 +25248,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-B48AA284",
