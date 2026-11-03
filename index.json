@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T16:54:37.843Z",
-  "count": 1549,
+  "generated": "2026-11-03T16:55:57.098Z",
+  "count": 1551,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9361,6 +9361,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-470C4177",
+      "path": "entries/KB-470C4177.md",
+      "subject": "The Sales Reps admin app has an 'Analytics diagnostics' blade (#/analytics-diagnostics) with a Store select, a Deep check switch that spends GA API quota and a Run diagnostics button, backed by POST /api/sales-rep/analytics-diagnostics and permission sales-rep:diagnostics",
+      "question": "Where in the Sales Reps admin app is Analytics diagnostics, what does it offer and which endpoint and permission sit behind it?",
+      "anchors": [
+        "/apps/vc-sales-rep#/analytics-diagnostics",
+        "POST /api/sales-rep/analytics-diagnostics"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=administrator",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-471859D5",
       "path": "entries/KB-471859D5.md",
       "subject": "A promotion usage is recorded only by placing an order whose discount carries the coupon; no REST endpoint writes one",
@@ -14114,6 +14133,27 @@
         "KB-A272971F",
         "KB-B4490B0B"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-661CE0DE",
+      "path": "entries/KB-661CE0DE.md",
+      "subject": "On the PR #30 build, Query.salesRepCoupons returns the store's public promotion coupons to a rep (totalCount 25) and an empty 200 list to a buyer, a rep with no served orgs, and an empty storeId; the profile widget and page both read it",
+      "question": "What does Query.salesRepCoupons on /graphql/sales-rep return for a rep, a buyer, a no-customer rep and an empty storeId, and where does the storefront show it?",
+      "anchors": [
+        "Query.salesRepCoupons",
+        "/company/my-customers/{id}/coupons",
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
