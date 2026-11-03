@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T18:06:14.811Z",
-  "count": 1563,
+  "generated": "2026-11-03T18:07:46.634Z",
+  "count": 1564,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16556,7 +16556,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -24735,6 +24735,30 @@
       "scope": [
         "principal=org-member",
         "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AE34AB04",
+      "path": "entries/KB-AE34AB04.md",
+      "subject": "The rep coupons page for an unserved organization shows the profile's not-found text, the generic 'Promotion coupons' heading and no coupon cards, although salesRepCoupons still returns store coupons",
+      "question": "What does /company/my-customers/{organizationId}/coupons show a sales rep for an organization the rep does not serve?",
+      "questions": [
+        "Does the sales rep coupons page leak store coupons for a customer the rep has no access to?",
+        "What heading and breadcrumb does the customer coupons page show when salesRepCustomer is null?",
+        "Is the not-found text on the customer coupons page the same as on the customer profile page?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/coupons",
+        "Query.salesRepCoupons",
+        "Query.salesRepCustomer"
+      ],
+      "scope": [
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
