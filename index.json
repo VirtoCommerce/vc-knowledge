@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T14:18:31.877Z",
-  "count": 1534,
+  "generated": "2026-11-03T14:23:41.167Z",
+  "count": 1535,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30314,6 +30314,24 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-DBF2D084",
+      "path": "entries/KB-DBF2D084.md",
+      "subject": "With index swap supported, the search index REST API offers no way to remove a document type's active index",
+      "question": "GET /api/search/indexes and POST /api/search/indexes (Build, deleteExistingIndex) — how to read the index state, and can a document type be left with no index to test a missing-index path?",
+      "anchors": [
+        "GET /api/search/indexes",
+        "POST /api/search/indexes",
+        "GET /api/search/indexes/index/{id}/{id}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DC04ED4B",
