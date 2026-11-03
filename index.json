@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T14:39:21.438Z",
-  "count": 1535,
+  "generated": "2026-11-03T14:51:11.979Z",
+  "count": 1536,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32312,6 +32312,30 @@
       "scope": [
         "surface=rest",
         "user-flag=twofactorenabled"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EB4DECDC",
+      "path": "entries/KB-EB4DECDC.md",
+      "subject": "mergeCart refuses a secondCartId the caller may not access: Forbidden for a signed-in non-owner, Unauthorized for anonymous, Forbidden for a cart of another store; nothing is merged or deleted",
+      "question": "Can a signed-in caller merge another customer's cart into their own with mergeCart secondCartId, and what error comes back?",
+      "questions": [
+        "What does mergeCart return when secondCartId belongs to another user?",
+        "Does mergeCart check the store of the second cart?",
+        "Can an anonymous caller call mergeCart with a registered user's cart id?",
+        "What happens when mergeCart secondCartId matches no cart?",
+        "Is the source cart deleted when mergeCart is refused?"
+      ],
+      "anchors": [
+        "Mutation.mergeCart",
+        "InputMergeCartType.secondCartId"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
