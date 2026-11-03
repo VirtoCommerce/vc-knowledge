@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T15:20:54.219Z",
-  "count": 1538,
+  "generated": "2026-11-03T15:27:30.068Z",
+  "count": 1539,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30848,6 +30848,29 @@
       "scope": [
         "auth=anonymous",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E0AF1F41",
+      "path": "entries/KB-E0AF1F41.md",
+      "subject": "ES8 provider: a failed GetMapping response throws SearchException and is not cached; a valid empty mapping still is",
+      "question": "Elasticsearch 8 provider LoadMappingAsync: what does search or indexing do when the index mapping load fails (503 with an empty body, connection reset, timeout) — error, or a cached empty mapping and 0 hits?",
+      "concepts": [
+        "search-index",
+        "product-search"
+      ],
+      "anchors": [
+        "GET /api/search/indexes",
+        "POST /api/search/indexes/index",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
