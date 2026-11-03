@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T14:14:06.020Z",
-  "count": 1532,
+  "generated": "2026-11-03T14:18:31.877Z",
+  "count": 1534,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13145,6 +13145,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-5E83E458",
+      "path": "entries/KB-5E83E458.md",
+      "subject": "At 1280 px in de and fr the Sales Rep Hub header link caption wraps to two lines, raising its icon 7 px above the rest of the header icon row and left-aligning the caption",
+      "question": "Does the desktop header icon row stay aligned at 1280 px when the Sales Rep Hub link caption is translated (de, fr)?",
+      "questions": [
+        "Why is the Sales Rep Hub icon higher than the other header icons in German?",
+        "Does Vertriebsmitarbeiter-Hub wrap in the storefront header at 1280 px?",
+        "Do wrapped header link captions break icon alignment in the header row?"
+      ],
+      "anchors": [
+        "/fr/company/my-customers/{id}"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui",
+        "viewport=1280"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5EACBEDD",
       "path": "entries/KB-5EACBEDD.md",
       "subject": "Sales-rep list: Stop sharing keeps the link key; re-share does not restore recipients",
@@ -23012,6 +23035,31 @@
       "scope": [
         "module=virtocommerce.xcms",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A671CFDA",
+      "path": "entries/KB-A671CFDA.md",
+      "subject": "With the SalesRep plugin header link, a sales rep sees a 'Sales Rep Hub' (briefcase-business icon) item first in the desktop header icon row and last in the mobile menu nav list; non-reps and anonymous see none, and sign-in/sign-out reloads the document so the item follows the user without a manual refresh",
+      "question": "Where does the Sales Rep Hub header link to /company/dashboard appear on desktop and mobile, who sees it, and does it appear after sign-in without a manual refresh?",
+      "questions": [
+        "Is the Sales Rep Hub icon the leftmost item in the storefront header icon row?",
+        "Does a buyer or org maintainer see the Sales Rep Hub header icon?",
+        "Where is the Sales Rep Hub link in the mobile hamburger menu?",
+        "Does the Sales Rep Hub header icon need a page refresh after a rep signs in?",
+        "Does the Sales Rep Hub header icon disappear after sign-out and stay gone on browser Back?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
