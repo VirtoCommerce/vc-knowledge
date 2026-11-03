@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T20:22:47.466Z",
-  "count": 1568,
+  "generated": "2026-11-03T20:25:18.259Z",
+  "count": 1569,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1128,6 +1128,26 @@
       "scope": [
         "feature=mfa",
         "grant=password",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-092E88A3",
+      "path": "entries/KB-092E88A3.md",
+      "subject": "Per-document Elasticsearch field-type rejections in an index build show only in the build's push notification, not in App Insights",
+      "question": "POST /api/search/indexes Build ends \"Indexation completed with errors\" with Elasticsearch field-type mapping rejections — where are those errors visible; do they show up as exceptions in App Insights?",
+      "concepts": [
+        "search-index"
+      ],
+      "anchors": [
+        "POST /api/search/indexes",
+        "POST /api/platform/pushnotifications"
+      ],
+      "scope": [
         "surface=rest"
       ],
       "plane": "experiential",
