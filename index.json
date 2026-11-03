@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T21:18:32.158Z",
-  "count": 1576,
+  "generated": "2026-11-03T23:10:26.526Z",
+  "count": 1577,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6908,6 +6908,29 @@
       "scope": [
         "store=b2b-store",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-342559F1",
+      "path": "entries/KB-342559F1.md",
+      "subject": "The Sales Rep Hub Reporting page is served by the SalesRep plugin at /company/customer-sales; /company/reporting renders 404 for a sales rep",
+      "question": "Where is the Sales Rep Hub Reporting page, and what does /company/reporting show a sales rep?",
+      "questions": [
+        "What route does the Reporting item in the Sales Rep hub menu open?",
+        "Is the sales rep Reporting page at /company/reporting or /company/customer-sales?",
+        "Why does /company/reporting show Page not found for a sales rep?"
+      ],
+      "anchors": [
+        "/company/customer-sales",
+        "/company/reporting"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
