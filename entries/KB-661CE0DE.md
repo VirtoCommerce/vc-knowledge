@@ -25,5 +25,14 @@ evidence:
     at: 2026-11-03T16:50:06.776Z
     by: session:c3b82fae
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: e967c68919b4671e
+    conditions: module:VirtoCommerce.SalesRep=3.1017.0-pr-30-1e10; theme=2.62.0-pr-2596-e749-e749b47f; browser=firefox
+    at: 2026-11-03T19:09:21.898Z
+    by: session:c3b82fae
+    bodyHash: 37eea329d1bb
+    who: Lenajava1
+    note: "Storefront half only: /company/my-customers/{id} rendered the 'Available coupons' widget with five coupon cards (click-to-copy codes) and an 'All promotion coupons' link to /company/my-customers/{id}/coupons, for two different reps. The API matrix (buyer, no-customer rep, empty storeId) was not re-checked."
 ---
 Stand with SalesRep 3.1017.0-pr-30-1e10 (open PR #30), password-grant tokens with storeId=B2B-store. salesRepCoupons(storeId:"B2B-store", first:3) returned totalCount 25 for a rep serving 5 orgs and for a rep serving 1 org (same count: the list is the store's coupons, not per customer). The same call returned totalCount 0 (HTTP 200, no errors) for SR_REP_NOCUSTOMERS (rep with no served org) and for an organization buyer, and totalCount 0 for the rep with storeId:"". Anonymous callers are refused like every other scoped query. In the storefront (theme 2.62.0-pr-2596, also an open-PR build) /company/my-customers/{organizationId} shows an 'Available coupons' widget with five rows (name, description, 'Unlimited' or 'N of M uses left', 'Expires <date>', click-to-copy code) and an 'All promotion coupons' link to /company/my-customers/{organizationId}/coupons, whose H1 is 'Promotion coupons for <org>', 10 per page with Previous/Next. The route is declared in plugin.json as my-customers/:organizationId/coupons with when can sales-rep:access. The scoped schema on this build has 30 queries and 6 mutations; salesRepCoupons is the one that exists only because of PR #30.

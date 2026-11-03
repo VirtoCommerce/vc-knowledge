@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T18:58:32.307Z",
-  "count": 1565,
+  "generated": "2026-11-03T19:09:58.243Z",
+  "count": 1566,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17763,6 +17763,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-803C0E07",
+      "path": "entries/KB-803C0E07.md",
+      "subject": "On the sales-rep customer profile, Max rows inputs exist only in edit mode, and Cancel leaves edit mode with no SaveSalesRepLayout request, removing every Max rows input",
+      "question": "On /company/my-customers/{id}, when are the widget Max rows inputs shown, and what does Cancel in the edit bar do?",
+      "questions": [
+        "Does Cancel on the customer profile edit bar save the layout?",
+        "Are Max rows inputs visible on the customer profile outside Edit layout?",
+        "How many Max rows inputs does the customer profile edit mode show on the coupons build?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Mutation.saveSalesRepLayout"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8047A305",
       "path": "entries/KB-8047A305.md",
       "subject": "The /company/dashboard Tasks & due dates widget shows the selected day's tasks with the Tasks page sub-line cut to one line with an ellipsis, so a call's customer name is truncated",
@@ -25921,7 +25945,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
