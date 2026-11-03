@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-02T23:06:34.575Z",
-  "count": 1531,
+  "generated": "2026-11-03T13:38:30.447Z",
+  "count": 1532,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20290,6 +20290,32 @@
       "scope": [
         "module=virtocommerce.adminshell",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-93E22C47",
+      "path": "entries/KB-93E22C47.md",
+      "subject": "On a vc-frontend-next build with the built-in Sales Rep Hub compiled out, a SalesRep storefront plugin whose requiredHostVersion is above the host facade version is skipped silently: no hub for anyone and /company/dashboard returns the theme's 404 page",
+      "question": "Why does a sales rep with sales-rep:access and SalesRep.Enabled=true see no Sales Rep Hub, and get a 404 on /company/dashboard, on a vc-frontend-next storefront?",
+      "questions": [
+        "/company/dashboard returns 404 Page not found for a sales rep on vc-frontend-next",
+        "SalesRep plugin mf-manifest loads but remoteEntry.js is never requested",
+        "Sales Rep Hub missing entirely: no rail section, no Sales reps link, no header icon",
+        "what does sales_rep_builtin_enabled false do when the SalesRep plugin cannot load"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json",
+        "Query.store"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
