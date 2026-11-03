@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T16:29:39.947Z",
-  "count": 1544,
+  "generated": "2026-11-03T16:29:47.584Z",
+  "count": 1546,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1551,6 +1551,29 @@
         "feature=sales-rep-customer-activity-widget",
         "module=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0BB4480E",
+      "path": "entries/KB-0BB4480E.md",
+      "subject": "coupons/add persists memberId, and a promotion created without startDate gets the creation time as its start",
+      "question": "Can a coupon be bound to a member through POST /api/marketing/promotions/coupons/add, and what start date does a new promotion get when none is sent?",
+      "questions": [
+        "How do I create a member-bound coupon through the REST API?",
+        "Does POST /api/marketing/promotions default startDate when it is omitted?",
+        "Does POST /api/marketing/promotions accept a future startDate?"
+      ],
+      "anchors": [
+        "POST /api/marketing/promotions/coupons/add",
+        "POST /api/marketing/promotions"
+      ],
+      "scope": [
+        "module=marketing",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13888,6 +13911,29 @@
       "scope": [
         "module=virtocommerce.catalog",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-650B8BFB",
+      "path": "entries/KB-650B8BFB.md",
+      "subject": "Deleting or cancelling an order never releases a coupon use; deleting the promotion removes its usages",
+      "question": "Does cancelling or deleting an order give the coupon use back?",
+      "questions": [
+        "Is a coupon use released when the order that used it is cancelled?",
+        "How do I reset a coupon's usage count to zero?",
+        "Are PromotionUsage records deleted with the promotion?"
+      ],
+      "anchors": [
+        "POST /api/order/customerOrders",
+        "DELETE /api/marketing/promotions"
+      ],
+      "scope": [
+        "module=marketing",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
