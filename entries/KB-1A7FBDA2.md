@@ -28,5 +28,14 @@ evidence:
     bodyHash: a0f2eb0a282c
     who: Lenajava1
     note: "Quick actions on a served customer page: Order on behalf and Create quote disabled, Send email and Schedule call enabled. Schedule call dialog opened (not submitted): Title Call, Customer prefilled and clearable, Due date empty, Time 9:00 AM, Priority Normal, Notes 0/1000, Add to calendar Google Calendar + Apple Calendar, Cancel, Save disabled; no Type field."
+  - method: observation
+    deployment: vcst_qa
+    build: e967c68919b4671e
+    conditions: platform=3.1093.0-pr-3154-4607; module:VirtoCommerce.SalesRep=3.1017.0-pr-30-1e10; theme=2.62.0-pr-2596-e749-e749b47f; browser=chrome; role=Sales Representative
+    at: 2026-11-03T18:58:36.781Z
+    by: session:c3b82fae
+    bodyHash: a0f2eb0a282c
+    who: Lenajava1
+    note: "Quick actions tiles measured as a 2x2 grid (two columns by two rows): row 1 Order on behalf (disabled) and Send email, row 2 Create quote (disabled) and Schedule call; Send email and Schedule call enabled."
 ---
 On /company/my-customers/<guid> as a sales rep (theme 2.61.0-alpha.2605), the Quick actions widget shows four tiles; 'Order on behalf' and 'Create quote' render disabled, 'Send email' and 'Schedule call' are enabled. Clicking 'Schedule call' opens a modal titled 'Schedule call' with Title (default 'Call'), Customer (pre-filled with the profile org), Due date, Time, Priority, Notes, Add to calendar (Google/Apple) and Cancel/Save. A case that expects all three non-email tiles disabled no longer matches.
