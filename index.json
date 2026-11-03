@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T20:25:18.259Z",
-  "count": 1569,
+  "generated": "2026-11-03T20:41:51.268Z",
+  "count": 1570,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -95,6 +95,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-004E9F5F",
+      "path": "entries/KB-004E9F5F.md",
+      "subject": "VirtoCommerce.Search settings expose only index partition size and partial document update — no scale-out or max-queued-jobs setting",
+      "question": "Settings > Search (VirtoCommerce.Search settings): is there a scale-out indexing or maximum queued indexing jobs setting?",
+      "concepts": [
+        "search-index"
+      ],
+      "anchors": [
+        "GET /api/platform/settings/modules/VirtoCommerce.Search"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
