@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T17:50:43.874Z",
-  "count": 1557,
+  "generated": "2026-11-03T17:55:51.520Z",
+  "count": 1560,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -188,6 +188,32 @@
         "KB-1447353E",
         "KB-19826CC0"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-00F159CE",
+      "path": "entries/KB-00F159CE.md",
+      "subject": "The Sales Rep hub shows the Tasks rail link and the Tasks & due dates dashboard widget to every rep with sales-rep access, including a rep with zero tasks and a rep serving zero organizations",
+      "question": "Does a sales rep with no tasks, or with no served organizations, still get the Tasks link and the Tasks widget in the Sales Rep hub?",
+      "questions": [
+        "Is the Tasks item in the Sales Rep hub sidebar hidden for a rep who owns no task?",
+        "Does /company/dashboard render the Tasks & due dates widget for a rep with no customers?",
+        "Can a rep with zero served organizations open /company/tasks or is it redirected to /account/dashboard?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "/company/tasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -966,6 +992,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-07E75D8E",
+      "path": "entries/KB-07E75D8E.md",
+      "subject": "The Customer combobox of the Schedule call popup offers exactly the rep's salesRepCustomers (the My customers set) and filters them client-side; an organization the rep does not serve gives 'No results found'",
+      "question": "Which organizations does the Customer picker of the Schedule call popup on /company/my-customers/{id} offer, and does typing search the server?",
+      "questions": [
+        "Can a sales rep pick an organization they do not serve in the Schedule call Customer field?",
+        "Is the Schedule call Customer field a searchable combobox?",
+        "What request loads the Customer options in the Schedule call popup?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Query.salesRepCustomers"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8988,7 +9037,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -11237,6 +11286,32 @@
       ],
       "scope": [
         "layer=storefront-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-50B36776",
+      "path": "entries/KB-50B36776.md",
+      "subject": "The New task modal on /company/tasks accepts a past due date (yesterday); createSalesRepTask saves it and the task counts once in All and Overdue, listed with status Overdue and the line 'Expired <date> · <type>'",
+      "question": "Can a sales rep create a task with a past due date from the New task modal, and where is it counted and listed?",
+      "questions": [
+        "Does the Due date picker in the sales rep New task modal disable past days?",
+        "Mutation.createSalesRepTask with yesterday's dueDate: accepted, and which chip counts it?",
+        "How does /company/tasks label an overdue non-call task row?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Mutation.createSalesRepTask"
+      ],
+      "scope": [
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -14226,7 +14301,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -20198,7 +20273,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -23734,7 +23809,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 2
+      "disputed": 2,
+      "contested": 1
     },
     {
       "id": "KB-A91E80EC",

@@ -57,5 +57,14 @@ evidence:
     bodyHash: 19e47acec486
     who: Aleksandra-Mitricheva
     note: "UTC+3, en-US: 'Due Oct 28, 2026, 2:30 PM · AGENT-TEST-Org-AcmeCorp-20260310 · Call' for dueDate 11:30Z (identical in the dashboard widget DOM), and a call saved with the Customer cleared (no customerId sent) reads 'Due Oct 29, 2026, 10:00 AM · Customer not assigned · Call'."
+  - method: observation
+    deployment: vcst_qa
+    build: e967c68919b4671e
+    conditions: platform=3.1093.0-pr-3154-4607; module:VirtoCommerce.SalesRep=3.1017.0-pr-30-1e10; module:VirtoCommerce.TaskManagement=3.1006.0; theme=2.62.0-pr-2596-e749-e749b47f; browser=firefox; browser-timezone=UTC+1
+    at: 2026-11-03T17:53:42.653Z
+    by: session:c3b82fae
+    bodyHash: 19e47acec486
+    who: Lenajava1
+    note: A call saved from Schedule call with the Customer cleared (createSalesRepTask command carried no customerId; response customerId and customerName null) reads 'Due Nov 11, 2026, 9:00 AM · Customer not assigned · Call' on /company/tasks with Nov 11 picked under All.
 ---
 Theme 2.60.0 with the SalesRep plugin built from vc-module-sales-rep PR #26 (unreleased), browser zone UTC-6, en-US, 1920 px. Under a call's title the Tasks page row shows 'Due Oct 23, 2026, 2:30 PM · Contoso Ltd. · Call': the time is the stored UTC dueDate in the browser's zone (h:mm AM/PM) and the customer is the API's customerName. A call saved without a customer shows 'Due Oct 26, 2026, 10:15 AM · Customer not assigned · Call'; a non-call task shows 'Due Oct 24, 2026 · Other' with no time and no customer. The line wraps inside the table cell, so it stays fully readable. Picking a calendar day lists the tasks whose dueDate falls between that day's local midnight and +24h-1ms (Query.salesRepTasks period), so a call at 11:45 PM local is listed on its own day and a call at 12:00 AM on the next day; the calendar cell reads e.g. '1 task. Marked: Upcoming'.
