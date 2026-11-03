@@ -25,5 +25,14 @@ evidence:
     splitFrom: KB-001183CF
     build: e7c4faf10f640e7c
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: e967c68919b4671e
+    conditions: theme=2.62.0-pr-2596-e749-e749b47f; module:VirtoCommerce.SalesRep=3.1017.0-pr-30-1e10
+    at: 2026-11-03T16:56:41.758Z
+    by: session:05e86aa3
+    bodyHash: 2478ed6ca62c
+    who: Lenajava1
+    note: "Still true on theme 2.62.0-pr-2596-e749: /account/coupons shows agenttestlc062 as AGENTTESTLC062. The same shared card on the Sales Rep hub /company/my-customers/:organizationId/coupons also shows AGENTTESTLC062 and the clipboard receives AGENTTESTLC062 (superA shows as SUPERA). The cart sidebar preset card keeps the stored case (agenttestlc062, winegift) and applies."
 ---
 The coupon card on /account/coupons forces the code to uppercase in JavaScript, both in the display and in the copied clipboard value - a presentation-only issue, since the uppercased code still applies.

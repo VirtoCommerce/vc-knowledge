@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T16:55:57.098Z",
-  "count": 1551,
+  "generated": "2026-11-03T16:57:54.763Z",
+  "count": 1552,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -25094,6 +25094,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-B1DBAD5D",
+      "path": "entries/KB-B1DBAD5D.md",
+      "subject": "The Sales Rep hub customer coupons page and widget list store-wide public single-coupon promotions via salesRepCoupons (not per customer), paged by first/after offset, with endDate = earlier of coupon expiry and promotion end, rendered as a date-only value in the browser time zone",
+      "question": "What does /company/my-customers/<org>/coupons (salesRepCoupons) list, how is it paged, and what does its Expires date show?",
+      "questions": [
+        "Is the Sales Rep Available coupons widget personalized to the customer organization?",
+        "Which date does Expires show on the sales rep coupon card when the coupon and the promotion end on different days?",
+        "How does the sales rep promotion coupons page paginate?",
+        "Why does a coupon with a past coupon-level expiry not appear on the sales rep coupons page?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/coupons",
+        "Query.salesRepCoupons"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B1E9DA93",
       "path": "entries/KB-B1E9DA93.md",
       "subject": "The sales-rep hub dashboard \"My activity\" widget stays on skeleton placeholders for over 20 s after /company/dashboard opens, while /company/activities shows its badge counts within about 3 s",
@@ -33743,7 +33767,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
