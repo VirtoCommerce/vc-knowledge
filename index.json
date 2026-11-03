@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T18:07:46.634Z",
-  "count": 1564,
+  "generated": "2026-11-03T18:58:32.307Z",
+  "count": 1565,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24172,6 +24172,25 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AB42AC8E",
+      "path": "entries/KB-AB42AC8E.md",
+      "subject": "On the sales-rep customer profile the Orders placed - YTD card repeats the My customers row's YTD count and total, and Avg order value is that total divided by that count",
+      "question": "Do the customer profile statistics cards agree with the My customers row for the same customer, and how is Avg order value derived?",
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/company/my-customers",
+        "/company/my-customers/{id}/orders"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
