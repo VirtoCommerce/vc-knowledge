@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T23:19:00.103Z",
-  "count": 1577,
+  "generated": "2026-11-03T23:19:55.994Z",
+  "count": 1579,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -630,6 +630,32 @@
       "supersededBy": [
         "KB-31802239"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-045967F4",
+      "path": "entries/KB-045967F4.md",
+      "subject": "A signed-in buyer without sales-rep permissions gets HTTP 200 with salesRepCustomerOrderStatistics null and no errors[] on /graphql/sales-rep",
+      "question": "What does /graphql/sales-rep return when a non-rep buyer calls salesRepCustomerOrderStatistics?",
+      "questions": [
+        "Is a non sales rep refused with an error on the sales-rep GraphQL endpoint?",
+        "What does a buyer token get from salesRepCustomerOrderStatistics?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "graphql-api"
+      ],
+      "anchors": [
+        "Query.salesRepCustomerOrderStatistics",
+        "POST /graphql/sales-rep"
+      ],
+      "scope": [
+        "role=buyer",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -27635,6 +27661,30 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C2AD28C1",
+      "path": "entries/KB-C2AD28C1.md",
+      "subject": "salesRepCustomerOrderStatistics counts a rep order whose Status is \"Cancelled\" but IsCancelled=false, and does not count a served organization's order created by a buyer",
+      "question": "Does salesRepCustomerOrderStatistics exclude orders by status Cancelled, and does it count orders other users created in an organization the rep serves?",
+      "questions": [
+        "Is an order with status Cancelled but isCancelled false counted in sales rep order statistics?",
+        "Are a buyer's own orders in a served organization included in the rep's statistics?",
+        "Does the per-organization sales rep statistic include orders of a child organization?"
+      ],
+      "anchors": [
+        "Query.salesRepCustomerOrderStatistics",
+        "POST /graphql/sales-rep",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
