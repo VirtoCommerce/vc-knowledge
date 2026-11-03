@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T16:29:47.584Z",
-  "count": 1546,
+  "generated": "2026-11-03T16:45:13.040Z",
+  "count": 1547,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24996,6 +24996,28 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B1B290C4",
+      "path": "entries/KB-B1B290C4.md",
+      "subject": "xAPI CustomerOrderType.coupons always fails to resolve (INVALID_OPERATION), on order(id) and on createOrderFromCart, with or without coupons on the order",
+      "question": "Why does selecting the coupons field on an xAPI order (Query.order / Mutation.createOrderFromCart) return \"Error trying to resolve field 'coupons'\"?",
+      "questions": [
+        "Can I read which coupons were used on an order through the storefront GraphQL order query?",
+        "createOrderFromCart response errors[] INVALID_OPERATION on coupons field",
+        "Does the storefront order details page request order coupons?"
+      ],
+      "anchors": [
+        "Query.order",
+        "Mutation.createOrderFromCart"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
