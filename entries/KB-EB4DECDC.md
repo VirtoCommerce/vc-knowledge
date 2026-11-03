@@ -33,5 +33,14 @@ evidence:
     bodyHash: 244746d5630a
     who: Lenajava1
     note: "Second round: anonymous 3/3 Unauthorized and signed-in 3/3 Forbidden on fresh victim carts; also a signed-in user merging an anonymous guest cart (isAnonymous=true) by secondCartId is allowed and the items arrive."
+  - method: observation
+    deployment: vcst_qa
+    build: 8cc253c1304af90a
+    conditions: module:VirtoCommerce.XCart=3.1045.0-pr-153-ec03; store=B2B-store; role=B2B org member
+    at: 2026-11-03T15:17:43.500Z
+    by: session:3107e574
+    bodyHash: 244746d5630a
+    who: Lenajava1
+    note: "Via the GraphQL runner as ORG_USER (B2B org member) merging USER2's named and default carts: Forbidden, victim intact; USER2's own Electronics cart into a B2B-store target: Forbidden, source and target unchanged; a removed cart's id as secondCartId: no error, target unchanged; own named cart merge: allowed."
 ---
 On XCart 3.1045.0-pr-153-ec03 (VCST-6185 fix) I signed in on the storefront as two personal customers and called Mutation.mergeCart through the storefront /graphql. (1) User B merging user A's named B2B-store cart (secondCartId = A's cart id, userId = B, cartName = B's named cart, deleteAfterMerge omitted or false) got HTTP 200 with data.mergeCart = null and errors[0] {message "Access denied.", extensions.code "Forbidden"}, 3 of 3 times. A's cart still existed with the same item and quantity, and B's target cart was unchanged. (2) An anonymous call (no Authorization header, or the storefront's anonymous-session token) with A's cart id got errors[0] code "Unauthorized", message "Anonymous access denied or access token has expired or is invalid."; A's cart was intact. (3) B merging B's OWN cart from another store (Electronics) into a B2B-store target got "Forbidden", and the source was left in place. (4) B merging B's own same-store named cart succeeded: the items arrived in the target and the source was deleted (deleteAfterMerge default). (5) A secondCartId matching no cart (a random GUID) returned the unchanged target cart with no error. Before the fix, the same call from (1) succeeded and deleted the victim cart.
