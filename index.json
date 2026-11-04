@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T12:31:02.070Z",
-  "count": 1614,
+  "generated": "2026-11-04T12:31:16.436Z",
+  "count": 1615,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20578,6 +20578,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8FC13CB4",
+      "path": "entries/KB-8FC13CB4.md",
+      "subject": "Concurrent updateMemberAddresses calls with the same new address can store 2 to 5 identical copies; the duplicate skip only holds for sequential calls",
+      "question": "Mutation.updateMemberAddresses — does the server's duplicate-address skip hold when the same new address is saved by several concurrent calls?",
+      "questions": [
+        "Can parallel address saves create duplicate addresses?",
+        "Is the updateMemberAddresses duplicate check race-safe?"
+      ],
+      "anchors": [
+        "Mutation.updateMemberAddresses",
+        "Query.currentCustomerAddresses"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
