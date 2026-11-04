@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T08:19:30.947Z",
-  "count": 1582,
+  "generated": "2026-11-04T08:20:00.641Z",
+  "count": 1586,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8426,6 +8426,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-3EEBFFF9",
+      "path": "entries/KB-3EEBFFF9.md",
+      "subject": "Query.customerReviews drops the keyword argument whenever filter is non-empty (pre-existing; same before and after the VCST-6251 fix)",
+      "question": "Does Query.customerReviews apply both keyword and filter when both are passed?",
+      "questions": [
+        "Why does customerReviews keyword not narrow results when a rating filter is set?",
+        "Can keyword and rating:[x TO y] be combined in the customerReviews query?"
+      ],
+      "anchors": [
+        "Query.customerReviews"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3F1DBB6E",
       "path": "entries/KB-3F1DBB6E.md",
       "subject": "Admin product search returns imgSrc only when responseGroup includes ItemAssets; ItemInfo alone omits imgSrc and images",
@@ -15224,6 +15244,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-6C2EEDB8",
+      "path": "entries/KB-6C2EEDB8.md",
+      "subject": "Query.backInStockSubscriptions keyword \"userId:<other>\" cannot widen scope on the VCST-6251 fixed build — only the caller's subscriptions return",
+      "question": "Can a buyer list another user's back-in-stock subscriptions with keyword \"userId:<id>\" in Query.backInStockSubscriptions?",
+      "questions": [
+        "Does the backInStockSubscriptions keyword override the caller's userId?",
+        "Which subscriptions does Query.backInStockSubscriptions return for a signed-in buyer?"
+      ],
+      "anchors": [
+        "Query.backInStockSubscriptions"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6C3FA2B7",
       "path": "entries/KB-6C3FA2B7.md",
       "subject": "Storefront cart keeps its applied coupon across sign-out / sign-in",
@@ -18860,7 +18900,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -21021,6 +21061,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-944D8F51",
+      "path": "entries/KB-944D8F51.md",
+      "subject": "Query.customerReviews returns only Approved reviews even with filter reviewStatus:New or reviewStatus:Rejected, anonymous and signed in, on the VCST-6251 fixed build",
+      "question": "Can a storefront caller read unmoderated (New) or Rejected reviews by passing reviewStatus in the Query.customerReviews filter?",
+      "questions": [
+        "Which review statuses does the storefront customerReviews query return?",
+        "Does filter reviewStatus:New expose unmoderated reviews in xAPI?",
+        "Do rating range filters still work on customerReviews?"
+      ],
+      "anchors": [
+        "Query.customerReviews"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -23909,6 +23970,26 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-A7D0ED1F",
+      "path": "entries/KB-A7D0ED1F.md",
+      "subject": "Query.properties ignores a catalogIds filter term on the VCST-6251 fixed build and returns only the store catalog's properties",
+      "question": "Can Query.properties be made to return another catalog's properties with filter \"catalogIds:<id>\"?",
+      "questions": [
+        "Does the properties query return only the store catalog's properties?",
+        "Does the xAPI properties filter override the store catalog?"
+      ],
+      "anchors": [
+        "Query.properties"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-A8067930",
