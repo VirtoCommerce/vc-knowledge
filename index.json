@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T09:02:02.851Z",
-  "count": 1593,
+  "generated": "2026-11-04T09:09:18.050Z",
+  "count": 1594,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20997,6 +20997,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9338DE54",
+      "path": "entries/KB-9338DE54.md",
+      "subject": "Storefront /search sends Query.products with a default filter 'price.USD:(0 TO) inStock_variations:true', so a product the index marks not-in-stock is invisible to search even while its PDP shows stock",
+      "question": "Why does /search?q=<sku> return 0 results for a product whose product page shows it in stock?",
+      "questions": [
+        "What filter does the storefront search page add to Query.products by default?",
+        "Does /search hide out-of-stock products?",
+        "A product is in the category listing only after turning off Show in stock - why is it missing from search?"
+      ],
+      "anchors": [
+        "/search",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=anonymous"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
