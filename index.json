@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T13:09:03.831Z",
-  "count": 1623,
+  "generated": "2026-11-04T13:12:03.023Z",
+  "count": 1624,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30035,6 +30035,27 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-CED68DA3",
+      "path": "entries/KB-CED68DA3.md",
+      "subject": "The organization MFA Mode blade is reached from Contacts (\"Companies and contacts\") via the organization row menu Manage; an Off organization in a CustomerChoice store reads \"Per member — Each member decides in the storefront\", Required reads \"This organization requires it from all its members\"",
+      "question": "Where is the organization MFA mode set in the AngularJS Backoffice, and what does its Effective status show?",
+      "questions": [
+        "How do I open the organization blade with the Multi-factor authentication widget?",
+        "What does Code at sign-in say for an organization with mode Off in a Customer choice store?"
+      ],
+      "anchors": [
+        "PUT /api/mfa/modes/organizations/{id}"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-CF05CA9A",
