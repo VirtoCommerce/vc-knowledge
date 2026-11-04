@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T12:21:54.307Z",
-  "count": 1612,
+  "generated": "2026-11-04T12:22:17.722Z",
+  "count": 1613,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19580,6 +19580,29 @@
       "scope": [
         "feature=localization",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-89E44C00",
+      "path": "entries/KB-89E44C00.md",
+      "subject": "Mutation.updateMemberAddresses on the caller's own organization is accepted for a user without xapi:my_organization:edit",
+      "question": "updateMemberAddresses GraphQL mutation — organization address by a user without xapi:my_organization:edit — refused or accepted?",
+      "questions": [
+        "Can an organization employee add an address to the organization address book through xAPI?",
+        "Does the platform check xapi:my_organization:edit on updateMemberAddresses for an organization memberId?"
+      ],
+      "anchors": [
+        "Mutation.updateMemberAddresses",
+        "Query.currentOrganizationAddresses",
+        "Mutation.deleteMemberAddresses"
+      ],
+      "scope": [
+        "role=organization employee without xapi:my_organization:edit",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
