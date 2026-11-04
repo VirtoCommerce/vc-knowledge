@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-03T23:19:55.994Z",
-  "count": 1579,
+  "generated": "2026-11-04T08:15:12.390Z",
+  "count": 1580,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22189,6 +22189,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9CEB8BBE",
+      "path": "entries/KB-9CEB8BBE.md",
+      "subject": "Query.carts filter terms (customerIds, customerOrOrganization, organizationId) cannot widen the signed-in buyer's cart scope on the VCST-6251 fixed build",
+      "question": "Can a buyer read another customer's or another organization's carts by putting customerIds, organizationId or customerOrOrganization:true in the Query.carts filter?",
+      "questions": [
+        "Does the xAPI carts filter argument override the userId/organization scope?",
+        "Does customerOrOrganization:true in Query.carts return colleagues' organization carts?",
+        "Is cart isolation per organization enforced when the carts filter names another org?"
+      ],
+      "anchors": [
+        "Query.carts"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

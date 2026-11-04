@@ -1,0 +1,25 @@
+---
+id: KB-9CEB8BBE
+subject: Query.carts filter terms (customerIds, customerOrOrganization, organizationId) cannot widen the signed-in buyer's cart scope on the VCST-6251 fixed build
+plane: experiential
+question: Can a buyer read another customer's or another organization's carts by putting customerIds, organizationId or customerOrOrganization:true in the Query.carts filter?
+questions:
+  - text: Does the xAPI carts filter argument override the userId/organization scope?
+  - text: Does customerOrOrganization:true in Query.carts return colleagues' organization carts?
+  - text: Is cart isolation per organization enforced when the carts filter names another org?
+status: active
+appliesTo:
+  - axis: surface
+    value: xapi
+anchors:
+  - coordinate: Query.carts
+evidence:
+  - method: observation
+    deployment: vcst_qa
+    build: 4fafc097f6a88f6c
+    conditions: module:VirtoCommerce.XCart=3.1043.0-pr-151-07b3; store=B2B-store; role=storefront buyer, no org role
+    at: 2026-11-04T08:15:12.294Z
+    by: session:7c4c844c
+    who: Lenajava1
+---
+On vcst_qa (XCart 3.1043.0-pr-151-07b3, the VCST-6251 fix), buyers signed in with a password-grant storefront token (storeId B2B-store, organization_id = own org) called Query.carts(storeId, userId = self, cultureName, currencyCode, filter). Filters "customerOrOrganization:true customerIds:<other org's buyer>", "customerOrOrganization:true organizationId:<other org>", "customerIds:<other buyer>" and "customerOrOrganization:true" returned only the caller's own carts and wishlists (2 of 2, same as unfiltered); a buyer with no organization using "customerOrOrganization:true organizationId:<other org>" got only his own cart. Repeated 3 times, stable. Legit terms still narrow: name:default -> the default cart only, name:<list name> -> that wishlist only, status:Ordered -> 0. On the pre-fix XCart 3.1044.0 (vcptcore) the same calls leaked: customerOrOrganization:true returned a same-org colleague's cart, and the no-org buyer's organizationId:<other org> filter returned that org's carts.
