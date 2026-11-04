@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T13:12:03.023Z",
-  "count": 1624,
+  "generated": "2026-11-04T13:16:32.180Z",
+  "count": 1625,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10328,6 +10328,23 @@
         "actor=sales-rep",
         "module=x-cart",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-49DEB339",
+      "path": "entries/KB-49DEB339.md",
+      "subject": "On the quote edit page, the mobile (375px) Select address modal renders an unnamed overlay button on every address row, and the pager jumps when the last page has fewer rows",
+      "question": "Quote edit page Select address modal — do its address rows have accessible names at mobile width, and does the pager keep its position on a short last page?",
+      "anchors": [
+        "/quotes/{id}",
+        "Query.currentOrganizationAddresses"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
