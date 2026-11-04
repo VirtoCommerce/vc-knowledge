@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T19:49:43.186Z",
-  "count": 1656,
+  "generated": "2026-11-04T20:09:16.839Z",
+  "count": 1657,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14880,7 +14880,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21033,7 +21033,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -26355,6 +26355,30 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AE7EF8A7",
+      "path": "entries/KB-AE7EF8A7.md",
+      "subject": "With global MFA on, a customer of a Disabled store who holds the storefront role \"Organization employee\" in user.Roles is asked for the code in its own store; the same customer without that role is not",
+      "question": "Is a customer holding the Organization employee role in user.Roles asked for the MFA code at POST /connect/token in its own StoreMode=Disabled store while global MFA is on?",
+      "questions": [
+        "Does a storefront organization role make a buyer a Backoffice account for the Disabled-store MFA skip?",
+        "Why does isDisabledModeSkipped turn true after adding Organization employee to a customer?",
+        "VCST-6686 sign-in half: org-role buyer on own Disabled store with global MFA on"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "GET /api/mfa/modes/users/{id}/status"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "store-mode=disabled",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -32972,7 +32996,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
