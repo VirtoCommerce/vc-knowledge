@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T14:01:59.391Z",
-  "count": 1628,
+  "generated": "2026-11-04T14:02:25.482Z",
+  "count": 1630,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -464,6 +464,23 @@
       "scope": [
         "documenttype=product",
         "surface=admin-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-03964E9D",
+      "path": "entries/KB-03964E9D.md",
+      "subject": "After an administrator sets a user's MFA mode to Required, the user's existing session and refresh_token keep working without a code; only the next password sign-in asks",
+      "question": "After an admin sets PUT api/mfa/modes/users/{id} Required, does an existing session's refresh_token grant at POST /connect/token still issue tokens without the MFA code?",
+      "anchors": [
+        "POST /connect/token",
+        "PUT /api/mfa/modes/users/{id}"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -31120,6 +31137,24 @@
         "feature=organization-switcher",
         "persona=multi-org",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D5A600E6",
+      "path": "entries/KB-D5A600E6.md",
+      "subject": "updateMfaUserMode is accepted through a CustomerChoice store that is not the user's own store, and the stored mode applies only when that store is named",
+      "question": "Mutation.updateMfaUserMode with a storeId of a CustomerChoice store that is not the user's own store: is the change accepted, and where does the stored mode apply?",
+      "anchors": [
+        "Mutation.updateMfaUserMode",
+        "Mutation.requestMfaChangeCode",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
