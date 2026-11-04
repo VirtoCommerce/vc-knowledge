@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T09:54:38.278Z",
-  "count": 1598,
+  "generated": "2026-11-04T10:03:55.240Z",
+  "count": 1599,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24388,6 +24388,24 @@
       "trust": 3,
       "disputed": 2,
       "contested": 1
+    },
+    {
+      "id": "KB-A91E26F8",
+      "path": "entries/KB-A91E26F8.md",
+      "subject": "Admin DELETE /api/carts?ids=<one id> answers 204 and removes a cart a buyer created through xAPI addItem (the buyer's Query.carts no longer lists it, GET /api/carts/{id} returns no body)",
+      "question": "How can a test delete a storefront cart it created, from a cleanup block, when xAPI removeCart was skipped?",
+      "anchors": [
+        "DELETE /api/carts",
+        "Mutation.removeCart"
+      ],
+      "scope": [
+        "role=admin",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-A91E80EC",
