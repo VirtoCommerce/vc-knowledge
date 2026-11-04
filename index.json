@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T12:39:55.508Z",
-  "count": 1618,
+  "generated": "2026-11-04T12:48:49.265Z",
+  "count": 1619,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8456,6 +8456,29 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3E84BFA8",
+      "path": "entries/KB-3E84BFA8.md",
+      "subject": "After a personal user deletes their selected Ship to address, the header shows \"Select address\" but the cart/checkout keeps the deleted address as shipping and billing",
+      "question": "What does the storefront header Ship to and the checkout shipping address show after the contact's selected address is deleted from the address book?",
+      "questions": [
+        "Does checkout keep a shipping address that was deleted from the address book?",
+        "Does the header Ship to selector fall back to the cart shipment address after the selected address is deleted?"
+      ],
+      "anchors": [
+        "/cart",
+        "/account/addresses",
+        "Query.currentCustomerAddresses",
+        "Mutation.deleteMemberAddresses"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
