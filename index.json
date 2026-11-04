@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T18:29:40.627Z",
-  "count": 1652,
+  "generated": "2026-11-04T18:33:52.611Z",
+  "count": 1653,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17227,6 +17227,31 @@
       "scope": [
         "feature=configurable-products",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-76F9AECF",
+      "path": "entries/KB-76F9AECF.md",
+      "subject": "The email for a requestMfaChangeCode code is the sign-in email MfaSignInEmailNotification (\"Your sign-in code\"), identical to a sign-in code email and with no purpose field",
+      "question": "What email does Mutation.requestMfaChangeCode send, and does it differ from the sign-in code email?",
+      "questions": [
+        "Does the MFA change code email say it confirms turning two-factor on or off?",
+        "Which notification type and template does requestMfaChangeCode use?",
+        "Can the MfaSignInEmailNotification template tell a change code from a sign-in code?",
+        "What subject does the two-factor mode change confirmation email have?"
+      ],
+      "anchors": [
+        "Mutation.requestMfaChangeCode",
+        "POST /api/notifications/journal",
+        "GET /api/notifications/journal/{id}"
+      ],
+      "scope": [
+        "module=mfa",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
