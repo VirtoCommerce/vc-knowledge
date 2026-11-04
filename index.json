@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T18:44:37.236Z",
-  "count": 1655,
+  "generated": "2026-11-04T18:56:24.013Z",
+  "count": 1656,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6636,6 +6636,31 @@
         "grant=otp_email",
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2EEF45B7",
+      "path": "entries/KB-2EEF45B7.md",
+      "subject": "Both Backoffice MFA mode views (AngularJS blade and Admin Shell page) credit an administrator-set Enabled mode to the user: hint \"Turned on in the storefront…\" and Effective status reason \"The user turned it on.\"",
+      "question": "What do the Backoffice MFA mode blade and the Admin Shell mode page say after an administrator sets a user's mode to Enabled?",
+      "questions": [
+        "Does the Admin Shell MFA mode page show 'The user turned it on' for an Enabled mode the administrator set?",
+        "Can the Backoffice tell who set a user's MFA mode to Enabled?",
+        "What reason does the MFA Effective status give for a CustomerChoice store when the user mode is Enabled?",
+        "Does GET /api/mfa/modes/users/{id} return who changed the mode?"
+      ],
+      "anchors": [
+        "PUT /api/mfa/modes/users/{id}",
+        "GET /api/mfa/modes/users/{id}/status",
+        "/apps/admin-shell#/security/user/{id}"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
