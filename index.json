@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T13:25:54.962Z",
-  "count": 1626,
+  "generated": "2026-11-04T13:27:31.508Z",
+  "count": 1627,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32082,6 +32082,27 @@
       "scope": [
         "role=storefront-buyer",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DC22644C",
+      "path": "entries/KB-DC22644C.md",
+      "subject": "On the storefront build without PR #2424 (theme 2.62.0-pr-2622), deleting a personal user's selected Ship to address also leaves the deleted address as the cart/checkout shipping and billing address",
+      "question": "Does the cart/checkout keep a deleted selected Ship to address on the storefront build before theme 2.62.0-pr-2424, and what does the header show?",
+      "anchors": [
+        "/cart",
+        "/account/addresses",
+        "Mutation.deleteMemberAddresses",
+        "Query.currentCustomerAddresses"
+      ],
+      "scope": [
+        "account=personal",
+        "surface=storefront-ui",
+        "theme=2.62.0-pr-2622"
       ],
       "plane": "experiential",
       "status": "active",
