@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T09:34:41.059Z",
-  "count": 1595,
+  "generated": "2026-11-04T09:46:37.644Z",
+  "count": 1596,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29749,6 +29749,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D02F231D",
+      "path": "entries/KB-D02F231D.md",
+      "subject": "Query.quotes filter status needs a multi-word value quoted: status:\"Proposal sent\" matches, unquoted status:Proposal sent matches nothing and raises no error",
+      "question": "How do I filter the buyer's xAPI quotes by a status with a space, like Proposal sent?",
+      "questions": [
+        "Why does Query.quotes with status:Proposal sent return zero quotes?",
+        "What filter syntax does Query.quotes accept for status?"
+      ],
+      "anchors": [
+        "Query.quotes"
+      ],
+      "scope": [
+        "role=storefront buyer",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
