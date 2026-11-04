@@ -37,5 +37,15 @@ evidence:
     defect: suspected
     who: Lenajava1
     note: "Reproduced 2/2 on a fresh disposable Manager whose user MFA mode was left at default (not Required): own-store StoreMode Enabled alone is enough. POST /api/platform/security/login 200 requiresTwoFactor false, then POST /connect/token grant_type=password (no storeId) 400 two_factor_required; the console line carries the same 496-char twoFactorToken as the response; one MfaSignInEmailNotification row per sign-in, created within 0.6 s of submit. A page reload sends no second grant. Shell API calls ride the Identity cookie (no Authorization header), so nothing 401s after the failed grant. Controls: own store Disabled and Use global -> /connect/token 200, no console error, no journal row. Source: vc-shell framework/core/composables/useUser/index.ts signIn() runs the cookie login, then fetchToken({grant_type: password}); fetchToken logs the raw error body at error level."
+  - method: observation
+    deployment: vcst_qa
+    build: ad2ed2b97c10a544
+    conditions: platform=3.1094.0; module:VirtoCommerce.AdminShell=3.1093.0; module:VirtoCommerce.MFA=3.1002.0-pr-3-1a0f; setting:MultiFactorAuthentication.Enabled=false
+    at: 2026-11-04T19:48:13.598Z
+    by: session:2f6b8998
+    bodyHash: 670419f937f0
+    defect: VCST-6694
+    who: Lenajava1
+    note: "Independent judge session: fresh Manager (mfa:manage, user mode Off) bound to a run store Enabled, fresh Edge context: security/login 200, dashboard opens, connect/token 400 with a 497-char twoFactorToken logged at error level by use-user fetchToken, one 'Your sign-in code' journal row. Control with own store Disabled in a fresh context: connect/token 200, no console error, no new row."
 ---
 Global MultiFactorAuthentication.Enabled false. A non-administrator Manager (roles: platform:security:access, platform:security:read, mfa:read, mfa:manage) with user MFA mode Required and storeId bound to a disposable store whose StoreMode is Enabled. AngularJS Backoffice sign-in (#!/login): POST /api/platform/security/login 200 {succeeded:true, requiresTwoFactor:false}, workspace opens, no code step, 0 MfaSignInEmailNotification rows. Admin Shell sign-in (/apps/admin-shell/#/login, same account): POST /api/platform/security/login 200, then POST /connect/token grant_type=password (no storeId) 400 {code: two_factor_required, twoFactorToken, provider Email}; the shell still lands on its dashboard with no code prompt, the console logs "[@vc-shell/framework#use-user] fetchToken - HTTP error: 400" with the full twoFactorToken, and the notification journal gains one MfaSignInEmailNotification "Your sign-in code" at the sign-in second. BL-AUTH-025 says store and user modes never add the code on the Backoffice sign-in; the UI is not challenged, but the code is still generated and mailed.

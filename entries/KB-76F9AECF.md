@@ -26,5 +26,14 @@ evidence:
     at: 2026-11-04T18:33:20.854Z
     by: session:7f21950d
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: ad2ed2b97c10a544
+    conditions: platform=3.1094.0; module:VirtoCommerce.MFA=3.1002.0-pr-3-1a0f; setting:MultiFactorAuthentication.StoreMode=CustomerChoice
+    at: 2026-11-04T19:48:13.730Z
+    by: session:2f6b8998
+    bodyHash: da6674f12f88
+    who: Lenajava1
+    note: "Independent judge session: a requestMfaChangeCode row and a password-grant sign-in row both read subject 'Your sign-in code' and the same body ('If you did not try to sign in, change your password.') apart from the code."
 ---
 CustomerChoice run store, one confirmed customer, global MFA off. Three codes on one account, each requested after the 30 s resend interval: requestMfaChangeCode (its code then turned the user mode on through updateMfaUserMode), a password-grant sign-in challenge (its code completed grant_type=mfa), and requestMfaChangeCode again (its code turned the mode off). The journal (GET /api/notifications/journal/{id}) has three rows with the same notificationType MfaSignInEmailNotification, the same subject "Your sign-in code" and the same body apart from the code: "Your sign-in code is <code>. It expires shortly, so use it right away. If you did not try to sign in, change your password." Same languageCode. No journal field names the purpose. The notification type (GET /api/notifications/MfaSignInEmailNotification for the store tenant) has one predefined template, and its only custom field is code. InputRequestMfaChangeCodeType takes only storeId. In source (vc-module-mfa 1a0f481), the change purpose is kept on the two-factor ticket and read only when the code is verified. It is not passed to IMfaProvider.SendCodeAsync(store, user, code), so the template cannot branch on it. README L113 names this one notification as the sender of the code.
