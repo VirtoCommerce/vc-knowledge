@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T09:32:38.611Z",
-  "count": 1594,
+  "generated": "2026-11-04T09:34:41.059Z",
+  "count": 1595,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9970,7 +9970,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21636,7 +21636,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -32018,6 +32018,28 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E0B4D1F8",
+      "path": "entries/KB-E0B4D1F8.md",
+      "subject": "POST /api/catalog/search does not exist (404, empty body); catalogs are found by name with POST /api/catalog/catalogs/search {keyword}",
+      "question": "Which REST route finds a catalog by its name?",
+      "questions": [
+        "Why does POST /api/catalog/search return nothing for a catalog that exists?",
+        "How do I look up a catalog by keyword through the admin REST API?",
+        "Is there a /api/catalog/search route for catalogs?"
+      ],
+      "anchors": [
+        "POST /api/catalog/search",
+        "POST /api/catalog/catalogs/search"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
