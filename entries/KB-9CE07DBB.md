@@ -22,5 +22,14 @@ evidence:
     at: 2026-11-04T12:04:24.124Z
     by: session:325c07df
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: ad2ed2b97c10a544
+    conditions: setting:MultiFactorAuthentication.Enabled=true; setting:MultiFactorAuthentication.StoreMode=Disabled (disposable run store)
+    at: 2026-11-04T15:34:06.157Z
+    by: session:7f21950d
+    bodyHash: cecfc68a518f
+    who: Lenajava1
+    note: "2026-11-04 15:33Z, global MultiFactorAuthentication.Enabled on (short window), disposable Disabled store. Own customer with a run role holding a permission: status row isDisabledModeSkipped=true, isRequired=true, requiredBy=Global; role-less own customer: false/false/None. Now also observed at the token endpoint: the role holder got 400 invalid_grant two_factor_required + one MfaSignInEmailNotification row, the role-less one got 200 with access_token and no code email."
 ---
 2026-11-04, read-only, admin token, store B2B-store has StoreMode=Disabled. GET /api/mfa/modes/users/{id}/status row for B2B-store, users whose storeId is B2B-store: Customer with no roles (14 of 14) isDisabledModeSkipped=false (own customer, the code is skipped); Customer or untyped user with the role Organization employee or Purchasing agent (35 of 35) isDisabledModeSkipped=true; Manager type (11 of 11) isDisabledModeSkipped=true, with or without roles. A customer of another store (TestStore) also reads true. Both roles carry permissions (storefront:organization:view, storefront:user:view), and README treats any user with a permission as a Backoffice account through IAdminUIAccessPolicy, so a B2B storefront user with an org role does not skip the code in a Disabled store. Same evaluator the token endpoint uses per README; the token endpoint itself was not run (global MFA on is a shared write).
