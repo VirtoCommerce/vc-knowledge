@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T18:10:58.732Z",
-  "count": 1649,
+  "generated": "2026-11-04T18:13:36.589Z",
+  "count": 1650,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5516,6 +5516,32 @@
       "scope": [
         "feature=passkey-management",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-27704B72",
+      "path": "entries/KB-27704B72.md",
+      "subject": "Deleting a user or organization leaves its MFA mode stored: GET /api/mfa/modes/users/{deletedId} and /organizations/{deletedId} still return the mode set before deletion",
+      "question": "Does the MFA mode stored by PUT /api/mfa/modes/users/{id} or /api/mfa/modes/organizations/{id} survive after the user or organization is deleted?",
+      "questions": [
+        "Is a user's MFA mode removed when the user account is deleted?",
+        "What does GET /api/mfa/modes/users/{id} return for a deleted user?",
+        "Does deleting an organization clear its MFA organization mode setting?",
+        "Are MFA modes orphaned in platform object settings after member deletion?"
+      ],
+      "anchors": [
+        "GET /api/mfa/modes/users/{id}",
+        "GET /api/mfa/modes/organizations/{id}",
+        "DELETE /api/platform/security/users",
+        "DELETE /api/members"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
