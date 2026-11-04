@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T13:16:32.180Z",
-  "count": 1625,
+  "generated": "2026-11-04T13:25:54.962Z",
+  "count": 1626,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18429,6 +18429,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-80EEE2EB",
+      "path": "entries/KB-80EEE2EB.md",
+      "subject": "On a header Ship to selection a personal user's storefront sends updateContact, GetFullCart (cart not loaded yet), AddOrUpdateCartShipment, GetMe, then GetCurrentUserAddresses(ids:[selected]); the label changes to the new address in the same round trip",
+      "question": "Which GraphQL requests does the storefront send when a personal user picks another address in the header Ship to popover, and does the label update at once?",
+      "anchors": [
+        "Mutation.updateContact",
+        "Mutation.addOrUpdateCartShipment",
+        "Query.me",
+        "Query.currentCustomerAddresses",
+        "/account/addresses",
+        "/cart"
+      ],
+      "scope": [
+        "frontend=2.62.0-pr-2424",
+        "surface=storefront-ui",
+        "user=personal"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8105EAF3",
       "path": "entries/KB-8105EAF3.md",
       "subject": "POST /api/page-builder-multilanguage-pages answers 403 (not 400) to a builder:access+builder:read-only user even with an empty body; search answers 200",
@@ -21845,7 +21868,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
