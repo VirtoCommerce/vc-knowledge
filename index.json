@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T21:33:41.637Z",
-  "count": 1657,
+  "generated": "2026-11-04T21:41:29.330Z",
+  "count": 1658,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11059,6 +11059,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4C17EE4B",
+      "path": "entries/KB-4C17EE4B.md",
+      "subject": "On vcptcore_regression (theme 2.59.0) no product page renders the VcVariantPicker; variation masters render the B2B variations list instead",
+      "question": "Which product page on vcptcore_regression renders the VcVariantPicker variant picker, and what does a variation master's PDP render instead?",
+      "questions": [
+        "Is there a VcVariantPicker fixture product on vcptcore_regression?",
+        "Why is A11Y-VCP-001 blocked on vcptcore_regression?",
+        "What does a variation product PDP render on B2B-store — variant picker or variations table?"
+      ],
+      "anchors": [
+        "Query.product"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
