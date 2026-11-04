@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T18:06:47.345Z",
-  "count": 1648,
+  "generated": "2026-11-04T18:10:58.732Z",
+  "count": 1649,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4380,6 +4380,29 @@
       "scope": [
         "buyer=signed-in",
         "surface=ucp-mcp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1E0332AA",
+      "path": "entries/KB-1E0332AA.md",
+      "subject": "On /cart the Delivery method and Payment method selectors are role=button vc-select triggers; theme 2.62.0-pr-2622 sets aria-required on them (axe aria-allowed-attr), the 2.62.0-pr-2632 fix build does not, and their accessible name is the field label only",
+      "question": "What markup do the Delivery method and Payment method selectors on /cart render, and does axe flag them?",
+      "questions": [
+        "Does the cart delivery-method selector carry aria-required on a role=button element?",
+        "Why does axe report aria-allowed-attr on /cart?",
+        "Does the /cart shipping method or payment method image have alt text?",
+        "What does a screen reader announce for the cart delivery method selector after a method is chosen?",
+        "Do the cart method selectors open with Space?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
