@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T14:27:47.448Z",
-  "count": 1639,
+  "generated": "2026-11-04T14:42:54.173Z",
+  "count": 1640,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1444,6 +1444,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0A3256BC",
+      "path": "entries/KB-0A3256BC.md",
+      "subject": "With global MFA off, a customer's password grant naming its own store with StoreMode=Enabled answers 400 two_factor_required with a twoFactorToken, no access token, and sends exactly one MfaSignInEmailNotification",
+      "question": "Does a password grant naming a store whose MultiFactorAuthentication.StoreMode is Enabled challenge a customer when the global MultiFactorAuthentication.Enabled is off?",
+      "questions": [
+        "Is StoreMode=Enabled enforced while the global MFA switch is off?",
+        "What does /connect/token return for a store-bound customer when the store requires MFA?",
+        "How many sign-in code emails does one MFA challenge send?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "feature=mfa",
+        "grant=password",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -33221,7 +33245,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
