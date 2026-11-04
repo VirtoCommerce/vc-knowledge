@@ -31,5 +31,14 @@ evidence:
     defect: suspected
     who: Lenajava1
     note: "10 parallel calls (fresh connection each) on a book of 8, three runs: book 10, 9 and 18 (expected 9), identical rows; 5, 6 and 0 calls returned HTTP 200 with errors[] \"Error trying to resolve field 'updateMemberAddresses'.\" Existing-address parallel saves changed nothing."
+  - method: observation
+    deployment: vcst_qa
+    build: ad2ed2b97c10a544
+    conditions: module:VirtoCommerce.ProfileExperienceApiModule=3.1023.0; module:VirtoCommerce.Customer=3.1032.0; module:VirtoCommerce.Xapi=3.1029.0; module:VirtoCommerce.Core=3.1013.0; account=personal; store=B2B-store
+    at: 2026-11-04T13:23:03.385Z
+    by: session:3f1092dc
+    bodyHash: c8cdb37435fa
+    who: Lenajava1
+    note: "Reproduced again with a fresh admin-created personal user: 5 or 10 simultaneous saves (fresh connection each) of one new address duplicated in 5 of 10 rounds (2-10 copies; one round 10 of 10 calls without errors[] stored 10 copies); 5 sequential calls stored 1; start gaps of 150 ms or more stored 1 in 12 of 12 rounds. Source: check is Member.Addresses.Any(comparer) in MemberAggregateRootBase.cs:51 (profile-experience-api 3.1023.0) between an unlocked read and save (UpdateMemberAddressesCommandHandler.cs:31-33)."
 ---
 As a personal storefront user with an empty address book, 5 sequential updateMemberAddresses calls with one identical new address left 1 copy (the duplicate skip works). 5 concurrent calls with that same address (a fresh connection each, no retry) left 2 to 5 identical copies in 7 of 12 rounds. In one round all 5 calls returned HTTP 200 with empty errors[] and 5 copies were stored. Some calls were refused with DB_UPDATE_CONCURRENCY (still HTTP 200), but not all, so that guard does not prevent the duplicates. Every response carried the same instance marker, so this was seen on a single instance; a cross-instance race was not tested.
