@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T18:13:36.589Z",
-  "count": 1650,
+  "generated": "2026-11-04T18:27:01.409Z",
+  "count": 1651,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29767,6 +29767,32 @@
       "scope": [
         "module=sales-rep",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C91A3971",
+      "path": "entries/KB-C91A3971.md",
+      "subject": "The MFA effective-status APIs report only per-store requirement: nothing about whether the members can receive a code, so an admin sees \"Required by Organization\" for a member whose unconfirmed email locks them out",
+      "question": "Does GET /api/mfa/modes/organizations/{id}/status (or the user status) tell the administrator which members cannot receive an MFA code, e.g. an unconfirmed email?",
+      "questions": [
+        "Does the Backoffice MFA effective status show members without a confirmed email?",
+        "Is there any warning when an organization's MFA mode is enabled while a member's email is unconfirmed?",
+        "Does the user MFA status show provider availability?"
+      ],
+      "anchors": [
+        "GET /api/mfa/modes/organizations/{id}/status",
+        "GET /api/mfa/modes/users/{id}/status",
+        "PUT /api/mfa/modes/organizations/{id}",
+        "Query.mfaSettings"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "store-mode=customer-choice",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
