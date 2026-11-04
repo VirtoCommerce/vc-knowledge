@@ -18,5 +18,14 @@ evidence:
     at: 2026-10-28T11:06:08.796Z
     by: session:7e8ea7fb
     who: Lenajava1
+  - method: observation
+    deployment: vcptcore_regression
+    build: 99880d06bbb9b4cf
+    conditions: theme=2.59.0; store=B2B-store
+    at: 2026-11-04T21:31:55.650Z
+    by: session:35ec50d2
+    bodyHash: 3c37fcb06d97
+    who: Aleksandra-Mitricheva
+    note: "2026-11-05 on theme 2.59.0: same page shape (three password fields, strong-password tips, disabled Change button), no notice about other devices or sessions."
 ---
 As a signed-in B2B user, /account/change-password renders Current password, New password, Confirm new password, the "Tips for creating a strong password" box and a Change button. No informational notice about being signed out of other devices/browsers is present anywhere on the page (DOM search for 'other devices', 'sessions', 'sign you out' found nothing). Footer build Ver. 2.61.0-alpha.2605.
