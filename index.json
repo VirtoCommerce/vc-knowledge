@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T12:31:16.436Z",
-  "count": 1615,
+  "generated": "2026-11-04T12:39:55.508Z",
+  "count": 1618,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8571,6 +8571,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-3F299C2A",
+      "path": "entries/KB-3F299C2A.md",
+      "subject": "updateMemberAddresses with several distinct addresses in one addresses[] batch stores only the last unless each carries a unique key",
+      "question": "Does updateMemberAddresses store every address when addresses[] holds several distinct addresses?",
+      "questions": [
+        "Why does currentCustomerAddresses total stay 1 after I add 3 addresses in one updateMemberAddresses call?"
+      ],
+      "anchors": [
+        "Mutation.updateMemberAddresses",
+        "Query.currentCustomerAddresses"
+      ],
+      "scope": [
+        "role=personal customer",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3F3D3C6B",
       "path": "entries/KB-3F3D3C6B.md",
       "subject": "salesRepCustomerOrders on /graphql/sales-rep answers a non-rep buyer token with HTTP 200, totalCount 0 and no errors[] — an empty result, not a refusal",
@@ -15790,6 +15811,24 @@
         "entity=member-dynamic-properties",
         "surface=admin-spa",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6EBEE61A",
+      "path": "entries/KB-6EBEE61A.md",
+      "subject": "Parallel updateMemberAddresses of one new address on a fresh connection each creates duplicate rows and some calls fail with 'Error trying to resolve field'",
+      "question": "What happens when the same new address is saved by 10 parallel updateMemberAddresses calls?",
+      "anchors": [
+        "Mutation.updateMemberAddresses",
+        "Query.currentCustomerAddresses"
+      ],
+      "scope": [
+        "role=personal customer",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -29225,7 +29264,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -32063,6 +32102,25 @@
         "module=seo",
         "redirect-rule-type=static",
         "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DE433C57",
+      "path": "entries/KB-DE433C57.md",
+      "subject": "Contact.selectedAddressId stays on a deleted address, is set automatically for a contact's first address, and is kept per organization",
+      "question": "What does Contact.selectedAddressId hold after the selected address is deleted, for a first address, and after an organization switch?",
+      "anchors": [
+        "Mutation.updateContact",
+        "Mutation.deleteMemberAddresses",
+        "Query.currentOrganizationAddresses"
+      ],
+      "scope": [
+        "role=personal customer and organization maintainer",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
