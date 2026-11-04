@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T12:48:49.265Z",
-  "count": 1619,
+  "generated": "2026-11-04T12:54:27.155Z",
+  "count": 1623,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -630,6 +630,29 @@
       "supersededBy": [
         "KB-31802239"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-042C1C21",
+      "path": "entries/KB-042C1C21.md",
+      "subject": "On vcst the MFA wrong-code cap and resend limit are per platform instance: without the INGRESSCOOKIE affinity cookie the cap is not reached reliably; pinned to one instance it holds at 3",
+      "question": "Is the MFA MaxCodeAttempts cap (code_attempts_exceeded) enforced reliably on vcst for API calls without session affinity?",
+      "questions": [
+        "Why does the right MFA code still work after three wrong ones?",
+        "Is code_attempts_exceeded shared between updateMfaUserMode and the mfa grant?",
+        "Does vcst run several platform instances behind the ingress?"
+      ],
+      "anchors": [
+        "Mutation.updateMfaUserMode",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -10869,6 +10892,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-4D018A86",
+      "path": "entries/KB-4D018A86.md",
+      "subject": "requestMfaChangeCode fails with GraphQL DB_UPDATE (SQL) for accounts whose email is 66+ characters; 61-character emails work",
+      "question": "Why does Mutation.requestMfaChangeCode answer DB_UPDATE for some customers?",
+      "questions": [
+        "requestMfaChangeCode Error trying to resolve field DB_UPDATE",
+        "Does a long email break the MFA change code request?"
+      ],
+      "anchors": [
+        "Mutation.requestMfaChangeCode"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4D082C89",
       "path": "entries/KB-4D082C89.md",
       "subject": "a pending invitation is a locked account with no status",
@@ -11802,6 +11846,27 @@
       "trust": 3,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-5140A4AF",
+      "path": "entries/KB-5140A4AF.md",
+      "subject": "The user's own store StoreMode applies to a password grant that omits storeId, names another store or an unknown store; the MFA challenge is answered before the store sign-in check",
+      "question": "Does the own store's MFA StoreMode apply when a password grant omits storeId, names another store or names an unknown store?",
+      "questions": [
+        "Can a customer skip the MFA code by leaving storeId out of POST /connect/token?",
+        "Is two_factor_required answered before user_cannot_login_in_store?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-51459ABB",
@@ -25644,6 +25709,27 @@
         "principal=org-member",
         "surface=admin-ui",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AE01D50C",
+      "path": "entries/KB-AE01D50C.md",
+      "subject": "requestMfaChangeCode inside the resend interval answers succeeded true with a new twoFactorToken and sends no email, not resend_too_soon; while the user mode is Required it still sends a code",
+      "question": "What does Mutation.requestMfaChangeCode answer for a second request within the resend interval, and for a user whose mode is Required?",
+      "questions": [
+        "Does requestMfaChangeCode return resend_too_soon?",
+        "Is the change code request refused when the administrator set the user to Required?"
+      ],
+      "anchors": [
+        "Mutation.requestMfaChangeCode"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
