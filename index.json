@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T08:53:24.301Z",
-  "count": 1592,
+  "generated": "2026-11-04T09:02:02.851Z",
+  "count": 1593,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18813,6 +18813,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-863D6B41",
+      "path": "entries/KB-863D6B41.md",
+      "subject": "A Product index Build (deleteExistingIndex=false) on vcst_qa completes with errorCount 0 and an empty errors[] in its IndexProgressPushNotification",
+      "question": "Does a Product search index Build complete without errors, and what does its push notification report?",
+      "questions": [
+        "What errorCount does the Product indexation push notification report after a Build?",
+        "Does POST /api/search/indexes/index for Product finish with Errors 0?",
+        "What document count does GET /api/search/indexes show for Product after a Build?"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "POST /api/platform/pushnotifications",
+        "GET /api/search/indexes"
+      ],
+      "scope": [
+        "surface=admin-spa",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
