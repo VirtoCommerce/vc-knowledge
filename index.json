@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T18:33:52.611Z",
-  "count": 1653,
+  "generated": "2026-11-04T18:42:22.482Z",
+  "count": 1654,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7965,6 +7965,31 @@
       "scope": [
         "module=virtocommerce.seo",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-39374F04",
+      "path": "entries/KB-39374F04.md",
+      "subject": "On /account/security an MFA mode Enabled set by the administrator is shown to the customer as \"You turned it on\", including for a customer with a confirmed email",
+      "question": "Who does the /account/security two-factor widget say turned MFA on when an administrator set the user's mode to Enabled?",
+      "questions": [
+        "What status text does Account Security show after PUT /api/mfa/modes/users/{id} Enabled?",
+        "Does Query.mfaSettings say whether the administrator or the customer set the MFA mode Enabled?",
+        "Why does the storefront say You turned it on when the admin enabled MFA?"
+      ],
+      "anchors": [
+        "/account/security",
+        "Query.mfaSettings",
+        "PUT /api/mfa/modes/users/{id}"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "store-mode=customer-choice",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
