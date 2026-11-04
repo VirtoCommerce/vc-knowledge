@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T12:01:48.492Z",
-  "count": 1609,
+  "generated": "2026-11-04T12:07:58.985Z",
+  "count": 1611,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1227,7 +1227,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-092E88A3",
@@ -22543,6 +22543,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-9CE07DBB",
+      "path": "entries/KB-9CE07DBB.md",
+      "subject": "In a Disabled store the status API marks Managers and customers holding an organization role as isDisabledModeSkipped=true; only role-less customers of that store are lenient",
+      "question": "Which users of a StoreMode=Disabled store does GET /api/mfa/modes/users/{id}/status report as still following the global MFA setting (isDisabledModeSkipped)?",
+      "anchors": [
+        "GET /api/mfa/modes/users/{id}/status",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa",
+        "store-mode=disabled",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9CEB8BBE",
       "path": "entries/KB-9CEB8BBE.md",
       "subject": "Query.carts filter terms (customerIds, customerOrOrganization, organizationId) cannot widen the signed-in buyer's cart scope on the VCST-6251 fixed build",
@@ -32574,6 +32593,25 @@
       ],
       "scope": [
         "surface=storefront"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E23D35B2",
+      "path": "entries/KB-E23D35B2.md",
+      "subject": "MultiFactorAuthentication.StoreMode on 3.1002.0-pr-3-1a0f has five allowed values and a description that limits Disabled to the store's own customers",
+      "question": "What are the allowed values, default and English description of the MultiFactorAuthentication.StoreMode setting?",
+      "anchors": [
+        "GET /api/platform/settings/MultiFactorAuthentication.StoreMode",
+        "GET /api/platform/localization"
+      ],
+      "scope": [
+        "feature=mfa",
+        "setting=multifactorauthentication.storemode",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
