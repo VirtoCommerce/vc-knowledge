@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T18:42:22.482Z",
-  "count": 1654,
+  "generated": "2026-11-04T18:44:37.236Z",
+  "count": 1655,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4102,6 +4102,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1AD3367C",
+      "path": "entries/KB-1AD3367C.md",
+      "subject": "Admin Shell MFA Mode select is named \"Mode\" and every option, the selected one included, has its label as accessible name; a nameless \"option [selected]\" in a Playwright MCP snapshot is a snapshot artifact",
+      "question": "What accessible names do the Admin Shell MFA Mode select and its options expose?",
+      "questions": [
+        "Does the selected option of the Admin Shell MFA Mode select have an accessible name?",
+        "Why does browser_snapshot show option [selected] with no name in a vc-shell VcSelect?",
+        "Is the MFA Mode select labelled for screen readers in the Admin Shell and in the AngularJS admin?",
+        "Does a disabled VcSelect expose aria-disabled?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/security/user/{id}"
+      ],
+      "scope": [
+        "surface=admin-shell",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
