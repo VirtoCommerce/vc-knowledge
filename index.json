@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T11:23:02.024Z",
-  "count": 1605,
+  "generated": "2026-11-04T11:50:33.656Z",
+  "count": 1607,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -899,6 +899,30 @@
         "component=vcstatwidget",
         "host=storybook",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-069482F7",
+      "path": "entries/KB-069482F7.md",
+      "subject": "An organization membership accepts a run-created (non-stock) security role, and GET /api/platform/security/permissions lists no storefront:* permission",
+      "question": "Can an organization membership carry a custom security role, for example one that adds xapi:my_organization:mfa:manage?",
+      "questions": [
+        "Does GET /api/platform/security/permissions include storefront permissions",
+        "How to give an organization maintainer the company MFA permission without editing a stock role",
+        "Which roles can be assigned on POST /api/customer/organization-memberships"
+      ],
+      "anchors": [
+        "POST /api/customer/organization-memberships",
+        "GET /api/platform/security/permissions",
+        "PUT /api/platform/security/roles"
+      ],
+      "scope": [
+        "area=organization-roles",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -10249,7 +10273,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -23229,6 +23253,29 @@
         "principal=customer",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A1F26E41",
+      "path": "entries/KB-A1F26E41.md",
+      "subject": "GET /api/platform/security/roles/{roleName} resolves a role by its NAME, not its id, and the roles search keyword also matches names only",
+      "question": "How do I read an organization role such as org-employee with its permissions through the platform REST API?",
+      "questions": [
+        "Why does GET /api/platform/security/roles/org-employee return nothing",
+        "Does the roles search keyword match role ids",
+        "How to get the permissions of the Organization employee role over REST"
+      ],
+      "anchors": [
+        "GET /api/platform/security/roles/{id}",
+        "POST /api/platform/security/roles/search"
+      ],
+      "scope": [
+        "area=platform-security-roles",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",

@@ -43,5 +43,14 @@ evidence:
     note: "2026-10-12: GET roles/{name} for 72 roles used to find holders of xapi:my_organization:return:view; search alone would not show them."
     build: 0bb1aea0269f4c1b
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: ad2ed2b97c10a544
+    conditions: platform=3.1094.0
+    at: 2026-11-04T11:50:16.414Z
+    by: session:325c07df
+    bodyHash: 04956835e49c
+    who: Lenajava1
+    note: "2026-11-04: GET roles/org-employee (id) → empty; GET roles/Organization%20employee → permissions; search keyword org-employee did not return it (keyword matches names). See KB-A1F26E41."
 ---
 POST /api/platform/security/roles/search returns matching roles with permissions: [] even when the role holds permissions. GET /api/platform/security/roles/{roleName} returns the same role with its full permissions list. A seeder or check that compares permissions from the search result reports a drift that does not exist (seen 2026-10-02 on roles with customer:access, customer:read, punchout:read that a Manager token then exercised correctly: search 200, DELETE 403). PUT /api/platform/security/roles with a stable id upserts the role.
