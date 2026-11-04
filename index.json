@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T15:38:54.504Z",
-  "count": 1645,
+  "generated": "2026-11-04T15:44:54.570Z",
+  "count": 1647,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4227,7 +4227,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-1C28E89D",
@@ -20841,6 +20841,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-8E161EEC",
+      "path": "entries/KB-8E161EEC.md",
+      "subject": "With global MultiFactorAuthentication.Enabled=true, a back-office Manager is challenged (400 two_factor_required, one code email) on the password grant even when it names a StoreMode=Disabled store, and equally without a storeId",
+      "question": "Does a StoreMode=Disabled store waive the MFA code for a Manager (Backoffice) account that names it in the password grant while global MFA is on?",
+      "questions": [
+        "Is a back-office Manager asked for the MFA code on /connect/token with storeId of a Disabled store?",
+        "Does StoreMode Disabled skip MFA for Backoffice users?",
+        "Does a Manager get tokens without a code when naming a Disabled store (VCST-6530 behaviour)?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "account=manager-backoffice",
+        "grant=password-with-storeid",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8E282E4F",
       "path": "entries/KB-8E282E4F.md",
       "subject": "A quote item without a selected tier price (no proposalPrices row flagged selected) makes the buyer's whole xAPI Query.quotes fail with NULL_REFERENCE, and quote(id) and GET /api/quote/requests/{id} fail too",
@@ -27527,6 +27551,32 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-B881E350",
+      "path": "entries/KB-B881E350.md",
+      "subject": "In a StoreMode=Disabled store with global MFA on, a customer whose organization role sits only on the organization membership (user.Roles empty) is not a Backoffice account: isDisabledModeSkipped=false and the password grant returns 200 without a code",
+      "question": "Does an organization employee or maintainer whose org role is only on the organization membership (not in user.Roles) need the MFA code at POST /connect/token for its own Disabled store while MultiFactorAuthentication.Enabled is on?",
+      "questions": [
+        "Does a membership-scoped organization role make a customer a Backoffice account for the MFA Disabled-store skip?",
+        "Why does isDisabledModeSkipped read false for some B2B users with an organization role?",
+        "Which role placement (user.Roles vs organization membership) does the MFA Backoffice-account check read?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "GET /api/mfa/modes/users/{id}/status",
+        "POST /api/customer/organization-memberships"
+      ],
+      "scope": [
+        "feature=mfa",
+        "grant=password",
+        "store-mode=disabled",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-B8EDAD02",
