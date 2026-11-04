@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T10:52:57.661Z",
-  "count": 1600,
+  "generated": "2026-11-04T10:58:09.697Z",
+  "count": 1601,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5865,7 +5865,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -8977,7 +8977,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -12661,7 +12661,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -28545,6 +28545,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-C621E98C",
+      "path": "entries/KB-C621E98C.md",
+      "subject": "An admin 'Submit proposal' on a quote produces no storefront header notification for the buyer",
+      "question": "Does a real admin 'Submit proposal' (quote moves to Proposal sent) produce a notification in the buyer's storefront header notifications popup?",
+      "questions": [
+        "Is the buyer notified on the storefront when the admin answers an RFQ?",
+        "Does the storefront bell show a message when a quote status changes to Proposal sent?",
+        "Quote status change push message storefront"
+      ],
+      "anchors": [
+        "/account/quotes"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C63F1821",
       "path": "entries/KB-C63F1821.md",
       "subject": "productConfiguration with configurableProductId \"\" returns the oldest active configuration of an unrelated product",
@@ -30388,7 +30410,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {

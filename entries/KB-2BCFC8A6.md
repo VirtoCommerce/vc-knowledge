@@ -56,5 +56,14 @@ evidence:
     bodyHash: 6c2eab92af70
     who: Lenajava1
     note: "Theme 3.1.0-pr-11-d67b: two Proposal-sent quotes (slot-1 buyer) approved from /account/quotes/{id}: only Decline/Approve offered (no Accept Quote / Convert to Order); single click, no confirmation, redirect to /account/orders/{id} with a New order whose total equals the quote total (quoted line prices); quote then reads Ordered."
+  - method: observation
+    deployment: vcst_qa
+    build: 56f8d7929809a5bb
+    conditions: theme=2.62.0-pr-2622-caac-caac275a; module:VirtoCommerce.Quote=3.1006.0-pr-168-9b3f
+    at: 2026-11-04T10:53:15.582Z
+    by: session:7c4c844c
+    bodyHash: 6c2eab92af70
+    who: Lenajava1
+    note: "REG-2026-11-04-1022: seven Proposal-sent quotes approved from /account/quotes/{id}; only Decline/Approve offered, single click with no dialog, redirect to /account/orders/{id} with a New order whose total equals the quote total; quote then Ordered with no Approve/Decline."
 ---
 The storefront quote detail page shows Approve and Decline only when quote.status === 'Proposal sent' and renders the raw status code as its label (vc-frontend view-quote.vue, settings_data.json quote statuses). The approveQuoteRequest mutation (ApproveQuoteCommandHandler) accepts only 'Proposal sent', then converts the quote to a cart, places the customer order and sets the quote to 'Ordered' in the same call; declineQuoteRequest sets 'Declined'. There is no intermediate 'Accepted' status and no separate checkout step for a quote. On vcst the Quotes.Status allowed values are Processing, On hold, New, Declined, Proposal sent, Ordered; Quotes.DefaultStatus is Draft.
