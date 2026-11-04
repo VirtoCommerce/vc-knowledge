@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T08:50:38.188Z",
-  "count": 1591,
+  "generated": "2026-11-04T08:53:24.301Z",
+  "count": 1592,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -27410,6 +27410,30 @@
       "scope": [
         "app=page-builder-shell",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BF12E9E2",
+      "path": "entries/KB-BF12E9E2.md",
+      "subject": "A numeric inline product property named Price indexes without error, and xAPI price sort and price range filter keep using the product's list price, not the property value",
+      "question": "If a product has a numeric property literally named Price, does it break indexing or change the storefront price sort and price filter?",
+      "questions": [
+        "Does a Number property called Price collide with the price field in the Product search index?",
+        "Does a product property named Price change xAPI products sort price:asc?",
+        "Can a product property named Price be filtered with filter price:[a TO b] in xAPI?"
+      ],
+      "anchors": [
+        "Query.products",
+        "POST /api/search/indexes/index"
+      ],
+      "scope": [
+        "module=xcatalog",
+        "subsystem=search-index",
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
