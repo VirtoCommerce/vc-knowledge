@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T08:29:23.423Z",
-  "count": 1588,
+  "generated": "2026-11-04T08:33:09.301Z",
+  "count": 1590,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20167,6 +20167,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-8E282E4F",
+      "path": "entries/KB-8E282E4F.md",
+      "subject": "A quote item without a selected tier price (no proposalPrices row flagged selected) makes the buyer's whole xAPI Query.quotes fail with NULL_REFERENCE, and quote(id) and GET /api/quote/requests/{id} fail too",
+      "question": "Why does the buyer's xAPI quotes query return NULL_REFERENCE after a quote is created through POST /api/quote/requests?",
+      "questions": [
+        "Why does /account/quotes fail for every quote once one REST-created quote exists?",
+        "Why does GET /api/quote/requests/{id} return 500 Object reference not set for a quote created by REST?",
+        "Which field must a REST-created quote item carry so totals can be calculated?",
+        "Does Query.quote(id) fail with NULL_REFERENCE for a REST-created quote?"
+      ],
+      "anchors": [
+        "Query.quotes",
+        "Query.quote",
+        "POST /api/quote/requests",
+        "GET /api/quote/requests/{id}"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8E87911F",
       "path": "entries/KB-8E87911F.md",
       "subject": "An orphaned sales-rep-documents blob (uploaded, never registered as a document) is refused to anonymous callers with 403",
@@ -21783,7 +21809,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -27132,6 +27158,29 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BCA1C475",
+      "path": "entries/KB-BCA1C475.md",
+      "subject": "POST /api/customerReviews returns HTTP 500 instead of a validation error when a review has no images field, or when the same user already reviewed the same product (the duplicate 500 leaks the SQL unique-index message)",
+      "question": "What does POST /api/customerReviews return for a review without images, or for a second review by the same user on the same product?",
+      "questions": [
+        "Why does the admin REST customer review create return Object reference not set to an instance of an object?",
+        "Does the REST customer reviews API reject a duplicate review per user and product with a validation error?",
+        "Is the images array required on POST /api/customerReviews?",
+        "Does creating a duplicate customer review through REST leak IX_CustomerReview_StoreId_EntityId_EntityType_UserId?"
+      ],
+      "anchors": [
+        "POST /api/customerReviews",
+        "Mutation.createReview"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
