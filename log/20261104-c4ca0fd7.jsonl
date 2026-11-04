@@ -1,0 +1,15 @@
+{"at":"2026-11-04T12:59:31.675Z","kind":"restart","why":"state-absent","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:19.002Z","kind":"ask","q":"/connect/token password grant storeId omitted MFA two_factor_required","repaired":"msys","verdict":"ambiguous","p":0.71,"f":{"idfCoverage":0.86,"sentenceStrength":0.24,"sentenceMargin":-0.11,"margin":0.01},"shown":["KB-7EFFA0AD","KB-EAE27E77","KB-1609EA54"],"state":"ambiguous","ms":554,"rank":"verdict-1","via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:20.435Z","kind":"ask","q":"graphql mfaSettings anonymous Unauthorized","verdict":"ambiguous","p":0.34,"f":{"idfCoverage":0.65,"sentenceStrength":0.37,"sentenceMargin":0.26,"margin":0.13},"shown":["KB-5145B031","KB-0237DF10","KB-A48DF440"],"state":"ambiguous","ms":815,"rank":"verdict-1","via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:21.660Z","kind":"ask","q":"graphql requestMfaChangeCode updateMfaUser wrong code invalid_code code_attempts_exceeded","verdict":"ambiguous","p":0.58,"f":{"idfCoverage":0.47,"sentenceStrength":0.19,"sentenceMargin":0.29,"margin":0.29},"shown":["KB-042C1C21","KB-83091BA9","KB-1144B33E"],"state":"ambiguous","ms":580,"rank":"verdict-1","via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:24.142Z","kind":"ask","q":"graphql impersonated session MFA change Forbidden","verdict":"ambiguous","p":0.31,"f":{"idfCoverage":0.51,"sentenceStrength":0.22,"sentenceMargin":-0.03,"margin":0.1},"shown":["KB-B93A97C4","KB-C6E9866D","KB-1144B33E"],"state":"ambiguous","ms":1869,"rank":"verdict-1","via":"cli","who":"Lenajava1","call":"toolu_01WWFQyfwjeD6fNbfm5vfBbu","agent":"test-management-specialist"}
+{"at":"2026-11-04T13:02:30.848Z","kind":"show","id":"KB-042C1C21","state":"answer","after":"2026-11-04T13:02:21.660Z","via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:32.013Z","kind":"show","id":"KB-621637B5","state":"answer","unpaired":true,"via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:32.999Z","kind":"show","id":"KB-5140A4AF","state":"answer","unpaired":true,"via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:33.984Z","kind":"show","id":"KB-AE01D50C","state":"answer","unpaired":true,"via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:34.953Z","kind":"show","id":"KB-28DB8660","state":"answer","unpaired":true,"via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:35.553Z","kind":"none","after":"2026-11-04T13:02:19.002Z","via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:36.158Z","kind":"none","after":"2026-11-04T13:02:20.435Z","via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:02:36.747Z","kind":"none","after":"2026-11-04T13:02:24.142Z","via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:08:18.928Z","kind":"confirm","id":"KB-621637B5","deployment":"vcst_qa","trust":2,"build":"ad2ed2b97c10a544","client":"164fdea8","via":"cli","who":"Lenajava1"}
+{"at":"2026-11-04T13:08:18.936Z","kind":"session","session":"c4ca0fd7","tools":314,"turns":2,"touchAt":[30,33,35,206,207,209,211,212],"agents":5,"agentTools":528,"agentTouches":52,"firstAt":"2026-11-04T10:45:58.819Z","lastAt":"2026-11-04T13:01:39.197Z","who":"Lenajava1"}
