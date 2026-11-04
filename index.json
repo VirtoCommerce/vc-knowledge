@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T15:44:54.570Z",
-  "count": 1647,
+  "generated": "2026-11-04T17:57:29.990Z",
+  "count": 1648,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33552,6 +33552,29 @@
       "scope": [
         "job=indexalldocumentsjob",
         "surface=admin-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E451FDF9",
+      "path": "entries/KB-E451FDF9.md",
+      "subject": "In a store with MultiFactorAuthentication.StoreMode AdminManaged, requestMfaChangeCode is refused in the payload with errorCode mfa_self_service_not_allowed and no code email is sent",
+      "question": "What does the requestMfaChangeCode mutation return for a signed-in customer when the store's MFA StoreMode is AdminManaged?",
+      "questions": [
+        "Can a customer turn MFA on over xAPI when the store administrator manages two-factor authentication?",
+        "Is a change code emailed when requestMfaChangeCode is refused in an AdminManaged store?",
+        "Which errorCode does requestMfaChangeCode give when customer self-service MFA is not allowed?"
+      ],
+      "anchors": [
+        "Mutation.requestMfaChangeCode",
+        "POST /graphql"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
