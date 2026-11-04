@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T09:46:37.644Z",
-  "count": 1596,
+  "generated": "2026-11-04T09:54:38.278Z",
+  "count": 1598,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3883,6 +3883,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1A55AE47",
+      "path": "entries/KB-1A55AE47.md",
+      "subject": "Query.properties with types:[PRODUCT] returns only PRODUCT items but its totalCount still counts every property type (19 vs 16 items)",
+      "question": "Does Query.properties totalCount reflect the types argument?",
+      "questions": [
+        "Why does Query.properties totalCount not match the number of items returned?",
+        "Can totalCount of Query.properties be used to count properties of one type?"
+      ],
+      "anchors": [
+        "Query.properties"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7975,6 +7995,28 @@
       ],
       "scope": [
         "element=products-filter-field-names",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3C089B1A",
+      "path": "entries/KB-3C089B1A.md",
+      "subject": "deactivateBackInStockSubscription keeps the subscription as an inactive row, and re-activating the same product reuses that row's id",
+      "question": "Does deactivateBackInStockSubscription delete the subscription, or keep it?",
+      "questions": [
+        "Does a test that subscribes and then deactivates leave a back-in-stock subscription behind?",
+        "Does activateBackInStockSubscription create a new subscription each time for the same product?"
+      ],
+      "anchors": [
+        "Mutation.deactivateBackInStockSubscription",
+        "Mutation.activateBackInStockSubscription",
+        "Query.backInStockSubscriptions"
+      ],
+      "scope": [
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -15308,7 +15350,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -22413,7 +22455,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {

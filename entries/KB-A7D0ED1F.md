@@ -38,5 +38,14 @@ evidence:
     bodyHash: a76cd1498687
     who: Lenajava1
     note: "2026-11-04, as an AcmeCorp buyer: filter catalogIds:<physical catalog outside the store, 2 properties read via admin GET /api/catalog/catalogs/{id}?responseGroup=Full> returned the same totalCount as unfiltered, and neither of that catalog's property names appeared in the unfiltered or the widened list."
+  - method: observation
+    deployment: vcst_qa
+    build: 4fafc097f6a88f6c
+    conditions: module:VirtoCommerce.XCatalog=3.1024.0-pr-115-8339; store=B2B-store; role=storefront buyer
+    at: 2026-11-04T09:52:49.596Z
+    by: session:322b37a0
+    bodyHash: a76cd1498687
+    who: Lenajava1
+    note: "2026-11-04 independent re-run, 2 runs, AcmeCorp buyer token: unfiltered and filter catalogIds:<physical catalog outside the store> both returned totalCount 19 with the same first property; neither of the other catalog's two properties (names read from GET /api/catalog/catalogs/{id}?responseGroup=Full) appeared."
 ---
 On vcst_qa (XCatalog 3.1024.0-pr-115-8339), Query.properties(storeId B2B-store, types [CATALOG, CATEGORY, PRODUCT, VARIATION], cultureName) returned 19 properties, all with catalogId = the store's catalog (each resolved via GET /api/catalog/properties/{id}); with filter "catalogIds:<another catalog id>" it returned the same 19 store-catalog properties (3 runs). On pre-fix XCatalog 3.1023.0 (vcptcore) the same filter returned 14 properties, all from the other catalog.

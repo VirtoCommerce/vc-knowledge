@@ -20,5 +20,14 @@ evidence:
     at: 2026-11-04T08:15:12.695Z
     by: session:7c4c844c
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 4fafc097f6a88f6c
+    conditions: module:VirtoCommerce.BackInStock=3.1004.0-pr-13-6f41; store=B2B-store
+    at: 2026-11-04T09:52:49.494Z
+    by: session:322b37a0
+    bodyHash: 195247226b52
+    who: Lenajava1
+    note: "2026-11-04 independent re-run, 2 runs: both buyers subscribed to the same product via activateBackInStockSubscription; the caller's keyword \"userId:<victim>\" returned the caller's own subscription and not the victim's. productIds:[p1] returned only the p1 subscription; keyword = p2 product code returned only the p2 subscription."
 ---
 On vcst_qa (BackInStock 3.1004.0-pr-13-6f41), a signed-in buyer with 2 active subscriptions called Query.backInStockSubscriptions(storeId, keyword: "userId:<another buyer's id>"): totalCount 2, both the caller's own, none of the other buyer's (3 runs). Narrowing still works: productIds:[p] -> 1; keyword = product id -> 1; keyword = product code -> 1 for a subscription created via activateBackInStockSubscription (productCode is stored on it; subscriptions created through admin REST without productCode do not match a code keyword). On pre-fix BackInStock 3.1003.0 (vcptcore) the same keyword returned exactly the other buyer's subscription.
