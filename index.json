@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T18:27:01.409Z",
-  "count": 1651,
+  "generated": "2026-11-04T18:29:40.627Z",
+  "count": 1652,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4280,6 +4280,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-1CCD2E8C",
+      "path": "entries/KB-1CCD2E8C.md",
+      "subject": "On /account/security the two-factor widget drops keyboard focus to the document body after a confirmed change and after Cancel; the outcome is announced only by the global Notifications toast, and the initial \"code sent\" is not announced",
+      "question": "Where does keyboard focus go after the two-factor change code is confirmed or cancelled on /account/security, and which of its messages reach a live region?",
+      "questions": [
+        "Does the MFA Turn on / Turn off button get focus back after the code step closes?",
+        "Is the two-factor authentication outcome announced to screen readers on the storefront?",
+        "Is the 'we sent a code to' message of the MFA change step announced?",
+        "What happens to focus when Cancel is pressed in the two-factor code step?"
+      ],
+      "anchors": [
+        "/account/security",
+        "Mutation.updateMfaUserMode",
+        "Mutation.requestMfaChangeCode"
+      ],
+      "scope": [
+        "feature=mfa-self-service",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1D490FB3",
       "path": "entries/KB-1D490FB3.md",
       "subject": "Place order from /cart as a personal user triggers UpdateMemberAddresses that returns 200 with a VALIDATION error while the order still completes",
@@ -5519,7 +5544,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
