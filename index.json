@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T08:33:09.301Z",
-  "count": 1590,
+  "generated": "2026-11-04T08:35:30.558Z",
+  "count": 1591,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -679,6 +679,30 @@
         "KB-097CB5D6",
         "KB-4C2EF958"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-049C82C8",
+      "path": "entries/KB-049C82C8.md",
+      "subject": "A product missing from the Product search index cannot be opened on the storefront by URL: slugInfo resolves it, but Query.product returns null and the page renders 404",
+      "question": "Does the storefront product page (Query.product / GetProduct) still open a product by its SEO URL when that product was dropped from the Product search index?",
+      "questions": [
+        "Why does a product URL render 404 after a Delete and build of the search index?",
+        "Is Query.product served from the search index or from the catalog database?",
+        "Can a test reach an un-indexed product by navigating to its URL instead of searching?"
+      ],
+      "anchors": [
+        "Query.product",
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "module=xcatalog",
+        "subsystem=search-index",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
