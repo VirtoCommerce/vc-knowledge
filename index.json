@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T14:16:40.871Z",
-  "count": 1634,
+  "generated": "2026-11-04T14:27:47.448Z",
+  "count": 1639,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4138,6 +4138,29 @@
       "scope": [
         "feature=punchout-order-request",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1BE09838",
+      "path": "entries/KB-1BE09838.md",
+      "subject": "The Admin Shell organization blade (#/customers/customer-organization/{id}) shows the organization MFA mode as an \"MFA: <mode>\" widget button that opens a Mode page whose Save persists",
+      "question": "Where is an organization's MFA mode set in the Admin Shell, and does its Save persist?",
+      "questions": [
+        "Does the Admin Shell have an organization MFA widget?",
+        "How do I open the organization Multi-factor authentication page in the new admin?",
+        "Admin Shell customer-organization blade MFA button"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/customers/customer-organization/{id}",
+        "PUT /api/mfa/modes/organizations/{id}"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -8984,6 +9007,29 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=page-builder-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-407E93C0",
+      "path": "entries/KB-407E93C0.md",
+      "subject": "The company two-factor widget on /company/info turns the organization on and off with an emailed code in CustomerChoice, and in AdminManaged is read-only while still saying \"each member decides for themselves\"",
+      "question": "What does the company two-factor authentication widget on /company/info show and do in CustomerChoice and AdminManaged stores?",
+      "questions": [
+        "How does a company maintainer turn MFA on for the whole organization in the storefront?",
+        "What does the company MFA widget say in an AdminManaged store?",
+        "What do company members see after the maintainer turns company MFA on?"
+      ],
+      "anchors": [
+        "/company/info",
+        "Mutation.updateMfaOrganizationMode"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14626,6 +14672,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-64C80F20",
+      "path": "entries/KB-64C80F20.md",
+      "subject": "While the store an administrator account belongs to is in StoreMode Enabled, that administrator's password grant at /connect/token (no storeId) answers two_factor_required, so scripts minting an admin token by password are blocked; the Backoffice sign-in is not",
+      "question": "Does a store's MultiFactorAuthentication.StoreMode=Enabled challenge the admin account's REST password grant?",
+      "questions": [
+        "Why does the admin password grant suddenly answer two_factor_required?",
+        "Can a store-level MFA setting block admin API token minting?",
+        "Does the Backoffice login ask for a code when the admin's store requires MFA?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-650B8BFB",
       "path": "entries/KB-650B8BFB.md",
       "subject": "Deleting or cancelling an order never releases a coupon use; deleting the promotion removes its usages",
@@ -16450,6 +16518,30 @@
       "scope": [
         "feature=otp-sign-in",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-724EABC7",
+      "path": "entries/KB-724EABC7.md",
+      "subject": "Admin Shell sign-in of a Manager whose own store requires MFA completes via the cookie login, but its parallel /connect/token password grant answers 400 two_factor_required, emails an unrequested \"Your sign-in code\" and logs the twoFactorToken to the browser console",
+      "question": "Does the Admin Shell sign-in send an MFA sign-in code for a Manager whose own store (storeId) is in MultiFactorAuthentication.StoreMode Enabled while global MFA is off?",
+      "questions": [
+        "Why does a Backoffice user get a sign-in code email when they log into the Admin Shell?",
+        "Admin Shell fetchToken HTTP error 400 two_factor_required",
+        "Does the AngularJS Backoffice login ask for MFA when the user's store is Enabled?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "/apps/admin-shell#/login",
+        "POST /api/platform/security/login"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -21743,6 +21835,34 @@
       "disputed": 0
     },
     {
+      "id": "KB-94B6ECBD",
+      "path": "entries/KB-94B6ECBD.md",
+      "subject": "On /account/security the two-factor widget shows a switch only in a CustomerChoice store for a user nobody else requires it of; every other state is read-only with its own reason line",
+      "question": "What does the two-factor authentication widget on /account/security show in each store mode and for each reason MFA is required?",
+      "questions": [
+        "When does a storefront customer see Turn on / Turn off for two-factor authentication on Account Security?",
+        "What text does Account Security show when the administrator set the user's MFA mode to Required?",
+        "What does Account Security show in an AdminManaged store?",
+        "What does a member of an organization that requires MFA see on Account Security?",
+        "What does Account Security show for an impersonated (Login on behalf) session?",
+        "What does Account Security show to a customer whose email is not confirmed?"
+      ],
+      "anchors": [
+        "/account/security",
+        "Query.mfaSettings",
+        "Mutation.requestMfaChangeCode",
+        "Mutation.updateMfaUserMode"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-94C2ADCC",
       "path": "entries/KB-94C2ADCC.md",
       "subject": "a guest on /cart gets no card form for cart-payment gateways and the order is booked unpaid",
@@ -22413,7 +22533,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -29057,7 +29177,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -30224,7 +30344,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {

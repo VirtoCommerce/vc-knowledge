@@ -28,5 +28,14 @@ evidence:
     bodyHash: 5bda5d96a647
     who: Lenajava1
     note: "Re-observed with Saves: AngularJS Save of Required persisted and the widget shows Required after reopening; Admin Shell Save of Enabled persisted and the overflow entry reads \"MFA: Enabled\". Changing the select without Save shows \"Preview of the selected mode. Save to apply it.\" and recalculates the rows; closing the blade saves nothing (no confirm dialog). The Admin Shell table has columns Store (with the store setting under the name) / Code at sign-in."
+  - method: observation
+    deployment: vcst_qa
+    build: ad2ed2b97c10a544
+    conditions: platform=3.1094.0; module:VirtoCommerce.MFA=3.1002.0-pr-3-1a0f; module:VirtoCommerce.AdminShell=3.1093.0
+    at: 2026-11-04T14:25:37.382Z
+    by: session:7f21950d
+    bodyHash: 5bda5d96a647
+    who: Lenajava1
+    note: "Re-observed: AngularJS Save Required persisted, widget reads Required; Admin Shell overflow \"MFA: Required\" -> Save Enabled persisted, overflow reads \"MFA: Enabled\". With mfa:read only both UIs show the Mode control locked and no Save/Reset; with no mfa permission the AngularJS user blade has no MFA widget and sends no /api/mfa request. A Manager's blade adds a \"Backoffice / Global setting\" row."
 ---
 2026-11-04: AngularJS admin user blade (Security > Users > a Customer user) has a widget "Multi-factor authentication" (value Off) between "Show contact" and "Roles"; it opens a blade "Multi-factor authentication of <login>" with a Mode select (Off / Enabled / Required), the hint "Not turned on. In stores with Customer choice it can be turned on in the storefront.", and an "Effective status" group: "Global setting: Off. It decides for the Backoffice sign-in and for stores set to Use global setting." plus a table Store / Store setting / Code at sign-in, one row per store with a reason ("The global setting is off.", "The store turned it off for its own customers." for a Disabled store). Admin Shell (/apps/admin-shell, user blade): the widget is not in the main widget bar (API keys, Sessions, Changes) but in the "more" overflow menu as "MFA: Off", opening a blade titled "Multi-factor authentication of <login>". No Sign-in methods widget exists on another user's blade in either UI.
