@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T14:02:25.482Z",
-  "count": 1630,
+  "generated": "2026-11-04T14:16:40.871Z",
+  "count": 1634,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3832,6 +3832,29 @@
       "resolved": 1
     },
     {
+      "id": "KB-18F911EF",
+      "path": "entries/KB-18F911EF.md",
+      "subject": "A user whose MFA mode is Required signs in by email OTP (grant_type=otp_email) in one step without the MFA code, and its refresh_token renews without a code",
+      "question": "Does POST /connect/token grant_type=otp_email ask for the MFA code when the user's MFA mode is Required?",
+      "questions": [
+        "Is OTP email sign-in challenged by MFA user mode Required?",
+        "Which grants bypass the VCST-6597 MFA user and organization modes?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "grant=otp_email",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1906CFF2",
       "path": "entries/KB-1906CFF2.md",
       "subject": "canLeaveFeedback is per user, not per organization: a colleague in the purchaser's organization sees no review form on the product",
@@ -4166,6 +4189,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1CB8C62B",
+      "path": "entries/KB-1CB8C62B.md",
+      "subject": "In a Disabled store a customer whose organization role exists only on the organization membership (no user-level role) reads isDisabledModeSkipped=false, like a role-less customer; only roles in ApplicationUser.Roles make it a Backoffice account",
+      "question": "Does an organization role held only on the organization membership make a customer count as Backoffice in a Disabled store (isDisabledModeSkipped)?",
+      "questions": [
+        "Which org-role customers lose the Disabled-store skip: membership-scoped roles or user-level roles?",
+        "isDisabledModeSkipped for an Organization employee created through /api/customer/organization-memberships"
+      ],
+      "anchors": [
+        "GET /api/mfa/modes/users/{id}/status"
+      ],
+      "scope": [
+        "feature=mfa",
+        "store-mode=disabled",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -6265,6 +6310,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2DF21203",
+      "path": "entries/KB-2DF21203.md",
+      "subject": "A customer with an unconfirmed email whose MFA mode is turned on (by the admin, or by the organization maintainer) cannot sign in: the password grant answers mfa_provider_not_available and no code is sent",
+      "question": "What happens at POST /connect/token grant_type=password when MFA is required for a user whose email is not confirmed?",
+      "questions": [
+        "Does turning MFA on check that the user's email is confirmed?",
+        "Can a maintainer enable company MFA when a member's email is unconfirmed, and what does the member see?",
+        "What does requestMfaChangeCode answer for a customer with an unconfirmed email?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "Mutation.requestMfaChangeCode",
+        "Mutation.updateMfaOrganizationMode",
+        "PUT /api/mfa/modes/users/{id}"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "store-mode=customer-choice",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -14868,6 +14939,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-66BB028C",
+      "path": "entries/KB-66BB028C.md",
+      "subject": "PUT /api/mfa/modes/users/{id} and /organizations/{id} accept any id: an unknown id answers 200 and the mode is stored and read back",
+      "question": "Does PUT /api/mfa/modes/users/{id} (or organizations/{id}) on an id that is not a user or organization store a mode?",
+      "questions": [
+        "Is there an existence check on the MFA mode REST write?",
+        "Can an orphan MFA mode setting be written for a random GUID?",
+        "What does GET /api/mfa/modes/users/{id} return for an unknown user?"
+      ],
+      "anchors": [
+        "PUT /api/mfa/modes/users/{id}",
+        "PUT /api/mfa/modes/organizations/{id}",
+        "GET /api/mfa/modes/organizations/{id}/status"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-66D78761",
       "path": "entries/KB-66D78761.md",
       "subject": "Admin Approve / decline commits in one click with no confirmation and emails the decision",
@@ -15281,7 +15376,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -22957,7 +23052,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -25790,7 +25885,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
