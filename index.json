@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T10:58:09.697Z",
-  "count": 1601,
+  "generated": "2026-11-04T11:23:02.024Z",
+  "count": 1605,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2682,7 +2682,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0,
       "resolved": 2
     },
@@ -4891,7 +4891,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -14096,6 +14096,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-621637B5",
+      "path": "entries/KB-621637B5.md",
+      "subject": "With MFA module 3.1002.0 the storefront xAPI serves Query.mfaSettings (+ requestMfaChangeCode, updateMfaUserMode, updateMfaOrganizationMode); on a store whose StoreMode is Disabled it answers isRequired false, canChangeUserMode false and the Account Security page shows no MFA widget",
+      "question": "What does Query.mfaSettings return and does Account Security show an MFA widget on a store with MultiFactorAuthentication.StoreMode Disabled?",
+      "questions": [
+        "Is the MFA store-mode xAPI deployed on vcst?",
+        "Why is there no two-factor widget on Account Security?"
+      ],
+      "anchors": [
+        "Query.mfaSettings",
+        "Mutation.updateMfaUserMode",
+        "/account/security",
+        "/company/info"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-628643EB",
       "path": "entries/KB-628643EB.md",
       "subject": "Markup product lists compare items by id when cards carry one and by value when they do not: a changed data-product-price re-sends an id-less list but not an id-keyed one",
@@ -15048,6 +15073,24 @@
       "scope": [
         "feature=sign-in-log",
         "surface=admin-spa",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-69D90CC1",
+      "path": "entries/KB-69D90CC1.md",
+      "subject": "GET /api/mfa/modes/users/{id}/status and /organizations/{id}/status return per-store requirement rows; unknown mode answers 400, unknown user 404, anonymous 401",
+      "question": "What do the MFA mode REST endpoints under /api/mfa/modes return and refuse?",
+      "anchors": [
+        "GET /api/mfa/modes/users/{id}/status",
+        "GET /api/mfa/modes/organizations/{id}/status"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
         "surface=rest"
       ],
       "plane": "experiential",
@@ -21944,6 +21987,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-985D3EED",
+      "path": "entries/KB-985D3EED.md",
+      "subject": "The storefront MFA widgets register only when the platform lists VirtoCommerce.MFA with a version that has the mfa xAPI schema (3.1000.2+ on the 3.1000 line, 3.1002.0+); the organization widget also needs xapi:my_organization:mfa:manage, which no stock organization role carries",
+      "question": "When does the storefront show the MFA widget on Account Security and Company info, and which role grants xapi:my_organization:mfa:manage?",
+      "anchors": [
+        "/company/info",
+        "/account/security",
+        "Query.mfaSettings"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-986C1D33",
       "path": "entries/KB-986C1D33.md",
       "subject": "On Firefox the /account/returns mobile cards split the 15-character RMA mid-token at viewports up to 385 px; it is whole from 386 px",
@@ -28465,6 +28527,23 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C59DA55D",
+      "path": "entries/KB-C59DA55D.md",
+      "subject": "Backoffice shows a Multi-factor authentication widget (user blade, value Off/Enabled/Required) opening a Mode blade with an Effective status table per store; the Admin Shell shows it as \"MFA: Off\" inside the widget overflow menu",
+      "question": "Where is the per-user MFA mode in the AngularJS admin and in the Admin Shell, and what does the mode blade show?",
+      "anchors": [
+        "/apps/admin-shell#/security/user/{id}"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
