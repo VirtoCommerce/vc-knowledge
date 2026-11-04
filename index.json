@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T08:15:12.390Z",
-  "count": 1580,
+  "generated": "2026-11-04T08:19:01.389Z",
+  "count": 1581,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28313,6 +28313,29 @@
         "module=store",
         "surface=admin-spa",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C6F234F9",
+      "path": "entries/KB-C6F234F9.md",
+      "subject": "On AdminAngularJs 3.1092.0 the forced change-password dialog posts only newPassword, and currentuser/changepassword answers 500 when oldPassword is missing",
+      "question": "What does POST /api/platform/security/currentuser/changepassword do when the forced change-password dialog in the AngularJS admin is submitted for an expired password?",
+      "questions": [
+        "Why does the default admin fail to change the expired password on first sign-in in the Admin SPA?",
+        "Does currentuser/changepassword return 400 or 500 when oldPassword is omitted?",
+        "Is the Current password value sent by the Admin SPA change-password dialog?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/currentuser/changepassword"
+      ],
+      "scope": [
+        "feature=password-expiry",
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
