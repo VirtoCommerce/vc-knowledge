@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T15:23:38.031Z",
-  "count": 1643,
+  "generated": "2026-11-04T15:30:51.158Z",
+  "count": 1645,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1285,7 +1285,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 1,
+      "contested": 1
     },
     {
       "id": "KB-092E88A3",
@@ -25383,6 +25384,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-AA8E794C",
+      "path": "entries/KB-AA8E794C.md",
+      "subject": "With global MultiFactorAuthentication.Enabled=true, a password grant naming a StoreMode=Disabled store is challenged (400 two_factor_required, one code email) for a customer bound to a different store, while the Disabled store's own customer gets 200 with tokens and no code",
+      "question": "Does a StoreMode=Disabled store waive the MFA code for a customer of another store who names it in the password grant while global MFA is on?",
+      "questions": [
+        "Is the MFA StoreMode Disabled exemption limited to the store's own customers?",
+        "What does /connect/token return for a foreign-store customer naming a Disabled-MFA store with global MFA enabled?",
+        "Does the MFA challenge come before the store sign-in refusal for a user of another store?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "module=virtocommerce.mfa",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AA955464",
       "path": "entries/KB-AA955464.md",
       "subject": "After a platform start, BackgroundJobs (Hangfire engine) schedules setting-driven recurring jobs with the settings' default cron/enable values, while GET /api/background-jobs/recurring shows the configured values",
@@ -32673,6 +32697,30 @@
       "scope": [
         "feature=loyalty-missions",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DE731068",
+      "path": "entries/KB-DE731068.md",
+      "subject": "On MFA 3.1002.0-pr-3-1a0f, with global MultiFactorAuthentication.Enabled=true, the named store's OWN confirmed-email customer signs in by password alone (200, tokens, no code email) when that store's StoreMode is Disabled; the same store set to Enabled answers 400 two_factor_required",
+      "question": "Does a store with MultiFactorAuthentication.StoreMode=Disabled let its own customers sign in by password alone while the global MultiFactorAuthentication.Enabled is on?",
+      "questions": [
+        "Does store-level MFA Disabled override the global MFA switch for the store's own customer on /connect/token?",
+        "Is an MFA sign-in code emailed when the store's StoreMode is Disabled and global MFA is enabled?",
+        "After the VCST-6597 narrowing, does the Disabled-store skip still hold for the store's own non-backoffice customer?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "account=store-own-customer-confirmed-email",
+        "grant=password-with-storeid",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
