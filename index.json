@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T14:42:54.173Z",
-  "count": 1640,
+  "generated": "2026-11-04T15:23:38.031Z",
+  "count": 1643,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -670,7 +670,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -1145,6 +1145,24 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-082B5491",
+      "path": "entries/KB-082B5491.md",
+      "subject": "Admin Shell sign-in right after an AngularJS Backoffice session in the same browser: the first attempt logs in then is logged out and shows \"The session has expired\"; the retry signs in",
+      "question": "Why does the first Admin Shell sign-in fail with \"The session has expired\" right after using the AngularJS Backoffice in the same browser?",
+      "anchors": [
+        "/apps/admin-shell#/login",
+        "POST /api/platform/security/login",
+        "GET /api/platform/security/logout"
+      ],
+      "scope": [
+        "surface=admin-shell"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16545,7 +16563,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -20691,6 +20709,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-8CFB73B5",
+      "path": "entries/KB-8CFB73B5.md",
+      "subject": "AngularJS user blade opened by a Manager without customer/store read rights logs 403s and an unhandled \"SyntaxError: Unexpected end of JSON input\" from the Customer module's transformResponse",
+      "question": "What does the Backoffice console show when a Manager with only platform:security:access/read and mfa:read opens a customer's User information blade?",
+      "anchors": [
+        "GET /api/members/{id}"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8D5B9AC9",
       "path": "entries/KB-8D5B9AC9.md",
       "subject": "productPickupLocations / cartPickupLocations ignore a keyword that contains an apostrophe (or is only '&') and return every location, while Query.pickupLocations returns 0 for the same keyword",
@@ -21364,6 +21398,22 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-91822DEA",
+      "path": "entries/KB-91822DEA.md",
+      "subject": "Concurrent admin password grants on /connect/token: one of three grants started within a few ms answered HTTP 500 with no error body",
+      "question": "Can the admin password grant on POST /connect/token fail with 500 when several are sent at the same time?",
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-91DF8883",
