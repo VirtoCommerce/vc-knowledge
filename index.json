@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T11:50:33.656Z",
-  "count": 1607,
+  "generated": "2026-11-04T12:01:48.492Z",
+  "count": 1609,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4074,6 +4074,25 @@
       ],
       "scope": [
         "feature=punchout-order-request",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1C1755AC",
+      "path": "entries/KB-1C1755AC.md",
+      "subject": "In MFA 3.1002.0 a Disabled store skips the code only for its own customers who are not Backoffice accounts, and a Backoffice account includes any user whose roles hold at least one permission under the default admin-UI access policy",
+      "question": "Is a storefront customer whose organization role carries a permission (for example xapi:my_organization:mfa:manage) asked for the code in a Disabled store while global MFA is on?",
+      "anchors": [
+        "POST /connect/token",
+        "Mutation.updateMfaOrganizationMode"
+      ],
+      "scope": [
+        "feature=mfa",
+        "grant=password",
         "surface=rest"
       ],
       "plane": "experiential",
@@ -22625,6 +22644,24 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9D98737B",
+      "path": "entries/KB-9D98737B.md",
+      "subject": "updateMfaUserMode is not refused for a member whose organization requires the code: canChangeUserMode looks at the store mode and the user's own mode only",
+      "question": "Can a member of an organization that requires MFA still change their own MFA mode through Mutation.updateMfaUserMode?",
+      "anchors": [
+        "Mutation.updateMfaUserMode",
+        "PUT /api/mfa/modes/users/{id}"
+      ],
+      "scope": [
+        "feature=mfa-modes",
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
