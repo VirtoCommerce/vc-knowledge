@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T08:20:00.641Z",
-  "count": 1586,
+  "generated": "2026-11-04T08:29:23.423Z",
+  "count": 1588,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12311,6 +12311,30 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=below-md"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-54502E1C",
+      "path": "entries/KB-54502E1C.md",
+      "subject": "The Reporting page sends SalesRepMonthlyOrderStatistics with an unserved ?customer= id, gets salesRepCustomerOrderStatistics null, then falls back to All my customers and drops the parameter",
+      "question": "What does /company/customer-sales do when ?customer= names an organization the sales rep does not serve, or a garbage id?",
+      "questions": [
+        "Can a sales rep see another organization's figures on the Reporting page by editing the customer URL parameter?",
+        "What does salesRepCustomerOrderStatistics return on POST /graphql for an organizationId the rep does not serve?",
+        "Does the Reporting page validate the customer query parameter before querying statistics?"
+      ],
+      "anchors": [
+        "/company/customer-sales",
+        "POST /graphql",
+        "Query.salesRepCustomerOrderStatistics"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -28994,6 +29018,28 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-CC169C09",
+      "path": "entries/KB-CC169C09.md",
+      "subject": "Reporting page KPI tiles format money with at most one decimal (\"$400.8\", de \"1556,5 $\") while the tooltip and table round to whole dollars (\"$401\")",
+      "question": "How do the KPI tiles on /company/customer-sales render a non-integer money amount, and does it match the tooltip and table?",
+      "questions": [
+        "Why does the Sales Rep Reporting tile show $400.8 instead of $400.80?",
+        "Are money values on the Reporting page formatted consistently across tiles, tooltip and table?"
+      ],
+      "anchors": [
+        "/company/customer-sales",
+        "POST /graphql"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-CC18E96D",
