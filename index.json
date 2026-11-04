@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T13:27:31.508Z",
-  "count": 1627,
+  "generated": "2026-11-04T14:01:59.391Z",
+  "count": 1628,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28479,6 +28479,24 @@
       "scope": [
         "role=sales-representative",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C2DB3C56",
+      "path": "entries/KB-C2DB3C56.md",
+      "subject": "User and organization MFA mode changes leave no platform changelog entry; a store MFA mode change is logged as Store Modified with no detail",
+      "question": "Is an MFA mode change (PUT api/mfa/modes/users/{id}, updateMfaUserMode) recorded in POST /api/platform/changelog/v2/search or the user's Changes blade?",
+      "anchors": [
+        "POST /api/platform/changelog/v2/search",
+        "PUT /api/mfa/modes/users/{id}",
+        "PUT /api/mfa/modes/organizations/{id}"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
