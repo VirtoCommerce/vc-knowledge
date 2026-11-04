@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T12:22:17.722Z",
-  "count": 1613,
+  "generated": "2026-11-04T12:31:02.070Z",
+  "count": 1614,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16378,6 +16378,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-739A7741",
+      "path": "entries/KB-739A7741.md",
+      "subject": "updateMemberAddresses with several new addresses (no ids) in one command returns 200 with no errors but stores only the last one",
+      "question": "Mutation.updateMemberAddresses — what happens when one command carries several new addresses without ids?",
+      "questions": [
+        "Does updateMemberAddresses replace the whole address list or upsert by id?",
+        "Why did only one of the addresses I sent in one updateMemberAddresses call get saved?",
+        "Is updateMemberAddresses full-list or partial-list semantics?"
+      ],
+      "anchors": [
+        "Mutation.updateMemberAddresses",
+        "Query.currentCustomerAddresses",
+        "Query.currentOrganizationAddresses"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
