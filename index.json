@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T08:19:01.389Z",
-  "count": 1581,
+  "generated": "2026-11-04T08:19:30.947Z",
+  "count": 1582,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1524,6 +1524,28 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0B13A835",
+      "path": "entries/KB-0B13A835.md",
+      "subject": "Saving the Store Facets blade makes the admin Store blade reload itself in an endless loop",
+      "question": "Does saving store facets (Search configuration > Facets) leave the admin Store blade in a reload loop?",
+      "questions": [
+        "Why does the admin keep calling GET /api/stores/{storeId} after saving facets?",
+        "Store blade refreshes forever after PUT aggregationproperties"
+      ],
+      "anchors": [
+        "PUT /api/catalog/aggregationproperties/{id}/properties",
+        "GET /api/stores/{id}"
+      ],
+      "scope": [
+        "module=store",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
