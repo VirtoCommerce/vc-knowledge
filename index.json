@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T11:24:56.317Z",
-  "count": 1674,
+  "generated": "2026-11-05T11:36:18.562Z",
+  "count": 1675,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13727,6 +13727,29 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-597959E8",
+      "path": "entries/KB-597959E8.md",
+      "subject": "On /company/members at 1024 px a member with two roles widens the desktop table past its card and the page scrolls sideways, even with no long name on the page",
+      "question": "Does a member with several roles make /company/members scroll horizontally at 1024 px?",
+      "questions": [
+        "Why does the company members table overflow its card when names are short?",
+        "How wide can the Roles column on /company/members get at 1024 px?"
+      ],
+      "concepts": [
+        "organization-member"
+      ],
+      "anchors": [
+        "/company/members"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
