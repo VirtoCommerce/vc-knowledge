@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T11:21:43.961Z",
-  "count": 1673,
+  "generated": "2026-11-05T11:24:56.317Z",
+  "count": 1674,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14837,6 +14837,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-62273F2C",
+      "path": "entries/KB-62273F2C.md",
+      "subject": "Admin DELETE /api/task-management deletes one task whose id is sent as a JSON string body; an array body or an unknown id answers 204 and deletes nothing",
+      "question": "How do you delete a task through DELETE /api/task-management, and why does it return 204 while the task is still there?",
+      "anchors": [
+        "DELETE /api/task-management"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "role=admin",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
