@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T11:03:37.530Z",
-  "count": 1672,
+  "generated": "2026-11-05T11:21:43.961Z",
+  "count": 1673,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9486,6 +9486,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4107B26B",
+      "path": "entries/KB-4107B26B.md",
+      "subject": "An organization membership holds several roles: PUT /api/customer/organization-memberships/{id} with a two-item roles array persists both, and xAPI organization.contacts returns both in rolesInOrganization",
+      "question": "Can one organization membership hold two organization roles, and how is a second role stored?",
+      "questions": [
+        "POST /api/customer/organization-memberships roles: can one membership hold two roles",
+        "How do I give a B2B contact a second organization role without touching its security account?",
+        "Does rolesInOrganization on ContactType return more than one role?",
+        "Where is a contact's second organization role stored - membership or security account?"
+      ],
+      "anchors": [
+        "PUT /api/customer/organization-memberships/{id}",
+        "GET /api/customer/organization-memberships/{id}",
+        "Query.organization"
+      ],
+      "scope": [
+        "area=organization-roles",
+        "surface=rest-api",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -28110,7 +28136,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {

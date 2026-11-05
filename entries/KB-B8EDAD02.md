@@ -41,5 +41,14 @@ evidence:
     bodyHash: 78954f88e40d
     who: Aleksandra-Mitricheva
     note: "Re-observed 2026-11-03: GET /api/members/{contactId}, set currentOrganizationId to an org the contact holds a membership in, PUT /api/members read back the pin; setting it back to null read back null."
+  - method: observation
+    deployment: vcst_qa
+    build: 000c0dc2e8d9b91b
+    conditions: module:VirtoCommerce.Customer=3.1032.0
+    at: 2026-11-05T11:21:00.003Z
+    by: session:9526e78f
+    bodyHash: 78954f88e40d
+    who: Lenajava1
+    note: "Re-observed 2026-11-05: a full-row GET then PUT /api/customer/organization-memberships/{id} that changed only the roles array (added a second role) read back status=Approved, isLocked=true and lockoutEnd unchanged on a membership-locked row, so the full-row PUT preserves status and lock state."
 ---
 On vcst_qa 2026-10-23 (Customer 3.1030.0), for a fresh AGENT-TEST contact created with organizations=[A,B] and one membership row per org (POST /api/customer/organization-memberships with an org-scoped role): POST /api/customer/organization-memberships/{id}/lock with {lockoutEnd:null} read back isLocked=true, POST .../{id}/unlock read back isLocked=false; GET the row then PUT /api/customer/organization-memberships/{id} with the whole row and status=Invited read back Invited, and the same PUT with Approved restored it. GET /api/members/{contactId}, set currentOrganizationId, PUT /api/members read back the new currentOrganizationId. The other membership was untouched.
