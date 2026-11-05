@@ -54,5 +54,14 @@ evidence:
     bodyHash: d3c13e0eacd8
     who: Lenajava1
     note: "Firefox lane on the ff13 chunk: dashboard '2 overdue tasks' notice -> /company/tasks?filter=overdue opens on Overdue only with 2 tasks, URL cleaned; Reset filters drops the chip row; Customer+Priority intersect; a task saved via New task with a Customer (type Other) is found by that customer's filter. The New task dialog has no time field: a task saved for today is stored with dueDate = local midnight."
+  - method: observation
+    deployment: vcst_qa
+    build: c1947adbe472459a
+    conditions: platform=3.1094.0; module:VirtoCommerce.SalesRep=3.1018.0-pr-33-ff13; module:VirtoCommerce.TaskManagement=3.1007.0-pr-33-14ff; theme=2.62.0-pr-2637-02f2-02f26436; browser=chromium; role=Sales Representative
+    at: 2026-11-05T17:34:15.137Z
+    by: session:26f3f3df
+    bodyHash: d3c13e0eacd8
+    who: Lenajava1
+    note: "2026-11-05 ~17:25Z, Chrome lane at 1920x1080, rep serving 5 orgs: page opens with a Due today chip; removing it lists every date; Customers lists exactly the 5 served orgs; one customer pick adds its chip and narrows list and calendar dots; adding Priorities=Highest intersects (2 -> 1 task); New task's Customer select shows placeholder 'No customer' and lists the served orgs; a task saved with a customer shows it in the Customer column and is found by that customer's filter at once."
 ---
 Signed in as a sales rep serving 5 organizations on a stand with SalesRep 3.1018.0-pr-33-8d4a and TaskManagement 3.1007.0-pr-33-14ff, /company/tasks renders: H1 Tasks, a New task button, a "Search tasks" box, three selects (Customers: the 5 served organizations, Status: Upcoming / Overdue / Completed, Priorities: Lowest / Low / Normal / High / Highest), a chip row that opens with "Due today" (with a remove button) plus a "Reset filters" button, a "N tasks" status line, and a table with columns Task, Priority, Customer, Status, Notes, Actions (customer cell is an em dash when the task has none; overdue rows read "Expired <date>", others "Due <date>"). There are no Today/All scope chips and no Upcoming/Overdue/Completed tabs with counts. Reset filters removed the Due today chip and showed all 24 tasks on 2 pages (Previous/Next); picking the AcmeCorp customer added a chip and reduced the list to 1 task. /company/tasks?filter=overdue opens with the Status select set to Overdue (chip "Overdue"), no day chip, 10 tasks, and the URL is cleaned to /company/tasks. A rep with 1 org and 0 tasks sees "0 tasks / Nothing due on this day" under the Due today chip; a rep with no organizations sees the same page but its Status select lists only a disabled "No options available". The New task dialog has a Customer select for every task (not only calls), blank by default, offering the rep's served organizations only.
