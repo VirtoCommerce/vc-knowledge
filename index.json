@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T15:29:40.064Z",
-  "count": 1693,
+  "generated": "2026-11-05T15:35:26.442Z",
+  "count": 1694,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32895,6 +32895,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-D962E2D4",
+      "path": "entries/KB-D962E2D4.md",
+      "subject": "On /company/tasks the Status filter of a rep with no served organizations is an enabled select whose only, disabled item reads \"No options available\"; the select itself is not disabled",
+      "question": "Is the Status filter on /company/tasks disabled for a sales rep who serves no organizations?",
+      "questions": [
+        "What does the Status select show on the Sales Rep Tasks page when salesRepTaskFilterRules is empty?",
+        "Is 'No options available' on the Tasks Status filter a disabled control or a disabled option?"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTaskFilterRules"
+      ],
+      "scope": [
+        "feature=sales-rep-tasks",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D992AF44",
