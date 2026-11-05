@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T14:33:28.328Z",
-  "count": 1683,
+  "generated": "2026-11-05T14:33:47.698Z",
+  "count": 1687,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -575,7 +575,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0,
       "resolved": 1
     },
@@ -5293,6 +5293,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-239C93B9",
+      "path": "entries/KB-239C93B9.md",
+      "subject": "Script payloads are rejected (VALIDATION) in address-book fields via updateMemberAddresses but accepted verbatim in the cart comment via changeComment",
+      "question": "Does the storefront reject script/markup payloads in free-text fields such as address lines and the cart comment?",
+      "anchors": [
+        "Mutation.updateMemberAddresses",
+        "Mutation.changeComment"
+      ],
+      "scope": [
+        "flow=input-validation",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-23CBD97B",
       "path": "entries/KB-23CBD97B.md",
       "subject": "After an in-session language switch, the sales-rep orders filter drawer shows the raw i18n key sales_rep.customer_orders.filters.custom_date as the selected Created date value",
@@ -8765,6 +8783,26 @@
       ],
       "scope": [
         "module=sales-rep",
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3D26538F",
+      "path": "entries/KB-3D26538F.md",
+      "subject": "Storefront access token is an RS256 at+jwt valid 1800 s; tampered, alg=none, expired-claim or garbage tokens resolve to Anonymous on /graphql and 401 on platform /api",
+      "question": "What does the storefront access token contain and how are forged or tampered tokens treated?",
+      "anchors": [
+        "POST /connect/token",
+        "POST /graphql",
+        "GET /api/platform/security/users"
+      ],
+      "scope": [
+        "flow=authentication",
         "surface=rest",
         "surface=xapi"
       ],
@@ -17227,6 +17265,25 @@
       ],
       "scope": [
         "surface=rest-api",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7339F16F",
+      "path": "entries/KB-7339F16F.md",
+      "subject": "Mutation.updateContact accepts letters, apostrophe, hyphen and non-ASCII letters in first/last name and rejects digits, & : ; < > \" % { } with extensions.code VALIDATION",
+      "question": "Which characters does the contact name validation accept or refuse on the storefront profile (updateContact)?",
+      "anchors": [
+        "Mutation.updateContact",
+        "/account/profile"
+      ],
+      "scope": [
+        "flow=profile",
+        "surface=storefront-ui",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -32788,6 +32845,25 @@
         "Query.products"
       ],
       "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D9B9ECBE",
+      "path": "entries/KB-D9B9ECBE.md",
+      "subject": "/graphql and /connect/token return no CORS headers for a foreign origin; only the storefront SPA-shell fallback sends Access-Control-Allow-Origin *",
+      "question": "Does the platform or storefront allow cross-origin requests to /graphql, /connect/token and /api?",
+      "anchors": [
+        "OPTIONS /graphql",
+        "OPTIONS /connect/token"
+      ],
+      "scope": [
+        "flow=cors",
+        "surface=rest",
         "surface=xapi"
       ],
       "plane": "experiential",
