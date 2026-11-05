@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T10:57:35.528Z",
-  "count": 1671,
+  "generated": "2026-11-05T11:03:37.530Z",
+  "count": 1672,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13658,6 +13658,28 @@
       "scope": [
         "module=page-builder",
         "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5937E1C3",
+      "path": "entries/KB-5937E1C3.md",
+      "subject": "The /company/members Roles cell lists the union of the contact's rolesInOrganization and every role on every security account of that contact, de-duplicated by role id",
+      "question": "Can a storefront organization member show several roles at once on /company/members, and where do the roles in the Roles column come from?",
+      "questions": [
+        "Why does the members Roles column show more than one role for a member?",
+        "Which GraphQL Contact fields feed the Roles column on /company/members?",
+        "Is the /company/members Roles column scoped to the current organization only?"
+      ],
+      "anchors": [
+        "/company/members",
+        "Query.organization.contacts"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
