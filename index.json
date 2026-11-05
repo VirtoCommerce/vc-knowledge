@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T14:42:48.203Z",
-  "count": 1690,
+  "generated": "2026-11-05T14:46:18.433Z",
+  "count": 1691,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29552,6 +29552,31 @@
       "scope": [
         "module=salesrep",
         "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C2202F86",
+      "path": "entries/KB-C2202F86.md",
+      "subject": "A browser that cached the Sales Rep plugin's unhashed remoteEntry.js keeps the old build for up to 4 h from its OWN HTTP cache; clearing the browser cache restores the hub at once",
+      "question": "Why does the Sales Rep hub stay broken in one browser after a module redeploy while curl gets the new remoteEntry.js, and what recovers it?",
+      "questions": [
+        "Does clearing the browser cache fix the Sales Rep hub stuck on Loading page after a redeploy?",
+        "Is the stale remoteEntry.js held by the CDN or by the browser cache?",
+        "Why does Reload page not recover the Sales Rep hub after a redeploy?",
+        "How to recover a Playwright lane whose Sales Rep plugin chunks 404?"
+      ],
+      "anchors": [
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js",
+        "/company/tasks"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "layer=browser-cache",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
