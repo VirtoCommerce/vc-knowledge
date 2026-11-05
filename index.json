@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T14:24:28.047Z",
-  "count": 1682,
+  "generated": "2026-11-05T14:33:28.328Z",
+  "count": 1683,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1185,6 +1185,25 @@
       "scope": [
         "module=virtocommerce.orders 3.1018.0",
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-08ABE2CA",
+      "path": "entries/KB-08ABE2CA.md",
+      "subject": "POST /graphql refuses cross-site simple requests with extensions.code CSRF_PROTECTION, and refuses an unauthenticated JSON mutation with Unauthorized",
+      "question": "Is the storefront /graphql endpoint protected against CSRF, and what does a cross-origin mutation without a token return?",
+      "anchors": [
+        "POST /graphql",
+        "Mutation.addItem",
+        "Mutation.createOrderFromCart"
+      ],
+      "scope": [
+        "flow=csrf",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
