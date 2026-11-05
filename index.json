@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T13:46:00.456Z",
-  "count": 1680,
+  "generated": "2026-11-05T14:20:46.030Z",
+  "count": 1681,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -35756,6 +35756,26 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ECF4F403",
+      "path": "entries/KB-ECF4F403.md",
+      "subject": "PR #33 removes the salesRepTaskCounts query and the status badge counts from /company/tasks; the status line is the list's own N tasks",
+      "question": "Does /company/tasks still request salesRepTaskCounts and show badge counts on the status chips after vc-module-sales-rep PR #33, and what does the dashboard overdue notice ask for?",
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTasks",
+        "Query.salesRepTaskCounts"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
