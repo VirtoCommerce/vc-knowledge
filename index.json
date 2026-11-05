@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T09:55:51.060Z",
-  "count": 1668,
+  "generated": "2026-11-05T10:49:09.890Z",
+  "count": 1669,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13155,6 +13155,25 @@
       "scope": [
         "build=pr-builds-vcst-6276",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-55D54B4A",
+      "path": "entries/KB-55D54B4A.md",
+      "subject": "On vcst_qa the sales-rep task filter rules are upcoming, overdue and completed only, none restricting priority or linked record type, and salesRepTasks narrows each rule by priorities and customerIds",
+      "question": "salesRepTaskFilterRules upcoming overdue completed: does any rule restrict priorities or linked record type, and how does Query.salesRepTasks combine filter with priorities and customerIds?",
+      "anchors": [
+        "Query.salesRepTasks",
+        "Query.salesRepTaskFilterRules"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=graphql-xapi"
       ],
       "plane": "experiential",
       "status": "active",
