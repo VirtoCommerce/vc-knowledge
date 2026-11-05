@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T09:44:00.985Z",
-  "count": 1667,
+  "generated": "2026-11-05T09:55:51.060Z",
+  "count": 1668,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -15603,6 +15603,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-68C3E9B5",
+      "path": "entries/KB-68C3E9B5.md",
+      "subject": "On /company/members Invite member, the required emails VcTextarea is named by its label including the asterisk (\"…invite*\") before the VCST-6215 fix; with the fix the asterisk is aria-hidden and the name has no \"*\"",
+      "question": "What accessible name does the required emails textarea in the /company/members Invite member dialog expose, and does it carry required?",
+      "questions": [
+        "Does the storefront invite-member textarea announce 'star' to a screen reader?",
+        "Is the Invite member emails field marked required for assistive technology?"
+      ],
+      "anchors": [
+        "/company/members"
+      ],
+      "scope": [
+        "role=organization-maintainer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
