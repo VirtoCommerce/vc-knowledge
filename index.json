@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T10:53:22.050Z",
-  "count": 1670,
+  "generated": "2026-11-05T10:55:37.998Z",
+  "count": 1671,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4598,6 +4598,28 @@
       "scope": [
         "module=virtocommerce.pushmessages",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1E98F6D3",
+      "path": "entries/KB-1E98F6D3.md",
+      "subject": "/company/tasks filter row (Customers, Status, Priorities) never wraps: fixed 616 px wide from 640 px, overflows its column at 640-678 px and 768-898 px",
+      "question": "Does the filter row on /company/tasks wrap or overflow at 768 px, and at which viewport widths?",
+      "questions": [
+        "Why does Priorities get cut off on the Sales Rep Hub Tasks page on a tablet?",
+        "At what viewport width does the Sales Rep Hub tasks page scroll horizontally?"
+      ],
+      "anchors": [
+        "/company/tasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "viewport=640-898px"
       ],
       "plane": "experiential",
       "status": "active",
