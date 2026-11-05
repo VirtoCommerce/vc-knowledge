@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T17:34:15.225Z",
-  "count": 1698,
+  "generated": "2026-11-05T20:56:45.308Z",
+  "count": 1699,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -15135,6 +15135,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-626BE57D",
+      "path": "entries/KB-626BE57D.md",
+      "subject": "With the VCST-6698 fix builds, member address Line1/Line2 accept up to 2048 chars on REST and xAPI; 2049 is rejected with a validation error (REST 400, xAPI VALIDATION) instead of 500",
+      "question": "what is the max length of a customer member address Line1/Line2 on POST/PUT /api/members and xAPI updateMemberAddresses after the VCST-6698 fix",
+      "questions": [
+        "does PUT /api/members still return 500 for an address line longer than 128 characters",
+        "what error does POST /api/members return for a 2049-character address Line1",
+        "how long can Line1 be in updateMemberAddresses"
+      ],
+      "anchors": [
+        "POST /api/members",
+        "PUT /api/members",
+        "Mutation.updateMemberAddresses"
+      ],
+      "scope": [
+        "surface=rest-api",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
