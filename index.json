@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T14:39:33.981Z",
-  "count": 1689,
+  "generated": "2026-11-05T14:42:48.203Z",
+  "count": 1690,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16364,6 +16364,23 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6BF8D12D",
+      "path": "entries/KB-6BF8D12D.md",
+      "subject": "DELETE /api/task-management answers 204 but does not remove the task records",
+      "question": "Does DELETE /api/task-management actually delete tasks, or does it return 204 and leave them?",
+      "anchors": [
+        "DELETE /api/task-management",
+        "POST /api/task-management/search"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
