@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T13:24:48.357Z",
-  "count": 1676,
+  "generated": "2026-11-05T13:30:07.105Z",
+  "count": 1679,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4302,6 +4302,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-1BF50BB9",
+      "path": "entries/KB-1BF50BB9.md",
+      "subject": "With a stale remoteEntry.js, the \"Part of the site could not be loaded\" Reload page button does not recover the hub (the same 404s return), and the notice covers the Account menu button",
+      "question": "Does the \"Part of the site could not be loaded\" Reload page button recover the Sales Rep hub when the plugin's lazy chunks 404 after a redeploy?",
+      "questions": [
+        "Why does Reload page not fix the Sales Rep hub after a module redeploy?",
+        "Why does the Sales Rep Hub header link not navigate?"
+      ],
+      "anchors": [
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js",
+        "/company/sales-reps",
+        "/company/my-customers"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "layer=cdn",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1C1755AC",
       "path": "entries/KB-1C1755AC.md",
       "subject": "In MFA 3.1002.0 a Disabled store skips the code only for its own customers who are not Backoffice accounts, and a Backoffice account includes any user whose roles hold at least one permission under the default admin-UI access policy",
@@ -7965,6 +7989,30 @@
         "concern=xss",
         "feature=dynamic-properties",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-377B4DF0",
+      "path": "entries/KB-377B4DF0.md",
+      "subject": "On the PR #33 build of the SalesRep module Query.salesRepCoupons is absent on /graphql/sales-rep and /graphql, and /company/my-customers/:id/coupons renders the host 404; the scoped schema has 29 queries and 6 mutations",
+      "question": "Does a stand without the PR #30 build of SalesRep still serve salesRepCoupons and the customer coupons route?",
+      "questions": [
+        "Is the Available coupons widget on a customer profile deployed?",
+        "How many scoped sales-rep queries are there now?"
+      ],
+      "anchors": [
+        "Query.salesRepCoupons",
+        "/company/my-customers/{id}/coupons",
+        "/graphql/sales-rep"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13248,7 +13296,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -25243,7 +25291,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -34102,6 +34150,31 @@
         "Query.salesRepTasks"
       ],
       "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E3CD12FA",
+      "path": "entries/KB-E3CD12FA.md",
+      "subject": "On the PR #33 build the Tasks page replaces the Today/All scope chips and status tabs with a search box, Customers, Status and Priorities selects, filter chips and Reset filters, and adds Priority and Customer columns",
+      "question": "What does /company/tasks show after the Customer and Priority filters change (columns, filters, chips, empty states, deep link ?filter=overdue)?",
+      "questions": [
+        "Does the Tasks page still have Today and All chips?",
+        "Where did the status tabs go on /company/tasks?",
+        "What does the dashboard overdue link open on the Tasks page?"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTasks",
+        "Query.salesRepTaskFilterRules"
+      ],
+      "scope": [
+        "module=sales-rep",
         "role=sales-rep",
         "surface=storefront-ui"
       ],

@@ -36,5 +36,14 @@ evidence:
     bodyHash: e2b00f9729da
     who: Aleksandra-Mitricheva
     note: "Holds on vc-frontend-next 3.2.0 too (host loads the plugin's mf-manifest.json and remoteEntry.js). Desktop row on Next reads Sales Rep Hub, Bulk order, Compare, Lists, Orders, Alerts, Cart (Next labels the notifications item 'Alerts'); same computed colour/hover/stroke and icon centres as siblings in light and dark (Next's own Appearance switch Light/Dark/System and prefers-color-scheme emulation both apply). Mobile: last item of the menu nav list (Dashboard, Catalog, Compare, Bulk order, Cart, Contact us, Sales Rep Hub), 270x40, plus a 'Sales Rep Hub' accordion in the account part of the menu. Plain and Advanced rep see it; buyer, org maintainer, personal account and anonymous do not. Password sign-in posts /connect/token then reloads the document; logout lands on /sign-in?returnUrl=<path> and Back does not bring the item back. Exception on Next: translated captions longer than 128 px are clipped (see the dispute on KB-5E83E458)."
+  - method: observation
+    deployment: vcst_qa
+    build: 29f9d60e551ad495
+    conditions: module:VirtoCommerce.SalesRep=3.1018.0-pr-33-8d4a; theme=2.62.0-pr-2638-1dba-1dbab4e2; browser=edge
+    at: 2026-11-05T13:24:48.448Z
+    by: session:ffa9e791
+    bodyHash: e2b00f9729da
+    who: Lenajava1
+    note: "Desktop, vcst: Sales Rep Hub is the first item of the header link row, before Bulk order, for a rep serving 5 orgs, an Advanced rep, a one-org rep and a no-org rep; a plain org buyer's row starts at Bulk order. The link is not in plugin.json menu (only the header \"sales-reps\" entry is). Clicking it while the hub's dashboard chunk 404s (stale remoteEntry) leaves the URL on the home page. Mobile not checked."
 ---
 vc-frontend host 0.2.7 with the SalesRep plugin. Signed in as a plain Sales Representative and as an Advanced rep: desktop header row (1920, 1280, 1024) reads Sales Rep Hub, Bulk order, Compare, Lists, Orders, Notifications, Cart; the link (href /company/dashboard, lucide briefcase-business icon, caption text as accessible name) has the same computed colour, hover colour, icon stroke and vertical centres as its siblings in light and dark mode. At 375 px the item is not in the top bar but is the last entry of the mobile menu nav list (Dashboard, Catalog, Compare, Bulk order, Cart, Contact us, Sales Rep Hub), 288x40, and opens /company/dashboard. A Purchasing-agent buyer, an Organization maintainer, a no-org personal account and an anonymous visitor see no item on desktop or in the mobile menu. Password sign-in posts /connect/token and then re-GETs the returnUrl document (full reload), so the item is present on first render after sign-in; logout lands on /sign-in?returnUrl=<path> with the item gone, and browser Back stays on the sign-in gate without it.
