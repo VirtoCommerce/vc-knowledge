@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T07:34:07.302Z",
-  "count": 1664,
+  "generated": "2026-11-05T07:39:01.646Z",
+  "count": 1665,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2356,6 +2356,29 @@
       "scope": [
         "module=virtocommerce.adminshell",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0E521EFB",
+      "path": "entries/KB-0E521EFB.md",
+      "subject": "Facet term values are ordered by the store's per-property Sorting option in Catalog AggregationConverter; PriorityAscending/Descending use dictionary item priority, legacy \"Priority\" now means ascending",
+      "question": "How does the facet value Sorting option (Name/Numeric/Priority ascending/descending, Score) on a store Aggregation property order term_facets values in xAPI Query.products?",
+      "questions": [
+        "Does Priority ascending put the smallest dictionary priority number first in facet values?",
+        "Where do facet values without a dictionary item go when sorting by priority?",
+        "What does the Score sorting of facet values mean?",
+        "Does vc-frontend re-sort term facet values on the catalog page?",
+        "What does the legacy Priority facet sorting value map to after VCST-5851?"
+      ],
+      "anchors": [
+        "Query.products"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
