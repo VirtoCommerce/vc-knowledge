@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-04T21:41:29.330Z",
-  "count": 1658,
+  "generated": "2026-11-05T07:25:34.389Z",
+  "count": 1660,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7033,6 +7033,30 @@
       ],
       "scope": [
         "role=org-maintainer-vs-employee",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-31442198",
+      "path": "entries/KB-31442198.md",
+      "subject": "On /sign-in and /sign-up, a VcInput validation message is inserted into a row that reserves no space, so every field below it and the submit button move down 16 px per message",
+      "question": "Does a validation error on the storefront /sign-in form move the Sign in button?",
+      "questions": [
+        "Does the VcInput error message reserve space on storefront forms?",
+        "Why does the sign-in button jump down after submitting an empty sign-in form?",
+        "Does typing an invalid email on /sign-up shift the Password fields?",
+        "How tall is the VcInput validation message row on the storefront?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "/sign-up"
+      ],
+      "scope": [
+        "role=guest",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -15856,7 +15880,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-6B10CB0E",
@@ -36392,6 +36417,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F242039E",
+      "path": "entries/KB-F242039E.md",
+      "subject": "On the mobile storefront header the Ship-to button in the top strip sits 5px above the Main menu (hamburger) button",
+      "question": "How far apart are the mobile header controls at 375px, and does any pair sit closer than 8px?",
+      "questions": [
+        "Which storefront header buttons are 5px apart on mobile?",
+        "Does the mobile header meet WCAG 2.5.8 target spacing at 375px?",
+        "What size are the hamburger and ship-to buttons in the mobile header?"
+      ],
+      "anchors": [
+        "/catalog"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
