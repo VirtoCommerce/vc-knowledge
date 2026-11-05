@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T07:27:20.986Z",
-  "count": 1662,
+  "generated": "2026-11-05T07:34:07.302Z",
+  "count": 1664,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -987,7 +987,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1349,6 +1349,28 @@
       "scope": [
         "account=personal",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-09A0A1F1",
+      "path": "entries/KB-09A0A1F1.md",
+      "subject": "A category title made of an unbroken token (no spaces) does not wrap: at 320px it widens the category page to 887px",
+      "question": "Does a category page H1 with a long unbroken category name wrap or overflow the page at a 320px viewport?",
+      "questions": [
+        "Does the category page title use overflow-wrap / break-words?",
+        "Why does a category page scroll sideways on a narrow phone?",
+        "Can a long German compound category name overflow the category header?"
+      ],
+      "anchors": [
+        "/catalog"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=320"
       ],
       "plane": "experiential",
       "status": "active",
@@ -17184,6 +17206,28 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7541CDF8",
+      "path": "entries/KB-7541CDF8.md",
+      "subject": "On desktop the header logo reserves no width before it loads, so on a cold load the search bar and the right-hand header links jump right by the logo's width (182 px); on mobile nothing moves",
+      "question": "Does the storefront header logo shift the header layout when it loads?",
+      "questions": [
+        "Does the header logo image have width and height reserved before load?",
+        "Why does the search bar in the storefront header jump right on first load?",
+        "Does the header logo contribute to CLS on the home page at 375 px?"
+      ],
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=desktop"
       ],
       "plane": "experiential",
       "status": "active",
