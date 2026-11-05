@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T10:49:09.890Z",
-  "count": 1669,
+  "generated": "2026-11-05T10:53:22.050Z",
+  "count": 1670,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -27500,6 +27500,25 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=admin-page-builder-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B4E0F018",
+      "path": "entries/KB-B4E0F018.md",
+      "subject": "On /company/tasks the Customer column is an equal-share fixed-layout column with a 2-line clamp: its text area is 63.7 px at 1280 and 117 px at 1440, and a 32-character customer name is still clipped at 1920",
+      "question": "How wide is the Customer column on /company/tasks at 1280, 1366, 1440 and 1920 px, and does a long customer name wrap or truncate?",
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui",
+        "viewport=desktop-1280-1920"
       ],
       "plane": "experiential",
       "status": "active",
