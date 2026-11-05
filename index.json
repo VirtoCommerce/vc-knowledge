@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T16:53:49.056Z",
-  "count": 1696,
+  "generated": "2026-11-05T16:58:41.379Z",
+  "count": 1698,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3053,6 +3053,28 @@
       ],
       "scope": [
         "role=signed-in customer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-13EB1153",
+      "path": "entries/KB-13EB1153.md",
+      "subject": "When Query.salesRepTaskFilterRules fails on /company/tasks, the page shows \"The filters couldn't be loaded, so the full list is shown\" and lists every task; a ?filter=overdue deep link then leaves a raw lowercase \"overdue\" chip and an empty Status select",
+      "question": "What does /company/tasks do when the salesRepTaskFilterRules request fails?",
+      "questions": [
+        "What happens to the overdue deep link on the Tasks page when the filter rules cannot be loaded?",
+        "Does the sales rep Tasks page degrade gracefully when salesRepTaskFilterRules errors?"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTaskFilterRules"
+      ],
+      "scope": [
+        "feature=sales-rep-tasks",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -28467,6 +28489,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B90CC173",
+      "path": "entries/KB-B90CC173.md",
+      "subject": "On the ff13 build the /company/tasks toolbar reflows by the width of its own container (a container-query element): all on one line at about 956 px of container and wider, search above the three selects on one line between about 632 and 816 px, one select per line at about 592 px and below; never a 2+1 split and no sideways scroll at 375-1920 px",
+      "question": "How does the Tasks page filter toolbar (search, Customers, Status, Priorities) lay out at different widths on the ff13 build?",
+      "questions": [
+        "At what container width does the sales rep Tasks toolbar move the selects below the search box?",
+        "Does the /company/tasks filter row overflow or wrap one select alone on tablet widths?",
+        "What are the container-query breakpoints of the sales rep tasks toolbar?"
+      ],
+      "anchors": [
+        "/company/tasks"
+      ],
+      "scope": [
+        "feature=sales-rep-tasks",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
