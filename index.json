@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T11:36:18.562Z",
-  "count": 1675,
+  "generated": "2026-11-05T12:39:00.666Z",
+  "count": 1676,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4249,6 +4249,29 @@
       "scope": [
         "feature=punchout-order-request",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1BA565E1",
+      "path": "entries/KB-1BA565E1.md",
+      "subject": "On /company/members below 1024 px a member card's roles line does not truncate, so a 2+-role member pushes the status badge and gear out of the card and the page scrolls sideways",
+      "question": "Does a member with several roles break the mobile card layout of /company/members?",
+      "questions": [
+        "Why does /company/members scroll sideways on a phone?",
+        "Why is the roles line in the company members mobile card not cut with an ellipsis?"
+      ],
+      "concepts": [
+        "organization-member"
+      ],
+      "anchors": [
+        "/company/members"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
