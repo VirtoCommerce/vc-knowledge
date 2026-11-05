@@ -1,0 +1,32 @@
+---
+id: KB-DDDDF64F
+subject: Cloudflare keeps a separate cached remoteEntry.js for requests with an Origin header, so the browser's plugin loader gets the previous Sales Rep build while a plain curl gets the new one
+plane: experiential
+question: Why does a browser keep loading the old Sales Rep plugin build after a redeploy when curl shows the new remoteEntry.js?
+questions:
+  - text: How do I check from the command line whether the CDN serves the new Sales Rep plugin to browsers?
+  - text: Why does clearing the browser cache not fix the stale Sales Rep hub after a redeploy?
+  - text: Does the CDN cache remoteEntry.js differently for CORS requests?
+status: active
+appliesTo:
+  - axis: feature
+    value: sales-rep-hub-plugin
+  - axis: layer
+    value: cdn
+  - axis: surface
+    value: storefront-ui
+anchors:
+  - coordinate: /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js
+  - coordinate: /company/dashboard
+evidence:
+  - method: observation
+    deployment: vcst_qa
+    build: 33215a89701bbcde
+    conditions: module:VirtoCommerce.SalesRep=3.1018.0-pr-33-ff13; theme=2.62.0-pr-2637-02f2-02f26436; cdn=cloudflare; browser=edge
+    defect: VCST-6676
+    at: 2026-11-05T15:39:33.172Z
+    by: session:ffa9e791
+    who: Lenajava1
+    note: "distinct: KB-4358B2EC says the CDN can hold the stale entry and KB-C2202F86 says the browser cache can; this records that the CDN keys CORS requests (with Origin) to a separate cached object, which is why curl without Origin shows the new build while browsers get the old one, and how to probe it."
+---
+vcst 2026-11-05 15:40Z, SalesRep 3.1018.0-pr-33-ff13 deployed at 14:46:38. Same URL /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js on the storefront origin: curl without an Origin header → cf-cache-status HIT, last-modified 14:46:38, age 2427, body references virtualExposes-DgEd6DeA (ff13). curl WITH 'Origin: <storefront origin>' plus Sec-Fetch-Mode: cors (what the browser's Module Federation loader sends) → HIT, last-modified 12:23:20, age 3471, body references virtualExposes-CdDcSffn (the previous build). Response carries only 'vary: Accept-Encoding' and cache-control max-age=14400, so the CDN holds a separate object for CORS requests that was cached shortly before the deploy and outlives it by up to 4 h. In Edge, after clearing the HTTP cache and signing in, Performance entries show remoteEntry.js and virtualExposes-CdDcSffn.js re-fetched (then served from cache), the dashboard chunk 404s and /company/dashboard stays on 'Loading page…'. Consequences: (1) a curl check without Origin passes while browsers fail; probe with the Origin header to see what browsers get; (2) clearing the browser cache only helps once the CORS copy at the CDN has expired or been purged; (3) mf-manifest.json is fetched with ?v= and is DYNAMIC, so it can name the new index chunk while remoteEntry is old, a mixed build. This refines KB-C2202F86 (browser cache) and KB-4358B2EC (CDN copy).

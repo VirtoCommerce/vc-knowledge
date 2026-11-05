@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T15:35:26.442Z",
-  "count": 1694,
+  "generated": "2026-11-05T15:39:54.602Z",
+  "count": 1695,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33581,6 +33581,30 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DDDDF64F",
+      "path": "entries/KB-DDDDF64F.md",
+      "subject": "Cloudflare keeps a separate cached remoteEntry.js for requests with an Origin header, so the browser's plugin loader gets the previous Sales Rep build while a plain curl gets the new one",
+      "question": "Why does a browser keep loading the old Sales Rep plugin build after a redeploy when curl shows the new remoteEntry.js?",
+      "questions": [
+        "How do I check from the command line whether the CDN serves the new Sales Rep plugin to browsers?",
+        "Why does clearing the browser cache not fix the stale Sales Rep hub after a redeploy?",
+        "Does the CDN cache remoteEntry.js differently for CORS requests?"
+      ],
+      "anchors": [
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js",
+        "/company/dashboard"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "layer=cdn",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
