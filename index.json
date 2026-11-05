@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T15:26:20.886Z",
-  "count": 1691,
+  "generated": "2026-11-05T15:29:40.064Z",
+  "count": 1693,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3313,6 +3313,30 @@
         "KB-17555498",
         "KB-F1E057A8"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-158E5A6C",
+      "path": "entries/KB-158E5A6C.md",
+      "subject": "On /company/tasks, saving a new task moves the picked day to the task's day only when a day is picked; Reset filters sends one SalesRepTasks list request plus one SalesRepTaskMarkers calendar request",
+      "question": "After Save in the New task dialog on /company/tasks, does the day chip follow the task, and what does Reset filters request?",
+      "questions": [
+        "Does /company/tasks add a day chip after saving a task when no filter is applied?",
+        "How many salesRepTasks requests does Reset filters send on /company/tasks?"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "layout=pr-33",
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -29582,7 +29606,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-C23196B5",
@@ -37538,6 +37563,29 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F4B2B702",
+      "path": "entries/KB-F4B2B702.md",
+      "subject": "Admin task search: priorities returns the union of the named priorities and wins over priority; an empty priority '' is no filter; linkedObjectType with linkedObjectIds returns only the tasks linked to those ids",
+      "question": "How does POST /api/task-management/search combine priority, priorities, linkedObjectType and linkedObjectIds?",
+      "questions": [
+        "Does an empty priority '' still filter POST /api/task-management/search?",
+        "Which wins when both priority and priorities are sent to the admin task search?",
+        "Does linkedObjectIds without linkedObjectType filter admin task search?"
+      ],
+      "anchors": [
+        "POST /api/task-management/search"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "role=admin",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
