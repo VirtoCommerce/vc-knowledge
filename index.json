@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T14:33:47.698Z",
-  "count": 1687,
+  "generated": "2026-11-05T14:39:33.981Z",
+  "count": 1689,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4900,6 +4900,26 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-208556C1",
+      "path": "entries/KB-208556C1.md",
+      "subject": "salesRepTasks with a one-day period and no status filter lists a canceled task, and none of the upcoming, overdue or completed rules contains it",
+      "question": "Query.salesRepTasks period for one day without filter: is a canceled (inactive, not completed) task listed, and which filter rule holds it?",
+      "anchors": [
+        "Query.salesRepTasks",
+        "/company/tasks"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "subject=canceled-task",
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-20C69E1B",
@@ -20361,6 +20381,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-87F2142F",
+      "path": "entries/KB-87F2142F.md",
+      "subject": "Query.salesRepCustomers accepts first: 1000 and larger without an error or a cap",
+      "question": "Does Query.salesRepCustomers on /graphql/sales-rep cap or reject a page size of 1000 (the customer pickers' new limit)?",
+      "anchors": [
+        "Query.salesRepCustomers"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
