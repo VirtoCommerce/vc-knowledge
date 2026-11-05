@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T14:20:46.030Z",
-  "count": 1681,
+  "generated": "2026-11-05T14:24:28.047Z",
+  "count": 1682,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8134,6 +8134,29 @@
       "scope": [
         "module=virtocommerce.adminshell",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-38925135",
+      "path": "entries/KB-38925135.md",
+      "subject": "In vc-module-sales-rep PR #33 the Tasks page ANDs the day, Status, Customers, Priorities and search filters; it opens on today, Reset filters clears all but the search term, the search is sent on Enter or the search button",
+      "question": "On /company/tasks after PR #33 is the Status filter intersected with the Due today day chip, what does removing the day chip, Reset filters or the calendar Clear do, and when is the search term sent?",
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/tasks",
+        "Query.salesRepTasks"
+      ],
+      "scope": [
+        "layout=pr-33",
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
