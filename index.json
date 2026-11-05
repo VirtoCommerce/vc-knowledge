@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T16:02:02.497Z",
-  "count": 1695,
+  "generated": "2026-11-05T16:23:04.090Z",
+  "count": 1696,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8408,6 +8408,28 @@
       ],
       "scope": [
         "integration=google-analytics-4",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3AB97B34",
+      "path": "entries/KB-3AB97B34.md",
+      "subject": "On the PR #33 Tasks page, pressing Enter on a focused filter-chip remove control removes the chip and drops keyboard focus to the document body",
+      "question": "Where does keyboard focus go on /company/tasks after a filter chip is removed from the keyboard?",
+      "questions": [
+        "Does focus move to the next chip after removing a filter chip with Enter on the Tasks page?",
+        "Is keyboard focus lost after removing a Status chip on /company/tasks?"
+      ],
+      "anchors": [
+        "/company/tasks"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -34467,7 +34489,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
