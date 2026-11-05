@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T07:39:01.646Z",
-  "count": 1665,
+  "generated": "2026-11-05T09:30:57.960Z",
+  "count": 1666,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16898,6 +16898,31 @@
       "scope": [
         "store=b2b-store",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7317D180",
+      "path": "entries/KB-7317D180.md",
+      "subject": "A customer member address Line1 longer than 128 characters is not validated: REST PUT /api/members returns 500 (SQL truncation), and xAPI updateMemberAddresses returns DB_UPDATE for 129-256 chars",
+      "question": "what happens when a customer member address Line1 longer than 128 characters is saved via POST /api/members or xAPI updateMemberAddresses",
+      "questions": [
+        "what is the max length of Line1 in a customer (member) address",
+        "why does saving a contact address return 500 String or binary data would be truncated",
+        "does the customer module validate address field length before saving",
+        "updateMemberAddresses returns DB_UPDATE error for a long address line"
+      ],
+      "anchors": [
+        "PUT /api/members",
+        "POST /api/members",
+        "Mutation.updateMemberAddresses"
+      ],
+      "scope": [
+        "surface=rest-api",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
