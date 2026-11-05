@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T07:25:34.389Z",
-  "count": 1660,
+  "generated": "2026-11-05T07:27:20.986Z",
+  "count": 1662,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14091,6 +14091,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-5D9B8B9E",
+      "path": "entries/KB-5D9B8B9E.md",
+      "subject": "Guest home page at 1280x900 has CLS ~0.173: the footer jumps ~718px when the async home page replaces the Matcher route loader",
+      "question": "Does the storefront home page shift layout on load, and which element causes it?",
+      "questions": [
+        "What is the CLS of the guest home page at 1280x900?",
+        "Why does the footer move on the storefront home page load?",
+        "Does the Matcher loader reserve space for the home page content?"
+      ],
+      "anchors": [
+        "/home.vue"
+      ],
+      "scope": [
+        "auth=guest",
+        "page=home",
+        "surface=storefront-ui",
+        "viewport=1280x900"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5DEDBAA9",
       "path": "entries/KB-5DEDBAA9.md",
       "subject": "Sales Rep hub surfaces with every block hidden render an \"All blocks are hidden\" empty state; Restore default layout issues one SaveSalesRepLayout carrying registry defaults (incl. maxRows) and does not enter edit mode",
@@ -27663,6 +27687,33 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B77CCAE5",
+      "path": "entries/KB-B77CCAE5.md",
+      "subject": "On /catalog at 1280x900 the filters row wraps \"Sort by\" to a second row once the vertical scrollbar appears, pushing chips and the product grid 50px (CLS ~0.176)",
+      "question": "Why does /catalog shift layout on load at 1280x900?",
+      "questions": [
+        "What is the CLS of the catalog listing at 1280x900?",
+        "Why does the Sort by control on /catalog move down after load?",
+        "Does the catalog filters row depend on scrollbar width?"
+      ],
+      "concepts": [
+        "layout-shift"
+      ],
+      "anchors": [
+        "/catalog"
+      ],
+      "scope": [
+        "auth=guest",
+        "page=catalog",
+        "surface=storefront-ui",
+        "viewport=1280x900"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
