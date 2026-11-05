@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T09:30:57.960Z",
-  "count": 1666,
+  "generated": "2026-11-05T09:44:00.985Z",
+  "count": 1667,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12613,6 +12613,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5248A847",
+      "path": "entries/KB-5248A847.md",
+      "subject": "On /sign-in, /sign-up and the address dialog, a required VcInput takes its accessible name from aria-label (the label text without the asterisk) and, before the VCST-6215 fix, exposes neither required nor aria-required",
+      "question": "Does a required storefront VcInput announce its asterisk or its required state to assistive technology?",
+      "questions": [
+        "Why does the Email field on /sign-in have the accessible name Email and not Email *?",
+        "Is aria-required set on required text inputs of the storefront sign-in and sign-up forms?",
+        "Does the storefront use native required on VcInput, so the browser shows a validation bubble?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "/sign-up"
+      ],
+      "scope": [
+        "role=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
