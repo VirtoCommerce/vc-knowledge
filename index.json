@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-05T13:30:07.105Z",
-  "count": 1679,
+  "generated": "2026-11-05T13:46:00.456Z",
+  "count": 1680,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4671,7 +4671,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-1EA7184C",
@@ -11089,6 +11089,24 @@
         "surface=rest",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4B6082C9",
+      "path": "entries/KB-4B6082C9.md",
+      "subject": "On /company/tasks a customer filter chip for an organization name of about 95+ characters does not wrap or truncate, overflowing its row and scrolling the page sideways at 1024–1100 px",
+      "question": "Sales rep tasks filter chips band: does a customer chip with a long organization name wrap or truncate, or does it cause a horizontal page scroll at 1024 px?",
+      "anchors": [
+        "/company/tasks"
+      ],
+      "scope": [
+        "module=salesrep",
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
