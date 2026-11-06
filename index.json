@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T12:07:35.565Z",
-  "count": 1720,
+  "generated": "2026-11-06T12:13:46.319Z",
+  "count": 1721,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28936,6 +28936,28 @@
       "scope": [
         "account=admin",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B997D756",
+      "path": "entries/KB-B997D756.md",
+      "subject": "Classic Admin catalog CSV import: reopening Map columns reverts saved mapping edits to the auto-mapping, and Start import then uses the auto-mapping",
+      "question": "In the classic Admin catalog CSV import wizard, are edits made in Map columns kept when the blade is reopened, and which mapping does Start import send (POST /api/catalogcsvimport/import)?",
+      "questions": [
+        "Why does a catalog CSV import ignore the cleared CategoryPath mapping?",
+        "Classic admin CSV import: Map columns resets after reopen",
+        "Does Start import in the AngularJS CSV wizard use the edited column mapping?"
+      ],
+      "anchors": [
+        "POST /api/catalogcsvimport/import",
+        "GET /api/catalogcsvimport/import/mappingconfiguration"
+      ],
+      "scope": [
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
