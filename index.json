@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T12:02:50.391Z",
-  "count": 1719,
+  "generated": "2026-11-06T12:07:35.565Z",
+  "count": 1720,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29037,6 +29037,30 @@
       ],
       "scope": [
         "store-setting=multifactorauthentication.storemode=enabled",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B9E2AAEA",
+      "path": "entries/KB-B9E2AAEA.md",
+      "subject": "VcWidgetSkeleton renders a VcWidget of its size, so its frame equals the loaded widget's to 0px in classic and soft",
+      "question": "Does VcWidgetSkeleton have the same size and insets as the loaded VcWidget (classic and soft design)?",
+      "questions": [
+        "VcWidgetSkeleton classic border skeleton parity widget size",
+        "Did the classic widget skeleton change radius or border colour in theme 2.62.0?",
+        "Will content jump when a widget skeleton is replaced by the loaded widget?"
+      ],
+      "anchors": [
+        "/storybook/components-organisms-vcwidgetskeleton--with-widget",
+        "/storybook/components-organisms-vcwidgetskeleton--header-slot",
+        "/catalog"
+      ],
+      "scope": [
+        "component=vcwidgetskeleton",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
