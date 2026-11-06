@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T12:13:46.319Z",
-  "count": 1721,
+  "generated": "2026-11-06T12:31:40.260Z",
+  "count": 1722,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28808,6 +28808,31 @@
         "grant=password",
         "store-mode=disabled",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B8D4B01A",
+      "path": "entries/KB-B8D4B01A.md",
+      "subject": "Catalog CSV import accepts a CategoryId of another catalog (product lands in the target catalog but under the foreign category, invisible there, and blocks catalog deletion); an unknown CategoryId aborts the whole file with KeyNotFoundException",
+      "question": "What does POST /api/catalogcsvimport/import do when a CSV row's CategoryId belongs to another catalog or does not exist?",
+      "questions": [
+        "Why are CSV-imported products missing from the target catalog tree?",
+        "Why does deleting a catalog fail with FK_Item_Catalog_CatalogId after a CSV import?",
+        "CSV import KeyNotFoundException in LoadProductDependencies"
+      ],
+      "concepts": [
+        "catalog"
+      ],
+      "anchors": [
+        "POST /api/catalogcsvimport/import",
+        "DELETE /api/catalog/catalogs/{id}"
+      ],
+      "scope": [
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
