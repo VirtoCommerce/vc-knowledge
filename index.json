@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T11:00:15.500Z",
-  "count": 1713,
+  "generated": "2026-11-06T11:02:36.667Z",
+  "count": 1714,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6905,6 +6905,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2ECC0C3A",
+      "path": "entries/KB-2ECC0C3A.md",
+      "subject": "A category given the same store-scoped semanticUrl in every store language resolves through Query.slugInfo in each culture, including a store language its catalog does not declare",
+      "question": "Does a category slug resolve via slugInfo in every store culture when each language has its own SEO record with the same slug, even a language the catalog does not list?",
+      "questions": [
+        "Does Query.slugInfo resolve a category slug in pt-PT when the physical catalog has only en-US, de-DE and fr-FR?",
+        "Does a new root category linked into the store virtual catalog appear in Query.childCategories maxLevel 1 for every culture?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.childCategories",
+        "POST /api/catalog/categories"
+      ],
+      "scope": [
+        "entity=catalog-category-seo",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
