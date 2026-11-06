@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T10:58:16.164Z",
-  "count": 1711,
+  "generated": "2026-11-06T11:00:15.500Z",
+  "count": 1713,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10474,6 +10474,28 @@
       ],
       "scope": [
         "module=pagebuilder",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-45D8D356",
+      "path": "entries/KB-45D8D356.md",
+      "subject": "With design classic the storefront loads no soft-design CSS: no designs/soft chunk is requested, no design-font link (link[data-design-fonts]) is written, no Inter/Geologica font face loads, and no loaded stylesheet holds a [data-design=\"soft\"] selector",
+      "question": "Does a storefront running design classic download or apply any of the soft design's CSS or fonts?",
+      "questions": [
+        "Is the soft design stylesheet lazy-loaded only when design is soft?",
+        "Which fonts does the classic storefront load?",
+        "Are there [data-design=soft] rules in the classic storefront stylesheets?"
+      ],
+      "anchors": [
+        "/catalog",
+        "/cart"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -38156,6 +38178,28 @@
       "scope": [
         "module=salesrep",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F6BEC4A4",
+      "path": "entries/KB-F6BEC4A4.md",
+      "subject": "On the PDP image gallery (desktop), the thumbnail prev/next buttons are hidden through Swiper's lock class when every thumbnail fits (4 or fewer), and shown with loop when there are 5 or more; with 5 images the looped strip pads to 8 slides with 3 empty ones, so Previous from the first slide shows image 5 next to 3 empty thumbnail cells",
+      "question": "When does the product page image gallery show its thumbnail prev/next buttons, and how does the thumbnail strip loop?",
+      "questions": [
+        "Are the PDP gallery thumbnail arrows hidden for a product with 4 images?",
+        "Why does the product gallery show empty thumbnail cells after clicking Previous?",
+        "Does the image gallery thumbnail strip loop for products with 5 or more images?"
+      ],
+      "anchors": [
+        "/product/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=desktop"
       ],
       "plane": "experiential",
       "status": "active",
