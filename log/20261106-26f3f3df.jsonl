@@ -1,0 +1,2 @@
+{"at":"2026-11-06T07:28:42.873Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Lenajava1"}
+{"at":"2026-11-06T07:29:40.155Z","kind":"flush","entries":0,"lines":8,"swept":["23b4962b.jsonl","45f7be70.jsonl","9fcb9bfa.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
