@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T11:02:36.667Z",
-  "count": 1714,
+  "generated": "2026-11-06T11:02:58.394Z",
+  "count": 1715,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30192,6 +30192,34 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C37FE4F5",
+      "path": "entries/KB-C37FE4F5.md",
+      "subject": "A product property value saved without a property definition surfaces in xAPI as propertyType PRODUCT even when the body declares type Variation, so it never becomes a storefront variant-picker option",
+      "question": "What property data must variations carry for the storefront PDP to render the VcVariantPicker variant picker?",
+      "questions": [
+        "Why does a variation's Color property show as PRODUCT instead of VARIATION in the GraphQL product query?",
+        "Can inline (propertyId null) property values drive the B2C product options block?",
+        "What makes vc-frontend use the B2C product template with the options picker?"
+      ],
+      "concepts": [
+        "catalog"
+      ],
+      "anchors": [
+        "Query.product",
+        "Query.products",
+        "POST /api/catalog/properties",
+        "POST /api/catalog/products"
+      ],
+      "scope": [
+        "entity=catalog-product-property",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
