@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T11:57:12.851Z",
-  "count": 1718,
+  "generated": "2026-11-06T12:02:50.391Z",
+  "count": 1719,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2838,6 +2838,35 @@
         "input=keyboard",
         "page=list-details",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-12AE72E7",
+      "path": "entries/KB-12AE72E7.md",
+      "subject": "Vendor Portal blade Communication badge call POST /api/vcmp/message/search with unreadOnly=true returns 500 \"Value cannot be null. (Parameter 'userId')\" for an operator when the entity has a conversation and no sellerId is in the body - even with a vendor selected in the Vendor Switcher",
+      "question": "Why does opening an offer or product details blade in the Vendor Portal as admin show \"Value cannot be null. (Parameter 'userId')\"?",
+      "questions": [
+        "Does POST /api/vcmp/message/search unreadOnly work for an operator without a seller?",
+        "Does the Vendor Portal messenger widget send sellerId when a vendor is selected?",
+        "What does the Communication page conversation search return for admin with no vendor?",
+        "Why does the order messenger fail to initialize for an order with no seller?"
+      ],
+      "concepts": [
+        "vendor-portal"
+      ],
+      "anchors": [
+        "POST /api/vcmp/message/search",
+        "POST /api/vcmp/conversation/search",
+        "POST /api/vcmp/communicationuser/seller"
+      ],
+      "scope": [
+        "app=vendor-portal",
+        "role=platform-admin-operator",
+        "surface=vendor-ui"
       ],
       "plane": "experiential",
       "status": "active",
