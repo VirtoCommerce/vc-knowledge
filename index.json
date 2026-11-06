@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T10:49:50.414Z",
-  "count": 1708,
+  "generated": "2026-11-06T10:56:27.290Z",
+  "count": 1711,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1840,6 +1840,31 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-0BA573B5",
+      "path": "entries/KB-0BA573B5.md",
+      "subject": "News admin app stores a raw SEO slug with spaces, uppercase and & % ! verbatim through PUT /api/news, with no normalization and no validation message",
+      "question": "Does the News module admin normalize or validate an SEO URL slug containing spaces, uppercase and special characters?",
+      "questions": [
+        "Which characters are allowed in a news article semanticUrl?",
+        "Is a news article slug lowercased or hyphenated on save?",
+        "Does the vc-news SEO URL slug field reject invalid characters like the platform SEO blade?"
+      ],
+      "anchors": [
+        "PUT /api/news",
+        "GET /api/news/{id}",
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "module=news",
+        "owner=newsarticle",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-0BAA4DB6",
@@ -4585,6 +4610,29 @@
       "scope": [
         "buyer=signed-in",
         "surface=ucp-mcp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1DCE2168",
+      "path": "entries/KB-1DCE2168.md",
+      "subject": "News admin article blade: Reset reverts an unsaved Title edit, clears the 'Has unsaved changes' banner and sends no PUT /api/news; closing afterwards raises no guard",
+      "question": "In the News module admin article blade, does Reset clear the 'Has unsaved changes' indicator and does it send PUT /api/news?",
+      "questions": [
+        "Does Reset in the vc-news article editor discard edits without saving?",
+        "Why would the News article blade keep showing Has unsaved changes after Reset?",
+        "Does the News article blade warn on close after Reset?"
+      ],
+      "anchors": [
+        "PUT /api/news",
+        "GET /api/news/{id}"
+      ],
+      "scope": [
+        "module=news",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -23087,6 +23135,35 @@
       "scope": [
         "auth=anonymous",
         "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-95CC3812",
+      "path": "entries/KB-95CC3812.md",
+      "subject": "PUT /api/news saves a second news article whose ACTIVE SEO semanticUrl duplicates another article's in the same store and language with 200 and no warning; xAPI slugInfo then always resolves the slug to the first article",
+      "question": "Does the News module refuse or warn about a duplicate active SEO slug across two news articles in the same store and language, and which article does the slug resolve to?",
+      "questions": [
+        "Can two news articles share the same semanticUrl?",
+        "What does slugInfo return for a slug shared by two published news articles?",
+        "Does GET /api/seoinfos/duplicates report duplicate news article slugs?"
+      ],
+      "concepts": [
+        "seo-url"
+      ],
+      "anchors": [
+        "PUT /api/news",
+        "GET /api/seoinfos/duplicates",
+        "Query.slugInfo",
+        "Query.newsArticles"
+      ],
+      "scope": [
+        "module=news",
+        "owner=newsarticle",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
