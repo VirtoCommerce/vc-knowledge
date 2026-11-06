@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T12:56:26.887Z",
-  "count": 1723,
+  "generated": "2026-11-06T12:57:33.122Z",
+  "count": 1725,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13024,6 +13024,22 @@
       "scope": [
         "actor=anonymous",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-51B37094",
+      "path": "entries/KB-51B37094.md",
+      "subject": "Classic Admin catalog CSV import restores the last started import's mapping for a new file with the same column header (localStorage lastKnownImportData, keyed by header eTag)",
+      "question": "Why does a brand-new classic Admin CSV import wizard open Map columns pre-filled with a previous import's custom mapping instead of the auto-mapping from GET /api/catalogcsvimport/import/mappingconfiguration?",
+      "anchors": [
+        "GET /api/catalogcsvimport/import/mappingconfiguration"
+      ],
+      "scope": [
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -37757,6 +37773,23 @@
         "KB-CFBD95B7"
       ],
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F2222445",
+      "path": "entries/KB-F2222445.md",
+      "subject": "On CatalogCsvImport 3.1009.0 a CSV CategoryId that is unknown or belongs to another catalog imports the product to the target catalog root and reports a per-row error with the line number",
+      "question": "What does POST /api/catalogcsvimport/import do on CatalogCsvImport 3.1009.0 when a row's CategoryId does not exist or belongs to another catalog?",
+      "anchors": [
+        "POST /api/catalogcsvimport/import",
+        "DELETE /api/catalog/catalogs/{id}"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
