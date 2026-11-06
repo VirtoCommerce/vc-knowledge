@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T10:46:14.254Z",
-  "count": 1700,
+  "generated": "2026-11-06T10:48:08.342Z",
+  "count": 1702,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6279,6 +6279,33 @@
       "scope": [
         "component=vcstatwidget",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2B6EFBD7",
+      "path": "entries/KB-2B6EFBD7.md",
+      "subject": "addItem with a quantity above available stock answers 200 with no errors[] and leaves the line out of the cart; only validationErrors(ruleSet:\"*\") explains it, and the empty cart then fails createOrderFromCart",
+      "question": "Why does createOrderFromCart say \"The cart has validation errors\" when Query.cart validationErrors is empty after addItem?",
+      "questions": [
+        "Does Mutation.addItem return an error when the quantity exceeds available stock?",
+        "Which validation error code does addItem report for a quantity above the fulfillment-center stock?",
+        "Why is the cart empty after addItem quantity 20 on a product with stock 3?",
+        "Which ruleSet shows ALL_LINE_ITEMS_UNSELECTED on an empty cart?"
+      ],
+      "anchors": [
+        "Mutation.addItem",
+        "Query.cart",
+        "Mutation.createOrderFromCart"
+      ],
+      "scope": [
+        "actor=anonymous",
+        "module=x-cart",
+        "store=b2b-store",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -27373,6 +27400,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B1169171",
+      "path": "entries/KB-B1169171.md",
+      "subject": "The Tasks app \"All tasks\" list sends POST /api/task-management/search with no isActive filter, so completed and canceled (archived) tasks stay listed there as well as in \"Archive tasks\"",
+      "question": "Does the \"All tasks\" view of the Admin Tasks app (POST /api/task-management/search) include completed or canceled (archived) tasks?",
+      "questions": [
+        "Does a task disappear from All tasks after Complete or Reject?",
+        "What search criteria does the All tasks grid send to /api/task-management/search?",
+        "Which isActive filter do All tasks and Archive tasks use?",
+        "Why does a Done task still show in All tasks?"
+      ],
+      "anchors": [
+        "POST /api/task-management/search",
+        "POST /api/task-management/finish",
+        "/apps/tasks"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "role=admin",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
