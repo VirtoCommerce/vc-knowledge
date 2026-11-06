@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T12:57:33.122Z",
-  "count": 1725,
+  "generated": "2026-11-06T18:39:12.610Z",
+  "count": 1726,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34178,6 +34178,25 @@
         "module=imagetools@3.1006.1",
         "surface=admin-ui",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DD678CA3",
+      "path": "entries/KB-DD678CA3.md",
+      "subject": "The storefront order payment page opens for a Cancelled order and the platform accepts addOrUpdateOrderPayment on it, after which the page shows Pay now",
+      "question": "Can a Cancelled order's /account/orders/{id}/payment page be used to change its payment method, and does the xAPI accept it?",
+      "anchors": [
+        "/account/orders/{id}/payment",
+        "Mutation.addOrUpdateOrderPayment"
+      ],
+      "scope": [
+        "order-status=cancelled",
+        "role=org-member",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
