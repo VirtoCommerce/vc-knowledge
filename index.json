@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T10:48:08.342Z",
-  "count": 1702,
+  "generated": "2026-11-06T10:49:50.414Z",
+  "count": 1708,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4921,6 +4921,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-20669545",
+      "path": "entries/KB-20669545.md",
+      "subject": "Loyalty mission goal items are read with POST /api/loyalty-mission-goal-items/search; GET with a missionId query returns 405",
+      "question": "How do I read the goal items (SKU targets and quantities) of a loyalty mission over REST?",
+      "questions": [
+        "Does GET /api/loyalty-mission-goal-items?missionId= work?",
+        "Where does the Admin Goal SKUs blade get its quantities?"
+      ],
+      "concepts": [
+        "loyalty-mission"
+      ],
+      "anchors": [
+        "POST /api/loyalty-mission-goal-items/search",
+        "GET /api/loyalty-mission-goal-items"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-2073D7AD",
       "path": "entries/KB-2073D7AD.md",
       "subject": "The storefront return wizard corrects an over-limit quantity to the returnable maximum on the spot; only pre-merge pr-2500 builds displayed the typed value while saving the clamped one",
@@ -8043,6 +8067,31 @@
         "host-os=linux",
         "module=virtocommerce.sqlqueries",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-36B7BD4A",
+      "path": "entries/KB-36B7BD4A.md",
+      "subject": "Loyalty missions with EndDate before StartDate are accepted and persisted, via REST and via the Admin mission blade Save",
+      "question": "Does POST /api/loyalty-missions reject an EndDate earlier than the StartDate?",
+      "questions": [
+        "Is the loyalty mission date window validated?",
+        "Can the Admin loyalty mission blade save a mission whose end date precedes its start date?",
+        "Is StartDate equal to EndDate accepted on a loyalty mission?"
+      ],
+      "concepts": [
+        "loyalty-mission"
+      ],
+      "anchors": [
+        "POST /api/loyalty-missions"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -17574,6 +17623,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-738162D7",
+      "path": "entries/KB-738162D7.md",
+      "subject": "POST /api/loyalty-missions accepts and stores a non-None periodicity such as Monthly without validation",
+      "question": "Does POST /api/loyalty-missions validate the periodicity field?",
+      "questions": [
+        "Can a loyalty mission be created with Periodicity Monthly?",
+        "What periodicity values does the loyalty mission API accept?"
+      ],
+      "concepts": [
+        "loyalty-mission"
+      ],
+      "anchors": [
+        "POST /api/loyalty-missions"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -33342,6 +33414,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-DA82FA11",
+      "path": "entries/KB-DA82FA11.md",
+      "subject": "On a Published or Archived loyalty mission the Admin details blade keeps its inputs editable but disables Save, Reset and Publish; typed edits are never saved",
+      "question": "Are the fields of a Published loyalty mission read-only in the Admin mission blade?",
+      "questions": [
+        "Can I type into the Name of a published loyalty mission in Admin?",
+        "How does the Admin loyalty mission blade enforce immutability?"
+      ],
+      "concepts": [
+        "loyalty-mission"
+      ],
+      "anchors": [
+        "PUT /api/loyalty-missions"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DA88761E",
       "path": "entries/KB-DA88761E.md",
       "subject": "In dark mode the dashboard Tasks widget overdue link is #bb1616 on #0a090b (3.06:1), on 2.59.0 and on 2.59.0-pr-2536",
@@ -35941,6 +36036,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-EBBB9BF3",
+      "path": "entries/KB-EBBB9BF3.md",
+      "subject": "POST /api/loyalty-missions accepts an OrderValueGoal currencyCode that is not a known currency or is lowercase, and stores it verbatim",
+      "question": "Does POST /api/loyalty-missions validate the OrderValueGoal currencyCode beyond presence?",
+      "questions": [
+        "Is an unknown currency code like XYZ rejected on a loyalty mission order value goal?",
+        "Is a lowercase currency code normalised on a loyalty mission?",
+        "What currency validation does the loyalty mission validator do?"
+      ],
+      "anchors": [
+        "POST /api/loyalty-missions"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EBBD7349",
       "path": "entries/KB-EBBD7349.md",
       "subject": "With PR #149, a wrong-type member id in contact(id)/organization(id) answers Forbidden like a nonexistent member, and an Employee user's me.contact is null with no errors",
@@ -36952,6 +37068,30 @@
         "KB-574C8604"
       ],
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F03A2672",
+      "path": "entries/KB-F03A2672.md",
+      "subject": "PUT /api/loyalty-missions on a Published mission returns 500 with the platform exception envelope, not a 4xx, and persists nothing",
+      "question": "What does PUT /api/loyalty-missions return when the mission is Published?",
+      "questions": [
+        "Can a published loyalty mission be edited through the REST API?",
+        "Which status code does the loyalty mission immutability guard return?",
+        "Is a no-op PUT of a published loyalty mission accepted?"
+      ],
+      "concepts": [
+        "loyalty-mission"
+      ],
+      "anchors": [
+        "PUT /api/loyalty-missions"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
