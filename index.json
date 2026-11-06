@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T11:02:58.394Z",
-  "count": 1715,
+  "generated": "2026-11-06T11:55:07.652Z",
+  "count": 1717,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9915,6 +9915,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4135FFBE",
+      "path": "entries/KB-4135FFBE.md",
+      "subject": "The VcShape Mask story requests /assets/undefined (404) because its img arg is a site-root path that the kit's image helper cannot resolve",
+      "question": "Why does the VcShape Mask story in Storybook request /assets/undefined?",
+      "questions": [
+        "Does the VcShape Mask story show its banner image?",
+        "What image path forms does VcShape's img prop accept?",
+        "Which request 404s on components-molecules-vcshape--mask?"
+      ],
+      "anchors": [
+        "GET /assets/undefined"
+      ],
+      "scope": [
+        "component=vcshape",
+        "surface=storefront-ui",
+        "tool=storybook"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -28447,6 +28470,29 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-B70B1A4A",
+      "path": "entries/KB-B70B1A4A.md",
+      "subject": "A collapsible VcWidget header button exposes no aria-expanded and no aria-controls in either state, in Storybook and on storefront facets",
+      "question": "Does the collapsible VcWidget header button expose its expanded/collapsed state (aria-expanded, aria-controls)?",
+      "questions": [
+        "Is aria-expanded set on the catalog facet filter header on /catalog?",
+        "What does a screen reader get from the VcWidget Collapsible story header?",
+        "Does button.vc-widget__header-container toggle aria-expanded when clicked?"
+      ],
+      "anchors": [
+        "/catalog"
+      ],
+      "scope": [
+        "component=vcwidget",
+        "surface=storefront-ui",
+        "tool=storybook"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-B70CDB22",
