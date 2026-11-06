@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-06T11:55:07.652Z",
-  "count": 1717,
+  "generated": "2026-11-06T11:57:12.851Z",
+  "count": 1718,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29232,6 +29232,31 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-BBEA0B0D",
+      "path": "entries/KB-BBEA0B0D.md",
+      "subject": "POST /api/vcmp/message/unreadcount for an operator with no seller selected returns 200 with the operator group's unread count for the entity; the route is POST-only (GET is 405, Allow: POST)",
+      "question": "What does /api/vcmp/message/unreadcount return for a platform admin (operator) in the Vendor Portal with no vendor selected?",
+      "questions": [
+        "Does the Vendor Portal unread message count still return 500 for admin without a vendor?",
+        "Is GET /api/vcmp/message/unreadcount a valid route?",
+        "Whose unread count does unreadcount return when the caller is an operator and no sellerId is sent?",
+        "What does unreadcount return with an empty body?"
+      ],
+      "anchors": [
+        "POST /api/vcmp/message/unreadcount",
+        "GET /api/vcmp/message/unreadcount"
+      ],
+      "scope": [
+        "app=vendor-portal",
+        "role=platform-admin-operator",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-BBF23DF4",
