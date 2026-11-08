@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-08T23:37:31.874Z",
-  "count": 1727,
+  "generated": "2026-11-08T23:43:01.319Z",
+  "count": 1728,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -38455,6 +38455,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F59EA62A",
+      "path": "entries/KB-F59EA62A.md",
+      "subject": "Mission progress bars on /account/missions (cards and order-mission modal) expose no progressbar role or value to assistive tech on the released theme",
+      "question": "Do mission card and order-mission modal progress bars on /account/missions expose role progressbar and a value to screen readers?",
+      "questions": [
+        "Is the missions progress bar accessible",
+        "Does the mission card percentage have aria-valuenow",
+        "order-mission-modal progress bar accessibility"
+      ],
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
