@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-08T23:55:44.541Z",
-  "count": 1729,
+  "generated": "2026-11-08T23:57:09.829Z",
+  "count": 1730,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5540,6 +5540,33 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-2451697E",
+      "path": "entries/KB-2451697E.md",
+      "subject": "salesRepCustomer(s).phone is the primary contact's first phone, else the org's first phone; an org phone is hidden when the primary contact has one, and sales reps are skipped when picking an ownerless org's primary contact",
+      "question": "What do salesRepCustomers / salesRepCustomer return in phone and primaryContact, and is a sales rep ever chosen as an ownerless organization's primary contact?",
+      "questions": [
+        "Why does the organization's own phone not show for a sales rep customer?",
+        "Which contact is primaryContact when a served organization has no owner?",
+        "Does address.phone of salesRepCustomer come from the org default address?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "organization-member"
+      ],
+      "anchors": [
+        "Query.salesRepCustomers",
+        "Query.salesRepCustomer"
+      ],
+      "scope": [
+        "endpoint=/graphql/sales-rep",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-2484DEB4",
