@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-08T23:43:01.319Z",
-  "count": 1728,
+  "generated": "2026-11-08T23:55:44.541Z",
+  "count": 1729,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6842,6 +6842,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2DE05622",
+      "path": "entries/KB-2DE05622.md",
+      "subject": "A contact's phones are not returned in the order they were written; the read order is stable but differs from the POST order",
+      "question": "Does GET /api/members/{id} return a contact's phones in the order they were written by POST /api/members?",
+      "questions": [
+        "Is Contact.phones[0] the first phone the admin entered?",
+        "Why is the default phone of a customer contact not the first one I saved?",
+        "In what order does the scoped sales-rep xAPI return primaryContact.phones?"
+      ],
+      "anchors": [
+        "POST /api/members",
+        "GET /api/members/{id}",
+        "Query.salesRepCustomer"
+      ],
+      "scope": [
+        "entity=contact",
+        "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
