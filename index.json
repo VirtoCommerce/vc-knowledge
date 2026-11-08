@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-08T23:25:21.026Z",
-  "count": 1726,
+  "generated": "2026-11-08T23:37:31.874Z",
+  "count": 1727,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4621,6 +4621,30 @@
       ],
       "scope": [
         "surface=rest",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1DC162B9",
+      "path": "entries/KB-1DC162B9.md",
+      "subject": "On SalesRep 3.1017.0-pr-37, salesRepCustomers list items expose phone and primaryContact{phones}; phone is the primary contact's first phone, else the organization's own phone, and address.phone is separate",
+      "question": "Which phone fields does salesRepCustomers return per customer, and where does the phone value come from?",
+      "questions": [
+        "Does the My customers list query return the customer's phone numbers?",
+        "What is SalesRepCustomer.phone when the organization has no primary contact?",
+        "Is address.phone deduplicated against phone in salesRepCustomers?"
+      ],
+      "anchors": [
+        "Query.salesRepCustomers",
+        "Query.salesRepCustomer",
+        "/company/my-customers"
+      ],
+      "scope": [
+        "role=sales-rep",
         "surface=xapi"
       ],
       "plane": "experiential",
