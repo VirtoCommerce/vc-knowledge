@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T14:04:49.557Z",
-  "count": 1775,
+  "generated": "2026-11-09T14:45:49.977Z",
+  "count": 1776,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -595,7 +595,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12326,6 +12326,29 @@
       "scope": [
         "feature=mfa-store-modes",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4D04473D",
+      "path": "entries/KB-4D04473D.md",
+      "subject": "On Return 3.1004.0 with theme 2.59.0 the xAPI has no organizationReturns query and /account/returns renders no organization tab, even for a holder of the organization-returns permission",
+      "question": "Is the organization returns tab (/account/returns?scope=organization, Query.organizationReturns) available on Return 3.1004.0 / theme 2.59.0?",
+      "questions": [
+        "Which build introduces the organization tab on the storefront returns page?",
+        "Why does /account/returns?scope=organization show only my own returns?",
+        "Does the xAPI schema expose organizationReturns on Return 3.1004.0?"
+      ],
+      "anchors": [
+        "/account/returns",
+        "Query.organizationReturns"
+      ],
+      "scope": [
+        "feature=returns",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
