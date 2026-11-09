@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T00:09:17.303Z",
-  "count": 1732,
+  "generated": "2026-11-09T00:14:20.077Z",
+  "count": 1733,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -35376,6 +35376,28 @@
       "scope": [
         "entity=customer-order",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E493006D",
+      "path": "entries/KB-E493006D.md",
+      "subject": "With persistent token validation on, xAPI changePassword at once terminates every session of the user, the caller's own included unless it passes SessionGroupId",
+      "question": "Does Mutation.changePassword (xAPI) end the user's other access tokens, and does the calling token survive, when Authorization EnablePersistentStorageTokenValidation is true?",
+      "questions": [
+        "Are other devices signed out after a customer changes the password through xAPI?",
+        "Does the token that called changePassword keep working afterwards?",
+        "How do I check that a customer access token was revoked after a password change?"
+      ],
+      "anchors": [
+        "Mutation.changePassword",
+        "GET /api/platform/security/users"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
