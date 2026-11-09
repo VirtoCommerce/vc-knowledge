@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T15:49:40.258Z",
-  "count": 1782,
+  "generated": "2026-11-09T15:49:50.761Z",
+  "count": 1785,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1798,6 +1798,23 @@
         "KB-ADF1DE84"
       ],
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0B2C92E1",
+      "path": "entries/KB-0B2C92E1.md",
+      "subject": "Member keyword search with ? or a leading ! inside a term matches the whole member set instead of applying a single-char wildcard or NOT",
+      "question": "What does POST /api/members/search return for keywords like Vend?r026 or !Vendor026?",
+      "anchors": [
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -20801,7 +20818,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -21933,6 +21950,28 @@
       ],
       "scope": [
         "setting=order.status",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8970F253",
+      "path": "entries/KB-8970F253.md",
+      "subject": "An Employee created in the Admin 'New employee' blade is saved with name null (fullName set), so its Companies and contacts row has an empty Name cell",
+      "question": "Why does an employee created in Admin Contacts show a blank name in the Companies and contacts list?",
+      "questions": [
+        "Does POST /api/members for an Employee from the Admin SPA populate name?",
+        "Employee row has no name in the members grid"
+      ],
+      "anchors": [
+        "POST /api/members",
+        "GET /api/members/{id}"
+      ],
+      "scope": [
+        "member-type=employee",
         "surface=admin-ui"
       ],
       "plane": "experiential",
@@ -32602,6 +32641,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CB6A3FB2",
+      "path": "entries/KB-CB6A3FB2.md",
+      "subject": "The group-filtered member list opened by 'Show customers' exports the whole member database: its Export ignores the groups filter",
+      "question": "Does Export on the Show customers (user-group filtered) member blade export only the group's members?",
+      "anchors": [
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
