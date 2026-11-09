@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T15:49:28.348Z",
-  "count": 1781,
+  "generated": "2026-11-09T15:49:40.258Z",
+  "count": 1782,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22234,6 +22234,29 @@
       "scope": [
         "module=pages",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8B16DF45",
+      "path": "entries/KB-8B16DF45.md",
+      "subject": "Sales Rep hub \"All blocks are hidden\" empty state fits a 320px column: illustration scales with the column, keeps 236:168 ratio, no horizontal page scroll; 236x168 at 375px and above",
+      "question": "At narrow mobile widths (320px), does the Sales Rep hub \"All blocks are hidden\" empty state overflow its column or cause horizontal page scroll?",
+      "questions": [
+        "How wide is the layout empty-state illustration on /company/dashboard at 320px?",
+        "Does the sales rep empty state svg keep a fixed width?",
+        "VCST-6205 empty state overflow at 320px"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
