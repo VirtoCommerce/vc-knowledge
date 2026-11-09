@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T00:21:21.993Z",
-  "count": 1736,
+  "generated": "2026-11-09T00:21:38.964Z",
+  "count": 1737,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6999,6 +6999,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-2E762B8F",
+      "path": "entries/KB-2E762B8F.md",
+      "subject": "The My customers \"Choose a number to call\" list has no surface of its own: transparent in dark mode and wider than a 375 px viewport",
+      "question": "Does the call-number list on /company/my-customers render on an opaque surface and fit a 375 px viewport?",
+      "questions": [
+        "Is the sales rep call dropdown legible in dark mode?",
+        "Does the call customer number list overflow on mobile?"
+      ],
+      "anchors": [
+        "/company/my-customers"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-2E88BF7C",
       "path": "entries/KB-2E88BF7C.md",
       "subject": "Store blade: after Save with the SEO list blade still open, deleting an SEO row there does not mark the store dirty (Save stays disabled, deletion not persisted)",
@@ -13218,7 +13239,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-51F5CFD6",
@@ -18570,7 +18591,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -21033,7 +21054,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
