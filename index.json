@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T00:14:20.077Z",
-  "count": 1733,
+  "generated": "2026-11-09T00:20:05.188Z",
+  "count": 1734,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33921,6 +33921,30 @@
         "mode=dark",
         "preset=coffee",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DAA76AE2",
+      "path": "entries/KB-DAA76AE2.md",
+      "subject": "A loyalty OrderValueGoal mission adds the order's final total (after discounts, including tax and shipping) to its progress",
+      "question": "Does an OrderValueGoal loyalty mission count the order total after a coupon discount, or the pre-discount subtotal?",
+      "questions": [
+        "Is Reach target order value measured on the discounted order total?",
+        "What value does one order add to loyalty mission currentValue for an order value goal?",
+        "Does shipping and tax count toward a loyalty order value mission?"
+      ],
+      "anchors": [
+        "POST /api/loyalty-mission-progress/search",
+        "Query.loyaltyMissionProgress"
+      ],
+      "scope": [
+        "module=loyalty",
+        "store=b2b-store",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
