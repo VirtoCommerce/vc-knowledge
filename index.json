@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T00:03:17.188Z",
-  "count": 1731,
+  "generated": "2026-11-09T00:09:17.303Z",
+  "count": 1732,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19766,6 +19766,23 @@
       "anchors": [
         "/account/quotes",
         "/account/quotes/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8031A7F5",
+      "path": "entries/KB-8031A7F5.md",
+      "subject": "Skyflow installed without Payments__Skyflow__* config: Pay with Skyflow is offered but initializeCartPayment returns NULL_REFERENCE and the card form never loads",
+      "question": "Why does Pay with Skyflow on /cart show \"Payment method is unavailable\" and Mutation.initializeCartPayment return NULL_REFERENCE?",
+      "anchors": [
+        "Mutation.initializeCartPayment",
+        "/cart"
       ],
       "scope": [
         "surface=storefront-ui"
