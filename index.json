@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T13:48:49.514Z",
-  "count": 1774,
+  "generated": "2026-11-09T13:57:58.005Z",
+  "count": 1775,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22494,6 +22494,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8C4FF65C",
+      "path": "entries/KB-8C4FF65C.md",
+      "subject": "The Admin Returns list status filter and POST /api/return/search fold the Cancelled and Canceled spellings into one status",
+      "question": "Does filtering returns by Cancelled also return legacy returns stored as Canceled?",
+      "questions": [
+        "Why does the Cancelled filter in the Admin Returns list show a row whose status reads Canceled?",
+        "Does POST /api/return/search statuses [Canceled] return Cancelled returns too?"
+      ],
+      "anchors": [
+        "POST /api/return/search"
+      ],
+      "scope": [
+        "feature=returns",
+        "surface=admin-ui",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
