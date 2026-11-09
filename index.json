@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T13:01:20.532Z",
-  "count": 1764,
+  "generated": "2026-11-09T13:03:30.019Z",
+  "count": 1768,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1462,7 +1462,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -5146,6 +5146,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-205EAEF9",
+      "path": "entries/KB-205EAEF9.md",
+      "subject": "Invite member emails textarea: aria-invalid=\"true\" + aria-describedby to <textarea-id>-details while the validation message shows; both attributes absent once the value is valid",
+      "question": "Is the /company/members Invite member emails textarea error exposed with aria-invalid and aria-describedby?",
+      "questions": [
+        "Which element does the invite emails textarea's aria-describedby point at when an email is invalid?",
+        "Does the invite textarea keep aria-invalid after entering a valid email?"
+      ],
+      "anchors": [
+        "/company/members"
+      ],
+      "scope": [
+        "role=organization-maintainer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-20669545",
       "path": "entries/KB-20669545.md",
       "subject": "Loyalty mission goal items are read with POST /api/loyalty-mission-goal-items/search; GET with a missionId query returns 405",
@@ -6733,6 +6754,28 @@
         "theme=vc-frontend",
         "user=guest",
         "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2C2B8B94",
+      "path": "entries/KB-2C2B8B94.md",
+      "subject": "A counter-only VcTextarea (wishlist Description, cart Order comment) carries aria-describedby to its details div holding the counter and no aria-invalid; native maxlength truncates input so no too-long error is reachable",
+      "question": "What do the storefront textareas with a character counter expose via aria-describedby, and can a too-long error be triggered?",
+      "questions": [
+        "Does the Create list Description textarea reference its 0 / 250 counter?",
+        "Is the cart Order comment textarea counter linked by aria-describedby?",
+        "Why is the cart Order comment textarea named 'Enter a value'?"
+      ],
+      "anchors": [
+        "/account/lists",
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -10642,7 +10685,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -31097,6 +31140,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-C3649721",
+      "path": "entries/KB-C3649721.md",
+      "subject": "VcDateRangePicker invalid range: both date inputs get aria-invalid=\"true\" and aria-describedby to the shared range-message id; date inputs carry aria-controls only while their calendar is open",
+      "question": "On /account/orders Filters, how are the Start/End date inputs exposed to assistive tech when End is before Start, and when is aria-controls set?",
+      "questions": [
+        "Does the orders date filter link both date inputs to the 'End date must be on or after start date' message?",
+        "Is aria-controls present on the VcDatePicker combobox while the calendar is closed?",
+        "What happens to aria-invalid on the date range inputs once the range is corrected?"
+      ],
+      "anchors": [
+        "/account/orders",
+        "/company/my-customers"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C37FE4F5",
       "path": "entries/KB-C37FE4F5.md",
       "subject": "A product property value saved without a property definition surfaces in xAPI as propertyType PRODUCT even when the body declares type Variation, so it never becomes a storefront variant-picker option",
@@ -36147,6 +36212,26 @@
       "contested": 1
     },
     {
+      "id": "KB-E5C03B24",
+      "path": "entries/KB-E5C03B24.md",
+      "subject": "Catalog filters sidebar 'Available at branches' checkbox has aria-describedby to its hint \"Select a pickup branch to see the products that are in stock now\" and no aria-invalid; the desktop toolbar checkbox shows no hint",
+      "question": "Is the branch availability hint on /catalog filters linked to its checkbox for assistive tech?",
+      "questions": [
+        "Which /catalog checkbox carries aria-describedby, and to what?",
+        "Do /catalog facet values render as checkboxes?"
+      ],
+      "anchors": [
+        "/catalog"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E5C34501",
       "path": "entries/KB-E5C34501.md",
       "subject": "With design soft in the ru-RU locale, the Inter and Geologica Cyrillic subsets load and Cyrillic text renders in the design faces with no fallback",
@@ -40027,7 +40112,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0,
       "resolved": 1
     },

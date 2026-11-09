@@ -70,5 +70,14 @@ evidence:
     bodyHash: 340571338a00
     build: c55c1a124b302d3b
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 01d892bf697c7bac
+    conditions: theme=2.62.0-pr-2629-8fcc-8fccd4be; browser=chromium
+    at: 2026-11-09T13:01:32.884Z
+    by: session:ff42a502
+    bodyHash: 340571338a00
+    who: Lenajava1
+    note: "Layout/trigger-name part only (Clear not re-checked): /account/orders Filters at 1440 px = split, two combobox inputs, triggers 'Open calendar: Start date' / 'Open calendar: End date'; at 375 px = combined, two plain textboxes (aria-label Start date / End date) and one 'Open calendar' button."
 ---
 In the split layout (two labelled fields, used at sm/640px and wider) each field opens its own calendar, and that calendar's footer Clear empties only its own field; emptying the range needs Clear in both calendars. In the combined layout (one Date range field, below sm) the single calendar's footer Clear empties both dates at once. The split fields carry no in-field clear button; their calendar triggers are named 'Open calendar: Start date' / 'Open calendar: End date', while the combined trigger is named just 'Open calendar'. The suffixed split trigger names come from vc-frontend 702d1c1c (VCST-6001, #2519, merged 2026-10-07: calendarButtonAriaLabel + ui_kit.accessibility.open_calendar_for); builds without it, such as 2.59.0-pr-2524 (2026-10-02), name both split triggers just 'Open calendar'. Re-observed 2026-10-12 on themes 2.60.0-pr-2511-81f1 (vcst) and 2.60.0-pr-2522-6f90 (vcptcore), on /account/orders and the sales-rep customer orders Filters (/company/my-customers/<id>/orders): suffixed names in split at 1920 px, one 'Open calendar' in combined at 375 px, split Clear empties only its own field, combined Clear empties both, no in-field clear.
