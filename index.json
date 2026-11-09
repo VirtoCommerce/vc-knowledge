@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T15:29:30.694Z",
-  "count": 1779,
+  "generated": "2026-11-09T15:33:50.334Z",
+  "count": 1780,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6409,6 +6409,29 @@
       "trust": 1,
       "disputed": 0,
       "contested": 2
+    },
+    {
+      "id": "KB-29C1295A",
+      "path": "entries/KB-29C1295A.md",
+      "subject": "A contact created over REST with no status fails storefront sign-in: GetMe returns errors[] on me.contact.selectedAddressId (INVALID_OPERATION) and the storefront shows 'Something went wrong'; setting status Approved fixes it",
+      "question": "Why does a freshly REST-created multi-org contact get 'Something went wrong' on storefront sign-in?",
+      "questions": [
+        "What does Query.me return for a contact whose status is null?",
+        "Does contact.status null break the storefront GetMe query?"
+      ],
+      "anchors": [
+        "Query.me",
+        "/sign-in",
+        "POST /api/members"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-2A7CB639",
