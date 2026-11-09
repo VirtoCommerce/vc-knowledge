@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T09:47:43.239Z",
-  "count": 1753,
+  "generated": "2026-11-09T09:49:08.088Z",
+  "count": 1755,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13371,7 +13371,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 2
+      "contested": 3
     },
     {
       "id": "KB-51F5CFD6",
@@ -15573,6 +15573,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-60E594B2",
+      "path": "entries/KB-60E594B2.md",
+      "subject": "X-Frontend layout reads scope and storeId case-insensitively and returns null for any invalid scope; saveLayout rejects every rule breach with one generic VALIDATION error and saves nothing",
+      "question": "What does Query.layout return for an invalid or differently-cased scope, and what error does Mutation.saveLayout give on invalid input?",
+      "questions": [
+        "Is the X-Frontend layout scope case-sensitive?",
+        "Which saveLayout limits are enforced and how is a breach reported?",
+        "Does saveLayout's 20-layout cap count non-layout customer preferences?",
+        "How big may a layout setting value be?"
+      ],
+      "anchors": [
+        "Query.layout",
+        "Mutation.saveLayout"
+      ],
+      "scope": [
+        "entity=customer-preference",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-60E718B6",
       "path": "entries/KB-60E718B6.md",
       "subject": "On upstream vc-frontend 2.59.0-pr-2458 a zero-hit /search?barcode= lookup shifts layout on load (signed in: CLS 0.724 at 1920px, 0.798 at 375px), and at 375px it usually flickers empty view to skeletons to empty view (CLS 2.28)",
@@ -16943,6 +16967,32 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6AF444D9",
+      "path": "entries/KB-6AF444D9.md",
+      "subject": "Sales Rep hub layouts load and save through X-Frontend layout/saveLayout with scopes salesRepDashboard and salesRepCustomerProfile; salesRepLayout/saveSalesRepLayout no longer exist and old SalesRepLayout.* preferences are not migrated",
+      "question": "How does the Sales Rep hub load and save its dashboard and customer-profile layout after salesRepLayout was removed?",
+      "questions": [
+        "Does salesRepLayout still exist?",
+        "Which layout scope does /company/dashboard use for a sales rep?",
+        "Is a rep's old saved hub layout migrated?",
+        "Does a hidden hub widget still query its data?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "/company/my-customers/{id}",
+        "Query.layout",
+        "Mutation.saveLayout"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -38508,7 +38558,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-F2C1F699",
