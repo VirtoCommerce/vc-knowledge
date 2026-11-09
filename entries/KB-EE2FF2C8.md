@@ -28,5 +28,14 @@ evidence:
     defect: VCST-6375
     who: Aleksandra-Mitricheva
     note: "Reproduced on the released qa1 theme in a regular password session with showPlacedPrice=false caused by an item promotion (no punchout): wide column 180/400/89 (list), narrow slot at 1280 (container 835px) and 390 showed 144/189.60/71.20 (placed). The vc-frontend PR #2588 build (fe-f23723b99db0) shows list in the narrow slot too."
+  - method: observation
+    deployment: vcptcore_qa
+    build: 825fe86d124460e9
+    at: 2026-11-09T16:01:41.291Z
+    by: session:f49ffedc
+    bodyHash: d2d1e2784342
+    who: Aleksandra-Mitricheva
+    contradicts: true
+    note: "On theme 2.62.0-pr-2588-274e0fa4 (vc-frontend#2588, VCST-6375 Tested 2026-11-09, PR not yet merged) vcptcore-qa /cart: a showPlacedPrice=false line (list 99 / placed 88.35) shows 99.00 in BOTH wide and narrow Price per item slots at 1920/1366/1280/390 (container 1038/922/835/330), 3/3; a showPlacedPrice=true line shows placed in both. The defect holds only on builds without #2588."
 ---
 On theme 2.60.0-pr-2564 the cart line component renders two price elements: a desktop column (container wider than 4xl) whose shown price is showPlacedPrice ? placedPrice : listPrice, and a 'Price per item' property used in the narrow card layout (seen at 375 and 768 px) that always shows placedPrice ?? salePrice ?? listPrice. In a regular password session (B2B-store, USD) the cart returned showPlacedPrice=true: a sale-priced line (list 400.00, sale 237.00, qty 2) showed 237.00 with 400.00 struck at 1920 px and 237.00 at 375/768 px, line total 474.00 at all widths, so desktop and mobile agree. When showPlacedPrice is false (observed for the same buyer in a punchout session), desktop shows the list price and the struck list total, while the narrow layout still shows the placed price, so the two layouts disagree.
