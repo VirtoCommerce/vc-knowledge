@@ -26,5 +26,14 @@ evidence:
     by: session:8df1fb2c
     build: be10ad6a04a12ec3
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_regression
+    build: 9648699210e92bd7
+    conditions: platform=3.1076.13; module:VirtoCommerce.Customer=3.1029.1
+    at: 2026-11-09T15:44:13.970Z
+    by: session:cb5a6bb9
+    bodyHash: 0bb78cda38a5
+    who: Aleksandra-Mitricheva
+    note: "Contact-side account delete (Contacts > contact > Accounts > Delete) also left the contact in the DB. Additionally observed: right after that delete, the contact's Member index document was gone (GET /api/search/indexes/index/Member/{id} -> []), so keyword search returned No data for a contact that had been indexed minutes earlier (it was not an invited contact)."
 ---
 A contact and its security account are two records with two delete paths, and neither cascades to the other. Deleting the account under Security > Users names only '1 account(s)' in its confirmation and leaves the contact intact; deleting the contact under Companies and contacts names only '1 contact(s)'. Removing someone completely therefore takes both deletes, in either order. The trap is verifying it: a contact created by an invitation is often not in the member search index, so the 'Companies and contacts' keyword box returns a clean 'No data' for a contact that is still there - the same index behaviour recorded separately for member keyword search. Do not read 'No data' as proof of deletion. Sort the unfiltered list by Name instead: a contact created by an invite has an empty name and sorts to the top, and opening it puts its member id in the URL so you can match it against the id you are chasing. Security > Users does not go through the index, so it is the reliable check for the account half.
