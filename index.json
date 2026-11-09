@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T10:28:00.045Z",
-  "count": 1758,
+  "generated": "2026-11-09T10:35:49.606Z",
+  "count": 1759,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6508,6 +6508,28 @@
         "module=x-cart",
         "store=b2b-store",
         "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2B78C4DB",
+      "path": "entries/KB-2B78C4DB.md",
+      "subject": "On /account/dashboard edit mode, the My recent orders 'Max rows' spinbutton clamps out-of-range input on blur (0 becomes 1, 21 becomes 20) with no invalid state and Save left enabled",
+      "question": "What happens when a buyer types 0 or 21 into 'Max rows' of My recent orders on the account dashboard?",
+      "questions": [
+        "Does the account dashboard Max rows field show a validation error for values outside 1..20?",
+        "Can an out-of-range recent-orders row count be saved on /account/dashboard?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.layout"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
