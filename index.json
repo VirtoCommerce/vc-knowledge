@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T15:51:49.307Z",
-  "count": 1785,
+  "generated": "2026-11-09T15:52:48.034Z",
+  "count": 1786,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -21009,6 +21009,32 @@
       "scope": [
         "feature=store-access",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-837A3B54",
+      "path": "entries/KB-837A3B54.md",
+      "subject": "On /account/missions, switching the session currency from USD to EUR hides missions whose OrderValueGoal currency is USD: loyaltyMissionProgress is queried with currencyCode=EUR and the list shrinks",
+      "question": "Do OrderValue missions with a USD goal stay listed on /account/missions when the shopper switches the storefront currency to EUR?",
+      "questions": [
+        "Why do some missions disappear after changing currency on the missions page?",
+        "Does loyaltyMissionProgress filter missions by the session currency?",
+        "Mission list page count drops after switching currency to EUR"
+      ],
+      "concepts": [
+        "loyalty"
+      ],
+      "anchors": [
+        "/account/missions",
+        "Query.loyaltyMissionProgress"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
