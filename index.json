@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T08:43:08.034Z",
-  "count": 1744,
+  "generated": "2026-11-09T09:03:40.357Z",
+  "count": 1745,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10862,6 +10862,31 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-46E8B8DE",
+      "path": "entries/KB-46E8B8DE.md",
+      "subject": "The buyer account dashboard shows four live order stat cards and a My recent orders widget; the old Latest orders / Monthly spend report / Orders status widgets are gone",
+      "question": "What does the buyer account dashboard /account/dashboard show — which stat cards and widgets, and where do the figures come from?",
+      "questions": [
+        "Which stat cards does /account/dashboard render (orders placed week MTD YTD, avg order value)?",
+        "Which GraphQL operations does the buyer account dashboard call?",
+        "Are the Latest orders, Monthly spend report and Orders status widgets still on the account dashboard?",
+        "Does the account dashboard save a per-user layout?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.orderStatistics",
+        "Query.layout"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
