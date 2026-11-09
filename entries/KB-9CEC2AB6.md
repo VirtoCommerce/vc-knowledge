@@ -23,5 +23,14 @@ evidence:
     who: kutasinaelena
     build: ad2e031743ee94a0
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 01d892bf697c7bac
+    conditions: module:VirtoCommerce.Ucp=3.1011.0-pr-13-5de2; theme=2.62.0-pr-2629; store=B2B-store
+    at: 2026-11-09T19:06:05.876Z
+    by: session:d6dc0a6d
+    bodyHash: bff8f6e0112e
+    who: Lenajava1
+    note: "Confirmed the already-signed-in half only: buyer token from the storefront OAuth code flow (client claude-code-ucp-qa), continue_url opened in a browser already signed in as the same buyer -> restore 401 then 200, landed directly on /cart/{cart_id}?ucp_handoff=1 with the MCP cart's lines and totals. Signed-out path not re-run."
 ---
 2026-10-13, UCP 3.1010.0, theme 2.59.0, B2B-store (guest checkout enabled): for a buyer whose MCP token came from a password grant with resource={storefront}/ucp/mcp, opening continue_url /checkout?ucp_session=<token> in a fresh signed-out browser made POST /ucp/v1/internal/handoff/restore return 401 and redirected to /sign-in?returnUrl=/checkout?ucp_resume=<guid>&reauthenticate=1. After UI sign-in as the same buyer, the browser went to /checkout?ucp_resume=<guid>, restore returned 401 then 200, and the page settled on /cart/{cart_id}?ucp_handoff=1 with the MCP cart's lines and totals. Total in a sign-in-first session: two 401s plus one 200 on restore. In an already-signed-in session: one 401 then 200, landing directly. Observed 3 times (two buyers). The resume step uses an opaque ucp_resume id, so the GA page_view after redirect carries ucp_resume, not ucp_session.

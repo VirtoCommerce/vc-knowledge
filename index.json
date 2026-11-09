@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T19:06:05.624Z",
-  "count": 1789,
+  "generated": "2026-11-09T19:09:33.554Z",
+  "count": 1792,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2491,6 +2491,33 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0E685180",
+      "path": "entries/KB-0E685180.md",
+      "subject": "UCP track_order with cart_id + placed_after returns only orders of that cart created at or after placed_after, in orders[] plus order",
+      "question": "What does UCP track_order return for cart_id + placed_after after the buyer places the order in the storefront?",
+      "questions": [
+        "Does track_order placed_after filter out older orders of the same cart?",
+        "Where does checkout_and_handoff put placed_after for tracking?",
+        "What continue_url does a UCP cart carry vs checkout_and_handoff?"
+      ],
+      "concepts": [
+        "ucp"
+      ],
+      "anchors": [
+        "/ucp/mcp",
+        "GET /ucp/v1/orders"
+      ],
+      "scope": [
+        "buyer=authenticated-b2b",
+        "module=virtocommerce.ucp 3.1011.0-pr-13",
+        "surface=ucp"
       ],
       "plane": "experiential",
       "status": "active",
@@ -19414,6 +19441,31 @@
       "resolved": 2
     },
     {
+      "id": "KB-79A27805",
+      "path": "entries/KB-79A27805.md",
+      "subject": "UCP REST /ucp/v1 takes the buyer only from a /ucp/mcp-audience bearer token: cookies and Basic are anonymous, a bad bearer is 401 invalid_token",
+      "question": "How does UCP REST /ucp/v1 authenticate the buyer: storefront session cookie, Basic auth, a malformed bearer, or the UCP OAuth token?",
+      "questions": [
+        "Does a storefront sign-in cookie make GET /ucp/v1/carts return the buyer's cart?",
+        "What does /ucp/v1 return for Authorization: Bearer garbage?",
+        "Is Basic auth accepted on the UCP REST API?",
+        "Which token does GET /ucp/v1/orders?cart_id= need to return a buyer's orders?"
+      ],
+      "anchors": [
+        "GET /ucp/v1/carts",
+        "POST /ucp/v1/carts",
+        "GET /ucp/v1/orders"
+      ],
+      "scope": [
+        "module=virtocommerce.ucp 3.1011.0-pr-13",
+        "surface=ucp-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-79B30FDE",
       "path": "entries/KB-79B30FDE.md",
       "subject": "organizationReturns checks the view permission live on each request: removing the grant refuses an already-issued token at once, and re-granting answers a token minted while the grant was gone",
@@ -25352,7 +25404,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -38079,6 +38131,32 @@
         "module=sales-rep",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ECF9BB96",
+      "path": "entries/KB-ECF9BB96.md",
+      "subject": "UCP buyer sign-in runs through the storefront /sign-in and a consent page; signed-in cart tools act on the buyer's storefront default cart",
+      "question": "How does a buyer link an MCP client to UCP, and which cart do list_carts and create_cart use once signed in?",
+      "questions": [
+        "Which login page does the UCP OAuth authorize redirect to?",
+        "What does the UCP consent page show?",
+        "Does signed-in create_cart create a new cart or add to the storefront cart?",
+        "Does link_buyer_identity return the organization?"
+      ],
+      "anchors": [
+        "/connect/authorize",
+        "/sign-in",
+        "/ucp/mcp"
+      ],
+      "scope": [
+        "buyer=authenticated-b2b",
+        "module=virtocommerce.ucp 3.1011.0-pr-13",
+        "surface=ucp"
       ],
       "plane": "experiential",
       "status": "active",
