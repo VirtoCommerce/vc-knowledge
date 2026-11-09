@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T09:33:44.154Z",
-  "count": 1751,
+  "generated": "2026-11-09T09:39:56.555Z",
+  "count": 1752,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7790,6 +7790,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-33A66C64",
+      "path": "entries/KB-33A66C64.md",
+      "subject": "In Organization balance mode an org member's order earns into the organization's pool; GET balance/user/{userId} stays 0",
+      "question": "With Loyalty.LoyaltyBalanceCalculationMode=Organization, where do an organization member's earned points land, and what does the per-user balance route return?",
+      "questions": [
+        "Why does a new B2B user's loyalty balance stay 0 after an earn order?",
+        "Does Organization balance mode pool points per organization?",
+        "What does GET /api/loyalty-program-operation-log/balance/user/{userId} return in Organization mode?"
+      ],
+      "anchors": [
+        "GET /api/loyalty-program-operation-log/balance/user/{id}",
+        "GET /api/loyalty-program-operation-log/balance/organization/{id}",
+        "POST /api/loyalty-program-operation-log/search"
+      ],
+      "scope": [
+        "module=virtocommerce.loyalty",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
