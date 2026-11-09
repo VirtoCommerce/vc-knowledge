@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T14:45:49.977Z",
-  "count": 1776,
+  "generated": "2026-11-09T14:51:50.109Z",
+  "count": 1777,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -36034,6 +36034,28 @@
         "PUT /api/sales-rep"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E2CD66B4",
+      "path": "entries/KB-E2CD66B4.md",
+      "subject": "Storefront order detail offers no invoice/packing-slip PDF download; the orders list Invoice column is plain text",
+      "question": "Can a buyer download an invoice PDF (or packing slip) from the storefront order pages?",
+      "questions": [
+        "Is there a Download Invoice button on /account/orders/{id}?",
+        "Is the Invoice column on /account/orders a link to a PDF?"
+      ],
+      "anchors": [
+        "/account/orders/{id}",
+        "/account/orders"
+      ],
+      "scope": [
+        "feature=orders",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
