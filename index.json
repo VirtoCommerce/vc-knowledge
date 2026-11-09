@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T09:24:54.526Z",
-  "count": 1750,
+  "generated": "2026-11-09T09:33:20.714Z",
+  "count": 1751,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28086,6 +28086,29 @@
         "module=taskmanagement",
         "role=admin",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B1378842",
+      "path": "entries/KB-B1378842.md",
+      "subject": "The Admin SPA's \"Order loyalty\" program type is programType \"Default\"; GET /api/loyalty-programs/new/{programType} echoes any type string without validating it",
+      "question": "Which programType value does an Order loyalty program use, and does GET /api/loyalty-programs/new/{programType} validate the type?",
+      "questions": [
+        "How do I create an Order loyalty program through the REST API?",
+        "What are the valid loyalty programType values?",
+        "Does /api/loyalty-programs/new/{type} reject an unknown program type?"
+      ],
+      "anchors": [
+        "GET /api/loyalty-programs/new/{id}",
+        "POST /api/loyalty-programs"
+      ],
+      "scope": [
+        "module=virtocommerce.loyalty",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
