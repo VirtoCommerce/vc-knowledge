@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T10:35:49.606Z",
-  "count": 1759,
+  "generated": "2026-11-09T11:55:19.587Z",
+  "count": 1760,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32728,6 +32728,31 @@
       "scope": [
         "surface=storefront-ui",
         "theme=2.59.0"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CF916C2C",
+      "path": "entries/KB-CF916C2C.md",
+      "subject": "Switching the storefront header currency re-prices the whole cart; a mixed-currency cart (\"Products in {code}\" group on /cart) is only reachable via xAPI addItem with itemCurrencyCode",
+      "question": "How do I get a cart line in another currency so /cart shows a \"Products in EUR\" group?",
+      "questions": [
+        "Does changing currency in the storefront header convert existing cart lines?",
+        "Can a USD cart hold an EUR line item?",
+        "How to test the other-currency group on the cart page"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "currency=usd",
+        "store=b2b-store",
+        "surface=storefront-ui",
+        "user=anonymous"
       ],
       "plane": "experiential",
       "status": "active",
