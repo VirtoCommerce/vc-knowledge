@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T13:43:37.900Z",
-  "count": 1773,
+  "generated": "2026-11-09T13:48:49.514Z",
+  "count": 1774,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7955,6 +7955,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-333E9F0F",
+      "path": "entries/KB-333E9F0F.md",
+      "subject": "POST /api/contacts/search returns {totalCount, results[]} (not items[]) and populates results without deepSearch",
+      "question": "What is the response envelope of POST /api/contacts/search, and does it need deepSearch to return rows?",
+      "questions": [
+        "Does /api/contacts/search return items or results?",
+        "Why does my contacts search assertion on items[] fail?"
+      ],
+      "anchors": [
+        "POST /api/contacts/search",
+        "GET /api/contacts/{id}"
+      ],
+      "scope": [
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
