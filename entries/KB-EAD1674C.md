@@ -22,5 +22,14 @@ evidence:
     who: Lenajava1
     build: 850daf039b204244
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_regression
+    build: 0a0b8dac8ab16bcc
+    conditions: platform=3.1076.8; module:VirtoCommerce.TaskManagement=3.1005.0; role=admin
+    at: 2026-11-09T12:39:32.638Z
+    by: session:6eca33a7
+    bodyHash: fc5cd17752a3
+    who: Aleksandra-Mitricheva
+    note: "Re-observed on the released 3.1005.0: POST /api/task-management/finish?id=<id>&completed=true with no body answers 415; the same call with Content-Type application/json and body {} answers 200, then GET reads isActive:false, completed:true, status:null, result:{}. Source at tag 3.1005.0 (TaskManagementController.Finish) binds [FromBody] JObject result, unchanged since 3.1001.0."
 ---
 Observed 2026-10-07 with an admin token. POST /api/task-management/finish?id=<id>&completed=false with JSON body {} returns 200 and the WorkTask; a GET then reads isActive:false, completed:false, status:null, dueDate unchanged. The same call with no request body returns HTTP 415 (the endpoint requires a JSON body even though the parameters are in the query). The task's owning sales rep still receives the row from Query.salesRepTasks on /graphql/sales-rep, with isActive:false and completed:false, and Mutation.deleteSalesRepTask as that rep deletes it (returns true). The rep-scoped GraphQL exposes no cancel mutation, so this REST call is the only API path to a closed-but-not-completed task. A task's responsibleId is the rep's CONTACT id, not the security user id: POST /api/task-management/search with responsibleIds=[userId] returns 0 rows, with the contact id it returns the rep's tasks.

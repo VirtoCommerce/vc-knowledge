@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T12:11:19.258Z",
-  "count": 1761,
+  "generated": "2026-11-09T12:45:19.689Z",
+  "count": 1764,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1544,6 +1544,30 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0A5E2097",
+      "path": "entries/KB-0A5E2097.md",
+      "subject": "In Organization balance mode the loyalty cart validator checks the cart organization's pooled balance, so a zero-balance member of a funded org gets no LOYALTY_INSUFFICIENT_BALANCE",
+      "question": "Does LOYALTY_INSUFFICIENT_BALANCE fire for a buyer with zero personal points when the store is in Organization balance mode?",
+      "questions": [
+        "Which balance does the loyalty cart validator compare against in Organization mode?",
+        "Why does a zero-balance user see no insufficient-balance error on a points cart?",
+        "Query.cart validationErrors empty for a loyalty points line with zero balance"
+      ],
+      "anchors": [
+        "Query.cart",
+        "GET /api/loyalty-program-operation-log/balance/organization/{id}"
+      ],
+      "scope": [
+        "module=loyalty",
+        "store=b2b-store",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -4451,6 +4475,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-1B9D6C71",
+      "path": "entries/KB-1B9D6C71.md",
+      "subject": "A task created through POST /api/task-management without isActive is stored isActive:false; the API has no server-side default of true",
+      "question": "What is the default isActive of a task created via POST /api/task-management when the body omits isActive?",
+      "questions": [
+        "Is a REST-created task active by default?",
+        "Why does a task created by API read isActive false?",
+        "Must a REST task create send isActive true to appear as active?"
+      ],
+      "anchors": [
+        "POST /api/task-management",
+        "GET /api/task-management/{id}"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "role=admin",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1BA565E1",
       "path": "entries/KB-1BA565E1.md",
       "subject": "On /company/members below 1024 px a member card's roles line does not truncate, so a 2+-role member pushes the status badge and gear out of the card and the page scrolls sideways",
@@ -4766,7 +4814,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-1E0332AA",
@@ -13505,6 +13553,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-521D6ECF",
+      "path": "entries/KB-521D6ECF.md",
+      "subject": "POST /api/task-management with an empty JSON body answers 200 and persists a nameless, typeless task (priority Lowest, isActive false)",
+      "question": "What does POST /api/task-management return for an empty body {} — a validation error or a created task?",
+      "questions": [
+        "Does the task-management create endpoint validate required fields like name and type?",
+        "Why is there a nameless task in the Tasks grid after a negative API test?",
+        "Does POST /api/task-management return 400 for a missing name?"
+      ],
+      "anchors": [
+        "POST /api/task-management"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "role=admin",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -31187,7 +31258,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -37000,7 +37071,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
