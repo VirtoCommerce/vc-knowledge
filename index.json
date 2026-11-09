@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T09:49:08.088Z",
-  "count": 1755,
+  "generated": "2026-11-09T09:58:55.987Z",
+  "count": 1756,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3762,6 +3762,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-17641E11",
+      "path": "entries/KB-17641E11.md",
+      "subject": "The buyer dashboard computes its WEEK/MTD/YTD windows in the browser's local time zone (week from Monday) and compares each with the same elapsed days of the previous period",
+      "question": "What date windows does /account/dashboard send in GetOrderStatistics, and what is the \"vs last week / month / year\" baseline?",
+      "questions": [
+        "Does the dashboard MTD change compare against the whole previous month or the same days?",
+        "Which time zone does the buyer dashboard use for WEEK / MTD / YTD?",
+        "Does a hidden stat card still request its statistics slice?",
+        "What happens to the dashboard requests when every block is hidden?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.orderStatistics",
+        "Mutation.saveLayout"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
