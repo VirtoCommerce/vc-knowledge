@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T13:19:13.882Z",
-  "count": 1769,
+  "generated": "2026-11-09T13:25:21.836Z",
+  "count": 1770,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -15045,6 +15045,32 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-5AD7F191",
+      "path": "entries/KB-5AD7F191.md",
+      "subject": "An unauthenticated MCP call to /admin/mcp gets 401 with WWW-Authenticate resource_metadata, and each scope's protected-resource metadata names its own authorization server",
+      "question": "What does an MCP endpoint (/admin/mcp, /ucp/mcp) answer to a call without a token, and what does its /.well-known/oauth-protected-resource document say?",
+      "questions": [
+        "How does an MCP client discover where to sign in for the Virto back-office MCP endpoint?",
+        "Which authorization server does /.well-known/oauth-protected-resource/admin/mcp name?",
+        "Is /ucp/mcp anonymous or does it challenge like /admin/mcp?"
+      ],
+      "anchors": [
+        "POST /admin/mcp",
+        "/.well-known/oauth-protected-resource/admin/mcp",
+        "/.well-known/oauth-protected-resource/ucp/mcp",
+        "/connect/authorize"
+      ],
+      "scope": [
+        "module=virtocommerce.mcp 3.1000.0-pr-1-df74",
+        "surface=rest",
+        "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-5ADBFB34",
