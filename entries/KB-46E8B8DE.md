@@ -54,5 +54,14 @@ evidence:
     bodyHash: 2a0a4bb07188
     who: kutasinaelena
     note: "Firefox lane: non-rep buyer (Purchasing agent) and Organization maintainer hitting /company/dashboard are redirected to /account/dashboard, which shows the four cards + My recent orders, no Monthly spend; no SalesRep* GraphQL op issued."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: c185459e7260c4a3
+    conditions: theme=2.62.0-pr-2552-ec75; store=B2B-store; role=Organization maintainer
+    at: 2026-11-09T11:17:52.718Z
+    by: session:9fb93ecf
+    bodyHash: 2a0a4bb07188
+    who: kutasinaelena
+    note: "Regression run, Chrome: back navigation from /account/coupons to /account/dashboard re-renders the four Orders placed/Avg order value cards + My recent orders; no Latest orders or Monthly spend report; 0 console errors, 0 4xx/5xx."
 ---
 Signed in as a B2B org maintainer on the VCST-6078 PR build, /account/dashboard renders four stat cards — "Orders placed · WEEK", "Orders placed · MTD", "Orders placed · YTD" (order count as the big number, total amount as the sub-line, a signed "% vs last …" change when the previous period has orders; none when it is empty) and "Avg order value" ("Average per order (YTD)", no change line) — plus a "My recent orders" widget (5 rows, status chips with counts, "All orders" link) and an "Edit layout" button (edit mode with Reset / Cancel / Save layout). The previous widgets Latest orders, Monthly spend report and Orders status do not render. On load the page calls GraphQL GetLayout (scope accountDashboard; returns layout null for a user who never saved), GetOrderStatistics and GetOrders (first 5 with a status facet), all 200 with no errors[]. A user in an organization with no orders sees all cards at 0 / $0.00 and the empty state "There are no orders yet" with "Continue browsing". The status chip counts include cancelled orders while the cards exclude them (chips Completed 17 + Cancelled 13 + New 13 + Processing 6 = 49; YTD card 36). This is an unmerged PR build (vc-frontend#2552 with vc-module-x-frontend#12), not a release.
