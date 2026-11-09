@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T12:05:27.434Z",
-  "count": 1760,
+  "generated": "2026-11-09T12:11:19.258Z",
+  "count": 1761,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2655,6 +2655,32 @@
         "/xapi/graphql"
       ],
       "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1156665A",
+      "path": "entries/KB-1156665A.md",
+      "subject": "When FileUpload:Scopes has no quote-attachments entry, quote attachment upload fails with INVALID_SCOPE and quoteAttachmentOptions returns null",
+      "question": "Why does the RFQ edit page file upload fail with \"Unknown scope\" on a deployment?",
+      "questions": [
+        "What does POST /api/files/quote-attachments return when the scope is not configured?",
+        "Why is Query.quoteAttachmentOptions null?",
+        "Is the quote-attachments upload scope registered by the Quote module or by appsettings?"
+      ],
+      "anchors": [
+        "POST /api/files/quote-attachments",
+        "Query.quoteAttachmentOptions",
+        "/account/quotes/{id}/edit"
+      ],
+      "scope": [
+        "file-scope=quote-attachments",
+        "surface=rest",
+        "surface=storefront-ui",
         "surface=xapi"
       ],
       "plane": "experiential",
@@ -14169,7 +14195,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -25434,7 +25460,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -33400,7 +33426,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {

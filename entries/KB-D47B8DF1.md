@@ -56,5 +56,14 @@ evidence:
     bodyHash: 3338a39b7f67
     who: Lenajava1
     note: "REG-2026-11-04-1022: past- and future-expiry Proposal-sent quotes both render 'Proposal sent' with Quote data = Created + Status only; Approve on the past-expiry quote placed an order (ApproveQuoteRequest 200, orderId); Approve on a quote with a permanently out-of-stock line placed an order containing that line with no warning."
+  - method: observation
+    deployment: vcptcore_regression
+    build: 0a0b8dac8ab16bcc
+    conditions: platform=3.1076.8; theme=2.59.0; module:VirtoCommerce.Quote=3.1003.0; module:VirtoCommerce.Inventory=3.1010.0
+    at: 2026-11-09T12:05:28.012Z
+    by: session:6eca33a7
+    bodyHash: 3338a39b7f67
+    who: Aleksandra-Mitricheva
+    note: "Display half re-observed 2026-11-09: Proposal-sent quote with expirationDate 2026-10-17 shows status Proposal sent, Quote data = Created + Status only, Approve and Decline enabled. OOS half: run order from approving a quote with a tracked, no-backorder line at stock 0 contains that line; the fulfillment-center inStockQuantity is now -1. ApproveQuoteCommandHandler checks only Status (same in 3.1002.0)."
 ---
 On vcst (theme 2.60.0-alpha.2579) quotes in Proposal sent with expirationDate in the past or future both show status 'Proposal sent' in /account/quotes and on the detail page; the 'Quote data' block lists only Created and Status, never the expiration date, and there is no 'Expired' status. Approve on a quote whose expiration date had passed placed a New order with no error. Approve on a quote whose line was a permanently out-of-stock product placed an order containing that line with no warning. vc-module-quote ApproveQuoteCommandHandler checks only Status == 'Proposal sent' before ConvertToCartWithTax + PlaceCustomerOrderFromCartAsync, with no expiration or inventory check.
