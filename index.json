@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T08:12:39.736Z",
-  "count": 1741,
+  "generated": "2026-11-09T08:37:49.819Z",
+  "count": 1742,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19999,6 +19999,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-80B0069F",
+      "path": "entries/KB-80B0069F.md",
+      "subject": "Storefront GraphQL treats a malformed or missing bearer token as anonymous: currentOrganizationAddresses answers HTTP 200 with errors[] code Forbidden, never 401 or Unauthorized",
+      "question": "What does the storefront GraphQL endpoint return for currentOrganizationAddresses when the bearer token is invalid or absent?",
+      "questions": [
+        "Does xAPI return 401 for an invalid access token?",
+        "How do I make the storefront fire unauthorizedErrorEvent from a GraphQL request?",
+        "Why does removing the auth token on /company/info land on the 403 page instead of sign-in?",
+        "How can a dead storefront session be simulated client-side?"
+      ],
+      "anchors": [
+        "Query.currentOrganizationAddresses",
+        "POST /graphql",
+        "POST /connect/token",
+        "/company/info"
+      ],
+      "scope": [
+        "role=organization-maintainer",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
