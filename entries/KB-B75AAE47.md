@@ -56,5 +56,16 @@ evidence:
     bodyHash: 617d55a11041
     who: Aleksandra-Mitricheva
     note: "vcst_qa, de-DE, customer-scoped route: Letzter Monat -> chips Beginn 29.09.2026 / Ende 29.10.2026; removing Beginn sent one request createddate:[TO \"2026-10-29T20:59:59.999Z\"]; drawer still 'Letzter Monat', no date fields, Apply disabled."
+  - method: observation
+    deployment: vcptcore_qa
+    build: 9ad05b08a6408392
+    conditions: module:VirtoCommerce.SalesRep=3.1020.0-pr-35-08fd; theme=2.62.0-alpha.2628; culture=de-DE
+    at: 2026-11-09T13:41:59.361Z
+    by: session:70c29718
+    bodyHash: 617d55a11041
+    who: Aleksandra-Mitricheva
+    contradicts: true
+    contested: theme 2.62.0-alpha.2628 vs 2.61.0-alpha.2605; theme 2.62.0-alpha.2628 vs 2.61.0-alpha.2605; virtocommerce.customer 3.1032.0-pr-324-b30b vs 3.1031.0; virtocommerce.pages 3.1013.0-alpha.93-vcst-6442 vs 3.1011.0; virtocommerce.xapi 3.1029.0 vs 3.1028.0; virtocommerce.xcart 3.1044.0 vs 3.1042.0; …
+    note: "Fixed on SalesRep 3.1020.0-pr-35-08fd (2026-11-09, de): after applying 'Letzte Woche' (chips Beginn 02.11.2026 / Ende 09.11.2026), removing the Beginn chip and reopening the drawer shows 'Benutzerdefiniertes Datum' with an empty Startdatum and Enddatum 09.11.2026. Apply is disabled until something changes (the drawer matches the applied filter); picking a start date enables it, and Apply gives chips 03.11–09.11. Defect-fixed candidate: fixedIn VirtoCommerce.SalesRep@3.1020.0-pr-35-08fd (a PR build)."
 ---
 Storefront 2.59.0-pr-2519, UTC+3, signed in as a sales rep: Filters -> Created date "Last week" -> Apply sends createddate:["<today-7 local midnight>" TO "<today 23:59:59.999 local>"] and shows Start/End chips. Removing the Start chip sends one SalesRepCustomerOrders request with createddate:[TO "<today 23:59:59.999 local>"] (all historical orders return), but reopening the drawer shows the Created date combobox still reading "Last week", no date fields, and Apply disabled. The drawer never reflects the open-ended filter actually applied. Removing one chip of a Custom date range instead behaves consistently (the drawer shows the remaining bound).
