@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T15:14:50.239Z",
-  "count": 1777,
+  "generated": "2026-11-09T15:28:08.480Z",
+  "count": 1778,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29764,6 +29764,27 @@
         "grant=password",
         "store-mode=disabled",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B8AE01A5",
+      "path": "entries/KB-B8AE01A5.md",
+      "subject": "A multi-org contact that never had an active organization is auto-placed in one of its organizations on first storefront sign-in; no organization selection prompt is shown",
+      "question": "What happens on the first storefront password sign-in of a multi-organization contact that has no current organization yet - is an organization picker shown?",
+      "questions": [
+        "Does the storefront ask a multi-org buyer to choose an organization after sign-in?",
+        "Which organization is active after first sign-in when contact.currentOrganizationId is empty?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",

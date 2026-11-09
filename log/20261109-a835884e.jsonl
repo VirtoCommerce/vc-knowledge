@@ -14,3 +14,4 @@
 {"at":"2026-11-09T12:42:36.913Z","kind":"show","id":"KB-CF916C2C","state":"answer","unpaired":true,"via":"mcp","call":"toolu_013nLxok6aVk1TTR1zajrmDx","who":"Aleksandra-Mitricheva","agent":"test-management-specialist"}
 {"at":"2026-11-09T12:42:37.207Z","kind":"show","id":"KB-83F8B494","state":"answer","unpaired":true,"via":"mcp","call":"toolu_01PwN6vUAhHBWBHRgKSMBmAh","who":"Aleksandra-Mitricheva","agent":"test-management-specialist"}
 {"at":"2026-11-09T12:42:37.483Z","kind":"show","id":"KB-ADF1DE84","state":"answer","after":"2026-11-09T09:56:57.285Z","via":"mcp","call":"toolu_016LeSnMbExPLJRtqULHC5ZH","who":"Aleksandra-Mitricheva","agent":"test-management-specialist"}
+{"at":"2026-11-09T14:17:19.071Z","kind":"restart","why":"state-dropped","who":"Aleksandra-Mitricheva"}
