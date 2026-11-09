@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T15:28:08.480Z",
-  "count": 1778,
+  "generated": "2026-11-09T15:29:30.694Z",
+  "count": 1779,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28657,6 +28657,30 @@
       "supersededBy": [
         "KB-DAD0D552"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B14ED426",
+      "path": "entries/KB-B14ED426.md",
+      "subject": "A ProductPoints earning accrues within seconds of order creation (status New); when the effective balance mode is Organization the Earned row carries the buyer's organizationId and the user balance stays 0",
+      "question": "When does a ProductPoints earning program accrue points for a new customer order, and why can the buyer's user balance read 0 after it?",
+      "questions": [
+        "Does loyalty earning wait for order completion or payment?",
+        "Why does GET balance/user return 0 right after an earn order?",
+        "Where do earned points go when the store balance mode is Organization?"
+      ],
+      "anchors": [
+        "POST /api/loyalty-program-operation-log/search",
+        "GET /api/loyalty-program-operation-log/balance/user/{id}",
+        "GET /api/loyalty-program-operation-log/balance/organization/{id}"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
