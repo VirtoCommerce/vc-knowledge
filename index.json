@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T13:14:37.845Z",
-  "count": 1768,
+  "generated": "2026-11-09T13:19:13.882Z",
+  "count": 1769,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16271,6 +16271,29 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-655B3FB7",
+      "path": "entries/KB-655B3FB7.md",
+      "subject": "POST /api/task-management stores any type string and any responsibleId unchecked, but answers 500 for a name over 256 chars (SQL truncation message) and for an unknown priority enum (null-reference)",
+      "question": "Which inputs does POST /api/task-management reject, and how — empty name, missing type, unknown type, nonexistent assignee, too-long name, bad priority?",
+      "questions": [
+        "Does the task-management REST API validate task type against the TaskTypes setting?",
+        "What happens when a task is created with a responsibleId that does not exist?",
+        "Does POST /api/task-management return 400 for invalid input?"
+      ],
+      "anchors": [
+        "POST /api/task-management"
+      ],
+      "scope": [
+        "module=taskmanagement",
+        "role=admin",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
