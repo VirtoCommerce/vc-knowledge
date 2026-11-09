@@ -56,5 +56,15 @@ evidence:
     splitFrom: KB-0B27E984
     build: c48b806793d9e97d
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 57b34c36fc00b9b8
+    conditions: theme=2.62.0-pr-2640-a053-a053ca3c; store=B2B-store; user=anonymous
+    at: 2026-11-09T10:03:01.327Z
+    by: session:a835884e
+    bodyHash: c8b4ce674bc6
+    defect: VCST-6374
+    who: Aleksandra-Mitricheva
+    note: "Still present on theme 2.62.0-pr-2640: header select-all, every /cart line checkbox and the gift row all carry aria-label AND name \"Toggle vendor select\"; billing \"Same as shipping address\" checkbox has aria-label \"billingAddressEqualsShipping\". vc-frontend PR #2587 (build 2.62.0-pr-2587-9940-99407d1d, not deployed) renames them to \"Select all items\" / \"Select {product name}\" and drops the aria-label on the billing checkbox."
 ---
 On the cart page's "+ Add a gift" panel, the gift row's checkbox carries aria-label "Toggle vendor select", copied from the product table's select-all.
