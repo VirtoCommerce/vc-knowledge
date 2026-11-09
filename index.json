@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T00:21:38.964Z",
-  "count": 1737,
+  "generated": "2026-11-09T00:25:26.661Z",
+  "count": 1741,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7906,6 +7906,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-3477E3D7",
+      "path": "entries/KB-3477E3D7.md",
+      "subject": "loyaltyMissionProgress with a culture the mission has no translation for returns localizedName = the internal mission Name and description null; no fallback to the store default language",
+      "question": "What do loyaltyMissionProgress localizedName and description return for a cultureName the mission has no translation in?",
+      "questions": [
+        "Does a loyalty mission fall back to the default-language name and description in an untranslated locale?",
+        "Why does /account/missions show the raw mission name and no description in French?"
+      ],
+      "anchors": [
+        "Query.loyaltyMissionProgress",
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3483ADA3",
       "path": "entries/KB-3483ADA3.md",
       "subject": "xAPI removeWishlist returns a Boolean scalar, so selecting { id } on it fails validation",
@@ -8622,6 +8643,26 @@
       "scope": [
         "module=virtocommerce.seo",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3909BAB5",
+      "path": "entries/KB-3909BAB5.md",
+      "subject": "Every mission card's open control on /account/missions has the same accessible name 'Open mission' (static i18n aria-label, no mission context)",
+      "question": "What accessible name does the open-mission button on each /account/missions card expose?",
+      "questions": [
+        "Do mission card open buttons have distinct accessible names?",
+        "Can a screen reader tell which mission the arrow button on a mission card opens?"
+      ],
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11495,6 +11536,26 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4A8CF660",
+      "path": "entries/KB-4A8CF660.md",
+      "subject": "On /account/missions the Order count type chip uses the solid shopping-bag icon (not a padlock); cards render no private-mission lock marker",
+      "question": "Which icon does each mission goal type chip use on /account/missions, and is the Order count glyph a padlock?",
+      "questions": [
+        "Is the Order count mission chip icon a lock?",
+        "Do private missions show a padlock on the storefront mission card?"
+      ],
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -29469,7 +29530,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -37697,6 +37758,26 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F03E1085",
+      "path": "entries/KB-F03E1085.md",
+      "subject": "Both mission modals on /account/missions are role=dialog, aria-modal=true and named by their title via aria-labelledby; the Playwright MCP aria snapshot just prints the node as bare 'dialog'",
+      "question": "Do the featured-SKU and order-goal mission modals on /account/missions expose an accessible dialog name?",
+      "questions": [
+        "Is the mission modal dialog unnamed for screen readers?",
+        "Why does the Playwright aria snapshot show the mission modal as an unnamed dialog?"
+      ],
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
