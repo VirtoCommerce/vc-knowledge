@@ -45,5 +45,14 @@ evidence:
     splitFrom: KB-44B7B71E
     build: c48b806793d9e97d
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcptcore_regression
+    build: 0a0b8dac8ab16bcc
+    conditions: platform=3.1076.8; module:VirtoCommerce.Payment=3.1010.0; module:VirtoCommerce.XCart=3.1039.0
+    at: 2026-11-09T00:20:32.150Z
+    by: session:6eca33a7
+    bodyHash: b571834dcaab
+    who: Aleksandra-Mitricheva
+    note: "The set differs per deployment here too: on vcptcore_regression, B2B-store's cart availablePaymentMethods = AuthorizeNet, CyberSource, DefaultManual, Skyflow. POST /api/payment/search lists DatatransPaymentMethod isActive=false and LoyaltyPaymentMethod isActive=false (storeId null), and neither is offered."
 ---
 Observed on store B2B-store, signed in as an organization buyer with one physical item in the cart. The storefront offered six options: "Bank card (Authorize.Net)", "Bank card (CyberSource)", "Bank card (Datatrans)", "Manual", "Pay with points", "Bank card (Skyflow)". Query.cart.availablePaymentMethods returns exactly those six. Their codes/types/priorities: AuthorizeNetPaymentMethod (PreparedForm, priority 1), CyberSourcePaymentMethod (Standard, 0), DatatransPaymentMethod (Standard, 0), DefaultManualPaymentMethod (Unknown, 1), LoyaltyPaymentMethod (Unknown, 0), SkyflowPaymentMethod (PreparedForm, 0). Behind that, POST /api/payment/search returns 21 rows system-wide across all stores; B2B-store has exactly six rows, all isActive=true, with priorities that match the GraphQL priorities one-for-one. Six distinct method codes exist in the whole system, so B2B-store enables all of them. On a second deployment the same store's cart offers FOUR methods, not six: "Bank card (Authorize.Net)", "Bank card (CyberSource)", "Manual", "Bank card (Skyflow)" - Datatrans and "Pay with points" are absent - so the offered set is per-deployment. Every method row on the observed store is isActive=true, so this does NOT demonstrate that setting isActive=false removes a method from the cart - only that the enabled set and the offered set coincide.

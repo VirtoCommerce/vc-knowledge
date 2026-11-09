@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T00:20:05.188Z",
-  "count": 1734,
+  "generated": "2026-11-09T00:21:21.993Z",
+  "count": 1736,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8452,6 +8452,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-37CECA16",
+      "path": "entries/KB-37CECA16.md",
+      "subject": "addOrUpdateCartPayment with a gateway the store does not have active returns a bare VALIDATION \"Error trying to resolve field\" at HTTP 200, the same as for a nonexistent gateway code",
+      "question": "Why does Mutation.addOrUpdateCartPayment with paymentGatewayCode LoyaltyPaymentMethod return \"Error trying to resolve field\" with code VALIDATION?",
+      "questions": [
+        "What does addOrUpdateCartPayment return for an inactive payment method?",
+        "Can a cart payment be set to LoyaltyPaymentMethod when the store has not enabled it?"
+      ],
+      "anchors": [
+        "Mutation.addOrUpdateCartPayment",
+        "POST /api/payment/search"
+      ],
+      "scope": [
+        "module=x-cart",
+        "store=b2b-store",
+        "surface=xapi-graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-37DC3049",
       "path": "entries/KB-37DC3049.md",
       "subject": "An anonymous one-line cart on /cart shows Subtotal = line total, Tax added on top, and Total = subtotal - discount + shipping + tax, with Place order disabled until shipping details are given",
@@ -13502,7 +13525,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -20136,7 +20159,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -33660,6 +33683,33 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D9B149AD",
+      "path": "entries/KB-D9B149AD.md",
+      "subject": "In Organization balance mode a loyalty mission's progress is shared by the whole organization, so a member's first order can find a mission already Completed by a colleague",
+      "question": "With Loyalty.LoyaltyBalanceCalculationMode = Organization, is loyalty mission progress per user or shared by the organization?",
+      "questions": [
+        "Why does a zero-history buyer see a loyalty mission already completed?",
+        "Who owns loyalty mission progress in organization points calculation mode?",
+        "Does a second org member's order add to a mission another member already completed?"
+      ],
+      "concepts": [
+        "loyalty-mission"
+      ],
+      "anchors": [
+        "POST /api/loyalty-mission-progress/search",
+        "/account/missions"
+      ],
+      "scope": [
+        "module=loyalty",
+        "store=b2b-store",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
