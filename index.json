@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T10:03:01.769Z",
-  "count": 1756,
+  "generated": "2026-11-09T10:09:13.503Z",
+  "count": 1757,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20638,6 +20638,30 @@
       "scope": [
         "feature=product-configuration",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-83F8B494",
+      "path": "entries/KB-83F8B494.md",
+      "subject": "Cart vendor groups come from the product's vendor field resolved to a Member; a non-GUID or unresolvable vendor value shows as \"Vendor: N/A\"",
+      "question": "What drives the storefront cart's vendor groups, and why do most products group under \"Vendor: N/A\"?",
+      "questions": [
+        "which vcst-qa products have a vendor for a multi-vendor cart test",
+        "why does every cart line show Vendor: N/A",
+        "how is Query.products vendor resolved"
+      ],
+      "anchors": [
+        "Query.products",
+        "POST /api/catalog/search/products",
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
