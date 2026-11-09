@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T15:33:50.334Z",
-  "count": 1780,
+  "generated": "2026-11-09T15:41:12.960Z",
+  "count": 1781,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1085,6 +1085,33 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0761662A",
+      "path": "entries/KB-0761662A.md",
+      "subject": "Writing Loyalty.LoyaltyBalanceCalculationMode through the platform settings API does not change the effective loyalty mode; saving the store in Admin (Stores > store > Save) makes it take effect immediately",
+      "question": "Why does a change of the store's Loyalty balance calculation mode through the settings API not take effect, and how is it applied without a restart?",
+      "questions": [
+        "Loyalty still pools to the organization after setting Customer mode via API",
+        "Does POST /api/platform/settings/v2/tenant/Store/{id}/values invalidate the loyalty mode",
+        "How to apply LoyaltyBalanceCalculationMode without restarting the platform"
+      ],
+      "concepts": [
+        "loyalty"
+      ],
+      "anchors": [
+        "POST /api/platform/settings/v2/tenant/Store/{id}/values",
+        "POST /api/loyalty-program-operation-log/search"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
