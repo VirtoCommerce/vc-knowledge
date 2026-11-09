@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T13:25:21.836Z",
-  "count": 1770,
+  "generated": "2026-11-09T13:27:22.502Z",
+  "count": 1771,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13536,6 +13536,30 @@
       "trust": 1,
       "disputed": 0,
       "contested": 3
+    },
+    {
+      "id": "KB-51F22FE2",
+      "path": "entries/KB-51F22FE2.md",
+      "subject": "News admin article blade shows a stuck 'Has unsaved changes' banner and close guard whenever the article has no content or no SEO entry for the locale shown — after Reset, and after merely switching the blade locale",
+      "question": "When does the News article blade keep 'Has unsaved changes' after Reset, or show it with no edit at all?",
+      "questions": [
+        "Why does the news article banner not clear after Reset?",
+        "Why does switching language in the news article blade mark it as modified?",
+        "News article close anyway prompt with nothing changed",
+        "news-article-details setBaseline ensureLocalizedEntries stale baseline"
+      ],
+      "anchors": [
+        "GET /api/news/{id}",
+        "PUT /api/news"
+      ],
+      "scope": [
+        "module=news",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-51F5CFD6",
