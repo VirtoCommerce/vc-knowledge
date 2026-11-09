@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T13:29:38.937Z",
-  "count": 1772,
+  "generated": "2026-11-09T13:34:42.465Z",
+  "count": 1773,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20068,6 +20068,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7DE1B442",
+      "path": "entries/KB-7DE1B442.md",
+      "subject": "orderStatistics counts an admin-created order when CustomerOrder.customerId is the buyer's security USER id (not the contact/member id)",
+      "question": "Which id must customerId carry on an order created via POST /api/order/customerOrders for the buyer's orderStatistics dashboard to count it?",
+      "questions": [
+        "Is CustomerOrder.customerId the user id or the contact id?",
+        "Why does an admin-created order not show on the buyer dashboard?",
+        "How to create orders through admin REST that appear in Query.orderStatistics"
+      ],
+      "anchors": [
+        "POST /api/order/customerOrders",
+        "Query.orderStatistics"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
