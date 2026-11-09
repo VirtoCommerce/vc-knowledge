@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T16:16:12.689Z",
-  "count": 1787,
+  "generated": "2026-11-09T18:55:53.285Z",
+  "count": 1789,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19074,6 +19074,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-77B3269C",
+      "path": "entries/KB-77B3269C.md",
+      "subject": "A tools/call to a tool switched off in Agent tools returns a tool result with isError \"disabled by the administrator\" (not a protocol error) and is audited as Disabled; the tool switch writes scope/tool and the scope switch writes scope/* into MCP.Tools.Disabled",
+      "question": "What does /admin/mcp tools/call return, and what audit outcome is recorded, when the tool is switched off in the Agent tools kill switch?",
+      "questions": [
+        "What value does the Agent tools screen write into MCP.Tools.Disabled?",
+        "Is a switched-off MCP tool hidden from tools/list?",
+        "Does switching off an MCP scope also hide its prompts?"
+      ],
+      "anchors": [
+        "/admin/mcp",
+        "/apps/admin-shell#/mcp-tools",
+        "POST /api/mcp/audit/search"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-77B581F3",
       "path": "entries/KB-77B581F3.md",
       "subject": "Storefront quote Decline is one click, with no reason and no confirmation",
@@ -37603,6 +37627,31 @@
       "scope": [
         "surface=rest",
         "user-flag=twofactorenabled"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EB2CD3ED",
+      "path": "entries/KB-EB2CD3ED.md",
+      "subject": "An /admin/mcp agent token is also accepted by platform REST and back-office /graphql as the user, and Connected agents Disconnect revokes it on all three plus its refresh token",
+      "question": "Is an OAuth access token issued for the /admin/mcp resource also accepted by platform REST and /graphql, and does Disconnect revoke it there?",
+      "questions": [
+        "Does the MCP agent token audience (RFC 8707) limit it to the MCP endpoint only?",
+        "After Disconnect in Admin Shell Connected agents, does the agent's token still work on REST or GraphQL?",
+        "Does a pending change survive when its requesting agent is disconnected?"
+      ],
+      "anchors": [
+        "/admin/mcp",
+        "GET /api/platform/security/currentuser",
+        "POST /graphql",
+        "/apps/admin-shell#/mcp-agents"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
