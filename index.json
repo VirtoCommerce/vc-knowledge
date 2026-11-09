@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T09:20:48.019Z",
-  "count": 1745,
+  "generated": "2026-11-09T09:22:05.859Z",
+  "count": 1750,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6830,6 +6830,28 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2D5B697B",
+      "path": "entries/KB-2D5B697B.md",
+      "subject": "orderStatistics with no organization in the token counts the customer's orders of every organization; with a token org it counts only that org's orders",
+      "question": "Which organization's orders does Query.orderStatistics count for a buyer with no organization?",
+      "questions": [
+        "Does the buyer dashboard statistics include orders outside the current organization?",
+        "orderStatistics excludedCount for an order in a removed currency",
+        "Are prototype and IsCancelled orders counted by orderStatistics?"
+      ],
+      "anchors": [
+        "Query.orderStatistics"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14270,6 +14292,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-5865A6E1",
+      "path": "entries/KB-5865A6E1.md",
+      "subject": "POST /api/order/customerOrders with a currency code that is not configured in the platform fails with HTTP 500 \"Sequence contains no matching element\"",
+      "question": "Can an order be created through the admin REST API in a currency the platform does not configure?",
+      "questions": [
+        "Why does creating a customer order in GBP return 500?",
+        "How do I get an order in an unconfigured currency for testing excluded-currency statistics?"
+      ],
+      "anchors": [
+        "POST /api/order/customerOrders",
+        "DELETE /api/currencies"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5874C9A4",
       "path": "entries/KB-5874C9A4.md",
       "subject": "Storefront MFA code step: after the password it shows \"Enter the sign-in code\" with a masked email, a 30 s Resend countdown and auto-submit at 6 digits; wrong codes 1-3 show \"That code didn't work.\" and clear the field; the next submit returns to the password form with \"Too many incorrect codes\"",
@@ -14517,6 +14561,28 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-59BA108B",
+      "path": "entries/KB-59BA108B.md",
+      "subject": "POST /api/order/customerOrders/search leaves out prototype orders unless the criteria set withPrototypes=true",
+      "question": "Why does a keyword search for an order number not return an order created with isPrototype=true?",
+      "questions": [
+        "How do I find recurring-order prototype orders through the admin REST API?",
+        "Does isPrototype=true on POST /api/order/customerOrders persist?"
+      ],
+      "anchors": [
+        "POST /api/order/customerOrders/search",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -16460,6 +16526,27 @@
         "module=catalogcsvimportmodule@3.1007.0",
         "surface=admin-ui",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-68941491",
+      "path": "entries/KB-68941491.md",
+      "subject": "Admin resetpassword with forcePasswordChangeOnNextSignIn=false clears passwordExpired=true on the account",
+      "question": "POST /api/platform/security/users/{userName}/resetpassword with forcePasswordChangeOnNextSignIn=false: does it clear passwordExpired=true on the account?",
+      "questions": [
+        "How do I unstick a storefront buyer that is forced to /change-password?",
+        "Can an admin clear passwordExpired without PUT on the user?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/users/{id}/resetpassword"
+      ],
+      "scope": [
+        "entity=security-user",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -23847,7 +23934,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -35928,6 +36015,23 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E749E54F",
+      "path": "entries/KB-E749E54F.md",
+      "subject": "xAPI Query.orders fails with \"Error trying to resolve field 'orders'\" for a buyer who owns an order in a currency removed from the platform",
+      "question": "Why does the buyer's order list fail when one of their orders is in a currency the platform no longer has?",
+      "anchors": [
+        "Query.orders"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
