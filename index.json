@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T10:09:13.503Z",
-  "count": 1757,
+  "generated": "2026-11-09T10:28:00.045Z",
+  "count": 1758,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29122,6 +29122,28 @@
         "module=ucp",
         "surface=ucp-mcp",
         "surface=ucp-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B7189ED9",
+      "path": "entries/KB-B7189ED9.md",
+      "subject": "With no orders for the rep in the organization, salesRepOrderFilterRules returns [] and the customer profile's My recent orders widget renders no status tab checkboxes in edit mode",
+      "question": "Where do the status tabs on the sales-rep customer profile's My recent orders widget come from, and what renders when the rep has no orders for that customer?",
+      "questions": [
+        "Why are there no status tab checkboxes in edit mode on /company/my-customers/:organizationId?",
+        "Is the salesRepOrderFilterRules list static or derived from existing orders?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Query.salesRepOrderFilterRules"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
