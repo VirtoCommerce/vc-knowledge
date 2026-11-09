@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T09:39:56.555Z",
-  "count": 1752,
+  "generated": "2026-11-09T09:47:43.239Z",
+  "count": 1753,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22297,6 +22297,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8DA8F07F",
+      "path": "entries/KB-8DA8F07F.md",
+      "subject": "POST /api/task-management answers 401 (not 403) to a signed-in back-office user holding task:access + task:read but no task:create; search answers 200",
+      "question": "What does POST /api/task-management return for a non-admin user without task:create?",
+      "questions": [
+        "Does the Task Management create endpoint return 403 for a read-only role?",
+        "Which permissions does POST /api/task-management/search need?",
+        "How is task creation gated for a Manager user with only task:read?"
+      ],
+      "anchors": [
+        "POST /api/task-management",
+        "POST /api/task-management/search"
+      ],
+      "scope": [
+        "module=virtocommerce.taskmanagement",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
