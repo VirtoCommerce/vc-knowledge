@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T13:27:22.502Z",
-  "count": 1771,
+  "generated": "2026-11-09T13:29:38.937Z",
+  "count": 1772,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11546,7 +11546,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16735,6 +16735,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-67F47BA1",
+      "path": "entries/KB-67F47BA1.md",
+      "subject": "The MCP module registers exactly three permissions — mcp:approve, mcp:manage, mcp:audit:read — and no mcp:access; System Operations registers systemoperations:diagnostics:read and systemoperations:migrations:export",
+      "question": "Which security permissions do the VirtoCommerce.MCP and SystemOperations modules register?",
+      "questions": [
+        "What is the permission name for approving an MCP tool call?",
+        "Is there an mcp:access permission to open the MCP back-office blade?",
+        "Which permission lets a user manage MCP tool switches and connected agents?"
+      ],
+      "anchors": [
+        "GET /api/platform/security/permissions",
+        "GET /api/platform/security/currentuser"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6824BC2B",
       "path": "entries/KB-6824BC2B.md",
       "subject": "platform GraphiQL runs as anonymous and takes a query in the URL",
@@ -21486,7 +21509,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
