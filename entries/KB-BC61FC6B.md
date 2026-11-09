@@ -37,5 +37,14 @@ evidence:
     bodyHash: 07eb82579c83
     who: Lenajava1
     note: "2026-10-28 Firefox 375x812, theme 2.61.0-alpha.2605: icon button left of search is unnamed in a11y snapshot; search icon button is named 'Search orders'; desktop button named 'Filters'."
+  - method: observation
+    deployment: vcst_qa
+    build: 01d892bf697c7bac
+    conditions: theme=2.62.0-pr-2629-8fcc-8fccd4be; browser=chromium; viewport=375x812
+    at: 2026-11-09T13:01:20.413Z
+    by: session:ff42a502
+    bodyHash: 07eb82579c83
+    who: Lenajava1
+    note: "2026-11-09 Chromium 375x812: still an unnamed 44x44 icon button; no aria-label, no title, its 'Filters' span is display:none. Also the drawer it opens (div.vc-dialog.orders-mobile-filters inside .vc-popup-sidebar) carries no role=dialog / aria-modal on any ancestor."
 ---
 At 375x812 (Firefox) the button left of the orders search box (44x44, filter icon, opens the Filters sidebar) appears in the accessibility snapshot as an unnamed button; its 'Filters' text span is in the DOM (a has-text match finds it) but not exposed as the accessible name. At 1920 the same control is named 'Filters'. Screen-reader users get an unlabelled button.
