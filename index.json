@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T08:37:49.819Z",
-  "count": 1742,
+  "generated": "2026-11-09T08:43:08.034Z",
+  "count": 1744,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26178,6 +26178,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-A738BB80",
+      "path": "entries/KB-A738BB80.md",
+      "subject": "After a dead session on /company/info, the storefront ends on /sign-in?returnUrl=/company/info on some runs and on /403 Access denied on others, on both theme 2.62.0-pr-2620 and pr-2647",
+      "question": "Where does the storefront land when the session dies on /company/info and a GraphQL request is sent?",
+      "questions": [
+        "Does an expired session on company info redirect to sign-in or to the 403 page?",
+        "Is the session-expiry redirect on /company/info deterministic?"
+      ],
+      "anchors": [
+        "/company/info",
+        "/403",
+        "/sign-in"
+      ],
+      "scope": [
+        "role=organization-maintainer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A74F95A5",
       "path": "entries/KB-A74F95A5.md",
       "subject": "VcStatWidget with loading=true covers the whole card, including the prepend slot, with a pointer-blocking loader overlay; a drag handle in prepend cannot be clicked while loading",
@@ -36880,6 +36903,32 @@
       "scope": [
         "grant=password",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EC2A7E27",
+      "path": "entries/KB-EC2A7E27.md",
+      "subject": "When the session dies on /company/info, the Company name watcher throws TypeError (reading 'name') once organization goes null; the error reaches only App Insights, and theme PR 2647 removes it",
+      "question": "Does /company/info throw a browser exception when the session expires, and how is it observed?",
+      "questions": [
+        "What App Insights exception does a dead session on the company info page produce?",
+        "Is the 'reading name' TypeError on CompanyInfo fixed?",
+        "Is the Company name field cleared before the sign-in redirect?"
+      ],
+      "concepts": [
+        "organization"
+      ],
+      "anchors": [
+        "/company/info",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "role=organization-maintainer",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
