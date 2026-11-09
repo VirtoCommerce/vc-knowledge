@@ -43,5 +43,14 @@ evidence:
     bodyHash: d8ffd94c6831
     who: Aleksandra-Mitricheva
     note: "B2B-store, user with 14 leftover named carts + 'default': Query.cart (no cartName) kept returning the newest-created named cart even right after addCoupon/addItem had modified the 'default' cart, so 'most recently touched' may really be 'most recently created'. Storefront /cart rendered that named cart while its RemoveCartItems and add-coupon mutations (sent without cartId) acted on the 'default' cart: the remove-line X was a silent no-op (HTTP 200, line stayed) and the coupon landed on the other cart."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: c185459e7260c4a3
+    conditions: theme=2.62.0-pr-2552-ec75; platform=3.1094.0; store=B2B-store
+    at: 2026-11-09T09:33:43.842Z
+    by: session:9fb93ecf
+    bodyHash: d8ffd94c6831
+    who: kutasinaelena
+    note: "2026-11-09, org buyer on B2B-store: GetFullCart (no cartId) returned cart 8eba5be8 (one line) while AddOrUpdateCartShipment / AddOrUpdateCartPayment / clear-cart with identical storeId/userId/currency and no cartId acted on another cart 84eed7e4; picking a shipping address on /cart was a silent no-op (200, address never shown) and Place order stayed disabled."
 ---
 Query.cart with no cartName returns the most-recently-touched cart, NOT the one named 'default'.
