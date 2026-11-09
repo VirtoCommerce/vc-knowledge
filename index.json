@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-09T16:06:24.224Z",
-  "count": 1786,
+  "generated": "2026-11-09T16:15:45.925Z",
+  "count": 1787,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -38417,6 +38417,28 @@
       ],
       "scope": [
         "feature=language-selector",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EE88CA5B",
+      "path": "entries/KB-EE88CA5B.md",
+      "subject": "An organization member's /account/orders showed \"There are no orders yet\" for over 5 minutes after a successful checkout, while the order existed in the platform with that organization",
+      "question": "Does /account/orders list an organization member's order right after checkout?",
+      "questions": [
+        "Why is My orders empty right after placing an order?",
+        "How long until a new order appears on /account/orders for an org member?"
+      ],
+      "anchors": [
+        "/account/orders",
+        "POST /api/order/customerOrders/search"
+      ],
+      "scope": [
+        "store=b2b-store",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
