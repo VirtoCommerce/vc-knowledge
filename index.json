@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T15:57:17.041Z",
-  "count": 1842,
+  "generated": "2026-11-10T15:59:24.196Z",
+  "count": 1844,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3121,6 +3121,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-12C287B4",
+      "path": "entries/KB-12C287B4.md",
+      "subject": "On the platform host, /connect/authorize with max_age shorter than the live admin session loops between the authorize endpoint and the Admin login page instead of showing a login form",
+      "question": "What happens when /connect/authorize gets max_age and the browser already has an older platform session?",
+      "questions": [
+        "Does max_age force re-authentication on the Virto platform OAuth server?",
+        "Why does the browser keep reloading between the login page and /connect/authorize?",
+        "Is there a redirect loop on /connect/authorize with max_age?"
+      ],
+      "anchors": [
+        "GET /connect/authorize",
+        "GET /api/platform/security/currentuser"
+      ],
+      "scope": [
+        "host=platform",
+        "platform=3.1096.0",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -9128,6 +9152,29 @@
       "scope": [
         "feature=otp-sign-in",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-38CBD552",
+      "path": "entries/KB-38CBD552.md",
+      "subject": "On /admin/mcp, get_pending_change and reject_pending_change called with a change_id longer than 128 characters answer the normal \"Pending change ... was not found\" tool error with a trace id, but leave no audit row; a 128-character change_id is audited as Failed",
+      "question": "Is a get_pending_change or reject_pending_change call with an over-long change_id audited on /admin/mcp?",
+      "questions": [
+        "Why does a trace id returned by reject_pending_change find nothing in the Agent audit log?",
+        "Which MCP audit fields can make the audit insert fail?",
+        "Does an over-long change_id drop the MCP audit entry?"
+      ],
+      "anchors": [
+        "POST /admin/mcp",
+        "POST /api/mcp/audit/search"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
