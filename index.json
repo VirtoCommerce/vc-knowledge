@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T20:28:34.757Z",
-  "count": 1854,
+  "generated": "2026-11-10T20:33:38.604Z",
+  "count": 1857,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5119,6 +5119,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-1E3E1AA3",
+      "path": "entries/KB-1E3E1AA3.md",
+      "subject": "At 390 px the floating Refresh button on Admin Shell Agent tools covers part of a tool switch in the list (the 5th tool at the initial scroll)",
+      "question": "At 390 px on Admin Shell Agent tools (#/mcp-tools), does the floating Refresh button overlap the tool switches?",
+      "anchors": [
+        "/apps/admin-shell#/mcp-tools"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "viewport=390"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1E8C1285",
       "path": "entries/KB-1E8C1285.md",
       "subject": "Under the Coffee and Red presets the VcCheckbox and VcInput boundaries still measure 2.52:1 and VcTextarea 1.48:1 on white, and axe reports none of it",
@@ -7311,6 +7328,32 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2D4601C0",
+      "path": "entries/KB-2D4601C0.md",
+      "subject": "On vcst_qa the active background-job engine is RabbitMQ: a SitemapDownloadJobHandler job enqueued with an empty payload reports state null / completed true on /api/platform/jobs/{id} and never appears in Hangfire's Failed list or in list_failed_jobs",
+      "question": "What does a failing job enqueued through POST /api/background-jobs/enqueue look like on a stand whose background-job engine is RabbitMQ, and does list_failed_jobs see it?",
+      "questions": [
+        "Can a failed-job fixture be made with SitemapDownloadJobHandler on vcst-qa?",
+        "Does the MCP list_failed_jobs tool report the RabbitMQ engine's failures?",
+        "Why does /api/platform/jobs/{id} return state null for an enqueued job?"
+      ],
+      "anchors": [
+        "POST /api/background-jobs/enqueue",
+        "GET /api/platform/jobs/{id}",
+        "/hangfire/jobs/failed",
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "engine=rabbitmq",
+        "module=background-jobs",
+        "surface=platform-rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -31887,7 +31930,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -36650,6 +36693,27 @@
       "scope": [
         "store-type=b2b",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DD550C58",
+      "path": "entries/KB-DD550C58.md",
+      "subject": "Admin Shell Connected agents (#/mcp-agents) shows a non-administrator with mcp:manage only its own agents; the administrator sees every user's agents",
+      "question": "Which agents does the Admin Shell Connected agents screen list for a user with mcp:manage who is not an administrator?",
+      "questions": [
+        "Can an MCP manager disconnect other users' agents from Connected agents?",
+        "Why is Connected agents empty for the MCP manager?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/mcp-agents"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
