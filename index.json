@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T15:00:33.040Z",
-  "count": 1834,
+  "generated": "2026-11-10T15:16:35.985Z",
+  "count": 1835,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -453,6 +453,28 @@
       "scope": [
         "module=salesrep",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-023FBDCC",
+      "path": "entries/KB-023FBDCC.md",
+      "subject": "On /admin/mcp a tools/call whose unknown tool name is 129 characters or longer gets the normal -32602 \"Unknown tool\" error but leaves no audit row; names up to 128 characters are audited as Error",
+      "question": "Is a tools/call with an over-long unknown tool name audited on /admin/mcp?",
+      "questions": [
+        "Does the MCP audit log record calls with tool names longer than 128 characters?",
+        "What happens to the audit row when an agent calls an unknown tool with a very long name?"
+      ],
+      "anchors": [
+        "POST /admin/mcp",
+        "POST /api/mcp/audit/search"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
