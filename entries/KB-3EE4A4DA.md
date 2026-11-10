@@ -44,5 +44,14 @@ evidence:
     bodyHash: c704fe9c462f
     who: Lenajava1
     note: "REG-2026-11-10-1934-MCP 18:54Z, buyers in two organizations (TechFlow vs AcmeCorp), PKCE tokens: flat get_cart of the other buyer's cart -> raw XCart envelope 'Access denied.' Forbidden (path cart, locations), random unknown cart id -> cart_not_found 404; no line/total/address leaked; list_carts of A did not include B's cart; owner control get_cart returned it."
+  - method: observation
+    deployment: vcst_qa
+    build: 7983ac1fe08297d5
+    conditions: platform=3.1096.0; module:VirtoCommerce.UCP=3.1011.0-pr-13-5de2; store=B2B-store
+    at: 2026-11-10T20:21:41.746Z
+    by: session:40688c0a
+    bodyHash: c704fe9c462f
+    who: Lenajava1
+    note: "REG-2026-11-10-2108-MCPFIX ~20:21Z, PKCE tokens for a TechFlow buyer (A) and the AcmeCorp contract buyer (B): A's flat get_cart on B's cart -> raw XCart 'Access denied.' Forbidden envelope (cart null, no line/total leaked); random cart id -> cart_not_found 404; list_carts of A did not include B's cart; owner control get_cart returned it."
 ---
 2026-11-10, two B2B buyers in different organizations, each with an authorization-code + PKCE token for client claude-code-ucp-qa (aud {FRONT_URL}/ucp/mcp). With buyer B's token on buyer A's data: flat get_cart / update_cart / checkout_and_handoff by cart_id -> isError with the raw XCart GraphQL envelope {"errors":[{"message":"Access denied.","path":["cart"],"extensions":{"code":"Forbidden"}}],"data":{"cart":null}} (not a normalized UCP error code); the standard get_cart / get_checkout by id -> UCP error xapi_execution_failed severity recoverable; any call passing buyer A's buyer_id -> buyer_context_mismatch 403; track_order by order_number, order_id or cart_id+placed_after and standard get_order -> order_not_found 404 (existence hidden). Anonymous calls carrying buyer A's real buyer_id -> buyer_context_mismatch 403 'Anonymous buyer context is invalid.'. Nothing was changed on A's cart. The audit log (api/mcp/audit/search, scopeName ucp) records each refusal with B's user and the client, outcome Failed.
