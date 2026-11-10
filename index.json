@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T07:39:57.602Z",
-  "count": 1806,
+  "generated": "2026-11-10T07:43:14.060Z",
+  "count": 1808,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18408,6 +18408,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-7011E90B",
+      "path": "entries/KB-7011E90B.md",
+      "subject": "Admin Companies and contacts: entering a search keyword drops the chosen column sort (request sort is empty)",
+      "question": "Does a chosen sort in the Admin Companies and contacts grid survive entering a search keyword?",
+      "questions": [
+        "POST /api/members/search sort empty after keyword search",
+        "Companies and contacts grid Modified Date sort reset by search",
+        "VCST-4884 sort x search symptom on Customer 3.1029.1",
+        "Why does the member grid sort header go back to none after searching?"
+      ],
+      "anchors": [
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7040852E",
       "path": "entries/KB-7040852E.md",
       "subject": "member keyword search is index-backed",
@@ -33221,6 +33243,30 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-CCE38401",
+      "path": "entries/KB-CCE38401.md",
+      "subject": "Admin Companies and contacts has a filter panel (member type, created/modified date), not saved named filters",
+      "question": "Can a named filter be saved, edited or deleted in the Admin Companies and contacts blade?",
+      "questions": [
+        "Companies and contacts Add new filter Select filter control",
+        "Customer module saved filters replaced by filter panel",
+        "member blade filter panel Member type Created date Modified date"
+      ],
+      "concepts": [
+        "member-search"
+      ],
+      "anchors": [
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-CCFCAEEB",
