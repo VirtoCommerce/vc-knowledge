@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T05:28:07.771Z",
-  "count": 1797,
+  "generated": "2026-11-10T05:50:07.878Z",
+  "count": 1799,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7021,6 +7021,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2CB7352A",
+      "path": "entries/KB-2CB7352A.md",
+      "subject": "On the FileSystem asset provider, GET /api/assets?folderUrl=/<missing>/ returns 500 with the absolute storage path, while folderUrl=<missing> without slashes returns 200 empty",
+      "question": "What does GET /api/assets return for a folderUrl that does not exist?",
+      "questions": [
+        "Does listing a deleted asset folder return 404, empty or 500?"
+      ],
+      "anchors": [
+        "GET /api/assets"
+      ],
+      "scope": [
+        "auth=admin",
+        "provider=filesystem",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -18409,6 +18430,28 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-720E96D8",
+      "path": "entries/KB-720E96D8.md",
+      "subject": "Admin organization-membership detail blade logs TypeError (null.toLowerCase) when the store override Customer.MembershipRolesWhitelist is [null]",
+      "question": "Why does opening an organization membership from a contact in the Admin SPA log a TypeError reading toLowerCase?",
+      "questions": [
+        "Does the Admin contact Organization memberships blade throw a console error?",
+        "What happens in Admin when Customer.MembershipRolesWhitelist store override contains null?"
+      ],
+      "anchors": [
+        "GET /api/platform/settings/v2/tenant/Store/{id}/values",
+        "GET /api/customer/organization-memberships/{id}"
+      ],
+      "scope": [
+        "auth=admin",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
