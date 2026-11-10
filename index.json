@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T12:26:37.207Z",
-  "count": 1813,
+  "generated": "2026-11-10T12:42:33.940Z",
+  "count": 1815,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24413,6 +24413,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-94364409",
+      "path": "entries/KB-94364409.md",
+      "subject": "me.contact.organizations searchPhrase matches case-insensitively and by word prefix: \"Har\" matches \"Hardware\" and \"HARBOR\", \"Harbor\" does not match \"Hardware\"; newly REST-created orgs matched at once",
+      "question": "How does me.contact.organizations searchPhrase match organization names — case, partial word, prefix?",
+      "questions": [
+        "Is the org switcher search case-sensitive?",
+        "Does a partial term find an organization in me.contact.organizations?",
+        "Do organizations created via POST /api/members show up in xAPI organization search immediately?",
+        "What order does sort name:asc give for names differing only by case?"
+      ],
+      "anchors": [
+        "me.contact.organizations",
+        "POST /api/members"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-944D8F51",
       "path": "entries/KB-944D8F51.md",
       "subject": "Query.customerReviews returns only Approved reviews even with filter reviewStatus:New or reviewStatus:Rejected, anonymous and signed in, on the VCST-6251 fixed build",
@@ -27694,7 +27717,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -30427,7 +30450,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -38225,6 +38248,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EB6191B8",
+      "path": "entries/KB-EB6191B8.md",
+      "subject": "me.contact.organizations without a statuses argument already excludes memberships in Invited, Rejected or Deleted status; a null-status or locked Approved membership is still counted",
+      "question": "Does me.contact.organizations totalCount (no statuses argument) count organizations whose membership is Invited, Rejected or Deleted?",
+      "questions": [
+        "Is the unfiltered me.contact.organizations totalCount a count of all memberships or only Approved ones?",
+        "Can a contact with one Approved and one Invited membership have organizations.totalCount 2 in xAPI?",
+        "What does organizations(statuses:[]) return compared with no statuses argument?",
+        "Is a locked membership counted in me.contact.organizations?"
+      ],
+      "anchors": [
+        "me.contact.organizations",
+        "PUT /api/customer/organization-memberships/{id}"
+      ],
+      "scope": [
+        "module=profileexperienceapi",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
