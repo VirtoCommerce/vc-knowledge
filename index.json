@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T19:18:37.944Z",
-  "count": 1852,
+  "generated": "2026-11-10T19:26:56.943Z",
+  "count": 1853,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34355,6 +34355,30 @@
       "scope": [
         "feature=order-details",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CF737E20",
+      "path": "entries/KB-CF737E20.md",
+      "subject": "UCP checkout_and_handoff with a shipping_address whose id is the cart shipment's delivery-address id fails with an XCart addOrUpdateCartAddress EF identity conflict; later address calls on the same platform instance keep failing",
+      "question": "Why does UCP checkout_and_handoff fail with addOrUpdateCartAddress INVALID_OPERATION when a shipping address is sent?",
+      "questions": [
+        "What happens when an agent passes the shipment delivery address id from get_cart as shipping_address.id on /ucp/mcp?",
+        "Why does addOrUpdateCartAddress throw an EF Core identity conflict (ThrowIdentityConflict) from UCP?",
+        "Does a failed UCP shipping address update break later checkout_and_handoff calls on the same cart?"
+      ],
+      "anchors": [
+        "POST /ucp/mcp",
+        "Mutation.addOrUpdateCartAddress"
+      ],
+      "scope": [
+        "buyer=authenticated-b2b",
+        "module=virtocommerce.ucp 3.1011.0-pr-13",
+        "surface=ucp"
       ],
       "plane": "experiential",
       "status": "active",
