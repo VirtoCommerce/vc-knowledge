@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T19:03:25.574Z",
-  "count": 1850,
+  "generated": "2026-11-10T19:04:21.280Z",
+  "count": 1851,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17519,6 +17519,33 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-68A6AACA",
+      "path": "entries/KB-68A6AACA.md",
+      "subject": "On Catalog 3.1052.0-pr-916, deleting a catalog also deletes its products that sit under another catalog's category (no FK 500); DELETE /api/catalog/catalogs?ids= is 405, the id goes in the path",
+      "question": "What does DELETE /api/catalog/catalogs/{id} do to products whose catalogId is the deleted catalog but whose categoryId belongs to another catalog?",
+      "questions": [
+        "Does deleting a catalog still fail with FK_Item_Catalog_CatalogId when it holds products in a foreign category?",
+        "Which URL form deletes a catalog through REST: ?ids= or the id in the path?",
+        "Does deleting a catalog remove products of another catalog that are linked into it?",
+        "Does a catalog delete remove the links of its products in a virtual catalog?"
+      ],
+      "anchors": [
+        "DELETE /api/catalog/catalogs/{id}",
+        "DELETE /api/catalog/catalogs",
+        "POST /api/catalog/products",
+        "POST /api/catalog/listentries"
+      ],
+      "scope": [
+        "module=catalog",
+        "surface=admin-spa",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
