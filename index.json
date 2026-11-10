@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T07:50:08.803Z",
-  "count": 1810,
+  "generated": "2026-11-10T07:56:20.365Z",
+  "count": 1813,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9147,7 +9147,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -20491,6 +20491,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-7D9DE34B",
+      "path": "entries/KB-7D9DE34B.md",
+      "subject": "POST /api/customer/organization-memberships with a null or omitted userId answers 500 whose message is the raw SQL Server error (database, table, column, FK name); it is not validated to a 4xx",
+      "question": "What does creating an organization membership over REST return when userId is null or missing?",
+      "questions": [
+        "Does POST /api/customer/organization-memberships validate userId?",
+        "Why does an organization membership create return 500 with a SQL error?",
+        "Does the platform expose exception messages in REST 500 responses?",
+        "Was the organization-memberships null userId 500 already present in Customer 3.1011?"
+      ],
+      "anchors": [
+        "POST /api/customer/organization-memberships"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7DA9B0B7",
       "path": "entries/KB-7DA9B0B7.md",
       "subject": "platform REST APIs reject a store- or organization-scoped token with 401",
@@ -23714,6 +23737,32 @@
         "surface=rest",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-90CCBC06",
+      "path": "entries/KB-90CCBC06.md",
+      "subject": "POST /api/customer/organization-memberships with userId \"\" (empty string) answers 200 and persists a membership with an empty userId",
+      "question": "Can an organization membership be created over REST with an empty-string userId?",
+      "questions": [
+        "Does the organization-memberships create endpoint reject an empty userId?",
+        "How can a membership row without a user end up in an organization?"
+      ],
+      "concepts": [
+        "organization-membership",
+        "rest-api"
+      ],
+      "anchors": [
+        "POST /api/customer/organization-memberships",
+        "DELETE /api/customer/organization-memberships"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -37193,6 +37242,29 @@
         "feature=list-sharing",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E61A40EE",
+      "path": "entries/KB-E61A40EE.md",
+      "subject": "Org-scoped token permissions come from organization and membership role IDs looked up by FindByIdAsync, and an ID that is not a role is skipped without an error",
+      "question": "Why does an organization member's /connect/token lack the permissions of a membership role that the membership record shows?",
+      "questions": [
+        "Does MembershipRolesWhitelist filter the permissions in an organization-scoped storefront token?",
+        "What happens when an organization membership role id does not match any platform role id?",
+        "Why does an Organization maintainer member only get Organization employee permissions in the token?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "grant=password",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
