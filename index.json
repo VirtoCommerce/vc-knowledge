@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T12:59:42.155Z",
-  "count": 1815,
+  "generated": "2026-11-10T13:01:13.299Z",
+  "count": 1816,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19354,6 +19354,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-771EFA5D",
+      "path": "entries/KB-771EFA5D.md",
+      "subject": "An organization's theme preset is read per org via GET /api/white-labeling/organization/{organizationId}; the module exposes no search endpoint, and the store-level preset is separate",
+      "question": "How do I find which organizations use a given theme preset (themePresetName) in white labeling?",
+      "questions": [
+        "Is there a search endpoint for white-labeling settings?",
+        "Where is an organization's themePresetName stored and how do I read it via REST?",
+        "Which REST routes does the White Labeling module expose?"
+      ],
+      "anchors": [
+        "GET /api/white-labeling/organization/{id}",
+        "POST /api/members/search",
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
