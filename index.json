@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T04:59:07.538Z",
-  "count": 1796,
+  "generated": "2026-11-10T05:08:07.500Z",
+  "count": 1797,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11384,6 +11384,30 @@
       "scope": [
         "account=admin",
         "surface=hangfire-dashboard"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-481995B9",
+      "path": "entries/KB-481995B9.md",
+      "subject": "Loyalty programs and returns have no GET list route: GET /api/loyalty/programs and GET /api/returns return 404 even with the modules installed; listing is POST /api/loyalty-programs/search and POST /api/return/search",
+      "question": "What REST endpoint lists loyalty programs and returns, and what does a GET list request return?",
+      "questions": [
+        "Does a 404 on GET /api/returns mean the Return module is not installed?",
+        "How do I list loyalty programs over the platform REST API?",
+        "What is the search endpoint for returns (RMA) in the Return module?"
+      ],
+      "anchors": [
+        "POST /api/loyalty-programs/search",
+        "POST /api/return/search",
+        "GET /api/returns",
+        "GET /api/loyalty/programs"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -30535,7 +30559,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -33269,7 +33293,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
