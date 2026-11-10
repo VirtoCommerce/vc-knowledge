@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T04:16:14.344Z",
-  "count": 1792,
+  "generated": "2026-11-10T04:22:06.984Z",
+  "count": 1794,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10848,6 +10848,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-44B36132",
+      "path": "entries/KB-44B36132.md",
+      "subject": "GET /api/platform/settings/{name} for a name no module registered returns HTTP 500 with message \"Setting with name X is not registered\" (no stack trace) instead of 404",
+      "question": "What does GET /api/platform/settings/{name} return when the setting name is not registered?",
+      "questions": [
+        "Is Authorization.EnablePersistentStorageTokenValidation readable through the platform settings API?",
+        "Does the platform settings REST API return 404 for an unknown setting name?"
+      ],
+      "anchors": [
+        "GET /api/platform/settings/{id}",
+        "GET /api/platform/settings"
+      ],
+      "scope": [
+        "auth=admin",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-44B7B71E",
       "path": "entries/KB-44B7B71E.md",
       "subject": "The B2B-store cart offers six payment methods to a signed-in buyer, none preselected, ordered alphabetically by method code rather than by the configured priority.",
@@ -12290,6 +12312,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4C50CD96",
+      "path": "entries/KB-4C50CD96.md",
+      "subject": "POST /api/catalog/search/products answers 500 with the raw Elasticsearch error for a negative skip/take or a skip+take above 10000, and 500 'Object reference not set' for non-numeric skip/take",
+      "question": "What does POST /api/catalog/search/products return for negative, non-numeric or out-of-window skip/take values?",
+      "questions": [
+        "Does catalog product search validate skip and take?",
+        "Why does catalog search with skip 999999 return 500?",
+        "Is the Elasticsearch max_result_window enforced by the catalog search API?"
+      ],
+      "anchors": [
+        "POST /api/catalog/search/products"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -18892,7 +18935,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-7568B90C",
@@ -24435,7 +24479,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -36604,7 +36648,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-E4DE692A",
