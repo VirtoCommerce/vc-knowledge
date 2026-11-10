@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T16:06:20.699Z",
-  "count": 1845,
+  "generated": "2026-11-10T16:18:36.495Z",
+  "count": 1846,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6312,6 +6312,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-27087D46",
+      "path": "entries/KB-27087D46.md",
+      "subject": "Admin Shell VcDataTable: date-ago cells carry a full-date title, but datetime and plain-text cells truncate with no title, so a cut value cannot be read by hovering",
+      "question": "Which Admin Shell (vc-shell) VcDataTable cell types show a title tooltip when their text is truncated?",
+      "questions": [
+        "Does hovering a truncated cell in an Admin Shell grid show the full value?",
+        "Do vc-shell datetime columns show a tooltip with the full date-time?",
+        "Why do date-ago columns in the Admin Shell have a tooltip but datetime columns do not?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/mcp-audit",
+        "/apps/admin-shell#/mcp-agents"
+      ],
+      "scope": [
+        "component=vc-shell-data-table",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
