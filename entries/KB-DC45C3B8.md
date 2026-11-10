@@ -29,5 +29,16 @@ evidence:
     at: 2026-11-10T07:30:16.170Z
     by: session:c0597658
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcptcore_qa
+    build: 6ceab41258622d4c
+    conditions: theme=3.3.0-pr-22-46b2-46b2563e; module:VirtoCommerce.SalesRep=3.1017.0; store=B2B-store; viewport=1920x1080
+    at: 2026-11-10T14:42:07.312Z
+    by: session:c0597658
+    bodyHash: bfffc277a63f
+    who: Aleksandra-Mitricheva
+    contradicts: true
+    contested: theme 3.3.0-pr-22-46b2-46b2563e vs 3.3.0-pr-22-f709-f709d8ef; virtocommerce.profileexperienceapimodule 3.1024.0 vs 3.1022.0; virtocommerce.xapi 3.1030.0 vs 3.1029.0; virtocommerce.xcart 3.1046.0 vs 3.1044.0; virtocommerce.xcatalog 3.1024.0 vs 3.1023.0; virtocommerce.xrecommend 3.1003.0 vs 3.1002.0
+    note: "On the later PR build 46b2563e the standalone captions no longer stay 14px: /account/orders filter \"Select order status\", /cart \"Delivery option\", \"Shipping address*\", \"Pickup point*\", \"Billing address*\", /account/orders/{id}/payment \"Billing address\", \"Payment method\", the quote edit page \"Shipping address*\"/\"Billing address*\" and /company/members filters \"Role\"/\"Status\" all render vc-label--size--xs 12px #5B5147 700, the same as the field labels. The field-label half still holds (12px #5B5147 700 light, #C0B7B0 dark). Sales Rep plugin captions stay sm 14px #312720 700 (\"Send via*\" in Send a message, \"Select order status\" in /company/my-customers/{id}/orders filters). The claim holds only for build f709d8ef."
 ---
 Measured with getComputedStyle at 1920px, three fresh loads each: /account/addresses "New address" modal (10 labels: 8 VcInput + Country/State VcSelect), /account/profile (First/Last name, Email VcInput + Default language/currency VcSelect), /account/lists "Create list" modal (VcInput + Description VcTextarea), /account/orders filter (Created date VcSelect + Start/End date VcInput) all render class vc-label--size--xs, 12px, rgb #5B5147, weight 700; in dark mode (html.dark) the address modal labels are #C0B7B0. Clicking a label focuses its control (VcSelect label opens the listbox). Standalone VcLabel captions use vc-label--size--sm, 14px #312720 700: orders filter "Select order status", cart page "Delivery option", "Shipping address*", "Billing address*" — so the cart's Shipping details row shows a 14px caption beside a 12px "Delivery method*" select label. In the address modal at 1280px City (229px wide) sits beside State/Province in one row; at 1100px all right-column fields stack at one left edge, 420px wide. The previous build 3.2.0-pr-19 rendered the select/textarea labels at 14px #31271F (ticket baseline).
