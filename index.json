@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T14:20:26.832Z",
-  "count": 1822,
+  "generated": "2026-11-10T14:23:04.944Z",
+  "count": 1826,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10010,6 +10010,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-3EE4A4DA",
+      "path": "entries/KB-3EE4A4DA.md",
+      "subject": "A /ucp/mcp buyer token cannot read or change another buyer's cart or order: carts are refused (Access denied / buyer_context_mismatch 403), orders answer order_not_found, and the refusals are audited Failed",
+      "question": "Can a buyer's UCP MCP token read or modify another buyer's (other organization) cart or order on /ucp/mcp?",
+      "questions": [
+        "Does UCP MCP enforce buyer isolation between organizations?",
+        "What does get_cart return for a cart id that belongs to another buyer?",
+        "Does track_order reveal an order of another buyer by order number?"
+      ],
+      "anchors": [
+        "POST /ucp/mcp",
+        "POST /api/mcp/audit/search"
+      ],
+      "scope": [
+        "buyer=authenticated-b2b",
+        "module=virtocommerce.ucp 3.1011.0-pr-13",
+        "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3EEBFFF9",
       "path": "entries/KB-3EEBFFF9.md",
       "subject": "Query.customerReviews drops the keyword argument whenever filter is non-empty (pre-existing; same before and after the VCST-6251 fix)",
@@ -15464,7 +15488,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -16531,6 +16555,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 4
+    },
+    {
+      "id": "KB-635E51A8",
+      "path": "entries/KB-635E51A8.md",
+      "subject": "/ucp/mcp lists 25 tools anonymously and signed in, the same set get_store_capabilities.mcp_tools reports, and no System Operations tool",
+      "question": "Which tools does /ucp/mcp list, and does get_store_capabilities.mcp_tools agree with tools/list?",
+      "questions": [
+        "How many tools does the UCP MCP endpoint expose?",
+        "Are admin or System Operations tools visible on /ucp/mcp?"
+      ],
+      "anchors": [
+        "POST /ucp/mcp",
+        "GET /api/mcp/scopes"
+      ],
+      "scope": [
+        "module=virtocommerce.ucp 3.1011.0-pr-13",
+        "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-63C5B1E6",
@@ -21455,6 +21501,29 @@
       "scope": [
         "store=b2b-store",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-83AADEBD",
+      "path": "entries/KB-83AADEBD.md",
+      "subject": "/admin/mcp refuses a foreign, null, duplicated or other-host Origin with 403 before authentication, accepts a body up to exactly 1 MiB (413 above, empty body) and answers malformed JSON-RPC with 400 -32600, never 500",
+      "question": "How does /admin/mcp handle a cross-origin request, an oversized body and a malformed JSON-RPC message?",
+      "questions": [
+        "Does the MCP endpoint check the Origin header?",
+        "What is the request body size limit of the MCP endpoint?",
+        "What does /admin/mcp return for invalid JSON or a JSON-RPC batch?",
+        "Which JSON-RPC error does tools/call without a name return?"
+      ],
+      "anchors": [
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "module=virtocommerce.mcp 3.1000.0-pr-1-df74",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -38821,7 +38890,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -39951,6 +40020,30 @@
         "KB-CFBD95B7"
       ],
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F21AEABC",
+      "path": "entries/KB-F21AEABC.md",
+      "subject": "/connect/authorize on the platform and storefront hosts accepts plain PKCE and ignores prompt=login: a signed-in session gets a code without re-authentication",
+      "question": "Does /connect/authorize refuse plain PKCE, and does prompt=login force a fresh sign-in?",
+      "questions": [
+        "Which PKCE methods does the platform authorization server accept?",
+        "Is prompt=login honoured by the Virto OAuth server?",
+        "Which /connect/authorize parameters are rejected before sign-in?"
+      ],
+      "anchors": [
+        "GET /connect/authorize",
+        "POST /connect/token",
+        "GET /.well-known/openid-configuration"
+      ],
+      "scope": [
+        "platform=3.1096.0",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
