@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T05:50:07.878Z",
-  "count": 1799,
+  "generated": "2026-11-10T07:15:23.795Z",
+  "count": 1801,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1293,6 +1293,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-08E205E3",
+      "path": "entries/KB-08E205E3.md",
+      "subject": "Anonymous calls to the Customer module admin REST API get 401, not a 302 login redirect",
+      "question": "What does an unauthenticated call to /api/customer/organization-memberships or /api/members/customers/invite/roles return?",
+      "questions": [
+        "Does the platform redirect anonymous API callers to the login page?",
+        "Is it 401 or 302 for an anonymous admin API call?"
+      ],
+      "anchors": [
+        "GET /api/members/customers/invite/roles",
+        "POST /api/customer/organization-memberships"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-08FAC65C",
       "path": "entries/KB-08FAC65C.md",
       "subject": "salesRepCustomers sort my-last-orders ranks by the last NON-cancelled rep order, while the row's lastOrder can be a cancelled order, so a row showing the newest order date can sort last",
@@ -2130,6 +2152,31 @@
       "trust": 4,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-0C1F5344",
+      "path": "entries/KB-0C1F5344.md",
+      "subject": "Invite revoke/resend by membership id act only on an Invited membership; refusals come back inside HTTP 200 as InviteNotFound, and a caller without customer:invite gets 403",
+      "question": "What do POST /api/members/customers/invite/{membershipId}/revoke and /resend return for Invited, Rejected, Deleted and unknown memberships?",
+      "questions": [
+        "Does revoking an organization invite delete the membership row?",
+        "Can the REST resend invite carry urlSuffix or message?",
+        "Which notification does resend invite send to an existing user?",
+        "Is POST /api/customer/organization-memberships/search allowed without userId or organizationId?"
+      ],
+      "anchors": [
+        "POST /api/members/customers/invite/{id}/revoke",
+        "POST /api/members/customers/invite/{id}/resend",
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-0C40D235",
@@ -9521,7 +9568,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -23873,7 +23920,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -30208,7 +30255,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {

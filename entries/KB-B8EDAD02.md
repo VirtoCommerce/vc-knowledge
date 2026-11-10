@@ -50,5 +50,14 @@ evidence:
     bodyHash: 78954f88e40d
     who: Lenajava1
     note: "Re-observed 2026-11-05: a full-row GET then PUT /api/customer/organization-memberships/{id} that changed only the roles array (added a second role) read back status=Approved, isLocked=true and lockoutEnd unchanged on a membership-locked row, so the full-row PUT preserves status and lock state."
+  - method: observation
+    deployment: vcptcore_regression
+    build: 9648699210e92bd7
+    conditions: platform=3.1076.13; module:VirtoCommerce.Customer=3.1029.1
+    at: 2026-11-10T07:14:49.373Z
+    by: session:cb5a6bb9
+    bodyHash: 78954f88e40d
+    who: Aleksandra-Mitricheva
+    note: "Full-row PUT status Invited/Rejected/Deleted/Approved/null round-tripped; lock/unlock by membership id; PUT /api/contacts currentOrganizationId/defaultOrganizationId read back (204). PUT with an out-of-contract status -> 400 \"Status must be one of: Invited, Approved, Rejected, Deleted.\""
 ---
 On vcst_qa 2026-10-23 (Customer 3.1030.0), for a fresh AGENT-TEST contact created with organizations=[A,B] and one membership row per org (POST /api/customer/organization-memberships with an org-scoped role): POST /api/customer/organization-memberships/{id}/lock with {lockoutEnd:null} read back isLocked=true, POST .../{id}/unlock read back isLocked=false; GET the row then PUT /api/customer/organization-memberships/{id} with the whole row and status=Invited read back Invited, and the same PUT with Approved restored it. GET /api/members/{contactId}, set currentOrganizationId, PUT /api/members read back the new currentOrganizationId. The other membership was untouched.
