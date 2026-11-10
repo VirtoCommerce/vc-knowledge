@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T15:23:36.046Z",
-  "count": 1836,
+  "generated": "2026-11-10T15:29:36.073Z",
+  "count": 1837,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22709,6 +22709,28 @@
       "scope": [
         "feature=localization",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-89DF152E",
+      "path": "entries/KB-89DF152E.md",
+      "subject": "In the Admin Shell Configuration menu the four MCP screens (Agent approvals, Agent audit log, Agent tools, Connected agents) sit in a last group that has no heading - there is no \"AI agents (MCP)\" group; a cold deep link opens its screen with a restoreFromUrl warning",
+      "question": "Where are the MCP agent screens in the Admin Shell menu, and does a cold deep link to them work?",
+      "questions": [
+        "Is there an AI agents (MCP) menu group in the Admin Shell?",
+        "Does #/mcp-tools open the Agent tools screen on a fresh tab?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/mcp-tools",
+        "/apps/admin-shell#/mcp-approvals"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=admin-shell"
       ],
       "plane": "experiential",
       "status": "active",
