@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T15:59:24.196Z",
-  "count": 1844,
+  "generated": "2026-11-10T16:06:20.699Z",
+  "count": 1845,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -41945,6 +41945,30 @@
       "scope": [
         "feature=bopis",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FB705674",
+      "path": "entries/KB-FB705674.md",
+      "subject": "On /admin/mcp a used confirmation requestState (mcp-confirm:) is refused only on the instance that consumed it; replayed to another platform instance it is honoured once more within its 10-minute lifetime",
+      "question": "Is the confirmation requestState of an /admin/mcp tools/call single-use across platform instances?",
+      "questions": [
+        "Can a used mcp-confirm requestState be replayed on /admin/mcp?",
+        "Why does replaying a used confirmation state sometimes ask again and sometimes get Declined again?",
+        "Is McpRequiresConfirmation single-use on a multi-replica platform?",
+        "Could a confirmed reset_platform_cache run twice on two pods?"
+      ],
+      "anchors": [
+        "POST /admin/mcp",
+        "POST /api/mcp/audit/search"
+      ],
+      "scope": [
+        "deployment-shape=multi-instance",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
