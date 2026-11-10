@@ -35,5 +35,14 @@ evidence:
     bodyHash: 3c37fcb06d97
     who: Aleksandra-Mitricheva
     note: "2026-11-09 vcptcore_regression theme 2.59.0, B2B user: same page, no sign-out notice (regression run REG-2026-11-09-1635-W4, AUTH-069)."
+  - method: observation
+    deployment: vcptcore_regression
+    build: 9648699210e92bd7
+    conditions: platform=3.1076.13; theme=2.59.0; store=B2B-store
+    at: 2026-11-10T04:16:14.152Z
+    by: session:3f3bb000
+    bodyHash: 3c37fcb06d97
+    who: kutasinaelena
+    note: "2026-11-10 after env upgrade to platform 3.1076.13, theme 2.59.0, B2B buyer: same page, no notice about other devices/sessions (REG-2026-11-10-0401, SEC-AUTH-005)."
 ---
 As a signed-in B2B user, /account/change-password renders Current password, New password, Confirm new password, the "Tips for creating a strong password" box and a Change button. No informational notice about being signed out of other devices/browsers is present anywhere on the page (DOM search for 'other devices', 'sessions', 'sign you out' found nothing). Footer build Ver. 2.61.0-alpha.2605.
