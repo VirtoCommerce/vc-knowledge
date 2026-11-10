@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T18:53:37.712Z",
-  "count": 1849,
+  "generated": "2026-11-10T18:55:45.328Z",
+  "count": 1850,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22008,6 +22008,28 @@
       "scope": [
         "role=signed-in customer",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-84D22B63",
+      "path": "entries/KB-84D22B63.md",
+      "subject": "POST /api/catalog/products accepts a categoryId belonging to another catalog; the stored product then blocks DELETE of its own catalog with 500 FK_Item_Catalog_CatalogId",
+      "question": "Does POST /api/catalog/products accept a categoryId from a different catalog than catalogId, and what does that do to deleting the catalog?",
+      "questions": [
+        "Can the catalog REST API create a product whose category is in another catalog?",
+        "Why does DELETE /api/catalog/catalogs/{id} fail with FK_Item_Catalog_CatalogId?",
+        "Is DELETE /api/catalog/catalogs?ids= supported?"
+      ],
+      "anchors": [
+        "POST /api/catalog/products",
+        "DELETE /api/catalog/catalogs/{id}"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
