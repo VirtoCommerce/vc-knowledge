@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T20:40:32.854Z",
-  "count": 1858,
+  "generated": "2026-11-10T20:40:49.759Z",
+  "count": 1859,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5477,6 +5477,31 @@
         "role=sales-rep",
         "subject=canceled-task",
         "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-20B248C0",
+      "path": "entries/KB-20B248C0.md",
+      "subject": "After logout_buyer on /ucp/mcp the buyer's stored consent for the MCP client is gone: the next /connect/authorize shows the consent page again, without a new sign-in, and every earlier token of that buyer is refused",
+      "question": "What does logout_buyer on /ucp/mcp revoke - the buyer's tokens, the stored consent, the storefront session?",
+      "questions": [
+        "Does the consent page come back after logout_buyer?",
+        "Is an earlier UCP token still accepted after logout_buyer?",
+        "Do I need to sign in again to the storefront after logout_buyer to get a new UCP token?"
+      ],
+      "anchors": [
+        "/connect/authorize",
+        "POST /ucp/mcp",
+        "POST /ucp/v1/internal/handoff/restore"
+      ],
+      "scope": [
+        "buyer=authenticated-b2b",
+        "module=virtocommerce.ucp 3.1011.0-pr-13",
+        "surface=ucp"
       ],
       "plane": "experiential",
       "status": "active",

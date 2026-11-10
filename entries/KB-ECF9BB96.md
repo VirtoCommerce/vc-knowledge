@@ -46,5 +46,14 @@ evidence:
     bodyHash: c6be18d45b2b
     who: Lenajava1
     note: "REG-2026-11-10-1934-MCP 18:41-18:54Z: three buyers through {FRONT}/connect/authorize (client claude-code-ucp-qa, PKCE S256) -> /oauth/authorize -> storefront /sign-in -> password sign-in. First buyer got the consent page 'Allow Claude Code — Shop (QA)' then the callback; two buyers who had allowed before went straight to the callback. Tokens aud {FRONT}/ucp/mcp; link_buyer_identity buyer/org matched Admin user/member. Signed-in create_cart returned the buyer's storefront default cart."
+  - method: observation
+    deployment: vcst_qa
+    build: 7983ac1fe08297d5
+    conditions: platform=3.1096.0; module:VirtoCommerce.UCP=3.1011.0-pr-13-5de2; store=B2B-store
+    at: 2026-11-10T20:38:06.796Z
+    by: session:40688c0a
+    bodyHash: c6be18d45b2b
+    who: Lenajava1
+    note: "REG-2026-11-10-2108-MCPFIX 20:15-20:37Z: five buyers through {FRONT}/connect/authorize (client claude-code-ucp-qa, PKCE S256, redirect localhost callback) -> storefront /sign-in password -> consent 'Allow Claude Code — Shop (QA)' for first-time buyers, straight to callback for buyers who had allowed; tokens aud {FRONT}/ucp/mcp, 1800 s + refresh. Signed-in create_cart returned the buyer's default cart (upsert)."
 ---
 UCP 3.1011.0-pr-13, B2B-store. {storefront}/connect/authorize?client_id=claude-code-ucp-qa&resource={storefront}/ucp/mcp -> /oauth/authorize -> storefront /sign-in?returnUrl=... (the regular storefront sign-in page: email code by default, 'Sign in with a password instead'). After sign-in the browser returned to /connect/authorize showing a consent page titled 'Allow Claude Code — Shop (QA)': '<client name> wants to access your account', the user's email, 'Work with your permissions / Everything your account is allowed to do at {host}/ucp/mcp', 'Know who you are', 'Stay signed in / Until you revoke access', Cancel and Allow. Allow -> code -> token aud={storefront}/ucp/mcp, client_id claude-code-ucp-qa, 30-min access + refresh. link_buyer_identity then returned linked:true, buyer_id (= user id), organization_id, user_name, buyer_name, organization_name, identity_source platform_oauth - matching the storefront header (name, organization). Signed-in list_carts with no cart_type returned exactly one cart: the storefront default cart (same id and line count as the storefront cart badge). Signed-in create_cart with no cart_type returned that same cart id and ADDED the requested quantity to the existing line (2 -> 4). Signing in on the storefront merged the browser's anonymous handed-off cart into that default cart. logout_buyer revoked the MCP token but left the storefront browser session signed in.
