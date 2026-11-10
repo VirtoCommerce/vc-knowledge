@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T04:49:51.680Z",
-  "count": 1794,
+  "generated": "2026-11-10T04:59:07.538Z",
+  "count": 1796,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2127,7 +2127,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0,
       "resolved": 1
     },
@@ -6742,7 +6742,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -11999,7 +11999,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -23124,6 +23124,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-8E48D73D",
+      "path": "entries/KB-8E48D73D.md",
+      "subject": "On /cart the CyberSource microform card-number and CVV fields show no error text when empty or invalid; only Place order is disabled",
+      "question": "What validation feedback does /cart show for an empty or invalid CyberSource card number or security code?",
+      "questions": [
+        "Does the CyberSource card form on the cart show 'card number required'?",
+        "Is there an inline error under the CyberSource CVV field?",
+        "Why is Place order disabled with no message on the CyberSource cart form?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "gateway=cybersource",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8E87911F",
       "path": "entries/KB-8E87911F.md",
       "subject": "An orphaned sales-rep-documents blob (uploaded, never registered as a document) is refused to anonymous callers with 403",
@@ -23477,7 +23499,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -33871,6 +33893,27 @@
       "scope": [
         "role=administrator",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D21B751F",
+      "path": "entries/KB-D21B751F.md",
+      "subject": "After upgrading vcptcore_regression to Platform 3.1076.13 the Hangfire Failed count is 2,798 and still grows; the newest failures are CancelPaymentJobHandler (CyberSource RefundPayment declined INVALID_REQUEST) and SendOrderNotificationsJobHandler",
+      "question": "How many failed Hangfire jobs does vcptcore_regression show and which jobs are failing after the 3.1076.13 upgrade?",
+      "questions": [
+        "Why does /hangfire/jobs/failed show thousands of failed jobs on vcptcore_regression?",
+        "Does CancelPaymentJobHandler fail with a CyberSource refund error?"
+      ],
+      "anchors": [
+        "/hangfire/jobs/failed"
+      ],
+      "scope": [
+        "engine=hangfire",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
