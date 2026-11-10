@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T07:46:59.348Z",
-  "count": 1809,
+  "generated": "2026-11-10T07:50:08.803Z",
+  "count": 1810,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17339,6 +17339,26 @@
       "scope": [
         "product-type=configurable",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-68EEC992",
+      "path": "entries/KB-68EEC992.md",
+      "subject": "On vc-frontend-next host facade 0.2.5, a SalesRep plugin manifest declaring requiredHostVersion ^0.2.4 is accepted: remoteEntry.js loads and /company/dashboard renders the hub",
+      "question": "Does the Sales Rep Hub load on vc-frontend-next when the SalesRep plugin's requiredHostVersion is satisfied by the host facade version?",
+      "anchors": [
+        "/company/dashboard",
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json",
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
