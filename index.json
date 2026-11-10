@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T14:42:07.439Z",
-  "count": 1830,
+  "generated": "2026-11-10T14:51:35.845Z",
+  "count": 1831,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8119,6 +8119,28 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-324C2F16",
+      "path": "entries/KB-324C2F16.md",
+      "subject": "On /admin/mcp a tools/call with a wrong-type or out-of-range integer argument returns isError with the generic text \"An unexpected error occurred while executing tool '<name>'\", naming no argument; a missing required argument is named",
+      "question": "What does /admin/mcp tools/call return to the agent when an argument has the wrong JSON type?",
+      "questions": [
+        "Does the MCP module name the argument when list_modules gets take as a string?",
+        "What error does list_pending_changes return for status passed as a number?",
+        "Is a wrong-type MCP tool argument a protocol error or a tool error?"
+      ],
+      "anchors": [
+        "POST /admin/mcp",
+        "POST /api/mcp/audit/search"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
