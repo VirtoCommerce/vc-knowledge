@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T13:44:50.943Z",
-  "count": 1818,
+  "generated": "2026-11-10T13:46:32.353Z",
+  "count": 1820,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24136,6 +24136,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-9263D72A",
+      "path": "entries/KB-9263D72A.md",
+      "subject": "In the storefront quantity spinbutton, End does not move the caret and Control+a does not select the content; triple-click selects and ArrowRight moves the caret",
+      "question": "How do I select or place the caret in the storefront quantity spinbutton (PDP, catalog card, /cart line) when a test must replace the value or delete digits from the right?",
+      "anchors": [
+        "/cart",
+        "/search"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-92A03E82",
       "path": "entries/KB-92A03E82.md",
       "subject": "Platform member search returns a totalCount with an empty results array unless deepSearch is true",
@@ -36003,6 +36020,29 @@
         "module=imagetools@3.1006.1",
         "surface=admin-ui",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DD40D93D",
+      "path": "entries/KB-DD40D93D.md",
+      "subject": "Clearing a storefront quantity stepper digit by digit and blurring restores the last half-deleted value and commits it to the cart (PDP and catalog card)",
+      "question": "On the PDP or the /search catalog card quantity stepper, what happens when the quantity is deleted with Backspace digit by digit and the field is blurred, and which mutation is sent?",
+      "questions": [
+        "What quantity does the PDP show after I clear the quantity field with Backspace and click away?",
+        "Does the catalog card quantity stepper send a cart mutation for half-deleted values?",
+        "Why does the cart hold 2 after I deleted 234 in the quantity field?"
+      ],
+      "anchors": [
+        "/search",
+        "Mutation.updateCartQuantity"
+      ],
+      "scope": [
+        "store-type=b2b",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
