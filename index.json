@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T20:33:38.604Z",
-  "count": 1857,
+  "generated": "2026-11-10T20:38:42.175Z",
+  "count": 1858,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18555,6 +18555,29 @@
       "scope": [
         "role=personal customer",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6EE8A17D",
+      "path": "entries/KB-6EE8A17D.md",
+      "subject": "The Admin Shell defaults to Dark appearance and English for a user with no saved preference; Appearance and Language are saved per user as platform settings",
+      "question": "What appearance and language does the Admin Shell use for a user who never changed them, and where is the choice stored?",
+      "questions": [
+        "Is the Admin Shell dark by default?",
+        "Where does the Admin Shell store the Appearance (light/dark) choice?",
+        "Does changing the Admin Shell language persist per user on the server?"
+      ],
+      "anchors": [
+        "/apps/admin-shell",
+        "POST /api/platform/settings/v2/me/values",
+        "GET /api/platform/settings/v2/me/values"
+      ],
+      "scope": [
+        "surface=admin-shell"
       ],
       "plane": "experiential",
       "status": "active",
