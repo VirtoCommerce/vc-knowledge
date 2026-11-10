@@ -52,5 +52,14 @@ evidence:
     bodyHash: d8ffd94c6831
     who: kutasinaelena
     note: "2026-11-09, org buyer on B2B-store: GetFullCart (no cartId) returned cart 8eba5be8 (one line) while AddOrUpdateCartShipment / AddOrUpdateCartPayment / clear-cart with identical storeId/userId/currency and no cartId acted on another cart 84eed7e4; picking a shipping address on /cart was a silent no-op (200, address never shown) and Place order stayed disabled."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: abc88bad882c9613
+    conditions: module:VirtoCommerce.Xapi=3.1031.0-pr-70-5958; platform=3.1096.0-pr-3061; theme=2.62.0-pr-2653-5ad5; store=B2B-store
+    at: 2026-11-10T22:29:46.709Z
+    by: session:f93b3b40
+    bodyHash: d8ffd94c6831
+    who: kutasinaelena
+    note: "2026-11-10: same user, same two carts. GetFullCart (no cartId) returned named cart 8eba5be8 (2 lines). ChangeFullCartItemsQuantity (no cartId, lineItemId from 8eba5be8) returned the empty 'default' cart 84eed7e4, with HTTP 200 and errors[] empty. The cart page kept quantity 2 but the subtotal stayed the same, and after a reload the quantity was back to 1. Reproduced twice. Still happens on the OpenTelemetry PR builds."
 ---
 Query.cart with no cartName returns the most-recently-touched cart, NOT the one named 'default'.
