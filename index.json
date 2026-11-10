@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T14:24:58.537Z",
-  "count": 1827,
+  "generated": "2026-11-10T14:34:30.631Z",
+  "count": 1830,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14580,7 +14580,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19510,7 +19510,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -28012,6 +28012,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A9F4CF19",
+      "path": "entries/KB-A9F4CF19.md",
+      "subject": "On /admin/mcp, answering the reset_platform_cache input_required question with action accept runs the reset once and audits one Succeeded row; the question round is not audited",
+      "question": "What happens when a 2026-07-28 MCP client accepts the confirmation of reset_platform_cache on /admin/mcp?",
+      "questions": [
+        "Does accepting the MCP elicitation confirmation actually reset the platform cache?",
+        "How is an accepted confirmation audited in the MCP audit log?"
+      ],
+      "anchors": [
+        "POST /admin/mcp",
+        "POST /api/mcp/audit/search"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -36888,6 +36910,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-E18098EE",
+      "path": "entries/KB-E18098EE.md",
+      "subject": "The _meta.trace_id an /admin/mcp tool result returns equals the App Insights operation_Id of its POST /admin/mcp request; on vcst-qa no \"MCP tool {tool}\" span is exported, only the request and its SQL dependencies",
+      "question": "Can an MCP tool call's trace id be found in Application Insights, and which telemetry items does it lead to?",
+      "questions": [
+        "Does the MCP audit trace id join App Insights?",
+        "Are MCP tool spans visible in Application Insights on vcst-qa?"
+      ],
+      "anchors": [
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E1BFA8C8",
       "path": "entries/KB-E1BFA8C8.md",
       "subject": "Reloading the browser on an Admin Shell page-builder designer URL shows an empty page with 'Has unsaved changes', and Save then sends nothing",
@@ -37728,6 +37771,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-E77FF889",
+      "path": "entries/KB-E77FF889.md",
+      "subject": "POST /api/mcp/audit/search and POST /api/mcp/pending-changes/search answer 500 with the raw SQL \"OFFSET may not be negative\" message for skip -1; take -1 answers 200 with totalCount 0; an oversized take returns every row",
+      "question": "What do the MCP module's REST search endpoints (audit, pending changes) return for a negative skip or take?",
+      "questions": [
+        "Does /api/mcp/audit/search validate skip and take?",
+        "Why does the MCP audit search return 500?",
+        "Is there a maximum take on /api/mcp/audit/search?"
+      ],
+      "anchors": [
+        "POST /api/mcp/audit/search",
+        "POST /api/mcp/pending-changes/search"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E7BBCECF",
       "path": "entries/KB-E7BBCECF.md",
       "subject": "An impersonation token of an expired-password customer carries no authentication-method claim and the expiry is not enforced on it or on its refresh",
@@ -38436,7 +38502,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
