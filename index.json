@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T15:48:28.424Z",
-  "count": 1841,
+  "generated": "2026-11-10T15:57:17.041Z",
+  "count": 1842,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33989,6 +33989,31 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 3
+    },
+    {
+      "id": "KB-CED0F910",
+      "path": "entries/KB-CED0F910.md",
+      "subject": "Platform OpenIddict server keeps the library default code challenge methods (plain + S256) and AuthorizationController.Authorize has no prompt=login branch; neither is an appsettings option",
+      "question": "Why does /connect/authorize accept plain PKCE and ignore prompt=login, and can a deployment turn either off by configuration?",
+      "questions": [
+        "Is code_challenge_method=plain configurable in the Virto platform OAuth server?",
+        "Where is prompt=login handled in the platform authorize endpoint?",
+        "Can appsettings Authorization options restrict PKCE to S256?",
+        "Does max_age force re-authentication on /connect/authorize?"
+      ],
+      "anchors": [
+        "GET /connect/authorize",
+        "GET /.well-known/openid-configuration",
+        "POST /connect/session"
+      ],
+      "scope": [
+        "platform=3.1096.0",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-CED68DA3",
