@@ -26,5 +26,14 @@ evidence:
     at: 2026-11-09T18:51:12.997Z
     by: session:d6dc0a6d
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 01d892bf697c7bac
+    conditions: platform=3.1096.0; module:VirtoCommerce.MCP=3.1000.0-pr-1-df74
+    at: 2026-11-10T07:38:22.724Z
+    by: session:d6dc0a6d
+    bodyHash: 2a75b5d3a577
+    who: Lenajava1
+    note: "Re-observed for a manager-role user: Disconnect in #/mcp-agents made both of the user's sign-ins answer 401 \"The OAuth session has ended\", refresh returned invalid_grant, and a new authorize showed the consent page again. An admin /admin/mcp token on {FRONT_URL}/ucp/mcp tools/call link_buyer_identity returns 401 invalid_token \"The access token is invalid or expired.\" An agent token is also accepted on PUT /api/mcp/tools/availability for a user with mcp:manage (400 validation), but POST /api/mcp/pending-changes/{id}/approve refuses agent tokens with 403."
 ---
 With an authorization-code + PKCE token for client claude-admin-qa, aud = {BACK_URL}/admin/mcp: GET /api/platform/modules and GET /api/platform/security/currentuser returned 200 as the signed-in user, and POST /graphql { me } returned that user. The same token is refused on /ucp/mcp ("not issued for this MCP resource"), so audience binding holds between MCP scopes but not between MCP and the platform's own REST/GraphQL. For a non-admin user (IT Platform Operator role) Disconnect in Admin Shell #/mcp-agents made the same token return 401 on /admin/mcp ("The OAuth session has ended"), 401 on REST and 401 on back-office /graphql, and refresh gave 400 invalid_grant. A restart_platform pending change that agent created stayed Pending after Disconnect. Note GET /api/platform/security/currentuser answers 200 with an empty anonymous body when no token is sent, so only a 401 there proves rejection.
