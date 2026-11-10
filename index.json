@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T19:26:56.943Z",
-  "count": 1853,
+  "generated": "2026-11-10T19:49:38.312Z",
+  "count": 1854,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6286,6 +6286,26 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-26E5AD6D",
+      "path": "entries/KB-26E5AD6D.md",
+      "subject": "An MCP operator without mcp:approve sees only an information panel on Agent approvals, not their own pending change",
+      "question": "Admin Shell #/mcp-approvals as an operator without mcp:approve — does the author see and can they withdraw their own pending agent change?",
+      "questions": [
+        "Can the author of a pending MCP change see it on Agent approvals without the mcp:approve permission?",
+        "What does Agent approvals show to a user who reviews no MCP scope?"
+      ],
+      "anchors": [
+        "/mcp-approvals"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
