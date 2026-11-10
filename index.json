@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T16:29:34.605Z",
-  "count": 1846,
+  "generated": "2026-11-10T16:29:50.152Z",
+  "count": 1847,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7316,7 +7316,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -29726,6 +29726,29 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B1554283",
+      "path": "entries/KB-B1554283.md",
+      "subject": "PUT /api/order/customerOrders can move an existing order to another customer (customerId, organizationId, isCancelled) and leaves createdDate and totals unchanged",
+      "question": "Does changing customerId on an existing order via PUT /api/order/customerOrders keep its original createdDate?",
+      "questions": [
+        "How can a buyer get orders in past months when createdDate cannot be back-dated?",
+        "Does an order update reset createdDate or recalculate totals?",
+        "Can a sales rep user create a customer order through the platform REST API?"
+      ],
+      "anchors": [
+        "PUT /api/order/customerOrders",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "surface=platform-api"
       ],
       "plane": "experiential",
       "status": "active",
