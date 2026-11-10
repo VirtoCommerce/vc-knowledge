@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T14:02:36.510Z",
-  "count": 1821,
+  "generated": "2026-11-10T14:12:18.350Z",
+  "count": 1822,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -41552,6 +41552,28 @@
         "feature=organization-fallback",
         "persona=multi-org",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FC70723D",
+      "path": "entries/KB-FC70723D.md",
+      "subject": "On /cart, after a line quantity commit the line total briefly shows the new amount, then reverts to the old amount and settles on the new one 3-8 s later",
+      "question": "/cart ChangeFullCartItemsQuantity: after a quantity commit does the line total briefly show the new amount, revert to the old one, and only then settle?",
+      "questions": [
+        "Why does the /cart line total flicker back to the old value after changing the quantity?",
+        "How long after ChangeFullCartItemsQuantity does the /cart line total and Order Summary subtotal settle?",
+        "Can a test wait for the /cart line total text right after a quantity change?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.changeCartItemsQuantity"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
