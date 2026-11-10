@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T07:15:23.795Z",
-  "count": 1801,
+  "generated": "2026-11-10T07:30:17.115Z",
+  "count": 1802,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -35612,6 +35612,33 @@
       "scope": [
         "module=seo",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DC45C3B8",
+      "path": "entries/KB-DC45C3B8.md",
+      "subject": "On vc-frontend-next 3.3.0-pr-22 every VcInput, VcSelect and VcTextarea field label renders 12px / #5B5147 / 700 in light mode (#C0B7B0 in dark), while standalone VcLabel group captions stay 14px / #312720 / 700",
+      "question": "What font size and color do form field labels (input, select, textarea) render with on the vc-frontend-next storefront, and do standalone group captions match them?",
+      "questions": [
+        "Do select and textarea labels match input labels in size and color on /account/addresses?",
+        "Why does the checkout Shipping details row mix 14px and 12px labels?",
+        "What color is a field label in dark mode on vc-frontend-next?"
+      ],
+      "anchors": [
+        "/account/addresses",
+        "/account/profile",
+        "/account/lists",
+        "/account/orders",
+        "/cart"
+      ],
+      "scope": [
+        "feature=form-field-labels",
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
