@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T14:55:27.633Z",
-  "count": 1831,
+  "generated": "2026-11-10T15:00:33.040Z",
+  "count": 1834,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3934,6 +3934,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-17412D4F",
+      "path": "entries/KB-17412D4F.md",
+      "subject": "On the MCP-hosted UCP build, a /ucp/mcp search_products call reaches App Insights only as the POST /ucp/mcp request plus its ES and SQL dependencies; the 'tools/call', 'UCP' and 'XAPI' spans are absent",
+      "question": "Does App Insights receive the tools/call, UCP and XAPI spans for a /ucp/mcp search_products call on the build where UCP is served by the MCP module?",
+      "questions": [
+        "Why does a UCP MCP trace contain only the request, Elasticsearch and SQL rows?",
+        "Are UCP span names like 'UCP search_products' still exported after UCP moved under the MCP module?",
+        "When did the UCP and XAPI dependency spans stop appearing in App Insights on vcst_qa?"
+      ],
+      "anchors": [
+        "POST /ucp/mcp"
+      ],
+      "scope": [
+        "layer=telemetry",
+        "module=virtocommerce.ucp 3.1011.0-pr-13",
+        "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -14649,6 +14672,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-557FD8C9",
+      "path": "entries/KB-557FD8C9.md",
+      "subject": "REST approve/reject of a pending change with an agent's OAuth token answers 403 \"An AI agent cannot review pending changes here ... (MCP > Pending changes)\"; without mcp:approve a platform bearer gets 403 \"was not found, or you may not review it\"",
+      "question": "What does POST /api/mcp/pending-changes/{id}/approve answer to an agent token and to a user without mcp:approve?",
+      "questions": [
+        "Can an MCP agent token approve a pending change over the REST API?",
+        "Which screen does the 403 of pending-changes approve name?"
+      ],
+      "anchors": [
+        "POST /api/mcp/pending-changes/{id}/approve",
+        "POST /api/mcp/pending-changes/{id}/reject"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-55D54B4A",
       "path": "entries/KB-55D54B4A.md",
       "subject": "On vcst_qa the sales-rep task filter rules are upcoming, overdue and completed only, none restricting priority or linked record type, and salesRepTasks narrows each rule by priorities and customerIds",
@@ -18690,6 +18734,30 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7158995B",
+      "path": "entries/KB-7158995B.md",
+      "subject": "UCP cancel_cart empties the cart (same id, zero lines, no cancelled status) and a repeat cancel_cart succeeds again; cancel_checkout is refused as not supported",
+      "question": "What do the standard UCP tools cancel_cart and cancel_checkout do on /ucp/mcp, and what does a second cancel_cart return?",
+      "questions": [
+        "Is UCP cancel_cart idempotent or does a second cancel return an error?",
+        "Does cancel_cart delete the platform cart or only clear it?",
+        "Is cancel_checkout supported by the Virto Commerce UCP MCP endpoint?"
+      ],
+      "anchors": [
+        "POST /ucp/mcp",
+        "GET /api/carts/{id}"
+      ],
+      "scope": [
+        "buyer=anonymous",
+        "module=virtocommerce.ucp 3.1011.0-pr-13",
+        "surface=ucp"
       ],
       "plane": "experiential",
       "status": "active",
