@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T15:29:36.073Z",
-  "count": 1837,
+  "generated": "2026-11-10T15:39:30.838Z",
+  "count": 1839,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18845,6 +18845,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-723ECFF9",
+      "path": "entries/KB-723ECFF9.md",
+      "subject": "In the Admin Shell MCP screens the relative dates of Connected agents stay English in ar, he and ja, and after an in-session language switch the blade toolbar Refresh label can keep the previous language",
+      "question": "Are the Connected agents dates and the blade toolbar translated when the Admin Shell language changes?",
+      "questions": [
+        "Why does Connected agents show '10 minutes ago' in Arabic?",
+        "Admin Shell toolbar button shows Hebrew text in Japanese UI"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/mcp-agents"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -41595,6 +41616,28 @@
       "scope": [
         "module=return@3.1004.0",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F9884EDD",
+      "path": "entries/KB-F9884EDD.md",
+      "subject": "Opening the Admin Shell Account panel as a user without security read permission logs a 403 console error for GET /api/platform/security/users/{own userName}",
+      "question": "Why does the Admin Shell log a 403 when a limited back-office user opens the Account panel?",
+      "questions": [
+        "Does the Admin Shell Account panel need security:read?",
+        "Console error 403 api/platform/security/users on Account click"
+      ],
+      "anchors": [
+        "GET /api/platform/security/users/{id}",
+        "/apps/admin-shell"
+      ],
+      "scope": [
+        "role=limited-back-office",
+        "surface=admin-shell"
       ],
       "plane": "experiential",
       "status": "active",
