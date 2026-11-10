@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T13:01:13.299Z",
-  "count": 1816,
+  "generated": "2026-11-10T13:31:48.057Z",
+  "count": 1817,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -25160,6 +25160,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 7,
+      "disputed": 0
+    },
+    {
+      "id": "KB-97ABF261",
+      "path": "entries/KB-97ABF261.md",
+      "subject": "With UCP 3.1011.0-pr-13 the platform registers no ucp:* permission and no UCP.Enabled setting; UCP exposes three store settings (UCP.CheckoutLinkLifetimeMinutes 15, UCP.CheckoutUrlTemplate, UCP.StoreManagedAddresses false)",
+      "question": "Which permissions and settings does the UCP module register on the MCP-module build, and does UCP.Enabled still exist?",
+      "anchors": [
+        "GET /api/platform/security/permissions",
+        "GET /api/platform/settings"
+      ],
+      "scope": [
+        "module=ucp",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
