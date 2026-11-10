@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T15:47:59.785Z",
-  "count": 1840,
+  "generated": "2026-11-10T15:48:28.424Z",
+  "count": 1841,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33516,6 +33516,23 @@
       "question": "Does Export on the Show customers (user-group filtered) member blade export only the group's members?",
       "anchors": [
         "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CB838ECC",
+      "path": "entries/KB-CB838ECC.md",
+      "subject": "Admin Shell Connected agents clips the MCP endpoint cell with no ellipsis or tooltip, and Agent audit log truncates cells with no tooltip",
+      "question": "Is the MCP endpoint column on the Admin Shell Connected agents screen (#/mcp-agents) readable, and do truncated cells on the Agent audit log (#/mcp-audit) expose their full value?",
+      "anchors": [
+        "/apps/admin-shell#/mcp-agents",
+        "/apps/admin-shell#/mcp-audit"
       ],
       "scope": [
         "surface=admin-ui"
