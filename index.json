@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T19:04:21.280Z",
-  "count": 1851,
+  "generated": "2026-11-10T19:18:37.944Z",
+  "count": 1852,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19902,6 +19902,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7877F950",
+      "path": "entries/KB-7877F950.md",
+      "subject": "On /admin/mcp only error tool results carry _meta.trace_id; successful results (list_modules, restart_platform pending, get_environment_profile) and JSON-RPC protocol errors return no trace id, though every call has an audit row with one",
+      "question": "Does a successful /admin/mcp tools/call result return the trace id that the MCP audit row stores?",
+      "questions": [
+        "Which /admin/mcp tool results include _meta.trace_id?",
+        "How does an MCP agent get the trace id of a successful admin tool call?",
+        "Why is there no trace id in the restart_platform pending_approval result?"
+      ],
+      "anchors": [
+        "POST /admin/mcp",
+        "POST /api/mcp/audit/search"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
