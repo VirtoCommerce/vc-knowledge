@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T07:43:14.060Z",
-  "count": 1808,
+  "generated": "2026-11-10T07:46:59.348Z",
+  "count": 1809,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -316,6 +316,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-01E09B39",
+      "path": "entries/KB-01E09B39.md",
+      "subject": "On Customer 3.1029.1 an Approved Organization maintainer membership is not projected into the storefront token: only storefront:organization:view and storefront:user:view",
+      "question": "Does an org-scoped storefront token carry the permissions of the user's organization membership role (Organization maintainer)?",
+      "questions": [
+        "Why does an organization maintainer get Forbidden xapi:my_organization:edit?",
+        "Organization maintainer sees no Invite members button on /company/members",
+        "storefront JWT permission claim for organization membership role",
+        "MembershipRolesWhitelist null and membership roles in token"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/customer/organization-memberships/search",
+        "/company/members"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
