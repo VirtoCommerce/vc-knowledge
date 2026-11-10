@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T15:16:35.985Z",
-  "count": 1835,
+  "generated": "2026-11-10T15:23:36.046Z",
+  "count": 1836,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34487,6 +34487,27 @@
         "feature=profile-preferences",
         "layout=desktop",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D18D598A",
+      "path": "entries/KB-D18D598A.md",
+      "subject": "The Admin Shell Agent audit log writes its search into the hash (MCP_AUDIT_search) but never reads it: a cold deep link and a hash change keep the previous search, and a reload restores the last TYPED search, so URL and screen can disagree",
+      "question": "Does a #/mcp-audit?MCP_AUDIT_search=... deep link apply its search in the Admin Shell Agent audit log?",
+      "questions": [
+        "Why does the Agent audit log ignore the search in the URL?",
+        "Can I share a link to a filtered MCP audit log?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/mcp-audit"
+      ],
+      "scope": [
+        "module=mcp",
+        "surface=admin-shell"
       ],
       "plane": "experiential",
       "status": "active",
