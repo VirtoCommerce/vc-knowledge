@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T13:31:48.057Z",
-  "count": 1817,
+  "generated": "2026-11-10T13:37:36.311Z",
+  "count": 1818,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -208,6 +208,23 @@
         "KB-1447353E",
         "KB-19826CC0"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-00E94767",
+      "path": "entries/KB-00E94767.md",
+      "subject": "check_capacity compares the process working set with the GC heap hard limit, so memory_percent can exceed 100 while the managed heap is a fraction of it",
+      "question": "Why does the System Operations check_capacity tool report memory above 100 percent, and what limit does it use?",
+      "anchors": [
+        "/admin/mcp"
+      ],
+      "scope": [
+        "module=systemoperations",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
