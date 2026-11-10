@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T15:39:30.838Z",
-  "count": 1839,
+  "generated": "2026-11-10T15:47:59.785Z",
+  "count": 1840,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34742,6 +34742,22 @@
       "scope": [
         "module=catalog",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D328D8DD",
+      "path": "entries/KB-D328D8DD.md",
+      "subject": "In the Admin Shell Agent tools screen, a checked switch renders its knob outside the track in right-to-left languages (ar, he)",
+      "question": "Do the Admin Shell MCP screens (#/mcp-tools) render the tool switches correctly in right-to-left languages such as Arabic and Hebrew?",
+      "anchors": [
+        "/apps/admin-shell#/mcp-tools"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
