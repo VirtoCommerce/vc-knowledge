@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T16:29:50.152Z",
-  "count": 1847,
+  "generated": "2026-11-10T18:53:37.712Z",
+  "count": 1849,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9037,6 +9037,32 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-37CBE004",
+      "path": "entries/KB-37CBE004.md",
+      "subject": "On /ucp/mcp a wrong-type argument (resolve_country query: 12345) returns a tool error classified internal_error / status_code 500 'An unexpected UCP error occurred.', while a missing required argument is named",
+      "question": "What does /ucp/mcp return when a tool argument has the wrong JSON type or is missing?",
+      "questions": [
+        "Does UCP resolve_country validate the type of query?",
+        "What error code does the UCP MCP endpoint give for a number where a string is required?",
+        "Is resolve_country matching case-insensitive and does it accept a country code?"
+      ],
+      "concepts": [
+        "ucp"
+      ],
+      "anchors": [
+        "POST /ucp/mcp",
+        "GET /ucp/v1/geography/countries/resolve"
+      ],
+      "scope": [
+        "buyer=anonymous",
+        "surface=ucp"
       ],
       "plane": "experiential",
       "status": "active",
@@ -41720,6 +41746,29 @@
         "surface=storefront-ui",
         "theme=vc-frontend-next",
         "user-type=b2b-multi-organization-member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F975C347",
+      "path": "entries/KB-F975C347.md",
+      "subject": "On /ucp/mcp every tool result carries _meta.trace_id equal to the MCP audit row's traceId, except link_buyer_identity, whose result has no _meta (its audit row still has a traceId)",
+      "question": "Does a /ucp/mcp tool result return a trace id that matches the MCP audit log row, for every tool?",
+      "questions": [
+        "Which UCP MCP tools return _meta.trace_id?",
+        "How do I correlate a /ucp/mcp tool call with its row in /api/mcp/audit/search?",
+        "Does link_buyer_identity return a trace id?"
+      ],
+      "anchors": [
+        "POST /ucp/mcp",
+        "POST /api/mcp/audit/search"
+      ],
+      "scope": [
+        "buyer=authenticated-b2b",
+        "surface=ucp"
       ],
       "plane": "experiential",
       "status": "active",
