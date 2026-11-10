@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T14:00:52.208Z",
-  "count": 1820,
+  "generated": "2026-11-10T14:02:36.510Z",
+  "count": 1821,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -21646,6 +21646,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-84893FFF",
+      "path": "entries/KB-84893FFF.md",
+      "subject": "/admin/mcp asks for confirmation only from a client that sends protocol 2026-07-28 with elicitation in the per-request _meta capabilities; it answers input_required, and a Decline ends the call as Declined without running the tool",
+      "question": "When does /admin/mcp ask the user to confirm a [McpRequiresConfirmation] tool such as reset_platform_cache, and what happens when the user declines?",
+      "questions": [
+        "How does an MCP client get the confirmation question for reset_platform_cache or approve_pending_change on the stateless /admin/mcp endpoint?",
+        "Which protocol version and capabilities does /admin/mcp need to send an elicitation (MRTR input_required)?",
+        "Does declining the MCP confirmation of reset_platform_cache reset the cache?",
+        "Why does approve_pending_change say the MCP client cannot ask the user even when elicitation is declared in initialize?"
+      ],
+      "anchors": [
+        "/admin/mcp",
+        "POST /api/mcp/audit/search"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
