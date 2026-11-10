@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T07:33:44.142Z",
-  "count": 1802,
+  "generated": "2026-11-10T07:38:15.270Z",
+  "count": 1804,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -614,7 +614,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14268,6 +14268,35 @@
       "contested": 1
     },
     {
+      "id": "KB-53C4B8B8",
+      "path": "entries/KB-53C4B8B8.md",
+      "subject": "/admin/mcp tools/list and tools/call keep the permissions the agent's access token was issued with: a role granted or removed applies only after a token refresh, as platform REST authorization does",
+      "question": "Does a role or permission change apply immediately to an MCP agent connected to /admin/mcp?",
+      "questions": [
+        "Is a revoked permission still usable over MCP until the token expires?",
+        "Why does tools/list not show a tool after I gave the user the permission?",
+        "Does BL-PLAT-001 (role change applies immediately) hold on the MCP endpoint?"
+      ],
+      "concepts": [
+        "access-token",
+        "permission",
+        "account-lockout"
+      ],
+      "anchors": [
+        "/admin/mcp",
+        "PUT /api/platform/security/users",
+        "POST /api/mcp/audit/search",
+        "POST /api/platform/security/users/{id}/lock"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-53D776C2",
       "path": "entries/KB-53D776C2.md",
       "subject": "the Admin order tree blanks a zero shipment amount",
@@ -14433,6 +14462,32 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-54FE11E6",
+      "path": "entries/KB-54FE11E6.md",
+      "subject": "restart_platform over /admin/mcp only creates a Pending change (dry-run preview state running to will restart); a second user rejects it in Admin Shell Agent approvals and the audit log keeps the call as Waiting for approval with its trace id and a link to the change",
+      "question": "What happens when an MCP agent calls restart_platform, and how do approval, rejection and the audit log show it?",
+      "questions": [
+        "Does restart_platform over MCP restart the platform right away?",
+        "How is a pending MCP change rejected and who is recorded as reviewer?",
+        "Can the Agent audit log be searched by trace id?",
+        "Can approve_pending_change be confirmed over MCP with elicitation?"
+      ],
+      "anchors": [
+        "/admin/mcp",
+        "/apps/admin-shell#/mcp-approvals",
+        "/apps/admin-shell#/mcp-audit",
+        "POST /api/mcp/pending-changes/{id}/approve"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
