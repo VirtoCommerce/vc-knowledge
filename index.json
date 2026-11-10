@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-10T14:23:04.944Z",
-  "count": 1826,
+  "generated": "2026-11-10T14:24:58.537Z",
+  "count": 1827,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9908,6 +9908,29 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3E74278D",
+      "path": "entries/KB-3E74278D.md",
+      "subject": "Reusing a redeemed refresh token after about 30 s is refused and revokes every token of that user's authorization for the client, including other sessions; reuse within seconds is accepted",
+      "question": "What happens when an already-redeemed refresh token is sent again to /connect/token?",
+      "questions": [
+        "Does the Virto OAuth server detect refresh token replay?",
+        "Is there a grace period for reusing a rotated refresh token?",
+        "Do two MCP agent sessions of the same user and client share one authorization?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "platform=3.1096.0",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -34777,7 +34800,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
