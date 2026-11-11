@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T17:17:53.012Z",
-  "count": 1886,
+  "generated": "2026-11-11T17:19:51.502Z",
+  "count": 1887,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16367,6 +16367,28 @@
       "trust": 3,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-5E489557",
+      "path": "entries/KB-5E489557.md",
+      "subject": "On vcst_qa theme 2.62.0-alpha.2642 the storefront shows a 'Part of the site could not be loaded. Please reload the page to continue.' toast with a 'Reload page' button on ordinary guest pages, with no console error and no failed request",
+      "question": "Why does the storefront show 'Part of the site could not be loaded. Please reload the page to continue.' on /compare and /search?",
+      "questions": [
+        "What triggers the 'Reload page' toast on the storefront?",
+        "Is the 'Part of the site could not be loaded' notification a real failure on vcst_qa?"
+      ],
+      "anchors": [
+        "/compare",
+        "/search"
+      ],
+      "scope": [
+        "auth=guest",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-5E5D7065",
