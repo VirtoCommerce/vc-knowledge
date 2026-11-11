@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T16:31:46.192Z",
-  "count": 1881,
+  "generated": "2026-11-11T16:34:33.916Z",
+  "count": 1882,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -39130,6 +39130,29 @@
       ],
       "scope": [
         "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E9AD9962",
+      "path": "entries/KB-E9AD9962.md",
+      "subject": "On /cart with a single shopping cart, the line stepper's ChangeFullCartItemsQuantity updates line total, Subtotal and Total within about 2 s of the click and they stay put",
+      "question": "How long after a /cart stepper click (changeCartItemsQuantity) do line total, Subtotal and Total show the new amounts on an account with one cart?",
+      "questions": [
+        "Do cart totals lag after changeCartItemsQuantity returns?",
+        "Is a 15-35 s stale subtotal on /cart a product delay or a test-data issue?",
+        "Does the /cart stepper show stale totals after a quantity change?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.changeCartItemsQuantity"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
