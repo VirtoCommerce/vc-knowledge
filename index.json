@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T18:06:20.635Z",
-  "count": 1887,
+  "generated": "2026-11-11T18:10:52.284Z",
+  "count": 1888,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -31129,6 +31129,27 @@
         "Query.pageContext"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B64698E8",
+      "path": "entries/KB-B64698E8.md",
+      "subject": "The header search dropdown's Hints (recent searches) list has no control to clear the history",
+      "question": "Can a shopper clear their recent search history from the storefront header search dropdown?",
+      "questions": [
+        "Is there a clear history button in the search Hints section?",
+        "How does a shopper remove recent searches shown under Hints?"
+      ],
+      "anchors": [
+        "/search"
+      ],
+      "scope": [
+        "component=header-search-bar",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
