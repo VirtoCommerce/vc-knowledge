@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T08:42:03.473Z",
-  "count": 1867,
+  "generated": "2026-11-11T08:50:58.172Z",
+  "count": 1868,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32818,6 +32818,26 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C362B3C4",
+      "path": "entries/KB-C362B3C4.md",
+      "subject": "On the OpenTelemetry-based ApplicationInsights module (3.1006.0-pr-17) the documented default SQL ignore list ([HangFire]., sp_getapplock, sp_releaseapplock) is not applied — Hangfire queue polling floods the dependencies table",
+      "question": "Does the ApplicationInsights module still filter Hangfire SQL dependencies (IgnoreSqlTelemetryOptions.QueryIgnoreSubstrings) after the SDK 3.x / OpenTelemetry migration?",
+      "questions": [
+        "Why are there hundreds of thousands of Hangfire SQL dependencies in Application Insights after VCST-4717?",
+        "Is sp_getapplock still excluded from App Insights dependency telemetry?"
+      ],
+      "anchors": [
+        "POST /graphql"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
