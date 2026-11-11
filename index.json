@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T22:47:54.502Z",
-  "count": 1897,
+  "generated": "2026-11-11T23:36:55.355Z",
+  "count": 1898,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29246,6 +29246,28 @@
       "contested": 1
     },
     {
+      "id": "KB-AB2A1125",
+      "path": "entries/KB-AB2A1125.md",
+      "subject": "When every SalesRepCustomerOrderStatistics comparison returns countChangePercent null, the /company/dashboard KPI cards render no change indicator at all (empty status slot, no NaN/Infinity/null text)",
+      "question": "What does a /company/dashboard KPI card show when its period-over-period comparison percent is null?",
+      "questions": [
+        "Do the sales rep dashboard stat cards show a % change when the previous period had no orders?",
+        "How is a null countChangePercent rendered on the Sales Rep Hub dashboard?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "Query.salesRepCustomerOrderStatistics"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AB35BCDC",
       "path": "entries/KB-AB35BCDC.md",
       "subject": "what an order line item stops carrying once the cart becomes an order",
@@ -30324,7 +30346,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
