@@ -67,5 +67,13 @@ evidence:
     bodyHash: 78954f88e40d
     who: Aleksandra-Mitricheva
     note: "2026-11-10: full-row PUT of a membership status Invited/Rejected/Deleted/null/Approved and isLocked true/false round-tripped (read back through me.contact.organizations myStatusInOrganization / isLockedForCurrentUser)."
+  - method: observation
+    deployment: vcptcore_qa
+    build: 95336e679e821667
+    at: 2026-11-11T11:00:11.220Z
+    by: session:cfd2d319
+    bodyHash: 78954f88e40d
+    who: Aleksandra-Mitricheva
+    note: "2026-11-11: POST .../organization-memberships/{id}/lock read back isLocked=true (status stayed Approved); /unlock read back isLocked=false; sibling memberships untouched. Admin token from a bare password grant."
 ---
 On vcst_qa 2026-10-23 (Customer 3.1030.0), for a fresh AGENT-TEST contact created with organizations=[A,B] and one membership row per org (POST /api/customer/organization-memberships with an org-scoped role): POST /api/customer/organization-memberships/{id}/lock with {lockoutEnd:null} read back isLocked=true, POST .../{id}/unlock read back isLocked=false; GET the row then PUT /api/customer/organization-memberships/{id} with the whole row and status=Invited read back Invited, and the same PUT with Approved restored it. GET /api/members/{contactId}, set currentOrganizationId, PUT /api/members read back the new currentOrganizationId. The other membership was untouched.
