@@ -54,5 +54,14 @@ evidence:
     bodyHash: 7d17b2f3b058
     who: Aleksandra-Mitricheva
     note: "REG-2026-10-28-1915 chrome: USD->EUR on a USD-only fixture PDP shows Price EUR 0.00, disabled stepper, in-stock badge, no unavailability message (suite case CAT-054)."
+  - method: observation
+    deployment: vcst_qa
+    build: 7983ac1fe08297d5
+    conditions: theme=2.62.0-pr-2628-d9ae-d9aeda83; store=B2B-store; role=personal account
+    at: 2026-11-11T14:06:36.282Z
+    by: session:7773ae1e
+    bodyHash: 7d17b2f3b058
+    who: Lenajava1
+    note: "Hybrid stand (local PR 2628 theme + vcst-qa backend), Firefox: USD->EUR on USD-only waffle-maker PDP shows Price EUR 0.00, disabled stepper, in-stock badge, no unavailability message. Same as entry; case CAT-054 asserts the opposite."
 ---
 Signed-in buyer, store with USD+EUR. Product priced only in USD (xAPI EUR price.actual 0, isBuyable false). Header currency -> EUR: product page 'Price and delivery' reads 'Price: €0.00', quantity stepper and input disabled, in-stock badge still shown, no message that the product is unavailable in this currency. The cart (converted to EUR) shows that line at €0.00; catalog cards show '€0.00'. A product with an EUR price shows its EUR price-list value, not a conversion.
