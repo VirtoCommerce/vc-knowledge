@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T18:18:20.731Z",
-  "count": 1888,
+  "generated": "2026-11-11T18:19:45.793Z",
+  "count": 1889,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11544,6 +11544,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-451E54B3",
+      "path": "entries/KB-451E54B3.md",
+      "subject": "An oversized file in an optional configurable File section is rejected client-side with 'File size exceeds the allowed {limit}', stays listed with its error, is never uploaded, and leaves the section on None with Add to cart enabled",
+      "question": "What happens when a buyer picks a file over the size limit in an optional File section of a configurable product?",
+      "questions": [
+        "Is an oversized product-configuration upload rejected before POST /api/files/product-configuration?",
+        "Does the upload area clear after a file is rejected for size in the configurable product File section?",
+        "Is Add to cart disabled when an optional File section shows an upload error?",
+        "Which error does the storefront show for a 24 MB PNG in a configurable File section?"
+      ],
+      "anchors": [
+        "/products-with-options/cfg-parents/agent-test-config-fileupload",
+        "POST /api/files/product-configuration"
+      ],
+      "scope": [
+        "section=optional",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-45276837",
       "path": "entries/KB-45276837.md",
       "subject": "Admin store blade: the help icon next to \"Store asset URL\" is a question-mark (fa-question-circle) that expands an inline field description with a \"Hide description\" link, not a popover",
@@ -11981,7 +12005,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
