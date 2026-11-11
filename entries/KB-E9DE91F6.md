@@ -39,5 +39,15 @@ evidence:
     bodyHash: 5270bfe96ccc
     who: Aleksandra-Mitricheva
     note: Still twice per mount (row-click SPA mount and direct full load) after Sales Rep PR #26.
+  - method: observation
+    deployment: vcst_qa
+    build: 3b66ce25e7926ad6
+    conditions: theme=2.62.0-alpha.2647; role=sales-rep
+    at: 2026-11-11T22:40:57.053Z
+    by: session:3b333ac1
+    bodyHash: 5270bfe96ccc
+    defect: suspected
+    who: kutasinaelena
+    note: "Still twice per mount on theme 2.62.0-alpha.2647: direct full load and SPA row-click mount each sent two byte-identical SalesRepCustomer requests (first beside GetLayout scope salesRepCustomerProfile, second beside the block queries)."
 ---
 Opening /company/my-customers/{organizationId} as a sales rep (both via the My customers row link and via direct URL, and again on an SPA re-mount) sends Query.salesRepCustomer twice with the same organizationId per mount: once together with SalesRepLayout(scope customerProfile), and a second time after the layout resolves, alongside the block queries (SalesRepCustomerOrderStatistics, SalesRepOrders, SalesRepTopSellers...). Both return 200 with identical data and empty errors[]; the heading, Customer information card and rail render consistent values. So Apollo does not collapse the profile's salesRepCustomer consumers into one request on this build.
