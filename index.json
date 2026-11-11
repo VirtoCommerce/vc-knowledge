@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T19:04:21.155Z",
-  "count": 1892,
+  "generated": "2026-11-11T19:10:11.915Z",
+  "count": 1893,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -40585,6 +40585,27 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EDF8313F",
+      "path": "entries/KB-EDF8313F.md",
+      "subject": "The /cart 'Recently browsed' carousel is shown only to signed-in users; an anonymous guest never gets it however many PDPs they visit",
+      "question": "Is the cart page 'Recently browsed' carousel shown to anonymous guests?",
+      "questions": [
+        "Why is there no Recently browsed block on /cart for a guest?",
+        "What does the Recently browsed carousel on the cart need to render?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "component=recently-browsed-products",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
