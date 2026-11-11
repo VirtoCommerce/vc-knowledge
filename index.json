@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T14:56:57.076Z",
-  "count": 1877,
+  "generated": "2026-11-11T15:08:52.078Z",
+  "count": 1878,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20353,6 +20353,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-795F2020",
+      "path": "entries/KB-795F2020.md",
+      "subject": "The storefront order details page offers a buyer no Cancel order action; an unpaid New order shows only Pay now",
+      "question": "Can a buyer cancel their own order on /account/orders/{id} in the storefront?",
+      "questions": [
+        "Is there a Cancel order button on the storefront order details page?",
+        "How does a B2B buyer cancel an order from the storefront?",
+        "What actions does an unpaid New order show on /account/orders/{id}?"
+      ],
+      "anchors": [
+        "/account/orders/{id}"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
