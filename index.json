@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T13:38:08.057Z",
-  "count": 1874,
+  "generated": "2026-11-11T13:51:23.169Z",
+  "count": 1876,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20675,6 +20675,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-7B4CAFF7",
+      "path": "entries/KB-7B4CAFF7.md",
+      "subject": "The storefront registers its FCM service worker only after sign-in, under scope /firebase-cloud-messaging-push-scope, with a versioned file name that changes with the theme build (v1.12 on theme 2.62.0-pr-2629, v1.13 on 2.62.0-pr-2628)",
+      "question": "Which FCM service worker file does the storefront register, under which scope, and when?",
+      "questions": [
+        "When does the storefront register its firebase messaging service worker?",
+        "What is the scope of the storefront push-messages service worker registration?",
+        "Is the fcm-service-worker file name versioned per theme build?"
+      ],
+      "anchors": [
+        "/firebase-cloud-messaging-push-scope",
+        "GET /fcm-service-worker-v1.13.js"
+      ],
+      "scope": [
+        "auth=signed-in",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7B9A982F",
       "path": "entries/KB-7B9A982F.md",
       "subject": "On /cart the line-item quantity stepper sends changeCartItemsQuantity (not changeCartItemQuantity); '-' is disabled at qty 1 and line total / Subtotal recompute to unit price x qty",
@@ -28441,7 +28464,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -32604,6 +32627,27 @@
       ],
       "scope": [
         "element=google-analytics",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C18660A1",
+      "path": "entries/KB-C18660A1.md",
+      "subject": "In the /account/orders Filters Start date calendar, Ctrl+Home moves focus to the first day of the shown month and Ctrl+End to its last day",
+      "question": "What do Ctrl+Home and Ctrl+End do in the /account/orders Filters date-picker calendar?",
+      "questions": [
+        "Does Ctrl+Home move focus to the first day of the month in the storefront calendar?",
+        "Calendar keyboard Ctrl+End behaviour in the orders date range filter"
+      ],
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "layout=desktop-split",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
