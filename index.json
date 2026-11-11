@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T16:43:00.514Z",
-  "count": 1884,
+  "generated": "2026-11-11T16:50:27.774Z",
+  "count": 1885,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -35222,6 +35222,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D09A7347",
+      "path": "entries/KB-D09A7347.md",
+      "subject": "On theme 2.62.0-alpha.2642 the SalesRep storefront plugin downloads completely (manifest, remoteEntry and chunks all 200, CDN copy identical to origin) yet never registers: hub routes show the \"Part of the site could not be loaded\" placeholder for reps and buyers, and the Sales Rep hub rail and Corporate \"Sales reps\" link are absent",
+      "question": "Why does /company/my-customers show \"Part of the site could not be loaded\" when every SalesRep plugin asset returns 200?",
+      "questions": [
+        "Is the Sales Rep hub working on vcst_qa with theme 2.62.0-alpha.2642?",
+        "Sales Rep plugin loads without 404 but hub routes stay on plugin-route-placeholder",
+        "Why is the Sales Rep hub rail missing for a sales rep holding sales-rep:access?"
+      ],
+      "anchors": [
+        "/company/my-customers",
+        "/company/dashboard",
+        "/company/sales-reps",
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
