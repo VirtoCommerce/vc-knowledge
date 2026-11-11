@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T08:50:58.172Z",
-  "count": 1868,
+  "generated": "2026-11-11T08:51:24.699Z",
+  "count": 1870,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6260,6 +6260,26 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-25C32184",
+      "path": "entries/KB-25C32184.md",
+      "subject": "On the OpenTelemetry-based ApplicationInsights module, BackgroundJobs metrics stop after the first export interval and sampled items keep itemCount=1",
+      "question": "Do BackgroundJobs metrics and sampling counts survive the Application Insights SDK 3.x / OpenTelemetry migration?",
+      "questions": [
+        "Why does VirtoCommerce.BackgroundJobs/jobs/execution.duration.ms stop appearing in Application Insights?",
+        "Does itemCount reflect microsoft.sample_rate after the OpenTelemetry migration?"
+      ],
+      "anchors": [
+        "GET /health"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-25E8DA24",
@@ -38745,6 +38765,27 @@
         "KB-54D11D0D",
         "KB-4E0175CF"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E918AC14",
+      "path": "entries/KB-E918AC14.md",
+      "subject": "With the OpenTelemetry-based ApplicationInsights module, a named GraphQL operation is recorded as 'POST graphql/<OperationName>' with url https://<host>/graphql; an unnamed POST /graphql is not recorded; exceptions join by operation_Id but have empty operation_Name",
+      "question": "How are GraphQL requests and their exceptions recorded in Application Insights after the OpenTelemetry migration?",
+      "questions": [
+        "What request name and url does App Insights record for a named xAPI GraphQL operation?",
+        "Is a POST /graphql without operation name tracked in Application Insights?",
+        "Is exceptions.operation_Name populated after the OpenTelemetry migration?"
+      ],
+      "anchors": [
+        "POST /graphql"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
