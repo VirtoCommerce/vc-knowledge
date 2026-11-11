@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T08:51:24.699Z",
-  "count": 1870,
+  "generated": "2026-11-11T08:52:10.079Z",
+  "count": 1871,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11644,6 +11644,28 @@
       "scope": [
         "integration=ga4",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-463F91CF",
+      "path": "entries/KB-463F91CF.md",
+      "subject": "saveLayout echoes the persisted layout with a modifiedDate that equals, to the tick, the modifiedDate a following Query.layout read returns",
+      "question": "Mutation saveLayout / Query.layout accountDashboard: does layout.modifiedDate equal saveLayout.modifiedDate on read-back?",
+      "questions": [
+        "Is the modifiedDate returned by Mutation.saveLayout the same value Query.layout returns afterwards?",
+        "What precision and format does X-Frontend layout modifiedDate use?"
+      ],
+      "anchors": [
+        "Mutation.saveLayout",
+        "Query.layout"
+      ],
+      "scope": [
+        "entity=customer-preference",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
