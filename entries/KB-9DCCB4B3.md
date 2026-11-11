@@ -38,5 +38,14 @@ evidence:
     bodyHash: b049b7a23684
     who: Aleksandra-Mitricheva
     note: "Both halves observed: rep-created row -> /account/orders/{id} with Pay now; buyer-placed row -> hub page with only Print order."
+  - method: observation
+    deployment: vcst_qa
+    build: 3b66ce25e7926ad6
+    conditions: theme=2.62.0-alpha.2647; role=sales-rep
+    at: 2026-11-11T21:59:38.044Z
+    by: session:3b333ac1
+    bodyHash: b049b7a23684
+    who: kutasinaelena
+    note: "TechFlow orders: AGENT-TEST-SRO-TF-REP-PLACED -> /account/orders/{id}; AGENT-TEST-SRO-TF-BUYER-PLACED -> /company/my-customers/{orgId}/orders/{orderId} hub page (H1 'Order #...', Print order only)."
 ---
 On vcst_qa (theme 2.60.0-alpha.2579, hub from the SalesRep plugin), signed in as a rep, /company/my-customers/{orgId}/orders listed all the customer's orders (creator-agnostic). Rows for orders the rep itself created (the same order shown as "My last order" on My customers) are links to /account/orders/{orderId}, which opens the account order page; rows for orders created by someone else link to /company/my-customers/{orgId}/orders/{orderId}, which renders the hub order page (heading "Order #<number>", Created date, status, totals) with no redirect. The "My last order" date on My customers matched the linked order's Created date.
