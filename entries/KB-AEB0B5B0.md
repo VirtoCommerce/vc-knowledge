@@ -23,5 +23,14 @@ evidence:
     at: 2026-11-11T06:52:20.925Z
     by: session:86a76b47
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcptcore_qa
+    build: 775727ee41d78e49
+    conditions: theme=2.62.0-pr-2625-ac8f; store=B2B-store
+    at: 2026-11-11T07:32:50.386Z
+    by: session:86a76b47
+    bodyHash: 4d55d33de877
+    who: Aleksandra-Mitricheva
+    note: "Re-observed through the UI only: buyer A chose Q4 + Last year (Sales) ON, signed out via account menu; buyer B signing in on the same browser landed on Q4 with Last year ON. Also: a fresh browser context starts with both Last year switches OFF; a reload keeps 12 months."
 ---
 2026-11-11, Chrome. Keys: vc-account-sales-report-period (e.g. 'q4'), vc-reporting-sales-last-year and vc-reporting-aov-last-year ('true'/'false'). Choosing Q4 and the Monthly sales Last year switch, then reloading, keeps both. Setting the period key to an unknown value and reloading shows Current year (the bad value stays stored). A no-org buyer chose Q2, signed out; an org buyer signing in on the same browser opened /account/dashboard on Q2. The layout itself (Query.layout) is per user server-side; only these view choices are per browser.

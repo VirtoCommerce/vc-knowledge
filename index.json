@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T07:16:51.224Z",
-  "count": 1864,
+  "generated": "2026-11-11T07:40:08.383Z",
+  "count": 1865,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26450,6 +26450,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9D483C08",
+      "path": "entries/KB-9D483C08.md",
+      "subject": "On /account/dashboard a no-change Save rewrites a layout whose only column block sits in mainRight (mainLeft empty) with that block moved to mainLeft",
+      "question": "Does saving the account dashboard layout without changes keep every block in the region it was saved in?",
+      "questions": [
+        "Does the storefront normalise empty layout columns when the buyer saves the dashboard?",
+        "After Edit layout + Save with no change, is the saved accountDashboard document identical except for the added fullWidth region?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Mutation.saveLayout",
+        "Query.layout"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
