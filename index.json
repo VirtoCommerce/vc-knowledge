@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T18:58:21.156Z",
-  "count": 1891,
+  "generated": "2026-11-11T19:04:21.155Z",
+  "count": 1892,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -111,6 +111,28 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-00541E16",
+      "path": "entries/KB-00541E16.md",
+      "subject": "The account-menu Organizations listbox shows its search box only when the user belongs to more than 10 organizations; a 2-org user gets a plain list with no search",
+      "question": "When does the storefront account-menu Organizations switcher show its organization search box?",
+      "questions": [
+        "Why is there no organization search in the account menu for a multi-org user?",
+        "What is the threshold for the org switcher search on vc-frontend?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.me"
+      ],
+      "scope": [
+        "component=account-menu-organizations",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
