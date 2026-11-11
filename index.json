@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T13:14:46.751Z",
-  "count": 1873,
+  "generated": "2026-11-11T13:38:08.057Z",
+  "count": 1874,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19983,6 +19983,27 @@
       ],
       "scope": [
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-775A3D8C",
+      "path": "entries/KB-775A3D8C.md",
+      "subject": "Sales Rep Hub call list shows at most: primary contact's phones + ONE org phone (the first) + the default (else first) address phone; other org phones are never returned",
+      "question": "Why does the Sales Rep Hub call-number list show only 2 of an organization's 5+ phone numbers?",
+      "questions": [
+        "Which phone numbers can the sales rep call list on /company/my-customers contain?",
+        "Which address phone does salesRepCustomer return when no address is default?"
+      ],
+      "anchors": [
+        "/company/my-customers",
+        "Query.salesRepCustomer"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
