@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T07:43:15.276Z",
-  "count": 1866,
+  "generated": "2026-11-11T08:42:03.473Z",
+  "count": 1867,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2763,6 +2763,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1071C552",
+      "path": "entries/KB-1071C552.md",
+      "subject": "Without the VirtoCommerce.ApplicationInsights module, a platform whose Serilog config names Serilog.Sinks.ApplicationInsights stops at host build with FileNotFoundException — the sink assembly ships only inside that module",
+      "question": "Does the platform start without the VirtoCommerce.ApplicationInsights module when Serilog__Using includes Serilog.Sinks.ApplicationInsights?",
+      "questions": [
+        "Why does the platform crash with FileNotFoundException Serilog.Sinks.ApplicationInsights after uninstalling the Application Insights module?",
+        "Which package ships the Serilog Application Insights sink in Virto Commerce?",
+        "What must be removed from configuration when the ApplicationInsights module is uninstalled?"
+      ],
+      "anchors": [
+        "GET /health"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
