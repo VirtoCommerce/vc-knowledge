@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T17:05:33.411Z",
-  "count": 1885,
+  "generated": "2026-11-11T17:08:51.082Z",
+  "count": 1886,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8934,6 +8934,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-35AC70AD",
+      "path": "entries/KB-35AC70AD.md",
+      "subject": "SalesRep plugin 3.1023.0 imports the dashboard layout API (statBlocks, registerBlock, useLayout, LayoutSurface and 14 more) from the shared @vc-frontend/core singleton; a theme built without that API but declaring the same core version 0.2.11 is accepted by module federation and the plugin init throws, so every hub route shows the plugin placeholder",
+      "question": "Why does the SalesRep storefront plugin load all its assets but never register on a theme alpha build?",
+      "questions": [
+        "What does the sales-rep remote throw when loaded with loadRemote on theme 2.62.0-alpha.2642?",
+        "Which @vc-frontend/core exports does the SalesRep plugin 3.1023.0 require from the host?",
+        "Does module federation reject a host whose @vc-frontend/core lacks exports the plugin needs?",
+        "Why is there no console error when the Sales Rep hub shows 'Part of the site could not be loaded'?"
+      ],
+      "anchors": [
+        "/company/dashboard",
+        "/company/my-customers",
+        "/modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json",
+        "Query.store.plugins"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
