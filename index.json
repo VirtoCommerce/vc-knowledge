@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T14:51:34.667Z",
-  "count": 1876,
+  "generated": "2026-11-11T14:56:57.076Z",
+  "count": 1877,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5136,6 +5136,30 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=390,1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1E098549",
+      "path": "entries/KB-1E098549.md",
+      "subject": "A hidden status tab of the dashboard's My recent orders block is stored as a recent_orders block setting tab.<Status>=false, and it survives a save made while the buyer has no order in that status",
+      "question": "How does the account dashboard store which status tabs of My recent orders are hidden, and is a hidden status kept when no order has that status?",
+      "questions": [
+        "Mutation.saveLayout recent_orders settings key for hidden tabs",
+        "Is there a hiddenTabs field in the accountDashboard layout?",
+        "Does saving the dashboard layout drop a hidden status that has no orders right now?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Mutation.saveLayout",
+        "Query.layout"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
