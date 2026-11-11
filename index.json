@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T19:40:14.925Z",
-  "count": 1893,
+  "generated": "2026-11-11T19:40:37.568Z",
+  "count": 1894,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -39075,6 +39075,29 @@
       "scope": [
         "feature=impersonation",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E7C48016",
+      "path": "entries/KB-E7C48016.md",
+      "subject": "Storefront category breadcrumb and page title show the category's SEO page title, not its name, when an SEO page title is set",
+      "question": "Where does the category page breadcrumb label on the storefront come from — the category name or its SEO page title?",
+      "questions": [
+        "Why does the breadcrumb show a slug-like label instead of the category name?",
+        "What does Query.categories breadcrumbs.title return for a category with an SEO page title?"
+      ],
+      "anchors": [
+        "Query.categories",
+        "/home-appliances"
+      ],
+      "scope": [
+        "feature=catalog-navigation",
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
