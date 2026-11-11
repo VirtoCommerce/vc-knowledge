@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T15:27:07.254Z",
-  "count": 1879,
+  "generated": "2026-11-11T16:01:56.773Z",
+  "count": 1880,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19129,6 +19129,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-70FEDC01",
+      "path": "entries/KB-70FEDC01.md",
+      "subject": "On /cart the Pick points dialog's locations radiogroup has the raw i18n key 'pages.checkout.shipping.links.select_pickup_point' as its accessible name",
+      "question": "What accessible name does the pickup-locations radiogroup in the /cart Pick points dialog have?",
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
