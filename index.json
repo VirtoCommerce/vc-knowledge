@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T18:32:20.796Z",
-  "count": 1890,
+  "generated": "2026-11-11T18:38:20.847Z",
+  "count": 1891,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37805,6 +37805,28 @@
       "scope": [
         "feature=configurable-products",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DFD8AB55",
+      "path": "entries/KB-DFD8AB55.md",
+      "subject": "Adding a product to a NEW list from the PDP Add to list dialog sends GA4 add_to_wishlist twice for one Save",
+      "question": "How many GA4 add_to_wishlist events does one Save in the PDP Add to list dialog send when the list is created in the same dialog?",
+      "questions": [
+        "Duplicate add_to_wishlist when creating a new list from Add to list?",
+        "Does Add new list + Save in the wishlist dialog double-report add_to_wishlist?"
+      ],
+      "anchors": [
+        "/product/{id}",
+        "window.dataLayer"
+      ],
+      "scope": [
+        "event=add_to_wishlist",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
