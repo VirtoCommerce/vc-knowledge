@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T06:48:20.076Z",
-  "count": 1859,
+  "generated": "2026-11-11T06:49:45.973Z",
+  "count": 1862,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2778,6 +2778,29 @@
       "scope": [
         "auth=api-key",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-10E13384",
+      "path": "entries/KB-10E13384.md",
+      "subject": "Query.orderStatistics reflects an admin-created order and its cancellation on the very next read; no stale statistics cache is observed",
+      "question": "Does Query.orderStatistics pick up a newly created or newly cancelled order immediately, or after a cache delay?",
+      "questions": [
+        "Is the buyer dashboard sales statistics cache invalidated when an order is cancelled?",
+        "How long after cancelling an order does orderStatistics drop it?"
+      ],
+      "anchors": [
+        "Query.orderStatistics",
+        "PUT /api/order/customerOrders",
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -28345,6 +28368,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-A8C176E4",
+      "path": "entries/KB-A8C176E4.md",
+      "subject": "On SalesRep 3.1017.0 the Sales Rep hub dashboard still loads its layout through salesRepLayout(scope \"dashboard\"), with regions statistics/mainLeft/mainRight and no fullWidth region",
+      "question": "Which layout operation and scope does /company/dashboard use on a stand running the released SalesRep 3.1017.0 module?",
+      "anchors": [
+        "/company/dashboard",
+        "Query.salesRepLayout"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A9005849",
       "path": "entries/KB-A9005849.md",
       "subject": "Catalog Personalization read endpoints accept catalog read permission regardless of its catalog scope, by design",
@@ -28908,6 +28949,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AC688064",
+      "path": "entries/KB-AC688064.md",
+      "subject": "A buyer's saveLayout document is stored as customer preference Layout.{scope}.{storeId}; deleting it via DELETE /api/customer-preferences returns Query.layout to null (never-saved)",
+      "question": "How can a buyer's saved dashboard layout be reset to the never-saved state when saveLayout has no delete operation?",
+      "anchors": [
+        "Query.layout",
+        "DELETE /api/customer-preferences",
+        "POST /api/customer-preferences/search"
+      ],
+      "scope": [
+        "entity=customer-preference",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
