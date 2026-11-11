@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T06:49:45.973Z",
-  "count": 1862,
+  "generated": "2026-11-11T06:53:55.579Z",
+  "count": 1864,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12191,6 +12191,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-49D0D626",
+      "path": "entries/KB-49D0D626.md",
+      "subject": "The dashboard Sales Statistics block compares the current month with the same last-year month prorated by elapsed days (sales and order count), but its month tooltip shows the full last-year month as the base",
+      "question": "How does the /account/dashboard Sales Statistics block compute the last-year base for the current month, and what does the month tooltip show?",
+      "questions": [
+        "Why does the Nov badge percentage not match the Nov tooltip last-year revenue?",
+        "Does the current-year YoY in the Sales Statistics tiles use a prorated order count?",
+        "Why does the Sales Statistics orders YoY differ from the YTD stat card YoY?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.orderStatistics"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -29529,6 +29552,28 @@
         "feature=mfa-store-modes",
         "store-mode=disabled",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AEB0B5B0",
+      "path": "entries/KB-AEB0B5B0.md",
+      "subject": "The Sales Statistics period and Last year toggles persist in browser localStorage under keys not scoped to the user, so the next user on the same browser inherits them; an invalid stored period falls back to Current year",
+      "question": "Where does the /account/dashboard Sales Statistics block remember the selected period and Last year toggles, and is that per user?",
+      "questions": [
+        "Does the Sales Statistics period survive a reload?",
+        "Does a second user on the same browser see the previous user's Sales Statistics period?",
+        "What happens when the stored Sales Statistics period is invalid?"
+      ],
+      "anchors": [
+        "/account/dashboard"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
