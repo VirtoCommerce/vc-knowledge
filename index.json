@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T21:36:53.285Z",
-  "count": 1895,
+  "generated": "2026-11-11T21:56:59.793Z",
+  "count": 1897,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12400,6 +12400,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4998B55A",
+      "path": "entries/KB-4998B55A.md",
+      "subject": "On /sign-up a duplicate email is rejected inline with 'This email is already registered with us' and the form offers no sign-in or reset-password link",
+      "question": "What does /sign-up show when the email is already registered, and does it suggest signing in or resetting the password?",
+      "questions": [
+        "Does storefront registration with an existing email link to sign-in or forgot password?",
+        "What error does the sign-up form show for an email that already has an account?"
+      ],
+      "anchors": [
+        "/sign-up"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -29397,6 +29417,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AC4B6E46",
+      "path": "entries/KB-AC4B6E46.md",
+      "subject": "With Stores.EmailVerificationRequired=false, a self-registered storefront user signs in before confirming the email, and its contact is Approved, not Locked",
+      "question": "Can a newly self-registered storefront user sign in before confirming the email when the store's email verification is enabled but not required?",
+      "questions": [
+        "What contact status does /sign-up give a new personal user when email verification is not required?",
+        "Is unverified-email sign-in blocked when Stores.EmailVerificationEnabled is true but EmailVerificationRequired is false?"
+      ],
+      "anchors": [
+        "/sign-up",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
