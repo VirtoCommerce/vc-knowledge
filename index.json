@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T18:25:20.723Z",
-  "count": 1889,
+  "generated": "2026-11-11T18:32:20.796Z",
+  "count": 1890,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12706,7 +12706,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -21660,6 +21660,29 @@
       "scope": [
         "module=catalog",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7F3D0B09",
+      "path": "entries/KB-7F3D0B09.md",
+      "subject": "On /cart with Bank card (Skyflow), add_payment_info fires once on method selection and is not re-sent after a later quantity change, so it carries the pre-change value and quantity",
+      "question": "Does GA4 add_payment_info on /cart reflect a cart quantity change made after Bank card (Skyflow) is selected?",
+      "questions": [
+        "Is the Skyflow add_payment_info value stale when the cart is changed after the card form mounts?",
+        "VCST-5198 stale add_payment_info still reproducing on the storefront cart?"
+      ],
+      "anchors": [
+        "/cart",
+        "window.dataLayer"
+      ],
+      "scope": [
+        "event=add_payment_info",
+        "payment-method=skyflowpaymentmethod",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
