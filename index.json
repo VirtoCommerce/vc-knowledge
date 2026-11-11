@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T15:08:52.078Z",
-  "count": 1878,
+  "generated": "2026-11-11T15:27:07.254Z",
+  "count": 1879,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30166,6 +30166,30 @@
         "module=taskmanagement",
         "role=admin",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B11D22FA",
+      "path": "entries/KB-B11D22FA.md",
+      "subject": "VirtoCommerce.ApplicationInsights 3.1007.0 with VirtoCommerce.Xapi 3.1030.0 stops platform startup: Xapi fails with TypeLoadException ITelemetryProcessor, every GraphQL module fails post-init, host exits with IGraphQLTextSerializer not set",
+      "question": "Can VirtoCommerce.ApplicationInsights 3.1007.0 run with VirtoCommerce.Xapi 3.1030.0?",
+      "questions": [
+        "Why does the platform fail to start with Could not load type Microsoft.ApplicationInsights.Extensibility.ITelemetryProcessor?",
+        "Platform startup fails with IGraphQLTextSerializer not set in DI container after a module upgrade",
+        "Which Xapi version is needed for ApplicationInsights 3.1007.0 (Application Insights 3.0 / OpenTelemetry)?",
+        "Every x-module fails post-initialize with No service for type GraphiQLOptions"
+      ],
+      "anchors": [
+        "POST /graphql",
+        "GET /api/platform/modules"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
