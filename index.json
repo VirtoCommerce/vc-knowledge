@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T12:54:44.820Z",
-  "count": 1872,
+  "generated": "2026-11-11T12:55:38.145Z",
+  "count": 1873,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4720,7 +4720,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -29027,6 +29027,28 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AB86A379",
+      "path": "entries/KB-AB86A379.md",
+      "subject": "On /company/my-customers the multi-number call list (role=dialog \"Choose a number to call\") closes when Tab moves focus past its last number or Shift+Tab moves it back to the trigger; Escape returns focus to the trigger",
+      "question": "Does the Sales Rep my-customers call-number dropdown close when keyboard focus leaves it?",
+      "questions": [
+        "/company/my-customers call dropdown keyboard Tab focus out closes popover",
+        "Where does focus go after Escape in the Choose a number to call list?",
+        "Can two call lists be open at once on my customers?"
+      ],
+      "anchors": [
+        "/company/my-customers"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
