@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T21:25:48.380Z",
-  "count": 1894,
+  "generated": "2026-11-11T21:27:45.344Z",
+  "count": 1895,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30774,6 +30774,31 @@
       "scope": [
         "module=virtocommerce.imagetools@3.1006.0",
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B346C56A",
+      "path": "entries/KB-B346C56A.md",
+      "subject": "After 'Back to {operator}' ends an impersonation, the storefront always lands the operator on /company/members, whatever page the revert started from",
+      "question": "Where does the storefront land after an operator clicks 'Back to {operator}' to end a Login-on-behalf session?",
+      "questions": [
+        "What URL does impersonation revert redirect to?",
+        "Does reverting impersonation go to home, dashboard or company members?",
+        "Is the operator signed out after Back to operator?"
+      ],
+      "anchors": [
+        "/account/impersonate/{id}",
+        "/company/members",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "action=revert",
+        "grant=impersonate",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
