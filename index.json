@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T16:01:56.773Z",
-  "count": 1880,
+  "generated": "2026-11-11T16:16:40.682Z",
+  "count": 1881,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -803,6 +803,26 @@
       "scope": [
         "module=xcatalog",
         "subsystem=search-index",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-052D601E",
+      "path": "entries/KB-052D601E.md",
+      "subject": "On storefront /account/profile the Last name and Email inputs carry the First name placeholder \"Enter your first name\"",
+      "question": "What placeholders do the First name, Last name and Email inputs on /account/profile show?",
+      "questions": [
+        "Why does the Last name field on the profile page say Enter your first name?",
+        "Which i18n keys does the /account/profile form use for its input placeholders?"
+      ],
+      "anchors": [
+        "/account/profile"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
