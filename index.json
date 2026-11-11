@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T11:00:03.731Z",
+  "generated": "2026-11-11T11:00:11.201Z",
   "count": 1872,
   "entries": [
     {
@@ -35211,7 +35211,7 @@
       "status": "active",
       "trust": 6,
       "disputed": 1,
-      "contested": 2
+      "contested": 3
     },
     {
       "id": "KB-D1DF95A5",

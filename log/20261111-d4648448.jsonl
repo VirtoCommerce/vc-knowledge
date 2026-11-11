@@ -1,1 +1,2 @@
-{"at":"2026-11-11T07:16:51.158Z","kind":"session","session":"d4648448","tools":37,"turns":1,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-11-11T06:42:26.239Z","lastAt":"2026-11-11T06:45:55.523Z","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-11T11:00:10.952Z","kind":"session","session":"d4648448","tools":79,"turns":2,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-11-11T06:42:26.239Z","lastAt":"2026-11-11T09:32:48.074Z","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-11T09:29:29.107Z","kind":"restart","why":"state-dropped","who":"Aleksandra-Mitricheva"}
