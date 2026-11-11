@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T16:37:04.953Z",
-  "count": 1883,
+  "generated": "2026-11-11T16:43:00.514Z",
+  "count": 1884,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -906,6 +906,28 @@
         "module=salesrep",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-05D198A4",
+      "path": "entries/KB-05D198A4.md",
+      "subject": "When GET /api/platform/localization/regionalformats returns [] while the profile stores RegionalFormat 'en', every open of Admin Manage profile throws TypeError reading 'name' and the blade intermittently stays in its loading overlay, blocking all its controls",
+      "question": "Why does the Admin User profile blade throw a console TypeError and sometimes stay locked in loading?",
+      "questions": [
+        "Admin Manage profile blade cannot be clicked, overlay intercepts pointer events",
+        "What happens in the user profile blade when the regional formats list is empty?"
+      ],
+      "anchors": [
+        "GET /api/platform/localization/regionalformats",
+        "GET /api/platform/profiles/currentuser"
+      ],
+      "scope": [
+        "module=platform",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3385,7 +3407,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12232,7 +12254,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-4971F946",
