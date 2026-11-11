@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T16:34:33.916Z",
-  "count": 1882,
+  "generated": "2026-11-11T16:37:04.953Z",
+  "count": 1883,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34005,6 +34005,27 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C9F55F74",
+      "path": "entries/KB-C9F55F74.md",
+      "subject": "After a full page load straight onto #!/workspace/security, the Admin Security blade lists Users, Roles, OAuth applications but no Sign-in log entry; it appears only after navigating to another workspace and back",
+      "question": "Does the Admin Security blade always show the Sign-in log entry, including after a full page reload on #!/workspace/security?",
+      "questions": [
+        "Why is Sign-in log missing from the Security workspace after F5?",
+        "Security blade entries after deep-link reload in the back office"
+      ],
+      "anchors": [
+        "/workspace/security"
+      ],
+      "scope": [
+        "feature=sign-in-log",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
