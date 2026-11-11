@@ -24,5 +24,14 @@ evidence:
     by: session:ce3cfc2a
     who: Aleksandra-Mitricheva
     note: "distinct: About add_payment_info trigger timing (payment + billing validity), not add_to_cart source_route nor add_shipping_info ordering."
+  - method: observation
+    deployment: vcst_qa
+    build: 3b66ce25e7926ad6
+    conditions: theme=2.62.0-alpha.2647
+    at: 2026-11-11T18:20:09.460Z
+    by: session:7e403256
+    bodyHash: 5d311762b064
+    who: kutasinaelena
+    note: "Same sequence after Ground->Pickup->Shipping: Datatrans selected, nothing; ticking Same as shipping address pushed add_payment_info DatatransPaymentMethod value 189.6 = Total, Place order enabled."
 ---
 Signed-in user, /cart, shipping Fixed Rate (Ground). Billing 'Same as shipping address' was unchecked (it unchecks after toggling Pickup then Shipping). Selecting Bank card (Datatrans), then Manual: AddOrUpdateCartPayment mutation sent each time, but no add_payment_info in window.dataLayer. Re-selecting Datatrans and ticking 'Same as shipping address' immediately pushed add_payment_info {payment_type: DatatransPaymentMethod, currency USD, value 199.2 (= order Total incl. shipping+tax), items_count 1}, and Place order became enabled. So the event follows payment-data validity, not the method selection.
