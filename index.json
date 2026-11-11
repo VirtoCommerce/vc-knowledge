@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T08:52:10.079Z",
-  "count": 1871,
+  "generated": "2026-11-11T11:00:03.731Z",
+  "count": 1872,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -15594,6 +15594,29 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-598B1B22",
+      "path": "entries/KB-598B1B22.md",
+      "subject": "vc-mcp-onx from 1.0.0-alpha.28 rejects date-time tool inputs without seconds (MCP error 2001); alpha.23 accepts them",
+      "question": "Which date-time formats do the vc-mcp-onx (onX MCP) tools accept for createdAtMin / updatedAtMin?",
+      "questions": [
+        "Why does get-orders return MCP error 2001 for createdAtMin?",
+        "Does the onX MCP server accept 2026-01-01T10:00Z without seconds?",
+        "What changed in vc-mcp-onx date validation after the zod 4.6 update?"
+      ],
+      "anchors": [
+        "POST /mcp/get-orders",
+        "POST /mcp/get-products"
+      ],
+      "scope": [
+        "component=vc-mcp-onx",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
