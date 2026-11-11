@@ -65,5 +65,14 @@ evidence:
     defect: VCST-6676
     who: Aleksandra-Mitricheva
     note: "2026-11-11 12:39Z, fresh isolated Chrome context: loader's remoteEntry.js = cf HIT, age 6996, last-modified 2026-11-04 14:22:44, imports index-BrOa4hLN / virtualExposes-BMpwOUpz; my-customers-BL3s5j4U.js, link-my-customers-CdzpMlnX.js + 7 more chunks 404; /company/my-customers stays on 'Loading page…'. Same URL with ?v=8DF3FE85C18EE00 (cache-key bust) = MISS, last-modified 2026-11-11 11:38:52, imports virtualExposes-CCH71ksq (matches mf-manifest). Manifest ?v= served the new build's index-COp4Qn18 -> mixed build."
+  - method: observation
+    deployment: vcptcore_qa
+    build: e8ff6ac5fbd4c99e
+    conditions: module:VirtoCommerce.SalesRep=3.1023.0-pr-37-31e8; theme=2.62.0-alpha.2643; cdn=cloudflare; browser=chromium
+    at: 2026-11-11T12:41:10.730Z
+    by: session:a3241c2b
+    bodyHash: ebfa79cc4ca3
+    who: Aleksandra-Mitricheva
+    note: "2026-11-11 12:40Z, fresh Chrome context after a theme redeploy: browser remoteEntry.js = cf HIT, last-modified 2026-11-04 14:22:44, age 6993, virtualExposes-BMpwOUpz; curl with Origin reproduces it; without Origin or with ?cb= = BYPASS, last-modified 2026-11-11 11:38:52, virtualExposes-CCH71ksq (matches the manifest). my-customers-BL3s5j4U.js + 8 more chunks 404, /company/my-customers shows 'Part of the site could not be loaded'."
 ---
 vcst 2026-11-05 15:40Z, SalesRep 3.1018.0-pr-33-ff13 deployed at 14:46:38. Same URL /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/remoteEntry.js on the storefront origin: curl without an Origin header → cf-cache-status HIT, last-modified 14:46:38, age 2427, body references virtualExposes-DgEd6DeA (ff13). curl WITH 'Origin: <storefront origin>' plus Sec-Fetch-Mode: cors (what the browser's Module Federation loader sends) → HIT, last-modified 12:23:20, age 3471, body references virtualExposes-CdDcSffn (the previous build). Response carries only 'vary: Accept-Encoding' and cache-control max-age=14400, so the CDN holds a separate object for CORS requests that was cached shortly before the deploy and outlives it by up to 4 h. In Edge, after clearing the HTTP cache and signing in, Performance entries show remoteEntry.js and virtualExposes-CdDcSffn.js re-fetched (then served from cache), the dashboard chunk 404s and /company/dashboard stays on 'Loading page…'. Consequences: (1) a curl check without Origin passes while browsers fail; probe with the Origin header to see what browsers get; (2) clearing the browser cache only helps once the CORS copy at the CDN has expired or been purged; (3) mf-manifest.json is fetched with ?v= and is DYNAMIC, so it can name the new index chunk while remoteEntry is old, a mixed build. This refines KB-C2202F86 (browser cache) and KB-4358B2EC (CDN copy).
