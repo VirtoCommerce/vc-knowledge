@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-11T07:40:08.383Z",
-  "count": 1865,
+  "generated": "2026-11-11T07:43:15.276Z",
+  "count": 1866,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8257,6 +8257,30 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3191E1FC",
+      "path": "entries/KB-3191E1FC.md",
+      "subject": "The buyer order history at /account/orders lists the buyer's orders from every store, while the /account/dashboard order statistics count only the current store's orders",
+      "question": "Why does /account/orders show more orders for a month than the /account/dashboard order statistics (Query.orderStatistics) count?",
+      "questions": [
+        "Does Query.orderStatistics filter by store while the storefront order list does not?",
+        "Why does the dashboard MTD order count differ from the number of orders on /account/orders?",
+        "Is an order placed in another store counted in the buyer dashboard statistics?"
+      ],
+      "anchors": [
+        "/account/orders",
+        "/account/dashboard",
+        "Query.orderStatistics"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
