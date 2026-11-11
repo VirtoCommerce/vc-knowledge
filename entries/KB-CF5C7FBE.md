@@ -40,5 +40,14 @@ evidence:
     bodyHash: 44c7e533fedd
     who: Aleksandra-Mitricheva
     note: "Real-world occurrence of case (c), no interception: a vc-frontend-next PR build (host core-api facade 0.2.3) with SalesRep plugin 3.1017.0-pr-31 (requiredHostVersion ^0.2.4). mf-manifest.json fetched 200, remoteEntry.js never requested; rep (sales-rep:access, SalesRep.Enabled=true) and buyer both get the host 404 on /company/dashboard, no hub rail, no Corporate Sales reps link, no console message naming the plugin. The build also gates its built-in hub on sales_rep_builtin_enabled=false, so nothing replaces the skipped plugin."
+  - method: observation
+    deployment: vcptcore_qa
+    build: e8ff6ac5fbd4c99e
+    conditions: platform=3.1096.0; theme=vc-frontend-next-3.3.0-pr-7-7bd1; host-core=0.2.5; module:VirtoCommerce.SalesRep=3.1023.0-pr-37-31e8; plugin-requiredHostVersion=^0.2.9; store=B2B-store
+    at: 2026-11-11T12:26:38.582Z
+    by: session:5a17d9e3
+    bodyHash: 44c7e533fedd
+    who: Aleksandra-Mitricheva
+    note: "Case (c) again, real-world: SalesRep plugin 3.1023.0-pr-37-31e8 (pluginVersion 0.2.5, requiredHostVersion ^0.2.9) vs host @vc-frontend/core 0.2.5. mf-manifest 200, remoteEntry never requested, /company/my-customers = host 404 for a rep, account menu has no hub entries, zero console messages at any level."
 ---
 Client-side interception of GET /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/mf-manifest.json, signed in as a sales rep and as an org buyer. (a) 404: /company/dashboard, /company/my-customers and /company/sales-reps render the host 404 "Page not found / An error occurred. Should we take you back to home page?" inside the account layout; the "Sales Rep hub" rail section and the Corporate "Sales reps" link are absent; one console error (the 404 resource). (b) 200 text/html (the storefront index document, as a missing /modules ingress would return): the same 404 page and withdrawn link, and ZERO console errors. (c) manifest JSON rewritten to metaData.requiredHostVersion "^0.3.0" (real value "^0.2.3"): remoteEntry.js and no plugin chunk is ever requested (fail-closed), same 404 page, no console message. In all three the home page and a product page boot and stay usable, no uncaught error, no Reload offer. Browser telemetry (Application Insights) records only the manifest fetch as a RemoteDependency — success:false for 404, success:TRUE for the HTML case — plus a Pageview named after the plugin route (SalesRepDashboard / SalesRepMyCustomers) although the user sees a 404; no exception or custom event is sent. Contrast: when the manifest is fine but remoteEntry.js itself fails to download, the route shows "Part of the site could not be loaded. Please reload the page to continue." with a Reload page button, and clicking it with the network restored loads the hub.
