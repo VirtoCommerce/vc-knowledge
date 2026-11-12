@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T10:59:24.873Z",
-  "count": 1919,
+  "generated": "2026-11-12T10:59:33.451Z",
+  "count": 1920,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14765,6 +14765,32 @@
         "module=taskmanagement",
         "role=admin",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5222F7F6",
+      "path": "entries/KB-5222F7F6.md",
+      "subject": "With an admin-set Required user mode, requestMfaChangeCode is refused without organizationId (mfa_locked_by_administrator, no email) but succeeds with organizationId for the org MFA permission holder, and the company widget on /company/info sends organizationId",
+      "question": "Can an organization maintainer whose own MFA mode is Required (set by the administrator) still turn the company MFA on or off from /company/info, and what does requestMfaChangeCode check with and without organizationId?",
+      "questions": [
+        "Does requestMfaChangeCode send organizationId from the company MFA widget?",
+        "Why is requestMfaChangeCode refused with mfa_locked_by_administrator for a user set to Required?",
+        "Does the storefront account security MFA widget send organizationId in requestMfaChangeCode?",
+        "Is an email code sent when requestMfaChangeCode is refused?"
+      ],
+      "anchors": [
+        "Mutation.requestMfaChangeCode",
+        "/company/info",
+        "/account/security",
+        "Mutation.updateMfaOrganizationMode"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
