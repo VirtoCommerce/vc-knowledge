@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:21:58.890Z",
-  "count": 1926,
+  "generated": "2026-11-12T11:24:19.718Z",
+  "count": 1927,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8400,7 +8400,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -31716,7 +31716,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-B5DF20A1",
@@ -35854,6 +35855,36 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CFF49BB0",
+      "path": "entries/KB-CFF49BB0.md",
+      "subject": "With every organization membership locked, the storefront user sees only their own orders: organizationOrders, organization(id) and org order details are Forbidden, and /account/orders drops the All orders tab",
+      "question": "When all of a B2B contact's organization memberships are locked, do /account/orders and the dashboard still expose the locked organizations' orders?",
+      "questions": [
+        "Does a locked org member still see organization orders on the storefront?",
+        "What does Query.organizationOrders return for a contact whose memberships are all locked?",
+        "Can a token requested with organization_id of a locked organization read that organization's data?",
+        "What happens on /company/members when the user has no organization in context?"
+      ],
+      "anchors": [
+        "/account/orders",
+        "Query.organizationOrders",
+        "Query.organization",
+        "Query.orders",
+        "/company/members",
+        "/company/info",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "membership-state=all-locked",
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
