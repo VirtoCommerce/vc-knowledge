@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:03:39.866Z",
-  "count": 1922,
+  "generated": "2026-11-12T11:08:07.119Z",
+  "count": 1923,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -38182,6 +38182,27 @@
       "scope": [
         "role=personal customer and organization maintainer",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DE53028F",
+      "path": "entries/KB-DE53028F.md",
+      "subject": "After an invitee declines, the /company/members row shows Inactive and its Actions menu offers no Resend invite",
+      "question": "/company/members row actions for a Rejected invite: is Resend invite offered after the invitee declines?",
+      "questions": [
+        "Can a maintainer resend an organization invitation the invitee declined?",
+        "What badge does a declined invitation show in the company members roster?"
+      ],
+      "anchors": [
+        "/company/members"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
