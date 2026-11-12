@@ -56,5 +56,14 @@ evidence:
     bodyHash: 6a343caecf3f
     who: Aleksandra-Mitricheva
     note: "Re-seen 2026-10-29: GET /firebase-messaging-sw.js 404 at Logout from the account menu for two B2B buyer/admin accounts; sign-out completed."
+  - method: observation
+    deployment: vcst_qa
+    build: 3b66ce25e7926ad6
+    conditions: theme=2.62.0-alpha.2647; platform=3.1097.0; signin=password
+    at: 2026-11-12T05:55:28.733Z
+    by: session:7e403256
+    bodyHash: 6a343caecf3f
+    who: kutasinaelena
+    note: "Re-seen 2026-11-12: 3x GET /firebase-messaging-sw.js 404 in the HAR, one per account-menu Logout (3 accounts); sign-out completed each time."
 ---
 vcst_qa 2026-10-09, theme vc-frontend-next 3.0.0-alpha.2685: during an OTP sign-in then Logout from the account menu, the browser fetched GET {storefront}/firebase-messaging-sw.js as a script at the moment of logout; the storefront returned 404 (text/html), and the console logged one error "A bad HTTP response code (404) was received when fetching the script." The request does not appear in the page's own network list (it is a service-worker script fetch) but is in the HAR. A direct GET of the same path also returns 404. Sign-out itself completed normally (redirect to /sign-in?returnUrl=/account/dashboard, header shows Sign in). Whether this is a missing web-push (Firebase) configuration on this deployment or a theme packaging gap was not determined.
