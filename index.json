@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:10:03.707Z",
-  "count": 1925,
+  "generated": "2026-11-12T11:18:04.813Z",
+  "count": 1926,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9010,6 +9010,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-356A2FB9",
+      "path": "entries/KB-356A2FB9.md",
+      "subject": "organization.contactRoles includes roles from OrganizationMembership rows whose user's contact is not linked to the org, so the /company/members Role facet can offer a role the contacts list can never return",
+      "question": "Why does the /company/members Role facet offer a role that returns zero members when applied?",
+      "questions": [
+        "Where do the Role filter options on /company/members come from?",
+        "Why does organization.contactRoles return a role no listed contact holds?",
+        "Why does GetOrganizationContacts with roleIds return totalCount 0 for a role the facet offers?"
+      ],
+      "anchors": [
+        "/company/members",
+        "Query.organization.contactRoles",
+        "Query.organization.contacts"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
