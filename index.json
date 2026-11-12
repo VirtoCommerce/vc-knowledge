@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T09:09:21.119Z",
-  "count": 1911,
+  "generated": "2026-11-12T09:12:01.530Z",
+  "count": 1912,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9526,6 +9526,28 @@
       ],
       "scope": [
         "actor=anonymous",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-37F92AE6",
+      "path": "entries/KB-37F92AE6.md",
+      "subject": "/sign-up rejects a Last name containing digits with \"'Last Name' contains invalid characters.\" above the Sign up button; a letters-only name registers and lands on /successful-registration",
+      "question": "Does storefront registration accept a person name with digits in it?",
+      "questions": [
+        "Why does Company account sign-up fail with 'Last Name' contains invalid characters?",
+        "Can a test account be registered with last name RegUser009?"
+      ],
+      "anchors": [
+        "/sign-up",
+        "/successful-registration"
+      ],
+      "scope": [
+        "account=guest",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
