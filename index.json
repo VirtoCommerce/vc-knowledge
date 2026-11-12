@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:00:14.782Z",
-  "count": 1920,
+  "generated": "2026-11-12T11:03:39.866Z",
+  "count": 1922,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -23863,6 +23863,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-89F148EC",
+      "path": "entries/KB-89F148EC.md",
+      "subject": "Outside a CustomerChoice store, updateMfaUserMode for a user the administrator set to Required answers mfa_self_service_not_allowed (store mode outranks the lock), and the stored mode is unchanged",
+      "question": "What does Mutation.updateMfaUserMode answer for a user whose MFA mode is Required when the store's StoreMode is not CustomerChoice?",
+      "questions": [
+        "Which refusal code wins for a Required user in an AdminManaged, Enabled, Disabled or Use global setting store: mfa_self_service_not_allowed or mfa_locked_by_administrator?",
+        "Does updateMfaUserMode answer mfa_locked_by_administrator outside a CustomerChoice store?"
+      ],
+      "anchors": [
+        "Mutation.updateMfaUserMode",
+        "Query.mfaSettings"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8A0499D7",
       "path": "entries/KB-8A0499D7.md",
       "subject": "A canceled index build still advances the document type's lastIndexationDate in GET /api/search/indexes and the admin Search index grid",
@@ -30342,7 +30364,7 @@
       "status": "active",
       "trust": 3,
       "disputed": 0,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-AE34AB04",
@@ -35223,6 +35245,31 @@
       "disputed": 1
     },
     {
+      "id": "KB-CCD42835",
+      "path": "entries/KB-CCD42835.md",
+      "subject": "requestMfaChangeCode with organizationId checks the organization's mode and the org MFA permission before sending: a maintainer whose own mode is Required still gets a code, a Required organization answers mfa_locked_by_administrator, no permission or a foreign organization answers mfa_organization_not_allowed, and nothing is emailed on refusal",
+      "question": "What does Mutation.requestMfaChangeCode answer when called with organizationId, for a maintainer whose own mode is Required, a Required organization, a member without the permission, and an organization that is not the user's?",
+      "questions": [
+        "Can an organization maintainer whose own MFA mode is Required change the organization's MFA mode from the storefront?",
+        "Is an MFA change code emailed when requestMfaChangeCode names an organization the user may not manage?",
+        "Which error code does requestMfaChangeCode return for an organization whose MFA mode is Required?",
+        "Does requestMfaChangeCode accept organizationId in InputRequestMfaChangeCodeType?"
+      ],
+      "anchors": [
+        "Mutation.requestMfaChangeCode",
+        "Mutation.updateMfaOrganizationMode",
+        "PUT /api/mfa/modes/organizations/{id}"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-CCE38401",
       "path": "entries/KB-CCE38401.md",
       "subject": "Admin Companies and contacts has a filter panel (member type, created/modified date), not saved named filters",
@@ -39098,7 +39145,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {

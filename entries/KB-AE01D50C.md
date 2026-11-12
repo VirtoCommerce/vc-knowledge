@@ -59,5 +59,16 @@ evidence:
     contradicts: true
     contested: virtocommerce.news 3.1006.0 vs 3.1005.0; virtocommerce.profileexperienceapimodule 3.1024.0 vs 3.1023.0; virtocommerce.xapi 3.1031.0 vs 3.1029.0; virtocommerce.xcart 3.1046.0 vs 3.1043.0-pr-151-07b3; virtocommerce.xcatalog 3.1024.0 vs 3.1024.0-pr-115-8339; …
     note: "Only the Required clause no longer holds on the fixed build (VCST-6688): with the user mode set to Required by the admin (PUT /api/mfa/modes/users/{id}), requestMfaChangeCode with command {storeId} only answered succeeded=false, errorCode mfa_locked_by_administrator, no twoFactorToken, and added no MfaSignInEmailNotification journal row. With command {storeId, organizationId} for the org MFA permission holder (org mode Off) it succeeded and sent one code. The resend-interval clause was not re-tested. The old \"still sends a code\" behaviour was the defect VCST-6688, fixed in VirtoCommerce.MFA 3.1003.0-pr-6-2da2."
+  - method: observation
+    deployment: local
+    build: 34214ec43feee00d
+    conditions: module:VirtoCommerce.MFA=3.1003.0-pr-6-2da2; setting:MultiFactorAuthentication.StoreMode=CustomerChoice; setting:MultiFactorAuthentication.Enabled=false
+    at: 2026-11-12T11:00:35.500Z
+    by: session:af366868
+    bodyHash: 1dffe05110b7
+    who: Lenajava1
+    contradicts: true
+    contested: virtocommerce.news 3.1006.0 vs 3.1005.0; virtocommerce.profileexperienceapimodule 3.1024.0 vs 3.1023.0; virtocommerce.xapi 3.1031.0 vs 3.1029.0; virtocommerce.xcart 3.1046.0 vs 3.1043.0-pr-151-07b3; virtocommerce.xcatalog 3.1024.0 vs 3.1024.0-pr-115-8339; …
+    note: "On the VCST-6688 fix build (MFA 3.1003.0-pr-6-2da2) the Required half no longer holds: with the user mode set to Required by the admin, requestMfaChangeCode without organizationId answered succeeded false, errorCode mfa_locked_by_administrator, no twoFactorToken, and the MfaSignInEmailNotification journal delta was 0 (3 of 3 attempts, each counted 20 s after the request). The resend half still holds: two requests 39 ms apart both succeeded with different tickets, resendSecondsRemaining 30, no resend_too_soon, one journal row; the emailed code confirmed updateMfaUserMode on the second ticket. The first ticket with the same code, used after that, answered invalid_code."
 ---
 CustomerChoice run store, global off. Two requestMfaChangeCode calls back to back: both succeeded true, resendSecondsRemaining 30, errorCode null, a twoFactorToken each; the journal held one MfaSignInEmailNotification after 15 s, and the first ticket with that code still confirmed updateMfaUserMode (succeeded). Separately, with the user mode set to Required by the admin, requestMfaChangeCode answered succeeded true and one email was sent; updateMfaUserMode then answered mfa_locked_by_administrator. Outside CustomerChoice it answers mfa_self_service_not_allowed and sends nothing.
