@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T10:00:01.747Z",
-  "count": 1917,
+  "generated": "2026-11-12T10:08:18.099Z",
+  "count": 1918,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37991,6 +37991,32 @@
       ],
       "scope": [
         "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DE2CA8DC",
+      "path": "entries/KB-DE2CA8DC.md",
+      "subject": "A storefront Block user on /company/members locks only that org membership: a password grant naming the locked org returns 200 with organization_id switched to the user's other org, a refresh_token grant naming it returns 400 user_is_locked_in_organization",
+      "question": "What happens at /connect/token for a multi-org buyer whose membership in one organization was blocked from the storefront members page?",
+      "questions": [
+        "Does a password grant fail when organization_id names an org where the user is locked?",
+        "Which grant returns user_is_locked_in_organization?",
+        "Does storefront Block user lock the global account?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "/company/members",
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "principal=org-maintainer",
+        "store=b2b-store",
+        "surface=rest",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
