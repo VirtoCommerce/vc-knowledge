@@ -78,5 +78,16 @@ evidence:
     bodyHash: 244746d5630a
     who: Lenajava1
     note: "Regression REG-2026-11-03-1717 via the GraphQL runner: CRL-GQL-130..134, 074, 075 all PASS on the same build (non-owner Forbidden, anonymous Unauthorized, other-store cart Forbidden, own-cart merge allowed)."
+  - method: observation
+    deployment: vcst_qa
+    build: 3b66ce25e7926ad6
+    conditions: platform=3.1097.0; theme=2.62.0-alpha.2647; module:VirtoCommerce.XCart=3.1046.0; module:VirtoCommerce.Xapi=3.1031.0-pr-70-108f; module:VirtoCommerce.Cart=3.1014.0; store=B2B-store; role=Organization maintainer
+    at: 2026-11-12T06:37:15.305Z
+    by: session:7e403256
+    bodyHash: 244746d5630a
+    who: kutasinaelena
+    contradicts: true
+    contested: module:VirtoCommerce.XCart 3.1046.0 vs 3.1045.0-pr-153-ec03; role Organization maintainer vs personal customer; virtocommerce.customer 3.1033.0 vs 3.1032.0; virtocommerce.profileexperienceapimodule 3.1024.0 vs 3.1023.0; virtocommerce.xapi 3.1031.0-pr-70-108f vs 3.1029.0; …
+    note: "REG-2026-11-12-0714-W3 CART-124, reproduced 2/2: a signed-in B2B buyer added a line to a named cart (AGENT-TEST-MERGEAUTH-BR-VICTIM). An anonymous POST to the storefront /graphql (no Authorization, no cookies) mergeCart{userId: random guest id, cartName: AGENT-TEST-MERGEAUTH-BR-ANONTARGET, secondCartId: victim id, deleteAfterMerge: true} returned HTTP 200 with errors[] empty and data.mergeCart = the new anonymous cart holding the victim's item; the anonymous target cart then existed, and the victim cart no longer resolved for its owner (deleted). No Unauthorized. The VCST-6185 behaviour is absent on this build. Signed-in merge of an isAnonymous guest cart (CART-125) still works."
 ---
 On XCart 3.1045.0-pr-153-ec03 (VCST-6185 fix) I signed in on the storefront as two personal customers and called Mutation.mergeCart through the storefront /graphql. (1) User B merging user A's named B2B-store cart (secondCartId = A's cart id, userId = B, cartName = B's named cart, deleteAfterMerge omitted or false) got HTTP 200 with data.mergeCart = null and errors[0] {message "Access denied.", extensions.code "Forbidden"}, 3 of 3 times. A's cart still existed with the same item and quantity, and B's target cart was unchanged. (2) An anonymous call (no Authorization header, or the storefront's anonymous-session token) with A's cart id got errors[0] code "Unauthorized", message "Anonymous access denied or access token has expired or is invalid."; A's cart was intact. (3) B merging B's OWN cart from another store (Electronics) into a B2B-store target got "Forbidden", and the source was left in place. (4) B merging B's own same-store named cart succeeded: the items arrived in the target and the source was deleted (deleteAfterMerge default). (5) A secondCartId matching no cart (a random GUID) returned the unchanged target cart with no error. Before the fix, the same call from (1) succeeded and deleted the victim cart.
