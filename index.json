@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T12:14:48.492Z",
-  "count": 1933,
+  "generated": "2026-11-12T12:22:45.809Z",
+  "count": 1934,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -497,6 +497,28 @@
       "scope": [
         "module=mcp",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-030EAB37",
+      "path": "entries/KB-030EAB37.md",
+      "subject": "xAPI catalog price actualWithTax can be 1 cent off saleWithTax when the list price has more than 2 decimals",
+      "question": "why does product price actualWithTax differ by one cent from saleWithTax and from the cart line price with tax",
+      "questions": [
+        "catalog actualWithTax 1 cent higher than cart placedPriceWithTax",
+        "list price with 4 decimals breaks price with tax rounding in xAPI products",
+        "ApplyStaticDiscounts DiscountAmount rounded Amount vs InternalAmount"
+      ],
+      "anchors": [
+        "Query.product",
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
