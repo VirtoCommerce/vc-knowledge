@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T09:36:04.317Z",
-  "count": 1915,
+  "generated": "2026-11-12T09:42:01.574Z",
+  "count": 1916,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17311,6 +17311,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-629DF4F7",
+      "path": "entries/KB-629DF4F7.md",
+      "subject": "On /account/lists the owner's OWN Organization-scope list is listed only while the organization it was shared in is active; private lists stay the same in every org",
+      "question": "Does switching the active organization change which of my own lists appear on /account/lists?",
+      "questions": [
+        "Is the list owner's org-shared wishlist visible to the owner in other organizations?",
+        "Are a multi-org user's own lists user-scoped or org-scoped?"
+      ],
+      "anchors": [
+        "GET /account/lists",
+        "Query.wishlists"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-62BF1335",
       "path": "entries/KB-62BF1335.md",
       "subject": "A return's submittedDate is stamped once at its first save outside Draft/Cancelled (buyer submit or admin create as New) and is never changed by cancel or by a REST PUT body",
@@ -29674,7 +29696,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
