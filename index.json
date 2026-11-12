@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T12:43:29.431Z",
-  "count": 1935,
+  "generated": "2026-11-12T12:57:15.533Z",
+  "count": 1936,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14950,6 +14950,28 @@
       ],
       "scope": [
         "feature=mfa-store-modes",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-52256562",
+      "path": "entries/KB-52256562.md",
+      "subject": "The mobile-menu 'My organizations' list is its own scroll box sized 100vh minus 224px, so at 320x225 it is 1.6px tall and no organization row is visible",
+      "question": "At a short viewport (e.g. 320x225, 400% zoom of 1280x900) can a user see and pick an organization in the mobile menu Corporate → My organizations panel?",
+      "questions": [
+        "Why are the organization rows invisible in the mobile menu My organizations panel at 400% zoom?",
+        "How tall is the multi-organization list in the storefront mobile menu at a given viewport height?",
+        "Does the mobile org switcher reflow at WCAG 1.4.10 400% zoom?"
+      ],
+      "anchors": [
+        "/account/dashboard"
+      ],
+      "scope": [
+        "store=b2b-store",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
