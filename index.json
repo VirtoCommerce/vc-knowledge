@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T09:12:15.401Z",
-  "count": 1913,
+  "generated": "2026-11-12T09:13:34.849Z",
+  "count": 1914,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20596,6 +20596,28 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-78188952",
+      "path": "entries/KB-78188952.md",
+      "subject": "When every organization membership of a multi-org contact is locked, a fresh password sign-in lands with no organization in context and /account/dashboard renders normally, with no /403; both switcher options are disabled and neither is selected",
+      "question": "What does the storefront do for a multi-org user whose memberships are ALL locked: redirect to /403, or something else?",
+      "questions": [
+        "Does an all-locked multi-org user hit an Access denied dead end?",
+        "What does the Organizations listbox show when every membership is locked?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "/account/orders",
+        "Query.me"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-7837F100",
