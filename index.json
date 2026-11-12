@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:08:07.119Z",
-  "count": 1923,
+  "generated": "2026-11-12T11:08:27.817Z",
+  "count": 1924,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2709,6 +2709,27 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0E67A697",
+      "path": "entries/KB-0E67A697.md",
+      "subject": "Below the desktop breakpoint the org switcher moves from the account-menu popover to the mobile menu (burger → Corporate → My organizations)",
+      "question": "Organizations listbox org switcher in account menu: is it available in the mobile menu (viewport below the desktop breakpoint)?",
+      "questions": [
+        "Where is the organization switcher on a narrow viewport?",
+        "Does the org switcher keep its options and locked row at 200% or 400% zoom?"
+      ],
+      "anchors": [
+        "/account/dashboard"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
