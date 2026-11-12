@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T07:06:18.583Z",
-  "count": 1904,
+  "generated": "2026-11-12T07:09:44.047Z",
+  "count": 1905,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5076,6 +5076,27 @@
       "scope": [
         "feature=active-sessions",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1D5DB039",
+      "path": "entries/KB-1D5DB039.md",
+      "subject": "The shared storefront reporting chart (Sales Statistics / Sales Rep Hub Reporting) draws closed-month bars, the Upcoming placeholder and the projected outline below 3:1 against the card",
+      "question": "What contrast do the Sales Statistics chart bars and placeholders on /account/dashboard have against the card background?",
+      "questions": [
+        "Do the reporting chart bars meet WCAG 1.4.11 non-text contrast?",
+        "Which colour tokens does the vc-frontend shared reporting chart use for its series?",
+        "How readable are the AOV closed-month bars in dark theme?"
+      ],
+      "anchors": [
+        "/account/dashboard"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
