@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T05:04:01.784Z",
-  "count": 1899,
+  "generated": "2026-11-12T05:09:27.122Z",
+  "count": 1901,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13938,6 +13938,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-50A4CB1D",
+      "path": "entries/KB-50A4CB1D.md",
+      "subject": "On /cart the Pick points map keeps only the first page's markers after Load more; markers for locations loaded via Load more are not added",
+      "question": "After Load more in the /cart Pick points dialog, does the Google map add markers for the newly loaded locations?",
+      "questions": [
+        "Do pickup map pins accumulate across Load more pages?",
+        "Why are page-2 pickup locations missing from the map?",
+        "Does GetCartPickupLocations after:50 update the map markers?"
+      ],
+      "anchors": [
+        "/cart",
+        "Query.cartPickupLocations"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-50AFCCD6",
       "path": "entries/KB-50AFCCD6.md",
       "subject": "Without order:read_prices, GET order zeroes inPayments[].captures/refunds amounts but childrenOperations still carries capture/refund amounts with withPrices true, and the Admin operations tree and capture blade display them",
@@ -26282,6 +26305,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-97C5E5B1",
+      "path": "entries/KB-97C5E5B1.md",
+      "subject": "On /cart Pick points reopen, a confirmed location that already falls inside the first page keeps its natural position (no prepend) and the list auto-scrolls to it; only a location outside page 1 is prepended at items[0]",
+      "question": "Where does the confirmed pickup location appear when the /cart Pick points dialog is reopened?",
+      "questions": [
+        "Is the selected pickup location always moved to the top of the Pick points list?",
+        "Does cartPickupLocations prepend the cart's pickup location when it is already on page 1?",
+        "Why is the Pick points first page 51 items sometimes and 50 other times?"
+      ],
+      "anchors": [
+        "/cart",
+        "Query.cartPickupLocations"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
