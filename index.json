@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T09:12:01.530Z",
-  "count": 1912,
+  "generated": "2026-11-12T09:12:15.401Z",
+  "count": 1913,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17012,6 +17012,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-606A3302",
+      "path": "entries/KB-606A3302.md",
+      "subject": "A contact whose memberships exist only as OrganizationMembership rows (POST /api/customer/organization-memberships) and whose /api/members organizations list is empty has me.contact.organizations totalCount 0 and no storefront Organizations switcher",
+      "question": "Does creating OrganizationMembership rows alone make GraphQL me.contact.organizations list those organizations?",
+      "questions": [
+        "Why does a new multi-org test user show no organization switcher?",
+        "Is POST /api/customer/organization-memberships enough to make a contact multi-organization on the storefront?"
+      ],
+      "anchors": [
+        "POST /api/customer/organization-memberships",
+        "Query.me",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
