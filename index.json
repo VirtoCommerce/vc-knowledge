@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T12:38:11.987Z",
-  "count": 1934,
+  "generated": "2026-11-12T12:43:29.431Z",
+  "count": 1935,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -890,6 +890,27 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-05492D50",
+      "path": "entries/KB-05492D50.md",
+      "subject": "With a zero-decimal currency, xAPI product actual price differs from sale by a whole unit even with 2-decimal prices and no tax",
+      "question": "why does product price actual differ from sale in a currency with DecimalDigits 0 or a cash rounding type",
+      "questions": [
+        "currency rounding policy breaks catalog actual price",
+        "RoundingType Rounding05 Rounding1 product actual price wrong",
+        "zero decimal currency price actual vs sale mismatch"
+      ],
+      "anchors": [
+        "Query.product"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
