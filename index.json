@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T17:30:51.326Z",
-  "count": 1941,
+  "generated": "2026-11-12T17:31:58.236Z",
+  "count": 1942,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9451,6 +9451,28 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=mobile-tablet"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-36E4D466",
+      "path": "entries/KB-36E4D466.md",
+      "subject": "Anonymous createOrderFromCart on a real, orderable cart is refused with Unauthorized and leaves the cart intact",
+      "question": "What does Mutation.createOrderFromCart do when called with no Authorization header on a real, valid cart of another user?",
+      "questions": [
+        "Can an anonymous caller place an order from someone's cart id?",
+        "Does a refused anonymous createOrderFromCart consume or change the cart?",
+        "Which error code does createOrderFromCart return without a token?"
+      ],
+      "anchors": [
+        "Mutation.createOrderFromCart",
+        "Query.cart"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
