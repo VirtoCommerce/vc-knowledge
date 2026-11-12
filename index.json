@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T05:23:47.506Z",
-  "count": 1902,
+  "generated": "2026-11-12T05:44:27.353Z",
+  "count": 1903,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20000,6 +20000,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-753139B5",
+      "path": "entries/KB-753139B5.md",
+      "subject": "On /cart the Order summary shows the generic \"Something went wrong. Please try again later.\" while the cart holds a line that is unavailable in the cart currency; it disappears once that line is removed",
+      "question": "Why does the /cart Order summary show \"Something went wrong. Please try again later.\" after a currency switch?",
+      "questions": [
+        "What does /cart show for a line with no price in the selected currency?",
+        "Is the generic error in the cart order summary caused by an unavailable product line?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.changeCartCurrency"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7541CDF8",
       "path": "entries/KB-7541CDF8.md",
       "subject": "On desktop the header logo reserves no width before it loads, so on a cold load the search bar and the right-hand header links jump right by the logo's width (182 px); on mobile nothing moves",
@@ -26767,7 +26789,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
