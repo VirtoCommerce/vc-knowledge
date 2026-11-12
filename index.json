@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T13:40:38.650Z",
-  "count": 1940,
+  "generated": "2026-11-12T14:01:56.635Z",
+  "count": 1941,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2934,6 +2934,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-102A241B",
+      "path": "entries/KB-102A241B.md",
+      "subject": "xAPI Query.page returns null for a Page Builder blog article (.page under blogs), so the storefront shows 404 at its permalink although slugInfo resolves it as ContentFile",
+      "question": "Does xAPI Query.page return a Page Builder blog article (.page file under blogs) by its ContentFile id, so the storefront renders it at its permalink?",
+      "anchors": [
+        "Query.page",
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "content=blogs",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
