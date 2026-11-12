@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T09:01:40.735Z",
-  "count": 1910,
+  "generated": "2026-11-12T09:09:21.119Z",
+  "count": 1911,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10999,6 +10999,30 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-409AC74D",
+      "path": "entries/KB-409AC74D.md",
+      "subject": "A signed-in storefront page's plain fetch() to /graphql is anonymous: me answers a fresh guest and addItem creates a guest cart (isAnonymous true)",
+      "question": "Is a plain fetch() from a signed-in storefront page to /graphql authenticated as the signed-in customer?",
+      "questions": [
+        "Why does me return userName Anonymous from a page fetch while I am signed in on the storefront?",
+        "Does the storefront send its session in a cookie or a bearer token to /graphql?",
+        "Why did addItem from the page create a cart with isAnonymous true and customerName Anonymous?",
+        "How must an in-page GraphQL call carry the signed-in session?"
+      ],
+      "anchors": [
+        "POST /graphql",
+        "Query.me",
+        "Mutation.addItem"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
