@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T12:08:52.745Z",
-  "count": 1932,
+  "generated": "2026-11-12T12:14:48.492Z",
+  "count": 1933,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5505,6 +5505,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1F34FB02",
+      "path": "entries/KB-1F34FB02.md",
+      "subject": "A store's MultiFactorAuthentication.StoreMode written with a full-store PUT /api/stores takes effect on the storefront immediately, and writing an empty string clears it back to null",
+      "question": "How do I set and clear a store's MultiFactorAuthentication.StoreMode through REST, and does the storefront pick it up without a restart?",
+      "questions": [
+        "Does PUT /api/stores with a changed StoreMode setting apply to the next storefront sign-in right away?",
+        "How do I restore a store's MFA StoreMode to unset (null) via the REST API?"
+      ],
+      "anchors": [
+        "PUT /api/stores",
+        "GET /api/stores/{id}",
+        "Query.mfaSettings"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -26068,7 +26091,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
