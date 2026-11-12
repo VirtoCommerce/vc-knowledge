@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T08:56:32.775Z",
-  "count": 1908,
+  "generated": "2026-11-12T09:01:40.735Z",
+  "count": 1910,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -567,6 +567,28 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-03AED0C6",
+      "path": "entries/KB-03AED0C6.md",
+      "subject": "Admin contact blade 'Organization memberships' grid shows Organization / Roles / Invite status; the lock state is shown only in the membership detail blade as 'Locked state', toggled by Lock/Unlock toolbar buttons with no Save",
+      "question": "Where does the Admin SPA show whether a contact's organization membership is locked, and how is it locked or unlocked there?",
+      "questions": [
+        "What columns does the Organization memberships widget blade show in Admin?",
+        "Does the Admin memberships grid have a Status column showing Active or Locked?",
+        "Do Lock and Unlock in the Admin membership blade need Save?"
+      ],
+      "anchors": [
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "module=customer",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -14918,6 +14940,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-535E2E31",
+      "path": "entries/KB-535E2E31.md",
+      "subject": "Creating an organization membership over REST does not link the contact to the organization; without contact.organizations the storefront session has no organization_id",
+      "question": "Why does a user given a membership via POST /api/customer/organization-memberships sign in to the storefront with no organization context?",
+      "questions": [
+        "Does POST /api/customer/organization-memberships add the organization to contact.organizations?",
+        "Why does /company/members redirect to /account/dashboard for a freshly created org member?",
+        "Why is organization_id missing from the storefront /connect/token for a new member?"
+      ],
+      "anchors": [
+        "POST /api/customer/organization-memberships",
+        "PUT /api/contacts",
+        "/company/members"
+      ],
+      "scope": [
+        "surface=rest-api",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-535FF3AC",
       "path": "entries/KB-535FF3AC.md",
       "subject": "The payment methods a B2B cart offers are the store's active payment methods from availablePaymentMethods, and the set differs per deployment",
@@ -21603,7 +21649,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -24972,7 +25018,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {

@@ -25,5 +25,15 @@ evidence:
     at: 2026-11-10T07:55:45.071Z
     by: session:cb5a6bb9
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcst_qa
+    build: a1bd5cbdd8350608
+    conditions: module:VirtoCommerce.Customer=3.1033.0; role=platform admin
+    at: 2026-11-12T08:58:56.168Z
+    by: session:9c36bcd2
+    bodyHash: bc600fcfbd3a
+    defect: suspected
+    who: Aleksandra-Mitricheva
+    note: "Re-observed on Customer 3.1033.0: omitted userId -> 500 with raw SQL message naming database, table, column and FK."
 ---
 Admin bearer, fresh AGENT-TEST organization. POST /api/customer/organization-memberships {userId:null, organizationId, roles:[org-employee]} and the same body without userId -> HTTP 500 {"message":"Cannot insert the value NULL into column 'UserId', table '<db>.dbo.CustomerOrganizationMembership' ... FOREIGN KEY constraint FK_CustomerOrganizationMembershipRole_CustomerOrganizationMembership_MembershipId ... database <db> ...","stackTrace":null}, 4/4; with roles:[] only the NOT NULL sentence. Nothing is persisted. Cause in source: OrganizationMembershipController.Create (Customer 3.1029.1) saves without validating UserId, and the platform ApiErrorWrappingMiddleware returns ex.InnerException.Message in every /api/ 500 body (stack trace only hidden outside Development). Same on vcptcore_stable (Customer 3.1011.3), where the stand runs in Development mode and the message is the full exception text - so not new in stable-16.
