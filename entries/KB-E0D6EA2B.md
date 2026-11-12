@@ -34,5 +34,14 @@ evidence:
     bodyHash: 4a1a65e8dd93
     who: Aleksandra-Mitricheva
     note: "Re-observed on the merged fork build 3.2.0-pr-19 with released ProfileExperienceApi 3.1022.0 (corporate-store customer, B2B-store): /account/profile Last name \"Tester2\" -> inline \"Contains invalid characters\" under Last name (and under First name too, because the stored first name \"AGENT-TEST-MFA-vcst6626\" is itself rejected), no toast; editing Last name clears only its message. /account/addresses Add new address with First name \"Tester2\" keeps the dialog open with the inline message, request error field addresses[0].firstName, nothing created (re-read via REST: 0 addresses, contact unchanged)."
+  - method: observation
+    deployment: vcst_qa
+    build: 3b66ce25e7926ad6
+    conditions: theme=2.62.0-alpha.2647; module:VirtoCommerce.ProfileExperienceApiModule=3.1024.0; account=personal
+    at: 2026-11-12T04:51:09.202Z
+    by: session:7e403256
+    bodyHash: 4a1a65e8dd93
+    who: kutasinaelena
+    note: On /account/addresses Add new address with First name 'AGENT-TEST-W3' -> Create keeps the dialog open with inline 'Contains invalid characters' under First name; 'Agent-Test' is accepted. The cart New address dialog accepts the same digit-containing name (cart address, not a member address).
 ---
 As a personal storefront user on theme 2.61.0-pr-2597 with ProfileExperienceApi 3.1022.0-pr-150: on /account/profile, Last name "Runner2" + Update shows "Contains invalid characters" under the Last name input, no toast, nothing saved (3/3); two invalid names flag both inputs; editing a flagged input clears only its own error and Update stays disabled while a server error is shown. On /account/addresses, Add new address with First name "Jane2" keeps the dialog open, flags First name, creates nothing (request sends only the new address, error field addresses[0].firstName); "<b>x</b>" in Address shows "HTML tags are not allowed". The header Ship to → Add new dialog sends the existing address plus the new one, gets the error at addresses[1].firstName, and shows only the toast "Some of the addresses are not valid" with no inline field error. Messages are translated text, no console errors.

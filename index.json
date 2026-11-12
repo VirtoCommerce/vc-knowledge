@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T04:51:08.490Z",
-  "count": 1898,
+  "generated": "2026-11-12T04:52:55.335Z",
+  "count": 1899,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5471,6 +5471,29 @@
       ],
       "scope": [
         "role=buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1FF0F711",
+      "path": "entries/KB-1FF0F711.md",
+      "subject": "On /cart the Delivery method dropdown lists methods by name and carrier logo only; the price appears only in Order summary after selection, and no delivery estimate is shown",
+      "question": "Does the /cart Delivery method dropdown show a price or a delivery estimate for each shipping method?",
+      "questions": [
+        "Where does the storefront show the shipping cost of each delivery method?",
+        "Does checkout show a delivery estimate per shipping method?",
+        "Why is there no price next to Fixed Rate (Ground) in the delivery method list?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.addOrUpdateCartShipment"
+      ],
+      "scope": [
+        "store=b2b-store",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -14103,7 +14126,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -27833,7 +27856,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -38084,7 +38107,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
