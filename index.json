@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T10:29:38.976Z",
-  "count": 1918,
+  "generated": "2026-11-12T10:55:30.468Z",
+  "count": 1919,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32554,6 +32554,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-BBA06B78",
+      "path": "entries/KB-BBA06B78.md",
+      "subject": "On the PDP, a second Increase quantity on a product already in the cart is sent as one batched quantity update about 10 seconds later, while the \"in Cart\" count moves at once",
+      "question": "When does the storefront product page send the quantity change for a second Increase quantity click on a product that is already in the cart?",
+      "questions": [
+        "Why does the cart on the server still show quantity 1 right after I clicked + twice on the product page?",
+        "Is the PDP quantity stepper's update debounced or batched?",
+        "How long after clicking + on the product page does the cart update reach the server?",
+        "Why does the in Cart badge show 2 but getCart returns 1?"
+      ],
+      "anchors": [
+        "POST /graphql",
+        "Mutation.updateCartQuantity",
+        "/product/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BBBC4225",
       "path": "entries/KB-BBBC4225.md",
       "subject": "The storefront roster shows a pending invitee as 'Invite sent' with status Invited",
@@ -34105,7 +34129,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
