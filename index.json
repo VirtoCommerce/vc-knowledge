@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T07:49:06.953Z",
-  "count": 1905,
+  "generated": "2026-11-12T07:50:53.406Z",
+  "count": 1906,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34872,6 +34872,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CC551D3B",
+      "path": "entries/KB-CC551D3B.md",
+      "subject": "In the /cart Select address popup, deleting a submitted search keyword with the keyboard sends no query: the list stays filtered under an empty input with no Clear (x) until an empty submit",
+      "question": "What happens to the /cart Select address popup list when the user deletes the search keyword with the keyboard instead of pressing Clear (x)?",
+      "questions": [
+        "Does emptying the address search box restore the full address list in the checkout popup?",
+        "Why does the address popup stay filtered after I erase the search text?",
+        "Does the Clear button stay visible after deleting the address search keyword?"
+      ],
+      "anchors": [
+        "/cart",
+        "Query.currentCustomerAddresses"
+      ],
+      "scope": [
+        "component=select-address-modal",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
