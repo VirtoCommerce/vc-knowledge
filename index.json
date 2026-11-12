@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:41:35.826Z",
-  "count": 1929,
+  "generated": "2026-11-12T11:45:02.387Z",
+  "count": 1930,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10385,6 +10385,34 @@
       "scope": [
         "module=customer",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3D7DB784",
+      "path": "entries/KB-3D7DB784.md",
+      "subject": "Removing an organization from a contact via PUT /api/members deletes that user's OrganizationMembership row for the org; only a direct membership POST for an unlinked contact leaves an orphan row",
+      "question": "Can removing a contact from an organization, or any storefront member action, leave an OrganizationMembership row whose contact is not linked to the organization?",
+      "questions": [
+        "Does PUT /api/members without an organization delete the membership row?",
+        "Which flows create an orphan organization membership (membership row but contact.organizations lacks the org)?",
+        "Does storefront Delete, Block user, a declined or a revoked invite unlink the contact from the organization?",
+        "Does POST /api/customer/organization-memberships validate that the user's contact belongs to the organization?"
+      ],
+      "anchors": [
+        "PUT /api/members",
+        "POST /api/customer/organization-memberships",
+        "Mutations.removeMemberFromOrganization",
+        "Mutations.rejectOrganizationInvite",
+        "Mutations.revokeOrganizationInvite",
+        "Query.organization.contactRoles"
+      ],
+      "scope": [
+        "surface=rest-api",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -26918,7 +26946,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0,
       "resolved": 1
     },
