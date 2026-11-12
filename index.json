@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T08:37:40.847Z",
-  "count": 1907,
+  "generated": "2026-11-12T08:51:32.610Z",
+  "count": 1908,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8096,6 +8096,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-30226EBD",
+      "path": "entries/KB-30226EBD.md",
+      "subject": "A configuration option whose option product has no price row is still served by Query.productConfiguration, with listPrice 0 and extendedPrice 0",
+      "question": "Is a configurable product option whose option product has no price row still returned by productConfiguration, and at what price?",
+      "questions": [
+        "How do I seed a $0 / no-surcharge configurable option now that the pricing API rejects list 0?",
+        "Does an unpriced option product drop out of a configuration section on the storefront?"
+      ],
+      "anchors": [
+        "Query.productConfiguration",
+        "PUT /api/products/prices"
+      ],
+      "scope": [
+        "feature=configurable-products",
+        "principal=anonymous",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
