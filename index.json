@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T13:31:08.423Z",
-  "count": 1939,
+  "generated": "2026-11-12T13:40:38.650Z",
+  "count": 1940,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17746,6 +17746,29 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6436CF1C",
+      "path": "entries/KB-6436CF1C.md",
+      "subject": "Page Builder designer preview frame is refused (ERR_BLOCKED_BY_RESPONSE) when the admin designer page sends COEP credentialless and the storefront document sends no COEP",
+      "question": "Why does the Page Builder designer preview show \"refused to connect\" instead of the storefront?",
+      "questions": [
+        "Designer preview iframe /designer-preview blocked by response",
+        "Page Builder preview not loading in designer on a local stand",
+        "Does COEP on the platform admin break the Page Builder preview frame?"
+      ],
+      "anchors": [
+        "/designer-preview",
+        "/Modules/$(VirtoCommerce.PageBuilderModule)/Content/page-builder-designer/index.html"
+      ],
+      "scope": [
+        "stand=local-docker",
+        "surface=admin-designer"
       ],
       "plane": "experiential",
       "status": "active",
