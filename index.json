@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T06:23:27.352Z",
-  "count": 1903,
+  "generated": "2026-11-12T06:30:27.407Z",
+  "count": 1904,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13351,6 +13351,26 @@
         "file-scope=quote-attachments",
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4D5CDE96",
+      "path": "entries/KB-4D5CDE96.md",
+      "subject": "The /account/lists/{id} list detail toolbar offers Add all to cart, Buy now, Save changes, Rename and Share; there is no Request Quote / quote-from-list action",
+      "question": "Can a B2B buyer create a quote request directly from a saved list on /account/lists/{id}?",
+      "questions": [
+        "Is there a Request Quote button on the list details page?",
+        "Does the storefront support RFQ from a wishlist / saved list?"
+      ],
+      "anchors": [
+        "/account/lists/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -32310,7 +32330,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
