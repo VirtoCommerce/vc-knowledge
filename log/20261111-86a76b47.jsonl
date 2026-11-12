@@ -90,3 +90,4 @@
 {"at":"2026-11-11T08:42:19.437Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
 {"at":"2026-11-11T08:43:08.862Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
 {"at":"2026-11-11T08:44:08.886Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-11T15:42:58.189Z","kind":"restart","why":"state-dropped","who":"Aleksandra-Mitricheva"}
