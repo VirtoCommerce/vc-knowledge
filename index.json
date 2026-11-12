@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T14:01:56.635Z",
+  "generated": "2026-11-12T17:30:51.326Z",
   "count": 1941,
   "entries": [
     {
@@ -35762,7 +35762,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-CDC77925",
