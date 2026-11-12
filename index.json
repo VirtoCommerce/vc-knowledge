@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T13:06:33.609Z",
-  "count": 1936,
+  "generated": "2026-11-12T13:11:56.293Z",
+  "count": 1939,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9372,7 +9372,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -31339,6 +31339,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-B2479A4B",
+      "path": "entries/KB-B2479A4B.md",
+      "subject": "DELETE of a Multilanguage Page root that still has language versions answers 400 \"archive them instead\"; deleting each version with DELETE grouped first lets the root delete",
+      "question": "How is a Multilanguage Page with translations deleted through the API?",
+      "anchors": [
+        "DELETE /api/page-builder-multilanguage-pages/{id}",
+        "DELETE /api/page-builder-pages/grouped/{id}",
+        "POST /api/page-builder-multilanguage-pages/convert/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.pagebuildermodule",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B27007B2",
       "path": "entries/KB-B27007B2.md",
       "subject": "A storefront session whose account was deleted renders a blank page on every route; GetPageContext returns 200 with NULL_REFERENCE",
@@ -34504,6 +34523,29 @@
       "scope": [
         "browser=firefox",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C5F793F8",
+      "path": "entries/KB-C5F793F8.md",
+      "subject": "Content upload of \"<page>.page-draft\" with draft=false overwrites \"<page>.page\"; a draft file next to a page is written by uploading \"<page>.page\" with draft=true",
+      "question": "How do I put a .page-draft file next to a published .page file through the Content API?",
+      "questions": [
+        "Why did uploading a .page-draft file replace the published page?",
+        "What file name does POST /api/content/pages/{storeId}?draft=true write?"
+      ],
+      "anchors": [
+        "POST /api/content/{id}/{id}",
+        "POST /api/pagebuilder/git/publish",
+        "GET /api/pagebuilder/git/publish-status"
+      ],
+      "scope": [
+        "module=virtocommerce.content",
+        "surface=admin-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -42858,6 +42900,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F3B94D46",
+      "path": "entries/KB-F3B94D46.md",
+      "subject": "A store-bound Manager account that belongs to a contact (memberId set) gets login_failed on a password grant without storeId, and 200 with storeId",
+      "question": "Can a back-office Manager account created from a contact and bound to a store get a password-grant token without storeId?",
+      "questions": [
+        "Why does a Manager bound to a store fail to sign in to the Admin SPA with login_failed?",
+        "Does POST /connect/token require storeId for a Manager account that has a contact?",
+        "Store-bound back-office user created via Customers > contact > Accounts cannot sign in"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "PUT /api/platform/security/users"
+      ],
+      "scope": [
+        "actor=back-office-non-admin",
+        "grant=password",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
