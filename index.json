@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:45:02.387Z",
-  "count": 1930,
+  "generated": "2026-11-12T11:53:54.224Z",
+  "count": 1931,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -25507,7 +25507,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -27059,6 +27059,30 @@
         "setting=detailederrors-off",
         "surface=rest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9B012F84",
+      "path": "entries/KB-9B012F84.md",
+      "subject": "The storefront account-menu sign-out control (data-test-id sign-out-button) is labelled \"Logout\", not \"Sign out\", and returns to /sign-in?returnUrl=<page>",
+      "question": "What is the label of the sign-out button in the storefront header account menu?",
+      "questions": [
+        "Does the storefront account menu say Sign out or Logout?",
+        "How does a signed-in customer sign out of the storefront?",
+        "Where does the storefront Logout button redirect?"
+      ],
+      "anchors": [
+        "/account/security",
+        "/company/info",
+        "/sign-in"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=desktop"
       ],
       "plane": "experiential",
       "status": "active",
