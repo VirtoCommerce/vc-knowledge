@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T05:56:28.821Z",
+  "generated": "2026-11-12T06:10:27.498Z",
   "count": 1903,
   "entries": [
     {
@@ -12151,7 +12151,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -36102,7 +36102,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
