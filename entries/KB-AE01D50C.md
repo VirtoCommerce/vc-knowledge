@@ -48,5 +48,16 @@ evidence:
     bodyHash: 1dffe05110b7
     who: Lenajava1
     note: "Storefront UI, 2026-11-04: Turn on → Cancel → Turn on again 20 s later: second requestMfaChangeCode succeeded with a new ticket and resendSecondsRemaining 10 (the time left from the first), no second journal row; the widget re-shows \"enter the code we sent to <masked>\" with \"Resend code in 8 s\" (it does not claim a new code). Resend after the countdown sent a new email and showed \"New code sent.\". Separately, a change code WAS emailed 24 s after a sign-in code for the same user (org Turn off right after a code sign-in), so the 30 s window is not shared between sign-in and change codes."
+  - method: observation
+    deployment: local
+    build: 34214ec43feee00d
+    conditions: module:VirtoCommerce.MFA=3.1003.0-pr-6-2da2; theme=2.62.0-pr-2648-f69c-f69c2e9c; setting:MultiFactorAuthentication.StoreMode=CustomerChoice; setting:MultiFactorAuthentication.Enabled=false
+    at: 2026-11-12T10:59:35.681Z
+    by: session:af366868
+    bodyHash: 1dffe05110b7
+    who: Lenajava1
+    contradicts: true
+    contested: virtocommerce.news 3.1006.0 vs 3.1005.0; virtocommerce.profileexperienceapimodule 3.1024.0 vs 3.1023.0; virtocommerce.xapi 3.1031.0 vs 3.1029.0; virtocommerce.xcart 3.1046.0 vs 3.1043.0-pr-151-07b3; virtocommerce.xcatalog 3.1024.0 vs 3.1024.0-pr-115-8339; …
+    note: "Only the Required clause no longer holds on the fixed build (VCST-6688): with the user mode set to Required by the admin (PUT /api/mfa/modes/users/{id}), requestMfaChangeCode with command {storeId} only answered succeeded=false, errorCode mfa_locked_by_administrator, no twoFactorToken, and added no MfaSignInEmailNotification journal row. With command {storeId, organizationId} for the org MFA permission holder (org mode Off) it succeeded and sent one code. The resend-interval clause was not re-tested. The old \"still sends a code\" behaviour was the defect VCST-6688, fixed in VirtoCommerce.MFA 3.1003.0-pr-6-2da2."
 ---
 CustomerChoice run store, global off. Two requestMfaChangeCode calls back to back: both succeeded true, resendSecondsRemaining 30, errorCode null, a twoFactorToken each; the journal held one MfaSignInEmailNotification after 15 s, and the first ticket with that code still confirmed updateMfaUserMode (succeeded). Separately, with the user mode set to Required by the admin, requestMfaChangeCode answered succeeded true and one email was sent; updateMfaUserMode then answered mfa_locked_by_administrator. Outside CustomerChoice it answers mfa_self_service_not_allowed and sends nothing.
