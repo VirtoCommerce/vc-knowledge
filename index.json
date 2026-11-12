@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:24:19.718Z",
-  "count": 1927,
+  "generated": "2026-11-12T11:35:52.099Z",
+  "count": 1928,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26938,6 +26938,25 @@
       ],
       "scope": [
         "module=x-catalog",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9A586893",
+      "path": "entries/KB-9A586893.md",
+      "subject": "Outside a CustomerChoice store a Required ORGANIZATION also answers mfa_self_service_not_allowed on requestMfaChangeCode(organizationId) and updateMfaOrganizationMode, with no ticket and no email; in CustomerChoice the same Required org answers mfa_locked_by_administrator",
+      "question": "What do requestMfaChangeCode with organizationId and updateMfaOrganizationMode answer for a Required organization when the store StoreMode is AdminManaged, Enabled, Disabled or Use global setting, and how does that differ from CustomerChoice?",
+      "anchors": [
+        "Mutation.requestMfaChangeCode",
+        "Mutation.updateMfaOrganizationMode",
+        "PUT /api/mfa/modes/organizations/{id}"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
         "surface=xapi"
       ],
       "plane": "experiential",
