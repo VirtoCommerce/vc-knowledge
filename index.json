@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T05:09:27.122Z",
-  "count": 1901,
+  "generated": "2026-11-12T05:23:47.506Z",
+  "count": 1902,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1091,6 +1091,27 @@
       "scope": [
         "area=organization-roles",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-069BDF81",
+      "path": "entries/KB-069BDF81.md",
+      "subject": "The /cart Pick points Google map renders without on-screen zoom controls; zoom and pan work only via mouse/touch gestures or Google Maps keyboard shortcuts on the focused map",
+      "question": "Does the /cart Pick points map have zoom +/- buttons?",
+      "questions": [
+        "How do you zoom the pickup location map in the cart?",
+        "Are Google Maps default controls shown in the Pick points dialog?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
