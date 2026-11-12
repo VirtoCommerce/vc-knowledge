@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T00:00:04.227Z",
+  "generated": "2026-11-12T03:43:26.136Z",
   "count": 1898,
   "entries": [
     {
@@ -12751,7 +12751,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-4B47D094",
