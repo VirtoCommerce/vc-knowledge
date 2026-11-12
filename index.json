@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T09:13:34.849Z",
-  "count": 1914,
+  "generated": "2026-11-12T09:36:04.317Z",
+  "count": 1915,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32774,6 +32774,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BCF37E85",
+      "path": "entries/KB-BCF37E85.md",
+      "subject": "Org switcher search (me.contact.organizations searchPhrase) also matches an organization's description, so orgs whose NAME lacks the typed text can be listed",
+      "question": "Why does the storefront org switcher search list organizations whose name does not contain the typed text?",
+      "questions": [
+        "Does me.contact.organizations searchPhrase match only the organization name?",
+        "Which fields does the org switcher search filter on?"
+      ],
+      "anchors": [
+        "Query.me.contact.organizations",
+        "POST /api/members/search"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
