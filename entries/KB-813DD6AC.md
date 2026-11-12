@@ -28,5 +28,13 @@ evidence:
     who: Lenajava1
     build: e46456da98d72140
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: a1bd5cbdd8350608
+    at: 2026-11-12T07:37:52.433Z
+    by: session:3b333ac1
+    bodyHash: 5069b0fec7ff
+    who: kutasinaelena
+    note: "2026-11-12: missions with EndDate = seed+N days-12h read 31/30/16/15/1; a mission with EndDate 13 min away (DUE-00) read daysRemaining 1 and the card '1 day left'."
 ---
 daysRemaining is computed per request, not stored: ceil((EndDate - UtcNow) in days), floored at 0, null when the mission has no EndDate. Missions published with EndDate = server time + N days - 12 h read exactly N (observed 1, 15, 16, 30, 31 and 60) and keep that value for 12 h. A mission whose EndDate is 20 minutes away reads 1, not 0. Observed on Loyalty 3.1009.0, vcst, 2026-10-01.
