@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:35:52.099Z",
-  "count": 1928,
+  "generated": "2026-11-12T11:41:35.826Z",
+  "count": 1929,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8846,7 +8846,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -15305,6 +15305,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-53F03C36",
+      "path": "entries/KB-53F03C36.md",
+      "subject": "The Sales Rep Reporting footnote ends the date with exactly one full stop in every store locale (no \"..\")",
+      "question": "Does the footnote under the Sales Rep Reporting charts on /company/customer-sales end its date with a single period in all locales, including the closed-period variant?",
+      "questions": [
+        "/company/customer-sales footnote double period de ru",
+        "sales rep reporting footnote_closed punctuation",
+        "what text does the Reporting page footnote show for current year vs a closed quarter"
+      ],
+      "anchors": [
+        "/company/customer-sales"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
