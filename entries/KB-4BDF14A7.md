@@ -62,5 +62,15 @@ evidence:
     bodyHash: 3c37fcb06d97
     who: kutasinaelena
     note: "REG-2026-11-12-0000-W1 AUTH-069, TECHFLOW buyer: no notice on /account/change-password."
+  - method: observation
+    deployment: vcst_qa
+    build: 3b66ce25e7926ad6
+    conditions: theme=2.62.0-alpha.2647; platform=3.1097.0; store=B2B-store
+    at: 2026-11-12T03:38:16.821Z
+    by: session:7e403256
+    bodyHash: 3c37fcb06d97
+    defect: none
+    who: kutasinaelena
+    note: "Form still shows no pre-submit notice (2026-11-12, B2B buyer). Withdrawing the defect marker: the VCST-4531 AC asks for a GREEN POP-UP after the change (\"User changes password on Device A -> Green pop-up should be displayed: 'Changing your password will sign you out of all other devices and browsers.'\"), not a notice on the form. vc-frontend PR #2275 (2.49.0) put that text into pages.change_password.success_message, which pages/account/change-password.vue shows via notifications.success on submit success. Absence on the form is by design."
 ---
 As a signed-in B2B user, /account/change-password renders Current password, New password, Confirm new password, the "Tips for creating a strong password" box and a Change button. No informational notice about being signed out of other devices/browsers is present anywhere on the page (DOM search for 'other devices', 'sessions', 'sign you out' found nothing). Footer build Ver. 2.61.0-alpha.2605.

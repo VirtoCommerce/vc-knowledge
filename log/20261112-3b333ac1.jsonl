@@ -1,1 +1,3 @@
 {"at":"2026-11-12T00:00:04.065Z","kind":"confirm","id":"KB-B1DBAD5D","deployment":"vcst_qa","trust":2,"build":"3b66ce25e7926ad6","client":"a0d108d3","via":"mcp","call":"toolu_018qx26rfkz5ttetq86sdSf8","topic":"sales rep customer coupons regression","who":"kutasinaelena","agent":"qa-frontend-expert"}
+{"at":"2026-11-12T00:01:46.085Z","kind":"show","id":"KB-E9DE91F6","state":"answer","verify":true,"via":"mcp","call":"toolu_01HXJmuuDtUZEf4iF8tHDbBs","topic":"sales rep hub regression triage","who":"kutasinaelena","agent":"main"}
+{"at":"2026-11-12T00:01:47.101Z","kind":"show","id":"KB-21C241D2","state":"answer","verify":true,"via":"mcp","call":"toolu_01T6ufJru12AzzqRRz9Lmhvx","topic":"sales rep hub regression triage","who":"kutasinaelena","agent":"main"}
