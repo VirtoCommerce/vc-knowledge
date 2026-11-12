@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T08:01:04.741Z",
-  "count": 1906,
+  "generated": "2026-11-12T08:12:59.914Z",
+  "count": 1907,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6618,6 +6618,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-2765437F",
+      "path": "entries/KB-2765437F.md",
+      "subject": "On vc-frontend 2.62 the /account/missions 'Redeem your points' banner renders title and text only, with no link or button to the rewards catalogue",
+      "question": "Does the Redeem your points banner on /account/missions offer a call-to-action to the rewards catalogue?",
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-27704B72",
       "path": "entries/KB-27704B72.md",
       "subject": "Deleting a user or organization leaves its MFA mode stored: GET /api/mfa/modes/users/{deletedId} and /organizations/{deletedId} still return the mode set before deletion",
@@ -9622,7 +9639,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -41403,7 +41420,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
