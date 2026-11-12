@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T09:42:01.574Z",
-  "count": 1916,
+  "generated": "2026-11-12T10:00:01.747Z",
+  "count": 1917,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -42175,6 +42175,27 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-F30520A6",
+      "path": "entries/KB-F30520A6.md",
+      "subject": "The /company/members Role facet lists roles actually held in the org, including an org-level-only role, but can still list a role nobody holds",
+      "question": "Which roles does the Role filter on /company/members offer, and does it include a role inherited only from the organization's own roles?",
+      "questions": [
+        "Does the members role facet show Organization manager when it is only an org-level role?",
+        "Why does the company members role filter offer Store manager when no member has it?"
+      ],
+      "anchors": [
+        "/company/members",
+        "Query.organization.contacts"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-F31BD5B8",
