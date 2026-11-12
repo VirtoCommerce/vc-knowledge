@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:08:27.817Z",
-  "count": 1924,
+  "generated": "2026-11-12T11:10:03.707Z",
+  "count": 1925,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11714,6 +11714,27 @@
       "scope": [
         "page=list-details",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-44CE5B75",
+      "path": "entries/KB-44CE5B75.md",
+      "subject": "Pickup locations are store-scoped: each PickupLocation carries a StoreId, so the active-location count is per store",
+      "question": "Are pickup locations scoped per store or global?",
+      "questions": [
+        "pickup locations scoped per store or global",
+        "can a second store have its own set of pickup locations",
+        "does deactivating pickup locations on one store affect another store"
+      ],
+      "anchors": [
+        "/api/pickup-locations"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
