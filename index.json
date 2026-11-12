@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-12T11:53:54.224Z",
-  "count": 1931,
+  "generated": "2026-11-12T12:08:52.745Z",
+  "count": 1932,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3037,7 +3037,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11725,7 +11725,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -30523,7 +30523,7 @@
       "status": "active",
       "trust": 3,
       "disputed": 0,
-      "contested": 2
+      "contested": 3
     },
     {
       "id": "KB-AE34AB04",
@@ -36660,6 +36660,29 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-D43376E8",
+      "path": "entries/KB-D43376E8.md",
+      "subject": "updateMfaOrganizationMode's returned settings.requiredBy reads Organization once the org is Enabled, even while the caller's own user mode is Required",
+      "question": "What does settings.requiredBy return from Mutation.updateMfaOrganizationMode when both the user's own mode (Required) and the organization's mode (just set Enabled) require MFA?",
+      "questions": [
+        "Which source wins in requiredBy when user and organization MFA both apply?",
+        "Does requiredBy report User or Organization for a Required user whose organization was just enabled?"
+      ],
+      "anchors": [
+        "Mutation.updateMfaOrganizationMode",
+        "Query.mfaSettings",
+        "POST /graphql"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D47B8DF1",
