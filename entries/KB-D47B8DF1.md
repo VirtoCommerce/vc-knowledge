@@ -74,5 +74,14 @@ evidence:
     bodyHash: 3338a39b7f67
     who: kutasinaelena
     note: "REG-2026-11-12-0714-W3 display half: AGENT-TEST-QTE-EXPIRED (expirationDate 2026-10-26) renders 'Proposal sent' in list and detail, Quote data = Created + Status only, Approve and Decline enabled. Before the re-seed, AGENT-TEST-QTE-EXPIRED-TO-ACCEPT and -OOS were already 'Ordered' from earlier runs."
+  - method: observation
+    deployment: vcst_qa
+    build: a1bd5cbdd8350608
+    conditions: platform=3.1097.0; module:VirtoCommerce.Quote=3.1007.0
+    at: 2026-11-12T08:09:16.490Z
+    by: session:7e403256
+    bodyHash: 3338a39b7f67
+    who: kutasinaelena
+    note: "OOS half only, at xAPI level (no storefront): approveQuoteRequest on a Proposal-sent quote with a stock-0 tracked line placed an order with that line, no error, stock 0 -> -1. Expiry half not re-checked."
 ---
 On vcst (theme 2.60.0-alpha.2579) quotes in Proposal sent with expirationDate in the past or future both show status 'Proposal sent' in /account/quotes and on the detail page; the 'Quote data' block lists only Created and Status, never the expiration date, and there is no 'Expired' status. Approve on a quote whose expiration date had passed placed a New order with no error. Approve on a quote whose line was a permanently out-of-stock product placed an order containing that line with no warning. vc-module-quote ApproveQuoteCommandHandler checks only Status == 'Proposal sent' before ConvertToCartWithTax + PlaceCustomerOrderFromCartAsync, with no expiration or inventory check.
