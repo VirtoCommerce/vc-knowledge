@@ -1,0 +1,4 @@
+{"at":"2026-11-13T11:13:27.589Z","kind":"restart","why":"state-dropped","who":"Aleksandra-Mitricheva"}
+{"at":"2026-11-13T12:12:34.720Z","kind":"show","id":"KB-49D0D626","state":"answer","verify":true,"via":"mcp","call":"toolu_01HzwVDFXtvRp4yEiFxCeu88","topic":"sales statistics last-year comparison","who":"Aleksandra-Mitricheva","agent":"main"}
+{"at":"2026-11-13T12:12:43.652Z","kind":"dispute","id":"KB-49D0D626","deployment":"vcptcore_qa","build":"10711449609ce4eb","client":"50185e55","via":"mcp","call":"toolu_01VqfemNjwgcXib6Nb2gcgG9","topic":"sales statistics last-year comparison","who":"Aleksandra-Mitricheva","agent":"main"}
+{"at":"2026-11-13T12:12:44.232Z","kind":"flush","entries":0,"lines":14,"swept":["06802e8b.jsonl","83165ffd.jsonl","9c36bcd2.jsonl","fc3cc1ef.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"Aleksandra-Mitricheva"}
