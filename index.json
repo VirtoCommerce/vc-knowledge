@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-13T12:50:31.795Z",
-  "count": 1943,
+  "generated": "2026-11-13T12:51:41.911Z",
+  "count": 1946,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9700,6 +9700,23 @@
       "scope": [
         "account=guest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-384B6F79",
+      "path": "entries/KB-384B6F79.md",
+      "subject": "POST /api/catalog/search/products is gated only by [Authorize]: a back-office user with no catalog permission searches the whole catalog",
+      "question": "Does POST /api/catalog/search/products require catalog:read or catalog:access for a back-office Manager user without any catalog permission?",
+      "anchors": [
+        "POST /api/catalog/search/products",
+        "GET /api/catalog/products/{id}"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -24556,6 +24573,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-8BDB3508",
+      "path": "entries/KB-8BDB3508.md",
+      "subject": "onX MCP tools act with the signed-in user's platform permissions; a denied read comes back as \"Unknown error\", a denied write as FORBIDDEN 403",
+      "question": "What do onX MCP tools (get-orders, create-sales-order, update-order) return for a back-office user without order, customer or inventory permissions?",
+      "questions": [
+        "Does vc-mcp-onx enforce the user's permissions per tool?",
+        "Who is an order edit through onX update-order attributed to?"
+      ],
+      "concepts": [
+        "permission",
+        "customer-order"
+      ],
+      "anchors": [
+        "POST /mcp/get-orders",
+        "POST /mcp/update-order",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8BE75346",
       "path": "entries/KB-8BE75346.md",
       "subject": "The storefront account-menu Organizations listbox always renders the ACTIVE organization first, so option order changes on every organization switch; the active org is shown even when it does not match the search text",
@@ -35172,6 +35215,22 @@
       "disputed": 0
     },
     {
+      "id": "KB-CA3C6EB1",
+      "path": "entries/KB-CA3C6EB1.md",
+      "subject": "onX create-sales-order by SKU fails with a raw SQL error: the line item is saved without CatalogId",
+      "question": "What does onX MCP create-sales-order return for an order with a customer and a SKU line on vcst_qa?",
+      "anchors": [
+        "POST /api/order/customerOrders"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-CA4C93E4",
       "path": "entries/KB-CA4C93E4.md",
       "subject": "discount-rate-not-persisted-on-order",
@@ -42547,7 +42606,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
