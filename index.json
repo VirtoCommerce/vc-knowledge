@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-13T12:12:44.232Z",
-  "count": 1942,
+  "generated": "2026-11-13T12:50:31.795Z",
+  "count": 1943,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -31816,6 +31816,27 @@
         "build=3.1035.0-pr-171-61df",
         "module=pagebuildermodule",
         "surface=admin-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B497C8D8",
+      "path": "entries/KB-B497C8D8.md",
+      "subject": "onX MCP (/mcp) accepts any platform-issued access token: it checks signature and issuer but not the audience",
+      "question": "Does the onX MCP endpoint POST /mcp reject a platform token issued for another audience or resource?",
+      "questions": [
+        "Is the onX MCP token audience-bound to its rsrc: resource?",
+        "Can a password-grant platform token be used on vc-mcp-onx /mcp?",
+        "What token claims does vc-mcp-onx validate?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
