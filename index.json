@@ -3030,6 +3030,7 @@
       "anchors": [
         "/account/lists/{id}",
         "/account/quotes/{id}/edit",
+        "/account/quotes/{id}",
         "/cart"
       ],
       "scope": [
@@ -31375,7 +31376,10 @@
         "surface=storefront-ui"
       ],
       "plane": "experiential",
-      "status": "active",
+      "status": "superseded",
+      "supersededBy": [
+        "KB-110978AE"
+      ],
       "trust": 1,
       "disputed": 0
     },
