@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T17:02:51.782Z",
-  "count": 1989,
+  "generated": "2026-11-16T17:31:42.092Z",
+  "count": 1992,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37801,6 +37801,34 @@
       "disputed": 0
     },
     {
+      "id": "KB-D456FA1E",
+      "path": "entries/KB-D456FA1E.md",
+      "subject": "Product-subscription xAPI refuses another customer's subscription, renewal and card: Forbidden for subscriptions/renewals, 'The card was not found' for cards, authorizePayment with someone else's storedPaymentMethodId isSuccess false; anonymous gets Unauthorized",
+      "question": "Can a signed-in customer read or change another customer's product subscription, renewal or saved card through xAPI?",
+      "questions": [
+        "What does productSubscription(id) return for a subscription of another customer?",
+        "Can authorizePayment use another customer's storedPaymentMethodId?",
+        "What do savedPaymentMethods and productSubscriptions return anonymously?"
+      ],
+      "anchors": [
+        "Query.productSubscription",
+        "Query.subscriptionRenewal",
+        "Mutation.changeProductSubscription",
+        "Mutation.cancelProductSubscription",
+        "Mutation.removeSavedPaymentMethod",
+        "Mutation.setDefaultSavedPaymentMethod",
+        "Mutation.authorizePayment"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D47B8DF1",
       "path": "entries/KB-D47B8DF1.md",
       "subject": "Quote expiration date is neither shown nor enforced on the storefront; approving an expired or out-of-stock quote places the order",
@@ -44199,6 +44227,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-F4E31D52",
+      "path": "entries/KB-F4E31D52.md",
+      "subject": "Product-subscription renewals group a customer's due subscriptions by date + card + shipping + address: same card -> one renewal and one order; a different card -> a separate renewal",
+      "question": "How does the product subscription scheduler group several due subscriptions of one customer into renewals?",
+      "questions": [
+        "When do two product subscriptions become one renewal order?",
+        "Does a subscription paid with a different saved card get its own renewal?",
+        "What does POST /api/product-subscription/scheduler/run create for three subscriptions due the same day?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/scheduler/run",
+        "Mutation.changeProductSubscription"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F4E808D1",
       "path": "entries/KB-F4E808D1.md",
       "subject": "PUT /api/page-builder-multilanguage-pages with a different storeId returns 400; an arbitrary organizationId is accepted and copied to inheriting versions",
@@ -45304,6 +45355,29 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-FBE1C7BC",
+      "path": "entries/KB-FBE1C7BC.md",
+      "subject": "A renewal whose authorization expired is re-authorized and then captured when its order shipment is set to Sent; no void of the replaced authorization is recorded with the mock method",
+      "question": "What happens to a product subscription renewal payment when the order ships after ProductSubscription.Payments.AuthorizationLifetimeMinutes has passed?",
+      "questions": [
+        "Is a renewal payment captured at shipment?",
+        "Does an expired renewal authorization get re-authorized before capture?",
+        "Is the old authorization voided on re-authorization?"
+      ],
+      "anchors": [
+        "PUT /api/order/customerOrders",
+        "GET /api/product-subscription/renewals/{id}"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-FC1BCACF",
