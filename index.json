@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T18:45:37.108Z",
-  "count": 2000,
+  "generated": "2026-11-16T19:07:24.112Z",
+  "count": 2001,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16036,6 +16036,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-55587DA9",
+      "path": "entries/KB-55587DA9.md",
+      "subject": "On /cart, Clear cart opens a Yes/No confirmation dialog and Yes empties every line with a single clearCart mutation",
+      "question": "How does Clear cart on the storefront /cart page work: is there a confirmation and how many mutations does it send?",
+      "questions": [
+        "Does the storefront ask before clearing the cart?",
+        "Does Clear cart call removeCartItems per line or one clearCart?",
+        "What does the cart page show after Clear cart is confirmed?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.clearCart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-557222F3",
       "path": "entries/KB-557222F3.md",
       "subject": "With the VCST-6276 PR builds, Tax, Catalog Personalization and Catalog Publishing REST endpoints return 401 anonymous and 403 without the required permission",
@@ -22036,7 +22058,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
