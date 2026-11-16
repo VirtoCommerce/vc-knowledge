@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T16:20:44.396Z",
-  "count": 1974,
+  "generated": "2026-11-16T16:26:12.022Z",
+  "count": 1978,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1909,6 +1909,31 @@
         "Query.loyaltyMissionProgress"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0AE0AA44",
+      "path": "entries/KB-0AE0AA44.md",
+      "subject": "For a variation parent and a configurable product with a subscription plan the PDP shows no Subscribe & Save; the variation-parent cart line offers it, the configured cart line does not, yet Mutation.setCartItemSubscription accepts the configured line and the order creates a subscription at the configured price",
+      "question": "Can a variation product or a configurable product be bought as a product subscription on the storefront?",
+      "questions": [
+        "Does the PDP show Subscribe & Save for products with variations?",
+        "Does setCartItemSubscription accept a configurable product line?",
+        "Does a product subscription keep the configuration of a configurable product?"
+      ],
+      "anchors": [
+        "/product/{id}",
+        "/cart",
+        "Mutation.setCartItemSubscription",
+        "Query.subscriptionOffers"
+      ],
+      "scope": [
+        "store=b2b-store",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -4387,6 +4412,32 @@
       "trust": 5,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-18212780",
+      "path": "entries/KB-18212780.md",
+      "subject": "A cart line set to Subscribe & Save shows a subscription terms consent on /cart that gates Place order; the stored-card payment runs after the order on /checkout/payment with card saving forced, and the subscription is PendingActivation until the payment succeeds",
+      "question": "What does checkout look like for a cart with a product subscription line, and when does the subscription become Active?",
+      "questions": [
+        "Is Place order disabled until the subscription terms are accepted?",
+        "When is a product subscription created during checkout?",
+        "Can the buyer untick save card when paying for a subscription order?",
+        "Which payment methods are offered when the cart holds a subscription line?"
+      ],
+      "anchors": [
+        "/cart",
+        "/checkout/payment",
+        "Mutation.setCartItemSubscription",
+        "Query.productSubscriptions"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-1834ABE5",
@@ -18560,6 +18611,30 @@
       ],
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-67CE3EC1",
+      "path": "entries/KB-67CE3EC1.md",
+      "subject": "Paying a subscription order with a card that needs 3-D Secure on save shows a bank confirmation dialog; the card is not saved and the subscription stays PendingActivation until the buyer approves",
+      "question": "What happens to the saved card and the subscription when the first subscription payment needs 3-D Secure?",
+      "questions": [
+        "Is a card saved before 3-D Secure is confirmed on a subscription order?",
+        "Is a subscription Active while its first payment waits for 3DS?",
+        "Does paying a second subscription order with the same saved card create a duplicate saved card?"
+      ],
+      "anchors": [
+        "/checkout/payment",
+        "Mutation.authorizePayment",
+        "Query.savedPaymentMethods"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-67D0AB31",
@@ -39373,6 +39448,33 @@
         "/cart"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DEE95CC8",
+      "path": "entries/KB-DEE95CC8.md",
+      "subject": "On /account/subscriptions/{id} skip moves the next date by one interval, but saving a new frequency recomputes the next date from today and drops the skip; Order now only schedules a manual renewal, it does not create an order immediately",
+      "question": "How do skip, change frequency, pause, resume, Order now and cancel behave on the storefront subscription detail page?",
+      "questions": [
+        "Does changing a subscription's frequency keep a skipped delivery?",
+        "Does Order now on a product subscription place an order right away?",
+        "What quantity and date validation does the subscription edit form apply?",
+        "Does cancelling a subscription remove its open renewal?"
+      ],
+      "anchors": [
+        "/account/subscriptions/{id}",
+        "Mutation.changeProductSubscription",
+        "Mutation.skipProductSubscription",
+        "Mutation.orderProductSubscriptionNow",
+        "Mutation.cancelProductSubscription"
+      ],
+      "scope": [
+        "store=b2b-store",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
