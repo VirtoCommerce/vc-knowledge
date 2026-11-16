@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T18:24:29.212Z",
-  "count": 1998,
+  "generated": "2026-11-16T18:41:34.764Z",
+  "count": 1999,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -40109,6 +40109,30 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E088E2B9",
+      "path": "entries/KB-E088E2B9.md",
+      "subject": "A failed product-subscription renewal leaves its order New; the order's PaymentIn is Declined after a hard decline but stays New after soft-decline retries are exhausted",
+      "question": "What is the renewal order's payment status after a product-subscription renewal fails (hard decline vs retries exhausted)?",
+      "questions": [
+        "Does RETRIES_EXHAUSTED mark the renewal order payment Declined?",
+        "Why is the PaymentIn of a failed renewal order still New?",
+        "Is the order cancelled when a subscription renewal payment fails?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/renewals/{id}/retry-payment",
+        "POST /api/product-subscription/renewals/{id}/process",
+        "GET /api/order/customerOrders/number/{id}"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
