@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T16:51:41.661Z",
-  "count": 1988,
+  "generated": "2026-11-16T17:02:51.782Z",
+  "count": 1989,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29657,6 +29657,32 @@
       "scope": [
         "app=storybook",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A5C35543",
+      "path": "entries/KB-A5C35543.md",
+      "subject": "At 390x844 the whole Subscribe & Save buyer flow fits the phone width: PDP purchase options, cart subscription line and frequency, terms block with consent gating Place order (sticky bottom bar), mock card payment, subscription detail, and the Pause/Cancel dialogs, all without horizontal scroll",
+      "question": "Does the product subscription purchase and self-service flow work on a phone-width storefront?",
+      "questions": [
+        "Is Subscribe & Save usable on mobile 390px?",
+        "Where is Place order on the mobile cart with a subscription line?",
+        "Do the subscription pause and cancel dialogs fit a phone screen?"
+      ],
+      "anchors": [
+        "/product/{id}",
+        "/cart",
+        "/checkout/payment",
+        "/account/subscriptions/{id}"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui",
+        "viewport=mobile"
       ],
       "plane": "experiential",
       "status": "active",
