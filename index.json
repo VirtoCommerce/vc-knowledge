@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T13:52:50.440Z",
-  "count": 1959,
+  "generated": "2026-11-16T14:02:26.370Z",
+  "count": 1961,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -432,7 +432,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -26552,6 +26552,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-95C7282E",
+      "path": "entries/KB-95C7282E.md",
+      "subject": "A membership role saved with roleName null makes xAPI organization.contacts fail rolesInOrganization name with INVALID_OPERATION, and the storefront logs an ApolloError",
+      "question": "What happens to organization.contacts when an organization membership role has roleName null?",
+      "questions": [
+        "Why does GetOrganizationContacts return Error trying to resolve field 'name'?",
+        "Does POST /api/customer/organization-memberships require roleName on each role?",
+        "Why does the company members page log an ApolloError for rolesInOrganization name?"
+      ],
+      "anchors": [
+        "POST /api/customer/organization-memberships",
+        "Query.organization",
+        "/company/members"
+      ],
+      "scope": [
+        "surface=rest-api",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-95CC3812",
       "path": "entries/KB-95CC3812.md",
       "subject": "PUT /api/news saves a second news article whose ACTIVE SEO semanticUrl duplicates another article's in the same store and language with 200 and no warning; xAPI slugInfo then always resolves the slug to the first article",
@@ -33028,6 +33052,29 @@
       "scope": [
         "feature=password-reset",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BA8257C3",
+      "path": "entries/KB-BA8257C3.md",
+      "subject": "The storefront Change role dialog preselects the first entry of rolesInOrganization, which can be an inherited organization-level role rather than the member's membership role",
+      "question": "Which role is preselected in the /company/members Change role dialog when the member's membership role differs from the organization-level role?",
+      "questions": [
+        "Why does Edit role show Organization employee for a member whose membership is Organization maintainer?",
+        "Is the Change role radio preselection the membership role or the merged role list?"
+      ],
+      "anchors": [
+        "/company/members",
+        "Mutations.changeOrganizationContactRole",
+        "Query.organization"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
