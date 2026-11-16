@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T12:36:23.080Z",
-  "count": 1949,
+  "generated": "2026-11-16T12:49:42.806Z",
+  "count": 1951,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24333,7 +24333,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-8AD383A4",
@@ -26262,7 +26262,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -27879,6 +27879,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9E664339",
+      "path": "entries/KB-9E664339.md",
+      "subject": "With the storefront currency switched to EUR, /account/dashboard order cards show the USD order total as the same number with a euro sign (Query.orderStatistics currencyCode EUR returns ytd 4 / €1,018.77 for four USD orders summing $1,018.77, excludedCount 0)",
+      "question": "What do the /account/dashboard order cards (Query.orderStatistics) show when the storefront currency differs from the currency the buyer's orders were placed in?",
+      "questions": [
+        "Does orderStatistics convert order totals into the requested currencyCode?",
+        "Why does the dashboard YTD total show euros for orders placed in dollars?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.orderStatistics"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -34698,7 +34720,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-C5F793F8",
@@ -39873,6 +39896,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E547B0A6",
+      "path": "entries/KB-E547B0A6.md",
+      "subject": "On a vc-frontend-next build the storefront mounts only after the preset stylesheet chunk settles: a slow preset chunk keeps the page blank for its whole delay (no timeout), a failed one boots normally",
+      "question": "What does the storefront do on first load when the design or preset stylesheet chunk is slow or fails?",
+      "questions": [
+        "Does the storefront hang if the preset CSS chunk never answers?",
+        "Is the app mount gated on loadPresetStyles / loadDesignStyles?",
+        "What is html data-design when the preset stylesheet fails to load?"
+      ],
+      "anchors": [
+        "/accessories/aliexpress/phones-and-accessories/holders-stands"
+      ],
+      "scope": [
+        "phase=boot",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
