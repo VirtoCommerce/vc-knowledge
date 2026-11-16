@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T16:19:35.526Z",
-  "count": 1971,
+  "generated": "2026-11-16T16:19:55.113Z",
+  "count": 1973,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13648,6 +13648,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-4C7F5FF4",
+      "path": "entries/KB-4C7F5FF4.md",
+      "subject": "skipProductSubscription takes only the subscription id, so a Skip pressed on a stale subscription page skips whatever delivery is next on the server, not the date that page shows",
+      "question": "What happens when a buyer presses Skip next delivery on a subscription page opened before another tab already skipped?",
+      "questions": [
+        "two tabs skip the same subscription",
+        "is skipProductSubscription idempotent",
+        "does Skip next delivery check which date it skips"
+      ],
+      "anchors": [
+        "/account/subscriptions/{id}",
+        "Mutation.skipProductSubscription"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4C86ED98",
       "path": "entries/KB-4C86ED98.md",
       "subject": "GET /api/seoinfos/explain on the VCST-5989 PR build starts with a Candidates stage and lists rejected records with reason codes",
@@ -18615,7 +18638,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-6824BC2B",
@@ -25262,6 +25286,29 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-8DFD9936",
+      "path": "entries/KB-8DFD9936.md",
+      "subject": "A subscription is created at order placement, before payment, with status Starting, and appears under the Active filter of My subscriptions with no card",
+      "question": "What does the customer see in My subscriptions if they place a subscription order and leave the payment page unpaid?",
+      "questions": [
+        "subscription status before first payment",
+        "is a subscription created when checkout payment is declined"
+      ],
+      "anchors": [
+        "/account/subscriptions",
+        "/account/orders/{id}/payment",
+        "Mutation.authorizePayment"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-8E1456B8",
