@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T11:14:33.818Z",
-  "count": 1947,
+  "generated": "2026-11-16T11:20:06.931Z",
+  "count": 1948,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -27006,7 +27006,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -36827,6 +36827,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D26B490B",
+      "path": "entries/KB-D26B490B.md",
+      "subject": "Saving a storefront address fails with \"Some of the addresses are not valid\" when Line 1 makes the derived address name exceed 256 characters, although the form allows 2048",
+      "question": "Mutation.updateMemberAddresses — why is a storefront address with a long Address Line 1 rejected even though the form accepts up to 2048 characters?",
+      "questions": [
+        "What is the real maximum length of Address Line 1 on the storefront address form?",
+        "What does 'Some of the addresses are not valid' mean when saving an address?",
+        "Does the storefront address name have a length limit?"
+      ],
+      "anchors": [
+        "Mutation.updateMemberAddresses",
+        "/account/addresses",
+        "/company/info"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

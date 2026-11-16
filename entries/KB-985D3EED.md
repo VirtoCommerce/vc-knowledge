@@ -28,5 +28,14 @@ evidence:
     bodyHash: cdad43e60dfd
     who: Lenajava1
     note: "Observed live 2026-11-04 (store windows CustomerChoice / AdminManaged): a member whose run org role adds xapi:my_organization:mfa:manage (present in the storefront me permissions) sees the company widget on /company/info; a member without it sees none, also while impersonated."
+  - method: observation
+    deployment: vcst_qa
+    build: b0d1ac6487d06555
+    conditions: theme=vc-frontend-next-3.3.0-pr-23-7be3; store=B2B-store; setting:MultiFactorAuthentication.StoreMode=CustomerChoice
+    at: 2026-11-16T11:14:34.131Z
+    by: session:1ffdf951
+    bodyHash: cdad43e60dfd
+    who: Lenajava1
+    note: "2026-11-16: B2B-store is now in CustomerChoice, so the user widget on /account/security renders (\"Off\", \"Turn on\"); switching the store to Disabled for a minute made Query.mfaSettings answer storeMode Disabled, canChangeUserMode false and the widget disappeared. The entry's \"no store in AdminManaged or CustomerChoice\" line is outdated for B2B-store."
 ---
 Source read of vc-frontend PR 2622 (client-app/modules/mfa/index.ts, constants.ts, components/mfa-settings-widget.vue) and vc-module-mfa PR 3: init() returns without registering anything unless useModules() lists VirtoCommerce.MFA with a version that hasMfaSchema (SCHEMA_RELEASES 3.1000.2 and 3.1002.0; the 3.1001 line never got the schema); the module list needs setting XAPI.Security.ReturnModuleVersion. The user widget renders when storeMode is AdminManaged or CustomerChoice or isRequired is true; the organization widget renders only in those two store modes and only when the user holds xapi:my_organization:mfa:manage. The permission is registered by the MFA module (group XAPI) and the README says to add it to an organization role. Live 2026-11-04 on vcst_qa: the roles Organization maintainer, Organization manager, Organization employee and Purchasing agent do not contain it, and no store is in AdminManaged or CustomerChoice, so no storefront user can see the company widget.
