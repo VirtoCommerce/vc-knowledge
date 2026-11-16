@@ -72,5 +72,14 @@ evidence:
     defect: VCST-6605
     who: kutasinaelena
     note: "Chrome, theme 2.62.0-alpha.2647: USD->EUR on USD-only AGENT-TEST-Gaming Laptop PDP shows Price EUR 0.00, disabled stepper, In stock 9, no unavailability message. Still present."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: ccb4570264d7de66
+    conditions: theme=2.63.0-pr-2602-399d; store=B2B-store; currency=EUR; culture=de-DE; viewport=390x844
+    at: 2026-11-16T16:49:27.526Z
+    by: session:d9b8e380
+    bodyHash: 7d17b2f3b058
+    who: kutasinaelena
+    note: "Theme 2.63.0-pr-2602, EUR account (no currency switch, account default EUR), 390 px: PEPSI 201482 (USD-only) PDP 'Preis: 0,00 €', stepper 0 disabled, in-stock badge 3529, no unavailability message; GetProduct EUR isBuyable=false. Additionally the new Subscribe & Save block renders with 'N/A' (KB-4745333B)."
 ---
 Signed-in buyer, store with USD+EUR. Product priced only in USD (xAPI EUR price.actual 0, isBuyable false). Header currency -> EUR: product page 'Price and delivery' reads 'Price: €0.00', quantity stepper and input disabled, in-stock badge still shown, no message that the product is unavailable in this currency. The cart (converted to EUR) shows that line at €0.00; catalog cards show '€0.00'. A product with an EUR price shows its EUR price-list value, not a conversion.

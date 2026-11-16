@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T16:38:59.249Z",
-  "count": 1983,
+  "generated": "2026-11-16T16:49:53.387Z",
+  "count": 1984,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12571,6 +12571,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-4745333B",
+      "path": "entries/KB-4745333B.md",
+      "subject": "On the PDP, a product with a subscription plan but no price in the session currency still shows the Purchase options block: One-time 0,00, Subscribe & Save with the plan's saving badge and 'N/A' price, selectable with a frequency dropdown, while quantity is disabled and there is no add-to-cart",
+      "question": "What does the product page show for Subscribe & Save when the product has no price in the buyer's currency?",
+      "questions": [
+        "Is the subscription purchase option hidden for a non-buyable product with no price list in EUR?",
+        "Why does Subscribe & Save show N/A on the product page?",
+        "Can a buyer subscribe to a product priced 0 in the current currency?"
+      ],
+      "anchors": [
+        "/product/{id}",
+        "Query.product"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-47727A18",
       "path": "entries/KB-47727A18.md",
       "subject": "Switching organization from the storefront account menu exchanges the token and fully reloads every open storefront tab; the first GA4 hit of each reloaded page carries the new organization_id, and a product page that was open re-sends view_item under the new organization.",
@@ -22063,7 +22087,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 7,
+      "trust": 8,
       "disputed": 0
     },
     {
