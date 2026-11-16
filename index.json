@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T16:26:12.022Z",
-  "count": 1978,
+  "generated": "2026-11-16T16:28:36.905Z",
+  "count": 1980,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29521,6 +29521,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-A5C0B71C",
+      "path": "entries/KB-A5C0B71C.md",
+      "subject": "On the Storybook built from theme 2.62.0-pr-2639, VcButton stories render as plain text (no background, border, padding or kit font) while VcBadge in the same Storybook and VcButton on the same theme's storefront render styled",
+      "question": "Do VcButton stories render styled in the Storybook of the vc-frontend PR 2639 build (:where(.vc-button) base rules)?",
+      "questions": [
+        "Why does VcButton look unstyled in Storybook after the :where(.vc-button) change?",
+        "Is VcButton's colour and padding applied in the PR 2639 Storybook?"
+      ],
+      "anchors": [
+        "/story/components-molecules-vcbutton--basic"
+      ],
+      "scope": [
+        "app=storybook",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A5F9BBED",
       "path": "entries/KB-A5F9BBED.md",
       "subject": "Contact.isLockedInOrganization is resolved from the CALLER's JWT organization claim, so a platform-admin token reads false for a genuinely locked member.",
@@ -40138,6 +40159,27 @@
       ],
       "scope": [
         "feature=orders",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E35490D3",
+      "path": "entries/KB-E35490D3.md",
+      "subject": "VcPopupSidebar's dialog width rule loses to VcDialog's own root width on the storefront but wins in Storybook, because the two bundles emit the kit CSS in opposite order",
+      "question": "Which wins for the VcPopupSidebar dialog width — the parent class vc-popup-sidebar__dialog or the VcDialog root rule — on the storefront vs Storybook?",
+      "questions": [
+        "Do kit component roots other than VcButton still depend on CSS load order against a parent's single class?",
+        "Why is the filters popup sidebar wider on the storefront than in Storybook at narrow viewports?",
+        "Does Storybook load the vc.kit layer in the same order as the storefront?"
+      ],
+      "anchors": [
+        "/catalog"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
