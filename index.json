@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T18:09:20.897Z",
-  "count": 1996,
+  "generated": "2026-11-16T18:15:53.895Z",
+  "count": 1997,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37833,6 +37833,27 @@
       "scope": [
         "feature=password-expiry",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D379E0E8",
+      "path": "entries/KB-D379E0E8.md",
+      "subject": "GET api/product-subscription/customers/{customerId}/saved-payment-methods returns the provider token and providerCustomerRef of each saved card",
+      "question": "Does the admin REST saved-payment-methods endpoint of the product subscription module expose the provider token?",
+      "questions": [
+        "Which fields does api/product-subscription/customers/{id}/saved-payment-methods return?",
+        "Is the stored card token visible through the admin REST API?",
+        "Is the customer id of saved-payment-methods the user id or the contact id?"
+      ],
+      "anchors": [
+        "GET /api/product-subscription/customers/{id}/saved-payment-methods"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
