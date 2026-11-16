@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T14:02:26.370Z",
-  "count": 1961,
+  "generated": "2026-11-16T14:03:22.485Z",
+  "count": 1962,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13772,6 +13772,28 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4D5C427A",
+      "path": "entries/KB-4D5C427A.md",
+      "subject": "On the vc-frontend-next PR #23 build, /account/dashboard stat-card captions render uppercase at weight 700 while widget titles follow the theme's 600 / no-transform title tokens",
+      "question": "How are the stat-card captions on /account/dashboard styled on the vc-frontend-next theme — case and weight compared with widget titles?",
+      "questions": [
+        "Are the account dashboard stat card labels uppercase on the Next theme?",
+        "Do dashboard stat captions follow --vc-widget-title-font-weight and text-transform?",
+        "What font weight do ORDERS PLACED / AVG ORDER VALUE captions use on /account/dashboard?"
+      ],
+      "anchors": [
+        "/account/dashboard"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
