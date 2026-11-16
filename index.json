@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T17:31:42.092Z",
-  "count": 1992,
+  "generated": "2026-11-16T17:46:41.521Z",
+  "count": 1995,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1202,6 +1202,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-06BEE14C",
+      "path": "entries/KB-06BEE14C.md",
+      "subject": "Store overrides ProductSubscription.Terms.Version/Text are shown in the /cart terms block and recorded on the consent (termsVersion, termsText, new termsHash) for every buyer of that store from the next cart load",
+      "question": "Does a store-level ProductSubscription.Terms.Version/Text override change the terms shown at checkout and the version stored on the subscription consent?",
+      "questions": [
+        "What termsVersion does GET /api/product-subscription/consents/{id} hold after the store terms are overridden?",
+        "Is the subscription terms text on /cart taken from the store setting?"
+      ],
+      "anchors": [
+        "GET /api/product-subscription/consents/{id}",
+        "/cart",
+        "Mutation.acceptSubscriptionTerms",
+        "PUT /api/stores"
+      ],
+      "scope": [
+        "feature=product-subscriptions",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -5709,7 +5734,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -30781,6 +30806,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-AB9E68CC",
+      "path": "entries/KB-AB9E68CC.md",
+      "subject": "A Boolean store setting cannot be put back to null (inherit) through REST: value null is stored as false and value \"\" returns 500",
+      "question": "How do I clear a Boolean store setting back to the inherited default through PUT /api/stores?",
+      "questions": [
+        "Does writing value null to a Boolean store setting restore the default?",
+        "Why did my store setting become false after I sent null?",
+        "Can POST /api/platform/settings delete an object-level Boolean setting value?"
+      ],
+      "anchors": [
+        "PUT /api/stores",
+        "POST /api/platform/settings",
+        "GET /api/stores/{id}"
+      ],
+      "scope": [
+        "objecttype=store",
+        "surface=rest",
+        "valuetype=boolean"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-ABB5F450",
       "path": "entries/KB-ABB5F450.md",
       "subject": "Admin Notification list search matches the notification type key, not the localized display name",
@@ -32293,6 +32343,32 @@
       "scope": [
         "module=virtocommerce.imagetools@3.1006.0",
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B3443FAD",
+      "path": "entries/KB-B3443FAD.md",
+      "subject": "With store setting ProductSubscription.Enabled=false the storefront shows no subscription UI, sends no subscription GraphQL operations and 404s /account/subscriptions; the switch takes effect within a minute of a full-store PUT and reverts the same way",
+      "question": "What does the storefront show when ProductSubscription.Enabled is turned off for the store, and how fast does it take effect?",
+      "questions": [
+        "Does turning off product subscriptions for a store hide Subscribe & Save on the PDP and cart?",
+        "Is /account/subscriptions still reachable when the subscription feature is off?",
+        "Is there a cache delay after changing ProductSubscription.Enabled through PUT /api/stores?"
+      ],
+      "anchors": [
+        "PUT /api/stores",
+        "/account/subscriptions",
+        "Query.subscriptionOffers",
+        "/cart"
+      ],
+      "scope": [
+        "feature=product-subscriptions",
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
