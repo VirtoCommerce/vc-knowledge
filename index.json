@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T18:41:34.764Z",
-  "count": 1999,
+  "generated": "2026-11-16T18:45:37.108Z",
+  "count": 2000,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -44948,6 +44948,30 @@
         "event=view_item_list",
         "page=home",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F84754C9",
+      "path": "entries/KB-F84754C9.md",
+      "subject": "With a subscribed line of a product in the default cart, Query.product returns that product's price already reduced by the subscription discount, and Query.subscriptionOffers applies the discount again on top of that price",
+      "question": "Does the product price on the PDP change when the same product is in the cart as a Subscribe & Save line?",
+      "questions": [
+        "Why does the PDP show the subscription discount twice when the product is subscribed in the cart?",
+        "What does Query.subscriptionOffers return as price when the product has a subscription line in the cart?",
+        "Does the subscription discount leak into catalog product prices?"
+      ],
+      "anchors": [
+        "Query.product",
+        "Query.subscriptionOffers",
+        "/product/{id}"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
