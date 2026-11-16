@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T16:37:56.312Z",
-  "count": 1981,
+  "generated": "2026-11-16T16:38:59.249Z",
+  "count": 1983,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17153,6 +17153,34 @@
       ],
       "scope": [
         "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5D8BD29C",
+      "path": "entries/KB-5D8BD29C.md",
+      "subject": "Removing the default saved card revokes it (status Revoked, dropped from savedPaymentMethods) and promotes the most recently created active card to default; setDefaultSavedPaymentMethod keeps exactly one default",
+      "question": "Which card becomes the default when the customer removes their default saved card on /account/payment-methods?",
+      "questions": [
+        "Are revoked saved cards still listed in savedPaymentMethods?",
+        "Does Make default leave more than one default card?",
+        "What status does a removed saved payment method get?"
+      ],
+      "concepts": [
+        "payment-method"
+      ],
+      "anchors": [
+        "/account/payment-methods",
+        "Mutation.removeSavedPaymentMethod",
+        "Mutation.setDefaultSavedPaymentMethod",
+        "Query.savedPaymentMethods"
+      ],
+      "scope": [
+        "store=b2b-store",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -36321,6 +36349,32 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-CCCDDDE6",
+      "path": "entries/KB-CCCDDDE6.md",
+      "subject": "Adding a MockStoredCardPaymentMethod card on /account/payment-methods: last4 0069 is refused with SAVED_PAYMENT_METHOD_ERROR \"Your card has expired.\" (UI shows a generic error); last4 3220 returns AUTHENTICATION_REQUIRED, the page opens a simulated 3-D Secure dialog, Approve re-sends and saves the card, Decline saves nothing; a past expiry date is blocked client-side",
+      "question": "What happens when an expired or 3-D Secure test card is added from the storefront Payment methods page with the stored-card test method?",
+      "questions": [
+        "Does addSavedPaymentMethod accept an expired card?",
+        "Does saving a 3DS card from the account page require authentication?",
+        "What does the Payment methods page do on AUTHENTICATION_REQUIRED?"
+      ],
+      "concepts": [
+        "card-payment"
+      ],
+      "anchors": [
+        "/account/payment-methods",
+        "Mutation.addSavedPaymentMethod"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-CCD42835",
