@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T16:28:36.905Z",
-  "count": 1980,
+  "generated": "2026-11-16T16:37:56.312Z",
+  "count": 1981,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8025,6 +8025,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2E27FC45",
+      "path": "entries/KB-2E27FC45.md",
+      "subject": "removeSavedPaymentMethod on a card that pays an Active subscription is refused server-side with SAVED_PAYMENT_METHOD_ERROR \"This card pays for a subscription. Choose another card for it first.\", but /account/payment-methods shows only the generic \"Something went wrong. Please try again.\" toast",
+      "question": "What happens when a customer removes a saved card that an active subscription pays with on /account/payment-methods?",
+      "questions": [
+        "Can a saved card used by a subscription be deleted?",
+        "What error does removeSavedPaymentMethod return for a card in use by a subscription?",
+        "Does the Payment methods page show why a card could not be removed?"
+      ],
+      "anchors": [
+        "/account/payment-methods",
+        "Mutation.removeSavedPaymentMethod"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
