@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T15:57:01.189Z",
-  "count": 1963,
+  "generated": "2026-11-16T15:59:08.300Z",
+  "count": 1967,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10927,6 +10927,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-3EEBB6F7",
+      "path": "entries/KB-3EEBB6F7.md",
+      "subject": "Query.subscriptionOffers returns one offer per product that has a subscription plan, with price, discountAmount and subscriptionPrice computed per discount type, and nothing for a product without a plan",
+      "question": "What does Query.subscriptionOffers return for products with a PERCENT, FIXED_AMOUNT or NONE plan, and for a product without a plan?",
+      "questions": [
+        "How is the Subscribe & Save price calculated in xAPI?",
+        "Does subscriptionOffers return an entry for a product with no subscription plan?",
+        "What discountAmount does a NONE-discount subscription plan return?"
+      ],
+      "anchors": [
+        "Query.subscriptionOffers"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3EEBFFF9",
       "path": "entries/KB-3EEBFFF9.md",
       "subject": "Query.customerReviews drops the keyword argument whenever filter is non-empty (pre-existing; same before and after the VCST-6251 fix)",
@@ -18524,6 +18546,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-68045128",
+      "path": "entries/KB-68045128.md",
+      "subject": "On a stand with MockStoredCardPaymentMethod active, cardPaymentMethods lists only AuthorizeNetPaymentMethod, so /account/payment-methods Add a card tokenizes via Accept.js and the mock cannot be used there; a one-time cart's availablePaymentMethods also omits the mock",
+      "question": "Which payment method does the storefront Payment methods page use to save a card, and is the stored-card test method offered on a cart without subscription lines?",
+      "questions": [
+        "why can't I add a test card on /account/payment-methods",
+        "is Credit card (test) offered at checkout for a one-time order",
+        "what does Query.cardPaymentMethods return"
+      ],
+      "anchors": [
+        "/account/payment-methods",
+        "Query.cardPaymentMethods",
+        "Mutation.addSavedPaymentMethod",
+        "Query.cart"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6824BC2B",
       "path": "entries/KB-6824BC2B.md",
       "subject": "platform GraphiQL runs as anonymous and takes a query in the URL",
@@ -19411,6 +19458,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6D21DE20",
+      "path": "entries/KB-6D21DE20.md",
+      "subject": "A cart holding only one-time items shows no subscription terms block on /cart and Place order is not gated by consent; no product subscription is created",
+      "question": "With product subscriptions enabled, does a cart with only one-time items show the subscription terms consent or block Place order?",
+      "questions": [
+        "Is the subscription consent checkbox shown when the cart has no subscription lines?",
+        "Does a one-time order create a product subscription?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.createOrderFromCart",
+        "Query.productSubscriptions"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -27251,6 +27321,28 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-98BF97EE",
+      "path": "entries/KB-98BF97EE.md",
+      "subject": "On the product page an out-of-stock product that has a subscription plan shows no purchase options (Subscribe & Save) block, only the price and a Stock alert button",
+      "question": "Does the PDP show the Subscribe & Save purchase options for a product with a subscription plan when the product is out of stock?",
+      "questions": [
+        "Why is the Subscribe & Save block missing on a product page?",
+        "Can an out-of-stock product be subscribed to from the storefront?"
+      ],
+      "anchors": [
+        "/product/{id}",
+        "/bulk-order"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
