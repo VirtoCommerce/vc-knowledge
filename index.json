@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T15:59:56.962Z",
-  "count": 1970,
+  "generated": "2026-11-16T16:19:35.526Z",
+  "count": 1971,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33800,6 +33800,27 @@
       ],
       "scope": [
         "module=virtocommerce.xcms",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BE3B1661",
+      "path": "entries/KB-BE3B1661.md",
+      "subject": "VcAddToCart shows its icon-only button when its own container is 14rem (224px) wide or narrower and its text button above that, never both",
+      "question": "Which of VcAddToCart's two buttons (icon-button / text-button) shows at which container width?",
+      "questions": [
+        "At what width does the add-to-cart button switch from an icon to 'Add to cart' text?",
+        "Why does a list line item show a cart icon instead of the Add to cart label?",
+        "What is the VcAddToCart container query breakpoint?"
+      ],
+      "anchors": [
+        "/account/lists/{id}"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
