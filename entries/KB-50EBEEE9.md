@@ -72,5 +72,13 @@ evidence:
     bodyHash: d0bf803f7f26
     who: kutasinaelena
     note: Re-confirmed with orders CO261112-00002 and CO261112-00003 (CyberSource inline card form on /cart). createOrderFromCart returns status 'Payment required'; after a successful authorizePayment the order detail shows 'Processing'. /checkout/completed still shows only the order number + Show order / Home page.
+  - method: observation
+    deployment: vcptcore_qa1
+    conditions: theme=2.63.0-pr-2602-399d; store=B2B-store
+    at: 2026-11-16T15:56:59.947Z
+    by: session:d9b8e380
+    bodyHash: d0bf803f7f26
+    who: kutasinaelena
+    note: "Re-observed on theme 2.63.0-pr-2602: shipping address, delivery method, payment method and Place order all on /cart; after Place order the app lands on /checkout/completed with only the order number plus Show order / Home page. Manual (Cash) payment reveals the purchase order number textbox but Place order stayed enabled without it."
 ---
 On vcst-qa (B2B-store, Ver. 2.58.0-pr-2467) the /cart page carries the whole checkout: Shipping details (Delivery option Pickup/Shipping, Shipping address, Delivery method), Payment details (Billing address with a 'Same as shipping address' checkbox checked by default, Payment method), Order comment, and the Place order button in the Order summary sidebar. There is no /checkout route to navigate to; on success the app lands on /checkout/completed showing 'Order <number> has been successfully submitted.' plus a 'Show order' link to /account/orders/<order-guid>. Place order stays disabled with 'Complete all required information to proceed.' until shipping address + delivery method + payment method are all set. With no saved address, the 'select a shipping address' control opens a 'New address' dialog directly rather than a picker; Country must be chosen from the combobox before State/Province is enabled, and State/Province only becomes required once a country is picked. Delivery methods offered: Fixed Rate (Ground) $150.00 and Fixed Rate (Air). Payment methods offered: Bank card (Authorize.Net), Bank card (CyberSource), Bank card (Datatrans), Manual, Pay with points, Bank card (Skyflow). Choosing 'Manual' reveals an extra 'Enter a purchase order number' textbox in Payment details and re-disables Place order. The placed order opens in status 'New' and still shows a 'Pay now' button, i.e. placing and paying are separate steps. Verified end to end by placing order CO260919-00028.
