@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T13:00:31.700Z",
-  "count": 1956,
+  "generated": "2026-11-16T13:02:34.807Z",
+  "count": 1957,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7083,7 +7083,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0,
       "resolved": 2
     },
@@ -28060,6 +28060,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9F43C810",
+      "path": "entries/KB-9F43C810.md",
+      "subject": "On vc-frontend-next 3.3.0-pr-23, print media hides the header, footer links and every VcButton on /cart and order details, but the footer copyright/version strip still prints",
+      "question": "What does the storefront hide in print media on /cart and /account/orders/{id}, and does the footer copyright and version strip print?",
+      "anchors": [
+        "/cart",
+        "/account/orders/{id}"
+      ],
+      "scope": [
+        "medium=print",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
