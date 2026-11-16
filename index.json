@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T19:07:24.112Z",
-  "count": 2001,
+  "generated": "2026-11-16T19:14:23.940Z",
+  "count": 2002,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37528,6 +37528,30 @@
       ],
       "scope": [
         "element=header-search",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D171CB24",
+      "path": "entries/KB-D171CB24.md",
+      "subject": "Save for later on /cart moves a simple-product line out of the active cart (itemsQuantity, subTotal, badge drop) into the saved-for-later list; Move to cart restores it and empties the list",
+      "question": "Does Save for later on /cart remove a line from the active cart subtotal and badge, and does Move to cart restore it?",
+      "questions": [
+        "What does moveToSavedForLater return for cart and list?",
+        "Which mutation does Move to cart in the Saved for later block send?",
+        "Does the cart subtotal exclude a saved-for-later item?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.moveToSavedForLater",
+        "Mutation.moveFromSavedForLater"
+      ],
+      "scope": [
+        "product-type=simple",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
