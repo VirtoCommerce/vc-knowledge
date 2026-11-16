@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T13:18:52.294Z",
-  "count": 1957,
+  "generated": "2026-11-16T13:25:52.295Z",
+  "count": 1958,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4194,7 +4194,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -43055,6 +43055,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-F303BBA8",
+      "path": "entries/KB-F303BBA8.md",
+      "subject": "The /compare product list is kept across a storefront organization switch: the same entries are listed under the newly selected organization",
+      "question": "Does the compare list on /compare persist after switching organization?",
+      "questions": [
+        "Is the product compare selection per organization or per browser?",
+        "What happens to compared products when a multi-org user switches organization?"
+      ],
+      "anchors": [
+        "/compare",
+        "Query.products"
+      ],
+      "scope": [
+        "feature=product-compare",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-F30520A6",
