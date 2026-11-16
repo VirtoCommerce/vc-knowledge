@@ -1,0 +1,2 @@
+{"at":"2026-11-16T07:25:35.857Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Lenajava1"}
+{"at":"2026-11-16T07:26:54.416Z","kind":"flush","entries":0,"lines":7,"swept":[],"retries":2,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
