@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T16:50:38.658Z",
-  "count": 1985,
+  "generated": "2026-11-16T16:51:41.661Z",
+  "count": 1988,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2886,6 +2886,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0F1DF925",
+      "path": "entries/KB-0F1DF925.md",
+      "subject": "After a soft decline, one POST renewals/{id}/process or /retry-payment call makes two charge attempts back to back, so two calls exhaust the 24,72,120 retry schedule in seconds and fail the renewal",
+      "question": "How many payment attempts does POST /api/product-subscription/renewals/{id}/retry-payment make after a soft decline?",
+      "questions": [
+        "Does Process now on a renewal respect the retry delay after a soft decline?",
+        "What happens to a RetryScheduled renewal when an admin retries the payment?",
+        "Soft decline renewal: RetryScheduled or Failed?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/renewals/{id}/retry-payment",
+        "POST /api/product-subscription/renewals/{id}/process"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -23943,6 +23966,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-86653272",
+      "path": "entries/KB-86653272.md",
+      "subject": "Product-subscription renewal outcomes by charge result: hard decline -> Failed + subscription PastDue + card NeedsUpdate; 3-D Secure -> PaymentActionRequired, customer confirm on the order payment page -> Authorized; price above the reminder total at cutoff -> ReviewRequired PRICE_INCREASED, accept -> order at the new price",
+      "question": "What states does a product subscription renewal go through on hard decline, 3-D Secure and a price increase?",
+      "questions": [
+        "What does a hard decline do to the subscription and the saved card?",
+        "How is a renewal in PaymentActionRequired confirmed?",
+        "When does a renewal go to ReviewRequired and what does accept do?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/renewals/{id}/process",
+        "POST /api/product-subscription/renewals/{id}/accept",
+        "/account/subscriptions/{id}"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-866853C8",
       "path": "entries/KB-866853C8.md",
       "subject": "sales-rep activity queries return null for an organization whose rep membership is locked, for a storeId the user cannot sign in to, and for an unknown storeId; a rep in a store-trusted group gets data for the other store",
@@ -39625,7 +39672,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-DF432371",
@@ -42780,6 +42827,29 @@
         "module=virtocommerce.pagebuildermodule",
         "role=administrator",
         "surface=admin-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EEB9B6FC",
+      "path": "entries/KB-EEB9B6FC.md",
+      "subject": "orderProductSubscriptionNow is idempotent under concurrency: two parallel calls give one renewal, one order, one authorization (the second is refused 'This subscription was just ordered'), and order-now during scheduler/run joins the scheduler's renewal",
+      "question": "What happens when Mutation.orderProductSubscriptionNow is called twice in parallel or while scheduler/run is running?",
+      "questions": [
+        "Can a double click on Order now create two renewal orders?",
+        "Why does orderProductSubscriptionNow return SUBSCRIPTION_ERROR 'This subscription was just ordered'?",
+        "Order now right after checkout is refused?"
+      ],
+      "anchors": [
+        "Mutation.orderProductSubscriptionNow",
+        "POST /api/product-subscription/scheduler/run"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
