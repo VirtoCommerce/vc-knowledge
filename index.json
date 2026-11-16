@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T13:32:50.925Z",
-  "count": 1958,
+  "generated": "2026-11-16T13:42:04.072Z",
+  "count": 1959,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3036,7 +3036,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4320,7 +4320,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -5396,7 +5396,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -37587,6 +37587,30 @@
       "scope": [
         "module=pages",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D77326CE",
+      "path": "entries/KB-D77326CE.md",
+      "subject": "A password sign-in of a locked-out account on /sign-in is refused with a 400 from POST /connect/token, shows a locked-out alert on the form and no dashboard data is requested afterwards",
+      "question": "What happens when a locked-out account signs in on /sign-in with a correct password, and can it reach /account/dashboard?",
+      "questions": [
+        "Does a locked storefront account get an error message at sign-in?",
+        "Does a deep link to /account/dashboard send GetOrderStatistics without a session?",
+        "Is a generic error toast shown next to the locked-out message?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "role=locked-buyer",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
