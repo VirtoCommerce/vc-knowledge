@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T17:46:41.521Z",
-  "count": 1995,
+  "generated": "2026-11-16T17:59:56.278Z",
+  "count": 1996,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24857,6 +24857,33 @@
       "scope": [
         "module=pages",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8AFF4201",
+      "path": "entries/KB-8AFF4201.md",
+      "subject": "ProductSubscription.Scheduler.Enabled toggles the */5 RenewalScheduler recurring job live, with no restart: off means a due subscription gets no renewal across cron ticks; back on means the next tick creates it as system:ProductSubscription.RenewalScheduler",
+      "question": "Does ProductSubscription.Scheduler.Enabled=false stop the product subscription renewal scheduler, and does turning it back on apply without a platform restart?",
+      "questions": [
+        "Who creates a product subscription renewal when the cron job runs instead of POST scheduler/run?",
+        "Is POST /api/product-subscription/scheduler/run still allowed when the scheduler setting is disabled?",
+        "How do I tell a cron-created product subscription renewal from a manual scheduler run?",
+        "Can a renewal be cancelled after its order has been placed?"
+      ],
+      "anchors": [
+        "POST /api/platform/settings",
+        "GET /api/background-jobs/recurring",
+        "POST /api/product-subscription/renewals/search",
+        "POST /api/product-subscription/scheduler/run",
+        "POST /api/product-subscription/renewals/{id}/cancel"
+      ],
+      "scope": [
+        "surface=background-jobs",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
