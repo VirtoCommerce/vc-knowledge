@@ -72,5 +72,14 @@ evidence:
     bodyHash: 2a0a4bb07188
     who: Aleksandra-Mitricheva
     note: "Regression REG-2026-11-11-0702: both a Purchasing agent and an Organization maintainer on /account/dashboard see Orders placed WEEK/MTD/YTD + Avg order value, a 'Sales Statistics' widget (GetMonthlyOrderStatistics/GetOrderStatisticsHistory), My recent orders and Edit layout; no Latest orders / Monthly spend report."
+  - method: observation
+    deployment: vcst_qa
+    build: fcea7ce160c179b6
+    conditions: theme=vc-frontend-next-3.3.0-pr-23-7be3; store=B2B-store; browser=chromium
+    at: 2026-11-16T12:57:42.759Z
+    by: session:4cdfee7c
+    bodyHash: 2a0a4bb07188
+    who: Lenajava1
+    note: "vc-frontend-next PR #23 build (merges vc-frontend 2.62.0), two buyers at 1280 and 375: four cards Orders placed WEEK/MTD/YTD + Avg order value, My recent orders (5 rows, status chips, All orders opens /account/orders), Edit layout with Reset/Cancel/Save layout. GetOrderStatistics/GetOrders/GetLayout 200 with no errors[]. Card figures equal GetOrderStatistics and the Orders list (cancelled order excluded from cards). A '+140% vs last month' line shows when the previous period has orders; null comparisons show no line. On this Next build the status chips carry no counts and no Sales Statistics widget renders."
 ---
 Signed in as a B2B org maintainer on the VCST-6078 PR build, /account/dashboard renders four stat cards — "Orders placed · WEEK", "Orders placed · MTD", "Orders placed · YTD" (order count as the big number, total amount as the sub-line, a signed "% vs last …" change when the previous period has orders; none when it is empty) and "Avg order value" ("Average per order (YTD)", no change line) — plus a "My recent orders" widget (5 rows, status chips with counts, "All orders" link) and an "Edit layout" button (edit mode with Reset / Cancel / Save layout). The previous widgets Latest orders, Monthly spend report and Orders status do not render. On load the page calls GraphQL GetLayout (scope accountDashboard; returns layout null for a user who never saved), GetOrderStatistics and GetOrders (first 5 with a status facet), all 200 with no errors[]. A user in an organization with no orders sees all cards at 0 / $0.00 and the empty state "There are no orders yet" with "Continue browsing". The status chip counts include cancelled orders while the cards exclude them (chips Completed 17 + Cancelled 13 + New 13 + Processing 6 = 49; YTD card 36). This is an unmerged PR build (vc-frontend#2552 with vc-module-x-frontend#12), not a release.

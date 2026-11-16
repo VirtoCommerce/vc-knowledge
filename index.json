@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T12:49:42.806Z",
-  "count": 1951,
+  "generated": "2026-11-16T13:00:31.700Z",
+  "count": 1956,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1367,6 +1367,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-07A9E6AE",
+      "path": "entries/KB-07A9E6AE.md",
+      "subject": "On /account/coupons a long coupon code wraps inside its copy button at 375, 1024, 1280 and 1920, but at 1024 the button is squeezed to about 99 px so a 45-character code breaks over ten lines",
+      "question": "Does a long coupon code stay inside its button on /account/coupons at mobile and desktop widths?",
+      "questions": [
+        "How does the account coupons page render a very long coupon code?",
+        "Does the coupon copy button overflow with a long code?"
+      ],
+      "anchors": [
+        "/account/coupons",
+        "Query.promotionCoupons"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -4714,7 +4736,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-1A55AE47",
@@ -7110,6 +7133,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-29F07317",
+      "path": "entries/KB-29F07317.md",
+      "subject": "Switching organization in the storefront header makes /company/info and /company/members show the new organization's name, addresses and members with nothing left from the previous one",
+      "question": "When a multi-organization user switches organization, do /company/info and /company/members follow the new organization?",
+      "questions": [
+        "Does the company members list keep members of the previous organization after an org switch?",
+        "Does /company/info show the new company name after switching organization in the header?",
+        "What does a customer without an organization get on /company/info?"
+      ],
+      "anchors": [
+        "/company/info",
+        "/company/members"
+      ],
+      "scope": [
+        "feature=b2b-organization-context",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-2A7CB639",
       "path": "entries/KB-2A7CB639.md",
       "subject": "TaskManagement REST POST /api/task-management accepts dueDate null and the owning sales rep lists the dateless task",
@@ -8771,6 +8817,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3334BD46",
+      "path": "entries/KB-3334BD46.md",
+      "subject": "On MFA 3.1002.0, Query.mfaSettings with an organizationId the caller does not belong to returns organizationId null and organizationMode null, and updateMfaOrganizationMode from a caller without xapi:my_organization:mfa:manage answers mfa_organization_not_allowed inside HTTP 200",
+      "question": "Does Query.mfaSettings or Mutation.updateMfaOrganizationMode reveal or change another organization's MFA mode, or let a member without the org MFA permission change their own organization's mode?",
+      "questions": [
+        "Can a storefront member read another organization's MFA mode through mfaSettings?",
+        "What does updateMfaOrganizationMode answer for a member without xapi:my_organization:mfa:manage?",
+        "Is the organization boundary enforced on the storefront MFA xAPI?"
+      ],
+      "anchors": [
+        "Query.mfaSettings",
+        "Mutation.updateMfaOrganizationMode"
+      ],
+      "scope": [
+        "feature=mfa-store-modes",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -12287,7 +12356,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -12327,6 +12396,31 @@
       "scope": [
         "module=marketing",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4742A556",
+      "path": "entries/KB-4742A556.md",
+      "subject": "The /account/dashboard layout editor hides and shows stat cards by dragging between Visible and Hidden stats, reorders by drag or keyboard, and Save sends SaveLayout with the full ordered layout that a reload restores; Reset returns the default order and 5 rows",
+      "question": "How does Edit layout on /account/dashboard save, cancel and reset, and what does SaveLayout send?",
+      "questions": [
+        "Does the account dashboard layout survive a reload after Save layout?",
+        "What does Reset do in the dashboard layout editor?",
+        "Can the dashboard stat cards be reordered with the keyboard?",
+        "Which order statistics does the dashboard request when only some stat cards are visible?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Mutation.saveLayout",
+        "Query.orderStatistics"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13430,7 +13524,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-4C50CD96",
@@ -15304,7 +15399,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -17535,7 +17630,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -22245,7 +22340,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-7E8F96BC",
@@ -28389,6 +28485,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-A213710E",
+      "path": "entries/KB-A213710E.md",
+      "subject": "Mission cards on /account/missions show a progress bar with its percentage, cap a completed order-value mission at its target, and mark completed missions with \"Mission completed\" and a check over the card image",
+      "question": "How does /account/missions show mission progress and a completed mission?",
+      "questions": [
+        "What does a completed loyalty mission card look like on the storefront?",
+        "Does the missions page show the ratio of progress for each mission?",
+        "Does an order-value mission above its target show more than 100%?"
+      ],
+      "anchors": [
+        "/account/missions"
+      ],
+      "scope": [
+        "feature=loyalty-missions",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A23A4A41",
       "path": "entries/KB-A23A4A41.md",
       "subject": "organization white labeling resolves independently of the store's white-labeling setting",
@@ -33475,7 +33593,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -36895,7 +37013,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
