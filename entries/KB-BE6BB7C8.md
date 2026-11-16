@@ -25,5 +25,15 @@ evidence:
     at: 2026-11-16T16:50:25.032Z
     by: session:d9b8e380
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa1
+    build: ccb4570264d7de66
+    conditions: module:VirtoCommerce.ProductSubscription=3.1000.0-pr-1-595d; shipping=FixedRate Ground rate 10
+    at: 2026-11-16T17:06:25.056Z
+    by: session:d9b8e380
+    bodyHash: 3d21cd8dae95
+    defect: suspected
+    who: kutasinaelena
+    note: "Re-seen on a second customer's FixedRate subscription (made due by PUT subscriptions/{id} nextOrderDate +2 days, then scheduler/run): renewal stays Scheduled, previewTotal 0, Error event 'Validation failed: Shipment: The shipment method price is changed'. Corroboration: a one-time xAPI cart with FixedRate shipping rejects addOrUpdateCartShipment with VALIDATION unless the command carries price=10."
 ---
 Subscriptions created at storefront checkout (Subscribe & Save, Credit card (test)) and made due by PUT subscriptions/{id} nextOrderDate. With shipping FixedRate/Ground ($10): scheduler/run and renewals/{id}/process both leave the renewal in Scheduled, previewTotal 0, items listPrice 0, and add an Error event 'Processing error; will try again later.' with details 'Validation failed: -- VirtoCommerce.CartModule.Core.Model.Shipment: The shipment method price is changed'. No reminder, no order. With BuyOnlinePickupInStore ($0) the same steps reach Notified (preview total computed, reminder sent) and then Ordered. Source reading (feat branch): RenewalCartBuilder.AddShipmentAsync creates the shipment without its Price before AddShipmentAsync(shipment, rates), so the cart validator sees a price mismatch whenever the rate is non-zero.
