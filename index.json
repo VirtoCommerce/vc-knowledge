@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T14:03:22.485Z",
-  "count": 1962,
+  "generated": "2026-11-16T14:19:50.582Z",
+  "count": 1963,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -27747,6 +27747,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9D1F03BA",
+      "path": "entries/KB-9D1F03BA.md",
+      "subject": "Since vc-frontend 2.62.0 app-runner awaits the design and preset stylesheet chunks before app.mount with no time bound, and the chunk-load recovery reacts only to failed imports, so a stalled style chunk is never recovered",
+      "question": "Why does a stalled preset or design stylesheet chunk keep the storefront blank, and since which vc-frontend version?",
+      "questions": [
+        "Is there a timeout on loadPresetStyles / loadDesignStyles before the storefront mounts?",
+        "Does chunk-load-recovery reload the storefront when a lazy chunk hangs instead of failing?",
+        "Which vc-frontend commit made the app wait for the preset stylesheet before mount?",
+        "Is the preset-stylesheet boot gate new in vc-frontend-next or inherited from vc-frontend?"
+      ],
+      "anchors": [
+        "client-app/app-runner.ts",
+        "client-app/core/utilities/design/index.ts"
+      ],
+      "scope": [
+        "phase=boot",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
