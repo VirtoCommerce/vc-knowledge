@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-13T12:51:41.911Z",
-  "count": 1946,
+  "generated": "2026-11-16T11:14:33.818Z",
+  "count": 1947,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33406,6 +33406,27 @@
       "scope": [
         "principal=admin",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BE67D494",
+      "path": "entries/KB-BE67D494.md",
+      "subject": "The storefront header cart badge caps at \"99+\" from 100 items, while the cart link's accessible name and its tooltip carry the exact count",
+      "question": "/cart header link — what does the storefront cart badge show for a cart with more than 99 items, and what is the cart link's accessible name?",
+      "questions": [
+        "Does the storefront header cart counter show 99+ for large carts?",
+        "What does a screen reader announce for the header cart link when the cart has 150 items?",
+        "When does the desktop cart tooltip with the exact item count appear?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
