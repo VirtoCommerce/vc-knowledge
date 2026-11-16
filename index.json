@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T11:20:06.931Z",
-  "count": 1948,
+  "generated": "2026-11-16T12:36:23.080Z",
+  "count": 1949,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -31011,6 +31011,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B0034C5A",
+      "path": "entries/KB-B0034C5A.md",
+      "subject": "On the product page the gallery images and thumbnails are letterboxed with object-fit contain, and a product with no image shows a fallback placeholder with object-fit scale-down",
+      "question": "How does the product page image gallery fit product images and thumbnails, and what does a product without any image show?",
+      "questions": [
+        "Are product page gallery images cropped or contained?",
+        "What does the PDP show for a product that has no images?",
+        "What object-fit do the PDP thumbnail images use?"
+      ],
+      "anchors": [
+        "/product",
+        "Query.product"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=anonymous"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
