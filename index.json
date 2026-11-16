@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T16:19:55.113Z",
-  "count": 1973,
+  "generated": "2026-11-16T16:20:44.396Z",
+  "count": 1974,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -39352,6 +39352,27 @@
       ],
       "scope": [
         "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DEDFDBE4",
+      "path": "entries/KB-DEDFDBE4.md",
+      "subject": "The /cart VcLineItems footer shows its desktop button (\"Remove selected\") only when the .vc-line-items container is wider than 42rem (672px); at 672px or less the mobile button (\"Remove all\") shows instead",
+      "question": "Which VcLineItems footer button (mobile / desktop) shows at which container width on /cart?",
+      "questions": [
+        "Why does the cart footer say Remove all on one width and Remove selected on another?",
+        "What is the VcLineItems footer button breakpoint?",
+        "At which viewport does the cart switch to the desktop Remove selected button?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
