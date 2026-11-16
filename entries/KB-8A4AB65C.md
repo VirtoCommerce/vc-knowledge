@@ -26,5 +26,14 @@ evidence:
     by: session:d992339e
     who: Lenajava1
     note: "distinct: KB-3CC64161 records the static axe result; this records what a real keyboard user can do in Firefox, which the axe rule does not measure."
+  - method: observation
+    deployment: vcst_qa
+    build: fcea7ce160c179b6
+    conditions: theme=3.3.0-pr-23-7be3-7be3dfdd; browser=firefox-156; viewport=800x900; role=guest
+    at: 2026-11-16T13:32:50.844Z
+    by: session:4cdfee7c
+    bodyHash: 01fc999ff422
+    who: Lenajava1
+    note: "Also at 800px with 4 products: Tab from the last column's header 'Add to cart' focuses the tbody rowgroup itself before the first row's Pin button; header and body row boxes stayed at the same x offset (-233) through Tab into the body, pin, Differences, unpin and Shift+Tab back to the header (every columnheader left edge equal to the Price per unit cell under it)."
 ---
 Guest, Firefox 151 (Playwright), viewport 390x844, theme 3.1.0-pr-11-d67b, 3 laptops in one compare tab; the table is 448px wide in a 364px tbody scroller (overflow-x:auto, display:block). DOM: tbody.compare-table__scroll has no tabindex attribute (tabIndex property -1), no role, and none of its 11 focusable descendants (row pin buttons, info triggers) are rendered below md; thead.compare-table__header-row carries tabindex=-1. Keyboard walk from the page heading: Clear all, category tab, All, Differences, Clear category, then per column Remove from compare, product link, Add to cart (9 stops). Tabbing to the third column's Remove button scrolled the thead by 84px and the tbody followed (scroll sync), so the clipped column came into view. The next Tab focused the tbody rowgroup itself, with Firefox's default focus outline visible; ArrowLeft/ArrowRight then scrolled body and header together (column x 41 -> 63 -> 73). So in Firefox the axe scrollable-region-focusable finding (KB-3CC64161) does not stop a keyboard user from scrolling: the browser makes the scroller focusable itself. Browsers that do not make scrollers focusable (WebKit) were not tested; there only the header-control scroll-sync path would remain.
