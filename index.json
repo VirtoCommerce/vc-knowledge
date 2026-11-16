@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T18:15:53.895Z",
-  "count": 1997,
+  "generated": "2026-11-16T18:24:29.212Z",
+  "count": 1998,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -25073,6 +25073,29 @@
       ],
       "scope": [
         "module=page-builder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8BAC751C",
+      "path": "entries/KB-8BAC751C.md",
+      "subject": "ProductSubscription 3.1000.0-pr-1-595d registers 7 email notifications with file-system templates, but its package ships no NotificationTemplates folder, so every module email fails with empty Subject and Body",
+      "question": "Why do Product Subscription emails fail with 'Subject' must not be empty and why does GET /api/notifications/SubscriptionCreatedEmailNotification return no templates?",
+      "questions": [
+        "Does the Product Subscription module ship default email templates?",
+        "Why are SubscriptionCreatedEmailNotification templates empty at global and store level?",
+        "Why do renewal reminder emails fail in the notification journal?"
+      ],
+      "anchors": [
+        "GET /api/notifications/SubscriptionCreatedEmailNotification",
+        "POST /api/notifications/journal"
+      ],
+      "scope": [
+        "module=virtocommerce.productsubscription",
         "surface=rest-api"
       ],
       "plane": "experiential",
