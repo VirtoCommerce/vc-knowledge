@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T15:59:08.300Z",
-  "count": 1967,
+  "generated": "2026-11-16T15:59:56.962Z",
+  "count": 1970,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2956,6 +2956,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-102234CC",
+      "path": "entries/KB-102234CC.md",
+      "subject": "With both VirtoCommerce.Subscription and ProductSubscription installed, the Admin Shell shows two menu items titled \"Subscriptions\": the legacy one under Orders & Customers > Sales (#/subscriptions) and the new one plus \"Subscription plans\" under More (#/product-subscriptions); a user without product-subscription permissions gets 403 on the module's REST and no menu entry",
+      "question": "Where are the product subscription screens in the Admin Shell menu and what does a user without product-subscription:read get?",
+      "questions": [
+        "Why does the Admin Shell Subscriptions list not show subscription plans?",
+        "Which Admin Shell Subscriptions menu item belongs to the new ProductSubscription module?",
+        "Does POST api/product-subscription/subscriptions/search return 403 without product-subscription:read?"
+      ],
+      "anchors": [
+        "GET /api/admin-shell/menu",
+        "/apps/admin-shell#/product-subscriptions",
+        "POST /api/product-subscription/subscriptions/search"
+      ],
+      "scope": [
+        "module=virtocommerce.productsubscription",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -8151,6 +8175,29 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2F255FCE",
+      "path": "entries/KB-2F255FCE.md",
+      "subject": "POST api/product-subscription/import/legacy defaults to dry run, writes nothing on dryRun, creates one subscription per record on dryRun=false, and on re-import reports SkippedDuplicate by outerId legacy:{Id}",
+      "question": "Is the legacy subscription import dry run side-effect free, and is re-importing the same JSON idempotent?",
+      "questions": [
+        "What does POST api/product-subscription/import/legacy return without the dryRun parameter?",
+        "Does importing the old Subscription module JSON twice create duplicates?",
+        "Does the legacy import require the customer to exist?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/import/legacy",
+        "POST /api/product-subscription/subscriptions/search"
+      ],
+      "scope": [
+        "module=virtocommerce.productsubscription",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -31875,7 +31922,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0,
+      "disputed": 1,
       "contested": 2
     },
     {
@@ -35286,6 +35333,29 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C7C99FCF",
+      "path": "entries/KB-C7C99FCF.md",
+      "subject": "POST api/product-subscription/plans rejects missing name/store/frequency, frequency outside 1-365, percent outside 0-100 with 400 {message}; two defaults or no default is silently normalised to one default (the first)",
+      "question": "What does POST api/product-subscription/plans validate, and what happens with two default frequencies?",
+      "questions": [
+        "Does the subscription plan API reject a plan with two default intervals?",
+        "What error does creating a product subscription plan without a store return?",
+        "Is a subscription plan for a nonexistent store accepted?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/plans",
+        "DELETE /api/product-subscription/plans"
+      ],
+      "scope": [
+        "module=virtocommerce.productsubscription",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
