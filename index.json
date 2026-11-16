@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T16:49:53.387Z",
-  "count": 1984,
+  "generated": "2026-11-16T16:50:38.658Z",
+  "count": 1985,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34083,6 +34083,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BE6BB7C8",
+      "path": "entries/KB-BE6BB7C8.md",
+      "subject": "A product-subscription renewal with a paid shipping method never leaves Scheduled: every run logs \"Validation failed: Shipment: The shipment method price is changed\"; the same flow with $0 pickup renews",
+      "question": "Why does a product subscription renewal stay Scheduled with previewTotal 0 after POST /api/product-subscription/scheduler/run?",
+      "questions": [
+        "Does POST /api/product-subscription/renewals/{id}/process work for a subscription shipped with Fixed Rate?",
+        "What does the renewal Error event 'Processing error; will try again later.' mean in product subscriptions?",
+        "Can a subscription with a delivery shipping method renew?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/scheduler/run",
+        "POST /api/product-subscription/renewals/{id}/process"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
