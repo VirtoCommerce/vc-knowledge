@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:09:26.458Z",
-  "count": 2010,
+  "generated": "2026-11-17T11:12:50.909Z",
+  "count": 2011,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10242,6 +10242,28 @@
         "module=sales-rep",
         "role=sales-rep",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3A42733A",
+      "path": "entries/KB-3A42733A.md",
+      "subject": "On vcptcore_qa1 the CyberSource sandbox authorizes card 4000000000000002 at storefront checkout, so it cannot drive decline cases there",
+      "question": "CyberSource payment on storefront /cart: which sandbox test card number produces a decline?",
+      "questions": [
+        "Does 4000000000000002 decline with CyberSource on the storefront?",
+        "Why are PAY-DECLINE cases blocked on vcptcore_qa1?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.authorizePayment"
+      ],
+      "scope": [
+        "payment=cybersource",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
