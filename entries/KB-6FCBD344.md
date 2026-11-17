@@ -24,5 +24,14 @@ evidence:
     at: 2026-11-17T11:41:16.542Z
     by: session:521b9a19
     who: Lenajava1
+  - method: observation
+    deployment: virtostart
+    build: 8f3b3fdd36b67c83
+    conditions: theme=3.3.0; store=B2B-store
+    at: 2026-11-17T12:27:52.660Z
+    by: session:521b9a19
+    bodyHash: 6e1f801ef95e
+    who: Lenajava1
+    note: "Re-observed in a regression run: both sections empty after a 6 s wait; 'See all' opens /category/83599552-... with an empty h1 and '0 products found'."
 ---
 Guest, 1920x1080, '/' on theme 3.3.0. The built-in demo home renders hero, 'Shop by category' (link 'All categories' to /catalog), 'Popular with buyers' (link 'See all' to /category/83599552-...), 'Shop by supplier', 'Straightforward terms, real inventory', 'Monday morning, in numbers', 'Authorized distributor for' and 'Become a customer'. The two catalog-driven sections show only their heading and link. The page fires GetSlugInfo for fixed permalinks (consumer-electronics, phones-and-accessories, homes, home-appliances, printers, kitchen-supplies, products-with-options); each answers slugInfo.entityInfo null. SearchProducts with filter category.subtree:<catalog>/83599552-... returns totalCount 0. The real top categories of this store (Computers & Laptops, Storage & Memory, ...) are not used. Same result signed in.

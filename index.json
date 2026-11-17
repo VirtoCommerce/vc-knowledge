@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T12:24:29.169Z",
-  "count": 2026,
+  "generated": "2026-11-17T12:32:47.620Z",
+  "count": 2027,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -23202,6 +23202,28 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-804C2453",
+      "path": "entries/KB-804C2453.md",
+      "subject": "On vc-frontend-next 3.3.0 a header search typed on a category page is scoped to that category and Enter opens /<category>?q=<term>, not /search; the suggestion dropdown shows Hints and Products groups and no 'View all N results' button when all matches fit (4 and 8 matches observed)",
+      "question": "Where does the vc-frontend-next header search go on Enter from a category page, and does its dropdown have a 'View all N results' button?",
+      "questions": [
+        "Is the header search scoped to the current category on vc-frontend-next?",
+        "Does the vc-frontend-next search dropdown show a View all results button?"
+      ],
+      "anchors": [
+        "/search",
+        "/cables-docks-adapters"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
