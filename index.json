@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T14:57:54.122Z",
-  "count": 2035,
+  "generated": "2026-11-17T14:58:17.346Z",
+  "count": 2036,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28353,6 +28353,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9BCF68BE",
+      "path": "entries/KB-9BCF68BE.md",
+      "subject": "Lowering ProductComparison.MaxItems below a category group's size trims what compareList and /compare show to the oldest N items without deleting the rest; raising it brings them back",
+      "question": "What does /compare show when ProductComparison.MaxItems is lowered below the number of products already in a category group?",
+      "anchors": [
+        "/compare",
+        "Query.compareList"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
