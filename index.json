@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:23:44.711Z",
-  "count": 2015,
+  "generated": "2026-11-17T11:34:49.790Z",
+  "count": 2016,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -23531,6 +23531,36 @@
       "scope": [
         "layer=api",
         "surface=platform-auth"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8357EF95",
+      "path": "entries/KB-8357EF95.md",
+      "subject": "On vc-frontend-next 3.3.0 checkout lives on /cart, and a Manual-payment order lands on /checkout/completed ('Order completed') and shows in /account/orders with status New",
+      "question": "Where does checkout happen on the vc-frontend-next storefront, and where does a Manual-payment order land after Place order?",
+      "questions": [
+        "Does vc-frontend-next have a separate /checkout page or is checkout on /cart?",
+        "What does the Next storefront show after placing an order with Manual payment?",
+        "What status does a new Manual-payment storefront order get in Account > Orders on the Next theme?"
+      ],
+      "concepts": [
+        "checkout",
+        "cart",
+        "manual-payment"
+      ],
+      "anchors": [
+        "/cart",
+        "/checkout/completed",
+        "/account/orders"
+      ],
+      "scope": [
+        "role=buyer",
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
