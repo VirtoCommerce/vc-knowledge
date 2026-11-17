@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T15:05:00.464Z",
-  "count": 2037,
+  "generated": "2026-11-17T15:30:58.025Z",
+  "count": 2038,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1835,6 +1835,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-09EC06B0",
+      "path": "entries/KB-09EC06B0.md",
+      "subject": "Product Comparison: the storefront merges the guest compare list into the account at sign-in with mergeCompareList(userId, secondListId=guest list id); guest's items win at the per-category limit; a failed merge is retried on the next load",
+      "question": "How does mergeCompareList(userId, secondListId) move a guest compare list into the account at sign-in, what wins at the category limit, and who may merge a guest list?",
+      "anchors": [
+        "Mutation.mergeCompareList",
+        "Query.compareList",
+        "/compare"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
