@@ -30,5 +30,14 @@ evidence:
     bodyHash: eff918529a23
     who: Lenajava1
     note: "Still holds with the module-federation build: the version sits in /assets/index-<hash>.js referenced from the cache-busted index HTML (2.60.0-alpha.2579). A stale, non-cache-busted HTML fetch returned an older index-<hash>.js without it — always cache-bust."
+  - method: observation
+    deployment: virtostart
+    build: 8f3b3fdd36b67c83
+    conditions: theme=3.3.0; platform=3.1099.0
+    at: 2026-11-17T11:09:17.397Z
+    by: session:861d23f3
+    bodyHash: eff918529a23
+    who: Lenajava1
+    note: "Still holds on a vc-frontend-next 3.3.0 build: the cache-busted index HTML references several index-<hash>.js chunks; the one carrying \"3.3.0\",{version} is the one the footer 'Ver. 3.3.0' renders from. A non-cache-busted fetch returned a different set of chunks."
 ---
 The storefront index HTML (cache-busted with a query string, since it is served max-age=7200 — see KB-D9DF8E54) references one module entry script /assets/index-<hash>.js. That bundle contains the vc-frontend package version inlined exactly once as a string bound to a {version:…} object, e.g. "2.60.0-pr-2543-0127-01276486",nln={version:eln}. It equals the build string of the deployed theme (PR builds included), so it is a live, anonymous source for the theme version; /api/platform/modules does not report the theme. The footer "Ver." shows the same value but is SPA-rendered, so it is not in the raw HTML.
