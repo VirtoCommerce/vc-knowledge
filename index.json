@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T10:35:49.444Z",
-  "count": 2004,
+  "generated": "2026-11-17T10:46:55.426Z",
+  "count": 2005,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6327,6 +6327,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-22E8ECE1",
+      "path": "entries/KB-22E8ECE1.md",
+      "subject": "A product subscription keeps the organization it was bought in: after switching to another organization, the storefront still lists it, skip works, and Order now creates the order under the original organization",
+      "question": "Which organization does a product subscription renewal order get when the buyer has switched to another organization?",
+      "questions": [
+        "Are My subscriptions filtered by the current organization?",
+        "Does Order now on a subscription use the current organization context?"
+      ],
+      "anchors": [
+        "/account/subscriptions",
+        "Mutation.skipProductSubscription",
+        "Query.order"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
