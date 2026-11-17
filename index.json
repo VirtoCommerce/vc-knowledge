@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T15:42:14.386Z",
-  "count": 2041,
+  "generated": "2026-11-17T17:45:55.666Z",
+  "count": 2042,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30765,6 +30765,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A87683E3",
+      "path": "entries/KB-A87683E3.md",
+      "subject": "Product Comparison CleanupCompareListsJob deletes guest lists older than AnonymousListLifetimeHours (minimum 1; 0 is refused with HTTP 500), lists of deleted users and lists for organizations the user left; it is triggered with POST /api/background-jobs/enqueue",
+      "question": "What does the Product Comparison cleanup job (CleanupCompareListsJobHandler) delete, what is the minimum ProductComparison.AnonymousListLifetimeHours, and how is the job triggered on demand?",
+      "anchors": [
+        "POST /api/background-jobs/enqueue",
+        "Query.compareList"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
