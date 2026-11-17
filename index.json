@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T10:47:25.004Z",
-  "count": 2005,
+  "generated": "2026-11-17T10:47:41.400Z",
+  "count": 2006,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2934,7 +2934,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-0FC6E226",
@@ -25146,7 +25147,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-8BDB3508",
@@ -26923,6 +26925,24 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-94EB036A",
+      "path": "entries/KB-94EB036A.md",
+      "subject": "RenewalPaymentFailedEmailNotification is journaled with To, Subject and Body empty on every renewal payment failure, while the other subscription emails render",
+      "question": "Is the product subscription payment-failed email rendered and sent when a renewal charge is declined?",
+      "anchors": [
+        "POST /api/notifications/journal",
+        "POST /api/product-subscription/renewals/{id}/process"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
