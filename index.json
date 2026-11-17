@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:12:50.909Z",
-  "count": 2011,
+  "generated": "2026-11-17T11:13:24.801Z",
+  "count": 2013,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14625,6 +14625,22 @@
       "scope": [
         "browser=firefox",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-50256DE1",
+      "path": "entries/KB-50256DE1.md",
+      "subject": "On vcptcore-regression the storefront sends no Content-Security-Policy, so /designer-preview can be framed by any origin, and the admin designer preview is refused by COEP",
+      "question": "What frame-ancestors policy does the storefront /designer-preview send on vcptcore-regression, and can a foreign page frame it?",
+      "anchors": [
+        "/designer-preview"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -29681,6 +29697,28 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-A4E915A7",
+      "path": "entries/KB-A4E915A7.md",
+      "subject": "Theme 2.59.1 storefront sanitizes Page Builder section content on both file and database pages: unknown section types, non-heading tags, iframes, event handlers, undeclared attributes and javascript: links never reach the DOM",
+      "question": "Does the storefront render injected unsafe Page Builder section content (script heading, iframe, onerror, javascript: links, unknown section type) after the VCST-6570 hotfix?",
+      "questions": [
+        "Is a javascript: link in a Page Builder Text, Call to Action or Slider section clickable on the storefront?",
+        "Does an unknown section type render on a Page Builder page?",
+        "Do arbitrary section settings appear as attributes on the storefront section element?"
+      ],
+      "anchors": [
+        "POST /api/pagebuilder/save",
+        "POST /api/page-builder-pages/grouped/{id}/content"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-A4EB3766",
