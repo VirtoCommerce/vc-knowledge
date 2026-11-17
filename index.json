@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T10:58:38.423Z",
-  "count": 2007,
+  "generated": "2026-11-17T11:00:12.198Z",
+  "count": 2008,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8987,6 +8987,30 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-32FABE4B",
+      "path": "entries/KB-32FABE4B.md",
+      "subject": "ProductSubscription.ReminderLeadDays store override is honoured by POST scheduler/run: with 1, a subscription due in 2 days gets no renewal; due tomorrow gets a renewal, ReminderSent and a RenewalReminderEmailNotification",
+      "question": "Does POST api/product-subscription/scheduler/run use the store's ProductSubscription.ReminderLeadDays override when deciding which subscriptions get a renewal and reminder?",
+      "questions": [
+        "How many days before the next order date is a product subscription renewal created and the reminder email sent?",
+        "Can a store override ProductSubscription.ReminderLeadDays and how do you restore it?",
+        "What next order date does PUT api/product-subscription/subscriptions/{id} accept?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/scheduler/run",
+        "PUT /api/product-subscription/subscriptions/{id}",
+        "PUT /api/stores"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
