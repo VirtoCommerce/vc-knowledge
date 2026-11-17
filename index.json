@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T12:37:51.352Z",
-  "count": 2028,
+  "generated": "2026-11-17T13:03:22.230Z",
+  "count": 2029,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -21334,6 +21334,29 @@
       "scope": [
         "account=admin",
         "surface=hangfire-dashboard"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-75A50C41",
+      "path": "entries/KB-75A50C41.md",
+      "subject": "A product with availabilityData isInStock true and availableQuantity 0 shows 'In stock' (no count) on its card and PDP and can be added with +, but the cart line says 'The product is out of stock', a quantity change returns PRODUCT_FFC_QTY and /bulk-order rejects its SKU as out of stock",
+      "question": "How does the storefront treat a product whose xAPI availability is isInStock true with availableQuantity 0?",
+      "questions": [
+        "Why does a cart line say 'The product is out of stock' while the card says 'In stock'?",
+        "Why does bulk order reject a SKU that the product card shows as in stock?"
+      ],
+      "anchors": [
+        "/cart",
+        "/bulk-order",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
