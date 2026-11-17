@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T13:03:22.230Z",
-  "count": 2029,
+  "generated": "2026-11-17T13:09:45.717Z",
+  "count": 2030,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32090,6 +32090,22 @@
         "build=pagebuildermodule 3.1035.0-pr-171-61df",
         "search-provider=azure",
         "surface=page-builder-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AF5D4E63",
+      "path": "entries/KB-AF5D4E63.md",
+      "subject": "On virtostart, product UGR-75774 reports availabilityData.isInStock=true / isBuyable=true with availableQuantity 0, because one of four fulfillment centers (vs-dc-east) has allowBackorder=true while every FFC holds inStockQuantity 0",
+      "question": "Why does Query.products say a product is in stock when every fulfillment center has zero quantity?",
+      "anchors": [
+        "Query.products"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
