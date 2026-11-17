@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T13:27:22.004Z",
-  "count": 2031,
+  "generated": "2026-11-17T13:46:22.611Z",
+  "count": 2032,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1324,6 +1324,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-072921B7",
+      "path": "entries/KB-072921B7.md",
+      "subject": "On vc-frontend-next 3.3.0 the /cart CyberSource 'Payment card' form shows four labels: Card number*, Cardholder name*, Expiration date*, Security code* (no 'CVV' label)",
+      "question": "Which field labels does the CyberSource card form on /cart show on the vc-frontend-next storefront?",
+      "questions": [
+        "Is the CVV field on the cart card form labelled CVV or Security code?",
+        "What does clicking the Card number label of the CyberSource form on /cart do?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7740,7 +7761,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
