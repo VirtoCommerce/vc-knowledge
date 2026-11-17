@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:18:24.840Z",
-  "count": 2014,
+  "generated": "2026-11-17T11:23:44.711Z",
+  "count": 2015,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3675,6 +3675,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-13AEE553",
+      "path": "entries/KB-13AEE553.md",
+      "subject": "On vc-frontend 2.62.0-pr-2639, emulated print media hides every VcButton (.vc-button) on /cart, including both line-items footer buttons, at wide and narrow viewports",
+      "question": "Does print media hide all VcButton elements on the vc-frontend /cart page, including 'Remove selected' / 'Remove all'?",
+      "questions": [
+        "Are kit buttons visible when printing the cart?",
+        "Does the @container rule that shows 'Remove selected' override the print display:none for VcButton?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "media=print",
+        "surface=storefront-ui",
+        "theme=vc-frontend"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
