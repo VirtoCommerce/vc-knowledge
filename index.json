@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:00:12.198Z",
-  "count": 2008,
+  "generated": "2026-11-17T11:01:33.744Z",
+  "count": 2009,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37090,6 +37090,27 @@
       "scope": [
         "module=virtocommerce.adminshell",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CF22D2D4",
+      "path": "entries/KB-CF22D2D4.md",
+      "subject": "The product-subscription annual reminder is due one year after a subscription's LastAnnualReminderDate (or StartDate), independent of interval and ReminderLeadDays, and no REST call can backdate either date",
+      "question": "When does POST api/product-subscription/scheduler/run send SubscriptionAnnualReminderEmailNotification, and can a test make it due?",
+      "questions": [
+        "Does ProductSubscription.AnnualReminder.Enabled send a reminder for yearly-interval subscriptions before renewal?",
+        "How to test the product subscription yearly reminder email"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/scheduler/run",
+        "PUT /api/product-subscription/subscriptions/{id}"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
