@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T13:23:55.408Z",
-  "count": 2030,
+  "generated": "2026-11-17T13:27:22.004Z",
+  "count": 2031,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14570,7 +14570,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -28772,7 +28772,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -45798,6 +45798,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F94E791C",
+      "path": "entries/KB-F94E791C.md",
+      "subject": "The account dashboard's My recent orders widget lists the signed-in user's OWN orders (Query.orders), not the organization's",
+      "question": "Does the My recent orders widget on /account/dashboard show a B2B member's own orders or their organization's orders?",
+      "questions": [
+        "Will a new member of an organization that already has orders see an empty My recent orders widget?",
+        "Which GraphQL query feeds My recent orders on the buyer dashboard?",
+        "Does the dashboard 'There are no orders yet' empty state depend on the organization having no orders?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.orders"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

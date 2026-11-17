@@ -65,5 +65,14 @@ evidence:
     bodyHash: db9306447dbc
     who: Lenajava1
     note: "Return 3.1005.0 (released): non-holder org employee's own token -> errors[] Forbidden 'The organization's returns are not available to this contact.', data.organizationReturns null; a global-role holder in the same org got totalCount 59. Storefront /account/returns for the non-holder shows no organization tab and sends no GetOrganizationReturns."
+  - method: observation
+    deployment: virtostart
+    build: 8f3b3fdd36b67c83
+    conditions: store=B2B-store
+    at: 2026-11-17T13:24:06.065Z
+    by: session:521b9a19
+    bodyHash: db9306447dbc
+    who: Lenajava1
+    note: "2026-11-17, organization-scoped tokens: an Organization maintainer whose membership also carries a role holding xapi:my_organization:return:view got totalCount 11 for her organization; a Purchasing agent of the same organization and a freshly created Purchasing agent of another organization got errors[] Forbidden \"The organization's returns are not available to this contact.\""
 ---
 On Return 3.1005.0-pr-28-62f9, organizationReturns(storeId, organizationId) answered for a member of that organization whose roles include xapi:my_organization:return:view, whether granted through a global role, the membership role or a role on the organization itself. A member without it (purchasing agent, employee, an Organization manager holding the other xapi:my_organization grants), a holder from another organization, an administrator who is not a member, an empty or unknown organizationId all got errors[] Forbidden "The organization's returns are not available to this contact." with data null, never an empty list; anonymous got Unauthorized. The requested organizationId decides, whatever organization the token is scoped to. A locked, Invited or Rejected membership is refused; a locked account gets UserLocked on every return operation. On this deployment no role held the permission until an admin granted it.

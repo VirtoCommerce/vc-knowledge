@@ -49,5 +49,14 @@ evidence:
     bodyHash: d46a5065614f
     who: Aleksandra-Mitricheva
     note: Two storefront buyers with an Approved unlocked OrganizationMembership and an empty contact.organizations got a 200 token (storeId grant) and Query.me contact.organizationId=null, organizations.items=[]. After PUT /api/members adding the org id to contact.organizations, the same grant gave organizationId = that org and a one-item organizations list.
+  - method: observation
+    deployment: virtostart
+    build: 8f3b3fdd36b67c83
+    conditions: store=B2B-store
+    at: 2026-11-17T13:24:30.245Z
+    by: session:521b9a19
+    bodyHash: d46a5065614f
+    who: Lenajava1
+    note: "2026-11-17: a contact created with POST /api/members carrying organizations:[orgId], then an account + Approved membership with a Purchasing agent role, got Query.me contact.organizationId = that organization on its first storeId password grant."
 ---
 On a Customer module that has the OrganizationMembership entity (POST /api/customer/organization-memberships/search), a storefront user with an Approved, unlocked membership to an organization still got me.contact.organizationId = null and an empty me.contact.organizations list, because the contact's own organizations array (GET /api/members/{contactId}) was empty. A working organization account had the organization in both places. Adding the organization id to contact.organizations with PUT /api/members made xAPI resolve it as the current organization immediately. A locked membership (isLocked=true) with the organization in contact.organizations lists the organization but leaves organizationId null. Consequence: a seeder or test that creates only the membership leaves the user organization-less on the storefront, and org-scoped features (for example organization-mode loyalty balances, which read the ambient session organization) silently fall back to the personal scope.
