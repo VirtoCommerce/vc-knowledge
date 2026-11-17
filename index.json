@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:16:56.619Z",
-  "count": 2013,
+  "generated": "2026-11-17T11:18:24.840Z",
+  "count": 2014,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16568,6 +16568,22 @@
       ],
       "scope": [
         "feature=passkey-signin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-58981DC1",
+      "path": "entries/KB-58981DC1.md",
+      "subject": "On /account/lists/:listId, the 'Add all to cart' results dialog's 'View cart' button fills the content row at viewports 448 and 479 but is 128px wide at 480",
+      "question": "How wide is 'View cart' in the 'Adding products to cart result' dialog opened by 'Add all to cart' on a list page below and at 480px viewport?",
+      "anchors": [
+        "/account/lists/{id}"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
