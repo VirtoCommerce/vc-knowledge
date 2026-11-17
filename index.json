@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T15:30:58.025Z",
-  "count": 2038,
+  "generated": "2026-11-17T15:37:21.875Z",
+  "count": 2039,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -43681,6 +43681,31 @@
       "status": "active",
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-EE3C0613",
+      "path": "entries/KB-EE3C0613.md",
+      "subject": "An administrator token passing a buyer's userId to compareList/saveProductsToCompareList reaches only the buyer's organization-less list: the B2C buyer's real list, but a separate hidden list for a B2B buyer with an organization",
+      "question": "Can an administrator read or edit a registered buyer's compare list via Query.compareList with the buyer's userId, and does the organization matter?",
+      "questions": [
+        "Why does compareList return null or an empty list for an admin token with a B2B user's id?",
+        "Where does saveProductsToCompareList called by an admin under a buyer's userId save the products?",
+        "Is there an organizationId argument on compareList?",
+        "Which organization keys the compare list when an administrator calls it?"
+      ],
+      "anchors": [
+        "Query.compareList",
+        "Mutation.saveProductsToCompareList",
+        "POST /graphql"
+      ],
+      "scope": [
+        "role=administrator",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-EE6A5543",
