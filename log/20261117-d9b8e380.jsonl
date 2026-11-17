@@ -1,0 +1,3 @@
+{"at":"2026-11-17T04:40:35.418Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-11-17T04:41:59.503Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"kutasinaelena"}
+{"at":"2026-11-17T04:42:31.214Z","kind":"flush","entries":0,"lines":9,"swept":["c316fb9a.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"kutasinaelena"}
