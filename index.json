@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:46:21.571Z",
-  "count": 2020,
+  "generated": "2026-11-17T11:56:58.264Z",
+  "count": 2021,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -39182,6 +39182,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D99D8A0A",
+      "path": "entries/KB-D99D8A0A.md",
+      "subject": "Theme 2.51.3 storefront sanitizes injected Page Builder section content on file and database pages the same way 2.59.1 does",
+      "question": "Does theme 2.51.3 (Stable 15) render injected unsafe Page Builder section content after the VCST-6570 hotfix?",
+      "questions": [
+        "Is the VCST-6570 storefront sanitization present on the 2.51.x theme line?",
+        "Do javascript: links in Page Builder sections become clickable on theme 2.51.3?"
+      ],
+      "anchors": [
+        "POST /api/pagebuilder/save",
+        "POST /api/page-builder-pages/grouped/{id}/content",
+        "POST /api/pagebuilder/git/publish"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
