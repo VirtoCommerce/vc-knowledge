@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:57:41.160Z",
-  "count": 2022,
+  "generated": "2026-11-17T12:06:12.645Z",
+  "count": 2024,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -31345,6 +31345,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-ACA4D4A3",
+      "path": "entries/KB-ACA4D4A3.md",
+      "subject": "DELETE /api/page-builder-pages/grouped/{groupId} on a published (or published-then-unpublished) group returns 200 {pageDeleted:false} and the group stays; POST grouped/archive?ids= then DELETE removes it",
+      "question": "How do you delete a Page Builder database page group that has been published?",
+      "anchors": [
+        "DELETE /api/page-builder-pages/grouped/{id}",
+        "POST /api/page-builder-pages/grouped/archive"
+      ],
+      "scope": [
+        "module=pagebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-ACB009C9",
       "path": "entries/KB-ACB009C9.md",
       "subject": "Below the lg breakpoint /account/orders shows no active-filter chips or Reset filters chip; the applied filter is only visible inside the filter sidebar",
@@ -36015,6 +36033,28 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C6E93B3C",
+      "path": "entries/KB-C6E93B3C.md",
+      "subject": "After a database page group is published a second time, GET grouped/{groupId}/content returns 200 with an empty body for both draft=true and draft=false",
+      "question": "What does GET /api/page-builder-pages/grouped/{groupId}/content return after a database page is edited and published again?",
+      "questions": [
+        "Why does a re-published Page Builder database page have no content?",
+        "Does publishing a Page Builder page a second time lose its content?"
+      ],
+      "anchors": [
+        "GET /api/page-builder-pages/grouped/{id}/content",
+        "POST /api/page-builder-pages/grouped/publishing/{id}"
+      ],
+      "scope": [
+        "module=pagebuilder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
