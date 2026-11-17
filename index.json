@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:40:47.302Z",
-  "count": 2016,
+  "generated": "2026-11-17T11:46:21.571Z",
+  "count": 2020,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -893,7 +893,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -1913,6 +1913,30 @@
       "scope": [
         "module=pricing",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0AC30F85",
+      "path": "entries/KB-0AC30F85.md",
+      "subject": "On vc-frontend-next 3.3.0 category and search listings open with the In stock switch on, offer four sort buttons, load more on scroll and end with 'You have reached the end of the list.'",
+      "question": "How does the product listing toolbar behave on vc-frontend-next category and search pages?",
+      "questions": [
+        "What sort options does the vc-frontend-next catalog page offer?",
+        "Is the In stock filter on by default on vc-frontend-next?",
+        "Does the vc-frontend-next catalog paginate or scroll infinitely?"
+      ],
+      "anchors": [
+        "/search",
+        "/computers-laptops",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
@@ -3193,6 +3217,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-110F4580",
+      "path": "entries/KB-110F4580.md",
+      "subject": "On virtostart the PDP 'Recommended For You' and 'Customers bought together' blocks list products from outside the store's assortment, priced $0.00 and linked as /product/{id}, whose page cannot be added to cart",
+      "question": "Why do product recommendations on the storefront PDP show unrelated $0.00 products?",
+      "questions": [
+        "What do the GetProductRecommendations blocks show on a PDP?",
+        "Can a recommended product priced $0.00 be bought?"
+      ],
+      "anchors": [
+        "Query.recommendations",
+        "/product/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11816,6 +11862,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-4167A6EB",
+      "path": "entries/KB-4167A6EB.md",
+      "subject": "On vc-frontend-next 3.3.0 /sign-in opens in the email one-time-code view; password sign-in is behind 'Sign in with a password instead' and posts /connect/token",
+      "question": "What does the vc-frontend-next /sign-in page show first, and how is password sign-in reached?",
+      "questions": [
+        "What validation does the storefront sign-in form show on an empty submit?",
+        "Where does the storefront land after password sign-in and after logout?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-416B0E02",
       "path": "entries/KB-416B0E02.md",
       "subject": "Through the storefront host /connect/token grant_type=passkey and /api/mfa/resend reach the platform, but the cookie sign-in POST /api/platform/security/sign-in answers an nginx 405 (it is served only on the back-office host)",
@@ -20323,6 +20391,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6FCBD344",
+      "path": "entries/KB-6FCBD344.md",
+      "subject": "On vc-frontend-next 3.3.0 the built-in home '/' renders the 'Shop by category' and 'Popular with buyers' sections with headings only and no items, because the slugs and category it queries do not exist in the store's catalog",
+      "question": "Why are the 'Shop by category' and 'Popular with buyers' sections empty on the vc-frontend-next home page?",
+      "questions": [
+        "Does the vc-frontend-next demo home show category tiles and products?",
+        "What does GetSlugInfo return for the home page category permalinks on vc-frontend-next?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
