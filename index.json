@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T15:37:21.875Z",
-  "count": 2039,
+  "generated": "2026-11-17T15:38:26.340Z",
+  "count": 2040,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16649,6 +16649,22 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-57EF92D0",
+      "path": "entries/KB-57EF92D0.md",
+      "subject": "Admin category Tags blade (catalog personalization user groups) re-sorts checked user groups to the top after Save; assign and remove persist",
+      "question": "In the Admin SPA category Tags blade for personalization user groups (/api/personalization/taggeditem), does the row order stay fixed after ticking a group and saving?",
+      "anchors": [
+        "/api/personalization/taggeditem"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
