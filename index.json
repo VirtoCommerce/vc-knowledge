@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-16T19:20:25.056Z",
-  "count": 2002,
+  "generated": "2026-11-17T04:44:35.907Z",
+  "count": 2003,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32915,6 +32915,31 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B62694B3",
+      "path": "entries/KB-B62694B3.md",
+      "subject": "POST api/product-subscription/plans creates or updates a plan from {storeId, name, isActive, priority, discountType, discountValue, intervals[{unit,count,isDefault}], productIds, categoryIds}; re-posting with the id updates it",
+      "question": "What body does POST api/product-subscription/plans accept, and how are plans found and updated?",
+      "questions": [
+        "How do I create a product subscription plan over REST?",
+        "What are the discountType and interval unit values of a subscription plan?",
+        "How do I change the products a subscription plan applies to?",
+        "Does api/product-subscription/scheduler/run process due renewals synchronously?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/plans",
+        "POST /api/product-subscription/plans/search",
+        "POST /api/product-subscription/subscriptions/search",
+        "POST /api/product-subscription/scheduler/run"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
