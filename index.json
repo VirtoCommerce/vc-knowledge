@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T13:53:22.675Z",
-  "count": 2033,
+  "generated": "2026-11-17T14:07:59.641Z",
+  "count": 2034,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37313,6 +37313,23 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-CDB2FE9A",
+      "path": "entries/KB-CDB2FE9A.md",
+      "subject": "With the Product Comparison module, My Account › Purchasing lists a Compare link to /compare, and the header Compare entry carries a count badge (desktop main menu; mobile: top-level hamburger item)",
+      "question": "Where is the Compare link and its count in the storefront account menu and header (/account, /compare) with the Product Comparison module, on desktop and mobile?",
+      "anchors": [
+        "/compare",
+        "/account/dashboard"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-CDC77925",

@@ -1,0 +1,22 @@
+---
+id: KB-CDB2FE9A
+subject: "With the Product Comparison module, My Account › Purchasing lists a Compare link to /compare, and the header Compare entry carries a count badge (desktop main menu; mobile: top-level hamburger item)"
+plane: experiential
+question: Where is the Compare link and its count in the storefront account menu and header (/account, /compare) with the Product Comparison module, on desktop and mobile?
+status: active
+appliesTo:
+  - axis: surface
+    value: storefront-ui
+anchors:
+  - coordinate: /compare
+  - coordinate: /account/dashboard
+evidence:
+  - method: observation
+    deployment: vcptcore_qa
+    build: c2cbb357a76b771a
+    conditions: theme=2.63.0-pr-2635-63a1; module:VirtoCommerce.ProductComparison=3.1000.0-pr-1-98d6; setting:Stores.AllowAnonymousUsers=true; store=B2B-store
+    at: 2026-11-17T14:07:58.714Z
+    by: session:fcdb91ae
+    who: kutasinaelena
+---
+On theme 2.63.0-pr-2635 with ProductComparison 3.1000.0-pr-1: the signed-in buyer's account sidebar section Purchasing lists Dashboard, Orders, Returns, Lists, Compare, Quote requests…; Compare navigates to /compare. On desktop (1920) the header main menu has "Compare" with a count badge (accessible name "Compare: N") equal to the list size after every add and remove; at 0 items no count is drawn. At 390 px the header row has no compare icon; Compare is the last top-level item of the hamburger menu with the same badge, and the Purchasing submenu also has a Compare link without a count. A guest on /compare at 390 px opening the hamburger lands in the Purchasing submenu (account pages) because the menu opens the submenu holding the current route.
