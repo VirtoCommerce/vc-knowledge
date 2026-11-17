@@ -35,5 +35,14 @@ evidence:
     bodyHash: 50faae73789c
     who: kutasinaelena
     note: "Re-observed the UI half: the variation parent PDP and the configurable PDP show no purchase options, and the variation parent's /cart line shows an unticked 'Subscribe & Save Save 5%'. The API half was not re-run; the PR source agrees: the setCartItemSubscription handler checks only that an offer and the interval exist, with no check on product type."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 959440e006132a35
+    conditions: theme=2.63.0-pr-2602-57ad; module:VirtoCommerce.ProductSubscription=3.1000.0-pr-1-79cf; store=B2B-store
+    at: 2026-11-17T12:19:54.370Z
+    by: session:d9b8e380
+    bodyHash: 50faae73789c
+    who: kutasinaelena
+    note: "Re-observed on theme 2.63.0-pr-2602-57ad: variation parent 122613 PDP has no purchase options, its /cart line offers unticked \"Subscribe & Save Save 5%\", Query.subscriptionOffers returns the plan; configurable PDP and cart line show none. API half not re-run. PO decision 2026-11-17: variation and configurable products are out of Phase 1, deferred to the next phase."
 ---
 Theme 2.63.0-pr-2602, a PERCENT 5 plan covering a variation parent, one of its variations and a configurable product; Query.subscriptionOffers returns an offer for all three. Variation parent PDP (variations list, 'Variations in cart'): no purchase options. After adding the parent row, its /cart line shows an unticked 'Subscribe & Save Save 5%'; ticking it applies a 'Subscription discount' line promotion ($125 -> $118.75) and the order created a subscription on the parent productId at referencePrice 118.75. Configurable PDP, before and after picking an option: no purchase options. Its /cart line has no Subscribe & Save control. Calling Mutation.setCartItemSubscription on that configured line succeeded; /cart then showed the consent block and a 5% discount on the configured price ($280 -> $266), and the order created an Active subscription on the configurable product with referencePrice 266. The ProductSubscription type exposes no configuration fields, so whether renewals keep the chosen option cannot be read from xAPI.
