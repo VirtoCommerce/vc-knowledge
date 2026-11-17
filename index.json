@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T14:58:17.346Z",
-  "count": 2036,
+  "generated": "2026-11-17T15:05:00.464Z",
+  "count": 2037,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10531,6 +10531,28 @@
         "role=sales-rep",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3B756331",
+      "path": "entries/KB-3B756331.md",
+      "subject": "The storefront impersonation re-prompt (/account/impersonate/{id}) validates the operator Email field as an email address, so an operator whose login name is not an email cannot confirm there",
+      "question": "On /account/impersonate/{userId}, can the operator confirm their identity with a login name that is not an email address, or does the Security verification form require email format?",
+      "questions": [
+        "Why is Verify and continue disabled on the storefront Login on behalf confirm form?",
+        "Can the platform admin (login name, no email) use storefront /account/impersonate?",
+        "What does the Security verification form show for a non-email login on the impersonate page?"
+      ],
+      "anchors": [
+        "/account/impersonate/{id}"
+      ],
+      "scope": [
+        "role=platform-admin-operator",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
