@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T04:44:35.907Z",
-  "count": 2003,
+  "generated": "2026-11-17T10:35:49.444Z",
+  "count": 2004,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -43388,6 +43388,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EFE8E10A",
+      "path": "entries/KB-EFE8E10A.md",
+      "subject": "skipProductSubscription now carries expectedNextOrderDate and refuses a stale skip, but changeProductSubscription(nextOrderDate) from a stale page has no such guard and silently undoes a skip made in another tab",
+      "question": "Does a stale subscription page still corrupt the delivery schedule after the stale-skip fix?",
+      "questions": [
+        "What happens when a buyer saves a new next delivery date on a subscription page opened before another tab skipped?",
+        "Does Skip next delivery on an out-of-date subscription page skip again?",
+        "Which product subscription mutations check the date the page showed?"
+      ],
+      "anchors": [
+        "/account/subscriptions/{id}",
+        "Mutation.skipProductSubscription",
+        "Mutation.changeProductSubscription"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
