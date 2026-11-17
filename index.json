@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T13:46:22.611Z",
-  "count": 2032,
+  "generated": "2026-11-17T13:53:22.675Z",
+  "count": 2033,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20022,6 +20022,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6D7140F6",
+      "path": "entries/KB-6D7140F6.md",
+      "subject": "Product Comparison xAPI: moveCompareListItem reorders persistently; saveProductsToCompareList caps 500 products per call and 30 configuration sections per product",
+      "question": "Does moveCompareListItem order persist in compareList, and what validation caps does saveProductsToCompareList enforce (products per call, sections per product)?",
+      "questions": [
+        "What is the max configuration sections per compared product?",
+        "Does saveProductsToCompareList validate that the product exists?",
+        "Can compare list items be reordered via API?"
+      ],
+      "anchors": [
+        "Mutation.moveCompareListItem",
+        "Mutation.saveProductsToCompareList",
+        "Query.compareList"
+      ],
+      "scope": [
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
