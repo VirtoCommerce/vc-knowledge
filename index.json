@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:09:17.610Z",
-  "count": 2009,
+  "generated": "2026-11-17T11:09:26.458Z",
+  "count": 2010,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -42323,6 +42323,29 @@
       "trust": 3,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-EB5E4481",
+      "path": "entries/KB-EB5E4481.md",
+      "subject": "On the virtostart demo stand the storefront Content-Security-Policy blocks the Application Insights browser SDK and ProductGuide's jsdelivr imports, logging CSP errors on every page",
+      "question": "Why does the virtostart storefront console show Content Security Policy errors on every page load?",
+      "questions": [
+        "Does storefront Application Insights telemetry reach Azure on the virtostart demo?",
+        "Which hosts does the storefront CSP connect-src allow on the demo stand?",
+        "Are the console CSP errors on the demo storefront app errors or third-party blocks?"
+      ],
+      "anchors": [
+        "/catalog",
+        "/cart"
+      ],
+      "scope": [
+        "layer=deployment",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-EB6191B8",
