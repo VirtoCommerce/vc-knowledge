@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T12:20:16.212Z",
-  "count": 2024,
+  "generated": "2026-11-17T12:24:19.885Z",
+  "count": 2026,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30153,6 +30153,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-A6598534",
+      "path": "entries/KB-A6598534.md",
+      "subject": "On vc-frontend-next 3.3.0, opening the header 'USD · EN' preferences popover or the 'Account menu' popover on a page scrolled to 800 px moves window.scrollY to 260; closing with Escape moves it to 0",
+      "question": "Does opening a header popover on the vc-frontend-next storefront scroll the page?",
+      "questions": [
+        "Why does the page jump when I open the currency/language menu on vc-frontend-next?",
+        "Does the VCST-6197 popover preventScroll fix hold on vc-frontend-next 3.3.0?",
+        "What happens to scroll position when the account menu popover opens on a category page?"
+      ],
+      "anchors": [
+        "/cables-docks-adapters"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A670C644",
       "path": "entries/KB-A670C644.md",
       "subject": "pageDocument alternates are filtered by the visitor's organization (FilterByOrganization forced on), so an anonymous or other-organization visitor gets no alternates of a page made for an organization",
@@ -44092,6 +44114,28 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F1100497",
+      "path": "entries/KB-F1100497.md",
+      "subject": "On vc-frontend-next 3.3.0 at 1920x1080 a full load of the category page /cables-docks-adapters scores CLS ~0.157, almost all from one shift (~0.15 at ~0.7 s) in which the app footer, painted inside the viewport at y 800, is pushed out as the product grid renders",
+      "question": "Does a vc-frontend-next category page shift layout on initial load at desktop width?",
+      "questions": [
+        "What is the CLS of a category page on vc-frontend-next at 1920?",
+        "Does the footer jump when a category listing loads on the Next theme?"
+      ],
+      "anchors": [
+        "/cables-docks-adapters"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next",
+        "viewport=1920"
       ],
       "plane": "experiential",
       "status": "active",
