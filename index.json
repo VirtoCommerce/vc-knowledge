@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T12:32:47.620Z",
-  "count": 2027,
+  "generated": "2026-11-17T12:37:51.352Z",
+  "count": 2028,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4857,7 +4857,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -43752,6 +43752,28 @@
         "store=b2b-store",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EF8D387B",
+      "path": "entries/KB-EF8D387B.md",
+      "subject": "On vc-frontend-next 3.3.0 'Price ↑' (Query.products sort price-ascending) orders cards by each product's own price, while variation cards display the lower 'From' minVariationPrice, so the visible prices are not in ascending order",
+      "question": "Does the Price ↑ sort on a vc-frontend-next category page order cards by the price they display?",
+      "questions": [
+        "Why are variation 'From' prices out of order after sorting by price ascending?",
+        "What price does Query.products sort price-ascending use for products with variations?"
+      ],
+      "anchors": [
+        "/cables-docks-adapters",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend-next"
       ],
       "plane": "experiential",
       "status": "active",
