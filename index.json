@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T11:56:58.264Z",
-  "count": 2021,
+  "generated": "2026-11-17T11:57:41.160Z",
+  "count": 2022,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -38047,6 +38047,22 @@
         "KB-2F64A447"
       ],
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D1E1E18B",
+      "path": "entries/KB-D1E1E18B.md",
+      "subject": "On vcptcore-stable the storefront sends no Content-Security-Policy, so a foreign origin can frame /designer-preview; the admin designer preview is refused (admin sends COEP credentialless)",
+      "question": "What frame-ancestors policy does the storefront /designer-preview send on vcptcore-stable, and can a foreign page frame it?",
+      "anchors": [
+        "/designer-preview"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
