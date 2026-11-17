@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T14:07:59.641Z",
-  "count": 2034,
+  "generated": "2026-11-17T14:57:54.122Z",
+  "count": 2035,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34178,6 +34178,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BAAE4BE8",
+      "path": "entries/KB-BAAE4BE8.md",
+      "subject": "ProductComparison.Enabled = false hides all storefront compare UI, makes /compare a 404 and refuses saveProductsToCompareList with COMPARE_LIST_DISABLED; the list survives and returns when re-enabled",
+      "question": "What happens on the storefront and xAPI when the store setting ProductComparison.Enabled is turned off (/compare, Mutation.saveProductsToCompareList)?",
+      "anchors": [
+        "/compare",
+        "Mutation.saveProductsToCompareList",
+        "Query.compareList"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
