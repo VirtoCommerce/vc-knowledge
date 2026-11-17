@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T10:57:58.141Z",
-  "count": 2006,
+  "generated": "2026-11-17T10:58:38.423Z",
+  "count": 2007,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37599,6 +37599,31 @@
       "scope": [
         "element=header-search",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D1506F22",
+      "path": "entries/KB-D1506F22.md",
+      "subject": "Page Builder 3.1032.5 /api/pagebuilder/template and /save reject bad type, path, store, theme and theme-config/non-JSON/non-.page files with 400 {error: reason}; store-bound users get 403 for other stores before validation",
+      "question": "What do GET /api/pagebuilder/template and POST /api/pagebuilder/save return for an invalid content type, path, store, theme or file?",
+      "questions": [
+        "Does POST /api/pagebuilder/save write files into a theme's config folder?",
+        "What does a store-bound manager get from /api/pagebuilder for another storeId?",
+        "Does saving a page with draft=false need builder:publish?"
+      ],
+      "anchors": [
+        "GET /api/pagebuilder/template",
+        "POST /api/pagebuilder/save",
+        "POST /api/pagebuilder/git/publish",
+        "POST /api/page-builder-pages/grouped/publishing/{id}"
+      ],
+      "scope": [
+        "module=pagebuilder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
