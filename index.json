@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T13:15:14.424Z",
-  "count": 2067,
+  "generated": "2026-11-18T13:32:23.683Z",
+  "count": 2068,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10183,6 +10183,30 @@
       "scope": [
         "account=guest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3818807B",
+      "path": "entries/KB-3818807B.md",
+      "subject": "Replaying a used OTP code N=5 times locks the account on the 5th refusal: replays answer 400 invalid_code, accessFailedCount rises 1 per replay, then a valid code is refused user_is_temporary_locked_out (lockoutSecondsRemaining 900)",
+      "question": "Does replaying a used OTP code count toward lockout, and what does a valid OTP code answer once the account is locked?",
+      "questions": [
+        "How many replays of a used OTP code lock an account?",
+        "What does the sign-in log record for the locked OTP attempt?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/platform/security/sign-in-log/search",
+        "GET /api/platform/security/users/{id}"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "lockout=enabled",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",

@@ -40,5 +40,14 @@ evidence:
     bodyHash: 1fd3d12c9e31
     who: Lenajava1
     note: "Source: RequestCodeAsync generates a token via GenerateUserTokenAsync and does not change the code stamp (OtpService.cs:52-55), so within one 3-minute time step (aspnetcore Rfc6238AuthenticationService.cs:17, step number from UTC ticks :87-94) the digits repeat. Not observed live by this session."
+  - method: observation
+    deployment: vcst_qa
+    build: e0865db93540946f
+    conditions: platform=3.1099.0; module:VirtoCommerce.OTP=3.1002.0-pr-4-83d4; store=B2B-store
+    at: 2026-11-18T13:27:34.735Z
+    by: session:6da8340c
+    bodyHash: 1fd3d12c9e31
+    who: Lenajava1
+    note: Requests in adjacent epoch-aligned 3-minute windows emailed different codes (4 of 4 pairs); one pair requested ~2 s after the boundary by the caller's clock still emailed the SAME digits - the stand's clock runs ~2 s behind, so a wait-for-boundary needs a few seconds of margin.
 ---
 On the B2B store, a buyer's OTP sign-in was requested twice about 1 min 45 s apart (19:42:43Z and 19:44:28Z; the first by another concurrent session, the second by Continue on /sign-in). The notification journal held two OtpSignInEmailNotification rows for that email, and both bodies carried the same 6-digit code. The code typed after the second request signed in (POST /connect/token grant_type=otp_email 200). A wrong code before it answered 400 and showed "That code didn't work." on the code step. So, within this window, a repeat request re-sends the still-valid code rather than issuing a new one. Not established: the code's lifetime, and whether the first session had already consumed the code (that would touch the reuse defect VCST-6490).
