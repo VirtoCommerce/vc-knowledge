@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T16:00:24.792Z",
-  "count": 2090,
+  "generated": "2026-11-18T16:03:51.204Z",
+  "count": 2091,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12892,7 +12892,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -23843,6 +23843,29 @@
       "scope": [
         "role=organization-maintainer",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-80CC934E",
+      "path": "entries/KB-80CC934E.md",
+      "subject": "In design classic a focused storefront pager page-number button shows a 2px solid outline (rgb 27,120,155, offset 2px, no box-shadow) of about 5:1 against the white background, and the current page is a plain element, not a focus stop",
+      "question": "What focus indicator does a keyboard-focused VcPagination page button have in the classic storefront, and is the current page focusable?",
+      "questions": [
+        "Is there a visible focus outline on storefront pager buttons and what colour/width is it?",
+        "Does the VcPagination current page take keyboard focus?",
+        "Are disabled Previous/Next pager buttons Tab stops?"
+      ],
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "component=vcpagination",
+        "design=classic",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
