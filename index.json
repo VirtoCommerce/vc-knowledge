@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T13:12:53.411Z",
-  "count": 2065,
+  "generated": "2026-11-18T13:15:14.424Z",
+  "count": 2067,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1548,7 +1548,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0,
       "resolved": 1
     },
@@ -28256,6 +28256,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-981C1F04",
+      "path": "entries/KB-981C1F04.md",
+      "subject": "POST /connect/token grant_type=otp_email signs in a user whose email is not confirmed - the code does not require a confirmed email",
+      "question": "Can a user with an unconfirmed email request an OTP code and sign in with it?",
+      "concepts": [
+        "otp"
+      ],
+      "anchors": [
+        "POST /api/otp/request",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-981EDA17",
       "path": "entries/KB-981EDA17.md",
       "subject": "Catalog personalization: a product tagged with one user group is absent from anonymous search and category listing and its direct URL renders 404, while an org member whose contact has no groups but whose organization carries the group finds it",
@@ -45808,6 +45829,28 @@
       "scope": [
         "feature=product-configuration",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F5394B83",
+      "path": "entries/KB-F5394B83.md",
+      "subject": "A code requested after another code has signed the user in differs from it even inside the same 3-minute window, so the same-digits behaviour holds only until a code is accepted",
+      "question": "If I request an OTP code right after one signed me in, do I get the same digits again (same 3-minute window)?",
+      "concepts": [
+        "otp"
+      ],
+      "anchors": [
+        "POST /api/otp/request",
+        "POST /connect/token",
+        "/sign-in"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
