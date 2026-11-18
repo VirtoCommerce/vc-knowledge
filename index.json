@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:00:44.210Z",
-  "count": 2075,
+  "generated": "2026-11-18T15:09:50.996Z",
+  "count": 2076,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33424,6 +33424,23 @@
       "scope": [
         "action=revert",
         "grant=impersonate",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B36AF38F",
+      "path": "entries/KB-B36AF38F.md",
+      "subject": "On /account/orders (All orders, 12 pages) VcPagination renders 1..7 ... 12 on page 1 and 1 ... 4 5 6 7 8 ... 12 on page 6; at 320 px the last page wraps to a second row and Prev/Next drop to a third row, still with text labels",
+      "question": "How does the storefront VcPagination on /account/orders lay out its page numbers and Prev/Next at desktop and at 320 px width?",
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "component=vcpagination",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
