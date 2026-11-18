@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T10:33:31.104Z",
-  "count": 2048,
+  "generated": "2026-11-18T10:37:08.773Z",
+  "count": 2050,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37152,6 +37152,29 @@
       "contested": 1
     },
     {
+      "id": "KB-CBC27C31",
+      "path": "entries/KB-CBC27C31.md",
+      "subject": "On ProductSubscription 3.1000.0-pr-1-8177 the customer Order now and Skip actions are off by default (ProductSubscription.Customer.AllowOrderNow / AllowSkip default false): orderProductSubscriptionNow returns SUBSCRIPTION_ACTION_DISABLED and canOrderNow / canSkip are false",
+      "question": "Why does orderProductSubscriptionNow return SUBSCRIPTION_ACTION_DISABLED and canOrderNow false for every subscription?",
+      "questions": [
+        "Are customer Order now and Skip enabled by default for product subscriptions?",
+        "What does SUBSCRIPTION_ACTION_DISABLED mean on a product subscription mutation?"
+      ],
+      "anchors": [
+        "Mutation.orderProductSubscriptionNow",
+        "Query.productSubscriptions",
+        "POST /api/product-subscription/subscriptions/{id}/order-now"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-CC169C09",
       "path": "entries/KB-CC169C09.md",
       "subject": "Reporting page KPI tiles format money with at most one decimal (\"$400.8\", de \"1556,5 $\") while the tooltip and table round to whole dollars (\"$401\")",
@@ -41297,6 +41320,29 @@
       ],
       "scope": [
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E1DC5787",
+      "path": "entries/KB-E1DC5787.md",
+      "subject": "Query.orderSubscriptionInfos(orderIds) returns one entry per order of the CALLER that carries subscriptions: renewal fields set only on renewal orders, isStartedByOrder true only on the initial order; other customers' order ids and orders without subscriptions are silently omitted; anonymous is Unauthorized",
+      "question": "What does Query.orderSubscriptionInfos return for initial orders, renewal orders, other customers' orders and anonymous callers?",
+      "questions": [
+        "How does the storefront know an order was placed by a subscription renewal?",
+        "Can a customer read subscription marks of another customer's orders through orderSubscriptionInfos?",
+        "Which orders get a Subscription badge in order history?"
+      ],
+      "anchors": [
+        "Query.orderSubscriptionInfos",
+        "/account/orders"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
