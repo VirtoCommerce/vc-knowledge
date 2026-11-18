@@ -1,2 +1,4 @@
 {"at":"2026-11-18T07:48:22.901Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
 {"at":"2026-11-18T10:49:23.670Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
+{"at":"2026-11-18T12:59:23.262Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
+{"at":"2026-11-18T13:10:56.125Z","kind":"restart","why":"transcript-moved","priorTools":637,"who":"Lenajava1"}
