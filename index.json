@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:00:30.861Z",
-  "count": 2074,
+  "generated": "2026-11-18T15:00:44.210Z",
+  "count": 2075,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34219,6 +34219,32 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B833CFF8",
+      "path": "entries/KB-B833CFF8.md",
+      "subject": "One order in a currency the platform no longer configures makes every CustomerOrder index-changes run fail with \"Sequence contains no matching element\", so CustomerOrder's IndexationDate never advances while that order is in the window",
+      "question": "Why does the scheduled index-changes job keep failing for CustomerOrder with \"Sequence contains no matching element\" and never advance its IndexationDate?",
+      "questions": [
+        "Why is the CustomerOrder IndexationDate stuck while other document types advance?",
+        "Can deleting a currency break order search indexing?",
+        "What does IndexProgressHandler 'Sequence contains no matching element' mean during scheduled indexing?",
+        "Why are recently changed orders missing from the order search index?"
+      ],
+      "anchors": [
+        "GET /api/platform/settings/VirtoCommerce.Search.IndexingJobs.IndexationDate.CustomerOrder",
+        "DELETE /api/currencies",
+        "POST /api/search/indexes/index"
+      ],
+      "scope": [
+        "entity=customer-order",
+        "module=search",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
