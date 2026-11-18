@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T16:03:51.204Z",
-  "count": 2091,
+  "generated": "2026-11-18T16:04:07.107Z",
+  "count": 2092,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -40004,6 +40004,30 @@
       "scope": [
         "module=pages",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D7376CD4",
+      "path": "entries/KB-D7376CD4.md",
+      "subject": "After the otp_email temporary lockout ends, a freshly requested code signs in with 200 and an access_token, the account's failed-attempt count is back to 0, and the sign-in log writes a succeeded OTP row",
+      "question": "Can a user sign in with a newly requested OTP code as soon as the temporary lockout on POST /connect/token grant_type=otp_email has expired, and is the failed-attempt counter reset?",
+      "questions": [
+        "Does waiting out the OTP lockout and requesting a new code restore sign-in?",
+        "What does the sign-in log show for a successful OTP grant after a lockout?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/otp/request",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "grant=otp_email",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
