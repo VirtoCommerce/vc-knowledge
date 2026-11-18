@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:52:24.662Z",
-  "count": 2089,
+  "generated": "2026-11-18T16:00:24.792Z",
+  "count": 2090,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2426,6 +2426,29 @@
         "module=taskmanagement",
         "surface=platform-rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0BD8E0D5",
+      "path": "entries/KB-0BD8E0D5.md",
+      "subject": "On vc-frontend 2.63.0 category, /catalog and search listings page by infinite scroll only (16 cards per batch): no numbered pager and no Load more button at 1280 or 768 px",
+      "question": "Does a storefront category, catalog or search results listing show a numbered pager or a Load more button, or does it load more products on scroll?",
+      "concepts": [
+        "catalog"
+      ],
+      "anchors": [
+        "/catalog",
+        "/search",
+        "/computer-office-education"
+      ],
+      "scope": [
+        "role=guest",
+        "setting=catalog_pagination_mode",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
