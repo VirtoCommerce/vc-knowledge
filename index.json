@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:48:31.800Z",
-  "count": 2088,
+  "generated": "2026-11-18T15:52:24.662Z",
+  "count": 2089,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33023,6 +33023,24 @@
         "component=ui-kit",
         "module=salesrep",
         "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B08775CF",
+      "path": "entries/KB-B08775CF.md",
+      "subject": "In the VcPagination, Tab visits the page numbers first and Previous/Next last, and the current page and \"...\" are not focus stops; no aria-current and no nav landmark",
+      "question": "What is the keyboard Tab order of the VcPagination pager and what does its accessibility tree expose for the current page?",
+      "anchors": [
+        "/iframe.html?id=components-organisms-vcpagination--page-6"
+      ],
+      "scope": [
+        "component=vcpagination",
+        "design=classic",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
