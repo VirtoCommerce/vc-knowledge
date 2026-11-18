@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T12:35:22.463Z",
-  "count": 2056,
+  "generated": "2026-11-18T12:36:06.590Z",
+  "count": 2058,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18030,6 +18030,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-60300B0B",
+      "path": "entries/KB-60300B0B.md",
+      "subject": "An organization-granted user group follows the member's CURRENT organization: switching a multi-org contact to an org without the group removes access to the tagged product in Query.products",
+      "question": "For a contact in several organizations, which organization's user groups does catalog personalization apply in Query.products?",
+      "questions": [
+        "Does a multi-org member keep access to a group-tagged product after switching to another organization?",
+        "Is the personalization user group taken from all of a contact's organizations or only the selected one?"
+      ],
+      "anchors": [
+        "Query.products",
+        "/search"
+      ],
+      "scope": [
+        "feature=catalog-personalization",
+        "surface=xapi",
+        "user=multi-org b2b member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-605B159A",
       "path": "entries/KB-605B159A.md",
       "subject": "With design soft, Builder.io text blocks keep the Lato font stack set by the Builder SDK's per-block unlayered style, while real h2 headings inside .builder-block take Geologica",
@@ -27122,7 +27145,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -35594,6 +35617,32 @@
         "module=salesrep",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C1C10B09",
+      "path": "entries/KB-C1C10B09.md",
+      "subject": "A product tagged with user group G is returned by Query.products to a customer whose CONTACT Groups contain G (and hidden from anonymous), independent of stock; an out-of-stock tagged product is still dropped by the storefront's default in-stock search filter",
+      "question": "Does a shopper whose contact group matches a product's personalization tag get that product from search, and why would they still see 0 results on /search?",
+      "questions": [
+        "Why does a VIP-group shopper get 0 search results for a VIP-tagged product?",
+        "Does catalog personalization hide an out-of-stock tagged product from group members?",
+        "What does Query.product return for a user-group-tagged product to anonymous vs a group member?"
+      ],
+      "anchors": [
+        "Query.products",
+        "Query.product",
+        "/search"
+      ],
+      "scope": [
+        "feature=catalog-personalization",
+        "surface=storefront-ui",
+        "surface=xapi",
+        "user=customer-with-contact-group"
       ],
       "plane": "experiential",
       "status": "active",
