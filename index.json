@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:31:39.283Z",
-  "count": 2080,
+  "generated": "2026-11-18T15:32:21.905Z",
+  "count": 2081,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26899,6 +26899,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-90D262B9",
+      "path": "entries/KB-90D262B9.md",
+      "subject": "Storefront pager page buttons are 32×32 px with 0 px between them in the classic design (2 px in soft) and 6 px to Previous/Next",
+      "question": "How large are the VcPagination page buttons on /account/orders and how far apart are they at a 375px viewport?",
+      "questions": [
+        "What is the touch target size and spacing of the storefront pagination page numbers on mobile?",
+        "Do the storefront pager's page buttons meet the 8px spacing of BL-UI-006?",
+        "What gap does the soft design put between pagination page numbers?"
+      ],
+      "anchors": [
+        "/account/orders"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
