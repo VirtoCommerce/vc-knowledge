@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-17T17:45:55.666Z",
-  "count": 2042,
+  "generated": "2026-11-18T10:17:25.258Z",
+  "count": 2043,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -46428,6 +46428,30 @@
       "scope": [
         "module=virtocommerce.salesrep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FBB0ED79",
+      "path": "entries/KB-FBB0ED79.md",
+      "subject": "xAPI product search results (ExpProduct) take the product model, variation ids, min variation prices, relevance score and key from index fields through [BindIndexField] binders, not from the database",
+      "question": "Which ExpProduct / ExpCategory fields in xCatalog are bound from the search index via BindIndexField, and from which index field?",
+      "questions": [
+        "Where does Query.products get product properties and prices from — the index or the database?",
+        "Which binder fills minVariationPrice in xCatalog?",
+        "What index field does CatalogProductBinder read?",
+        "Does xCatalog category binding use the indexed __object field?"
+      ],
+      "anchors": [
+        "Query.products",
+        "Query.product",
+        "Query.categories"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
