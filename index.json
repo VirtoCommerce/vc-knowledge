@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T14:15:01.705Z",
-  "count": 2072,
+  "generated": "2026-11-18T15:00:30.861Z",
+  "count": 2074,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2141,6 +2141,29 @@
       "scope": [
         "module=store",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0B22131A",
+      "path": "entries/KB-0B22131A.md",
+      "subject": "A storefront OTP code entered 10 minutes after it was emailed is refused with 400 invalid_code and the same single \"That code didn't work.\" alert as a wrong code; Resend then issues a working code",
+      "question": "What does the storefront code step show when the emailed OTP code has expired?",
+      "questions": [
+        "Is an expired OTP code handled differently from a wrong code on /sign-in?",
+        "Can the customer recover after an expired OTP code?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -41327,6 +41350,28 @@
       "scope": [
         "feature=configurable-products",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DFC1D68D",
+      "path": "entries/KB-DFC1D68D.md",
+      "subject": "A signed-in storefront customer who goes Back to /sign-in after a code sign-in is redirected to /catalog, stays signed in, and no token request is sent",
+      "question": "What happens when a signed-in storefront customer presses browser Back onto /sign-in after signing in with an emailed code?",
+      "questions": [
+        "Where does /sign-in redirect an already signed-in customer?",
+        "Does browser Back after OTP sign-in show the code step again or resend the code?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=otp-email-sign-in",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",

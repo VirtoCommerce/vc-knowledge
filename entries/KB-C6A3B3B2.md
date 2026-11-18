@@ -70,5 +70,14 @@ evidence:
     bodyHash: b4ca994bef6f
     who: Lenajava1
     note: "Suite 105 re-run REG-2026-11-18-1437 on disposable buyers: codes A,B in adjacent 3-minute windows - accepting B then A gave 400 invalid_grant/invalid_code (sign-in log OTP Success + OTP Failed/InvalidCode); resend: A 200 then B 400 invalid_code; shared persona resend: code2 200 then code1 400."
+  - method: observation
+    deployment: vcst_qa
+    build: e0865db93540946f
+    conditions: theme=2.63.0-pr-2666-7e02-7e022f10; store=B2B-store; setting:OtpSignIn.Enabled=true
+    at: 2026-11-18T14:54:36.575Z
+    by: session:6da8340c
+    bodyHash: b4ca994bef6f
+    who: Lenajava1
+    note: "Storefront UI, disposable buyer (OTP-058): code1 200, logout, code2 requested (distinct), code1 typed -> 400 invalid_grant/invalid_code, then code2 200."
 ---
 On vcst (platform 3.1099.0, VirtoCommerce.OTP 3.1002.0-pr-4-83d4, store OTP sign-in on), REST only. (1) One code granted at POST /connect/token grant_type=otp_email: 200 with access_token; the same code again immediately and 65 s later: HTTP 400, body error=invalid_grant, code=invalid_code, errorDescription "The code is invalid or has expired.", errors[0].code=invalid_code, accessToken null - 3/3 loops. (2) Codes A then B requested in different 3-minute windows (distinct codes): grant B 200, then A 400 invalid_code. (3) Same setup: grant A 200 (the resend did not invalidate A), then B 400 invalid_code - a code issued before the accepted one, even if emailed later than it, no longer works. (4) Request code C, sign in with grant_type=password (200), then grant C: 200 - a password sign-in does not invalidate a code. (5) Two concurrent grants with one code: exactly one 200, the other 400 invalid_code, no 5xx. Every refusal raised the user's accessFailedCount by 1 and wrote a Sign-in log row type OTP, outcome Failed, reason InvalidCode; a successful grant reset the count to 0 and wrote an OTP Success row. The refusal body mixes OAuth snake_case (error) with camelCase fields (accessToken, errorDescription, errors[]), while the success body uses access_token.

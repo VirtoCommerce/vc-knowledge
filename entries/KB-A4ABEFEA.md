@@ -84,5 +84,13 @@ evidence:
     bodyHash: fd5fca579e50
     who: Lenajava1
     note: POST /api/notifications/journal keyword=<buyer email>, sort createdDate:desc returned OtpSignInEmailNotification rows (status Sent) with the 6-digit code in the body, readable about 1-3 s after POST /api/otp/request.
+  - method: observation
+    deployment: vcst_qa
+    build: e0865db93540946f
+    at: 2026-11-18T14:54:36.837Z
+    by: session:6da8340c
+    bodyHash: fd5fca579e50
+    who: Lenajava1
+    note: "POST /api/notifications/journal {keyword:<email>, take:10, sort:createdDate:desc} without notificationType: snapshot of row ids before each code request, then the new OtpSignInEmailNotification row (id not in the snapshot, to = recipient) appeared within 0.9-4.2 s, 6-digit code in <strong>; 20+ requests across shared and disposable accounts."
 ---
 POST /api/notifications/journal with {notificationType, keyword: <recipient email>, sort: 'createdDate:desc'} returns EmailNotificationMessage rows that already include from, to, cc, subject, body and tenantIdentity, so GET /api/notifications/journal/{id} is not needed for the body. keyword matched the to field (all hits had that recipient when combined with notificationType); keyword alone matched far more rows, so filter to client-side. On a deployment without SMTP the row is stored with status Error but the rendered body is present. to can hold several recipients separated by '; '.
