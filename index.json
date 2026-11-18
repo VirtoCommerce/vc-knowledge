@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T13:08:24.642Z",
-  "count": 2060,
+  "generated": "2026-11-18T13:09:35.770Z",
+  "count": 2061,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19487,6 +19487,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-68CFCE57",
+      "path": "entries/KB-68CFCE57.md",
+      "subject": "POST /api/catalog/products/configurations updates options in place only when the section has allowPredefinedOptions true; option ids are preserved when sent, and two isDefault options normalise to one",
+      "question": "What does the product configuration REST upsert need so that options survive, and what happens to option ids and to two isDefault options?",
+      "anchors": [
+        "POST /api/catalog/products/configurations",
+        "GET /api/catalog/products/configurations/{id}"
+      ],
+      "scope": [
+        "module=catalog",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-68D63D8C",
       "path": "entries/KB-68D63D8C.md",
       "subject": "organization.assignableRoles(storeId) returns [] when the store's MembershipRolesWhitelist override is empty",
@@ -33431,7 +33449,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -37710,7 +37728,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-CD888E52",
