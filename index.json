@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T13:02:40.128Z",
-  "count": 2059,
+  "generated": "2026-11-18T13:08:24.642Z",
+  "count": 2060,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29633,6 +29633,28 @@
       "scope": [
         "surface=admin-ui",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A1A499E8",
+      "path": "entries/KB-A1A499E8.md",
+      "subject": "Query.product loyaltyPoints is null when currencyCode is the loyalty currency (PTS), even for a product with a PTS price; with USD it returns a PTS amount equal to the floored USD price",
+      "question": "Query.product loyaltyPoints field with currencyCode PTS — when is it non-null: ProductPoints program factor reward, PTS pricelist price",
+      "questions": [
+        "Why does product loyaltyPoints come back null with currencyCode PTS?",
+        "What amount does xAPI product.loyaltyPoints return for a USD-priced product?",
+        "Does a PTS price-list price make product.loyaltyPoints non-null?"
+      ],
+      "anchors": [
+        "Query.product"
+      ],
+      "scope": [
+        "feature=loyalty",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
