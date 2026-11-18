@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:37:31.134Z",
-  "count": 2084,
+  "generated": "2026-11-18T15:41:13.519Z",
+  "count": 2086,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -21193,7 +21193,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -37410,6 +37410,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-C9C2821A",
+      "path": "entries/KB-C9C2821A.md",
+      "subject": "With store setting OtpSignIn.Enabled switched off, a code requested while it was on is refused at /connect/token with 400 invalid_grant, code otp_disabled and no token; the setting flip reached the OTP endpoints within seconds of the store Save, both ways",
+      "question": "Is an OTP code requested before the store's OTP sign-in setting is turned off still accepted at POST /connect/token grant_type=otp_email after it is turned off?",
+      "questions": [
+        "Does turning off OTP sign-in for a store invalidate codes already emailed?",
+        "How long does a change of OtpSignIn.Enabled take to reach the OTP request and grant endpoints?"
+      ],
+      "concepts": [
+        "otp"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "grant=otp_email",
+        "setting=otpsignin.enabled",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C9D04716",
       "path": "entries/KB-C9D04716.md",
       "subject": "The impersonate grant on /connect/token issues a token for a globally locked-out target user when the target's organization membership is locked too",
@@ -40237,6 +40263,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-D92ABCA8",
+      "path": "entries/KB-D92ABCA8.md",
+      "subject": "A refused otp_email grant because the store's OTP sign-in is off is written to the sign-in log as signInType OTP, succeeded false, failureReason OtpDisabled, but asynchronously: a search issued about 1 s after the 400 returned no row, the same search seconds later returned it",
+      "question": "Does the sign-in log record an OTP grant refused because OTP sign-in is disabled for the store, and is it searchable immediately?",
+      "questions": [
+        "What failureReason does the sign-in log show for an otp_email grant when OtpSignIn.Enabled is off?",
+        "Is the platform sign-in log written synchronously with /connect/token?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/sign-in-log/search",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "grant=otp_email",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D962E2D4",
