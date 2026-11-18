@@ -25,5 +25,14 @@ evidence:
     by: session:6da8340c
     who: Lenajava1
     note: "distinct: KB-C6A3B3B2 is about which codes survive an ACCEPTED code (single-use, resend, parallel grants); this is about WRONG-code lockout: its 899 s duration on vcst, the password+OTP shared counter, and that a never-accepted code has expired by the time the lock ends."
+  - method: observation
+    deployment: vcst_qa
+    build: 2ff67d68f7987d9e
+    conditions: platform=3.1099.0; module:VirtoCommerce.OTP=3.1002.0-pr-4-83d4; store=B2B-store; setting:OtpSignIn.Enabled=true; user:lockoutEnabled=true
+    at: 2026-11-18T16:02:40.749Z
+    by: session:6da8340c
+    bodyHash: 959b57313a78
+    who: Lenajava1
+    note: "REG-2026-11-18-1641 OTP-019: 5 wrong codes all invalid_code; attempt 6 and the correct code user_is_temporary_locked_out with lockoutSecondsRemaining 898 (entry says 899; one second of drift); the ORIGINAL code 914 s after it was requested, right after the lock ended, 400 invalid_code (the entry's 'refused invalid_code once the lock expires' holds)."
 ---
 REST only, store B2B-store, lockoutEnabled Customer accounts. (1) Five otp_email grants with a wrong code: attempts 1-5 answered 400 invalid_grant/invalid_code (the 5th, on which the lock engages, still invalid_code); attempt 6 and the CORRECT code then answered 400 invalid_grant, code user_is_temporary_locked_out, lockoutSecondsRemaining 899, no token. After waiting 899 s the correct code (requested about 15 minutes earlier, never accepted) answered 400 invalid_grant/invalid_code "The code is invalid or has expired." - the lock outlasts the code, so a new code is needed. Sign-in log: OTP rows InvalidCode and one LockedOut. (2) On another account: 2 wrong-password grants, 2 wrong-code otp_email grants, 1 wrong-password grant (5 failures total) locked it: the correct password and the correct code were both refused, the code with user_is_temporary_locked_out and lockoutSecondsRemaining > 0 - one shared failed-attempt counter.
