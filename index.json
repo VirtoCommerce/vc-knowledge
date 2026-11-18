@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T13:32:23.683Z",
-  "count": 2068,
+  "generated": "2026-11-18T13:39:04.348Z",
+  "count": 2069,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34227,6 +34227,30 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-B87F121B",
+      "path": "entries/KB-B87F121B.md",
+      "subject": "On a stand without DistributedLock:KeyPrefix, every indexation run can be skipped with \"Indexation skipped: the 'IndexationJob' lock is held by another run\" for many hours, surviving a platform restart; a stand with its own prefix keeps indexing",
+      "question": "Why is search indexation stuck, with every run logging \"Indexation skipped: the 'IndexationJob' lock is held by another run\"?",
+      "questions": [
+        "Why does POST /api/search/indexes/index do nothing and the indexing blade show already in progress?",
+        "Why did the scheduled IndexChangesJob stop advancing IndexationDate?",
+        "Does restarting the platform clear a stuck IndexationJob lock?",
+        "What is DistributedLock KeyPrefix for on Virto Cloud stands?"
+      ],
+      "anchors": [
+        "POST /api/search/indexes/index",
+        "GET /api/platform/settings/VirtoCommerce.Search.IndexingJobs.IndexationDate.Product"
+      ],
+      "scope": [
+        "module=search",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-B881E350",
