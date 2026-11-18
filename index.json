@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T10:17:25.258Z",
-  "count": 2043,
+  "generated": "2026-11-18T10:27:34.595Z",
+  "count": 2044,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32030,6 +32030,31 @@
       "trust": 3,
       "disputed": 0,
       "contested": 3
+    },
+    {
+      "id": "KB-AE10CEB6",
+      "path": "entries/KB-AE10CEB6.md",
+      "subject": "With Catalog.Search.UseFullObjectIndexStoring=false, product index documents carry no __object and xAPI loads each product from the database; only __variations, __minvariationprice and __score are bound from the index",
+      "question": "Does xAPI Query.products / Query.product read the product from the index __object or from the database on a stand where Store serialized catalog objects in index is off?",
+      "questions": [
+        "Is the xCatalog CatalogProductBinder (__object) exercised on vcst?",
+        "Why does the Product index document have no __object field?",
+        "Which index fields does xAPI bind for a product when full-object storing is disabled?"
+      ],
+      "anchors": [
+        "Query.products",
+        "Query.product",
+        "GET /api/search/indexes/index/Product/{id}",
+        "GET /api/platform/settings/Catalog.Search.UseFullObjectIndexStoring"
+      ],
+      "scope": [
+        "layer=search-index",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-AE34AB04",
