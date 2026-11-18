@@ -79,5 +79,14 @@ evidence:
     bodyHash: b4ca994bef6f
     who: Lenajava1
     note: "Storefront UI, disposable buyer (OTP-058): code1 200, logout, code2 requested (distinct), code1 typed -> 400 invalid_grant/invalid_code, then code2 200."
+  - method: observation
+    deployment: vcst_qa
+    build: 2ff67d68f7987d9e
+    conditions: module:VirtoCommerce.OTP=3.1002.0-pr-4-83d4; module:VirtoCommerce.Customer=3.1033.0; store=B2B-store; setting:OtpSignIn.Enabled=true
+    at: 2026-11-18T15:32:34.401Z
+    by: session:6da8340c
+    bodyHash: b4ca994bef6f
+    who: Lenajava1
+    note: "REG-2026-11-18-1510 suite 105 (codes found by journal id snapshot): same code refused immediately and at 65 s (400 invalid_code); adjacent-window B then A refused; resend A then B refused; shared-persona resend code2 200 then code1 400; password sign-in then pending code 200; two parallel grants one 200 + one 400 invalid_code, no 5xx; 5 replays of a used code -> 1..4 invalid_code, accessFailedCount 1 after the first, 5th invalid_code, valid fresh code then user_is_temporary_locked_out (899 s)."
 ---
 On vcst (platform 3.1099.0, VirtoCommerce.OTP 3.1002.0-pr-4-83d4, store OTP sign-in on), REST only. (1) One code granted at POST /connect/token grant_type=otp_email: 200 with access_token; the same code again immediately and 65 s later: HTTP 400, body error=invalid_grant, code=invalid_code, errorDescription "The code is invalid or has expired.", errors[0].code=invalid_code, accessToken null - 3/3 loops. (2) Codes A then B requested in different 3-minute windows (distinct codes): grant B 200, then A 400 invalid_code. (3) Same setup: grant A 200 (the resend did not invalidate A), then B 400 invalid_code - a code issued before the accepted one, even if emailed later than it, no longer works. (4) Request code C, sign in with grant_type=password (200), then grant C: 200 - a password sign-in does not invalidate a code. (5) Two concurrent grants with one code: exactly one 200, the other 400 invalid_code, no 5xx. Every refusal raised the user's accessFailedCount by 1 and wrote a Sign-in log row type OTP, outcome Failed, reason InvalidCode; a successful grant reset the count to 0 and wrote an OTP Success row. The refusal body mixes OAuth snake_case (error) with camelCase fields (accessToken, errorDescription, errors[]), while the success body uses access_token.

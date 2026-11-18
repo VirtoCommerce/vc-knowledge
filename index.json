@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:32:21.905Z",
-  "count": 2081,
+  "generated": "2026-11-18T15:37:31.134Z",
+  "count": 2084,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4968,6 +4968,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1926DC00",
+      "path": "entries/KB-1926DC00.md",
+      "subject": "The OtpSignInEmailNotification journal row on vcst has subject \"Your sign-in code\" followed by a line break and from = null, while the store email is set",
+      "question": "What subject and sender does the OTP sign-in email carry in POST /api/notifications/journal?",
+      "questions": [
+        "Does the OTP code email subject have a trailing newline?",
+        "Is the OTP sign-in email sent from the store email address?"
+      ],
+      "anchors": [
+        "POST /api/notifications/journal",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11027,7 +11049,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -26876,6 +26898,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-90C2CF0F",
+      "path": "entries/KB-90C2CF0F.md",
+      "subject": "On vcst the otp_email temporary lockout lasts 899 s after 5 failures, OTP and password failures share one counter, and a code issued before the lock is refused invalid_code once the lock expires",
+      "question": "How long is the temporary lockout at POST /connect/token after repeated wrong OTP codes, do password and OTP failures share a counter, and does the code still work after the lock expires?",
+      "questions": [
+        "Do wrong passwords and wrong OTP codes count toward one lockout?",
+        "What lockoutSecondsRemaining does an OTP lockout return?",
+        "Can a code requested before an OTP lockout be used after the lock expires?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-90CCBC06",
       "path": "entries/KB-90CCBC06.md",
       "subject": "POST /api/customer/organization-memberships with userId \"\" (empty string) answers 200 and persists a membership with an empty userId",
@@ -31033,6 +31078,27 @@
         "page=home",
         "surface=storefront-ui",
         "theme=vc-frontend-next"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A7BA1E6F",
+      "path": "entries/KB-A7BA1E6F.md",
+      "subject": "GET /api/platform/security/currentuser after an otp_email sign-in returns no storeId field, so it cannot show which store the account belongs to",
+      "question": "Does GET /api/platform/security/currentuser return the signed-in customer's storeId?",
+      "questions": [
+        "Which fields does currentuser return for an OTP-signed-in customer?",
+        "How do I read a customer's home store from its own token?"
+      ],
+      "anchors": [
+        "GET /api/platform/security/currentuser"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",

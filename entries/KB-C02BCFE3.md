@@ -38,5 +38,13 @@ evidence:
     bodyHash: 065106c49e1d
     who: Lenajava1
     note: "Independent re-run in REG-2026-11-18-1453 (OTP-057), two clean passes (disposable buyer + AGENT-TEST-6490 org each): res1 400 invalid_grant / user_invitation_pending_in_organization, accessFailedCount 0; after the membership went back to Inherit the same code gave 400 invalid_grant / invalid_code, accessFailedCount 1; a fresh code then returned 200 with access_token."
+  - method: observation
+    deployment: vcst_qa
+    build: 2ff67d68f7987d9e
+    at: 2026-11-18T15:32:34.867Z
+    by: session:6da8340c
+    bodyHash: 065106c49e1d
+    who: Lenajava1
+    note: "REG-2026-11-18-1510 OTP-057: Invited-only membership -> 400 user_invitation_pending_in_organization, accessFailedCount 0; membership back to Inherit, same code -> 400 invalid_grant/invalid_code, accessFailedCount 1; fresh code -> 200 with access_token."
 ---
 On vcst (VirtoCommerce.OTP 3.1002.0-pr-4-83d4, Customer 3.1033.0) a disposable buyer with ONE organization membership set to status Invited: a fresh code granted with organization_id of that organization returned 400 code user_invitation_pending_in_organization (no token). The membership was then set back to Inherit; the SAME code returned 400 invalid_grant / invalid_code, and the user's accessFailedCount read 1. So the code is consumed when it is verified, before the organization/eligibility checks; the user needs a new code.
