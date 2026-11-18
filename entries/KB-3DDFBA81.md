@@ -42,5 +42,13 @@ evidence:
     bodyHash: 3f1040c3e50f
     who: kutasinaelena
     note: "2026-10-21: anonymous Query.productConfiguration on a parent with 3 variations returns the Variation section with options [] and no errors."
+  - method: observation
+    deployment: vcst_qa
+    build: e0865db93540946f
+    at: 2026-11-18T13:02:40.032Z
+    by: session:25a30bd6
+    bodyHash: 3f1040c3e50f
+    who: Lenajava1
+    note: "2026-11-18 on vcst: fresh AGENT-TEST parent (base 100) with two variations (120/200) and a Variation section created via REST with options []: productConfiguration returns the section with options [], and createConfiguredLineItem with the Variation section option productId = variation 1 returned listPrice 220. Same holds with the parent not yet in the search index (indexing frozen on the stand)."
 ---
 2026-10-13, admin REST then anonymous xAPI. POST /api/catalog/products/configurations with a section {type:"Variation", options:[]} on a parent that has two real variations (mainProductId = parent, priced 120 and 200 USD; parent 100 USD) was accepted. Query.productConfiguration returns the section with type Variation and options [] (the variations are not listed as options), while product(id).variations lists both. createConfiguredLineItem(currencyCode USD) with configurationSections [{sectionId, type:"Variation", option:{productId: <variation 1>, quantity:1}}] returned id null and listPrice 220 = parent 100 + variation 120.
