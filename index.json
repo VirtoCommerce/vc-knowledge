@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T13:09:35.770Z",
-  "count": 2061,
+  "generated": "2026-11-18T13:10:59.388Z",
+  "count": 2062,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17665,6 +17665,29 @@
         "page=home",
         "surface=storefront-ui",
         "viewport=1280x900"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5D9D7B90",
+      "path": "entries/KB-5D9D7B90.md",
+      "subject": "The storefront's /search?barcode= exact-match lookup follows the barcode settings of the storefront's own store, not those of any other store id",
+      "question": "Which store's barcode scanner settings does the storefront /search?barcode= lookup use, and can settings saved for another store id change it?",
+      "questions": [
+        "Does saving barcode search settings on a dedicated test store affect the storefront barcode scan?",
+        "Why does /search?barcode= show no products although exact mode is configured for another store?"
+      ],
+      "anchors": [
+        "/search?barcode=",
+        "PUT /api/catalog/barcode-search/store",
+        "GET /api/catalog/barcode-search/store"
+      ],
+      "scope": [
+        "store=per-store settings",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
