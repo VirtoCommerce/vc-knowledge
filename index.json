@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:23:57.755Z",
-  "count": 2078,
+  "generated": "2026-11-18T15:24:55.631Z",
+  "count": 2079,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26390,6 +26390,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8E207899",
+      "path": "entries/KB-8E207899.md",
+      "subject": "With design classic, every storefront VcPagination page number has 4px radius, 0 border, no gap between pages, primary-500 current page, primary-50 hover fill, and the '...' in the surrounding text colour",
+      "question": "What does the storefront VcPagination look like in design classic (radius, border, gap, current, hover, ellipsis)?",
+      "questions": [
+        "Does the soft pagination change (VCST-6292) alter the classic pager on the storefront?",
+        "What computed border-radius and border-width does .vc-pagination__page have in classic?",
+        "Is there a gap between pagination page numbers in classic?",
+        "What colour is the pagination ellipsis in classic?"
+      ],
+      "anchors": [
+        "/account/orders",
+        "/company/members",
+        "/cart",
+        "/account/saved-for-later"
+      ],
+      "scope": [
+        "component=vcpagination",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
