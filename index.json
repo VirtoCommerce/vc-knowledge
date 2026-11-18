@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T14:02:42.173Z",
-  "count": 2071,
+  "generated": "2026-11-18T14:15:01.705Z",
+  "count": 2072,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19208,6 +19208,32 @@
       ],
       "scope": [
         "feature=authentication",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6781086D",
+      "path": "entries/KB-6781086D.md",
+      "subject": "A one-time order paid with the stored-card method goes /cart -> Place order -> /checkout/payment -> /checkout/payment/success, and the method chosen on /cart persists across reload",
+      "question": "What happens after Place order on /cart for a one-time order (no subscription line) with the stored-card method 'Credit card (test)'?",
+      "questions": [
+        "Does the payment method selected on /cart survive a page reload?",
+        "Where is the card entered for MockStoredCardPaymentMethod on the single-page checkout?",
+        "How many createOrderFromCart calls does one Place order click send?"
+      ],
+      "anchors": [
+        "/cart",
+        "/checkout/payment",
+        "/checkout/payment/success",
+        "Mutation.createOrderFromCart",
+        "Mutation.authorizePayment"
+      ],
+      "scope": [
+        "store=b2b-store",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
