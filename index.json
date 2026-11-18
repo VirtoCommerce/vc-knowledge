@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:41:13.519Z",
-  "count": 2086,
+  "generated": "2026-11-18T15:48:31.800Z",
+  "count": 2088,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9524,6 +9524,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-347A930A",
+      "path": "entries/KB-347A930A.md",
+      "subject": "Product-subscription price review compares against the reminder's notified total: a list price raised BEFORE the renewal is notified gives no ReviewRequired; inside CutoffHours the renewal is notified at the new price and ordered in the same scheduler run",
+      "question": "Does raising a product's list price before a subscription renewal is scheduled put that renewal into ReviewRequired with PRICE_INCREASED?",
+      "questions": [
+        "When does a product subscription renewal go to ReviewRequired PRICE_INCREASED?",
+        "What is the maximum price a subscription renewal is checked against for price review?",
+        "Why was a subscription renewal ordered at a higher price without review?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/scheduler/run",
+        "POST /api/product-subscription/renewals/search"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -44574,6 +44597,24 @@
       ],
       "scope": [
         "component=recently-browsed-products",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EDFA4DBF",
+      "path": "entries/KB-EDFA4DBF.md",
+      "subject": "Cart new-address dialog accepts a digit in Last name; updateMemberAddresses then fails silently and checkout continues",
+      "question": "What happens on /cart when a new shipping address has a digit in the last name?",
+      "anchors": [
+        "/cart",
+        "Mutation.updateMemberAddresses"
+      ],
+      "scope": [
+        "account=personal",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
