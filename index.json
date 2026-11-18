@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:24:55.631Z",
-  "count": 2079,
+  "generated": "2026-11-18T15:31:39.283Z",
+  "count": 2080,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5055,6 +5055,30 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1A674B00",
+      "path": "entries/KB-1A674B00.md",
+      "subject": "An otp_email grant refused because the account is locked out does not use up the emailed code: the same code signs in once the lock is cleared, if it has not expired",
+      "question": "Does an otp_email grant made while the account is locked out use up the emailed code?",
+      "questions": [
+        "After a lockout ends, does the OTP code emailed before the lockout still work?",
+        "Why does the correct OTP code fail after waiting out a 15-minute lockout?",
+        "Is the OTP code consumed when POST /connect/token answers user_is_temporary_locked_out?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/otp/request",
+        "POST /api/platform/security/users/{id}/unlock"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
