@@ -24,5 +24,14 @@ evidence:
     at: 2026-11-18T10:32:27.344Z
     by: session:d9b8e380
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa1
+    build: ad6ae9902bd60819
+    conditions: setting:ProductSubscription.Customer.AllowSkip=false (store B2B-store explicit); setting:ProductSubscription.Customer.AllowOrderNow=false (store B2B-store explicit)
+    at: 2026-11-18T15:15:25.098Z
+    by: session:d9b8e380
+    bodyHash: 652746d3a862
+    who: kutasinaelena
+    note: "2026-11-18 with explicit store false: canSkip/canOrderNow false; skipProductSubscription and orderProductSubscriptionNow both SUBSCRIPTION_ACTION_DISABLED in errors[] (HTTP 200); nextOrderDate and skipCount unchanged."
 ---
 With the store and global values of ProductSubscription.Customer.AllowOrderNow and AllowSkip unset (GET /api/platform/settings/<name> -> value null, defaultValue false; AllowPause default true), a buyer's Mutation.orderProductSubscriptionNow returns HTTP 200 errors[] "This store doesn't let customers do this. Please contact the store." code SUBSCRIPTION_ACTION_DISABLED, and Query.productSubscriptions reports canOrderNow:false, canSkip:false on every subscription (canChangeFrequency true). The admin REST POST /api/product-subscription/subscriptions/{id}/order-now is not gated by it; right after the initial order it answers 400 "This subscription was just ordered. Check your orders before ordering again." (two parallel calls both refused, no order created).
