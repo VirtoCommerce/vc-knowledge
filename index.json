@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T13:49:57.394Z",
-  "count": 2069,
+  "generated": "2026-11-18T13:57:18.930Z",
+  "count": 2070,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -47187,6 +47187,24 @@
         "role=sales-rep",
         "surface=storefront-ui",
         "viewport=mobile-375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FD60F35A",
+      "path": "entries/KB-FD60F35A.md",
+      "subject": "A subscription order paid with an already-saved hard-decline mock card (last4 0021) stayed PendingActivation although its payment was Authorized; the same card entered as a new card activated the subscription",
+      "question": "Why does a product subscription stay PendingActivation after authorizePayment succeeds with a saved MockStoredCardPaymentMethod card?",
+      "anchors": [
+        "Mutation.authorizePayment",
+        "POST /api/product-subscription/subscriptions/search"
+      ],
+      "scope": [
+        "module=productsubscription",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
