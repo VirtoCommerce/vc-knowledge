@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T12:39:19.039Z",
-  "count": 2058,
+  "generated": "2026-11-18T12:54:49.677Z",
+  "count": 2059,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20750,6 +20750,30 @@
       ],
       "scope": [
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-70162D00",
+      "path": "entries/KB-70162D00.md",
+      "subject": "The background-job engine is selected by VirtoCommerce:BackgroundJobs:Provider (env VirtoCommerce__BackgroundJobs__Provider), and the RabbitMQ engine reads its broker connection from VirtoCommerce:RabbitMQ",
+      "question": "Which configuration key selects the background jobs engine, and where does the RabbitMQ engine read its broker connection?",
+      "questions": [
+        "Is it BackgroundJobs:Provider or VirtoCommerce:BackgroundJobs:Provider?",
+        "What environment variable switches a Virto Cloud stand to the RabbitMQ background-job engine?",
+        "How do I point the RabbitMQ background-job engine at a broker?",
+        "Does the RabbitMQ engine accept an amqp:// connection string?"
+      ],
+      "anchors": [
+        "GET /health",
+        "POST /api/background-jobs/enqueue"
+      ],
+      "scope": [
+        "module=background-jobs",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
