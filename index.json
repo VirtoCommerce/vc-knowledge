@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T11:10:53.909Z",
-  "count": 2054,
+  "generated": "2026-11-18T11:28:26.462Z",
+  "count": 2055,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2743,6 +2743,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0D9700FC",
+      "path": "entries/KB-0D9700FC.md",
+      "subject": "With ProductSubscription.Enabled=false the storefront returns 404 for /how-subscriptions-work (guest and signed-in) and shows no subscription marks in order history or on a renewal order's page",
+      "question": "What happens to /how-subscriptions-work and the subscription marks in order history when ProductSubscription.Enabled is turned off for the store?",
+      "questions": [
+        "Is the how subscriptions work page available when product subscriptions are disabled?",
+        "Do renewal orders still show a Subscription badge when the store setting is off?",
+        "Does the order page keep the subscription line row when subscriptions are disabled?"
+      ],
+      "anchors": [
+        "/how-subscriptions-work",
+        "/account/orders",
+        "Query.orders"
+      ],
+      "scope": [
+        "feature=product-subscriptions",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
