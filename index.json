@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:15:24.275Z",
-  "count": 2077,
+  "generated": "2026-11-18T15:23:57.755Z",
+  "count": 2078,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9558,6 +9558,29 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-34DDF2EA",
+      "path": "entries/KB-34DDF2EA.md",
+      "subject": "In the soft design, VcPagination page buttons are 32px round pills with a 1px ring and a 2px gap; in dark the ring is the light ink at 16% and it renders in Firefox 156",
+      "question": "What does the soft-design VcPagination page button compute to (radius, ring, gap, hover, current page, ellipsis) in light and dark, and does the dark relative-colour ring render in Firefox?",
+      "questions": [
+        "Does rgb(from var(--color-additional-950) r g b / 0.16) render as the soft pagination dark ring in Firefox?",
+        "Is the soft VcPagination ellipsis greyed to neutral-400?",
+        "What is the current page ring colour in soft VcPagination?"
+      ],
+      "anchors": [
+        "/client-app/designs/soft/_tokens.scss",
+        "/client-app/ui-kit/components/organisms/pagination/vc-pagination.vue"
+      ],
+      "scope": [
+        "component=vcpagination",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-350797F5",
