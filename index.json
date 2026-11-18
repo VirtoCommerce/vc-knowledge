@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T13:57:18.930Z",
-  "count": 2070,
+  "generated": "2026-11-18T14:02:42.173Z",
+  "count": 2071,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24283,6 +24283,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-84699CF6",
+      "path": "entries/KB-84699CF6.md",
+      "subject": "The createdDate of an OtpSignInEmailNotification journal row can be EARLIER than the client's own UTC time taken just before POST /api/otp/request, so filtering rows by createdDate > T0 can miss the row",
+      "question": "Why does polling POST /api/notifications/journal for an OtpSignInEmailNotification created after T0 find no code although POST /api/otp/request answered 200 succeeded=true?",
+      "questions": [
+        "How do I detect the OTP email created by the request I just sent in the notification journal",
+        "Is the journal createdDate reliable to compare against a client timestamp"
+      ],
+      "anchors": [
+        "POST /api/notifications/journal",
+        "POST /api/otp/request"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-847622A8",
       "path": "entries/KB-847622A8.md",
       "subject": "With module_federation_enabled the storefront loads the Sales Rep Hub from /modules/$(VirtoCommerce.SalesRep)/plugins/vc-frontend/ on its own origin; a storefront host without a /modules -> platform route returns 404 for the whole hub",
@@ -38482,7 +38504,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
