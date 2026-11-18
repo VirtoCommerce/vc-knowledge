@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T12:32:01.215Z",
-  "count": 2055,
+  "generated": "2026-11-18T12:34:19.927Z",
+  "count": 2056,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10278,7 +10278,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -36455,6 +36455,32 @@
         "GET /api/order/customerOrders/{id}"
       ],
       "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C6A3B3B2",
+      "path": "entries/KB-C6A3B3B2.md",
+      "subject": "After an otp_email grant succeeds, that code and every code emailed before it are refused (400 invalid_grant / invalid_code); a code requested later than the accepted one is also refused, while a password sign-in invalidates nothing and two parallel grants with one code yield exactly one token",
+      "question": "Which OTP codes still work at POST /connect/token grant_type=otp_email after one code has been accepted, a resend, a password sign-in, or a parallel grant?",
+      "questions": [
+        "Is the OTP email code single-use after the VCST-6490 fix",
+        "Does resending an OTP code invalidate the earlier one",
+        "Does a password sign-in invalidate an outstanding OTP code",
+        "Can two concurrent otp_email grants with one code both succeed",
+        "What does the token endpoint return for a reused OTP code"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/otp/request",
+        "POST /api/platform/security/sign-in-log/search"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
         "surface=rest"
       ],
       "plane": "experiential",
