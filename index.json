@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T10:42:19.968Z",
-  "count": 2052,
+  "generated": "2026-11-18T11:10:53.909Z",
+  "count": 2054,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5879,6 +5879,30 @@
       "scope": [
         "module=virtocommerce.store>=3.1010.0-pr-186",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1F89A6A9",
+      "path": "entries/KB-1F89A6A9.md",
+      "subject": "Storefront subscription self-service actions are gated per store by ProductSubscription.Customer.Allow* settings; when off the action is hidden and the server refuses with SUBSCRIPTION_ACTION_DISABLED",
+      "question": "Why does /account/subscriptions show no Skip delivery or Order now on an Active subscription?",
+      "questions": [
+        "What do ProductSubscription.Customer.AllowSkip / AllowOrderNow / AllowChangePaymentMethod control?",
+        "Why is canSkip false on a fresh Active product subscription?",
+        "What does SUBSCRIPTION_ACTION_DISABLED mean on skipProductSubscription?"
+      ],
+      "anchors": [
+        "/account/subscriptions",
+        "Mutation.skipProductSubscription",
+        "Query.productSubscriptions"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -26490,6 +26514,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-90A60DB7",
+      "path": "entries/KB-90A60DB7.md",
+      "subject": "On the rebuilt Subscriptions page there is no date field; a frequency change recomputes nextOrderDate from lastOrderDate and drops an earlier skip, while a card change sends only the card",
+      "question": "What does Mutation.changeProductSubscription do to nextOrderDate and a prior skip when the storefront changes frequency or card?",
+      "questions": [
+        "Does changing subscription frequency keep a skipped delivery?",
+        "Can a stale Subscriptions tab still undo a skip?",
+        "Does the old /account/subscriptions/{id} detail page still exist?"
+      ],
+      "anchors": [
+        "/account/subscriptions",
+        "Mutation.changeProductSubscription",
+        "Mutation.skipProductSubscription"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
