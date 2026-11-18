@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T15:09:50.996Z",
-  "count": 2076,
+  "generated": "2026-11-18T15:15:24.275Z",
+  "count": 2077,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -35766,6 +35766,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C0877474",
+      "path": "entries/KB-C0877474.md",
+      "subject": "The storefront reads its design (classic or soft) only from the bundled settings_data.json, before any request; white-labeling and store settings carry a preset name but no design",
+      "question": "Where does the vc-frontend storefront get its design (classic/soft) from, and can an administrator change it per store or organization?",
+      "anchors": [
+        "/client-app/core/utilities/design/index.ts",
+        "/client-app/config/settings_data.json"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "theme=vc-frontend"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
