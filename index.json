@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T10:27:34.595Z",
-  "count": 2044,
+  "generated": "2026-11-18T10:33:31.104Z",
+  "count": 2048,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2743,6 +2743,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0DB2D9E3",
+      "path": "entries/KB-0DB2D9E3.md",
+      "subject": "Repeating the same storefront keyword search returns the same products in the same order (SearchProducts and GetSearchResults agree)",
+      "question": "Is the result order of a storefront keyword search stable when the same search is repeated?",
+      "questions": [
+        "Does /search?q= relevance ordering change between identical searches?",
+        "Do SearchProducts and GetSearchResults return the same order for one keyword?"
+      ],
+      "anchors": [
+        "/search",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10420,6 +10442,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3AB42E0C",
+      "path": "entries/KB-3AB42E0C.md",
+      "subject": "Product minVariationPrice is the lowest effective price across ALL variation price rows including quantity tiers, returned with list = sale = actual",
+      "question": "How is Product.minVariationPrice computed in xAPI, and does it include tier prices?",
+      "questions": [
+        "Why is minVariationPrice lower than every variation's price.actual?",
+        "Why does minVariationPrice.list equal its sale amount?"
+      ],
+      "anchors": [
+        "Query.product",
+        "Query.products",
+        "POST /api/pricing/evaluate"
+      ],
+      "scope": [
+        "field=minvariationprice",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -35208,6 +35253,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-C01F10EF",
+      "path": "entries/KB-C01F10EF.md",
+      "subject": "A product card's \"From\" price on the storefront equals Query.products minVariationPrice, which is the lowest price among the product and its variations",
+      "question": "Where does the \"From\" price on a storefront card for a product with variations come from, and which variation does it match?",
+      "questions": [
+        "Does minVariationPrice include the master product's own price?",
+        "Is the From price on a variation product card the cheapest variation?",
+        "What does Query.products minVariationPrice return for a product with variations?"
+      ],
+      "anchors": [
+        "Query.products",
+        "/search"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C05C9D27",
       "path": "entries/KB-C05C9D27.md",
       "subject": "With Deutsch stored as the session language, a direct load of an unprefixed en-US PDP URL is redirected to /de/<en slug> and renders 404 when the product has a different de-DE slug",
@@ -46229,6 +46297,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-F9CBFB60",
+      "path": "entries/KB-F9CBFB60.md",
+      "subject": "A category linked at two places in the store's virtual catalog gets its outline and slug picked non-deterministically per call in Query.childCategories and Query.category",
+      "question": "Which outline and slug does xAPI return for a category that has two outlines in the store catalog, and is it stable between calls?",
+      "questions": [
+        "Why does a category slug flip between snacks/nachos and drinks-and-food/snacks/nachos?",
+        "Is childCategories output deterministic across identical calls?"
+      ],
+      "anchors": [
+        "Query.childCategories",
+        "Query.category",
+        "GET /api/catalog/categories/{id}"
+      ],
+      "scope": [
+        "entity=category",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F9D75EA0",
       "path": "entries/KB-F9D75EA0.md",
       "subject": "VcDateRangePicker footer Clear scope differs between split and combined layouts",
@@ -46481,7 +46572,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-FBDCC7A5",
