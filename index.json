@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T13:11:26.797Z",
-  "count": 2064,
+  "generated": "2026-11-18T13:12:53.411Z",
+  "count": 2065,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -35494,6 +35494,24 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C02BCFE3",
+      "path": "entries/KB-C02BCFE3.md",
+      "subject": "An OTP code is used up even when the grant is then refused for a sign-in eligibility reason: after an Invited-membership refusal the same code is invalid_code and counts a failed attempt",
+      "question": "If an otp_email grant is refused after the code verified (e.g. user_invitation_pending_in_organization), can the same code be reused once the cause is fixed?",
+      "anchors": [
+        "POST /connect/token",
+        "PUT /api/customer/organization-memberships/{id}"
+      ],
+      "scope": [
+        "feature=otp-sign-in",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
