@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T08:26:25.592Z",
-  "count": 2094,
+  "generated": "2026-11-19T09:20:25.893Z",
+  "count": 2095,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -25990,6 +25990,31 @@
       "scope": [
         "module=page-builder",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8B8136F0",
+      "path": "entries/KB-8B8136F0.md",
+      "subject": "On /checkout/payment a refused card shows the generic 'The payment was declined. Try another card.' even when Mutation.authorizePayment returns a specific errorMessage such as 'Your card has expired. Try another card.'",
+      "question": "What message does the storefront payment page show when authorizePayment refuses a card with a specific reason?",
+      "questions": [
+        "Does /checkout/payment show the server's decline reason for an expired card?",
+        "Is authorizePayment.errorMessage displayed on the storefront payment page?",
+        "What does the buyer see when paying a subscription order with an expired test card?"
+      ],
+      "anchors": [
+        "/checkout/payment",
+        "Mutation.authorizePayment",
+        "/account/payment-methods",
+        "Mutation.addSavedPaymentMethod"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
