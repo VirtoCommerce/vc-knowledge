@@ -53,5 +53,14 @@ evidence:
     bodyHash: 50faae73789c
     who: kutasinaelena
     note: "API half only, 2026-11-19: Mutation.setCartItemSubscription accepted a configured line (1 configurationItem, price 280 -> 266) and the variation-parent line 122613 (125 -> 118.75); the only variation 122613-1 could not be added (PRODUCT_FFC_QTY, available 0). UI half not re-checked here."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 1dfb1b0bb5149a92
+    conditions: module:VirtoCommerce.ProductSubscription=3.1000.0-pr-1-cb70; module:VirtoCommerce.XCart=3.1049.0-alpha.318-vcst-6507
+    at: 2026-11-19T15:10:28.344Z
+    by: session:d9b8e380
+    bodyHash: 50faae73789c
+    who: kutasinaelena
+    note: "API half only, 2026-11-19 on pr-1-cb70: Mutation.setCartItemSubscription accepted configured lines (option $80 -> 266, option $40 -> 228, no option -> 190) and the variation parent 122613 (118.75); variation 122613-1 still not addable (PRODUCT_FFC_QTY). On this build ProductSubscription now exposes configuration / configurationHash (see KB-5C1846A3), so the body's last sentence no longer holds. UI half not re-checked here."
 ---
 Theme 2.63.0-pr-2602, a PERCENT 5 plan covering a variation parent, one of its variations and a configurable product; Query.subscriptionOffers returns an offer for all three. Variation parent PDP (variations list, 'Variations in cart'): no purchase options. After adding the parent row, its /cart line shows an unticked 'Subscribe & Save Save 5%'; ticking it applies a 'Subscription discount' line promotion ($125 -> $118.75) and the order created a subscription on the parent productId at referencePrice 118.75. Configurable PDP, before and after picking an option: no purchase options. Its /cart line has no Subscribe & Save control. Calling Mutation.setCartItemSubscription on that configured line succeeded; /cart then showed the consent block and a 5% discount on the configured price ($280 -> $266), and the order created an Active subscription on the configurable product with referencePrice 266. The ProductSubscription type exposes no configuration fields, so whether renewals keep the chosen option cannot be read from xAPI.
