@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T13:32:42.191Z",
-  "count": 2103,
+  "generated": "2026-11-19T13:34:25.027Z",
+  "count": 2105,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -35290,6 +35290,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-BADF305D",
+      "path": "entries/KB-BADF305D.md",
+      "subject": "Site Builder Vue designer: clicking a heading in the preview edits it in place and one Undo restores it; hover outlines a section and a click selects it in the section list; markdown body text is not inline-editable",
+      "question": "How does inline editing in the Site Builder Vue designer preview behave, and does Undo revert it?",
+      "questions": [
+        "Does hovering a section in the Site Builder designer preview outline it?",
+        "Does clicking a section in the designer preview select it in the section list?",
+        "Can the markdown content of a Text section be edited inline in the Site Builder preview?",
+        "Does Undo in the Site Builder designer revert an inline text edit?"
+      ],
+      "anchors": [
+        "/apps/site-builder-shell#/site-builder-draft/site-builder-designer",
+        "POST /api/site-builder/designer/save"
+      ],
+      "scope": [
+        "feature=site-builder-designer",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BAEBCDA7",
       "path": "entries/KB-BAEBCDA7.md",
       "subject": "an organization invitation cannot be cancelled or resent",
@@ -41523,6 +41547,29 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DD874028",
+      "path": "entries/KB-DD874028.md",
+      "subject": "Site Builder: SEO Page title and Meta keywords live on a database page's details blade (Search engine listing), not in the designer's Page settings; the only request-backed searchable picker in the coffee storefront's schema catalog is the Category section's category field",
+      "question": "Where are SEO title and keywords edited for a Site Builder page, and which designer fields are searchable pickers?",
+      "questions": [
+        "Does the Site Builder designer Page settings panel have SEO title and keywords?",
+        "Is there a product picker or page picker field in the Site Builder designer?",
+        "Does the Site Builder asset picker support folders?"
+      ],
+      "anchors": [
+        "/apps/site-builder-shell#/site-builder-draft/site-builder-page",
+        "PUT /api/site-builder/catalog"
+      ],
+      "scope": [
+        "feature=site-builder-designer",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
