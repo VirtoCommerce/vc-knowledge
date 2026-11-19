@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T06:44:41.045Z",
-  "count": 2093,
+  "generated": "2026-11-19T06:51:15.105Z",
+  "count": 2094,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22074,6 +22074,29 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-775C31EB",
+      "path": "entries/KB-775C31EB.md",
+      "subject": "The classic AngularJS Customer orders list has no Export command, with or without selected rows",
+      "question": "Does the platform's AngularJS Customer orders blade have an Export button that exports selected orders?",
+      "questions": [
+        "Is order export built into the classic admin Orders list?",
+        "Where does an 'Export orders' blade on Customer orders come from?"
+      ],
+      "concepts": [
+        "admin-order-screen"
+      ],
+      "anchors": [
+        "POST /api/order/customerOrders/search"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
