@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T13:14:52.629Z",
-  "count": 2102,
+  "generated": "2026-11-19T13:32:42.191Z",
+  "count": 2103,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6927,6 +6927,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-255E2DDB",
+      "path": "entries/KB-255E2DDB.md",
+      "subject": "Site Builder Vue designer protects a template's main section: Hide and Remove are disabled, but multi-select Delete confirms and then silently removes nothing",
+      "question": "Can the main section of a template be hidden or removed in the Site Builder Vue designer?",
+      "questions": [
+        "What happens when you multi-select the main section and press Delete in the Site Builder designer?",
+        "Is the Product info / main section of the product template removable in the Vue designer?",
+        "Why does Remove 1 section(s) confirm but nothing is removed in the Site Builder designer?"
+      ],
+      "anchors": [
+        "/apps/site-builder-shell#/site-builder-draft/site-builder-designer"
+      ],
+      "scope": [
+        "feature=site-builder-designer",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-25682485",
