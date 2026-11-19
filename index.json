@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T16:05:22.098Z",
-  "count": 2143,
+  "generated": "2026-11-19T16:08:04.874Z",
+  "count": 2144,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26354,6 +26354,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-8A2B6876",
+      "path": "entries/KB-8A2B6876.md",
+      "subject": "Site Builder storefront build adds outlines { items { id } } to the PDP GetProduct query; GetPageContext (with mainMenuLinks) is byte-for-byte the same length as on the pre-Site-Builder dev storefront",
+      "question": "Which storefront GraphQL queries changed with the Site Builder storefront release compared with the dev storefront, independent of the site_builder_enabled flag?",
+      "questions": [
+        "Does the flag-on storefront GetProduct request product outlines?",
+        "Is whiteLabeling mainMenuLinks new in GetPageContext?"
+      ],
+      "anchors": [
+        "Query.product",
+        "Query.store"
+      ],
+      "scope": [
+        "buyer=guest",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8A2F58EA",
       "path": "entries/KB-8A2F58EA.md",
       "subject": "xAPI returnableItems caps returnableQuantity at deliveredQuantity, computed per line",
@@ -40320,7 +40343,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
