@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T14:32:14.190Z",
-  "count": 2130,
+  "generated": "2026-11-19T14:45:07.398Z",
+  "count": 2132,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5752,6 +5752,32 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-1DF2F565",
+      "path": "entries/KB-1DF2F565.md",
+      "subject": "The page id an anonymous visitor reads from Query.slugInfo while a Site Builder database page is published keeps serving that page's later drafts through Query.builderPage and the storefront /designer-preview?pageId= route after the page is unpublished",
+      "question": "Can an anonymous visitor read an unpublished Site Builder database page using the id slugInfo gave out while it was published?",
+      "questions": [
+        "Does unpublishing a Site Builder page stop anonymous builderPage reads of it?",
+        "What does /designer-preview?pageId= render for an anonymous visitor on an unpublished page?",
+        "Is the slugInfo entityInfo.id of a database page the same id builderPage accepts?"
+      ],
+      "anchors": [
+        "Query.slugInfo",
+        "Query.builderPage",
+        "/designer-preview",
+        "POST /api/site-builder-pages/grouped/publishing/{id}"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "module=sitebuilder",
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-1E0332AA",
@@ -21531,6 +21557,30 @@
         "buyer=anonymous",
         "module=virtocommerce.ucp 3.1011.0-pr-13",
         "surface=ucp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-717756D0",
+      "path": "entries/KB-717756D0.md",
+      "subject": "Anonymous Query.builderPage by group id returns a published Site Builder page's pending draft edit instead of its published content, and an archived page's newest archived content",
+      "question": "Which version does Query.builderPage(groupId) return for a published database page with a pending draft, and for an archived one?",
+      "questions": [
+        "Does builderPage serve the published copy while a published page has draft changes?",
+        "Does builderPage return content for an archived Site Builder page?"
+      ],
+      "anchors": [
+        "Query.builderPage",
+        "GET /api/site-builder-pages/grouped/publish-status/{id}",
+        "POST /api/site-builder-pages/grouped/archive"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "module=sitebuilder",
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
