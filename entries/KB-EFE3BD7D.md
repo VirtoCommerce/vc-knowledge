@@ -23,5 +23,15 @@ evidence:
     at: 2026-11-19T13:43:58.139Z
     by: session:51ac2fe3
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 694f1bf7279cdd13
+    conditions: theme=2.63.0-pr-2676-6b5e-6b5e8717; store=B2B-store; browser=firefox; role=guest
+    at: 2026-11-19T18:04:42.956Z
+    by: session:51ac2fe3
+    bodyHash: 41cd705d61b7
+    defect: suspected
+    who: Lenajava1
+    note: "Re-observed 2026-11-19 on the same draft page route, Firefox, 1920 px, anonymous: .slider-block bg-neutral-800 py-10 lg:py-24 computes to color(srgb 0.8667 0.8745 0.898) = #dddfe5 in html.dark while its headings (48 px \"Virto Page\", 24 px \"Saveguard\", \"Security First\") stay rgb(255,255,255): 1.33:1. Mechanism: --color-neutral-800 is #dddfe5 in dark and #262626 in light (the neutral ramp inverts), the heading colour is a literal white. In light the same block is #262626 with white text (about 15.9:1). The page is still anonymously readable via /designer-preview?pageId (VCST-6942 class)."
 ---
 On vcst_qa (theme 2.63.0-pr-2676, store B2B-store, Firefox, 1920 px and 384 px), GET /designer-preview?pageId=<draft page id> with html.dark (header Theme toggle auto -> dark): the page-builder slider block (div.slider-block with utility classes bg-neutral-800 py-10 lg:py-24) has computed background color(srgb 0.8667 0.8745 0.898) = #dddfe5 while its heading text (Virto Page, SAVEGUARD, Security First, 24-48 px bold) is rgb(255,255,255): contrast 1.33:1, below the 3:1 large-text minimum. In light mode the same block is dark grey with white text and is readable. The same block shows the same colours inside the Site Builder designer preview iframe in the dark scheme, so the preview shows what the storefront shows.

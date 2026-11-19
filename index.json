@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T17:58:48.647Z",
-  "count": 2145,
+  "generated": "2026-11-19T18:07:33.352Z",
+  "count": 2146,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11246,6 +11246,24 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3C3BFDC2",
+      "path": "entries/KB-3C3BFDC2.md",
+      "subject": "On the home page of an organization with its own white-labeling, two Builder.io blocks keep a fixed light background in dark mode while their headings take the inverted theme colour: 1.16:1 and 1.1:1",
+      "question": "Are the headings of the Builder.io home page blocks readable in storefront dark mode for an organization with its own white-labeling?",
+      "anchors": [
+        "GET /api/v3/content/page"
+      ],
+      "scope": [
+        "component=builder-block",
+        "scheme=dark",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
