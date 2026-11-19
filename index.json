@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T16:08:04.874Z",
-  "count": 2144,
+  "generated": "2026-11-19T17:58:48.647Z",
+  "count": 2145,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30590,6 +30590,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9F706125",
+      "path": "entries/KB-9F706125.md",
+      "subject": "Site Builder's AI assistant is configured by the global platform setting VirtoCommerce.SiteBuilder.General.OzAgentUrl (the Virto OZ address), copied once from PageBuilderModule.General.OzAgentUrl on first start",
+      "question": "Which setting turns on the Virto OZ AI assistant in the Site Builder designer, and where does its value come from?",
+      "questions": [
+        "Where do I set the OZ agent URL for Site Builder?",
+        "Why is the AI assistant missing in the Site Builder designer?",
+        "Does Site Builder reuse Page Builder's OzAgentUrl?"
+      ],
+      "anchors": [
+        "GET /api/platform/settings/modules/VirtoCommerce.SiteBuilder",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
