@@ -62,5 +62,16 @@ evidence:
     bodyHash: 50faae73789c
     who: kutasinaelena
     note: "API half only, 2026-11-19 on pr-1-cb70: Mutation.setCartItemSubscription accepted configured lines (option $80 -> 266, option $40 -> 228, no option -> 190) and the variation parent 122613 (118.75); variation 122613-1 still not addable (PRODUCT_FFC_QTY). On this build ProductSubscription now exposes configuration / configurationHash (see KB-5C1846A3), so the body's last sentence no longer holds. UI half not re-checked here."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 1dfb1b0bb5149a92
+    conditions: theme=2.63.0-pr-2602-c8eb; module:VirtoCommerce.ProductSubscription=3.1000.0-pr-1-cb70; store=B2B-store
+    at: 2026-11-19T15:19:50.319Z
+    by: session:d9b8e380
+    bodyHash: 50faae73789c
+    who: kutasinaelena
+    contradicts: true
+    contested: theme 2.63.0-pr-2602-c8eb vs 2.63.0-pr-2602-399d; theme 2.63.0-pr-2602-c8eb-c8eb02fe vs 2.63.0-pr-2602-399d-399d5bf8; virtocommerce.cart 3.1015.0 vs 3.1014.0; virtocommerce.fileexperienceapi 3.1010.0 vs 3.1008.0; virtocommerce.marketingexperienceapi 3.1006.0 vs 3.1004.0; …
+    note: "UI half changed on theme 2.63.0-pr-2602-c8eb: the configurable PDP now shows purchase options (One-time $200 / Subscribe & Save $190, tiles 1 month / 2 weeks) and the price follows the chosen option (Drop Bar 280/266, Standard 240/228, None 200/190); the one-time configured /cart line offers Subscribe (Purchase options modal) and a subscribed configured line shows 'Subscribed · Every …' + Change. PDP add sends AddItem with configurationSections, then SetCartItemSubscription with the new lineItemId. Variation parent not re-checked."
 ---
 Theme 2.63.0-pr-2602, a PERCENT 5 plan covering a variation parent, one of its variations and a configurable product; Query.subscriptionOffers returns an offer for all three. Variation parent PDP (variations list, 'Variations in cart'): no purchase options. After adding the parent row, its /cart line shows an unticked 'Subscribe & Save Save 5%'; ticking it applies a 'Subscription discount' line promotion ($125 -> $118.75) and the order created a subscription on the parent productId at referencePrice 118.75. Configurable PDP, before and after picking an option: no purchase options. Its /cart line has no Subscribe & Save control. Calling Mutation.setCartItemSubscription on that configured line succeeded; /cart then showed the consent block and a 5% discount on the configured price ($280 -> $266), and the order created an Active subscription on the configurable product with referencePrice 266. The ProductSubscription type exposes no configuration fields, so whether renewals keep the chosen option cannot be read from xAPI.

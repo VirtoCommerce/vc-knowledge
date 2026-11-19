@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T15:12:17.237Z",
-  "count": 2140,
+  "generated": "2026-11-19T15:25:29.145Z",
+  "count": 2142,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2091,7 +2091,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-0AE6A961",
@@ -12969,6 +12970,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-44CA8C9C",
+      "path": "entries/KB-44CA8C9C.md",
+      "subject": "A subscribed configured cart line loses its subscription discount while a one-time line of the same configurable product is in the cart",
+      "question": "Does the subscription price stay on a subscribed configurable cart line when the cart also holds a one-time line of the same configurable product?",
+      "questions": [
+        "Why does a Subscribed configured cart line show the one-time price?",
+        "Subscribe & Save discount missing on /cart for a configurable product with two configurations",
+        "Mixed subscribed and one-time lines of one configurable product: pricing"
+      ],
+      "anchors": [
+        "/cart",
+        "Query.cart",
+        "Mutation.setCartItemSubscription",
+        "Query.cartSubscriptionItems"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-44CE5B75",
       "path": "entries/KB-44CE5B75.md",
       "subject": "Pickup locations are store-scoped: each PickupLocation carries a StoreId, so the active-location count is per store",
@@ -23422,6 +23448,32 @@
       ],
       "scope": [
         "auth=signed-in",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7B4DC6DD",
+      "path": "entries/KB-7B4DC6DD.md",
+      "subject": "On /account/orders/{id}, two configured lines of the same configurable product with different subscriptions both show the first subscription's number and frequency",
+      "question": "How does the order page label each line when one order started two subscriptions on the same configurable product?",
+      "questions": [
+        "Order page shows the wrong subscription number on a configured line",
+        "Two configured subscription lines in one order show the same SUB number",
+        "Is the subscription row on the order line matched by productId?"
+      ],
+      "concepts": [
+        "configurable-product"
+      ],
+      "anchors": [
+        "/account/orders/{id}",
+        "Query.orderSubscriptionInfos"
+      ],
+      "scope": [
+        "store=b2b-store",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
