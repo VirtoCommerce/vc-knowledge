@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T18:29:59.081Z",
-  "count": 2154,
+  "generated": "2026-11-19T18:57:07.028Z",
+  "count": 2155,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -35136,6 +35136,30 @@
         "role=sales-rep",
         "surface=storefront-ui",
         "viewport=desktop-1280-1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B50FF5FA",
+      "path": "entries/KB-B50FF5FA.md",
+      "subject": "The storefront sends GetMenu(name = the CatalogMenuLinkListName setting, e.g. catalog-menu) only when white-labeling mainMenuLinks in GetPageContext are empty; non-empty mainMenuLinks replace that call",
+      "question": "Why does one storefront send a GetMenu catalog-menu request on page load and another does not?",
+      "questions": [
+        "When does the storefront request the catalog menu link list?",
+        "Where does the storefront header catalog menu come from: white labeling or a link list?",
+        "Why is there one fewer GetMenu call on a stand with white-labeling main menu links?"
+      ],
+      "anchors": [
+        "Query.menu",
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "buyer=guest",
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
