@@ -23,5 +23,14 @@ evidence:
     at: 2026-11-19T13:11:36.637Z
     by: session:51ac2fe3
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 694f1bf7279cdd13
+    conditions: platform=3.1099.0; module:VirtoCommerce.SiteBuilder=3.1000.0-pr-1-28d0
+    at: 2026-11-19T13:55:19.123Z
+    by: session:51ac2fe3
+    bodyHash: 83bd235fe6ed
+    who: Lenajava1
+    note: "Anonymous themeSnapshot(storeId, cultureName en-US): B2B-store and Electronics returned a snapshot (no store switch consulted); storeId AGENT-TEST-6571-A-NOSTORE returned themeSnapshot null."
 ---
 Anonymous calls, HTTP 200 each: storeId=Electronics plus the main storefront's domain -> Electronics (storeId wins). domain only (bare host or with https://) -> the store bound to that host. domain=no-such-host.example -> the default store's snapshot, not null. No arguments, or storeId "" -> themeSnapshot null. storeId=NO-SUCH-STORE -> null. storeId in another letter case (b2b-store) resolves to the store. cultureName the store supports (de-DE, fr-FR) -> served with that cultureName; cultureName the store lacks (xx-XX, or de-DE on a single-language store) -> the store default language, and the response field cultureName states the language actually served.

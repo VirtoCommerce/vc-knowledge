@@ -24,5 +24,14 @@ evidence:
     at: 2026-11-19T13:11:36.773Z
     by: session:51ac2fe3
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 694f1bf7279cdd13
+    conditions: platform=3.1099.0; module:VirtoCommerce.SiteBuilder=3.1000.0-pr-1-28d0; store=B2B-store; role=Administrator
+    at: 2026-11-19T13:55:18.855Z
+    by: session:51ac2fe3
+    bodyHash: 8e395acac91a
+    who: Lenajava1
+    note: "Re-observed on B2B-store (a store whose preview loads): javascript: in a slider slide url -> 400 \"holds a javascript: URL\". A data:text/html link was stored (200) only when designer/save was called WITHOUT catalogHash; with catalogHash (what the Vue designer always sends) the same value -> 400 \"links to a data: URL\". The storefront (2.63.0-pr-2676) dropped the stored data: link when rendering."
 ---
 As admin through the Swagger UI, page draft save of a file page (git off) with sections of an invented type text-block: link values JaVaScRiPt:, "  javascript:", java<TAB>script:, &#106;avascript: and vbscript: -> 400 {error: "The content can run script in the storefront: page: 'content[N].link' holds a javascript: URL, which runs script; ..."}, each field listed (twice: once under page:, once under the file path). In the same request data:text/html,..., %6Aavascript: in href, html "<img src=x onerror=alert(1)>" and text "<script>alert(1)</script>" were not listed. Saved alone (data:text/html;base64 link + img onerror + script text) -> 200 {eTag:null, saveId}, and GET /api/site-builder/template draft=true returned all three values verbatim; the unknown section type was accepted too. Save without an eTag was accepted. The anonymous builderPage kept serving the published copy until the draft was discarded.

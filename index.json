@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T13:45:09.552Z",
-  "count": 2107,
+  "generated": "2026-11-19T13:57:49.490Z",
+  "count": 2114,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11229,6 +11229,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-3D1055D2",
+      "path": "entries/KB-3D1055D2.md",
+      "subject": "Site Builder REST surface: POST /api/site-builder/save refuses draft=false for theme files, /api/site-builder/templates and /sections are gone (404), and /api/pagebuilder/search answers exactly like /api/site-builder/search",
+      "question": "Which old Page Builder routes still answer on Site Builder, and can a theme file be saved live through /api/site-builder/save?",
+      "questions": [
+        "Does GET /api/pagebuilder/search still work after Site Builder replaces Page Builder?",
+        "What does POST /api/site-builder/save return for a theme file with draft=false?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/save",
+        "GET /api/pagebuilder/search",
+        "GET /api/site-builder/search",
+        "GET /api/site-builder/templates"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3D26538F",
       "path": "entries/KB-3D26538F.md",
       "subject": "Storefront access token is an RS256 at+jwt valid 1800 s; tampered, alg=none, expired-claim or garbage tokens resolve to Anonymous on /graphql and 401 on platform /api",
@@ -15125,6 +15149,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-4FEABEDD",
+      "path": "entries/KB-4FEABEDD.md",
+      "subject": "Site Builder builder:read and builder:shared-components:read carry StoreSelectedScope; a role scoped to one store gets 403 on every Site Builder read and write of another store, while writes inside the store follow the global builder:theme/templates/publish permissions",
+      "question": "How do Site Builder permissions scope a back-office editor to one store, and which calls return 403?",
+      "questions": [
+        "Can a Site Builder role be limited to a single store?",
+        "What does a store-scoped Site Builder editor get on another store's pages, theme and history?",
+        "Does saving a theme file need builder:theme in Site Builder?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/save",
+        "POST /api/site-builder/save",
+        "POST /api/site-builder-pages/search",
+        "GET /api/platform/security/permissions",
+        "PUT /api/platform/security/roles"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-50256DE1",
       "path": "entries/KB-50256DE1.md",
       "subject": "On vcptcore-regression the storefront sends no Content-Security-Policy, so /designer-preview can be framed by any origin, and the admin designer preview is refused by COEP",
@@ -15160,6 +15210,30 @@
       "scope": [
         "feature=sales-rep-hub",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-50846709",
+      "path": "entries/KB-50846709.md",
+      "subject": "With SiteBuilder.Store.GitContentEnabled=true but no GitHub App connection, Site Builder page saves still return 200 and write to blob storage; git/site reports enabled:false and history setupRequired, and a disallowed GitContentRepository is not refused",
+      "question": "What happens to Site Builder saves when GitContentEnabled is on for a store but the platform has no GitHub App?",
+      "questions": [
+        "Does Site Builder refuse a GitContentRepository that is not in AllowedRepositories when no GitHub App is configured?",
+        "Is a page save with git content enabled but unconfigured an error or a blob save?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/save",
+        "POST /api/site-builder/save",
+        "GET /api/site-builder/git/site",
+        "GET /api/site-builder/history/status"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -26150,7 +26224,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -26440,6 +26514,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-8C872A8F",
+      "path": "entries/KB-8C872A8F.md",
+      "subject": "Site Builder designer/save refuses a data: link only when a catalogHash is sent; the Vue designer saves markdown as {markdown, html} with the html sanitized, while the API accepts a plain-string markdown with script verbatim",
+      "question": "When does POST /api/site-builder/designer/save refuse data: links and strip script from rich text?",
+      "questions": [
+        "Is the data: URL check in Site Builder schema-dependent?",
+        "Does the Site Builder designer strip script tags from markdown text on save?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/save",
+        "GET /api/site-builder/catalog"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-8CC2B45E",
@@ -26805,6 +26901,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8E5B1311",
+      "path": "entries/KB-8E5B1311.md",
+      "subject": "Anonymous Query.builderPage with a Site Builder database page id returns that page's draft content and permalink even when the page was never published or was unpublished",
+      "question": "What does Query.builderPage return for a database (grouped) Site Builder page that is not published?",
+      "questions": [
+        "Can an anonymous visitor read an unpublished Site Builder page through builderPage?",
+        "Does builderPage hide drafts of database pages like it does for file pages?"
+      ],
+      "anchors": [
+        "Query.builderPage",
+        "GET /api/site-builder-pages/grouped/publish-status/{id}"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -34150,6 +34268,30 @@
       "contested": 1
     },
     {
+      "id": "KB-B45B0A24",
+      "path": "entries/KB-B45B0A24.md",
+      "subject": "Every Site Builder entry point (Content page list Design, store Site Builder widget, Admin Shell Sites) opens the Vue site-builder-shell designer; the preview loads from the store URL, and 'Preview as' appears only when SiteBuilder.Store.PreviewUserIds lists users",
+      "question": "Which designer do the Site Builder entry points open, where does the preview come from, and how is 'Preview as' populated?",
+      "questions": [
+        "Is there still an Angular designer or a New Site Builder store switch?",
+        "What does the Site Builder designer show for a store without a storefront URL?",
+        "Which users does the designer's Preview as menu offer?"
+      ],
+      "anchors": [
+        "GET /api/site-builder/designer/storefront",
+        "/apps/site-builder-shell",
+        "/apps/admin-shell#/content/site-builder-designer/{groupId}"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B48AA284",
       "path": "entries/KB-B48AA284.md",
       "subject": "Page Builder Designer asset picker keeps the search keyword when the user changes folder, so an entered folder can look empty",
@@ -37231,6 +37373,29 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-C5B6CE87",
+      "path": "entries/KB-C5B6CE87.md",
+      "subject": "Site Builder page lifecycle on a store without GitHub: history/status answers setupRequired (no error), multilanguage publish-all reports per-language skips with reason NoDraft, and a multilanguage page can be deleted only after its language versions are gone",
+      "question": "How do Site Builder history, publish-all and multilanguage delete behave on a store with no GitHub repository?",
+      "questions": [
+        "What does GET /api/site-builder/history return on a store without git content?",
+        "What does publish-all return when no language has a draft?"
+      ],
+      "anchors": [
+        "GET /api/site-builder/history/status",
+        "POST /api/site-builder-multilanguage-pages/{id}/publish-all",
+        "DELETE /api/site-builder-multilanguage-pages/{id}"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-C5E27085",
