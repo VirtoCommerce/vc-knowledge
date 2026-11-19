@@ -1,1 +1,2 @@
-{"at":"2026-11-18T16:39:05.325Z","kind":"session","session":"9e940bf0","tools":113,"turns":8,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-11-18T15:34:18.716Z","lastAt":"2026-11-18T15:58:40.781Z","who":"Lenajava1"}
+{"at":"2026-11-19T00:00:21.138Z","kind":"session","session":"9e940bf0","tools":120,"turns":2,"touchAt":[],"agents":0,"agentTools":0,"agentTouches":0,"firstAt":"2026-11-18T15:34:18.716Z","lastAt":"2026-11-18T17:35:47.911Z","who":"Lenajava1"}
+{"at":"2026-11-18T17:28:47.776Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
