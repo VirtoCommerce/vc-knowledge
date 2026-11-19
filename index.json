@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T14:26:21.296Z",
-  "count": 2126,
+  "generated": "2026-11-19T14:32:14.190Z",
+  "count": 2130,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -497,6 +497,23 @@
       "scope": [
         "module=mcp",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-02E83646",
+      "path": "entries/KB-02E83646.md",
+      "subject": "Site Builder Vue designer shows a green \"Published\" status label for a template that is not saved yet",
+      "question": "What status does the Site Builder designer show for a template that has not been saved yet?",
+      "anchors": [
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -17963,6 +17980,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-5C8AC002",
+      "path": "entries/KB-5C8AC002.md",
+      "subject": "Opening Content > Pages > Design page > Create logs \"[$rootScope:inprog] $digest already in progress\" from the Site Builder admin app",
+      "question": "Does the Site Builder admin page blade log a console error when creating a designer page?",
+      "anchors": [
+        "GET /api/site-builder/designer/storefront"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5CDD664E",
       "path": "entries/KB-5CDD664E.md",
       "subject": "A plain-HTML product-list whose cards carry only data-product-name/price (no id/sku) re-pushes view_item_list on every unrelated DOM change",
@@ -24329,6 +24363,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8138206A",
+      "path": "entries/KB-8138206A.md",
+      "subject": "An open Site Builder designer keeps showing \"Publish theme (n)\" after the theme was published from another session",
+      "question": "Does the designer's Publish theme draft count refresh when another session publishes the theme?",
+      "anchors": [
+        "/apps/site-builder-shell",
+        "GET /api/site-builder/theme/status"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -42002,6 +42054,24 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DD7733EE",
+      "path": "entries/KB-DD7733EE.md",
+      "subject": "Site Builder designer's \"The page couldn't be saved\" toast stays about 5 minutes and survives navigation and a later successful save",
+      "question": "How long does the Site Builder designer save-error toast stay visible?",
+      "anchors": [
+        "/apps/site-builder-shell",
+        "POST /api/site-builder/designer/save"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
