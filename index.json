@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T18:09:33.432Z",
-  "count": 2147,
+  "generated": "2026-11-19T18:15:46.058Z",
+  "count": 2151,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3630,6 +3630,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-12272DCA",
+      "path": "entries/KB-12272DCA.md",
+      "subject": "Flag-on storefront: when both the inline ThemeSnapshot and its refetch fail, the page renders on built-in templates and no later in-site navigation fetches the snapshot again",
+      "question": "What happens when the ThemeSnapshot request and its refetch both fail on a cold load?",
+      "questions": [
+        "Does the storefront retry ThemeSnapshot on navigation after a failed boot?",
+        "Is a page blank when ThemeSnapshot is unreachable?"
+      ],
+      "anchors": [
+        "Query.themeSnapshot",
+        "/demo-landing"
+      ],
+      "scope": [
+        "buyer=guest",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -7767,6 +7790,29 @@
       ],
       "scope": [
         "feature=b2b-organization-context",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2A6B0DD7",
+      "path": "entries/KB-2A6B0DD7.md",
+      "subject": "On the flag-on storefront PDP, GetProductRecommendations is requested only when the 'Customers bought together' section scrolls into view",
+      "question": "Are the PDP recommendation sections below the fold lazy-loaded?",
+      "questions": [
+        "When does the PDP send GetProductRecommendations?",
+        "Does the product page lazy-load sections below the fold?"
+      ],
+      "anchors": [
+        "Query.productRecommendations",
+        "/consumer-electronics/televisions/lg/lg-eg9600-series-55-class-4k-smart-curved-ole"
+      ],
+      "scope": [
+        "page=pdp",
+        "store=b2b-store",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -19482,6 +19528,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-64F16249",
+      "path": "entries/KB-64F16249.md",
+      "subject": "Flag-on storefront: a pinned language (pinnedLocale) makes the inline ThemeSnapshot request carry that culture on an unprefixed URL, with one request and a redirect to the /de/ prefix",
+      "question": "Does the inline ThemeSnapshot request use the language the buyer picked in the language selector when an unprefixed URL is reloaded?",
+      "questions": [
+        "pinnedLocale and ThemeSnapshot cultureName on reload",
+        "Does a pinned language cause a second ThemeSnapshot request?"
+      ],
+      "anchors": [
+        "Query.themeSnapshot",
+        "/demo-landing"
+      ],
+      "scope": [
+        "buyer=guest",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-650B8BFB",
       "path": "entries/KB-650B8BFB.md",
       "subject": "Deleting or cancelling an order never releases a coupon use; deleting the promotion removes its usages",
@@ -22764,7 +22833,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -33311,6 +33380,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-AD0DC477",
+      "path": "entries/KB-AD0DC477.md",
+      "subject": "Flag-on storefront: a signed-in contact whose default language differs from the store's gets one ThemeSnapshot refetch in that language on an unprefixed URL, and the first render already shows that language",
+      "question": "What does the flag-on storefront do on an unprefixed URL when the signed-in contact's default language is not the store default?",
+      "questions": [
+        "Contact defaultLanguage and ThemeSnapshot refetch",
+        "How long after the snapshot does a contact in another language see the first render?"
+      ],
+      "anchors": [
+        "Query.themeSnapshot",
+        "/account/profile"
+      ],
+      "scope": [
+        "buyer=signed-in-contact",
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-AD122033",
       "path": "entries/KB-AD122033.md",
       "subject": "Asset upload POST /api/assets?folderUrl= bypasses the folder-name validator: uppercase and {{ }} folder/file names are accepted and missing folders are created implicitly",
@@ -34159,7 +34251,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-B0E6284D",
@@ -42870,7 +42963,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
