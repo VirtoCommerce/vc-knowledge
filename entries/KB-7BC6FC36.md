@@ -81,5 +81,14 @@ evidence:
     bodyHash: 7d17b2f3b058
     who: kutasinaelena
     note: "Theme 2.63.0-pr-2602, EUR account (no currency switch, account default EUR), 390 px: PEPSI 201482 (USD-only) PDP 'Preis: 0,00 €', stepper 0 disabled, in-stock badge 3529, no unavailability message; GetProduct EUR isBuyable=false. Additionally the new Subscribe & Save block renders with 'N/A' (KB-4745333B)."
+  - method: observation
+    deployment: vcst_qa
+    build: b8b4b94cd1e4180f
+    conditions: theme=2.63.0-pr-2630-a18a-a18a3bb2; store=B2B-store; role=personal account
+    at: 2026-11-19T19:15:34.791Z
+    by: session:51ac2fe3
+    bodyHash: 7d17b2f3b058
+    who: Lenajava1
+    note: "REG-2026-11-19-1857 chrome, flag-off storefront build 2630: USD->GBP on USD-only (GBP/CZK missing) Canon PDP shows Price GBP 0.00, disabled stepper, In stock 9042, no unavailability message; related 'Customers bought together' cards GBP 0.00. CAT-054 fails."
 ---
 Signed-in buyer, store with USD+EUR. Product priced only in USD (xAPI EUR price.actual 0, isBuyable false). Header currency -> EUR: product page 'Price and delivery' reads 'Price: €0.00', quantity stepper and input disabled, in-stock badge still shown, no message that the product is unavailable in this currency. The cart (converted to EUR) shows that line at €0.00; catalog cards show '€0.00'. A product with an EUR price shows its EUR price-list value, not a conversion.
