@@ -27,5 +27,13 @@ evidence:
     at: 2026-11-19T13:55:42.279Z
     by: session:51ac2fe3
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 694f1bf7279cdd13
+    at: 2026-11-19T14:20:51.396Z
+    by: session:51ac2fe3
+    bodyHash: 3443f1c3cd7c
+    who: Lenajava1
+    note: "Manager user with builder:access, builder:read (scope B2B-store), builder:update, builder:templates, builder:theme and no builder:publish: POST theme/publish?storeId=B2B-store (with and without catalogHash) -> 403 with valid drafts pending, publication unchanged; theme/status B2B-store 200, Electronics 403. A role first created by PUT roles without permission moduleId/role id came back with builder:read assignedScopes [] although storeId was sent; a second PUT with id + moduleId kept the scope."
 ---
 GET /api/platform/security/permissions: builder:read and builder:shared-components:read list availableScopes [StoreSelectedScope]; builder:access/update/templates/theme/publish/create/delete and shared-components create/update/delete have none. A role saved with assignedScopes needs {type:"StoreSelectedScope", storeId, scope, label}; without storeId the scope is silently dropped. Two Manager users without an account store, roles builder:access + builder:read(scope B2B-store) + builder:update (+/- builder:templates): on B2B-store pages/search, grouped/{id}, content, theme/status, designer/theme-file, history/status, history?item=page:, search -> 200; designer/save page draft -> 200; POST /api/site-builder/save draft=true for a config/ theme file -> 403 (no builder:theme); for a templates/ file -> 403 without builder:templates, 400 validation with it; save draft=false for a page and grouped/publishing -> 403 (no builder:publish); shared-components/search -> 403 (no shared-components:read). On Electronics every one of those reads and writes -> 403.

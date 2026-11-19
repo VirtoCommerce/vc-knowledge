@@ -32,5 +32,13 @@ evidence:
     bodyHash: 83bd235fe6ed
     who: Lenajava1
     note: "Anonymous themeSnapshot(storeId, cultureName en-US): B2B-store and Electronics returned a snapshot (no store switch consulted); storeId AGENT-TEST-6571-A-NOSTORE returned themeSnapshot null."
+  - method: observation
+    deployment: vcst_qa
+    build: 694f1bf7279cdd13
+    at: 2026-11-19T14:20:50.866Z
+    by: session:51ac2fe3
+    bodyHash: 83bd235fe6ed
+    who: Lenajava1
+    note: "B2B-store (15 languages, default en-US): cultureName xx-XX -> cultureName en-US; de-DE -> de-DE; domain of the storefront host with zz-ZZ -> B2B-store, en-US; no cultureName -> en-US."
 ---
 Anonymous calls, HTTP 200 each: storeId=Electronics plus the main storefront's domain -> Electronics (storeId wins). domain only (bare host or with https://) -> the store bound to that host. domain=no-such-host.example -> the default store's snapshot, not null. No arguments, or storeId "" -> themeSnapshot null. storeId=NO-SUCH-STORE -> null. storeId in another letter case (b2b-store) resolves to the store. cultureName the store supports (de-DE, fr-FR) -> served with that cultureName; cultureName the store lacks (xx-XX, or de-DE on a single-language store) -> the store default language, and the response field cultureName states the language actually served.

@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T14:01:17.976Z",
-  "count": 2123,
+  "generated": "2026-11-19T14:26:21.296Z",
+  "count": 2126,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22002,6 +22002,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-749030D5",
+      "path": "entries/KB-749030D5.md",
+      "subject": "Site Builder validates theme drafts all-or-nothing: designer/save refuses a whole batch with an invalid CSS colour or a colour token the storefront lacks, and theme/publish with one invalid draft answers 400 naming the file, section and value and publishes none of the valid drafts",
+      "question": "What happens when one Site Builder theme draft is invalid: are the valid drafts saved or published?",
+      "questions": [
+        "Does POST designer/save accept an invalid palette colour?",
+        "Does POST theme/publish publish the valid drafts when one draft has a bad colour token?",
+        "What error names the invalid theme file on publish?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/save",
+        "POST /api/site-builder/theme/publish"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-designer",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-74A01579",
       "path": "entries/KB-74A01579.md",
       "subject": "updateContact(id) and lockOrganizationContact(memberId) given the caller's own identity-user id fail with a field error (NULL_REFERENCE / INVALID_OPERATION), while a random GUID or an Organization id is refused Forbidden",
@@ -23624,6 +23648,32 @@
       "scope": [
         "feature=orders-date-filter",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7D908FAE",
+      "path": "entries/KB-7D908FAE.md",
+      "subject": "Publishing a Site Builder page does not publish the store's pending header/footer theme drafts; they go live only with Publish theme, which themeSnapshot reflects on the very next query",
+      "question": "Does publishing a Site Builder page also publish pending header and footer theme drafts?",
+      "questions": [
+        "Does POST grouped/publishing change the themeSnapshot publication number?",
+        "When does a header or footer edit made in the Site Builder designer reach the storefront?",
+        "Is the themeSnapshot cache reset right after POST theme/publish?"
+      ],
+      "anchors": [
+        "POST /api/site-builder-pages/grouped/publishing/{id}",
+        "POST /api/site-builder/theme/publish",
+        "GET /api/site-builder/theme/status",
+        "Query.themeSnapshot"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=graphql",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -33294,6 +33344,28 @@
         "concern=localization",
         "layer=plugin-delivery",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AEDC697F",
+      "path": "entries/KB-AEDC697F.md",
+      "subject": "POST /api/site-builder/save with draft=true writes a theme section draft without the schema-catalog check designer/save enforces: no catalogHash needed and a colour token the storefront lacks is stored",
+      "question": "Does POST /api/site-builder/save draft=true validate theme files like POST designer/save does?",
+      "questions": [
+        "Can a theme draft be saved without catalogHash through the legacy save route?",
+        "Which Site Builder save route skips theme validation?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/save",
+        "POST /api/site-builder/designer/save"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
