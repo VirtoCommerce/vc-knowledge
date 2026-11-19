@@ -33,5 +33,14 @@ evidence:
     bodyHash: 4fc839b5bb5c
     who: kutasinaelena
     note: "Admin REST POST /api/product-subscription/subscriptions/{id}/order-now seconds after the checkout order: 400 'This subscription was just ordered…'; the same call ~130 s after the checkout order created one manual renewal (Authorized with card 4242, RetryScheduled with soft-decline 9995)."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 64572158414c7e91
+    conditions: module:VirtoCommerce.ProductSubscription=3.1000.0-pr-1-a88d; theme=2.63.0-pr-2602-8ac5; store=B2B-store
+    at: 2026-11-19T09:32:29.371Z
+    by: session:d9b8e380
+    bodyHash: 4fc839b5bb5c
+    who: kutasinaelena
+    note: "Storefront Order now ~2 min after the checkout order: errors[] 'This subscription was just ordered…' (page shows the generic 'Something went wrong. Please try again.'); on an older subscription a fast double-click OK gave exactly one manual renewal (Authorized) and one order."
 ---
 Customer token, pickup subscription paid with mock 4242. Within 2 minutes of the subscription's last order (including the checkout order) every orderProductSubscriptionNow returns errors[] in HTTP 200: SUBSCRIPTION_ERROR 'This subscription was just ordered. Check your orders before ordering again.' After that window, two parallel calls: first returns a manual renewal in state Authorized with one order, the second gets the same SUBSCRIPTION_ERROR; renewals search shows 1 renewal, 1 new order, 1 authorized payment. With nextOrderDate set within the reminder window and order-now fired together with POST scheduler/run: the scheduler created the renewal (Scheduled -> Notified, reminder sent), order-now marked the same renewal manual ('Order now requested') and placed one order with one authorized payment; no second renewal. nextOrderDate restarts from the order-now date + interval.
