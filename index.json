@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T14:50:36.965Z",
-  "count": 2133,
+  "generated": "2026-11-19T14:56:35.208Z",
+  "count": 2137,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -928,6 +928,30 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-054E5214",
+      "path": "entries/KB-054E5214.md",
+      "subject": "Site Builder page content-json save and shared component saves refuse javascript: links but store data:text/html links, script and img onerror in plain-string values: they never run the schema-catalog checks",
+      "question": "Do POST /api/site-builder-pages/grouped/{groupId}/content-json and the shared component saves refuse data: links and script HTML?",
+      "questions": [
+        "Can a data: URL be saved into a Site Builder shared component?",
+        "Is grouped page content-json validated against the storefront schema catalog?",
+        "Which Site Builder content saves sanitize HTML only for {markdown, html} values?"
+      ],
+      "anchors": [
+        "POST /api/site-builder-pages/grouped/{id}/content-json",
+        "POST /api/site-builder-shared-components",
+        "POST /api/site-builder-shared-components/{id}/content"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -5687,7 +5711,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-1DC162B9",
@@ -9561,6 +9585,29 @@
       ],
       "scope": [
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-333FC705",
+      "path": "entries/KB-333FC705.md",
+      "subject": "The Site Builder designer's Add section shows \"No sections match\" until the storefront preview has sent its loaded message; afterwards a database page (plain or multilanguage version) lists every section without target templates",
+      "question": "Why does Add section in the Site Builder designer show \"No sections match\" on an empty search?",
+      "questions": [
+        "Can sections be added to a multilanguage page version in the Site Builder designer?",
+        "Where does the Site Builder designer get its section list from?",
+        "Does the designer section list depend on the page language?"
+      ],
+      "anchors": [
+        "/apps/site-builder-shell",
+        "GET /api/site-builder/catalog"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-designer"
       ],
       "plane": "experiential",
       "status": "active",
@@ -19543,6 +19590,29 @@
         "KB-A272971F",
         "KB-B4490B0B"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6619E4FA",
+      "path": "entries/KB-6619E4FA.md",
+      "subject": "POST /api/site-builder/discard-draft with type=themes throws a theme file's draft away: 204, the file reads back as the published one (same content and eTag), theme/status drafts drop it, and no new publication is written",
+      "question": "How is a bad Site Builder theme draft removed without publishing the theme?",
+      "questions": [
+        "Does discarding a theme draft create a new theme publication?",
+        "How to unblock theme/publish when an invalid theme draft is pending?",
+        "What does POST discard-draft return for a theme file draft?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/discard-draft",
+        "GET /api/site-builder/theme/status"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -29677,6 +29747,30 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9BD474C4",
+      "path": "entries/KB-9BD474C4.md",
+      "subject": "Even WITH catalogHash, Site Builder designer/save stores a plain-string markdown value holding script and img onerror, and a section of a type the catalog does not have, verbatim; only the data: link is refused",
+      "question": "Does POST /api/site-builder/designer/save with a catalogHash sanitize plain-string rich text and refuse unregistered section types?",
+      "questions": [
+        "Does the schema catalog check in designer/save reject an unknown section type in page content?",
+        "Is a markdown setting saved as a plain string sanitized by designer/save?",
+        "What does the storefront render for script stored in a Site Builder page?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/save",
+        "Query.builderPage",
+        "/designer-preview"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
