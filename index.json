@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T14:45:07.398Z",
-  "count": 2132,
+  "generated": "2026-11-19T14:50:36.965Z",
+  "count": 2133,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11904,6 +11904,32 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3F6E344F",
+      "path": "entries/KB-3F6E344F.md",
+      "subject": "The storefront's built-in default product template reaches the Site Builder designer by name only: the schema catalog's templates.product.default is the boolean true, so on a store with no templates/product.json the designer shows and copies a product-info section with no blocks",
+      "question": "Where does the Site Builder designer get the content of the default product template when the theme has no templates/product.json?",
+      "questions": [
+        "Does GET /api/site-builder/catalog carry the storefront's built-in product template document?",
+        "Why does the Site Builder designer show the Default product template with only a Product section and no blocks?",
+        "What does protocol 2 builtInTemplates hold?",
+        "Why is a Site Builder 'copy of default' product template empty?"
+      ],
+      "anchors": [
+        "GET /api/site-builder/catalog",
+        "GET /api/site-builder/template",
+        "POST /api/site-builder/designer/save",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
