@@ -36,5 +36,14 @@ evidence:
     bodyHash: 3d312511cbb4
     who: kutasinaelena
     note: "Re-seen 2026-11-18 as guest and signed-in buyer: PDP no purchase options, cart line no Subscribe (Save for later only), no terms block, no Subscriptions menu entry, /account/subscriptions 404, HAR with no subscription GraphQL ops, no errors[] and no 4xx/5xx. After setting it back to true, a new session showed the PDP radios within ~2 min and GetSubscriptionOffers/GetCartSubscriptionItems were sent again."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 6c2522652e022adc
+    conditions: store=B2B-store; setting:ProductSubscription.Enabled=false (store, explicit)
+    at: 2026-11-19T11:17:22.940Z
+    by: session:d9b8e380
+    bodyHash: 3d312511cbb4
+    who: kutasinaelena
+    note: "Re-seen 2026-11-19: buyer and guest PDP without purchase options, cart line without Subscribe, no order badges, no Subscriptions sidebar entry, /account/subscriptions and /how-subscriptions-work 404 for both; one-time order with Cash placed; HAR of the window had no subscription GraphQL op, no errors[], no 4xx/5xx on /graphql. Restored to true: PDP radios back within ~2.5 min in a new session."
 ---
 B2B-store, theme 2.63.0-pr-2602-399d, signed-in buyer, new browser session each time. Store setting ProductSubscription.Enabled (store value null = inherits default true) set to false through GET /api/stores/{id} + full-body PUT /api/stores (204, read back false). ~30 s later: PDP of a product with an active PERCENT plan showed only Price $35.00 and the quantity stepper, no One-time / Subscribe & Save radios; /cart line had no Subscribe & Save checkbox or frequency and no 'Your subscription' terms block; with address, delivery and a non-card payment (Cash) Place order was enabled, and the payment list was the full store list (Apple Pay, Stripe, Cash, Points, Credit card (test), Barion) instead of card-only; the account sidebar had no 'Subscriptions' entry and /account/subscriptions rendered the 404 page. 'Payment methods' (/account/payment-methods, saved cards) stayed in the menu and worked. HAR of the whole walk: no 4xx/5xx from the storefront or platform, no GraphQL errors[], and none of GetSubscriptionOffers / GetCartSubscriptionItems / GetSubscriptionTerms was sent. Setting it back to true the same way: a new session ~30 s later showed the PDP radios, the Subscriptions menu entry and the list again. No Admin store save or restart needed in either direction.
