@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T20:11:08.691Z",
-  "count": 2156,
+  "generated": "2026-11-19T20:16:17.337Z",
+  "count": 2166,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3159,6 +3159,29 @@
       "contested": 2
     },
     {
+      "id": "KB-0F25C49D",
+      "path": "entries/KB-0F25C49D.md",
+      "subject": "Site Builder page Scheduling accepts an End date before the Start date: no validation in the shell and PUT /api/site-builder-pages/grouped answers 200 and stores it",
+      "question": "Is a reversed schedule (End date before Start date) refused for a Site Builder page?",
+      "questions": [
+        "Does the Site Builder shell validate that End date is after Start date?",
+        "Can PUT /api/site-builder-pages/grouped save endDate earlier than startDate?",
+        "How does the Site Builder Scheduling date picker apply a picked day?"
+      ],
+      "anchors": [
+        "PUT /api/site-builder-pages/grouped",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-0FC6E226",
       "path": "entries/KB-0FC6E226.md",
       "subject": "Store Payment/Shipping methods grid \"Is active\" column is display-only; activation is the Is active switch in the method detail blade",
@@ -4542,6 +4565,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-16DDB3C3",
+      "path": "entries/KB-16DDB3C3.md",
+      "subject": "With SiteBuilder.General.StoreUrl set, every store's Site Builder designer previews that one storefront and uploads its schema catalog for the store being designed",
+      "question": "Which storefront does the Site Builder designer preview for a store whose own URL does not load?",
+      "questions": [
+        "What does GET /api/site-builder/designer/storefront return when the module StoreUrl setting is set?",
+        "Does opening the designer write a schema catalog for the store?"
+      ],
+      "anchors": [
+        "GET /api/site-builder/designer/storefront",
+        "PUT /api/site-builder/catalog",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-16F80EE0",
       "path": "entries/KB-16F80EE0.md",
       "subject": "A Customer of a store other than the storefront's store, holding its own password token (storeId = its store), is issued passkeyCreationOptions with rp.id = the storefront host, and createPasskey reaches the resolver",
@@ -5535,6 +5581,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-1C1010B1",
+      "path": "entries/KB-1C1010B1.md",
+      "subject": "Site Builder page Visibility off hides a published page from anonymous visitors only; an Organization restriction serves it only to buyers of that organization",
+      "question": "Who can see a published Site Builder page whose Visibility is off, or whose Organization is set?",
+      "questions": [
+        "Does a Site Builder page with visibility false show to a signed-in buyer?",
+        "What does a buyer of another organization see at an organization-restricted Site Builder page?",
+        "Does changing Visibility or Organization on a published Site Builder page need a re-publish?"
+      ],
+      "anchors": [
+        "PUT /api/site-builder-pages/grouped",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1C1755AC",
       "path": "entries/KB-1C1755AC.md",
       "subject": "In MFA 3.1002.0 a Disabled store skips the code only for its own customers who are not Backoffice accounts, and a Backoffice account includes any user whose roles hold at least one permission under the default admin-UI access policy",
@@ -6405,7 +6474,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-208556C1",
@@ -8262,6 +8332,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2C71829C",
+      "path": "entries/KB-2C71829C.md",
+      "subject": "Site Builder shell Load content: a legacy top-level-array file saves an empty page, and invalid JSON surfaces the raw JSON.parse error with a stack trace through the global error handler",
+      "question": "How does the Site Builder shell Load content handle an empty, malformed, plain-text or legacy top-level-array JSON file?",
+      "questions": [
+        "Does Site Builder Load content convert a legacy array export?",
+        "What error does Load content show for an empty JSON file in /apps/site-builder-shell?",
+        "Is the imported content posted when saving a page created by Load content?"
+      ],
+      "anchors": [
+        "/apps/site-builder-shell",
+        "POST /api/site-builder-pages/grouped",
+        "POST /api/site-builder-pages/create-group-page"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -11532,6 +11626,32 @@
         "flow=authentication",
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3D2CF53D",
+      "path": "entries/KB-3D2CF53D.md",
+      "subject": "GET /api/site-builder-pages/languages returns a bare array of the store's culture codes in store order, with no default-language marker",
+      "question": "What does GET /api/site-builder-pages/languages?storeId= return, and does it mark the store's default language?",
+      "questions": [
+        "What does GET /api/site-builder-pages/user-groups return?",
+        "Do the Site Builder settings endpoints require authorization?",
+        "How does the Site Builder content copy endpoint answer for a missing source or a user without builder:update?",
+        "Does a Site Builder content POST without If-Match get 428?"
+      ],
+      "anchors": [
+        "GET /api/site-builder-pages/languages",
+        "GET /api/site-builder-pages/user-groups",
+        "POST /api/site-builder-pages/grouped/{id}/content/{id}",
+        "POST /api/site-builder-pages/grouped/{id}/content"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -15596,7 +15716,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -19793,7 +19913,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -22406,7 +22526,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -33955,7 +34075,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -37478,6 +37598,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-C210BF19",
+      "path": "entries/KB-C210BF19.md",
+      "subject": "A Site Builder page created through POST /api/site-builder-pages/grouped gets visibility false; published that way it is not on the storefront (slugInfo null, 404) until visibility is set true",
+      "question": "Why does a published Site Builder database page answer 404 on the storefront?",
+      "questions": [
+        "What visibility does a page created over REST get by default?",
+        "Does Query.slugInfo resolve a published page whose visibility is false?"
+      ],
+      "anchors": [
+        "POST /api/site-builder-pages/grouped",
+        "PUT /api/site-builder-pages/grouped",
+        "Query.slugInfo"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-C2202F86",
       "path": "entries/KB-C2202F86.md",
       "subject": "A browser that cached the Sales Rep plugin's unhashed remoteEntry.js keeps the old build for up to 4 h from its OWN HTTP cache; clearing the browser cache restores the hub at once",
@@ -38235,7 +38379,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -42679,7 +42823,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -45653,6 +45797,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-EC50B8C0",
+      "path": "entries/KB-EC50B8C0.md",
+      "subject": "Site Builder shell page blade shows one success toast for Save, Publish, Unpublish, Archive, Clone, Save content and Load content",
+      "question": "Which success toasts does the Site Builder shell page details blade show after Save, Publish, Unpublish, Archive, Clone, Save content and Load content?",
+      "questions": [
+        "Does Site Builder show 'Page published successfully' after Publish?",
+        "Is there a toast after archiving a page in the Site Builder shell?",
+        "What notification appears after Unpublish in /apps/site-builder-shell?",
+        "What is the Save content download file name in the Site Builder shell?"
+      ],
+      "anchors": [
+        "/apps/site-builder-shell",
+        "POST /api/site-builder-pages/grouped/publishing/{id}",
+        "POST /api/site-builder-pages/grouped/archive",
+        "GET /api/site-builder-pages/grouped/{id}/content"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EC76B5AB",
       "path": "entries/KB-EC76B5AB.md",
       "subject": "POST grouped/{id}/content-json accepts an invalid settings.permalink (204) into a new Draft; after publish the content's settings.permalink diverges from the group permalink, and routing keeps using the group permalink",
@@ -47807,6 +47977,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-F4F288E5",
+      "path": "entries/KB-F4F288E5.md",
+      "subject": "With a GitHub App configured but its organization unreachable, Site Builder History shows an error, and a store switched to GitContentEnabled=true reports history 'enabled' while page saves still return a plain 200",
+      "question": "What do Site Builder history status and the History blade show when a GitHub App is configured but the platform cannot reach its organization?",
+      "questions": [
+        "What does GET /api/site-builder/history/status return for a store with GitContentEnabled=true and an unreachable GitHub organization?",
+        "Why does Admin Shell Sites History show an Error instead of Not connected?"
+      ],
+      "anchors": [
+        "GET /api/site-builder/history/status",
+        "GET /api/site-builder/git/site",
+        "GET /api/site-builder/git/connection",
+        "/apps/admin-shell#/content/site-builder-git/{storeId}"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F4FD0938",
       "path": "entries/KB-F4FD0938.md",
       "subject": "The unnamed option radios of configurable PDP Product sections come from option-product.vue passing no label to VcRadioButton, in Next dev and upstream alike, not from the 2.60.0 merge",
@@ -48669,6 +48864,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-F9937AFE",
+      "path": "entries/KB-F9937AFE.md",
+      "subject": "A NEW Site Builder theme draft (no published copy) cannot be thrown away through Site Builder routes: discard-draft answers 409 and designer/discard answers 200 but leaves the draft",
+      "question": "How is a Site Builder theme draft removed when the theme file has never been published?",
+      "questions": [
+        "Why does POST /api/site-builder/discard-draft answer 409 'Nothing is published: the draft is the only copy.'?",
+        "Does POST /api/site-builder/designer/discard remove a theme file draft?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/discard-draft",
+        "POST /api/site-builder/designer/discard",
+        "DELETE /api/content/themes/{id}"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-F9C6F549",
       "path": "entries/KB-F9C6F549.md",
       "subject": "salesRepDocuments keyword matches the document displayName, not the file name",
@@ -49205,6 +49423,29 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FE729FD7",
+      "path": "entries/KB-FE729FD7.md",
+      "subject": "The Site Builder shell Draft list also lists Published pages that carry a pending draft, badged 'Published' + 'Has draft with changes'",
+      "question": "Which pages does the Site Builder shell Draft list (lifecycle drafts) contain, and what badges do they show?",
+      "questions": [
+        "Why does the Site Builder Draft list show a Published badge?",
+        "Does POST /api/site-builder-pages/list lifecycle drafts include published pages with unpublished edits?",
+        "Do the Site Builder sidebar counters equal the list rows?"
+      ],
+      "anchors": [
+        "POST /api/site-builder-pages/list",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
