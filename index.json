@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generated": "2026-11-18T16:04:07.107Z",
+  "generated": "2026-11-19T06:43:36.009Z",
   "count": 2092,
   "entries": [
     {
@@ -35782,7 +35782,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -45922,7 +45922,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-F30520A6",
