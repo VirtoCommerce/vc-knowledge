@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T13:11:36.611Z",
-  "count": 2097,
+  "generated": "2026-11-19T13:14:52.629Z",
+  "count": 2102,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6204,6 +6204,29 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-207E81C9",
+      "path": "entries/KB-207E81C9.md",
+      "subject": "Query.builderPage on a file page serves the published content (permalink null), never an unpublished draft; an unknown id gives null fields and a non-base64 id a FORMAT error",
+      "question": "What does Query.builderPage return for a published, a draft-only, an unknown and a malformed page id?",
+      "questions": [
+        "Can an anonymous caller read an unpublished Site Builder page draft through builderPage?",
+        "What id does builderPage expect for a file page?"
+      ],
+      "anchors": [
+        "Query.builderPage",
+        "Query.pages",
+        "Query.pageContext"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-208556C1",
@@ -18554,6 +18577,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-620E2625",
+      "path": "entries/KB-620E2625.md",
+      "subject": "Site Builder theme save and publish need the storefront preview: the Vue designer refuses theme saves until the preview loads, and POST theme/publish without a catalogHash answers 400",
+      "question": "Can a theme be saved or published in Site Builder when the store's storefront URL does not load in the designer preview?",
+      "questions": [
+        "Why does Site Builder say theme changes are saved once the storefront preview has loaded?",
+        "What does POST /api/site-builder/theme/publish return without catalogHash?",
+        "Why is the Add section list empty in the Site Builder designer?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/theme/publish",
+        "POST /api/site-builder/designer/save",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-621637B5",
       "path": "entries/KB-621637B5.md",
       "subject": "With MFA module 3.1002.0 the storefront xAPI serves Query.mfaSettings (+ requestMfaChangeCode, updateMfaUserMode, updateMfaOrganizationMode); on a store whose StoreMode is Disabled it answers isRequired false, canChangeUserMode false and the Account Security page shows no MFA widget",
@@ -19371,6 +19418,30 @@
         "KB-97A675C1"
       ],
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6754D819",
+      "path": "entries/KB-6754D819.md",
+      "subject": "Site Builder GitHub setup routes: site, connection and app/setup need auth (401 anonymous); app/new, app/created and app/installed are anonymous and reject an invalid state",
+      "question": "Which /api/site-builder/git endpoints can be called without a token, and what do they do with a bad state?",
+      "questions": [
+        "Are the Site Builder GitHub App callbacks anonymous?",
+        "Is there an open redirect in /api/site-builder/git/app/installed?"
+      ],
+      "anchors": [
+        "GET /api/site-builder/git/app/installed",
+        "GET /api/site-builder/git/app/created",
+        "GET /api/site-builder/git/app/new",
+        "GET /api/site-builder/git/site"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -29123,6 +29194,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9BCD8C34",
+      "path": "entries/KB-9BCD8C34.md",
+      "subject": "POST /api/site-builder/designer/save refuses javascript: and vbscript: links (incl. mixed case, leading space, tab, &#106; entity) but stores a data:text/html link, an img onerror and a script tag verbatim",
+      "question": "Which unsafe values does POST /api/site-builder/designer/save reject in page content, and which does it store?",
+      "questions": [
+        "Does the Site Builder save reject data: URLs in page sections?",
+        "Does the Site Builder module strip script tags on save?",
+        "Does designer/save accept an unknown section type?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/save",
+        "GET /api/site-builder/template"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -41112,6 +41206,28 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-DBE2B1D9",
+      "path": "entries/KB-DBE2B1D9.md",
+      "subject": "Query.themeSnapshot: storeId wins over domain; an unknown domain falls back to the default store, while no store argument or an unknown storeId returns null",
+      "question": "How does Query.themeSnapshot resolve the store from storeId, domain and cultureName?",
+      "questions": [
+        "Which wins in themeSnapshot when both storeId and domain are passed?",
+        "What does themeSnapshot return for an unknown domain or unknown store?",
+        "Which language does themeSnapshot serve for an unsupported cultureName?"
+      ],
+      "anchors": [
+        "Query.themeSnapshot"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-DBF2D084",
