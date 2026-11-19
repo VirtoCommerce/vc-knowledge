@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T09:20:25.893Z",
-  "count": 2095,
+  "generated": "2026-11-19T11:12:16.416Z",
+  "count": 2096,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -22809,6 +22809,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7B4641EA",
+      "path": "entries/KB-7B4641EA.md",
+      "subject": "PDP Subscribe & Save sends Mutation.setCartItemSubscription only after the debounced add response; leaving the PDP before that response leaves a plain one-time cart line",
+      "question": "Why does a Subscribe & Save product sometimes land in the cart as a one-time line?",
+      "questions": [
+        "In what order does the PDP send the add-to-cart and the cart item subscription mutations?",
+        "Does /cart read subscription state from the cart query or from a separate query?"
+      ],
+      "anchors": [
+        "Mutation.setCartItemSubscription",
+        "Query.cartSubscriptionItems",
+        "/cart"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
