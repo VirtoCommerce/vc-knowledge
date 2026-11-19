@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T18:07:33.352Z",
-  "count": 2146,
+  "generated": "2026-11-19T18:09:33.432Z",
+  "count": 2147,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29687,6 +29687,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-999E69A4",
+      "path": "entries/KB-999E69A4.md",
+      "subject": "On B2B-store the mobile main-menu drawer shows the theme's default white Virto Commerce logo for a guest while the header bar shows the store white-labeling logo; for a buyer of an organization with its own white-labeling logo the drawer shows the organization logo",
+      "question": "Which logo does the storefront mobile main-menu drawer show when the store has white-labeling?",
+      "questions": [
+        "Why does the mobile menu show the Virto Commerce logo instead of the store logo?",
+        "Does the mobile drawer use the white-labeling logo on dark backgrounds?",
+        "Is the organization logo shown in the mobile main menu?"
+      ],
+      "anchors": [
+        "/products-with-options/configurable-caps-shirts/vintage-california-beach-pullover-hoodie"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
