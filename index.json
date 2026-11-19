@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T15:02:21.599Z",
-  "count": 2138,
+  "generated": "2026-11-19T15:10:11.176Z",
+  "count": 2139,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18094,6 +18094,31 @@
       "scope": [
         "role=organization-maintainer",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5C1846A3",
+      "path": "entries/KB-5C1846A3.md",
+      "subject": "A renewal of a configurable-product subscription places an order with the same configured line: same product, same option in the same section, same subscription price as the first order",
+      "question": "Does a product-subscription renewal of a configurable product keep the configuration chosen on the first order?",
+      "questions": [
+        "Does POST /api/product-subscription/scheduler/run rebuild a configured line item for a renewal order?",
+        "What does ProductSubscription.configuration hold after a Subscribe & Save order of a configurable product?",
+        "Is the renewal price of a configured subscription (base + option) times the plan discount?"
+      ],
+      "anchors": [
+        "POST /api/product-subscription/scheduler/run",
+        "Mutation.setCartItemSubscription",
+        "Query.productSubscriptions",
+        "GET /api/product-subscription/renewals/{id}"
+      ],
+      "scope": [
+        "surface=rest",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
