@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T13:57:49.490Z",
-  "count": 2114,
+  "generated": "2026-11-19T14:01:17.976Z",
+  "count": 2123,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4245,6 +4245,29 @@
       "resolved": 3
     },
     {
+      "id": "KB-15CD2C50",
+      "path": "entries/KB-15CD2C50.md",
+      "subject": "Site Builder theme publications are append-only and History restore needs git: without the GitHub App a theme is put back by editing drafts to the old state and publishing a new number",
+      "question": "How is an earlier Site Builder theme publication restored when history is not set up?",
+      "questions": [
+        "What does GET /api/site-builder/theme/status return?",
+        "Can a Site Builder theme template be deleted?"
+      ],
+      "anchors": [
+        "GET /api/site-builder/theme/status",
+        "GET /api/site-builder/history/status",
+        "POST /api/site-builder/designer/save"
+      ],
+      "scope": [
+        "surface=admin-designer",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1609EA54",
       "path": "entries/KB-1609EA54.md",
       "subject": "The mfa grant on /connect/token reads the ticket from form field two_factor_token (snake_case) plus code; a twoFactorToken field answers missing_parameter",
@@ -5630,6 +5653,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-1D8E4BFA",
+      "path": "entries/KB-1D8E4BFA.md",
+      "subject": "On a multilanguage page version, the Site Builder designer's Add section lists \"No sections match\" even though the storefront preview has loaded",
+      "question": "Can sections be added to a multilanguage page in the Site Builder Vue designer?",
+      "questions": [
+        "Why does Add section show No sections match on a Site Builder page?"
+      ],
+      "anchors": [
+        "/apps/site-builder-shell",
+        "GET /api/site-builder/catalog"
+      ],
+      "scope": [
+        "surface=admin-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-1DC162B9",
       "path": "entries/KB-1DC162B9.md",
       "subject": "On SalesRep 3.1017.0-pr-37, salesRepCustomers list items expose phone and primaryContact{phones}; phone is the primary contact's first phone, else the organization's own phone, and address.phone is separate",
@@ -5901,6 +5944,29 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1EE973A2",
+      "path": "entries/KB-1EE973A2.md",
+      "subject": "Site Builder theme publish refuses a palette with a pair under WCAG AA and leaves the previous publication live; the designer lists the failing pair",
+      "question": "Does POST theme/publish refuse a Site Builder palette that fails WCAG AA contrast?",
+      "questions": [
+        "What happens when a merchant sets a low-contrast colour in the Site Builder Theme tab?",
+        "Do generated Site Builder palettes pass AA contrast?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/theme/publish",
+        "POST /api/site-builder/theme/palette/check",
+        "POST /api/site-builder/theme/palette"
+      ],
+      "scope": [
+        "surface=admin-designer",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -7631,6 +7697,29 @@
       "scope": [
         "module=taskmanagement",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2A89091C",
+      "path": "entries/KB-2A89091C.md",
+      "subject": "Site Builder theme menus are store link lists resolved per culture on each themeSnapshot request: a link-list edit shows on the storefront without a theme republish, and a list with no language is never resolved",
+      "question": "Does a change to a store link list used by the Site Builder header need a theme republish to show on the storefront?",
+      "questions": [
+        "Why does a Site Builder icons menu not appear on the storefront?",
+        "Does Query.themeSnapshot menus return a link list without a language?"
+      ],
+      "anchors": [
+        "Query.themeSnapshot",
+        "Query.menus",
+        "POST /api/cms/{id}/menu"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -13003,6 +13092,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-460854F5",
+      "path": "entries/KB-460854F5.md",
+      "subject": "Site Builder designer \"Preview as\" a PreviewUserIds customer: clicks inside the preview are intercepted and change no data, and the preview header stays signed out",
+      "question": "Do add-to-cart or link clicks inside the Site Builder designer preview change the previewed customer's data?",
+      "questions": [
+        "How does Site Builder Preview as work with SiteBuilder.Store.PreviewUserIds?",
+        "Can a merchant navigate inside the Site Builder preview?"
+      ],
+      "anchors": [
+        "/designer-preview",
+        "/apps/site-builder-shell",
+        "POST /api/carts/search"
+      ],
+      "scope": [
+        "surface=admin-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -30095,6 +30206,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-9FDDB07C",
+      "path": "entries/KB-9FDDB07C.md",
+      "subject": "Site Builder product template rules: the flag-on storefront PDP uses the first enabled rule that matches; reordering or disabling a rule takes effect on the next theme publish",
+      "question": "Which template does the storefront product page use when several Site Builder template rules match the same product?",
+      "questions": [
+        "Does the order of Site Builder template rules matter?",
+        "What happens on the PDP when the first matching template rule is disabled?",
+        "How does themeSnapshot rules.product decide the product template?"
+      ],
+      "anchors": [
+        "Query.themeSnapshot",
+        "POST /api/site-builder/theme/publish",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "surface=admin-designer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9FDE89B8",
       "path": "entries/KB-9FDE89B8.md",
       "subject": "a personalization tag on a virtual category hides its whole subtree from customers without that user group",
@@ -30511,7 +30646,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -35543,6 +35678,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-BB5C5B6D",
+      "path": "entries/KB-BB5C5B6D.md",
+      "subject": "Site Builder: a product template made with \"Create template (copy of default)\" holds product-info with an empty blocks list, so a PDP routed to it loses the Properties and Product variations blocks",
+      "question": "Does a Site Builder product template created as a copy of default render the same product page as the default template?",
+      "questions": [
+        "Why does a product with variations show no variation list on a rule template?",
+        "What content does Create template (copy of default) write for product templates?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/save",
+        "Query.themeSnapshot",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "surface=admin-designer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BB6B9B7E",
       "path": "entries/KB-BB6B9B7E.md",
       "subject": "GET /api/marketing/promotions (no id) returns HTTP 500 with a model-binding error naming ImportNotification instead of 404/405",
@@ -39383,6 +39541,25 @@
       "disputed": 0
     },
     {
+      "id": "KB-D0A95B29",
+      "path": "entries/KB-D0A95B29.md",
+      "subject": "Site Builder page Layout setting: Full renders header and footer, Minimal renders only a logo header with no footer, Blank renders neither",
+      "question": "What does the Site Builder page Layout setting (full, minimal, blank) render on the storefront?",
+      "questions": [
+        "Which header and footer does a Site Builder page with layout minimal show?"
+      ],
+      "anchors": [
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D0AF91D1",
       "path": "entries/KB-D0AF91D1.md",
       "subject": "The home-page slider and features blocks have no alt-text field, so their images render without alt whatever the content says",
@@ -41137,6 +41314,29 @@
       "scope": [
         "module=platform-security",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DA29CC8B",
+      "path": "entries/KB-DA29CC8B.md",
+      "subject": "Store-level white-labeling on a Site Builder store overrides the published theme palette, logo, category menu and footer menus for every visitor; the designer marks those fields",
+      "question": "Is a published Site Builder theme palette or logo visible on a store that has store-level white-labeling?",
+      "questions": [
+        "Why does the storefront not show the palette published from the Site Builder Theme tab?",
+        "Which Theme tab fields show 'Set by white-labeling for this visitor'?"
+      ],
+      "anchors": [
+        "GET /api/white-labeling/store/{id}",
+        "Query.themeSnapshot",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "surface=admin-designer",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
