@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T15:25:29.145Z",
-  "count": 2142,
+  "generated": "2026-11-19T16:05:22.098Z",
+  "count": 2143,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -21273,6 +21273,30 @@
       ],
       "scope": [
         "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6EEA78AF",
+      "path": "entries/KB-6EEA78AF.md",
+      "subject": "Flag-on storefront sends exactly one ThemeSnapshot per cold load; a /de/ URL sends cultureName \"de\" and is answered with de-DE; an aborted inline request triggers one refetch without permalink",
+      "question": "How many ThemeSnapshot requests does the Site Builder (flag-on) storefront send on a cold page load, and what language is served for a /de/ prefix?",
+      "questions": [
+        "Does the storefront refetch the theme snapshot when the inline request fails?",
+        "What variables does the inline ThemeSnapshot request carry?",
+        "Is ThemeSnapshot sent before InitializeApplication?"
+      ],
+      "anchors": [
+        "Query.themeSnapshot",
+        "/de/demo-landing"
+      ],
+      "scope": [
+        "buyer=guest",
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",

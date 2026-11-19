@@ -1,0 +1,30 @@
+---
+id: KB-6EEA78AF
+subject: Flag-on storefront sends exactly one ThemeSnapshot per cold load; a /de/ URL sends cultureName "de" and is answered with de-DE; an aborted inline request triggers one refetch without permalink
+plane: experiential
+question: How many ThemeSnapshot requests does the Site Builder (flag-on) storefront send on a cold page load, and what language is served for a /de/ prefix?
+questions:
+  - text: Does the storefront refetch the theme snapshot when the inline request fails?
+  - text: What variables does the inline ThemeSnapshot request carry?
+  - text: Is ThemeSnapshot sent before InitializeApplication?
+status: active
+appliesTo:
+  - axis: buyer
+    value: guest
+  - axis: store
+    value: b2b-store
+  - axis: surface
+    value: storefront-ui
+anchors:
+  - coordinate: Query.themeSnapshot
+  - coordinate: /de/demo-landing
+evidence:
+  - method: observation
+    deployment: vcst_qa
+    build: 694f1bf7279cdd13
+    conditions: theme=vc-theme-b2b-vue-2.63.0-pr-2676; module:VirtoCommerce.SiteBuilder=3.1000.0-pr-1-28d0; platform=3.1099.0; setting:site_builder_enabled=true
+    at: 2026-11-19T16:05:21.726Z
+    by: session:51ac2fe3
+    who: Lenajava1
+---
+Anonymous guest, Firefox, fresh browser contexts (empty cache), B2B-store. 20 cold loads of /, /demo-landing and two PDPs: exactly one POST /graphql ThemeSnapshot per load, the first GraphQL request (≈175-565 ms after navigation start, always before InitializeApplication), variables {domain, permalink} with permalink "/" for home and the bare path without leading slash otherwise; answer publication 16, storeId B2B-store, cultureName en-US. /de/demo-landing: one request with variables {domain, cultureName:"de", permalink:"demo-landing"}, answered cultureName "de-DE", html lang de-DE, German H1, no refetch. Inline request aborted: the app sent exactly one refetch with {storeId:"B2B-store", cultureName:"en-US"} (no domain, no permalink), answered publication 16 with slug null; page rendered normally. Inline request delayed 3 s: no refetch was sent. In-site navigation after either degraded start sent no further ThemeSnapshot. The flag-on build drops one GetMenu call that dev makes after GetPageContext (menus come with the snapshot), so the GraphQL request count per page equals dev's.
