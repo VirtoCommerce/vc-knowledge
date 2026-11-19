@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T11:12:16.416Z",
-  "count": 2096,
+  "generated": "2026-11-19T13:11:36.611Z",
+  "count": 2097,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16859,6 +16859,29 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-5748288B",
+      "path": "entries/KB-5748288B.md",
+      "subject": "Site Builder: the first Query.themeSnapshot read of a store with no theme publication creates publication 1 from the live theme files",
+      "question": "What does Query.themeSnapshot return for a store that has never published its theme?",
+      "questions": [
+        "Does themeSnapshot return null for a store with no Site Builder publication?",
+        "Who creates the first theme publication of a store in Site Builder?",
+        "Is an anonymous themeSnapshot read side-effect free?"
+      ],
+      "anchors": [
+        "Query.themeSnapshot",
+        "GET /api/site-builder/theme/status"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=graphql"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-574C0AD2",
