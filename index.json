@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T13:43:58.255Z",
-  "count": 2106,
+  "generated": "2026-11-19T13:45:09.552Z",
+  "count": 2107,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7546,7 +7546,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0,
       "resolved": 2
     },
@@ -24750,6 +24750,24 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-8499D7FA",
+      "path": "entries/KB-8499D7FA.md",
+      "subject": "Storefront html and body have a transparent background in dark mode, so the page background is the browser's own dark canvas",
+      "question": "What paints the storefront page background in dark mode: a design token or the browser canvas?",
+      "anchors": [
+        "/designer-preview"
+      ],
+      "scope": [
+        "browser=firefox",
+        "scheme=dark",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-84A3C38E",
