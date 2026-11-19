@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T13:34:25.027Z",
-  "count": 2105,
+  "generated": "2026-11-19T13:43:58.255Z",
+  "count": 2106,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -45462,6 +45462,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EFE3BD7D",
+      "path": "entries/KB-EFE3BD7D.md",
+      "subject": "In dark mode the storefront page-builder slider block renders white heading text on a light grey background (1.33:1)",
+      "question": "Is the heading text of a page-builder slider block readable on the storefront in dark mode?",
+      "anchors": [
+        "/designer-preview",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "component=page-builder slider-block",
+        "scheme=dark",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
