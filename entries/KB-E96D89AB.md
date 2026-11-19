@@ -35,5 +35,14 @@ evidence:
     bodyHash: 2d2b187566e8
     who: Lenajava1
     note: "Both directions, measured: platform-minted token on storefront /graphql and storefront-minted token on platform /graphql each read me Anonymous, and user-scoped fields (signInMethods, passkeyCreationOptions) answer HTTP 200 errors[].code Unauthorized. A token works only on the host that minted it. passkeyCreationOptions rp.id follows the request host (platform host -> rp vcst-qa platform host)."
+  - method: observation
+    deployment: vcst_qa
+    build: 694f1bf7279cdd13
+    conditions: platform=3.1099.0; module:VirtoCommerce.SiteBuilder=3.1000.0-pr-1-28d0; theme=2.63.0-pr-2676
+    at: 2026-11-19T18:26:36.895Z
+    by: session:51ac2fe3
+    bodyHash: 2d2b187566e8
+    who: Lenajava1
+    note: "Issuer verified: storefront-minted token iss=storefront host works only there; platform-minted iss=platform host works only on the platform. Consequence: the Site Builder designer's Preview as mints grant_type=impersonate on the platform host and posts it to the storefront preview, whose GetMe(userId) then answers Anonymous, so the preview shows the store branding and a signed-out header."
 ---
 On vcst_qa a Node fetch POST {platform host}/connect/token grant_type=password (storeId B2B-store) returned 200 with an access token. The same Bearer on POST {platform host}/graphql { me { id userName passwordExpired } } returned the buyer (passwordExpired true); on POST {storefront host}/graphql it returned HTTP 200 with me.userName "Anonymous" and a random id - the header was not honoured and no error was raised. Tokens the storefront mints itself carry iss = the storefront host (seen in the browser's own requests), so an issuer mismatch is the likely cause (not verified). A case that reads me or another user-scoped query from the runner must use the platform /graphql, or a token minted on the storefront host; otherwise it silently reads the anonymous user.

@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T18:15:46.058Z",
-  "count": 2151,
+  "generated": "2026-11-19T18:29:59.081Z",
+  "count": 2154,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -29231,6 +29231,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-96EBF8FA",
+      "path": "entries/KB-96EBF8FA.md",
+      "subject": "When the AI assistant panel closes, the Site Builder designer re-reads the open page: a server-side change reloads it when there are no unsaved edits, and with unsaved edits keeps them and warns that the assistant changed the page; the panel's own Close (X) cannot be clicked",
+      "question": "What does the Site Builder designer do with the open page when the AI assistant panel closes after the page was changed on the server?",
+      "questions": [
+        "Does closing the Virto OZ panel reload the designer page?",
+        "Are unsaved designer edits kept when the assistant changed the page?",
+        "Can the AI assistant panel be closed with its X button?"
+      ],
+      "anchors": [
+        "/apps/site-builder-shell",
+        "POST /api/site-builder-pages/grouped/{id}/content-json"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-97103279",
       "path": "entries/KB-97103279.md",
       "subject": "Catalog category search is POST /api/catalog/search/categories {searchPhrase}; GET /api/catalog/categories/search is 404 and POST on it is 405",
@@ -30721,7 +30744,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -41734,6 +41757,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-D9B2A54F",
+      "path": "entries/KB-D9B2A54F.md",
+      "subject": "The flag-on storefront /designer-preview trusts whatever origin its ep query names: a foreign page that frames it with ep=<own origin>&protocol=2 gets the preview handshake and its forged render message is displayed on the storefront origin",
+      "question": "Can a non-designer page drive the storefront designer preview by naming itself in ?ep=?",
+      "questions": [
+        "Does /designer-preview answer connect from a foreign framer?",
+        "What does a bad or javascript: ep do to the kept designer frame?",
+        "Is the designer origin kept across a new top-level page?"
+      ],
+      "anchors": [
+        "/designer-preview"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D9B90536",
       "path": "entries/KB-D9B90536.md",
       "subject": "storefront xAPI accepts an unknown or malformed products sort argument without an error",
@@ -44692,7 +44737,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -46021,6 +46066,29 @@
       ],
       "scope": [
         "account=personal",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EE07BAC6",
+      "path": "entries/KB-EE07BAC6.md",
+      "subject": "The flag-on storefront preview answers the designer's connect with a loaded message carrying protocol 2, capabilities and template conditions, reports each resolution with the fields white-labeling overrides, and after a full reload inside the designer frame stays on /designer-preview and handshakes again",
+      "question": "What does the storefront send in the Site Builder preview v2 handshake, and does the preview survive a reload inside the designer frame?",
+      "questions": [
+        "Which capabilities does the storefront preview advertise?",
+        "What is in the resolved message of the designer preview?",
+        "Does a language or currency switch inside the designer preview break the preview?"
+      ],
+      "anchors": [
+        "/designer-preview",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "module=sitebuilder",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
