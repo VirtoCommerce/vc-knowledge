@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T15:10:31.865Z",
-  "count": 2139,
+  "generated": "2026-11-19T15:12:17.237Z",
+  "count": 2140,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14125,6 +14125,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4A6BE9DA",
+      "path": "entries/KB-4A6BE9DA.md",
+      "subject": "The Admin Shell subscription blade shows a read-only Configuration card for a configured subscription (option per section, configured price, captured-from order link, fingerprint); a simple subscription shows no card",
+      "question": "How does the Admin Shell show the configuration of a configurable-product subscription?",
+      "questions": [
+        "Can an admin edit the configuration of a product subscription?",
+        "What does the Configuration card on a product subscription blade contain?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/product-subscriptions/product-subscription/{id}"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
