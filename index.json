@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T18:57:07.028Z",
-  "count": 2155,
+  "generated": "2026-11-19T19:07:32.607Z",
+  "count": 2156,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -23737,6 +23737,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7C08C30A",
+      "path": "entries/KB-7C08C30A.md",
+      "subject": "Site Builder module still ships the AngularJS Content-page blade and its permalink check mirrors SiteBuilderPermalink.IsValid; REST families are site-builder-pages/-assets/-multilanguage-pages/-shared-components",
+      "question": "Which REST route prefixes and legacy admin blade does the Site Builder module have compared with Page Builder (page-builder-pages etc.)?",
+      "anchors": [
+        "GET /api/site-builder-pages/grouped/{id}",
+        "/apps/site-builder-shell",
+        "POST /api/site-builder-assets/search"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
