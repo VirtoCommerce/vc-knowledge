@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-19T14:56:35.208Z",
-  "count": 2137,
+  "generated": "2026-11-19T15:02:21.599Z",
+  "count": 2138,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -652,6 +652,28 @@
         "actor=sales-rep",
         "delivery=module-federation-plugin",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-03C72BAF",
+      "path": "entries/KB-03C72BAF.md",
+      "subject": "POST /api/site-builder/save draft=true overwrites an existing theme-file draft with no version check: no ETag is sent or required, while designer/save requires each theme file's ETag (428) and refuses a stale one (412)",
+      "question": "Does the legacy /api/site-builder/save route check the version of a theme draft it overwrites?",
+      "questions": [
+        "Can two clients overwrite each other's Site Builder theme draft through /api/site-builder/save?",
+        "Does /api/site-builder/save need an eTag for theme files?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/save",
+        "POST /api/site-builder/designer/save"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
