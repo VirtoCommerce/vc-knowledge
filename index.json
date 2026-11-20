@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T10:54:30.363Z",
-  "count": 2175,
+  "generated": "2026-11-20T11:07:25.862Z",
+  "count": 2176,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -44614,6 +44614,29 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E6C3DA15",
+      "path": "entries/KB-E6C3DA15.md",
+      "subject": "Admin store Settings blade 'Reset to default' + Save writes the default value as a store override (itHasValues stays true) instead of removing the override",
+      "question": "Does 'Reset to default' in the Admin store Settings blade make a store setting inherit its default again?",
+      "questions": [
+        "After Reset to default and Save, does GET /api/stores/{id} report itHasValues false for the setting?",
+        "How do I remove a store-level setting override from the Admin UI?",
+        "Why does a store setting still show itHasValues true after Reset to default?"
+      ],
+      "anchors": [
+        "PUT /api/stores",
+        "GET /api/stores/{id}"
+      ],
+      "scope": [
+        "objecttype=store",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
