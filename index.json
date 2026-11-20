@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T07:26:17.487Z",
-  "count": 2166,
+  "generated": "2026-11-20T07:28:59.852Z",
+  "count": 2168,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9661,6 +9661,28 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-32EB25EF",
+      "path": "entries/KB-32EB25EF.md",
+      "subject": "A Site Builder page group with a reversed schedule (startDate after endDate) can never match the Active lifecycle filter or ActiveOn; it lists as Pending before its start and Archived once its end passes",
+      "question": "Where does a published Site Builder page with startDate after endDate appear in the lifecycle lists?",
+      "questions": [
+        "Is a Site Builder page with End date before Start date ever active?",
+        "How do Pending, Active and Archived filters treat a reversed schedule?"
+      ],
+      "anchors": [
+        "POST /api/site-builder-pages/list",
+        "PUT /api/site-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -23954,6 +23976,29 @@
       "scope": [
         "module=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7C7DBD4A",
+      "path": "entries/KB-7C7DBD4A.md",
+      "subject": "POST /api/site-builder-pages/create-group-page rejects a content string whose root is a JSON array with 400; an object root with settings and a content array is stored as sent",
+      "question": "Does POST /api/site-builder-pages/create-group-page accept a legacy top-level array as content?",
+      "questions": [
+        "What does create-group-page return when content is a JSON array?",
+        "Does the Site Builder API convert legacy array page content on create?",
+        "Which content shape does create-group-page require?"
+      ],
+      "anchors": [
+        "POST /api/site-builder-pages/create-group-page",
+        "POST /api/site-builder-pages/grouped"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
