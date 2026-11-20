@@ -19,5 +19,14 @@ evidence:
     at: 2026-11-17T14:57:52.438Z
     by: session:fcdb91ae
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa
+    build: 6cf3e54e8335fd8d
+    conditions: store=B2B-store; setting:ProductComparison.Enabled=false
+    at: 2026-11-20T12:44:43.801Z
+    by: session:fcdb91ae
+    bodyHash: 7061953860ef
+    who: kutasinaelena
+    note: "xAPI half re-observed in REG-2026-11-20-1516 (CMP-GQL-012): signed-in compareList null and save refused COMPARE_LIST_DISABLED on the first poll after the store write; after re-enable compareList returned the same list id with itemsCount 1."
 ---
 With ProductComparison.Enabled=false on the store (after a page reload — the storefront reads it from InitializeApplication store.settings.modules per session): category cards and the PDP show no compare toggle, the header has no Compare entry, /compare answers "Page not found" (404) for guests and buyers; saveProductsToCompareList is refused with errors[].extensions.code COMPARE_LIST_DISABLED ("Product comparison is disabled for this store") for anonymous and signed-in callers; compareList returns null with no error. Switching it back on and reloading shows the buyer's previous list unchanged (same list id, same items).

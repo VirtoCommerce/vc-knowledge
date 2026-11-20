@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T12:44:09.125Z",
-  "count": 2177,
+  "generated": "2026-11-20T12:46:38.552Z",
+  "count": 2178,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -21464,6 +21464,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6E6486D0",
+      "path": "entries/KB-6E6486D0.md",
+      "subject": "With ProductComparison.AnonymousListEnabled = false a guest saveProductsToCompareList is refused with ANONYMOUS_COMPARE_LIST_DISABLED and the guest compareList is null, while a signed-in buyer still saves",
+      "question": "What do saveProductsToCompareList and compareList do for an anonymous caller and for a signed-in buyer when ProductComparison.AnonymousListEnabled is false?",
+      "questions": [
+        "Does turning off guest comparison block signed-in buyers too?",
+        "What error code does a guest get saving to the compare list when anonymous lists are disabled?"
+      ],
+      "anchors": [
+        "Mutation.saveProductsToCompareList",
+        "Query.compareList"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
