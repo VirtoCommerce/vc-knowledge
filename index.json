@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T07:28:59.852Z",
-  "count": 2168,
+  "generated": "2026-11-20T07:43:58.045Z",
+  "count": 2169,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -48992,6 +48992,24 @@
       "scope": [
         "entity=category",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F9D71261",
+      "path": "entries/KB-F9D71261.md",
+      "subject": "The New address dialog's Create button is disabled until the form is both changed and valid, so a submit with empty required fields (to see per-field errors) is not reachable",
+      "question": "Can an empty required field in the storefront New address dialog be submitted to show inline per-field errors, or is Create disabled?",
+      "anchors": [
+        "/cart",
+        "/account/addresses"
+      ],
+      "scope": [
+        "component=add-or-update-address-modal",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
