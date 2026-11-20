@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T12:29:09.196Z",
-  "count": 2176,
+  "generated": "2026-11-20T12:44:09.125Z",
+  "count": 2177,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6025,6 +6025,29 @@
       ],
       "scope": [
         "surface=admin-ui",
+        "viewport=390"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1E89AC5E",
+      "path": "entries/KB-1E89AC5E.md",
+      "subject": "On /compare at 390 px each product column is 112 px wide and the product title link is line-clamped to 2 lines, so only a name of roughly 14 characters or fewer renders on one line",
+      "question": "How tall can a product name get in a /compare column header on a phone, and what does it take for it to render on one line?",
+      "questions": [
+        "Is the product title in the compare table header line-clamped on mobile?",
+        "How wide is a product column on /compare at 390 px?",
+        "Why do two different-length product names render at the same height on /compare mobile?"
+      ],
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
+        "feature=product-compare",
+        "surface=storefront-ui",
         "viewport=390"
       ],
       "plane": "experiential",
