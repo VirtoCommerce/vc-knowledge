@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T07:49:31.856Z",
-  "count": 2169,
+  "generated": "2026-11-20T07:49:49.196Z",
+  "count": 2170,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17005,6 +17005,24 @@
       "scope": [
         "role=sales-representative",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-543FC381",
+      "path": "entries/KB-543FC381.md",
+      "subject": "A product price cannot be negative or zero-list: PUT /api/products/prices rejects List <= 0 and Sale < 0, so a configurable option can never carry a negative price modifier",
+      "question": "Can a configurable product option have a negative price modifier (a discount option) that lowers the configured total?",
+      "anchors": [
+        "PUT /api/products/prices",
+        "Mutation.createConfiguredLineItem"
+      ],
+      "scope": [
+        "product-type=configurable",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
