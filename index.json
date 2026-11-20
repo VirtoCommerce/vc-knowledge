@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T07:49:49.196Z",
-  "count": 2170,
+  "generated": "2026-11-20T07:55:00.727Z",
+  "count": 2171,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -49466,6 +49466,28 @@
         "feature=price-range-filter",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FDF5A970",
+      "path": "entries/KB-FDF5A970.md",
+      "subject": "The storefront product card's variations button counts the in-stock-and-buyable master plus in-stock-and-buyable variations when the Show in stock filter is on, and variations.length + 1 when it is off",
+      "question": "How does the storefront catalog product card compute the number on its variations button?",
+      "questions": [
+        "Why does the variations button show 1 for a product with one variation?",
+        "Does the variations button count include the master product?",
+        "Does Show in stock change the variations button count on a product card?"
+      ],
+      "anchors": [
+        "/search",
+        "Query.products"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
