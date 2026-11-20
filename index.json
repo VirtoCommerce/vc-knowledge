@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T12:46:38.552Z",
-  "count": 2178,
+  "generated": "2026-11-20T13:07:53.546Z",
+  "count": 2179,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -269,6 +269,26 @@
       ],
       "scope": [
         "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-010A35DF",
+      "path": "entries/KB-010A35DF.md",
+      "subject": "On /compare a variation-parent product's column shows an 'N variations' link where a plain product's column shows the 'Add to cart' button; compare tabs group products by the second-level category of their path (or the root category for products placed directly in it)",
+      "question": "What does a /compare column show for a product with variations instead of the Add to cart button?",
+      "questions": [
+        "How does the compare page group products into category tabs?",
+        "Why is there no Add to cart button in a compare column for a smartphone with variations?"
+      ],
+      "anchors": [
+        "/compare"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
