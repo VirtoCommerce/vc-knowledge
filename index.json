@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T08:01:00.510Z",
-  "count": 2172,
+  "generated": "2026-11-20T08:25:25.100Z",
+  "count": 2173,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10971,6 +10971,29 @@
         "feature=mfa-store-modes",
         "store-mode=customer-choice",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-393D4D5E",
+      "path": "entries/KB-393D4D5E.md",
+      "subject": "setCartItemSubscription refuses a regular product line added via updateCartQuantity, because that line is stored with listPrice/salePrice 0",
+      "question": "Why does setCartItemSubscription return SUBSCRIPTION_ERROR \"This product has no price of its own\" for a regular product that has a price?",
+      "questions": [
+        "Subscribe & Save fails right after adding a simple product from the PDP quantity stepper",
+        "setCartItemSubscription no price of its own regular product",
+        "updateCartQuantity line listPrice 0 subscription"
+      ],
+      "anchors": [
+        "Mutation.setCartItemSubscription",
+        "Mutation.updateCartQuantity"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
