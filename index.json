@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T07:55:00.727Z",
-  "count": 2171,
+  "generated": "2026-11-20T08:01:00.510Z",
+  "count": 2172,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37562,6 +37562,24 @@
       "scope": [
         "element=google-analytics",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C157E770",
+      "path": "entries/KB-C157E770.md",
+      "subject": "saveProductsToCompareList rejects a File configuration section and customText over 255 characters with VALIDATION; after clearCompareList, compareList returns the list with itemsCount 0, not null",
+      "question": "What does saveProductsToCompareList do with a File section or a 256-character customText, and what does compareList return after clearCompareList?",
+      "anchors": [
+        "Mutation.saveProductsToCompareList",
+        "Mutation.clearCompareList",
+        "Query.compareList"
+      ],
+      "scope": [
+        "surface=graphql"
       ],
       "plane": "experiential",
       "status": "active",
