@@ -45,5 +45,14 @@ evidence:
     bodyHash: e2b00f9729da
     who: Lenajava1
     note: "Desktop, vcst: Sales Rep Hub is the first item of the header link row, before Bulk order, for a rep serving 5 orgs, an Advanced rep, a one-org rep and a no-org rep; a plain org buyer's row starts at Bulk order. The link is not in plugin.json menu (only the header \"sales-reps\" entry is). Clicking it while the hub's dashboard chunk 404s (stale remoteEntry) leaves the URL on the home page. Mobile not checked."
+  - method: observation
+    deployment: vcst_qa
+    build: 957a892645884c54
+    conditions: platform=3.1099.0; module:VirtoCommerce.SalesRep=3.1026.0; theme=2.63.0-pr-2667-0444-0444048a; browser=chromium
+    at: 2026-11-20T10:51:18.222Z
+    by: session:74ee3083
+    bodyHash: e2b00f9729da
+    who: Lenajava1
+    note: "Desktop 1920: Sales Rep Hub first, before Bulk order, href /company/dashboard, on first render after password sign-in. This stand's row has no Compare item."
 ---
 vc-frontend host 0.2.7 with the SalesRep plugin. Signed in as a plain Sales Representative and as an Advanced rep: desktop header row (1920, 1280, 1024) reads Sales Rep Hub, Bulk order, Compare, Lists, Orders, Notifications, Cart; the link (href /company/dashboard, lucide briefcase-business icon, caption text as accessible name) has the same computed colour, hover colour, icon stroke and vertical centres as its siblings in light and dark mode. At 375 px the item is not in the top bar but is the last entry of the mobile menu nav list (Dashboard, Catalog, Compare, Bulk order, Cart, Contact us, Sales Rep Hub), 288x40, and opens /company/dashboard. A Purchasing-agent buyer, an Organization maintainer, a no-org personal account and an anonymous visitor see no item on desktop or in the mobile menu. Password sign-in posts /connect/token and then re-GETs the returnUrl document (full reload), so the item is present on first render after sign-in; logout lands on /sign-in?returnUrl=<path> with the item gone, and browser Back stays on the sign-in gate without it.

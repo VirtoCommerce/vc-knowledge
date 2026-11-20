@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T10:47:47.966Z",
-  "count": 2174,
+  "generated": "2026-11-20T10:54:30.363Z",
+  "count": 2175,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5459,7 +5459,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -9935,7 +9935,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -13637,7 +13637,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -23827,6 +23827,27 @@
       "contested": 1
     },
     {
+      "id": "KB-7BA7FEC6",
+      "path": "entries/KB-7BA7FEC6.md",
+      "subject": "The OAuth applications form (classic Manager and Admin Shell) has client type, PKCE, consent, grant types, scopes and an MCP resources picker, but no AI-agent template",
+      "question": "Can an administrator set up an AI agent OAuth client from the back office OAuth applications screen, and is there an 'Add AI agent' template?",
+      "questions": [
+        "Does the OAuth applications form offer a PKCE switch and MCP resources?",
+        "Is there a template for Claude Code or ChatGPT clients in the back office?",
+        "Which grant types and scopes does a new OAuth application get by default?"
+      ],
+      "anchors": [
+        "/api/platform/oauthapps"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7BB90D27",
       "path": "entries/KB-7BB90D27.md",
       "subject": "Page Builder shell Publish, Unpublish and Archive each show exactly one success toast on released PageBuilderModule 3.1032.2",
@@ -32321,7 +32342,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {

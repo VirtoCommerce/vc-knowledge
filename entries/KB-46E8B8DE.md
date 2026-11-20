@@ -90,5 +90,14 @@ evidence:
     bodyHash: 2a0a4bb07188
     who: Lenajava1
     note: "vc-frontend-next 3.3.0, B2B-store sales-rep org user with one order this year: four cards WEEK/MTD/YTD 1 / $899.98 + Avg order value, no change line (no previous-period orders), My recent orders with All/New chips (no counts), All orders opens /account/orders, Edit layout."
+  - method: observation
+    deployment: vcst_qa
+    build: 957a892645884c54
+    conditions: platform=3.1099.0; theme=2.63.0-pr-2667-0444-0444048a; store=B2B-store; role=Organization buyer
+    at: 2026-11-20T10:51:18.349Z
+    by: session:74ee3083
+    bodyHash: 2a0a4bb07188
+    who: Lenajava1
+    note: Four cards and My recent orders as stated; on this build the status chips are All / New without counts, and the Sales Statistics block (KB-ADE54B03) renders between the cards and My recent orders.
 ---
 Signed in as a B2B org maintainer on the VCST-6078 PR build, /account/dashboard renders four stat cards — "Orders placed · WEEK", "Orders placed · MTD", "Orders placed · YTD" (order count as the big number, total amount as the sub-line, a signed "% vs last …" change when the previous period has orders; none when it is empty) and "Avg order value" ("Average per order (YTD)", no change line) — plus a "My recent orders" widget (5 rows, status chips with counts, "All orders" link) and an "Edit layout" button (edit mode with Reset / Cancel / Save layout). The previous widgets Latest orders, Monthly spend report and Orders status do not render. On load the page calls GraphQL GetLayout (scope accountDashboard; returns layout null for a user who never saved), GetOrderStatistics and GetOrders (first 5 with a status facet), all 200 with no errors[]. A user in an organization with no orders sees all cards at 0 / $0.00 and the empty state "There are no orders yet" with "Continue browsing". The status chip counts include cancelled orders while the cards exclude them (chips Completed 17 + Cancelled 13 + New 13 + Processing 6 = 49; YTD card 36). This is an unmerged PR build (vc-frontend#2552 with vc-module-x-frontend#12), not a release.
