@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T10:21:08.145Z",
-  "count": 2173,
+  "generated": "2026-11-20T10:47:47.966Z",
+  "count": 2174,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -33903,6 +33903,28 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ADE54B03",
+      "path": "entries/KB-ADE54B03.md",
+      "subject": "The account Dashboard shows a full-width Sales Statistics block right after the four order stat widgets",
+      "question": "What does the Sales Statistics block on /account/dashboard show and where does it sit?",
+      "questions": [
+        "Where is the Sales Statistics block on the buyer dashboard?",
+        "Which periods and KPI tiles does the account dashboard sales report offer?",
+        "Does the buyer dashboard chart exclude cancelled orders?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.orderStatistics"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
