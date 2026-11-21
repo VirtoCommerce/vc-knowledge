@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-20T13:07:53.546Z",
-  "count": 2179,
+  "generated": "2026-11-21T17:14:49.385Z",
+  "count": 2180,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1556,6 +1556,31 @@
       ],
       "scope": [
         "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0893E8D5",
+      "path": "entries/KB-0893E8D5.md",
+      "subject": "With SiteBuilder.Store.GitContentEnabled=true and the GitHub App not installed on its organization, the Site Builder page list and designer show no GitHub-missing warning, and page save and publish still return 200 and go live",
+      "question": "Does the Site Builder admin warn about a missing GitHub connection, and are saves refused, when a store has GitContentEnabled on but GitHub is not connected?",
+      "questions": [
+        "What does the Site Builder page list show for a git-enabled store whose GitHub App is not installed?",
+        "Is designer/save refused on a store with GitContentEnabled=true when the GitHub organization is unreachable?",
+        "Where does the GitHub-missing banner appear in Site Builder?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/save",
+        "GET /api/site-builder/git/site",
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-designer",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
