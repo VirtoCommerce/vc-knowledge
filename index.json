@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-21T17:14:49.385Z",
-  "count": 2180,
+  "generated": "2026-11-22T21:00:26.360Z",
+  "count": 2182,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7832,6 +7832,27 @@
       "scope": [
         "feature=configurable-products",
         "module=fileexperienceapi",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-29511717",
+      "path": "entries/KB-29511717.md",
+      "subject": "Signing out in one browser tab makes another tab on /compare reload to the signed-out state with the guest compare list; the account's list is kept and returns on the next sign-in",
+      "question": "What does a /compare tab show after the user signs out in another tab, and is the account's compare list kept?",
+      "questions": [
+        "Does a sign-out in a second tab affect the compare page in the first tab?",
+        "Is a signed-in buyer's compare list kept after sign-out?"
+      ],
+      "anchors": [
+        "/compare",
+        "Query.compareList"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -39699,6 +39720,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CC489CC3",
+      "path": "entries/KB-CC489CC3.md",
+      "subject": "Switching the storefront currency on /compare reloads the page and re-sends the CompareProducts query with the new currencyCode; price cells render in the new currency symbol",
+      "question": "What happens to /compare prices when the storefront currency is switched?",
+      "questions": [
+        "Does the compare page re-request compareList with currencyCode after a currency change?",
+        "Do compare price cells keep the old currency symbol after switching currency?"
+      ],
+      "anchors": [
+        "/compare",
+        "Query.compareList"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
