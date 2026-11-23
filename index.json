@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T22:24:57.488Z",
-  "count": 2200,
+  "generated": "2026-11-23T22:29:14.488Z",
+  "count": 2204,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4558,6 +4558,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 8,
+      "disputed": 0
+    },
+    {
+      "id": "KB-168EE593",
+      "path": "entries/KB-168EE593.md",
+      "subject": "The customer profile Sales statistics block shows the same figures as /company/customer-sales for that customer, and its period choice persists per browser across customers without changing Reporting's own period",
+      "question": "Does the Sales statistics block on /company/my-customers/{orgId} match the Reporting page, and how is its period remembered?",
+      "questions": [
+        "Where does the customer profile Sales statistics period selection persist?",
+        "Does opening another customer keep the period chosen on the previous customer's profile?",
+        "What does Open in Reporting on the customer profile link to?",
+        "Does the customer profile statistics block offer Show as table?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/company/customer-sales",
+        "POST /graphql"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "role=sales-representative",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -10048,7 +10074,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -25639,6 +25665,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-83688EB2",
+      "path": "entries/KB-83688EB2.md",
+      "subject": "The Sales Rep customer profile Sales statistics block keeps its period per browser (not in the URL), ignores ?period= on the profile URL, syncs it live across open tabs, and shares the Last year switches with the Reporting page in both directions",
+      "question": "How does the Sales statistics block on /company/my-customers/:id remember its period and Last year switches, and does the Reporting page change them?",
+      "questions": [
+        "Does ?period= on the sales-rep customer profile URL select the Sales statistics period?",
+        "Does choosing a period on /company/customer-sales change the period of the customer profile statistics block?",
+        "Are the Last year switches shared between the Reporting page and the customer profile block?",
+        "What period does Open in Reporting on the customer profile pass?",
+        "Do two tabs of the customer profile keep different Sales statistics periods?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/company/customer-sales",
+        "Query.salesRepCustomerOrderStatistics"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-836D3DE3",
       "path": "entries/KB-836D3DE3.md",
       "subject": "POST /api/stores/search returns each store's trustedGroups as an array of plain store ids; a customer of a store absent from both sides' trustedGroups is refused on the other store",
@@ -37304,6 +37356,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-BCEAF343",
+      "path": "entries/KB-BCEAF343.md",
+      "subject": "Opening /company/my-customers/<id> of an organization the rep does not serve shows \"Customer not found or not in your customers.\" but the profile widgets still send their queries for that id (SalesRepMonthlyOrderStatistics, SalesRepOrders, SalesRepTopSellers…); the statistics answer is null",
+      "question": "What does the sales-rep customer profile request and show for an organization the rep does not serve?",
+      "questions": [
+        "Does the customer profile fire SalesRepMonthlyOrderStatistics for an unserved organization?",
+        "Is the Sales statistics block rendered for a customer the rep does not serve?"
+      ],
+      "concepts": [
+        "sales-rep",
+        "organization"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Query.salesRepCustomerOrderStatistics"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BCF37E85",
       "path": "entries/KB-BCF37E85.md",
       "subject": "Org switcher search (me.contact.organizations searchPhrase) also matches an organization's description, so orgs whose NAME lacks the typed text can be listed",
@@ -38349,7 +38427,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -39963,7 +40041,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -41954,6 +42032,30 @@
       "scope": [
         "role=sales-rep",
         "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D62D6022",
+      "path": "entries/KB-D62D6022.md",
+      "subject": "On the Sales Rep customer profile, a saved salesRepCustomerProfile layout whose mainLeft omits the sales block renders Sales statistics appended at the end of the left column, after the saved blocks in their saved order",
+      "question": "Where does the Sales statistics block (layout block sales) render on /company/my-customers/:id for a rep whose saved customer-profile layout predates the block?",
+      "questions": [
+        "What happens to a newly registered layout block that is missing from a rep's saved salesRepCustomerProfile layout?",
+        "Does a layout saved before the Sales statistics block shipped lose the block?",
+        "Where is the sales block placed when Mutation.saveLayout stored mainLeft without it?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Query.layout",
+        "Mutation.saveLayout"
+      ],
+      "scope": [
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -44265,7 +44367,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
