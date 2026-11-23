@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T12:05:23.303Z",
-  "count": 2189,
+  "generated": "2026-11-23T12:06:47.197Z",
+  "count": 2190,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -39210,6 +39210,28 @@
       "scope": [
         "module=sales-rep",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C8E6F4FB",
+      "path": "entries/KB-C8E6F4FB.md",
+      "subject": "vcptcore stable, regression and qa1 serve assets from the FileSystem provider, not Azure Blob, although both provider modules are installed",
+      "question": "Which asset storage provider (Azure Blob or FileSystem) is active on the vcptcore stands?",
+      "questions": [
+        "Can an Azure Blob asset error be reproduced on vcptcore stable or regression?",
+        "Is the asset store on vcptcore-qa1 Azure blob storage?"
+      ],
+      "anchors": [
+        "POST /api/assets",
+        "POST /api/assets/folder"
+      ],
+      "scope": [
+        "deployment=vcptcore_stable,vcptcore_regression,vcptcore_qa1",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
