@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T13:13:35.669Z",
-  "count": 2194,
+  "generated": "2026-11-23T13:18:49.459Z",
+  "count": 2195,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16810,6 +16810,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-52D2F554",
+      "path": "entries/KB-52D2F554.md",
+      "subject": "White-labeling setting records have no REST delete, and an organization's record survives DELETE /api/members of that organization",
+      "question": "How do I delete an organization's white-labeling setting record, and is it removed when the organization is deleted?",
+      "questions": [
+        "Does DELETE /api/white-labeling exist?",
+        "Does deleting an organization cascade to its white-labeling settings?",
+        "Why does GET /api/white-labeling/{id} still return a record for a deleted organization?"
+      ],
+      "anchors": [
+        "DELETE /api/white-labeling",
+        "GET /api/white-labeling/{id}",
+        "DELETE /api/members"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-52EAADEE",
       "path": "entries/KB-52EAADEE.md",
       "subject": "A catalog product property is indexed under its lowercased name in the shared Product index, so a property named like a typed field (Price → price double, Size → size integer) with a non-numeric value gets the whole document rejected",
@@ -28783,7 +28806,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 7,
       "disputed": 0
     },
     {
@@ -49745,7 +49768,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
