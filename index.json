@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T08:22:15.746Z",
-  "count": 2184,
+  "generated": "2026-11-23T08:30:25.944Z",
+  "count": 2185,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -41250,6 +41250,29 @@
       "scope": [
         "feature=password-expiry",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D35BFF8D",
+      "path": "entries/KB-D35BFF8D.md",
+      "subject": "A storefront organization switch made in one tab reloads every other open storefront tab of the same session into the new organization, closing any open Organizations panel there",
+      "question": "What happens to other open storefront tabs when a multi-organization buyer switches organization in one tab?",
+      "questions": [
+        "Does an organization switch propagate to other browser tabs on the storefront?",
+        "After switching organization in the header, do other tabs keep showing the old organization?",
+        "Is a second tab left stale after an organization switch?"
+      ],
+      "anchors": [
+        "/cart",
+        "/account/orders",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
