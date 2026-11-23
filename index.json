@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T12:14:57.681Z",
-  "count": 2191,
+  "generated": "2026-11-23T12:49:26.614Z",
+  "count": 2192,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -47723,6 +47723,29 @@
       "scope": [
         "surface=rest",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F1F75629",
+      "path": "entries/KB-F1F75629.md",
+      "subject": "On the Azure Blob asset provider, a top-level folder name with a space passes the folder-name validator and fails in Azure with 500 InvalidResourceName; a child folder under such a path fails the same way",
+      "question": "Why does creating a folder in Asset Management on Azure Blob storage return 500 InvalidResourceName?",
+      "questions": [
+        "Which folder names make POST /api/assets/folder return 500 on the Azure Blob provider?",
+        "Does a space in a folder name break folder creation on Azure Blob asset storage?",
+        "Does a child folder in a newly created folder fail on Azure Blob assets?"
+      ],
+      "anchors": [
+        "POST /api/assets/folder"
+      ],
+      "scope": [
+        "provider=azure-blob",
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
