@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T13:37:08.275Z",
-  "count": 2197,
+  "generated": "2026-11-23T13:51:09.269Z",
+  "count": 2198,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24664,6 +24664,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7DE1F1A5",
+      "path": "entries/KB-7DE1F1A5.md",
+      "subject": "The header Organizations panel search is a wrapper div (data-test-id organizations-search) around an input whose placeholder and aria-label are both \"Search organizations\", and it renders only for buyers with more than 10 organizations",
+      "question": "What are the placeholder and the DOM shape of the search field in the storefront header Organizations panel, and when does it render?",
+      "anchors": [
+        "Query.me.contact.organizations"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=multi-organization-member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
