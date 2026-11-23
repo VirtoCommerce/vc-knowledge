@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T12:49:26.614Z",
-  "count": 2192,
+  "generated": "2026-11-23T12:53:37.288Z",
+  "count": 2193,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7064,6 +7064,29 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-24469A0C",
+      "path": "entries/KB-24469A0C.md",
+      "subject": "Picking an organization in the header Organizations panel after its membership was locked while the panel was open signs the buyer out: the switch's refresh_token call returns 400 and the storefront reloads as guest, with no error in the panel",
+      "question": "What does the storefront do when a buyer picks an organization in the header Organizations panel that was locked after the panel loaded?",
+      "questions": [
+        "Does the org switcher show an error when the target membership was locked meanwhile?",
+        "Why is the buyer signed out after switching to a just-locked organization?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "POST /api/customer/organization-memberships/{id}/lock",
+        "Query.me.contact.organizations"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=multi-organization-member"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-2451697E",
