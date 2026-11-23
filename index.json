@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T11:55:52.141Z",
-  "count": 2188,
+  "generated": "2026-11-23T12:05:23.303Z",
+  "count": 2189,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30353,6 +30353,28 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9B79185C",
+      "path": "entries/KB-9B79185C.md",
+      "subject": "POST /api/assets/folder creates a child folder inside a freshly created parent (204); names failing the lowercase/digits/spaces/single-dash rule get 400, not 500",
+      "question": "Does creating a child folder inside a newly created folder in Asset Management succeed, and what happens with invalid folder names?",
+      "questions": [
+        "Does Asset Management return 500 when creating a nested folder?",
+        "What does POST /api/assets/folder return for an uppercase or dotted folder name under a parent?",
+        "Which parentUrl does the Admin SPA send when creating a subfolder?"
+      ],
+      "anchors": [
+        "POST /api/assets/folder"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
