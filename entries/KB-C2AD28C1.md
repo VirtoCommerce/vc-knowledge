@@ -52,5 +52,14 @@ evidence:
     defect: VCST-6683
     who: kutasinaelena
     note: "Same on the customer profile Sales statistics block (/company/my-customers/{orgId}, SalesRepMonthlyOrderStatistics): TechFlow Nov = 2 orders / 1556.50 (status-only Cancelled 555.50 counted, buyer-created 999.90 not counted); AcmeWest Nov = 2 / 400.80 (IsCancelled 777.70 excluded)."
+  - method: observation
+    deployment: vcptcore_qa
+    build: 36b0ead443a99f6c
+    conditions: module:VirtoCommerce.SalesRep=3.1026.0-pr-38-5280; theme=2.63.0-pr-2635-8318; store=B2B-store
+    at: 2026-11-23T22:32:41.873Z
+    by: session:2d819cd0
+    bodyHash: c3332901769b
+    who: kutasinaelena
+    note: "Parent org excludes its child division's rep orders on all three surfaces: API salesRepCustomerOrderStatistics(parent) YTD 9 / 1041.20 while child YTD 4 / 523.80; the customer profile Sales statistics block (Current year) and /company/customer-sales?customer=<parent>&period=year both show Sales $1K, Orders 9, AOV $116, Average $104 / closed month — identical."
 ---
 2026-11-03, store B2B-store. Created via POST /api/order/customerOrders (admin token), all in the current month: three normal orders with customerId = a sales rep's ApplicationUser id (two in one served org, one in another), one with isCancelled=true + status Processing, one with status "Cancelled" + isCancelled=false (555.50), and one in a served org with customerId = a buyer of that org (999.90). Then, as the rep on POST /graphql/sales-rep, salesRepCustomerOrderStatistics period(month-to-date) went from 0 to 4 orders / 1957.30: the three normal orders plus the status-only Cancelled one. The isCancelled=true order and the buyer-created order were not counted, on the dashboard (organizationId omitted) and per organization. Status alone does not exclude an order; only the IsCancelled flag does, and attribution is by order.CustomerId = the rep's user id, not by organization. Per-organization figures for a parent organization did not include its child division's orders (parent stayed 0 while the child showed 2 / 400.80).

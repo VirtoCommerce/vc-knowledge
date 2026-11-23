@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T22:29:14.488Z",
-  "count": 2204,
+  "generated": "2026-11-23T22:34:02.857Z",
+  "count": 2205,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37353,6 +37353,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BCAD6E81",
+      "path": "entries/KB-BCAD6E81.md",
+      "subject": "A non-rep buyer opening /company/my-customers/{own orgId} is redirected to /account/dashboard; no Sales Rep Hub section and no salesRep* GraphQL operation is sent",
+      "question": "What happens when a buyer without sales-rep access opens the Sales Rep Hub customer profile URL of their own organization?",
+      "questions": [
+        "Does a non-rep buyer see the Sales statistics block on /company/my-customers/{orgId}?",
+        "Is SalesRepMonthlyOrderStatistics sent for a buyer without sales-rep:access?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Query.salesRepCustomerOrderStatistics"
+      ],
+      "scope": [
+        "role=buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
