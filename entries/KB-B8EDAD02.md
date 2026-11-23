@@ -75,5 +75,14 @@ evidence:
     bodyHash: 78954f88e40d
     who: Aleksandra-Mitricheva
     note: "2026-11-11: POST .../organization-memberships/{id}/lock read back isLocked=true (status stayed Approved); /unlock read back isLocked=false; sibling memberships untouched. Admin token from a bare password grant."
+  - method: observation
+    deployment: vcst_qa
+    build: 2b7c46e6924efca5
+    conditions: module:VirtoCommerce.Customer=3.1033.0
+    at: 2026-11-23T08:20:41.492Z
+    by: session:7ce2b8e4
+    bodyHash: 78954f88e40d
+    who: Lenajava1
+    note: "2026-11-23 vcst: POST /api/customer/organization-memberships/{id}/lock {lockoutEnd:null} -> 200, GET .../{id} isLocked=true status Approved, xAPI isLockedForCurrentUser true; POST .../{id}/unlock with NO body -> 200, isLocked=false. Sibling memberships untouched."
 ---
 On vcst_qa 2026-10-23 (Customer 3.1030.0), for a fresh AGENT-TEST contact created with organizations=[A,B] and one membership row per org (POST /api/customer/organization-memberships with an org-scoped role): POST /api/customer/organization-memberships/{id}/lock with {lockoutEnd:null} read back isLocked=true, POST .../{id}/unlock read back isLocked=false; GET the row then PUT /api/customer/organization-memberships/{id} with the whole row and status=Invited read back Invited, and the same PUT with Approved restored it. GET /api/members/{contactId}, set currentOrganizationId, PUT /api/members read back the new currentOrganizationId. The other membership was untouched.

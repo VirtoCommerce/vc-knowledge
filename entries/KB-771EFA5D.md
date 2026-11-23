@@ -22,5 +22,14 @@ evidence:
     at: 2026-11-10T13:01:13.086Z
     by: session:5730f825
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcst_qa
+    build: 2b7c46e6924efca5
+    conditions: module:VirtoCommerce.WhiteLabeling=3.1007.0
+    at: 2026-11-23T08:20:41.539Z
+    by: session:7ce2b8e4
+    bodyHash: eee2e2d99f0e
+    who: Lenajava1
+    note: "2026-11-23 vcst (WhiteLabeling 3.1007.0): swagger still lists only GET /{id}, GET /organization/{organizationId}, GET /store/{storeId}, POST/PUT /api/white-labeling. POST /api/white-labeling {organizationId,isEnabled,themePresetName} -> 200 and GET /organization/{id} read it back with its id."
 ---
 The White Labeling module's swagger (/docs/VirtoCommerce.WhiteLabeling/swagger.json) lists only GET /api/white-labeling/{id}, GET /api/white-labeling/organization/{organizationId}, GET /api/white-labeling/store/{storeId} and POST/PUT /api/white-labeling. POST /api/white-labeling/search returns 405 and /api/whitelabeling/search returns 404, so there is no search. To find the orgs that use a preset, list the organizations (POST /api/members/search with memberType=Organization) and call GET /api/white-labeling/organization/{id} for each one. An org with no setting returns an empty body. Each setting carries themePresetName and isEnabled. Anonymous Query.whiteLabelingSettings(storeId:"B2B-store") returned the store-level preset (Mercury) on this stand, while several orgs held their own presets (Watermelon, Coffee, Purple Pink, black-gold, …).
