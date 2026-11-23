@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T13:32:45.880Z",
-  "count": 2196,
+  "generated": "2026-11-23T13:37:08.275Z",
+  "count": 2197,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12260,6 +12260,24 @@
       ],
       "scope": [
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3F1B8798",
+      "path": "entries/KB-3F1B8798.md",
+      "subject": "On the /403 Access denied page a multi-org buyer still gets the header Organizations control; the account menu popup no longer lists Organizations (only the user name and Logout)",
+      "question": "Does the storefront header Organizations control show on the /403 Access denied page, and does the account menu still contain an Organizations switcher?",
+      "anchors": [
+        "/403",
+        "Query.me.contact.organizations"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=multi-organization-member"
       ],
       "plane": "experiential",
       "status": "active",
