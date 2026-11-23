@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T09:12:17.707Z",
-  "count": 2187,
+  "generated": "2026-11-23T09:25:56.739Z",
+  "count": 2188,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -28144,6 +28144,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8FF8B302",
+      "path": "entries/KB-8FF8B302.md",
+      "subject": "Sales Rep Hub call link: an extension after x / ext / ext. / extension / # (spaces or ':' only) dials after a comma pause; a '-', '=' or '.' separator or a trailing dot is still glued into the number",
+      "question": "/company/my-customers call control tel: href for a phone extension written x-45 or ext-45 — is the extension split off or glued?",
+      "questions": [
+        "Which phone extension spellings does the Sales Rep Hub call link recognise?",
+        "What tel: target does a stored number '+1-555-040-5060 x45' get on the customer profile Phone row?",
+        "Does the Sales Rep Hub dial a phone extension after a pause or glue it to the number?"
+      ],
+      "anchors": [
+        "/company/my-customers",
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
