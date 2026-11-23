@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T22:34:02.857Z",
-  "count": 2205,
+  "generated": "2026-11-23T23:40:29.267Z",
+  "count": 2206,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -48905,6 +48905,25 @@
         "/account/missions"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F5DF5D55",
+      "path": "entries/KB-F5DF5D55.md",
+      "subject": "On the Sales Rep customer profile, the Sales statistics block shows only three KPI tiles for a closed quarter (Q3), leaving the fourth grid cell empty",
+      "question": "How many KPI tiles does the Sales statistics block on /company/my-customers/:id render for a closed quarter, and does the two-column grid stay filled?",
+      "anchors": [
+        "/company/my-customers/{id}",
+        "/company/customer-sales"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-plugin",
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
