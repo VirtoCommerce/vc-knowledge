@@ -120,5 +120,14 @@ evidence:
     bodyHash: 9e8fee29dd1b
     who: Lenajava1
     note: "REG-2026-11-18-1510 suite 105 OTP-042..051 on Customer 3.1033.0: A Deleted -> otp_email 200 claim B and currentOrganizationId persisted to B; all Invited / all Deleted -> 400 with one errors[] entry (user_invitation_pending_in_organization / user_is_removed_from_organization); A removed or locked + B Rejected -> 200 with no organization_id claim on both otp_email and password; A locked as current org -> 200 claim B and current written to B, both locked -> 200 no claim, current unchanged; wrong code with locked A -> 400 invalid_code, no org write; globally locked account -> 400 user_is_locked_out only."
+  - method: observation
+    deployment: vcst_qa
+    build: 2b7c46e6924efca5
+    conditions: platform=3.1099.0; module:VirtoCommerce.Customer=3.1033.0; store=B2B-store
+    at: 2026-11-23T13:13:06.070Z
+    by: session:7ce2b8e4
+    bodyHash: 9e8fee29dd1b
+    who: Lenajava1
+    note: "2026-11-23: a refresh token minted before POST /api/customer/organization-memberships/{id}/lock returned 400 invalid_grant ID2018 'no longer valid' with no org code, both for the locked org and for an unlocked org of the same buyer. The password grant with organization_id = the locked org returned 200 and fell back to another org."
 ---
 On vcptcore_qa1 running VirtoCommerce.Customer 3.1030.0-pr-321-c54f (PR build of vc-module-customer#321), a disposable buyer with memberships in org A and org B signed in with organization_id=A on every call. For the otp_email grant (fresh code per scenario from POST /api/otp/request) and the password grant, results were identical. Both active: 200 with claim A. Removed from A: 200 with claim B. Locked in A: 200 with claim B. Membership Invited, Rejected or Deleted in A: 200 with claim B. Locked in both: 200 with no organization_id claim. Rejected in both: 400 invalid_grant, code user_is_rejected_in_organization. grant_type=refresh_token with organization_id=A while locked in A: 400 invalid_grant, code user_is_locked_in_organization, so an explicit switch still gets no fallback. Before the fix (3.1029.0) the removed-from-A otp_email case returned 400 invalid_grant; see KB-ED213173.
