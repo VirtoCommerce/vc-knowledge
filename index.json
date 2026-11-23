@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T08:33:33.152Z",
-  "count": 2186,
+  "generated": "2026-11-23T09:12:17.707Z",
+  "count": 2187,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -49520,6 +49520,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FB50A110",
+      "path": "entries/KB-FB50A110.md",
+      "subject": "Sorting /company/my-customers by YTD purchases (sort ytd-purchases / ytd-purchases:asc) keeps each organization's phone, primaryContact.phones, order statistics and Call customer control on its own row",
+      "question": "Does sorting the Sales Rep My customers list by YTD purchases keep each customer's call options and numbers on the right row?",
+      "questions": [
+        "Does Query.salesRepCustomers with sort ytd-purchases still return phone and primaryContact.phones?",
+        "After clicking the YTD purchases header on /company/my-customers, do Call customer links move to another customer?"
+      ],
+      "anchors": [
+        "/company/my-customers",
+        "Query.salesRepCustomers"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
