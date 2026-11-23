@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T08:30:25.944Z",
-  "count": 2185,
+  "generated": "2026-11-23T08:33:33.152Z",
+  "count": 2186,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13837,7 +13837,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -30749,6 +30749,27 @@
       "scope": [
         "integration=ga4",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9D6EEFF5",
+      "path": "entries/KB-9D6EEFF5.md",
+      "subject": "In the desktop header Organizations panel (theme PR 2667), a search phrase that matches other orgs keeps the current organization pinned first, but a phrase that matches nothing shows an empty list with \"No results found\" and drops the current organization",
+      "question": "Does the header Organizations panel search keep the current organization in the list when the phrase does not match it?",
+      "questions": [
+        "Why does the current organization appear in the org switcher search results when its name does not match?",
+        "What does the header Organizations panel show when the search phrase matches no organization?"
+      ],
+      "anchors": [
+        "Query.me.contact.organizations"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=multi-organization-member"
       ],
       "plane": "experiential",
       "status": "active",
