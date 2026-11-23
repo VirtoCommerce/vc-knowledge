@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T12:53:37.288Z",
-  "count": 2193,
+  "generated": "2026-11-23T13:06:04.454Z",
+  "count": 2194,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11929,6 +11929,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3DD840C8",
+      "path": "entries/KB-3DD840C8.md",
+      "subject": "On the Azure Blob asset provider, POST /api/assets/folder with a parentUrl whose host is not the blob account returns 500 InvalidResourceName, even for valid folder names",
+      "question": "Why does creating a child folder fail with 500 InvalidResourceName on Azure Blob assets when the parent was created fine?",
+      "questions": [
+        "Does a CDN or public URL on Azure Blob assets break creating subfolders?",
+        "What happens when parentUrl in POST /api/assets/folder points to a CDN host?"
+      ],
+      "anchors": [
+        "POST /api/assets/folder"
+      ],
+      "scope": [
+        "provider=azure-blob",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
