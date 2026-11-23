@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T13:18:49.459Z",
-  "count": 2195,
+  "generated": "2026-11-23T13:32:45.880Z",
+  "count": 2196,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37280,6 +37280,27 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BDC577C1",
+      "path": "entries/KB-BDC577C1.md",
+      "subject": "The header Organizations panel renders a locked organization row disabled with a lock-closed icon and a title tooltip \"This organization is locked. Contact your administrator for access.\"",
+      "question": "Does a locked organization row in the storefront header Organizations panel carry a tooltip, and what text?",
+      "questions": [
+        "Is the locked org row in the Organizations panel announced or tooltipped?",
+        "What text does the lock tooltip show in the org switcher?"
+      ],
+      "anchors": [
+        "Query.me.contact.organizations"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=multi-organization-member"
       ],
       "plane": "experiential",
       "status": "active",
