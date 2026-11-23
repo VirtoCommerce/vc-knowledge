@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T08:20:48.589Z",
-  "count": 2183,
+  "generated": "2026-11-23T08:22:15.746Z",
+  "count": 2184,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24695,6 +24695,31 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7EF291B3",
+      "path": "entries/KB-7EF291B3.md",
+      "subject": "POST /api/white-labeling stores any themePresetName verbatim, including one absent from the WhiteLabeling.ThemePresetNames dictionary, and xAPI whiteLabelingSettings returns it unchanged",
+      "question": "Does POST /api/white-labeling reject an organization themePresetName that is not in the WhiteLabeling.ThemePresetNames setting's allowed values?",
+      "questions": [
+        "Can I set an organization's theme preset to Paprika through REST when the admin dictionary does not list it?",
+        "Is themePresetName validated against WhiteLabeling.ThemePresetNames on save?",
+        "Does whiteLabelingSettings normalise the case of themePresetName?"
+      ],
+      "anchors": [
+        "POST /api/white-labeling",
+        "GET /api/white-labeling/organization/{id}",
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "module=whitelabeling",
+        "surface=rest",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
