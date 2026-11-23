@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T18:33:54.063Z",
-  "count": 2198,
+  "generated": "2026-11-23T18:35:23.963Z",
+  "count": 2199,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16735,7 +16735,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -23231,6 +23231,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-77AB9082",
+      "path": "entries/KB-77AB9082.md",
+      "subject": "In the storefront mobile menu (Corporate > My organizations), an organization whose membership is currently locked renders as a disabled radio with a padlock and a 'locked' title, and a tap on it issues no token request and changes nothing",
+      "question": "Is a locked organization guarded in the storefront mobile menu Corporate > My organizations list?",
+      "questions": [
+        "Can a buyer tap a locked organization in the mobile My organizations menu and get signed out?",
+        "Does the mobile organization list show a lock icon for a locked membership?",
+        "Is the mobile org switcher missing the locked-organization guard the desktop panel has?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.me.contact.organizations",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=multi-organization-member",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
