@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T12:06:47.197Z",
-  "count": 2190,
+  "generated": "2026-11-23T12:14:57.681Z",
+  "count": 2191,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13216,6 +13216,24 @@
         "module=platform-security",
         "surface=rest-api",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-44569BCB",
+      "path": "entries/KB-44569BCB.md",
+      "subject": "xAPI updateUser ignores privileged fields for a caller without platform:security:update, returns Forbidden on any non-own id, and keeps full behavior for admins.",
+      "question": "What does the xAPI updateUser mutation do when an unprivileged storefront customer submits privileged fields (userType, roles, passwordHash, securityStamp, memberId, storeId, lockout/2FA) or targets another user?",
+      "anchors": [
+        "POST /graphql",
+        "Mutations.updateUser"
+      ],
+      "scope": [
+        "module=profileexperienceapi",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
