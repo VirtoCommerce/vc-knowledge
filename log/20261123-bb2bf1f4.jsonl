@@ -26,3 +26,4 @@
 {"at":"2026-11-23T09:43:08.042Z","kind":"confirm","id":"KB-8FF8B302","deployment":"vcptcore_qa","trust":2,"build":"d2e74dabf8137f00","client":"28251107","via":"mcp","call":"toolu_01XqQCvXHXcwc9Hmsc8x8EZT","topic":"sales rep call customer extension","who":"kutasinaelena","agent":"test-management-specialist"}
 {"at":"2026-11-23T09:56:52.428Z","kind":"show","id":"KB-8FF8B302","state":"answer","verify":true,"via":"mcp","call":"toolu_01CJTnK4uF1Qt7DvZNdroyzN","topic":"sales rep call customer phone","who":"kutasinaelena","agent":"qa-frontend-expert"}
 {"at":"2026-11-23T09:56:57.510Z","kind":"confirm","id":"KB-8FF8B302","deployment":"vcptcore_qa","trust":2,"build":"d2e74dabf8137f00","client":"28251107","via":"mcp","call":"toolu_011SWLaH9oUAKcZCZ3zBV54T","topic":"sales rep call customer phone","who":"kutasinaelena","agent":"qa-frontend-expert"}
+{"at":"2026-11-23T21:04:19.952Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
