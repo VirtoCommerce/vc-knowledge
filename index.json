@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-24T11:22:55.352Z",
-  "count": 2215,
+  "generated": "2026-11-24T13:39:24.707Z",
+  "count": 2216,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12644,6 +12644,29 @@
       ],
       "scope": [
         "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3FF3494F",
+      "path": "entries/KB-3FF3494F.md",
+      "subject": "On /catalog the Select branch modal is opened from the 'Available at branches' toolbar checkbox (guest, desktop) or the filters sidebar (mobile); its search field wrapper had a square background and 2px end padding until theme PR 2680",
+      "question": "Where is the Select branch modal opened on the storefront, and does its search field wrapper carry its own background?",
+      "questions": [
+        "How do I open the Available at branches modal on the catalog?",
+        "Why do square corners show behind the branch search input in the Select branch modal?",
+        "Does the branch search wrapper overhang the input in the Select branch modal?"
+      ],
+      "anchors": [
+        "/catalog",
+        "Query.pageContext"
+      ],
+      "scope": [
+        "design=classic",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
