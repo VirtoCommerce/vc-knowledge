@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-24T17:29:12.162Z",
-  "count": 2219,
+  "generated": "2026-11-24T17:35:27.261Z",
+  "count": 2220,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -15265,7 +15265,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -15868,6 +15868,25 @@
       "scope": [
         "module=virtocommerce.pagebuildermodule",
         "surface=admin-page-builder-designer"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4F20FA4F",
+      "path": "entries/KB-4F20FA4F.md",
+      "subject": "A sendCustomerCommunication to 1000 served organizations is accepted and takes about 112 seconds",
+      "question": "Does a 1000-organization sendCustomerCommunication complete, and how long does it take?",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "/graphql/sales-rep",
+        "Query.salesRepCustomers"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -50783,7 +50802,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
