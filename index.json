@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-24T00:00:16.579Z",
-  "count": 2209,
+  "generated": "2026-11-24T00:11:50.391Z",
+  "count": 2210,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18297,6 +18297,28 @@
       ],
       "scope": [
         "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5A015D94",
+      "path": "entries/KB-5A015D94.md",
+      "subject": "A currency whose platform record has no symbol renders money as \"¤<amount>\" in xAPI formattedAmount (e.g. salesRepCustomerOrderStatistics with currencyCode EUR)",
+      "question": "Why does formattedAmount show \"¤\" instead of the currency sign for a non-default currency?",
+      "questions": [
+        "formattedAmount ¤ symbol EUR",
+        "what does xAPI money formatting fall back to when the currency symbol is empty",
+        "salesRepCustomerOrderStatistics currencyCode EUR formattedAmount wrong sign"
+      ],
+      "anchors": [
+        "GET /api/currencies",
+        "Query.salesRepCustomerOrderStatistics"
+      ],
+      "scope": [
         "surface=xapi"
       ],
       "plane": "experiential",
