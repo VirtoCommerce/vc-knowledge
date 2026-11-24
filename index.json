@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-23T23:44:52.760Z",
-  "count": 2206,
+  "generated": "2026-11-24T00:00:16.579Z",
+  "count": 2209,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -43,6 +43,22 @@
         "KB-A3004A3B",
         "KB-F0C5CA5E"
       ],
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-00179371",
+      "path": "entries/KB-00179371.md",
+      "subject": "On SalesRep 3.1026.0-pr-38 the /company/dashboard Save layout sends saveLayout(scope salesRepDashboard) with four regions including fullWidth, rail blocks in mainRight and maxRows settings on column blocks",
+      "question": "What does Save layout on /company/dashboard send in saveLayout on SalesRep 3.1026?",
+      "anchors": [
+        "/company/dashboard"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -17292,7 +17308,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -43185,6 +43201,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-DB9F0923",
+      "path": "entries/KB-DB9F0923.md",
+      "subject": "On /company/customer-sales the Last-year switches are exposed as two plain buttons each (same accessible name, no pressed/checked state), and \"Show as table\" is a details/summary disclosure with no button role in the accessibility snapshot",
+      "question": "What role and state do the Last year switches and Show as table control expose on the Reporting page?",
+      "anchors": [
+        "/company/customer-sales"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DBA1110A",
       "path": "entries/KB-DBA1110A.md",
       "subject": "The salesRepActivities logins category counts every GA `login` event of a customer session with no success filter, so a failed storefront sign-in (login with success=false) is counted as a login",
@@ -45263,6 +45296,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-E6F61C02",
+      "path": "entries/KB-E6F61C02.md",
+      "subject": "On /company/customer-sales the Average order value chart draws the current month as a plain to-date bar with no dashed projection outline, and its legend has no \"Projected month end\" entry, while the Monthly sales chart has both",
+      "question": "Does the Reporting page's Average order value chart show the current-month projection outline like the Monthly sales chart?",
+      "anchors": [
+        "/company/customer-sales"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E7007F44",
       "path": "entries/KB-E7007F44.md",
       "subject": "loyaltyMissionProgress returns items[].product null for a PerSku target whose product was deleted; an inactive product still returns flags",
@@ -45978,7 +46028,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
