@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-24T17:18:33.854Z",
-  "count": 2218,
+  "generated": "2026-11-24T17:29:12.162Z",
+  "count": 2219,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -34036,6 +34036,26 @@
         "POST /connect/token"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-AC6091B6",
+      "path": "entries/KB-AC6091B6.md",
+      "subject": "The Sales Rep Hub Send a message popup fetches its Customers options once per page load; a served-set change made meanwhile is not reflected until a full reload, while My customers refetches",
+      "question": "Does the Send message popup's Customers options refresh after the rep's served organizations change while the storefront page stays open?",
+      "anchors": [
+        "/company/my-customers",
+        "Query.salesRepCustomers",
+        "Mutation.sendCustomerCommunication"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
