@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-24T14:22:50.272Z",
-  "count": 2217,
+  "generated": "2026-11-24T17:18:33.854Z",
+  "count": 2218,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -40566,6 +40566,25 @@
       "trust": 2,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-CD6FC58A",
+      "path": "entries/KB-CD6FC58A.md",
+      "subject": "Sales Rep Hub customer pickers request salesRepCustomers with first:1000, and a granted customer outside the served set stays listed and untickable in List Share",
+      "question": "How do the Sales Rep Hub Customers pickers (Send a message popup, List Share > Specific customers, task customer select) list customers — what page size does Query.salesRepCustomers get, and how is a customer that is not in the fetched options shown?",
+      "anchors": [
+        "Query.salesRepCustomers",
+        "/company/my-customers"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "role=sales-rep",
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-CD888E52",
