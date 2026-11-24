@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-24T00:11:50.391Z",
-  "count": 2210,
+  "generated": "2026-11-24T07:23:41.073Z",
+  "count": 2211,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -21261,6 +21261,30 @@
         "surface=admin-spa",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6B11225A",
+      "path": "entries/KB-6B11225A.md",
+      "subject": "On /company/my-customers/{id}, the Sales statistics block shows spinner overlays over its tiles and both charts while SalesRepMonthlyOrderStatistics is pending (dimmed $0/0/— placeholders beneath, no aria-busy), and on an HTTP 500 replaces its content with \"Couldn't load the report. Try again later.\" while the rest of the profile renders",
+      "question": "What does the Sales statistics block on the sales-rep customer profile show while SalesRepMonthlyOrderStatistics is slow, and when it fails?",
+      "questions": [
+        "Does the customer profile Sales statistics block have a loading overlay?",
+        "What happens to the sales rep customer profile when the monthly order statistics query returns 500?",
+        "Is a failed SalesRepMonthlyOrderStatistics isolated to the Sales statistics block?",
+        "Which localStorage key stores the Sales statistics period and what happens with an invalid value?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Query.SalesRepMonthlyOrderStatistics"
+      ],
+      "scope": [
+        "role=sales-representative",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
