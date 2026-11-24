@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-24T14:22:35.603Z",
-  "count": 2216,
+  "generated": "2026-11-24T14:22:50.272Z",
+  "count": 2217,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -31623,7 +31623,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -36216,6 +36216,28 @@
       "scope": [
         "component=header-search-bar",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B64A3F9D",
+      "path": "entries/KB-B64A3F9D.md",
+      "subject": "With a storefront build that has the Site Builder flag off, the Vue designer shows 'This storefront does not support the new Site Builder designer.' instead of the preview, and the section tree has no HEADER/FOOTER groups",
+      "question": "What does the Site Builder designer show when the store's storefront is a build without the Site Builder flag?",
+      "questions": [
+        "Why does the Site Builder designer preview not load on a flag-off storefront?",
+        "What message does the designer show when the storefront lacks Site Builder support?",
+        "Does the Site Builder designer work against a storefront built with the Site Builder flag off?"
+      ],
+      "anchors": [
+        "/apps/site-builder-shell",
+        "GET /api/site-builder/catalog"
+      ],
+      "scope": [
+        "surface=admin-designer"
       ],
       "plane": "experiential",
       "status": "active",
