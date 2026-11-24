@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-24T17:35:27.261Z",
-  "count": 2220,
+  "generated": "2026-11-24T17:53:11.053Z",
+  "count": 2221,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12622,6 +12622,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3FEA7B03",
+      "path": "entries/KB-3FEA7B03.md",
+      "subject": "A sales rep's sendCustomerCommunication push reaches the recipient's Query.pushMessages inbox only after several minutes (about 7–9 min on vcst), while the admin push record exists at once",
+      "question": "How long after Mutation.sendCustomerCommunication does the push appear in the recipient's Query.pushMessages inbox?",
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "Query.pushMessages",
+        "POST /api/push-message/search"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
