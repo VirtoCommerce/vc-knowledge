@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-24T11:09:23.039Z",
-  "count": 2213,
+  "generated": "2026-11-24T11:22:55.352Z",
+  "count": 2215,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2693,6 +2693,24 @@
       "scope": [
         "module=customer",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0C2D0809",
+      "path": "entries/KB-0C2D0809.md",
+      "subject": "On the hardened Profile xAPI, an anonymous role(roleName) query is denied with Unauthorized (needs platform:security:read), while an admin caller gets the role data.",
+      "question": "Does the xAPI role(roleName) GraphQL query require a security-read permission, and what does an anonymous caller get?",
+      "anchors": [
+        "POST /graphql",
+        "Query.role"
+      ],
+      "scope": [
+        "module=profileexperienceapi",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
@@ -25196,6 +25214,24 @@
         "module=sales-rep",
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8046CA98",
+      "path": "entries/KB-8046CA98.md",
+      "subject": "On the hardened Profile xAPI, updateContact on a contact in a different org, or on a same-org colleague without org-edit permission, is refused with Forbidden/Access denied.",
+      "question": "What does xAPI updateContact return when a storefront buyer targets a contact in another organization, or a same-org colleague without org-edit permission?",
+      "anchors": [
+        "POST /graphql",
+        "Mutations.updateContact"
+      ],
+      "scope": [
+        "module=profileexperienceapi",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
