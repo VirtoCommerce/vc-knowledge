@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-24T09:15:45.823Z",
-  "count": 2212,
+  "generated": "2026-11-24T11:09:23.039Z",
+  "count": 2213,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -14644,6 +14644,25 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4A7455B4",
+      "path": "entries/KB-4A7455B4.md",
+      "subject": "The xAPI createUser GraphQL mutation is blocked at the Cloudflare/nginx edge (HTTP 403) on vcptcore-stable before it reaches the ProfileExperienceApi module.",
+      "question": "Can the xAPI createUser GraphQL mutation be exercised against vcptcore-stable from outside, or is it blocked at the edge?",
+      "anchors": [
+        "POST /graphql",
+        "Mutations.createUser"
+      ],
+      "scope": [
+        "layer=edge-waf",
+        "module=profileexperienceapi",
+        "surface=xapi-graphql"
       ],
       "plane": "experiential",
       "status": "active",
