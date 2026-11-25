@@ -21,5 +21,14 @@ evidence:
     at: 2026-11-11T21:55:35.226Z
     by: session:7e403256
     who: kutasinaelena
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681
+    at: 2026-11-25T23:58:47.485Z
+    by: session:779b94fc
+    bodyHash: 9756e759f882
+    who: kutasinaelena
+    note: Personal and Company sign-up land on /successful-registration unauthenticated; password sign-in with the new credentials worked immediately and the header showed the user (and org) name.
 ---
 B2B-store with Stores.EmailVerificationEnabled=true and Stores.EmailVerificationRequired=false (read via GET /api/stores/B2B-store). A personal account registered on /sign-up lands on /successful-registration ('Registration completed ... check your mailbox to verify'). The security user reads back emailConfirmed=false, status Approved; its contact status is Approved (not Locked). Without confirming the email, signing in on /sign-in (password form) succeeds: POST /connect/token 200 and the header shows the user's name. So the verification mail is sent but sign-in is not gated on it.
