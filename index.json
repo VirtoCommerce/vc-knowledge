@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-25T11:00:33.233Z",
-  "count": 2226,
+  "generated": "2026-11-25T23:16:05.090Z",
+  "count": 2227,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -32505,6 +32505,25 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A3E4CB56",
+      "path": "entries/KB-A3E4CB56.md",
+      "subject": "PUT api/admin-shell/dashboard (global, personalization, roles/{id}, me) with a non-JSON or non-binding body answers 400 and writes nothing; a missing role answers 404",
+      "question": "What do PUT /api/admin-shell/dashboard/global, /personalization, /roles/{roleId} and /me answer to a malformed body or an unknown role id?",
+      "anchors": [
+        "PUT /api/admin-shell/dashboard/global",
+        "PUT /api/admin-shell/dashboard/roles/{id}",
+        "GET /api/admin-shell/dashboard"
+      ],
+      "scope": [
+        "role=administrator",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
