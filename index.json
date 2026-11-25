@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-25T10:22:11.844Z",
-  "count": 2224,
+  "generated": "2026-11-25T10:23:39.910Z",
+  "count": 2226,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9874,6 +9874,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-3296BF7D",
+      "path": "entries/KB-3296BF7D.md",
+      "subject": "A product page with a subscription plan shows One-time / Subscribe & Save cards and a frequency grid",
+      "question": "What does the storefront product page show for a product that has a subscription plan (subscriptionOffers)?",
+      "anchors": [
+        "Query.subscriptionOffers",
+        "/juniper-pantry-office-snack-box-24-packs"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-32EB25EF",
       "path": "entries/KB-32EB25EF.md",
       "subject": "A Site Builder page group with a reversed schedule (startDate after endDate) can never match the Active lifecycle filter or ActiveOn; it lists as Pending before its start and Archived once its end passes",
@@ -19730,6 +19747,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-622EC883",
+      "path": "entries/KB-622EC883.md",
+      "subject": "The /how-subscriptions-work page is reached by the How it works link on the product page, in the same tab",
+      "question": "What is the /how-subscriptions-work page and how is it reached?",
+      "anchors": [
+        "/how-subscriptions-work",
+        "/account/subscriptions"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-626BE57D",
       "path": "entries/KB-626BE57D.md",
       "subject": "With the VCST-6698 fix builds, member address Line1/Line2 accept up to 2048 chars on REST and xAPI; 2049 is rejected with a validation error (REST 400, xAPI VALIDATION) instead of 500",
@@ -28494,7 +28528,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
