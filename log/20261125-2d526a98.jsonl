@@ -1,0 +1,4 @@
+{"at":"2026-11-25T07:28:08.855Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Lenajava1"}
+{"at":"2026-11-25T07:28:57.065Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Lenajava1"}
+{"at":"2026-11-25T07:29:57.072Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"Lenajava1"}
+{"at":"2026-11-25T07:31:06.179Z","kind":"flush","entries":0,"lines":6,"swept":[],"retries":1,"ok":true,"convertedToConfirm":0,"who":"Lenajava1"}
