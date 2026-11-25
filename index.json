@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-25T10:22:03.198Z",
-  "count": 2222,
+  "generated": "2026-11-25T10:22:11.844Z",
+  "count": 2224,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4897,6 +4897,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-17684FE4",
+      "path": "entries/KB-17684FE4.md",
+      "subject": "An administrator still sees a Home widget that a role rule hides from other roles",
+      "question": "On the Admin Shell Home, does an administrator still see a widget that a per-role rule hides?",
+      "anchors": [
+        "GET /api/admin-shell/dashboard",
+        "PUT /api/admin-shell/dashboard/roles/{id}"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -19845,6 +19862,22 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-62F0D855",
+      "path": "entries/KB-62F0D855.md",
+      "subject": "The Dashboard Editor's Edit as JSON blade shows one document with roles keyed by role name",
+      "question": "What does the Dashboard Editor \"Edit as JSON\" blade (dashboard-configurator-json) contain and how are role rules keyed?",
+      "anchors": [
+        "GET /api/admin-shell/dashboard"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
