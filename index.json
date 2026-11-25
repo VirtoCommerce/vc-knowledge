@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-25T08:45:05.940Z",
-  "count": 2221,
+  "generated": "2026-11-25T10:22:03.198Z",
+  "count": 2222,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4150,6 +4150,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-142A02B4",
+      "path": "entries/KB-142A02B4.md",
+      "subject": "Admin Shell Dashboard Editor lists each widget with its required permission and a per-role hide rule with three choices",
+      "question": "How does the Admin Shell Dashboard Editor (#/dashboard-configurator) show and set widget rules per role?",
+      "anchors": [
+        "PUT /api/admin-shell/dashboard/roles/{id}"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
