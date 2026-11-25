@@ -1,0 +1,2 @@
+{"at":"2026-11-25T07:26:01.896Z","kind":"flush","ok":false,"attempts":1,"reason":"unreachable","code":"unreachable","who":"kutasinaelena"}
+{"at":"2026-11-25T07:27:13.093Z","kind":"flush","entries":0,"lines":19,"swept":["2d819cd0.jsonl","2d947a30.jsonl","6b074037.jsonl","7e403256.jsonl","895ac5e9.jsonl","fd62fab9.jsonl"],"retries":1,"ok":true,"convertedToConfirm":0,"who":"kutasinaelena"}
