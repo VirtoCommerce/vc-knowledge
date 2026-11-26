@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T11:46:06.995Z",
-  "count": 2278,
+  "generated": "2026-11-26T11:46:26.174Z",
+  "count": 2282,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6838,6 +6838,27 @@
         "role=sales-rep",
         "subject=canceled-task",
         "surface=graphql-xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-20B02BFE",
+      "path": "entries/KB-20B02BFE.md",
+      "subject": "On MCP protocol 2026-07-28, /admin/mcp is stateless: initialize is refused, and every request needs the Mcp-Method header (Mcp-Name for tools/call and resources/read) and _meta io.modelcontextprotocol/protocolVersion",
+      "question": "How must an MCP client call /admin/mcp with protocol version 2026-07-28?",
+      "questions": [
+        "Why does /admin/mcp answer Missing required Mcp-Method header?",
+        "Does /admin/mcp accept initialize on protocol 2026-07-28?"
+      ],
+      "anchors": [
+        "POST /admin/mcp",
+        "GET /connect/authorize"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -21835,6 +21856,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-6AF323AC",
+      "path": "entries/KB-6AF323AC.md",
+      "subject": "The Agent approvals \"What will change\" table for a Site Builder publish_page shows only status Draft -> Published, not the content that goes live",
+      "question": "What does Agent approvals show as the diff of an agent's Site Builder publish_page request?",
+      "anchors": [
+        "/apps/admin-shell#/mcp-approvals",
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6AF43C39",
       "path": "entries/KB-6AF43C39.md",
       "subject": "Sent push with memberIds reaches the recipient's xAPI inbox within seconds; xAPI item id equals the push message id",
@@ -32013,6 +32051,30 @@
       "scope": [
         "integration=ga4",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9D5D0005",
+      "path": "entries/KB-9D5D0005.md",
+      "subject": "Site Builder publish_page over /admin/mcp only creates a Pending change; a second user approves it in Admin Shell Agent approvals with a Confirm dialog, the page goes live, and the audit log shows the request as Waiting for approval plus the back-office approval",
+      "question": "What happens when an MCP agent calls Site Builder publish_page, and how is it approved and audited?",
+      "questions": [
+        "Does publish_page via /admin/mcp publish the page right away?",
+        "How does a second person approve an agent's Site Builder publication?",
+        "What does the Agent audit log show for an approved publish_page?"
+      ],
+      "anchors": [
+        "POST /admin/mcp",
+        "/apps/admin-shell#/mcp-approvals",
+        "/apps/admin-shell#/mcp-audit"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -45650,6 +45712,24 @@
       "scope": [
         "feature=organization-access-resolution",
         "grant=password",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E1030B1F",
+      "path": "entries/KB-E1030B1F.md",
+      "subject": "A page created and edited by an agent through Site Builder create_page and edit_page_draft on /admin/mcp shows in the Admin Shell Sites list as a Draft and its edit appears in the designer preview after a reload",
+      "question": "Does a page an agent creates or edits via /admin/mcp show up in the Site Builder designer?",
+      "anchors": [
+        "POST /admin/mcp",
+        "/apps/admin-shell#/content/site-builder-designer"
+      ],
+      "scope": [
+        "surface=admin-ui",
         "surface=rest"
       ],
       "plane": "experiential",
