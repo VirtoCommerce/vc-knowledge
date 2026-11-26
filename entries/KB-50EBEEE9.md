@@ -80,5 +80,14 @@ evidence:
     bodyHash: d0bf803f7f26
     who: kutasinaelena
     note: "Re-observed on theme 2.63.0-pr-2602: shipping address, delivery method, payment method and Place order all on /cart; after Place order the app lands on /checkout/completed with only the order number plus Show order / Home page. Manual (Cash) payment reveals the purchase order number textbox but Place order stayed enabled without it."
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681; store=B2B-store; role=personal account; browser=firefox
+    at: 2026-11-26T01:17:42.438Z
+    by: session:779b94fc
+    bodyHash: d0bf803f7f26
+    who: kutasinaelena
+    note: "Order CO261126-00004 (CyberSource inline form on /cart, Fixed Rate Air): whole checkout on /cart, only route change /cart -> /checkout/completed (order number + Show order/Home page). createOrderFromCart status 'Payment required'; authorizePayment isSuccess true with 'held for review by Decision Manager', order detail still 'Payment required' with Pay now. The order's shipping address was added to the personal address book."
 ---
 On vcst-qa (B2B-store, Ver. 2.58.0-pr-2467) the /cart page carries the whole checkout: Shipping details (Delivery option Pickup/Shipping, Shipping address, Delivery method), Payment details (Billing address with a 'Same as shipping address' checkbox checked by default, Payment method), Order comment, and the Place order button in the Order summary sidebar. There is no /checkout route to navigate to; on success the app lands on /checkout/completed showing 'Order <number> has been successfully submitted.' plus a 'Show order' link to /account/orders/<order-guid>. Place order stays disabled with 'Complete all required information to proceed.' until shipping address + delivery method + payment method are all set. With no saved address, the 'select a shipping address' control opens a 'New address' dialog directly rather than a picker; Country must be chosen from the combobox before State/Province is enabled, and State/Province only becomes required once a country is picked. Delivery methods offered: Fixed Rate (Ground) $150.00 and Fixed Rate (Air). Payment methods offered: Bank card (Authorize.Net), Bank card (CyberSource), Bank card (Datatrans), Manual, Pay with points, Bank card (Skyflow). Choosing 'Manual' reveals an extra 'Enter a purchase order number' textbox in Payment details and re-disables Place order. The placed order opens in status 'New' and still shows a 'Pay now' button, i.e. placing and paying are separate steps. Verified end to end by placing order CO260919-00028.
