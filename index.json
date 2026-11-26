@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T02:32:47.470Z",
-  "count": 2242,
+  "generated": "2026-11-26T02:39:36.350Z",
+  "count": 2243,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3910,7 +3910,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -14019,6 +14019,28 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-46D761CC",
+      "path": "entries/KB-46D761CC.md",
+      "subject": "A new keyword submitted from the header search bar while on /search with an active facet keeps the facets URL param, so the new query runs filtered",
+      "question": "Does an active facet filter on /search carry over when a new query is submitted from the header search bar?",
+      "questions": [
+        "Are search facets reset when the search term changes on the storefront?",
+        "Why does a new search return 0 results right after filtering by brand?"
+      ],
+      "anchors": [
+        "/search",
+        "Query.products"
+      ],
+      "scope": [
+        "component=header-search-bar",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -24578,7 +24600,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 9,
+      "trust": 10,
       "disputed": 0
     },
     {
@@ -50667,7 +50689,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {

@@ -48,5 +48,14 @@ evidence:
     bodyHash: fe3b4000528c
     who: Lenajava1
     note: "Re-observed on theme 2.61.0-alpha.2605 as qa-agent personal user on Firefox: QA-OOS-001 PDP (/seed-test-fixtures/agent-test-oos-fixture) shows price $19.99 and 'Stock alert' button, no stepper, no In stock / Out of stock label. SKU search for QA-OOS-001 returns no results while 'Show in stock' is on (default); with it off the product is found."
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: theme=2.63.0-alpha.2681; platform=3.1101.0; store=B2B-store
+    at: 2026-11-26T02:36:18.350Z
+    by: session:779b94fc
+    bodyHash: fe3b4000528c
+    who: kutasinaelena
+    note: "Re-observed on theme 2.63.0-alpha.2681 (Firefox, signed-in personal account): QA-OOS-001 PDP price $19.99, 'Stock alert' in place of stepper, no In stock/Out of stock label."
 ---
 Signed-in buyer, theme 2.59.0, product qty 0: 'Price and delivery' shows the price and a 'Stock alert' (crossed-bell) subscribe button in place of the quantity stepper; no 'Out of stock' text. Catalog cards show 'Stock alert' + 'Click to receive an alert'. On a theme 2.51.2 store (anonymous) the out-of-stock product page shows a disabled stepper and an 'Out of stock 0' badge instead. Tests that require an explicit 'Out of stock' label must accept the Stock alert CTA when back-in-stock is on.

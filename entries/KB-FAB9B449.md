@@ -31,5 +31,14 @@ evidence:
     bodyHash: f03fadf7cd33
     who: kutasinaelena
     note: Picked Barclays' Center (620 Atlantic Ave) via keyword search; Pickup point row reads '620 Atlantic Ave, New York, New York, 10054, United States of America', no name. AddOrUpdateCartShipment(pickupLocationId) errors[] empty, Shipping cost $0.00.
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681; role=personal customer
+    at: 2026-11-26T02:39:36.125Z
+    by: session:779b94fc
+    bodyHash: f03fadf7cd33
+    who: kutasinaelena
+    note: Picked Whole Foods Market Prospect Heights (115th) via Load more; row reads '57 7th Ave, New York, New York, 10018, United States of America', no name; reopen lists it first, checked, 'Showing 51 of 115'.
 ---
 Signed-in personal user, B2B-store, ALCOE2300 in cart, Pickup selected, map-mode Pick points modal (Load more, 50 per page, 100 after one Load more). After choosing Chelsea Market from the second batch and pressing Pick up here, the Pickup point row reads '75 9th Ave, New York, New York, 10005, United States of America' - the name Chelsea Market is not shown anywhere on the cart. Shipping cost stays $0.00. Reopening the modal lists Chelsea Market first with its radio checked (51 radios: the selected one prepended to the first 50), the search box empty and no chips; typing a term that matches nothing (AGENT-TEST-Westside Mall) leaves only the selected location in the list, and the field's Clear button restores the 51 entries with no Reset search button.

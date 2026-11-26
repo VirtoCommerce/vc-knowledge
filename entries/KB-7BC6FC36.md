@@ -90,5 +90,15 @@ evidence:
     bodyHash: 7d17b2f3b058
     who: Lenajava1
     note: "REG-2026-11-19-1857 chrome, flag-off storefront build 2630: USD->GBP on USD-only (GBP/CZK missing) Canon PDP shows Price GBP 0.00, disabled stepper, In stock 9042, no unavailability message; related 'Customers bought together' cards GBP 0.00. CAT-054 fails."
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: theme=2.63.0-alpha.2681; platform=3.1101.0; store=B2B-store; role=personal account
+    at: 2026-11-26T02:37:33.270Z
+    by: session:779b94fc
+    bodyHash: 7d17b2f3b058
+    defect: VCST-6605
+    who: kutasinaelena
+    note: "Still present on theme 2.63.0-alpha.2681, Firefox, personal account: USD->EUR on USD-only PEPSI 201482 PDP shows Price €0.00, disabled stepper, In stock 906, no unavailability message; related cards €0.00."
 ---
 Signed-in buyer, store with USD+EUR. Product priced only in USD (xAPI EUR price.actual 0, isBuyable false). Header currency -> EUR: product page 'Price and delivery' reads 'Price: €0.00', quantity stepper and input disabled, in-stock badge still shown, no message that the product is unavailable in this currency. The cart (converted to EUR) shows that line at €0.00; catalog cards show '€0.00'. A product with an EUR price shows its EUR price-list value, not a conversion.
