@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T09:55:47.585Z",
-  "count": 2268,
+  "generated": "2026-11-26T10:01:45.039Z",
+  "count": 2270,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2071,7 +2071,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14409,6 +14409,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-47A4FE64",
+      "path": "entries/KB-47A4FE64.md",
+      "subject": "After 'Clear all' on /compare, a signed-in buyer's empty state shows a 'Restore products' button; a guest's fresh empty list shows an 'Add products' link to /catalog",
+      "question": "What does the /compare empty state offer right after Clear all for a signed-in buyer, versus a fresh guest?",
+      "questions": [
+        "Is there an undo / restore after clearing the compare list?",
+        "Why does the /compare empty state show 'Restore products' instead of 'Add products'?"
+      ],
+      "anchors": [
+        "/compare",
+        "Mutation.removeCompareListItems"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -37987,7 +38008,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -38100,7 +38121,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-BAFA4213",
@@ -49037,6 +49059,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F0E06A8A",
+      "path": "entries/KB-F0E06A8A.md",
+      "subject": "Revoke invite on /company/members sets the invitee's organization membership to Deleted and the row stays in the roster with an Inactive badge",
+      "question": "After an organization maintainer revokes a pending invite on /company/members, does the invited row disappear?",
+      "questions": [
+        "What status does revokeOrganizationInvite leave on the invitee's organization membership?",
+        "Why does a revoked invite still show in the company members list as Inactive?"
+      ],
+      "anchors": [
+        "/company/members",
+        "Mutations.revokeOrganizationInvite",
+        "POST /api/customer/organization-memberships/search"
+      ],
+      "scope": [
+        "principal=org-maintainer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
