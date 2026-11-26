@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T05:12:47.324Z",
-  "count": 2249,
+  "generated": "2026-11-26T05:25:29.051Z",
+  "count": 2251,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -18862,6 +18862,33 @@
       "disputed": 0
     },
     {
+      "id": "KB-5AD9D8A9",
+      "path": "entries/KB-5AD9D8A9.md",
+      "subject": "The CyberSource payment module forwards the Flex transient token to the gateway without verifying its signature; its JWT verifier runs only on the capture context",
+      "question": "Does the CyberSource module verify the Flex transient token JWT before calling the payment API in Mutation.authorizePayment?",
+      "questions": [
+        "Where does VirtoCommerce.CyberSourcePayment validate the Microform token signature?",
+        "Why does authorizePayment accept a forged CyberSource token signature?",
+        "What does CyberSourceJwkValidator validate?"
+      ],
+      "concepts": [
+        "card-payment",
+        "order-payment"
+      ],
+      "anchors": [
+        "Mutation.authorizePayment"
+      ],
+      "scope": [
+        "gateway=cybersource",
+        "layer=module",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5ADBFB34",
       "path": "entries/KB-5ADBFB34.md",
       "subject": "only the largest cart-subtotal promotion applies, whatever isExclusive says",
@@ -22718,6 +22745,30 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-71319A91",
+      "path": "entries/KB-71319A91.md",
+      "subject": "Each accepted CyberSource authorizePayment replay creates a new gateway payment and overwrites PaymentIn outerId, with no transaction recorded",
+      "question": "What happens when Mutation.authorizePayment is called again for a CyberSource payment that is held for review?",
+      "questions": [
+        "Can the same CyberSource Flex transient token be replayed on authorizePayment?",
+        "Does a held-for-review CyberSource payment block a second authorizePayment call?",
+        "Why does the CyberSource PaymentIn outerId change after repeated authorizePayment calls?",
+        "Is the CyberSource transient token jti or signature what the gateway checks?"
+      ],
+      "anchors": [
+        "Mutation.authorizePayment",
+        "GET /api/order/customerOrders/{id}"
+      ],
+      "scope": [
+        "gateway=cybersource",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
