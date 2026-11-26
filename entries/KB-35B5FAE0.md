@@ -24,5 +24,14 @@ evidence:
     at: 2026-11-26T13:57:11.037Z
     by: session:c8a6829d
     who: ivan-kalachikov
+  - method: observation
+    deployment: vcst_dev
+    build: 858d3d28d721a302
+    conditions: platform=3.1100.0; module:VirtoCommerce.SiteBuilder=3.1003.0-pr-5-01b3; theme=2.63.0-pr-2698-faeb-faeba500; store=B2B-store; role=organization buyer in a VIP-priced user group
+    at: 2026-11-26T15:34:47.059Z
+    by: session:c8a6829d
+    bodyHash: 7846eb35c682
+    who: ivan-kalachikov
+    note: "Re-observed on the round-3 build with <vc-products filter=\"code:38DJ66,5ZU94\">: guest $57.25/$5.40, buyer $9.99/$9.99, after Logout guest $57.25/$5.40 again, no cache clear."
 ---
 B2B-store, one browser tab. A published custom section type holding <vc-products filter="code:21A915,38DJ66,5ZU94" take="3"> on a page. As guest the section showed 38DJ66 $57.25 and 5ZU94 $5.40, equal to the guest PDPs. After signing in as a buyer whose contact is in a user group with its own price list, a reload showed $9.99 / $9.99, equal to that buyer's PDPs, and it stayed so after navigating away and back. After Logout, and again after a normal reload, the section showed $57.25 / $5.40; no buyer price remained. The section's own SearchProducts request carries the viewer's Authorization and userId (a new anonymous userId after sign-out), and the renderer's LRU cache holds compiled templates and sanitized rich text only, not product data. The variation product 21A915 showed "From $9.99" to both viewers, which is the separate minVariationPrice defect VCST-7037, not the section.
