@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T13:57:11.302Z",
-  "count": 2287,
+  "generated": "2026-11-26T13:59:54.516Z",
+  "count": 2288,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12222,6 +12222,27 @@
       "scope": [
         "surface=storefront-ui",
         "user=guest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3CFFAA5A",
+      "path": "entries/KB-3CFFAA5A.md",
+      "subject": "Site Builder MCP get_publish_readiness with theme:true does not report that a theme publication removes a live custom section type, while the publish_theme dry run warns of it",
+      "question": "Does get_publish_readiness theme:true warn that a theme publication will remove a live custom section type whose file is gone, as the publish_theme dry run does?",
+      "questions": [
+        "Which Site Builder MCP tool warns when publishing the theme drops a live custom section type?",
+        "Is get_publish_readiness for the theme the same as the publish_theme dry run?"
+      ],
+      "anchors": [
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
