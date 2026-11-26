@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T23:30:01.824Z",
-  "count": 2348,
+  "generated": "2026-11-26T23:35:03.338Z",
+  "count": 2352,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -15115,6 +15115,22 @@
       "plane": "experiential",
       "status": "active",
       "trust": 6,
+      "disputed": 0
+    },
+    {
+      "id": "KB-48805A7D",
+      "path": "entries/KB-48805A7D.md",
+      "subject": "A second announcement-bar section added to the header-group theme draft over MCP (with a block, even placed first and home_only=false) does not render in the Site Builder designer preview on a non-home page; only the store's existing live bar shows",
+      "question": "Does a newly added announcement-bar in a header draft show in the designer preview, and can its palette-token colour be seen there?",
+      "anchors": [
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -31913,6 +31929,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-972383DA",
+      "path": "entries/KB-972383DA.md",
+      "subject": "The designer's Preview as menu lists every user id in the store's Preview user IDs, the administrator account included",
+      "question": "Which users does the Site Builder designer's Preview as menu offer, and does it exclude administrators?",
+      "anchors": [
+        "/apps/admin-shell#/content/site-builder-designer/{groupId}",
+        "POST /api/site-builder/preview-auth/code"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-972CF223",
       "path": "entries/KB-972CF223.md",
       "subject": "Inviting a member immediately provisions a contact and a locked account that Admin shows with an empty Status",
@@ -32487,6 +32521,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-9A9DA56B",
+      "path": "entries/KB-9A9DA56B.md",
+      "subject": "In Site Builder a page in Pending is a published page whose start date is still in the future, not a page waiting for review",
+      "question": "What does Pending mean in the Site Builder page list filter (Draft, Pending, Active, Archived)?",
+      "questions": [
+        "why is my published page Pending",
+        "Site Builder page statuses and scheduling",
+        "difference between Page Builder Pending and Site Builder Pending"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/content/site/{storeId}",
+        "POST /api/site-builder-pages/search"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -47863,6 +47920,30 @@
         "design=soft",
         "surface=storefront-ui",
         "theme=vc-frontend"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E5D52607",
+      "path": "entries/KB-E5D52607.md",
+      "subject": "The platform Swagger document carries 80 Site Builder paths (90 operations) in five route families, and the Agent tools page lists all 30 Site Builder tools under the admin scope",
+      "question": "How many REST routes does Site Builder expose and which route families are there; which Site Builder MCP tools does Agent tools list?",
+      "questions": [
+        "list of Site Builder REST endpoints",
+        "how many Site Builder MCP tools exist",
+        "does Agent tools show the Site Builder tools"
+      ],
+      "anchors": [
+        "GET /docs/PlatformUI/swagger.json",
+        "/apps/admin-shell#/mcp-tools"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
