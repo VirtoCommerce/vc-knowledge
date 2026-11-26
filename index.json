@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T16:54:18.075Z",
-  "count": 2335,
+  "generated": "2026-11-26T16:59:28.058Z",
+  "count": 2337,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17869,7 +17869,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -22578,6 +22578,29 @@
       ],
       "scope": [
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6C0AA08A",
+      "path": "entries/KB-6C0AA08A.md",
+      "subject": "Store setting WhiteLabeling.WhiteLabelingEnabled=false makes the storefront apply no white labeling at all, including an enabled organization's branding",
+      "question": "Which switch turns off organization white labeling on the storefront: the store White labeling blade's Enabled toggle or the store setting WhiteLabeling.WhiteLabelingEnabled?",
+      "questions": [
+        "Does WhiteLabeling.WhiteLabelingEnabled=false on a store hide an organization's logo and theme on the storefront?",
+        "What is the master switch for white labeling on the storefront?",
+        "Why does org branding still show after disabling the store's white labeling record?"
+      ],
+      "anchors": [
+        "PUT /api/stores",
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -44179,6 +44202,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D4EEDC37",
+      "path": "entries/KB-D4EEDC37.md",
+      "subject": "whiteLabelingSettings.favicons lists thumbnail hrefs for the favicons task's sizes even when those thumbnails were never generated, and the storefront requests only those hrefs (no faviconUrl fallback), so the tab gets no custom favicon",
+      "question": "Does the storefront fall back to faviconUrl when the whiteLabelingSettings.favicons thumbnail files do not exist?",
+      "questions": [
+        "Why does a newly uploaded white-labeling favicon not show in the browser tab?",
+        "Where do the sizes in whiteLabelingSettings.favicons come from?",
+        "Why do favicon_<name>_16x16.png requests return 404 on the storefront?"
+      ],
+      "concepts": [
+        "white-labeling"
+      ],
+      "anchors": [
+        "Query.whiteLabelingSettings",
+        "POST /api/assets"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
