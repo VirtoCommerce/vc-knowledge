@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T23:35:03.338Z",
-  "count": 2352,
+  "generated": "2026-11-26T23:43:50.805Z",
+  "count": 2353,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7568,6 +7568,22 @@
       "scope": [
         "module=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-23B7D692",
+      "path": "entries/KB-23B7D692.md",
+      "subject": "On a store whose header group has no live announcement bar, an announcement-bar added over MCP edit_theme_draft renders in the designer preview in its palette colour",
+      "question": "Does a new announcement-bar header draft render in the designer preview, and in which colour for background color_primary_500?",
+      "anchors": [
+        "/apps/site-builder-shell"
+      ],
+      "scope": [
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
