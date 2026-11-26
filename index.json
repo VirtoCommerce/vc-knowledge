@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T02:39:50.962Z",
-  "count": 2243,
+  "generated": "2026-11-26T02:45:41.091Z",
+  "count": 2246,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11138,6 +11138,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-3890314B",
+      "path": "entries/KB-3890314B.md",
+      "subject": "On /cart switching Pickup -> Shipping -> Pickup restores the previously confirmed pickup location instead of clearing it",
+      "question": "What happens to the chosen pickup location when the buyer switches the /cart delivery option to Shipping and back to Pickup?",
+      "questions": [
+        "Does switching to Shipping clear the pickup location on the cart?",
+        "Is there a clearPickupLocation mutation on the storefront cart?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.addOrUpdateCartShipment"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-38925135",
       "path": "entries/KB-38925135.md",
       "subject": "In vc-module-sales-rep PR #33 the Tasks page ANDs the day, Status, Customers, Priorities and search filters; it opens on today, Reset filters clears all but the search term, the search is sent on Enter or the search button",
@@ -13691,7 +13713,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -36674,6 +36696,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-B66D0EE4",
+      "path": "entries/KB-B66D0EE4.md",
+      "subject": "The /cart Pick points dialog filters only by Country, State / Province and City facets plus a submit-only keyword search; there is no availability or distance filter",
+      "question": "Which filters does the /cart Pick points dialog offer, and does the keyword search fire while typing?",
+      "questions": [
+        "Is there an availability or distance filter in the pickup location picker?",
+        "Is the pickup location keyword search debounced or submit-only?"
+      ],
+      "concepts": [
+        "pickup"
+      ],
+      "anchors": [
+        "/cart",
+        "Query.cartPickupLocations"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-B6A59402",
       "path": "entries/KB-B6A59402.md",
       "subject": "A job enqueued via POST /api/background-jobs/enqueue that throws is retried (3 attempts) and reaches state Failed / completed=true only after ~3 minutes",
@@ -50690,6 +50737,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FB1FC7EA",
+      "path": "entries/KB-FB1FC7EA.md",
+      "subject": "In the /cart Pick points dialog, Cancel on the Pick point info card closes the card but leaves the clicked location's radio checked; the cart selection is unchanged",
+      "question": "After clicking a location and pressing Cancel on its Pick point info card, what state does the /cart Pick points dialog keep?",
+      "questions": [
+        "Does Cancel on the pickup info card uncheck the location radio?",
+        "Does clicking the map background close the Pick point info card?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
