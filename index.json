@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T05:09:58.964Z",
-  "count": 2248,
+  "generated": "2026-11-26T05:12:47.324Z",
+  "count": 2249,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7002,6 +7002,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 5
+    },
+    {
+      "id": "KB-222B85EF",
+      "path": "entries/KB-222B85EF.md",
+      "subject": "After the session is lost, /cart on a guest-checkout store renders as an anonymous empty cart with no redirect to /sign-in",
+      "question": "What happens on /cart (and /checkout) when a signed-in buyer's session is lost on a store that allows guest checkout — redirect to /sign-in or an anonymous cart?",
+      "questions": [
+        "Does the storefront redirect to the login page when the session expires during checkout?",
+        "What does /checkout show after the user's session expires?",
+        "Is the cart kept after re-login following a session loss?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "feature=session",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-224A9BC7",
