@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T00:01:19.393Z",
-  "count": 2227,
+  "generated": "2026-11-26T00:15:38.709Z",
+  "count": 2228,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -38005,6 +38005,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BE86FD34",
+      "path": "entries/KB-BE86FD34.md",
+      "subject": "An anonymous visit to /account, /account/orders or /company/members redirects to /sign-in?returnUrl=<path>, and a password sign-in returns to that path",
+      "question": "Where does the storefront send an anonymous visitor who opens an account page, and does sign-in return them there?",
+      "questions": [
+        "Does /sign-in keep a returnUrl for protected account routes?",
+        "Is /company/members behind a login gate for anonymous visitors?",
+        "What returnUrl does /account produce on the sign-in redirect?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "/account/orders",
+        "/company/members"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
