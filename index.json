@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T06:53:10.478Z",
-  "count": 2255,
+  "generated": "2026-11-26T07:08:58.686Z",
+  "count": 2256,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30481,6 +30481,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-96DCFCA2",
+      "path": "entries/KB-96DCFCA2.md",
+      "subject": "changeOrganizationContactRole on a contact of another organization is refused with a GraphQL error whose extensions.code is Forbidden; the target's roles stay unchanged",
+      "question": "What does changeOrganizationContactRole return when an organization maintainer targets a contact of a different organization?",
+      "questions": [
+        "Can an org maintainer change the role of a member of another organization via xAPI?",
+        "Is cross-org changeOrganizationContactRole Unauthorized or Forbidden?"
+      ],
+      "anchors": [
+        "Mutation.changeOrganizationContactRole"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-96E5B287",
       "path": "entries/KB-96E5B287.md",
       "subject": "Platform list endpoints for catalogs, fulfillment centers and users are POST .../search; the GET collection forms return 405 or an empty array",
@@ -44602,7 +44622,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
