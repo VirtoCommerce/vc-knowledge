@@ -34,5 +34,14 @@ evidence:
     bodyHash: 2d9af5f2ad99
     who: Lenajava1
     note: "Same shape on a storefront buyer's password grant with storeId and organization_id: 400 invalid_grant, code user_is_temporary_locked_out, one errors[] entry, lockoutSecondsRemaining null, userId null, count 3, while the user record showed a lockoutEnd about 2 minutes out. After lockoutEnd passed, one more attempt with the same (wrong) password returned 400 login_failed."
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681; store=B2B-store; account=storefront buyer
+    at: 2026-11-26T00:20:02.644Z
+    by: session:779b94fc
+    bodyHash: 2d9af5f2ad99
+    who: kutasinaelena
+    note: "2026-11-26: three fresh storefront buyers (one an org member) hit 5 wrong passwords on /sign-in; attempts 1-4 code login_failed, attempt 5 and a following correct-password attempt code user_is_temporary_locked_out with lockoutSecondsRemaining null, userId null; storefront banner 'Your account has been temporarily locked. Please try again later.'"
 ---
 On vcst_qa on 2026-10-21, I sent one form-encoded POST /connect/token (grant_type=password, scope=offline_access) for the platform admin account, which was already temporarily locked out. It returned HTTP 400. The body had error=invalid_grant and code=user_is_temporary_locked_out, with the description "Your account has been temporarily locked. Please try again after some time." It also had an errors[] array with one entry carrying the same code. The response also carried lockoutSecondsRemaining: null and userId: null. So on this build the password-grant refusal uses the same response model that carries lockoutSecondsRemaining on the OTP grant. A client cannot read a countdown from it here, because the value is null even while the account is locked. The count field on the response was 3, which is the token response's parameter count, not an error count. I did not establish why the account was locked, and I did not retry.

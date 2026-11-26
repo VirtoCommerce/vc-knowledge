@@ -22,5 +22,13 @@ evidence:
     at: 2026-11-05T14:33:28.740Z
     by: session:35ec50d2
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0
+    at: 2026-11-26T00:20:35.243Z
+    by: session:779b94fc
+    bodyHash: a6659e8377f7
+    who: kutasinaelena
 ---
 On vcptcore_regression, requests with Origin set to a foreign origin: OPTIONS /graphql answered 404 with no CORS headers on both the storefront and the platform host; OPTIONS /connect/token answered 400 invalid_request with no CORS headers; POST /graphql and GET /api/platform/security/currentuser on the platform host carried no Access-Control-Allow-Origin and no Access-Control-Allow-Credentials. Only the storefront host's SPA-shell fallback (text/html, including for /api/... paths that do not exist there) answered Access-Control-Allow-Origin *.

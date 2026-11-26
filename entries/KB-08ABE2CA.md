@@ -21,5 +21,14 @@ evidence:
     at: 2026-11-05T14:33:27.834Z
     by: session:35ec50d2
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0
+    at: 2026-11-26T00:20:34.969Z
+    by: session:779b94fc
+    bodyHash: 9eea84272be4
+    who: kutasinaelena
+    note: "addItem and createOrderFromCart: text/plain, form-urlencoded, multipart -> 400 CSRF_PROTECTION; JSON without token -> 200 Unauthorized data null; cart and order count unchanged."
 ---
 On vcptcore_regression (platform 3.1076.8, theme 2.59.0) a script POST to the storefront host /graphql with Origin set to a foreign origin and Content-Type text/plain, application/x-www-form-urlencoded or multipart/form-data answered 400 with errors[0].extensions.code CSRF_PROTECTION (a non-empty GraphQL-Require-Preflight header is required) for addItem and createOrderFromCart. The same JSON body with Content-Type application/json and no Authorization answered 200 with errors[0].extensions.code Unauthorized and data null; the signed-in user's cart was unchanged. The storefront client authenticates every /graphql request with an Authorization Bearer header, not a cookie. No Access-Control-Allow-Origin header was returned for the foreign origin.

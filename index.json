@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T00:15:48.868Z",
-  "count": 2230,
+  "generated": "2026-11-26T00:21:39.225Z",
+  "count": 2236,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -780,7 +780,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0,
       "resolved": 1
     },
@@ -1641,7 +1641,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -3756,6 +3756,29 @@
       "status": "active",
       "trust": 1,
       "disputed": 1
+    },
+    {
+      "id": "KB-12449647",
+      "path": "entries/KB-12449647.md",
+      "subject": "A storefront password sign-in started from plain /sign-in lands on the home page /; with ?returnUrl it lands on the returnUrl",
+      "question": "Where does the storefront send a user after a successful password sign-in on /sign-in?",
+      "questions": [
+        "Does /sign-in redirect to /account after login?",
+        "What is the default post-login landing page of the storefront?",
+        "Is returnUrl honoured by the /sign-in password form?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "flow=authentication",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-1249F34B",
@@ -7566,7 +7589,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -11916,7 +11939,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-3D2CF53D",
@@ -12056,7 +12080,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -14549,7 +14573,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14895,7 +14919,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -15082,7 +15106,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -15640,6 +15664,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4E0137BE",
+      "path": "entries/KB-4E0137BE.md",
+      "subject": "Profile Update shows a field-level 'Contains invalid characters' message when updateContact answers VALIDATION",
+      "question": "What does /account/profile show when a first or last name is rejected by the server?",
+      "questions": [
+        "Does the storefront profile form show a generic alert or a field error for an invalid name?",
+        "How is an updateContact VALIDATION error displayed on the profile page?"
+      ],
+      "anchors": [
+        "/account/profile",
+        "Mutation.updateContact"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -23221,7 +23266,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0,
       "contested": 1
     },
@@ -26925,6 +26970,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-88A20F5A",
+      "path": "entries/KB-88A20F5A.md",
+      "subject": "/forgot-password answers an unknown email exactly like a registered one: sendPasswordResetEmail true and the same 'We sent you a reset password link' message",
+      "question": "Does the storefront forgot-password form reveal whether an email is registered?",
+      "questions": [
+        "What does /forgot-password show for a non-existent email?",
+        "Is there user enumeration on the storefront password reset?"
+      ],
+      "anchors": [
+        "/forgot-password",
+        "Mutation.sendPasswordResetEmail"
+      ],
+      "scope": [
+        "feature=password-reset",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-88AC861A",
       "path": "entries/KB-88AC861A.md",
       "subject": "The Document library (/company/documents) appears only for a rep with sales-rep-documents:read; a plain Sales Representative has no rail link or dashboard widget and is redirected to /account/dashboard",
@@ -30044,6 +30111,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-968F2E06",
+      "path": "entries/KB-968F2E06.md",
+      "subject": "The /cart New address modal stores a script payload in the cart shipment address verbatim, while member-address saves reject HTML tags",
+      "question": "Does the storefront checkout shipping-address form on /cart reject an HTML/script payload in Address line 1?",
+      "questions": [
+        "Is the cart delivery address validated for HTML tags like member addresses are?",
+        "What happens when a script tag is typed into the checkout address on /cart?"
+      ],
+      "anchors": [
+        "/cart",
+        "/account/addresses",
+        "Mutation.updateMemberAddresses"
+      ],
+      "scope": [
+        "flow=checkout",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-969D7E09",
       "path": "entries/KB-969D7E09.md",
       "subject": "POSTing an unmodified GET /api/catalog/products/{id} body back to POST /api/catalog/products fails 500 (PK_Item duplicate key) when the product has variations; omitting variations[] succeeds and keeps them",
@@ -30600,6 +30690,28 @@
       ],
       "scope": [
         "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-98D0CF72",
+      "path": "entries/KB-98D0CF72.md",
+      "subject": "The storefront /sign-in password form does not trim the password: leading/trailing spaces are sent and the sign-in fails; a spaces-only password is sent without client validation",
+      "question": "Does the storefront trim spaces around the password on /sign-in?",
+      "questions": [
+        "What happens when a password with leading and trailing spaces is used on /sign-in?",
+        "Is a spaces-only password blocked client-side on the storefront sign-in form?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "flow=authentication",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -37214,7 +37326,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -39090,6 +39202,29 @@
       "trust": 5,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-C41F690F",
+      "path": "entries/KB-C41F690F.md",
+      "subject": "CyberSource authorizePayment answers isSuccess true for a tampered or forged-signature card token instead of refusing it",
+      "question": "Does Mutation.authorizePayment refuse a CyberSource Flex token whose payload or signature was tampered with?",
+      "questions": [
+        "What does authorizePayment return when the CyberSource token JWT is edited?",
+        "Is a forged CyberSource transient token rejected by the platform?",
+        "Does replaying authorizePayment with a bad token change the payment status?"
+      ],
+      "anchors": [
+        "Mutation.authorizePayment",
+        "/cart"
+      ],
+      "scope": [
+        "gateway=cybersource",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-C42CA8D0",
@@ -43160,7 +43295,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
