@@ -34,5 +34,25 @@ evidence:
     bodyHash: 2478ed6ca62c
     who: Lenajava1
     note: "Still true on theme 2.62.0-pr-2596-e749: /account/coupons shows agenttestlc062 as AGENTTESTLC062. The same shared card on the Sales Rep hub /company/my-customers/:organizationId/coupons also shows AGENTTESTLC062 and the clipboard receives AGENTTESTLC062 (superA shows as SUPERA). The cart sidebar preset card keeps the stored case (agenttestlc062, winegift) and applies."
+  - method: source
+    deployment: vc-frontend@e45e7ca0f
+    at: 2026-10-21T19:13:23.980Z
+    by: session:6eb5c164
+    bodyHash: 2478ed6ca62c
+    note: "Read, not seen live: shared/account/components/coupon-item.vue (working tree on top of e45e7ca0f) renders and copies couponCode?.toUpperCase(); the card is now exported from @vc-frontend/core and reused, with a compact prop, by the Sales Rep customer-profile coupons widget, so the rep's widget inherits the same upper-casing."
+  - method: observation
+    deployment: mac_local
+    conditions: platform=3.1087.0; theme=2.61.0-local-VCST-6158
+    at: 2026-10-21T19:19:13.334Z
+    by: session:6eb5c164
+    bodyHash: 2478ed6ca62c
+    note: On /account/coupons a lowercase-containing code (e.g. one returned by the API ending in lowercase hex) is shown uppercased and Click to copy puts the uppercased string on the clipboard (pasted into a text field). The same host CouponItem card used by the Sales Rep hub coupons widget and page (local VCST-6158 build) uppercases the same way.
+  - method: observation
+    deployment: mac_local
+    conditions: platform=3.1087.0; module:VirtoCommerce.SalesRep=3.1015.0-local; browser=chromium-mobile-emulation; role=Sales Representative
+    at: 2026-10-21T19:35:13.678Z
+    by: session:6eb5c164
+    bodyHash: 2478ed6ca62c
+    note: "Same on the shared CouponItem card in the Sales Rep hub: the xAPI item carried a couponCode ending in lowercase hex (AGENT-TEST-P5-...-af60094b); the card showed it uppercase and the clipboard after a real click held the uppercase value (...-AF60094B). Seen on the customer profile widget (compact card) and the all-coupons page."
 ---
 The coupon card on /account/coupons forces the code to uppercase in JavaScript, both in the display and in the copied clipboard value - a presentation-only issue, since the uppercased code still applies.

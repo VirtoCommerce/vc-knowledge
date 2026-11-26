@@ -20,5 +20,12 @@ evidence:
     at: 2026-10-15T11:35:26.359Z
     by: session:6ee2ca49
     who: Lenajava1
+  - method: observation
+    deployment: mac_local
+    conditions: platform=3.1087.0; module:VirtoCommerce.SalesRep=3.1015.0-local-VCST-6158
+    at: 2026-10-21T19:19:13.718Z
+    by: session:6eb5c164
+    bodyHash: eff2430a8e64
+    note: "Zero-served rep fixture opened /company/my-customers: no redirect, heading \"My customers\", \"Search by name\" box and \"No customers found\"."
 ---
 Signed in as the zero-served rep fixture (global sales-rep:access, zero org memberships). /company/my-customers renders heading "My customers", a "Search by name" box and the empty state "No customers found" — no redirect; the rail shows Sales Rep hub (Dashboard, My customers with no badge, Tasks) and no Corporate section. Searching "zzqx" shows a distinct state "No customers match your search" with a "Reset search" button and a Clear control. The same rep opening /company/sales-reps (buyer-facing, org-gated) is redirected to /account/dashboard.

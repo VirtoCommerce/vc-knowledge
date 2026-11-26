@@ -38,5 +38,22 @@ evidence:
     defect: VCST-6805
     who: kutasinaelena
     note: Still present on theme 2.62.0-alpha.2647; filed as VCST-6805. Dialog exposes only Country / State / Province / City facets + keyword (no availability or distance filter).
+  - method: observation
+    deployment: vcst_qa
+    build: 99622678db88d8be
+    conditions: platform=3.1099.0; theme=2.63.0-pr-2666-7e02-7e022f10; role=signed-in B2B buyer; browser=chromium
+    at: 2026-11-16T20:42:47.260Z
+    by: session:9b516c10
+    bodyHash: e1f2a0fac490
+    defect: VCST-6805
+    note: "Still present on theme 2.63.0-pr-2666: the pickup locations radiogroup's accessible name is the raw key pages.checkout.shipping.links.select_pickup_point."
+  - method: observation
+    deployment: vcst_qa
+    build: 99622678db88d8be
+    conditions: platform=3.1099.0; theme=2.63.0-pr-2666-7e02-7e022f10; role=personal customer
+    at: 2026-11-16T21:33:55.058Z
+    by: session:9b516c10
+    bodyHash: e1f2a0fac490
+    note: "Still present on theme 2.63.0-pr-2666: the Pick points radiogroup's accessible name is the raw key."
 ---
 Signed-in B2B buyer on /cart with one line, Delivery option Pickup, clicked 'select a pickup address'. The 'Pick points' dialog opens with Country/State/City filters, a map and a radiogroup of locations (Load more paging). In the accessibility tree the radiogroup is named 'pages.checkout.shipping.links.select_pickup_point' - an untranslated i18n key, not a human label. Selecting a location and 'Pick up here' works (shipping cost 0.00). Seen on two consecutive builds (theme 2.62.0-alpha.2642 here, also a prior run). Screen-reader users hear the key.

@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T13:59:54.516Z",
-  "count": 2288,
+  "generated": "2026-11-26T14:04:31.663Z",
+  "count": 2323,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -204,6 +204,26 @@
         "feature=otp-email-sign-in",
         "persona=multi-org",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-008A326D",
+      "path": "entries/KB-008A326D.md",
+      "subject": "One product can hold many inventory records in the same fulfillment center; POST /api/inventory/search returns all of them",
+      "question": "Can one product have several inventory records in the same fulfillment center?",
+      "questions": [
+        "Why does POST /api/inventory/search totalCount differ from the FFC Products widget count?",
+        "Are inventory records unique per productId and fulfillmentCenterId?"
+      ],
+      "anchors": [
+        "POST /api/inventory/search"
+      ],
+      "scope": [
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -850,7 +870,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0,
       "resolved": 1
     },
@@ -1943,7 +1963,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -2786,7 +2806,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0,
       "resolved": 1
     },
@@ -4898,6 +4918,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-16D4B31D",
+      "path": "entries/KB-16D4B31D.md",
+      "subject": "The PDP Share popover is teleported to a body-level host outside #app; Tab from the expanded Share button skips the panel; Escape and click-outside close it",
+      "question": "Where does the storefront VcPopover panel (PDP Share) render and how does it behave with keyboard and navigation?",
+      "questions": [
+        "Does Tab move focus into the open Share product popover on the product page?",
+        "Does the Share popover close on Escape, click outside, SPA navigation and browser back?",
+        "Is the popover panel rendered inside #app or at the end of body?"
+      ],
+      "anchors": [
+        "/dresses/day-dresses/skater-dresses/red-floral-print-bardot-neck-skater-dress-rea"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-16DDB3C3",
       "path": "entries/KB-16DDB3C3.md",
       "subject": "With SiteBuilder.General.StoreUrl set, every store's Site Builder designer previews that one storefront and uploads its schema catalog for the store being designed",
@@ -6729,6 +6770,31 @@
       ],
       "plane": "experiential",
       "status": "active",
+      "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1FF503F5",
+      "path": "entries/KB-1FF503F5.md",
+      "subject": "A sales rep opening /company/my-customers/{orgId}/coupons for an organization they do not serve gets \"Customer not found or not in your customers.\" with Back to customer and no coupon rows, while the page still sends SalesRepCoupons",
+      "question": "What does /company/my-customers/{orgId}/coupons show to a sales rep who does not serve that organization?",
+      "questions": [
+        "Does the Sales Rep coupons page leak coupons for an unserved customer?",
+        "What does a buyer see when opening a Sales Rep hub coupons URL?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/coupons",
+        "Query.salesRepCoupons"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
       "trust": 1,
       "disputed": 0
     },
@@ -7395,6 +7461,31 @@
       "disputed": 0
     },
     {
+      "id": "KB-23AF4064",
+      "path": "entries/KB-23AF4064.md",
+      "subject": "The Sales Rep hub coupons widget and its All promotion coupons page list the same store-wide salesRepCoupons set on every served customer, soonest endDate first, paged by offset 10 at a time",
+      "question": "Which coupons does the Sales Rep customer profile coupons widget and /company/my-customers/{orgId}/coupons list, in what order, and how is it paged?",
+      "questions": [
+        "Is the sales rep coupons list personalized per customer organization?",
+        "What variables does the SalesRepCoupons query send from the widget and from the coupons page?",
+        "How are coupons with no end date ordered in salesRepCoupons?",
+        "Does the Sales Rep coupons page paginate, and how many rows per page?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/coupons",
+        "/company/my-customers/{id}",
+        "Query.salesRepCoupons"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-23CBD97B",
       "path": "entries/KB-23CBD97B.md",
       "subject": "After an in-session language switch, the sales-rep orders filter drawer shows the raw i18n key sales_rep.customer_orders.filters.custom_date as the selected Created date value",
@@ -7678,6 +7769,29 @@
       "trust": 4,
       "disputed": 0,
       "resolved": 2
+    },
+    {
+      "id": "KB-25795EFF",
+      "path": "entries/KB-25795EFF.md",
+      "subject": "On sign-in the storefront merges a guest cart's lines into the account's existing cart: guest and account lines both survive with their quantities, no duplicate lines",
+      "question": "When a guest with cart items signs in to an account that already has cart items, what does /cart show?",
+      "questions": [
+        "Does the guest cart merge into the account cart on storefront sign-in?",
+        "Are guest cart quantities preserved after MergeCart at sign-in?",
+        "Does sign-out then sign-in keep the account cart unchanged?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.mergeCart"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-25829330",
@@ -8195,6 +8309,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-28EF01EF",
+      "path": "entries/KB-28EF01EF.md",
+      "subject": "On /account/addresses a personal user adds an address through a 'New address' dialog (Email required) saved by UpdateMemberAddresses, with no success toast; the row appears in the list",
+      "question": "What happens when a personal account user adds a new address on /account/addresses?",
+      "questions": [
+        "Does the storefront show a success toast after saving a personal address?",
+        "Which fields are required in the storefront New address dialog?",
+        "Which GraphQL mutation saves and deletes a personal account address?",
+        "Is the Email field required when adding a personal address on the storefront?"
+      ],
+      "anchors": [
+        "/account/addresses",
+        "Mutation.updateMemberAddresses",
+        "Mutation.deleteMemberAddresses",
+        "Query.currentCustomerAddresses"
+      ],
+      "scope": [
+        "account=personal",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-29037452",
       "path": "entries/KB-29037452.md",
       "subject": "the loyalty points-history page shows redeemed amounts unsigned",
@@ -8370,7 +8510,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -8696,7 +8836,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -9846,6 +9986,50 @@
         "module=search",
         "setting=catalog.search.eventbasedindexation.enable",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-30B5E2BD",
+      "path": "entries/KB-30B5E2BD.md",
+      "subject": "On vcst_dev the generic export registry lists no order type and the Admin Orders list blade has no Export action; GET /api/import/providers is 404",
+      "question": "Is there an order export provider in the Admin, and which endpoint lists export providers?",
+      "questions": [
+        "Does the Admin Customer orders blade have an Export toolbar button?",
+        "What does GET /api/import/providers return?",
+        "Which types does GET /api/export/knowntypes list?"
+      ],
+      "anchors": [
+        "GET /api/export/knowntypes",
+        "GET /api/import/providers"
+      ],
+      "scope": [
+        "surface=admin-ui",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-30CD5A95",
+      "path": "entries/KB-30CD5A95.md",
+      "subject": "On /cart the expanded Discount breakdown wraps the per-promotion amount so the minus sign and the value sit on separate lines",
+      "question": "Does the expanded Discount breakdown in the /cart order summary keep the discount amount on one line?",
+      "questions": [
+        "Why does the promotion amount in the cart order summary break into '-' and '$1.10'?",
+        "Is the discount line amount in the order summary nowrap?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=guest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -11318,7 +11502,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -11662,6 +11846,27 @@
         "module=sales-rep",
         "role=sales-rep",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3A2B53CE",
+      "path": "entries/KB-3A2B53CE.md",
+      "subject": "The Sales Rep coupons card shows \"Unlimited\" for an uncapped coupon and \"{left} of {total} uses left\" otherwise, with no singular form (\"1 of 1 uses left\")",
+      "question": "What uses-left text does a coupon card on the Sales Rep hub coupons widget and /company/my-customers/:organizationId/coupons page show?",
+      "questions": [
+        "Does the rep coupons card say 'use left' or 'uses left' for one remaining use?",
+        "What does the rep coupons card show for an unlimited coupon?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/coupons",
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -12567,7 +12772,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -13904,6 +14109,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-4474C268",
+      "path": "entries/KB-4474C268.md",
+      "subject": "The \"Tap to copy\" / \"Click to copy\" hint on the coupon code button has 4.1:1 contrast in light mode and 3.23:1 in dark mode",
+      "question": "Does the copy hint text on the coupon card meet 4.5:1 text contrast on /account/coupons?",
+      "anchors": [
+        "/account/coupons"
+      ],
+      "scope": [
+        "component=couponitem",
+        "preset=coffee",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-44B36132",
       "path": "entries/KB-44B36132.md",
       "subject": "GET /api/platform/settings/{name} for a name no module registered returns HTTP 500 with message \"Setting with name X is not registered\" (no stack trace) instead of 404",
@@ -14383,7 +14606,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14541,7 +14764,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -14588,7 +14811,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14653,6 +14876,34 @@
       "disputed": 0
     },
     {
+      "id": "KB-48114473",
+      "path": "entries/KB-48114473.md",
+      "subject": "A saved customerProfile layout that predates the coupons block renders the block appended at the end of mainLeft with default 5 rows; a hidden coupons block sends no SalesRepCoupons; its Max rows input clamps to 1..20",
+      "question": "How does the Sales Rep customer profile layout treat the coupons block for a rep whose saved layout lacks it, when it is hidden, and at its Max rows bounds?",
+      "questions": [
+        "Does a newly registered Sales Rep hub widget appear for reps who already saved a layout?",
+        "What are the min and max of the coupons widget Max rows setting?",
+        "Does hiding a Sales Rep hub widget stop its query?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Mutation.saveSalesRepLayout",
+        "Query.salesRepLayout",
+        "Query.salesRepCoupons"
+      ],
+      "scope": [
+        "module=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-481995B9",
       "path": "entries/KB-481995B9.md",
       "subject": "Loyalty programs and returns have no GET list route: GET /api/loyalty/programs and GET /api/returns return 404 even with the modules installed; listing is POST /api/loyalty-programs/search and POST /api/return/search",
@@ -14673,7 +14924,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14869,7 +15120,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -15504,6 +15755,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-4B94B80E",
+      "path": "entries/KB-4B94B80E.md",
+      "subject": "At ≤768 px the sales-rep hub breadcrumbs are 17 px tall with 1 px gaps, below the WCAG 2.5.8 24 px target size",
+      "question": "Do the breadcrumb links and the \"All promotion coupons\" link on /company/my-customers/{id}/coupons meet the 24 px target size on mobile?",
+      "questions": [
+        "Are the sales rep hub breadcrumbs too small to tap on mobile?",
+        "What is the touch target size of breadcrumbs on the storefront at 375 px?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/coupons",
+        "/company/my-customers/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4BB8E42E",
       "path": "entries/KB-4BB8E42E.md",
       "subject": "A second storefront password step within the 30 s MFA resend cooldown sends no new email, yet the code step still says \"We sent a code\"; the code from the earlier email signs in on the newer ticket",
@@ -15733,7 +16005,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -16861,7 +17133,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -18205,6 +18477,31 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-55BB53BA",
+      "path": "entries/KB-55BB53BA.md",
+      "subject": "Org-member Select address popup on /cart: facet options show names (country, region, city) with counts, and picking one re-queries GetCurrentOrganizationAddresses with countryCodes / regionIds",
+      "question": "What do the Country / State / City facets of the /cart Select address popup show, and what request does picking one send?",
+      "questions": [
+        "Does the city facet in the checkout address popup show city names or postal codes?",
+        "Which GraphQL argument carries the selected state in the cart address popup?",
+        "Is the country facet label the same text as the Country column in the address table?"
+      ],
+      "anchors": [
+        "/cart",
+        "Query.currentOrganizationAddresses",
+        "Mutation.addOrUpdateCartShipment"
+      ],
+      "scope": [
+        "role=organization-member",
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -21441,7 +21738,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -21672,7 +21969,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 7,
       "disputed": 0
     },
     {
@@ -21946,6 +22243,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6AAABBBD",
+      "path": "entries/KB-6AAABBBD.md",
+      "subject": "coupons/add silently drops totalUsesCount: a coupon's use count cannot be seeded through REST",
+      "question": "Can a coupon's used count be set by sending totalUsesCount to POST /api/marketing/promotions/coupons/add?",
+      "questions": [
+        "How do I seed a used-up coupon for a test?",
+        "Does coupons/add persist totalUsesCount?",
+        "Where does a coupon's totalUsesCount come from?"
+      ],
+      "anchors": [
+        "POST /api/marketing/promotions/coupons/add",
+        "POST /api/marketing/promotions/coupons/search"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -23130,7 +23449,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -23284,6 +23603,29 @@
       "scope": [
         "auth=admin",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7211397F",
+      "path": "entries/KB-7211397F.md",
+      "subject": "salesRepCoupons lists the store's active public one-coupon promotions whose coupon is not expired and not used up, sorted by endDate ascending with no-end last and ties by coupon id; keyword and sort are accepted but ignored",
+      "question": "Which coupons does the salesRepCoupons query return to a sales rep, in what order, and do its keyword and sort arguments do anything?",
+      "questions": [
+        "Why is a coupon missing from the Sales Rep hub coupons widget?",
+        "Does salesRepCoupons hide expired or used-up coupons?",
+        "Is a promotion with several coupons listed by salesRepCoupons?",
+        "What id does a salesRepCoupons item carry?",
+        "Does salesRepCoupons honour the sort argument?"
+      ],
+      "anchors": [
+        "Query.salesRepCoupons"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -24776,6 +25118,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-7A2615DA",
+      "path": "entries/KB-7A2615DA.md",
+      "subject": "GET /api/members/invitations is not an invitations list: it binds to GET /api/members/{id} with id \"invitations\" and returns 200 with an empty body",
+      "question": "Is there a REST endpoint GET /api/members/invitations that lists member invitations?",
+      "questions": [
+        "How do I list customer invitations through the platform REST API?",
+        "Why does GET /api/members/invitations return 200 with no body?"
+      ],
+      "anchors": [
+        "GET /api/members/invitations",
+        "GET /api/members/{id}"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7A4C260E",
       "path": "entries/KB-7A4C260E.md",
       "subject": "user_cannot_login_in_store: a customer password grant needs a camelCase storeId of an existing store, checked before the password; Administrator-type users are not refused",
@@ -24802,7 +25165,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
-      "disputed": 0,
+      "disputed": 1,
       "resolved": 1
     },
     {
@@ -26933,7 +27296,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -26980,7 +27343,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -27122,7 +27485,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -27406,7 +27769,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -27666,7 +28029,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -27932,7 +28295,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -28559,6 +28922,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-8BE59B8B",
+      "path": "entries/KB-8BE59B8B.md",
+      "subject": "promotionCoupons lists a coupon whose own expirationDate has passed while its promotion is active, and omits a promotion that has two coupons",
+      "question": "Does the buyer's promotionCoupons query hide a coupon whose own expiration date has passed, and does it list promotions with more than one coupon?",
+      "questions": [
+        "Why does /account/coupons show an expired coupon?",
+        "Is a multi-coupon promotion listed by promotionCoupons?",
+        "How does promotionCoupons differ from salesRepCoupons?"
+      ],
+      "anchors": [
+        "Query.promotionCoupons"
+      ],
+      "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-8BE75346",
       "path": "entries/KB-8BE75346.md",
       "subject": "The storefront account-menu Organizations listbox always renders the ACTIVE organization first, so option order changes on every organization switch; the active org is shown even when it does not match the search text",
@@ -28645,6 +29029,36 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8C0B9007",
+      "path": "entries/KB-8C0B9007.md",
+      "subject": "promotionCoupons lists a member-registered coupon to every buyer, hides promotions with more than one coupon and promotions not yet started, and lists a promotion with no store",
+      "question": "Which promotions and coupons does Query.promotionCoupons leave out or include beyond active, public and unexpired?",
+      "questions": [
+        "Are voucher batches (a promotion with several coupons) listed on /account/coupons?",
+        "Does promotionCoupons filter coupons by their memberId?",
+        "Is a coupon whose promotion starts in the future listed?",
+        "Is a promotion with no store assigned listed in a store's coupons?"
+      ],
+      "concepts": [
+        "coupon",
+        "public-coupon-list"
+      ],
+      "anchors": [
+        "Query.promotionCoupons",
+        "Query.validateCoupon",
+        "Query.salesRepCoupons",
+        "/account/coupons"
+      ],
+      "scope": [
+        "role=buyer",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -28805,6 +29219,29 @@
       "scope": [
         "module=virtocommerce.imagetools",
         "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8CC37719",
+      "path": "entries/KB-8CC37719.md",
+      "subject": "salesRepCoupons does not check storeId: a sales rep of one store reads another store's coupons, and an empty storeId returns every store's, while promotionCoupons answers Access denied",
+      "question": "Does Query.salesRepCoupons check the storeId argument against the sales rep's store or store access?",
+      "questions": [
+        "Can a sales rep list coupons of a store they are not bound to through salesRepCoupons?",
+        "What does salesRepCoupons return for an empty storeId?",
+        "Do salesRepCoupons and promotionCoupons enforce the same store access?"
+      ],
+      "anchors": [
+        "Query.salesRepCoupons",
+        "Query.promotionCoupons"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
@@ -30320,6 +30757,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-9432AECE",
+      "path": "entries/KB-9432AECE.md",
+      "subject": "On the /cart line quantity field, clearing digit by digit commits the last half-deleted digit on blur, and slow typing commits every partial value",
+      "question": "On /cart, what does the line quantity field send when the quantity is cleared with Backspace digit by digit, or typed one digit at a time slowly?",
+      "questions": [
+        "Does the cart line stepper send partial quantities while typing?",
+        "What quantity is committed when a cart line quantity is backspaced to empty and blurred?",
+        "Does select-all plus Backspace on a /cart line revert the quantity?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.changeCartItemsQuantity"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-94364409",
       "path": "entries/KB-94364409.md",
       "subject": "me.contact.organizations searchPhrase matches case-insensitively and by word prefix: \"Har\" matches \"Hardware\" and \"HARBOR\", \"Harbor\" does not match \"Hardware\"; newly REST-created orgs matched at once",
@@ -30742,7 +31202,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -31033,6 +31493,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-97236146",
+      "path": "entries/KB-97236146.md",
+      "subject": "Clearing the storefront quantity stepper digit by digit and blurring restores the last intermediate value (456 → 4), not 0 or the pre-edit value, and sends it to the cart.",
+      "question": "what value does the storefront quantity stepper show after the user clears it completely and blurs",
+      "questions": [
+        "what happens to cart quantity when the quantity input is emptied",
+        "does an empty quantity field become 0 on the storefront",
+        "why does the quantity stepper show the first digit after clearing"
+      ],
+      "anchors": [
+        "Mutation.updateShortCartItemQuantity",
+        "Mutation.changeFullCartItemsQuantity",
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -31903,7 +32386,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -32732,7 +33215,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -32810,6 +33293,27 @@
       ],
       "trust": 4,
       "disputed": 1
+    },
+    {
+      "id": "KB-A0CF2DF3",
+      "path": "entries/KB-A0CF2DF3.md",
+      "subject": "VcEmptyView renders its empty and error states without role or aria-live, so screen readers are not told when they appear",
+      "question": "Is the VcEmptyView empty or error state announced to screen readers (role / aria-live) when it replaces a loading list?",
+      "questions": [
+        "Does the storefront empty view have a live region?",
+        "Are empty-list and load-error messages announced by assistive technology on the storefront?"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}/coupons",
+        "/account/coupons"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-A0EC64CD",
@@ -33144,7 +33648,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -33216,7 +33720,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -33469,7 +33973,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -33801,7 +34305,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -35542,7 +36046,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -36751,6 +37255,27 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-B314F8D4",
+      "path": "entries/KB-B314F8D4.md",
+      "subject": "Before sitemaps are exported to store assets, every storefront sitemap URL returns 404, including /sitemap/sitemap.xml, while the sitemap API answers 200",
+      "question": "Why does the storefront /sitemap/sitemap.xml return 404 on a stand?",
+      "questions": [
+        "Does the storefront sitemap work without running Export to store assets?",
+        "Sitemap API returns 200 but storefront sitemap is 404"
+      ],
+      "anchors": [
+        "/sitemap/sitemap.xml",
+        "/sitemap.xml"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-B33FC328",
@@ -38070,7 +38595,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -38238,6 +38763,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-BA24D21F",
+      "path": "entries/KB-BA24D21F.md",
+      "subject": "vc-frontend ui-kit build at fc383c4e3 compiles a fallback copy of the design palette into @layer theme (:root and html.dark)",
+      "question": "Does the vc-frontend ui-kit built CSS carry a fallback palette in @layer theme, and how does it differ from dev?",
+      "questions": [
+        "Which CSS layer holds the ui-kit fallback colour tokens?",
+        "What changed in compiled CSS when ui-kit tokens moved out of the app layer?",
+        "Is there a :root fallback palette in the vc-frontend build?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -40242,6 +40788,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C4456C4E",
+      "path": "entries/KB-C4456C4E.md",
+      "subject": "Admin SPA deletes catalog products through POST /api/catalog/listentries/delete after a type-'yes' confirmation dialog",
+      "question": "Which request does the Admin SPA send to delete a product from the catalog 'Categories and items' blade, and what confirmation does it show?",
+      "questions": [
+        "How does admin delete a product in the catalog grid?",
+        "Is there a confirmation before deleting a catalog item in the Admin SPA?",
+        "What API route deletes catalog list entries?"
+      ],
+      "anchors": [
+        "POST /api/catalog/listentries/delete",
+        "DELETE /api/pricing/pricelists",
+        "POST /api/catalog/listentries"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -42953,6 +43522,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-D233E4EE",
+      "path": "entries/KB-D233E4EE.md",
+      "subject": "Sign-in cart merge keeps the raw summed quantity above stock and flags the line on /cart; lowering to stock clears the flag",
+      "question": "What does /cart show when the sign-in cart merge sums a guest line and an account line past available stock?",
+      "questions": [
+        "Does the guest-to-account cart merge cap quantity at available stock?",
+        "Is a merged cart line above stock flagged on /cart?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.mergeCart"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D245B911",
       "path": "entries/KB-D245B911.md",
       "subject": "A Virto Page listed by xAPI pageDocuments with a leading-slash permalink can fail to resolve through slugInfo, and the storefront then shows its 404 page with HTTP 200",
@@ -43054,6 +43645,29 @@
       "scope": [
         "module=catalog",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D30F224A",
+      "path": "entries/KB-D30F224A.md",
+      "subject": "On vcst_dev Hangfire holds ~23.7k failed jobs; SendOrderNotificationsJobHandler fails with notification validation errors and CreateRecurrentOrdersJobHandler fails daily with OutOfMemoryException",
+      "question": "Which background jobs fail on vcst_dev and why is the Hangfire Failed count so high?",
+      "questions": [
+        "Why does /hangfire show tens of thousands of failed jobs on vcst_dev?",
+        "Does SendOrderNotificationsJobHandler fail on vcst_dev?",
+        "Does CreateRecurrentOrdersJobHandler run successfully on vcst_dev?"
+      ],
+      "anchors": [
+        "GET /hangfire/jobs/failed",
+        "GET /health"
+      ],
+      "scope": [
+        "auth=admin",
+        "surface=hangfire-dashboard"
       ],
       "plane": "experiential",
       "status": "active",
@@ -44303,6 +44917,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-D9F3E8A1",
+      "path": "entries/KB-D9F3E8A1.md",
+      "subject": "On /account/coupons the regular coupon-item skeleton is shorter than the loaded coupon card, so the list grows when coupons load",
+      "question": "Does the /account/coupons coupon-item skeleton have the same height as the loaded coupon card?",
+      "questions": [
+        "Does the coupons page skeleton cause a layout shift when coupons load?",
+        "How tall is the coupon skeleton compared with the coupon card on the account coupons page?"
+      ],
+      "anchors": [
+        "/account/coupons",
+        "/company/my-customers/{id}/coupons"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D9F48037",
       "path": "entries/KB-D9F48037.md",
       "subject": "Push Messages audience caption and picked recipients survive save and reopen",
@@ -44326,6 +44961,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D9FC6A0E",
+      "path": "entries/KB-D9FC6A0E.md",
+      "subject": "Storefront breadcrumb links take the preset's color_link, else the kit fallback accent-600",
+      "question": "storefront breadcrumbs link colour: which CSS variable drives VcBreadcrumbs link color, and what does it resolve to per theme preset?",
+      "questions": [
+        "Why are breadcrumb links teal instead of the link colour on a preset?",
+        "What colour are VcBreadcrumbs links in Storybook vs the storefront?",
+        "Does --vc-breadcrumbs-link-color follow color_link?"
+      ],
+      "anchors": [
+        "/catalog",
+        "/product/{id}"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -46978,6 +47635,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-E754C0B5",
+      "path": "entries/KB-E754C0B5.md",
+      "subject": "The Admin orders grid filter uses the CustomerOrder index (POST /api/order/customerOrders/indexed/search), which on vcst_dev lacks ~100 database orders, including month-old ones",
+      "question": "Does the Admin orders status filter return the same orders as the database search?",
+      "questions": [
+        "Why is a New order missing from the Admin orders grid when filtered by status New?",
+        "Which endpoint does the Admin Customer orders filter call?"
+      ],
+      "anchors": [
+        "POST /api/order/customerOrders/indexed/search",
+        "POST /api/order/customerOrders/search"
+      ],
+      "scope": [
+        "surface=admin-spa",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E7790BF6",
       "path": "entries/KB-E7790BF6.md",
       "subject": "an applied coupon is two records on a cart: the code in cart.coupons, the reward in cart.discounts, joined only by the code string",
@@ -48660,6 +49339,33 @@
       "disputed": 0
     },
     {
+      "id": "KB-EDE67FB7",
+      "path": "entries/KB-EDE67FB7.md",
+      "subject": "On the sales rep customer profile, layout edits made in Edit layout are sent nowhere until Save layout: a reload or Cancel discards them, and Cancel re-mounts the blocks, which re-query their data",
+      "question": "Are unsaved Edit layout changes on /company/my-customers/:organizationId persisted on reload or Cancel?",
+      "questions": [
+        "Does hiding a block in Edit layout save immediately?",
+        "What does Cancel do in the sales rep profile layout editor?",
+        "Does changing a block's maximum rows apply before Save layout?"
+      ],
+      "concepts": [
+        "sales-rep"
+      ],
+      "anchors": [
+        "/company/my-customers/{id}",
+        "Query.salesRepLayout",
+        "Query.salesRepCoupons"
+      ],
+      "scope": [
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EDF22BE8",
       "path": "entries/KB-EDF22BE8.md",
       "subject": "Shared Components workspace: Escape closes Component details and Rename dialog",
@@ -48957,7 +49663,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -49202,6 +49908,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-EFD3AE1F",
+      "path": "entries/KB-EFD3AE1F.md",
+      "subject": "On /account/coupons a coupon code with a long unbroken segment overflows the dashed code button between 1024 and 1280 px viewport width",
+      "question": "Does a long coupon code stay inside its dashed code button on the coupon card of /account/coupons at 1024-1280 px?",
+      "anchors": [
+        "/account/coupons"
+      ],
+      "scope": [
+        "component=couponitem regular layout",
+        "surface=storefront-ui",
+        "viewport=1024-1280"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-EFE3BD7D",
       "path": "entries/KB-EFE3BD7D.md",
       "subject": "In dark mode the storefront page-builder slider block renders white heading text on a light grey background (1.33:1)",
@@ -49403,7 +50127,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -50562,7 +51286,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -50644,6 +51368,27 @@
       "trust": 1,
       "disputed": 0,
       "contested": 2
+    },
+    {
+      "id": "KB-F618FA55",
+      "path": "entries/KB-F618FA55.md",
+      "subject": "The Admin catalog product blade has no category field or link; the category is reached only through the items-list breadcrumb, which closes the product blade",
+      "question": "Does the Admin catalog product detail blade show or link to the product's category?",
+      "questions": [
+        "How do I open a product's category from the Admin product blade?",
+        "Is there a category breadcrumb in the Admin product detail blade?"
+      ],
+      "anchors": [
+        "GET /api/catalog/products/{id}",
+        "/workspace/catalog"
+      ],
+      "scope": [
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-F6BB1479",
@@ -51540,6 +52285,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-FA286879",
+      "path": "entries/KB-FA286879.md",
+      "subject": "Storefront header cart badge caps at '99+' above 99 units; the tooltip and the Cart link name carry the exact localized count",
+      "question": "What does the storefront header cart badge show when the cart holds more than 99 units, and where is the exact count exposed?",
+      "questions": [
+        "Does the header cart counter show 100 or 99+ when 100 units are in the cart?",
+        "Where can a shopper see the exact cart count when the badge shows 99+?",
+        "What accessible name does the header Cart link have when the cart has many items?",
+        "Is the header cart tooltip localized and pluralised?"
+      ],
+      "anchors": [
+        "/cart",
+        "Query.cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-FA3338C3",
       "path": "entries/KB-FA3338C3.md",
       "subject": "Page Builder Designer section tree is keyboard operable (PageBuilderModule 3.1030 pr-165)",
@@ -51647,7 +52415,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -52262,6 +53030,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FFBB51C0",
+      "path": "entries/KB-FFBB51C0.md",
+      "subject": "salesRepCoupons answers Unauthorized to an anonymous caller and an empty result without error to a buyer or a rep with no served organizations",
+      "question": "What does salesRepCoupons return to anonymous callers, buyers without the sales rep role, and reps who serve no organization?",
+      "questions": [
+        "Can a buyer token read salesRepCoupons?",
+        "Does salesRepCoupons error for a rep with zero customers?",
+        "Does a rep with a locked membership still get salesRepCoupons?"
+      ],
+      "anchors": [
+        "Query.salesRepCoupons",
+        "/company/my-customers/{id}/coupons"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
