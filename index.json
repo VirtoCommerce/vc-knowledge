@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T07:14:43.701Z",
-  "count": 2259,
+  "generated": "2026-11-26T07:20:19.572Z",
+  "count": 2260,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17935,6 +17935,28 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-55B05609",
+      "path": "entries/KB-55B05609.md",
+      "subject": "Org switcher search with a hyphen followed by a partial word (\"Fill-Fil\") returns every organization unfiltered, while the complete hyphenated term (\"Fill-Fillips\") filters correctly",
+      "question": "What does the storefront org switcher search return for a hyphenated query whose last part is a partial word?",
+      "questions": [
+        "Does the organization search handle hyphens?",
+        "Why does typing a partial hyphenated org name show all organizations?",
+        "How does me.contact.organizations searchPhrase treat special characters like & ' < >?"
+      ],
+      "anchors": [
+        "Query.me.contact.organizations"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
