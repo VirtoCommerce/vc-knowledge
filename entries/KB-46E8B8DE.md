@@ -99,5 +99,14 @@ evidence:
     bodyHash: 2a0a4bb07188
     who: Lenajava1
     note: Four cards and My recent orders as stated; on this build the status chips are All / New without counts, and the Sales Statistics block (KB-ADE54B03) renders between the cards and My recent orders.
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681; store=B2B-store
+    at: 2026-11-26T01:09:09.585Z
+    by: session:779b94fc
+    bodyHash: 2a0a4bb07188
+    who: kutasinaelena
+    note: "Regression REG-2026-11-26-0357-W2: four cards + My recent orders (5 rows, status tabs without counts, All orders -> /account/orders); a new order counted on the next load (12->13), a flag-cancelled order left all three cards immediately but stays in the list with status Cancelled; old Latest orders / Monthly spend report / Orders status absent in view and edit mode."
 ---
 Signed in as a B2B org maintainer on the VCST-6078 PR build, /account/dashboard renders four stat cards — "Orders placed · WEEK", "Orders placed · MTD", "Orders placed · YTD" (order count as the big number, total amount as the sub-line, a signed "% vs last …" change when the previous period has orders; none when it is empty) and "Avg order value" ("Average per order (YTD)", no change line) — plus a "My recent orders" widget (5 rows, status chips with counts, "All orders" link) and an "Edit layout" button (edit mode with Reset / Cancel / Save layout). The previous widgets Latest orders, Monthly spend report and Orders status do not render. On load the page calls GraphQL GetLayout (scope accountDashboard; returns layout null for a user who never saved), GetOrderStatistics and GetOrders (first 5 with a status facet), all 200 with no errors[]. A user in an organization with no orders sees all cards at 0 / $0.00 and the empty state "There are no orders yet" with "Continue browsing". The status chip counts include cancelled orders while the cards exclude them (chips Completed 17 + Cancelled 13 + New 13 + Processing 6 = 49; YTD card 36). This is an unmerged PR build (vc-frontend#2552 with vc-module-x-frontend#12), not a release.

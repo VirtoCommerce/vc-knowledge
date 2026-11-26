@@ -24,5 +24,14 @@ evidence:
     by: session:9fb93ecf
     who: kutasinaelena
     note: "distinct: KB-5D6EC340 is the Sales Rep dashboard /company/dashboard (salesRepLayout); this is the buyer account dashboard /account/dashboard (layout scope accountDashboard)."
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681; store=B2B-store
+    at: 2026-11-26T01:13:50.876Z
+    by: session:779b94fc
+    bodyHash: a566d4448152
+    who: kutasinaelena
+    note: "Same on vcst W2 regression: 0 -> 1 and 21 -> 20 on Tab, aria-invalid absent, Save layout enabled; stored maxRows 1/20/5 render 1/min(20,6)/5 rows; no GetOrders while typing."
 ---
 Signed in as a B2B buyer, Edit layout on /account/dashboard, spinbutton 'Max rows for My recent orders, between 1 and 20': typed 0 then Tab -> value became 1; typed 21 then Tab -> value became 20. No invalid flag or message appeared and 'Save layout' stayed enabled. Saving 1 and 20 stored recent_orders maxRows 1 / 20 in layout(scope accountDashboard) and the list rendered min(setting, orders) rows after reload; the list did not refetch while typing. So an out-of-range value is never stored, but it is corrected silently rather than refused.

@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T01:07:49.667Z",
-  "count": 2236,
+  "generated": "2026-11-26T01:13:51.100Z",
+  "count": 2237,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8379,7 +8379,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -14001,7 +14001,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 5,
+      "trust": 6,
       "disputed": 0
     },
     {
@@ -30925,7 +30925,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 7,
       "disputed": 0,
       "contested": 1
     },
@@ -31107,7 +31107,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -32493,7 +32493,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -34818,7 +34818,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -35727,6 +35727,28 @@
         "surface=storefront-ui",
         "user=sales-rep-advanced",
         "viewport=desktop-1920"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B21D137E",
+      "path": "entries/KB-B21D137E.md",
+      "subject": "On /cart, 'Add new' inside the Select address popup with data identical to a saved address raises no duplicate warning; Create only sets the cart shipment address",
+      "question": "Does the /cart Select address popup warn when Add new is filled with the same data as an existing saved address?",
+      "questions": [
+        "Is there a duplicate address check when adding a new address from the checkout popup?",
+        "Does the checkout New address dialog save the address to the account address book?"
+      ],
+      "anchors": [
+        "/cart",
+        "Mutation.addOrUpdateCartShipment"
+      ],
+      "scope": [
+        "component=select-address-modal",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
