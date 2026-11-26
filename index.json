@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T15:27:51.081Z",
-  "count": 2329,
+  "generated": "2026-11-26T15:33:25.871Z",
+  "count": 2330,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -23748,6 +23748,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-728D205E",
+      "path": "entries/KB-728D205E.md",
+      "subject": "After a burst of PUT /api/shipping/pickup-locations isActive=false, some deactivated locations stayed in the PickupLocation search index, so Query.cartPickupLocations kept listing them for 10+ minutes until a POST /api/search/indexes/index for PickupLocation was run",
+      "question": "After deactivating pickup locations through the REST API, how soon does Query.cartPickupLocations stop listing them?",
+      "questions": [
+        "Why does the /cart Pick points counter show more locations than are active in the admin?",
+        "Is Query.cartPickupLocations served from the PickupLocation search index?",
+        "How do I make the storefront pickup list match a changed isActive state right away?"
+      ],
+      "anchors": [
+        "PUT /api/shipping/pickup-locations",
+        "Query.cartPickupLocations",
+        "POST /api/search/indexes/index"
+      ],
+      "scope": [
+        "feature=bopis",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7294127C",
       "path": "entries/KB-7294127C.md",
       "subject": "On /account/profile, Update for a user with me.contact = null shows \"Profile successfully updated!\" but sends no updatePersonalData request",
@@ -31797,7 +31821,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
