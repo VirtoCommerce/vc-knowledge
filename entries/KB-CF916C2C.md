@@ -28,5 +28,14 @@ evidence:
     at: 2026-11-09T11:49:41.226Z
     by: session:a835884e
     who: Aleksandra-Mitricheva
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681; store=B2B-store; browser=edge
+    at: 2026-11-26T01:20:58.834Z
+    by: session:779b94fc
+    bodyHash: 4688e37c2b74
+    who: kutasinaelena
+    note: "Signed-in personal customer, theme 2.63.0-alpha.2681: USD cart switched to EUR re-priced every line in place (single vendor group, no 'Products in EUR' group): AGENT-TEST-MultiCurrency-Fixture $24.99 -> EUR22.49; lines with no EUR price (Dos Equis, Desperados, ALCE0128) showed EUR0.00, stepper disabled, 'The product is no longer available for purchase', excluded from subtotal."
 ---
 Anonymous, B2B-store, theme 2.62.0. With a USD cart, switching the header currency to EUR re-prices every line in EUR (no separate group); adding a product while in EUR and switching back to USD turns it into a USD line too, so the UI alone never produces a mixed-currency cart. Sending xAPI Mutation.addItem on the same anonymous USD cart (storeId, userId, currencyCode USD) with itemCurrencyCode "EUR" creates a line whose LineItemType.currencyCode is EUR while cart.currency stays USD; /cart then renders it in a separate "Products in EUR" section after the vendor groups, with its own select-all and an EUR subtotal. The product's own min/max quantity still applies (Epson WorkForce WF-3640 needed qty 11; qty 1 returned PRODUCT_MIN_MAX_QTY and no line).

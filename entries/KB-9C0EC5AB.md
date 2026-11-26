@@ -38,5 +38,14 @@ evidence:
     bodyHash: d2299d649f0c
     who: kutasinaelena
     note: "Re-observed 2026-11-12 (REG-2026-11-12-0714-W3): USD cart with Fixed Rate (Ground) $150 -> EUR: changeCartCurrency response shipments[0] has no method, delivery 'Select a delivery method', shipping EUR0.00; QA-MULTICUR-001 EUR22.49; ALCE0128 EUR0.00 + 'The product is no longer available for purchase'."
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681; store=B2B-store; role=personal customer; browser=edge
+    at: 2026-11-26T01:20:58.567Z
+    by: session:779b94fc
+    bodyHash: d2299d649f0c
+    who: kutasinaelena
+    note: "REG-2026-11-26-0357-W2 CART-049/051 (edge): USD cart with Fixed Rate (Ground) +$150 -> EUR showed 'Select a delivery method', shipping EUR0.00; selecting Ground gave +EUR150 (tax EUR39.00 = 20% of 44.98+150). Back in USD Ground persisted; switching USD to Air ($250) then to EUR showed the EUR cart's Ground EUR150, not Air."
 ---
 Signed-in personal user, B2B-store, consolidated cart+checkout page. USD cart with QA-MULTICUR-001 x2 and 'Fixed Rate (Ground)' selected (shipping +$150). Switching the header currency to EUR showed the same line re-priced from the EUR pricelist (EUR22.49 x2) but Delivery method reset to 'Select a delivery method' and Shipping cost EUR0.00. After selecting Ground in EUR, switching back to USD still showed Ground; choosing 'Fixed Rate (Air)' in USD and switching to EUR again showed the EUR cart's earlier Ground (EUR150), not Air. So line items (and their removal — an emptied USD cart also empties the EUR view) follow the switch, while the shipment stays per-currency cart; an applied coupon was also not carried (EUR cart showed no coupon). Fixed-rate shipping is the same numeric amount in both currencies (150 / EUR150).

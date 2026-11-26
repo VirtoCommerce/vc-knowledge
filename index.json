@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T01:19:40.121Z",
-  "count": 2237,
+  "generated": "2026-11-26T01:26:40.186Z",
+  "count": 2238,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20413,6 +20413,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-65F1480A",
+      "path": "entries/KB-65F1480A.md",
+      "subject": "The storefront company info page lives at /company/info; /account/company/info renders the 404 page",
+      "question": "What is the storefront route of the company info page with the organization addresses?",
+      "questions": [
+        "Does /account/company/info exist on the storefront?",
+        "Where does an organization member see the organization's addresses outside checkout?"
+      ],
+      "anchors": [
+        "/company/info",
+        "/account/company/info"
+      ],
+      "scope": [
+        "role=organization member",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-65F26B96",
       "path": "entries/KB-65F26B96.md",
       "subject": "xAPI deleteSignInKey of a passkey leaves the user's other access tokens and refresh tokens valid",
@@ -31144,7 +31166,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -40225,7 +40247,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -41382,7 +41404,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
