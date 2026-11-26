@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T13:40:09.930Z",
-  "count": 2286,
+  "generated": "2026-11-26T13:57:11.302Z",
+  "count": 2287,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10848,6 +10848,29 @@
       ],
       "scope": [
         "feature=sales-rep-hub-plugin",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-35B5FAE0",
+      "path": "entries/KB-35B5FAE0.md",
+      "subject": "A vc-products tag in a Site Builder custom section shows each storefront viewer their own prices and follows sign-in and sign-out without a cache clear",
+      "question": "Does a vc-products tag inside a Site Builder custom section show the signed-in buyer's own prices, and does it drop them after sign-out?",
+      "questions": [
+        "Can the custom section renderer's cache leak one buyer's prices to the next viewer?",
+        "Which prices does a custom section's product list show to a guest versus an organization buyer?",
+        "After a buyer logs out, does a custom section still show contract prices?"
+      ],
+      "anchors": [
+        "Query.searchProducts",
+        "POST /graphql"
+      ],
+      "scope": [
+        "module=site-builder",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
