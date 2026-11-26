@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T18:01:14.062Z",
-  "count": 2344,
+  "generated": "2026-11-26T18:10:34.577Z",
+  "count": 2345,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4908,6 +4908,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-16A62A40",
+      "path": "entries/KB-16A62A40.md",
+      "subject": "POST /api/site-builder-pages/create-group-page with content as a JSON string {settings, content:[{type,id,title}]} creates a Draft page group whose draft places those section types, including a custom type that does not exist, with no refusal",
+      "question": "How can a test create a Site Builder page draft that places given section types (including a missing custom type) without the MCP tools?",
+      "questions": [
+        "Does create-group-page accept a section of a custom type that has no theme file?",
+        "What body does POST /api/site-builder-pages/create-group-page take to seed a page with sections?",
+        "How to seed a page draft for the designer's Not found badge"
+      ],
+      "anchors": [
+        "POST /api/site-builder-pages/create-group-page",
+        "DELETE /api/site-builder-pages/grouped/{id}",
+        "POST /api/site-builder/designer/save"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
