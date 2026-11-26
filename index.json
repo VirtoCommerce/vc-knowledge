@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T04:43:43.982Z",
-  "count": 2246,
+  "generated": "2026-11-26T04:52:42.405Z",
+  "count": 2247,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4450,7 +4450,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -28658,7 +28658,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -35979,6 +35979,24 @@
       "trust": 1,
       "disputed": 1,
       "contested": 2
+    },
+    {
+      "id": "KB-B2ACE8E1",
+      "path": "entries/KB-B2ACE8E1.md",
+      "subject": "In dashboard Edit layout, a mouse press on another draggable handle commits an in-flight keyboard move and makes Escape inert, with no cancel announcement; a press on the edit-bar text cancels and announces",
+      "question": "What happens to a live keyboard grab on /company/dashboard Edit layout when the user clicks another draggable handle?",
+      "anchors": [
+        "/company/dashboard"
+      ],
+      "scope": [
+        "feature=sales-rep-hub-layout",
+        "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-B2BA7561",
