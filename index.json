@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T14:50:25.171Z",
-  "count": 2327,
+  "generated": "2026-11-26T15:02:25.628Z",
+  "count": 2328,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3286,7 +3286,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -4839,7 +4839,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 8,
+      "trust": 9,
       "disputed": 0
     },
     {
@@ -20655,6 +20655,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-625AE598",
+      "path": "entries/KB-625AE598.md",
+      "subject": "The Color facet's priority sort took Black's priority (1) from a dictionary property not named exactly \"Color\" — most likely a category-level property named lowercase \"color\" in another physical catalog",
+      "question": "Which dictionary properties feed the priority used by PriorityAscending/PriorityDescending facet sorting in Query.products term_facets — only properties named exactly like the facet, or also differently-cased names?",
+      "questions": [
+        "Why does a facet value sort first under Priority ascending when its Color dictionary priority is not the lowest?",
+        "Is the facet priority lookup case-insensitive on the property name?",
+        "Do category-level dictionary properties count toward facet value priority?"
+      ],
+      "anchors": [
+        "Query.products",
+        "GET /api/catalog/aggregationproperties/{id}/properties",
+        "/catalog"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-626BE57D",
       "path": "entries/KB-626BE57D.md",
       "subject": "With the VCST-6698 fix builds, member address Line1/Line2 accept up to 2048 chars on REST and xAPI; 2049 is rejected with a validation error (REST 400, xAPI VALIDATION) instead of 500",
@@ -23503,7 +23527,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 7,
+      "trust": 8,
       "disputed": 0
     },
     {
@@ -51080,7 +51104,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
