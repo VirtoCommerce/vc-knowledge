@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T15:40:25.896Z",
-  "count": 2330,
+  "generated": "2026-11-26T15:44:17.271Z",
+  "count": 2331,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -23890,6 +23890,32 @@
         "LineItemType.quantity"
       ],
       "scope": [
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-734D32B8",
+      "path": "entries/KB-734D32B8.md",
+      "subject": "With a store's assetPublicUrl set and no StoreAssets:KnownAssetHosts configured, xAPI product image URLs on EVERY absolute host (including third-party CDNs) are rebased onto the asset URL host; clearing it reverts at once",
+      "question": "Which product image hosts does xAPI rewrite when a store's assetPublicUrl is set and VirtoCommerce:StoreAssets:KnownAssetHosts is not configured?",
+      "questions": [
+        "Are external image URLs rewritten to the store asset public URL?",
+        "Does setting Store asset URL in the Admin store blade change product imgSrc on the storefront without a reindex?",
+        "Is the theme logo rewritten by the store asset public URL?",
+        "What happens to product images on the storefront when the store asset URL is cleared?"
+      ],
+      "anchors": [
+        "Query.products",
+        "Query.product",
+        "PUT /api/stores",
+        "/catalog"
+      ],
+      "scope": [
+        "surface=storefront-ui",
         "surface=xapi"
       ],
       "plane": "experiential",
