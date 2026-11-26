@@ -70,6 +70,14 @@ evidence:
     investigation: true
     build: c4000d0bea152759
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 6feb83b80e6f1f12
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681; store=B2B-store; role=Organization maintainer
+    at: 2026-11-26T09:32:50.753Z
+    by: session:779b94fc
+    bodyHash: e5c2b2ddb6cc
+    note: "2026-11-26: wave persona contact (status null, name 'Emily Johnson S1') renders Name 'Invite sent' with the green Active badge; a contact that completed the invitation (status Approved) renders its real name."
 ---
 The storefront roster replaces a contact's name with the literal "Invite sent" whenever the contact's status is empty OR Invited - the rule is convertToExtendedContact in vc-frontend (unchanged since #929, 2024). So a contact whose status is null renders "Invite sent" even though the API returns its name in name, firstName, lastName and fullName; a maintainer auditing the roster sees only the email for that row, and a test asserting the rendered name against the API name fails for this class of contact. Such a contact is usually one created over REST or by a seeder without a status, not a pending invitation (a real invitee's status is Invited, see KB-BBBC4225).
 
