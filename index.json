@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T13:27:01.115Z",
-  "count": 2284,
+  "generated": "2026-11-26T13:36:30.785Z",
+  "count": 2285,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -39295,6 +39295,28 @@
       "scope": [
         "feature=otp-sign-in",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C053D2C1",
+      "path": "entries/KB-C053D2C1.md",
+      "subject": "Anonymous xAPI Query.store for B2B-store returns default currency USD, default language en-US, 9 available currencies and 15 available languages",
+      "question": "What does the anonymous xAPI Query.store(storeId: \"B2B-store\", cultureName: \"en-US\") return for defaultCurrency, availableCurrencies, defaultLanguage and availableLanguages?",
+      "questions": [
+        "Which currencies does B2B-store offer via xAPI store query?",
+        "What is the default currency of B2B-store on vcst_qa?",
+        "Which languages are available in B2B-store according to Query.store?",
+        "Does a token-less xAPI store query succeed on B2B-store?"
+      ],
+      "anchors": [
+        "Query.store"
+      ],
+      "scope": [
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
