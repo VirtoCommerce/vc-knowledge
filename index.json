@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T09:32:57.068Z",
-  "count": 2267,
+  "generated": "2026-11-26T09:41:44.919Z",
+  "count": 2268,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26610,6 +26610,28 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-840E436D",
+      "path": "entries/KB-840E436D.md",
+      "subject": "/sign-up rejects an HTML/script payload in First name: requestRegistration returns succeeded=false with InvalidCharacters and creates no account",
+      "question": "What happens when a guest registers on /sign-up with an HTML or script payload as First name?",
+      "questions": [
+        "Can stored XSS be planted through the storefront registration first name?",
+        "Does requestRegistration validate name characters before creating the account?"
+      ],
+      "anchors": [
+        "/sign-up",
+        "Mutation.requestRegistration"
+      ],
+      "scope": [
+        "actor=guest",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
