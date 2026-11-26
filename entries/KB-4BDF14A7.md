@@ -81,5 +81,13 @@ evidence:
     bodyHash: 3c37fcb06d97
     who: kutasinaelena
     note: "2026-11-26 REG-2026-11-26-0300-W1 AUTH-069, TECHFLOW buyer: same page (three password fields, tips, disabled Change), no pre-submit notice."
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    at: 2026-11-26T05:33:03.500Z
+    by: session:779b94fc
+    bodyHash: 3c37fcb06d97
+    who: kutasinaelena
+    note: "REG-2026-11-26-0900-W1F AUTH-069/SEC-AUTH-005: no pre-submit notice; after submit toast reads 'Your password has been successfully changed. Changing your password will sign you out of all other devices and browsers.'"
 ---
 As a signed-in B2B user, /account/change-password renders Current password, New password, Confirm new password, the "Tips for creating a strong password" box and a Change button. No informational notice about being signed out of other devices/browsers is present anywhere on the page (DOM search for 'other devices', 'sessions', 'sign you out' found nothing). Footer build Ver. 2.61.0-alpha.2605.
