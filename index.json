@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T11:08:45.672Z",
-  "count": 2270,
+  "generated": "2026-11-26T11:46:06.995Z",
+  "count": 2278,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10135,6 +10135,25 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-32BF9D08",
+      "path": "entries/KB-32BF9D08.md",
+      "subject": "POST /api/site-builder/designer/save takes the first path segment as the theme folder without checking it is the store's theme, so a theme file sent without the theme prefix (custom-sections/<t>.json) skips the custom-section rules and is stored as an unchecked draft outside the theme",
+      "question": "Does POST /api/site-builder/designer/save validate a themeFiles path that lacks the theme folder, such as custom-sections/<t>.json instead of default/custom-sections/<t>.json?",
+      "anchors": [
+        "POST /api/site-builder/designer/save",
+        "GET /api/site-builder/designer/theme-file",
+        "GET /api/content/themes/{storeId}/search"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -25853,6 +25872,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-7FD37F35",
+      "path": "entries/KB-7FD37F35.md",
+      "subject": "A custom section type saved over MCP as a theme draft appears under Custom sections in the Site Builder designer's Add section list and renders in the designer preview before the theme is published; a theme publication then waits in Admin Shell Agent approvals until a second user approves it",
+      "question": "Does the Site Builder designer offer and preview an agent's custom section type before the theme is published, and how does its publication go live?",
+      "anchors": [
+        "/apps/site-builder-shell",
+        "/designer-preview",
+        "/apps/admin-shell#/mcp-approvals"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-ui",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-80095B02",
       "path": "entries/KB-80095B02.md",
       "subject": "On a hard load of the quotes pages, raw i18n keys appear whenever the page chunk is served from browser cache while the quotes module locale chunk still needs a network revalidation",
@@ -26102,6 +26141,24 @@
         "frontend=2.62.0-pr-2424",
         "surface=storefront-ui",
         "user=personal"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-80F5209B",
+      "path": "entries/KB-80F5209B.md",
+      "subject": "After a Site Builder theme publication, Query.themeSnapshot carries the published custom section types under customSections in every culture's snapshot, each with its own translated name and setting defaults",
+      "question": "Does the published theme snapshot carry custom section types, and per language?",
+      "anchors": [
+        "Query.themeSnapshot"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=graphql",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -31662,7 +31719,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-9C031F08",
@@ -36237,6 +36294,23 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B1984561",
+      "path": "entries/KB-B1984561.md",
+      "subject": "Site Builder MCP create_section_type and change_section_type refuse a template with script, an on* attribute or an unknown binding, CSS position: fixed or a foreign url(), in the dry run and on save, naming the file and the rule; nothing is saved",
+      "question": "What does create_section_type return for an unsafe template or CSS?",
+      "anchors": [
+        "/admin/mcp"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=mcp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -44756,6 +44830,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-DD59FBA4",
+      "path": "entries/KB-DD59FBA4.md",
+      "subject": "PUT /api/site-builder/catalog stores the storefront section catalog under the SHA-256 of its text and answers 400 with a text for an unmarked custom- key, a malformed kit or a body over 8 MB",
+      "question": "How is the storefront section catalog stored by PUT /api/site-builder/catalog, and what does it refuse?",
+      "anchors": [
+        "PUT /api/site-builder/catalog",
+        "GET /api/site-builder/catalog"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-DD678CA3",
       "path": "entries/KB-DD678CA3.md",
       "subject": "The storefront order payment page opens for a Cancelled order and the platform accepts addOrUpdateOrderPayment on it, after which the page shows Pay now",
@@ -45391,6 +45483,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-E07C2FFE",
+      "path": "entries/KB-E07C2FFE.md",
+      "subject": "On /admin/mcp, publish_page (no dryRun) creates a pending change in Agent approvals; approving it needs mcp:approve plus builder:read on the page's store and builder:publish, not mcp:approve alone",
+      "question": "What does publish_page on /admin/mcp do, and which permissions does the user who approves the publication in Agent approvals need?",
+      "anchors": [
+        "/admin/mcp"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=admin-mcp"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E088E2B9",
       "path": "entries/KB-E088E2B9.md",
       "subject": "A failed product-subscription renewal leaves its order New; the order's PaymentIn is Declined after a hard decline but stays New after soft-decline retries are exhausted",
@@ -45914,6 +46023,24 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E388859B",
+      "path": "entries/KB-E388859B.md",
+      "subject": "Site Builder MCP publish_theme dryRun lists in placed_sections.pages only pages whose PUBLISHED version places the custom section type; a page draft (or never-published page) that places it is left out while coverage still says \"Scanned all N pages\"",
+      "question": "Which pages does Site Builder MCP publish_theme dryRun list in placed_sections.pages for a custom section type — does it count page drafts?",
+      "anchors": [
+        "POST /admin/mcp",
+        "ThemePublishingTools.DescribeSectionTypeAsync"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=mcp"
       ],
       "plane": "experiential",
       "status": "active",
@@ -51041,7 +51168,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -51156,6 +51283,24 @@
       "trust": 4,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-F9FA689C",
+      "path": "entries/KB-F9FA689C.md",
+      "subject": "POST /api/site-builder/designer/discard silently no-ops (200 {saveId}) when a themeFiles path lacks the theme folder — e.g. the in-theme form theme/status returns — for any theme file; only \"<theme>/<path>\" discards",
+      "question": "Does POST /api/site-builder/designer/discard accept the path form GET theme/status returns (custom-sections/<t>.json, config/settings_data.json), or only the theme-prefixed form?",
+      "anchors": [
+        "POST /api/site-builder/designer/discard",
+        "GET /api/site-builder/theme/status"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-FA0604AD",

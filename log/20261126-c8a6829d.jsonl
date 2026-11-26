@@ -1,0 +1,55 @@
+{"at":"2026-11-26T00:04:17.321Z","kind":"show","id":"KB-54FE11E6","state":"answer","unpaired":true,"via":"mcp","call":"toolu_01JvNUzPGFV6hnQPo965kLSq","topic":"site builder custom section types","agent":"main","who":"ivan-kalachikov"}
+{"at":"2026-11-26T00:11:30.394Z","kind":"capture","id":"KB-7FD37F35","subject":"A custom section type saved over MCP as a theme draft appears under Custom sections in the Site Builder designer's Add section list and renders in the designer preview before the theme is published; a theme publication then waits in Admin Shell Agent approvals until a second user approves it","question":"Does the Site Builder designer offer and preview an agent's custom section type before the theme is published, and how does its publication go live?","after":"2026-11-25T18:12:44.256Z","related":["KB-749030D5","KB-3D1055D2","KB-6619E4FA"],"read":["KB-54FE11E6","KB-F9937AFE","KB-3AB42E0C","KB-9BD474C4","KB-AEDC697F"],"via":"mcp","call":"toolu_018wuSeKqENHdLKosRUNGzk1","topic":"site builder custom section types","agent":"main","who":"ivan-kalachikov"}
+{"at":"2026-11-26T00:11:43.625Z","kind":"dispute","id":"KB-9BD474C4","deployment":"vcst_dev","via":"mcp","call":"toolu_01C1nkN7xuR2a64dCp5F8Zo9","topic":"site builder custom section types","agent":"main","who":"ivan-kalachikov"}
+{"at":"2026-11-26T00:12:03.859Z","kind":"capture","id":"KB-80F5209B","subject":"After a Site Builder theme publication, Query.themeSnapshot carries the published custom section types under customSections in every culture's snapshot, each with its own translated name and setting defaults","question":"Does the published theme snapshot carry custom section types, and per language?","after":"2026-11-25T22:19:44.999Z","related":["KB-7D908FAE","KB-DA29CC8B","KB-64F16249"],"read":["KB-54FE11E6","KB-F9937AFE","KB-3AB42E0C","KB-9BD474C4","KB-AEDC697F"],"via":"mcp","call":"toolu_016xnp1itjagcKrP23fxfJWz","topic":"site builder custom section types","agent":"main","who":"ivan-kalachikov"}
+{"at":"2026-11-26T00:12:04.187Z","kind":"capture","id":"KB-B1984561","subject":"Site Builder MCP create_section_type and change_section_type refuse a template with script, an on* attribute or an unknown binding, CSS position: fixed or a foreign url(), in the dry run and on save, naming the file and the rule; nothing is saved","question":"What does create_section_type return for an unsafe template or CSS?","after":"2026-11-25T18:12:44.256Z","related":["KB-749030D5","KB-A4E915A7","KB-054E5214"],"read":["KB-54FE11E6","KB-F9937AFE","KB-3AB42E0C","KB-9BD474C4","KB-AEDC697F"],"via":"mcp","call":"toolu_01EPUmY6Dag9pabHMc1QyMjm","topic":"site builder custom section types","agent":"main","who":"ivan-kalachikov"}
+{"at":"2026-11-26T00:12:04.579Z","kind":"capture","id":"KB-DD59FBA4","subject":"PUT /api/site-builder/catalog stores the storefront section catalog under the SHA-256 of its text and answers 400 with a text for an unmarked custom- key, a malformed kit or a body over 8 MB","question":"How is the storefront section catalog stored by PUT /api/site-builder/catalog, and what does it refuse?","after":"2026-11-25T22:19:43.619Z","related":["KB-16DDB3C3","KB-1D8E4BFA","KB-333FC705"],"read":["KB-54FE11E6","KB-F9937AFE","KB-3AB42E0C","KB-9BD474C4","KB-AEDC697F"],"via":"mcp","call":"toolu_017s84cLB1iuceabM8TyHvzs","topic":"site builder custom section types","agent":"main","who":"ivan-kalachikov"}
+{"at":"2026-11-26T08:02:01.405Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","code":"no-write-access","who":"ivan-kalachikov"}
+{"at":"2026-11-26T08:02:15.087Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","code":"no-write-access","who":"ivan-kalachikov"}
+{"at":"2026-11-26T08:04:01.454Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","code":"no-write-access","who":"ivan-kalachikov"}
+{"at":"2026-11-26T08:04:10.247Z","kind":"flush","ok":false,"attempts":1,"reason":"denied","code":"no-write-access","who":"ivan-kalachikov"}
+{"at":"2026-11-26T09:49:08.716Z","kind":"restart","why":"state-dropped","who":"ivan-kalachikov"}
+{"at":"2026-11-26T09:50:33.906Z","kind":"show","id":"KB-3AB42E0C","state":"answer","after":"2026-11-25T23:41:01.518Z","via":"cli","who":"ivan-kalachikov","call":"toolu_012xUA96Dr2Th68sVxNmECQ9","agent":"main"}
+{"at":"2026-11-26T11:13:10.799Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:13:30.460Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:13:35.366Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:13:46.106Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:13:50.698Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:14:10.746Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:15:12.590Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:16:10.670Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:17:11.242Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:18:10.664Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:19:10.901Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:20:11.275Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:21:10.729Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:22:10.371Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:23:10.586Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:24:10.344Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:25:10.617Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:26:10.744Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:27:10.555Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:28:10.405Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:29:10.540Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:30:10.559Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:31:10.768Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:32:11.184Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:33:10.646Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:34:10.698Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:35:10.872Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:36:10.959Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:37:10.612Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:38:11.035Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:38:36.710Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:38:41.286Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:39:10.884Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:40:10.704Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:40:56.486Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:41:00.270Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:41:10.150Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:42:10.511Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:42:50.836Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:42:54.347Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:43:10.457Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:44:12.800Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
+{"at":"2026-11-26T11:45:10.699Z","kind":"flush","ok":false,"attempts":1,"reason":"missing","code":"missing","who":"ivan-kalachikov"}
