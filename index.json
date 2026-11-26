@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T16:59:28.058Z",
-  "count": 2337,
+  "generated": "2026-11-26T17:24:44.338Z",
+  "count": 2338,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8306,6 +8306,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-28A6F067",
+      "path": "entries/KB-28A6F067.md",
+      "subject": "An organization's White labeling blade opens with Enabled OFF when the organization has no white-labeling record, and the first blade Save creates the record with that toggle value",
+      "question": "Is White Labeling enabled by default for a new organization in the Admin White labeling blade?",
+      "questions": [
+        "What does the organization White labeling Enabled toggle show before anything was saved?",
+        "Does saving an organization's White labeling blade without switching Enabled on create a disabled record?"
+      ],
+      "anchors": [
+        "GET /api/white-labeling/organization/{id}",
+        "POST /api/white-labeling"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
