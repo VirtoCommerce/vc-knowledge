@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T14:25:38.842Z",
-  "count": 2325,
+  "generated": "2026-11-26T14:31:44.969Z",
+  "count": 2326,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16546,6 +16546,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4E36DFD5",
+      "path": "entries/KB-4E36DFD5.md",
+      "subject": "Payment method rows saved with PUT /api/payment cannot be deleted through REST: DELETE /api/payment answers 405",
+      "question": "Can a saved store payment method row be deleted through the REST API?",
+      "questions": [
+        "How do I remove a payment method I saved for a store via PUT /api/payment?",
+        "Is there a DELETE route in the Payment module REST API?",
+        "What happens to a store's payment method rows when a test store is torn down?"
+      ],
+      "anchors": [
+        "PUT /api/payment",
+        "DELETE /api/payment",
+        "GET /api/payment/{id}"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
