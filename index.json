@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T01:26:40.186Z",
-  "count": 2238,
+  "generated": "2026-11-26T01:35:40.391Z",
+  "count": 2239,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6154,7 +6154,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -23713,6 +23713,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-782E9FA3",
+      "path": "entries/KB-782E9FA3.md",
+      "subject": "When GetOrders fails on /account/dashboard, My recent orders shows only \"Couldn't load orders\" with no retry control, while the stat cards, sidebar and header keep working and no toast appears",
+      "question": "What does the My recent orders block on /account/dashboard show when the GetOrders query returns errors[]?",
+      "questions": [
+        "Is there a retry button when My recent orders fails to load on the account dashboard?",
+        "Does a failing orders list on the account dashboard raise a global error toast?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.orders"
+      ],
+      "scope": [
+        "role=b2b-buyer",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7837F100",
       "path": "entries/KB-7837F100.md",
       "subject": "Barcode lookup hides unpriced products only because the storefront adds a price term; xAPI expansion itself does not",
@@ -31680,7 +31702,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
