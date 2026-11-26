@@ -1,1 +1,3 @@
 {"at":"2026-11-26T07:27:10.453Z","kind":"session","session":"7d8212fa","tools":136,"turns":43,"touchAt":[],"agents":10,"agentTools":145,"agentTouches":0,"firstAt":"2026-11-25T13:20:34.338Z","lastAt":"2026-11-25T17:29:40.883Z","who":"Lenajava1"}
+{"at":"2026-11-25T13:57:35.703Z","kind":"restart","why":"transcript-moved","priorTools":104,"who":"Lenajava1"}
+{"at":"2026-11-25T14:40:26.066Z","kind":"restart","why":"transcript-moved","priorTools":93,"who":"Lenajava1"}
