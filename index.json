@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T02:22:40.770Z",
-  "count": 2241,
+  "generated": "2026-11-26T02:32:29.867Z",
+  "count": 2242,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1642,6 +1642,29 @@
       "scope": [
         "module=virtocommerce.orders 3.1018.0",
         "surface=platform-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-08ABB6B1",
+      "path": "entries/KB-08ABB6B1.md",
+      "subject": "On vcst_qa (theme 2.63.0-alpha.2681) the ProductComparison module is not installed: /compare is a 404 and the storefront shows no Compare header link or Add to Compare control",
+      "question": "Why does /compare return 404 and no Add to Compare button appear on the vcst_qa storefront?",
+      "questions": [
+        "Is product comparison available on vcst_qa?",
+        "Is VirtoCommerce.ProductComparison deployed on vcst_qa?",
+        "Can the compare regression cases run on vcst_qa?"
+      ],
+      "anchors": [
+        "/compare",
+        "Mutation.saveProductsToCompareList"
+      ],
+      "scope": [
+        "deployment=vcst_qa",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -36603,7 +36626,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -44454,7 +44477,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {
@@ -47742,7 +47765,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {

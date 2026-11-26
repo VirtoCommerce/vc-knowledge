@@ -21,5 +21,14 @@ evidence:
     at: 2026-11-11T19:09:03.839Z
     by: session:7e403256
     who: kutasinaelena
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: theme=2.63.0-alpha.2681; platform=3.1101.0; store=B2B-store
+    at: 2026-11-26T02:30:23.056Z
+    by: session:779b94fc
+    bodyHash: 84b308cafd34
+    who: kutasinaelena
+    note: "Guest half re-observed on theme 2.63.0-alpha.2681: after 3 PDPs, guest /cart (empty) shows no Recently browsed block."
 ---
 On vcst as a guest I opened several PDPs and then /cart (scrolled to the end): no 'Recently browsed' block. Signed in as a B2B buyer, after opening two PDPs /cart rendered a 'Recently browsed' block with those products first (image, name, price, quantity stepper) and clicking an item opened its PDP in a new tab. vc-frontend cart.vue loads it only when isAuthenticated && the xRecommend module is enabled (and the block is not hidden).
