@@ -89,5 +89,21 @@ evidence:
     bodyHash: 3c37fcb06d97
     who: kutasinaelena
     note: "REG-2026-11-26-0900-W1F AUTH-069/SEC-AUTH-005: no pre-submit notice; after submit toast reads 'Your password has been successfully changed. Changing your password will sign you out of all other devices and browsers.'"
+  - method: observation
+    deployment: vcst_qa
+    build: 6feb83b80e6f1f12
+    conditions: theme=2.63.0-alpha.2681; store=B2B-store; role=disposable org member
+    at: 2026-11-26T10:13:08.133Z
+    by: session:779b94fc
+    bodyHash: 3c37fcb06d97
+    note: "REG-2026-11-26-1330-W1D AUTH-069, disposable org member: no pre-submit notice on /account/change-password; after submit Mutation.changePassword returned succeeded:true, errors:[] and the toast read 'Your password has been successfully changed. Changing your password will sign you out of all other devices and browsers.'"
+  - method: observation
+    deployment: vcst_qa
+    build: 6feb83b80e6f1f12
+    conditions: theme=2.63.0-alpha.2681; store=B2B-store; role=organization member (disposable)
+    at: 2026-11-26T10:13:11.154Z
+    by: session:779b94fc
+    bodyHash: 3c37fcb06d97
+    note: "2026-11-26 REG-2026-11-26-1330-W1D SEC-AUTH-005, disposable org-member customer: three password fields + tips, Change disabled until filled, no pre-submit notice; after submit Mutation.changePassword returned succeeded:true errors:[] and the toast read 'Your password has been successfully changed. Changing your password will sign you out of all other devices and browsers.' The current browser session stayed signed in."
 ---
 As a signed-in B2B user, /account/change-password renders Current password, New password, Confirm new password, the "Tips for creating a strong password" box and a Change button. No informational notice about being signed out of other devices/browsers is present anywhere on the page (DOM search for 'other devices', 'sessions', 'sign you out' found nothing). Footer build Ver. 2.61.0-alpha.2605.
