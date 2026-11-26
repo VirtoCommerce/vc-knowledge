@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T13:36:30.785Z",
-  "count": 2285,
+  "generated": "2026-11-26T13:40:09.930Z",
+  "count": 2286,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3551,6 +3551,33 @@
       ],
       "scope": [
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-10BE62B7",
+      "path": "entries/KB-10BE62B7.md",
+      "subject": "An anonymous B2B-store cart gets the full shipping and payment method lists from xAPI with no line item and no address; neither changes when an item and a US address are added",
+      "question": "Which shipping and payment methods does xAPI return to an anonymous cart in B2B-store, and does it need a product or an address first?",
+      "questions": [
+        "Does availableShippingMethods depend on the cart having items or a delivery address?",
+        "What shipping options and prices does an anonymous guest see at checkout in B2B-store?",
+        "Why does availableShippingMethods.priceWithTax show $0.00 while price is $150?",
+        "Does Query.cart create a cart for a new anonymous userId?"
+      ],
+      "anchors": [
+        "Query.cart.availableShippingMethods",
+        "Query.cart.availablePaymentMethods",
+        "Mutation.clearCart",
+        "Mutation.addOrUpdateCartShipment"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=xapi",
+        "user=anonymous"
       ],
       "plane": "experiential",
       "status": "active",
@@ -17661,7 +17688,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {

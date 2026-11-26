@@ -62,5 +62,12 @@ evidence:
     bodyHash: b571834dcaab
     who: Lenajava1
     note: "2026-11-16, signed-in buyer on /cart: the Payment method listbox offers exactly Bank card (Authorize.Net), Bank card (CyberSource), Bank card (Datatrans), Manual, Pay with points, Bank card (Skyflow)."
+  - method: observation
+    deployment: vcst_qa
+    at: 2026-11-26T13:39:36.979Z
+    by: session:7e37d339
+    bodyHash: b571834dcaab
+    who: Dan-BV
+    note: "2026-11-26, xAPI only: an ANONYMOUS B2B-store cart (empty, no address) returns the same six availablePaymentMethods with the same priorities/types (AuthorizeNet PreparedForm 1, CyberSource Standard 0, Datatrans Standard 0, DefaultManual Unknown 1 named \"Test payment method\", Loyalty Unknown 0, Skyflow PreparedForm 0) — the set does not depend on being signed in, on line items or on an address. Detail: KB-10BE62B7."
 ---
 Observed on store B2B-store, signed in as an organization buyer with one physical item in the cart. The storefront offered six options: "Bank card (Authorize.Net)", "Bank card (CyberSource)", "Bank card (Datatrans)", "Manual", "Pay with points", "Bank card (Skyflow)". Query.cart.availablePaymentMethods returns exactly those six. Their codes/types/priorities: AuthorizeNetPaymentMethod (PreparedForm, priority 1), CyberSourcePaymentMethod (Standard, 0), DatatransPaymentMethod (Standard, 0), DefaultManualPaymentMethod (Unknown, 1), LoyaltyPaymentMethod (Unknown, 0), SkyflowPaymentMethod (PreparedForm, 0). Behind that, POST /api/payment/search returns 21 rows system-wide across all stores; B2B-store has exactly six rows, all isActive=true, with priorities that match the GraphQL priorities one-for-one. Six distinct method codes exist in the whole system, so B2B-store enables all of them. On a second deployment the same store's cart offers FOUR methods, not six: "Bank card (Authorize.Net)", "Bank card (CyberSource)", "Manual", "Bank card (Skyflow)" - Datatrans and "Pay with points" are absent - so the offered set is per-deployment. Every method row on the observed store is isActive=true, so this does NOT demonstrate that setting isActive=false removes a method from the cart - only that the enabled set and the offered set coincide.
