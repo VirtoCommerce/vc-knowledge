@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T06:43:43.318Z",
-  "count": 2253,
+  "generated": "2026-11-26T06:53:10.478Z",
+  "count": 2255,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -20174,6 +20174,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-6312F7C5",
+      "path": "entries/KB-6312F7C5.md",
+      "subject": "The storefront password-grant refresh_token is a JWE (alg RSA-OAEP, enc A256CBC-HS512) whose claims cannot be decoded by the client",
+      "question": "Is the refresh_token returned by POST /connect/token a decodable JWT or an opaque/encrypted token?",
+      "questions": [
+        "Can a client read the claims of the storefront refresh token?",
+        "What format does the OpenIddict refresh token have on the storefront token endpoint?"
+      ],
+      "anchors": [
+        "POST /connect/token"
+      ],
+      "scope": [
+        "flow=authentication",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-6323ED21",
       "path": "entries/KB-6323ED21.md",
       "subject": "Storefront return wizard clamps a typed return quantity above Returnable down to the returnable maximum",
@@ -30787,6 +30808,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-97FF481E",
+      "path": "entries/KB-97FF481E.md",
+      "subject": "On vcst_qa a second access token of a storefront buyer keeps resolving the user for at least 4.5 minutes after the password is changed on /account/change-password",
+      "question": "Does changing the password on the storefront /account/change-password page end the user's other access tokens on vcst_qa?",
+      "questions": [
+        "Is persistent token validation on for vcst_qa, judging by other sessions after a password change?",
+        "Does a token minted before a storefront password change still work afterwards?"
+      ],
+      "anchors": [
+        "/account/change-password",
+        "Query.me",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
