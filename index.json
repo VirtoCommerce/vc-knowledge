@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T14:08:21.680Z",
-  "count": 2323,
+  "generated": "2026-11-26T14:09:55.259Z",
+  "count": 2324,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10412,7 +10412,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-32EB25EF",
@@ -49429,6 +49430,33 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EDFBDADB",
+      "path": "entries/KB-EDFBDADB.md",
+      "subject": "POST /api/site-builder/designer/save accepts any JSON path inside the store's theme folder that is not a builder file (default/<name>.json, default/<dir>/bar.json, default/sections/<name>.json): 200 unchecked, stored as a draft and recorded in history, but absent from theme/status and not removable by any Site Builder route",
+      "question": "Does POST /api/site-builder/designer/save refuse a theme file path inside the store's theme folder that is not one of the files the builder edits, such as default/foo/bar.json?",
+      "questions": [
+        "Can designer/save create an arbitrary file in the theme folder?",
+        "Why does a theme draft not show in GET /api/site-builder/theme/status?",
+        "How do I remove a stray -draft file in a Site Builder theme folder?",
+        "Which theme file paths does designer/save allow?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/save",
+        "POST /api/site-builder/designer/discard",
+        "POST /api/site-builder/discard-draft",
+        "GET /api/site-builder/theme/status",
+        "DELETE /api/content/themes/{id}"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

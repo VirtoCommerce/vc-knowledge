@@ -33,5 +33,14 @@ evidence:
     by: session:c8a6829d
     bodyHash: 3ddb3bdf6bf9
     note: "Held for a never-published BUILT-IN file: Electronics sections/header-group.json draft written by POST /api/site-builder/save?draft=true; POST designer/discard with themeFiles [\"sections/header-group.json\"] and [\"default/sections/header-group.json\"] both answered 200 {saveId}, theme/status kept it in drafts+newDrafts; DELETE /api/content/themes/Electronics?urls=/default/sections/header-group.json-draft (204) removed it. Exception on this build: a never-published CUSTOM SECTION TYPE draft (custom-sections/<t>.json) IS removed by designer/discard with the default/ path (ThemeDraftService.GetDiscardStatus treats custom-section types as discardable)."
+  - method: observation
+    deployment: vcst_dev
+    build: 1b6e861ce41cd6cb
+    conditions: platform=3.1100.0; module:VirtoCommerce.SiteBuilder=3.1003.0-pr-5-6088; module:VirtoCommerce.Content=3.1008.0; store=Electronics; role=administrator
+    at: 2026-11-26T14:06:28.193Z
+    by: session:c8a6829d
+    bodyHash: 3ddb3bdf6bf9
+    who: ivan-kalachikov
+    note: "Held for never-published NON-builder theme files written by POST designer/save (default/agent-test-<r>.json, default/<dir>/bar.json, default/sections/<name>.json): discard-draft 409 \"Nothing is published: the draft is the only copy.\" and designer/discard 200 {saveId} with the draft kept, 5/5; Content API DELETE 204 removed them. Exception reconfirmed: a never-published custom-sections/<t>.json draft is removed by designer/discard 200 and by discard-draft 204."
 ---
 B2B-store at a moment its theme had no sections/header-group.json published: a header-group.json draft written by POST /api/site-builder/save?draft=true was refused by POST /api/site-builder/discard-draft?storeId=B2B-store&path=default/sections/header-group.json&type=themes&theme=default with 409 "Nothing is published: the draft is the only copy." POST /api/site-builder/designer/discard?storeId=B2B-store with {themeFiles:["default/sections/header-group.json"]} and with {themeFiles:["sections/header-group.json"]} each answered 200 {saveId} but the draft still read back from designer/theme-file and template?draft=true. The draft blob was removed only with DELETE /api/content/themes/B2B-store?urls=/default/sections/header-group.json-draft (204).
