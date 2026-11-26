@@ -103,6 +103,14 @@ evidence:
     investigation: true
     build: c4000d0bea152759
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 6feb83b80e6f1f12
+    conditions: theme=2.63.0-alpha.2681; store=B2B-store
+    at: 2026-11-26T08:04:53.715Z
+    by: session:779b94fc
+    bodyHash: ff65712edc89
+    note: "2026-11-26 theme 2.63.0-alpha.2681: TechFlow member (Purchasing agent) /account/lists shows only her two Organization-scope lists; rep lists shared to TechFlow with scope Customer (AGENT-TEST-5707-RM, -ADD) are absent; they open via /shared-list/<key>."
 ---
 The storefront's Lists screen issues GetWishlists with storeId, userId (the signed-in user), cultureName, currencyCode, first, after and sort - no scope argument - and the platform answers with the user's own lists PLUS every list another member of the user's organization has set to scope Organization. Observed live 2026-10-08 on theme 2.51.2 (XCart 3.1021.2) and theme 2.59.0 (XCart 3.1039.0): a list member A set to Organization appears on member B's /account/lists with the 'Shared' badge and in the sidebar, opens at /account/lists/<id>, and reads with customerId = A, isOwner false, access Write; once A sets it back to Private it leaves B's roster and wishlist(listId) is Forbidden for B.
 

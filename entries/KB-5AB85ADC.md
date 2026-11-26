@@ -69,5 +69,13 @@ evidence:
     bodyHash: 491c95939c80
     build: c55c1a124b302d3b
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 6feb83b80e6f1f12
+    conditions: theme=2.63.0-alpha.2681; store=B2B-store
+    at: 2026-11-26T08:06:03.016Z
+    by: session:779b94fc
+    bodyHash: 491c95939c80
+    note: "2026-11-26 theme 2.63.0-alpha.2681: recipient dropdown entries read the default 'Hi! I've just shared the list \"<name>\" ...' or the typed note alone, plus the /shared-list URL as the only link; no rep name; clicking the URL opens /shared-list/<key> directly."
 ---
 On theme 2.60.0-pr-2511-81f1 (vcst) and 2.60.0-pr-2522-6f90 (vcptcore), 2026-10-12, saving the Share dialog with newly added Customer targets issues ONE Mutation.sendCustomerCommunication per save, with organizationIds = the newly added organizations only (two added at once: one call carrying both ids), sendEmail and sendPush true, title 'A new list from your sales representative', and message either the rep's typed note or, when empty, 'Hi! I've just shared the list "<name>" with your organization. Take a look:', followed by a blank line and the /shared-list/<key> URL. Neither title nor message contains the organization name. Adding one organization later notifies only that organization; removing one, or a scope change other than to Specific customers, sends nothing. The recipient's Notifications dropdown shows the message and the link with a timestamp, without the title. The single organizationIds call has been the storefront rule since 2026-09-12 (vc-frontend wishlist-customer-sharing.vue notifyCustomers(addedIds), design decision 5 of VCST-5707).

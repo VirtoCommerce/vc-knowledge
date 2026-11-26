@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T07:59:44.158Z",
-  "count": 2263,
+  "generated": "2026-11-26T08:10:37.604Z",
+  "count": 2264,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -366,6 +366,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-018640B1",
+      "path": "entries/KB-018640B1.md",
+      "subject": "A recipient of a sales-rep Customer-scope list share gets a read-and-buy page only: /shared-list/<key> has no remove-item control and /account/lists/<id> redirects to /403",
+      "question": "Can a member of the target organization of a sales-rep Customer-scope list share edit that list (remove an item) in the storefront?",
+      "questions": [
+        "Does /shared-list/<key> offer the recipient a remove-item control?",
+        "Can a share recipient open the shared list at /account/lists/<id>?",
+        "Is a rep-shared list editable by the customer it was shared with?"
+      ],
+      "anchors": [
+        "/shared-list/{id}",
+        "/account/lists/{id}"
+      ],
+      "scope": [
+        "feature=sales-rep-list-sharing",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -18922,7 +18945,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0,
       "resolved": 1
     },
@@ -43425,7 +43448,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 8,
+      "trust": 9,
       "disputed": 0
     },
     {
@@ -47241,7 +47264,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0,
       "resolved": 1
     },
