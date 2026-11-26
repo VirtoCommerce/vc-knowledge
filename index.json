@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T01:47:14.298Z",
-  "count": 2239,
+  "generated": "2026-11-26T01:52:40.496Z",
+  "count": 2240,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -550,6 +550,29 @@
       "scope": [
         "module=sitebuilder",
         "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-03054862",
+      "path": "entries/KB-03054862.md",
+      "subject": "In Mixed Cart loyalty mode a PTS-priced loyalty-catalog product lands in its own 'Products in PTS' group on /cart, and the Order summary adds a separate 'Total in PTS' block",
+      "question": "What does /cart show after a loyalty-catalog (PTS) product is added in Mixed Cart mode?",
+      "questions": [
+        "Where does a PTS loyalty product appear on the cart page?",
+        "Does the cart order summary show a separate total for loyalty points currency?",
+        "Do USD and PTS lines share one cart group?"
+      ],
+      "anchors": [
+        "/cart",
+        "/loyalty-catalog"
+      ],
+      "scope": [
+        "store=b2b-store",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -29436,7 +29459,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -30686,7 +30709,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
