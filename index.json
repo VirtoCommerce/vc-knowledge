@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T14:31:44.969Z",
-  "count": 2326,
+  "generated": "2026-11-26T14:37:23.204Z",
+  "count": 2327,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -47236,6 +47236,27 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-E4D4D996",
+      "path": "entries/KB-E4D4D996.md",
+      "subject": "On Payment 3.1013.0 (pre-fix), POST /api/payment/search paging returns saved methods again as id-less unsaved rows on later pages, and totalCount changes from page to page",
+      "question": "Does POST /api/payment/search on the pre-fix Payment module (before VCST-6930) page correctly: is totalCount constant and does each method appear once?",
+      "questions": [
+        "Why does paging payment methods by storeId return duplicates without id?",
+        "Why does totalCount of POST /api/payment/search grow on later pages?",
+        "What does POST /api/payment/search return with take=0 when unsaved methods exist?"
+      ],
+      "anchors": [
+        "POST /api/payment/search"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-E4DE692A",
