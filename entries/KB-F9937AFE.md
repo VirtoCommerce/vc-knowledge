@@ -52,5 +52,14 @@ evidence:
     defect: suspected
     who: ivan-kalachikov
     note: "Electronics: 8 never-published built-in drafts (templates/product.json, templates/product.<key>.json, header/footer groups, template_rules, brand, palette, palette.dark) - designer/discard 200 kept all 8, discard-draft 409; Content API DELETE removed them. Custom type and settings_data (live copy) were removed. B2B-store: the designer Discard dialog did not even offer the never-published palette or footer draft."
+  - method: observation
+    deployment: vcst_dev
+    build: 858d3d28d721a302
+    conditions: platform=3.1100.0; module:VirtoCommerce.SiteBuilder=3.1003.0-pr-5-01b3; store=Electronics
+    at: 2026-11-26T18:29:51.358Z
+    by: session:c8a6829d
+    bodyHash: 3ddb3bdf6bf9
+    who: ivan-kalachikov
+    note: "SB-098: 9 never-published builder files (templates/product.json, a new templates/product.<key>.json, header/footer groups, template_rules, brand, palette, palette.dark) answered discard-draft 409 and designer/discard 200 with the draft kept; Content API DELETE removed them. The never-published custom type answered discard-draft 204 and was gone; settings_data (live copy) 204."
 ---
 B2B-store at a moment its theme had no sections/header-group.json published: a header-group.json draft written by POST /api/site-builder/save?draft=true was refused by POST /api/site-builder/discard-draft?storeId=B2B-store&path=default/sections/header-group.json&type=themes&theme=default with 409 "Nothing is published: the draft is the only copy." POST /api/site-builder/designer/discard?storeId=B2B-store with {themeFiles:["default/sections/header-group.json"]} and with {themeFiles:["sections/header-group.json"]} each answered 200 {saveId} but the draft still read back from designer/theme-file and template?draft=true. The draft blob was removed only with DELETE /api/content/themes/B2B-store?urls=/default/sections/header-group.json-draft (204).

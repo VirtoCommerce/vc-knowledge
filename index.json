@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T18:10:34.577Z",
-  "count": 2345,
+  "generated": "2026-11-26T18:31:37.844Z",
+  "count": 2346,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19927,6 +19927,26 @@
       "disputed": 0
     },
     {
+      "id": "KB-5D6519C2",
+      "path": "entries/KB-5D6519C2.md",
+      "subject": "A Site Builder role with builder:access/read/create/update and no builder:theme does not see create_section_type or change_section_type in tools/list; discard_draft and restore_version are refused naming builder:theme (real calls only after the confirmation); every theme REST write answers 403",
+      "question": "What does a Manager with builder:read/create/update but without builder:theme get on /admin/mcp and on the Site Builder REST doors for a custom section type?",
+      "anchors": [
+        "POST /admin/mcp",
+        "POST /api/site-builder/designer/save",
+        "POST /api/site-builder/discard-draft"
+      ],
+      "scope": [
+        "module=site-builder",
+        "role=builder without builder:theme",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5D6746FB",
       "path": "entries/KB-5D6746FB.md",
       "subject": "With design classic the storefront sets html data-design=\"classic\", writes no data-preset attribute, and its colour tokens equal the store preset's bundled light/dark maps",
@@ -27680,7 +27700,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 3,
+      "trust": 4,
       "disputed": 0
     },
     {

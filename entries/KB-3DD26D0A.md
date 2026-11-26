@@ -32,5 +32,14 @@ evidence:
     bodyHash: fc66e3877030
     who: ivan-kalachikov
     note: "Source agrees: PublicationDryRuns.GetAddedSectionTypeFindingsAsync takes placed types after the edit minus placed types before it, so a repeat placement yields no finding."
+  - method: observation
+    deployment: vcst_dev
+    build: 858d3d28d721a302
+    conditions: platform=3.1100.0; module:VirtoCommerce.SiteBuilder=3.1003.0-pr-5-01b3; module:VirtoCommerce.MCP=3.1001.0; store=B2B-store
+    at: 2026-11-26T18:29:51.251Z
+    by: session:c8a6829d
+    bodyHash: fc66e3877030
+    who: ivan-kalachikov
+    note: "SBMCP-018: edit_page_draft add_section of a newly placed missing type and of a newly placed draft-only type each warned, not refused; create_page, language_version, multilanguage_page_copy and publish_page dry runs warned for both types with a language prefix."
 ---
 On B2B-store, a page (en-US version of a two-language page) already placing a missing type TM and a draft-only type TD: edit_page_draft add_section TM, then add_section TD, each answered warnings [] (not refused, saved). On the same page an add_section of a NEW missing type (never placed before) answered the usual warning "places custom section types the theme does not hold (...): it can still be published, but the storefront shows nothing in their place". create_page, language_version, multilanguage_page_copy and publish_page dry runs on the same page warn about TM and TD every time. So edit_page_draft's warning covers only types the edit introduces to the page.
