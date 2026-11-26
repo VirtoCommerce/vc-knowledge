@@ -42,5 +42,15 @@ evidence:
     bodyHash: 3ddb3bdf6bf9
     who: ivan-kalachikov
     note: "Held for never-published NON-builder theme files written by POST designer/save (default/agent-test-<r>.json, default/<dir>/bar.json, default/sections/<name>.json): discard-draft 409 \"Nothing is published: the draft is the only copy.\" and designer/discard 200 {saveId} with the draft kept, 5/5; Content API DELETE 204 removed them. Exception reconfirmed: a never-published custom-sections/<t>.json draft is removed by designer/discard 200 and by discard-draft 204."
+  - method: observation
+    deployment: vcst_dev
+    build: 858d3d28d721a302
+    conditions: platform=3.1100.0; module:VirtoCommerce.SiteBuilder=3.1003.0-pr-5-01b3; store=Electronics and B2B-store
+    at: 2026-11-26T17:55:50.149Z
+    by: session:c8a6829d
+    bodyHash: 3ddb3bdf6bf9
+    defect: suspected
+    who: ivan-kalachikov
+    note: "Electronics: 8 never-published built-in drafts (templates/product.json, templates/product.<key>.json, header/footer groups, template_rules, brand, palette, palette.dark) - designer/discard 200 kept all 8, discard-draft 409; Content API DELETE removed them. Custom type and settings_data (live copy) were removed. B2B-store: the designer Discard dialog did not even offer the never-published palette or footer draft."
 ---
 B2B-store at a moment its theme had no sections/header-group.json published: a header-group.json draft written by POST /api/site-builder/save?draft=true was refused by POST /api/site-builder/discard-draft?storeId=B2B-store&path=default/sections/header-group.json&type=themes&theme=default with 409 "Nothing is published: the draft is the only copy." POST /api/site-builder/designer/discard?storeId=B2B-store with {themeFiles:["default/sections/header-group.json"]} and with {themeFiles:["sections/header-group.json"]} each answered 200 {saveId} but the draft still read back from designer/theme-file and template?draft=true. The draft blob was removed only with DELETE /api/content/themes/B2B-store?urls=/default/sections/header-group.json-draft (204).

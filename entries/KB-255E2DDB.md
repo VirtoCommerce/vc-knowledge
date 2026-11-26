@@ -24,5 +24,15 @@ evidence:
     at: 2026-11-19T13:32:41.961Z
     by: session:51ac2fe3
     who: Lenajava1
+  - method: observation
+    deployment: vcst_dev
+    build: 858d3d28d721a302
+    conditions: platform=3.1100.0; module:VirtoCommerce.SiteBuilder=3.1003.0-pr-5-01b3; theme=2.63.0-pr-2698-faeb-faeba500; store=B2B-store; template=product Default
+    at: 2026-11-26T17:56:46.131Z
+    by: session:c8a6829d
+    bodyHash: ca124bfa3e4b
+    defect: suspected
+    who: ivan-kalachikov
+    note: "Same on pr-5-01b3: Hide disabled, More actions only Duplicate/Copy/Paste, Remove section disabled; multi-select Delete -> 'Remove 1 section(s) from the page?' -> Confirm -> Product stays, no save request."
 ---
 On a store whose preview loads, opened the Product template (Default) in the Vue designer. The main section row (Product) shows Hide disabled; its More actions menu offers only Duplicate/Copy/Paste (no Hide/Remove); the settings panel's Remove section button is disabled with the note "Every template keeps its main section: it can't be removed or hidden." Via Sections > Select, ticking the main section enables Delete ("1 selected"); Delete opens "Remove 1 section(s) from the page?"; Confirm closes the dialog, the section stays, selection resets to 0, Save/Undo stay disabled and no message is shown. The protection holds; the multi-select path offers and confirms an action it then silently drops. Same on a store without a loading preview (seen earlier in the day).

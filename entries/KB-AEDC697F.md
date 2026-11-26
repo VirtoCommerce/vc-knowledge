@@ -43,5 +43,15 @@ evidence:
     bodyHash: 8a796fb8629b
     who: Lenajava1
     note: "SB-043/SB-007 at publication 18: legacy save draft=true (no catalogHash) stored header-group.json with color_agent_test_sb043_bogus (200) and theme/status listed the draft ~25 s later; designer/save with catalogHash refused the same file 400."
+  - method: observation
+    deployment: vcst_dev
+    build: 858d3d28d721a302
+    conditions: platform=3.1100.0; module:VirtoCommerce.SiteBuilder=3.1003.0-pr-5-01b3; store=B2B-store
+    at: 2026-11-26T17:55:49.486Z
+    by: session:c8a6829d
+    bodyHash: 8a796fb8629b
+    defect: suspected
+    who: ivan-kalachikov
+    note: "Still holds on pr-5-01b3: legacy save draft=true without catalogHash stored the bogus colour-token header draft (200); with catalogHash 400; content sent as a JSON string stored double-encoded and publish answered 'not a section group'."
 ---
 As admin on B2B-store: POST /api/site-builder/save?storeId=B2B-store&theme=default&draft=true (no catalogHash) with files = JSON string of [{path:"default/sections/header-group.json", type:"themes", content:<object with announcement-bar background "color_agent_test_6571_bogus">}] -> 200 empty body; designer/theme-file then returned that content and theme/status listed the header draft. The same file sent through POST designer/save is refused 400 without catalogHash ("Theme files are checked against the storefront's schema catalog") and 400 with it (value the storefront does not have). With content sent as a JSON string instead of an object, the draft was stored double-encoded (content is a JSON string literal). The invalid draft is caught later: POST theme/publish -> 400 naming the file, so it does not reach the storefront, but it blocks every later Publish theme until replaced.

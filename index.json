@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T17:55:48.924Z",
-  "count": 2342,
+  "generated": "2026-11-26T18:01:14.062Z",
+  "count": 2344,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -600,6 +600,30 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-02BB8926",
+      "path": "entries/KB-02BB8926.md",
+      "subject": "The Site Builder designer's 'Discard all changes' dialog does not offer a never-published built-in theme draft (palette, footer group), nor a header-group draft holding an invalid colour token",
+      "question": "Which theme drafts does the Site Builder designer's Discard all changes dialog list?",
+      "questions": [
+        "Why is my palette draft missing from the designer Discard dialog?",
+        "How do I discard a never-published footer-group draft in the Site Builder designer?",
+        "Does the Discard changes dialog list every draft GET theme/status lists?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/discard",
+        "GET /api/site-builder/theme/status",
+        "/apps/site-builder-shell#/site-builder-draft/site-builder-designer/{groupId}"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-designer"
       ],
       "plane": "experiential",
       "status": "active",
@@ -6589,7 +6613,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -7771,7 +7795,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -12570,7 +12594,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -24357,7 +24381,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -25032,6 +25056,29 @@
       "scope": [
         "module=mcp",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7897ABB4",
+      "path": "entries/KB-7897ABB4.md",
+      "subject": "In the Site Builder designer's Discard changes dialog, ticking a never-published custom section type turns the confirm button into a danger 'Discard and delete' with a warning naming the type; a published type's draft keeps the primary 'Discard'",
+      "question": "How does the Site Builder designer's Discard changes dialog treat a never-published custom section type versus a published one?",
+      "questions": [
+        "When does the designer show 'Discard and delete'?",
+        "What happens to a never-published custom section type when its draft is discarded in the designer?",
+        "Does discarding a never-published custom type in the designer leave requests for its template?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/designer/discard",
+        "/apps/admin-shell#/content/site-builder-designer/{groupId}"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=admin-designer"
       ],
       "plane": "experiential",
       "status": "active",
@@ -26170,7 +26217,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -32599,7 +32646,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 1
+      "disputed": 1,
+      "contested": 1
     },
     {
       "id": "KB-9C031F08",
@@ -36669,7 +36717,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -49851,7 +49899,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-EE07BAC6",
