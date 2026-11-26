@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T07:08:58.686Z",
-  "count": 2256,
+  "generated": "2026-11-26T07:14:43.701Z",
+  "count": 2259,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -2780,6 +2780,29 @@
       "scope": [
         "surface=storefront-ui",
         "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-0C625479",
+      "path": "entries/KB-0C625479.md",
+      "subject": "A multi-organization buyer who signs out and signs back in with a password lands in the organization that was active before sign-out",
+      "question": "Which organization is active after a multi-organization buyer signs out and signs in again with a password on the storefront?",
+      "questions": [
+        "Does the storefront remember the last active organization across sign-in?",
+        "Is there a default organization on storefront sign-in for a multi-org user?"
+      ],
+      "anchors": [
+        "/sign-in",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "feature=password-sign-in",
+        "persona=multi-org",
+        "surface=storefront-ui"
       ],
       "plane": "experiential",
       "status": "active",
@@ -5898,6 +5921,28 @@
       ],
       "scope": [
         "feature=mfa-self-service",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-1CD381A5",
+      "path": "entries/KB-1CD381A5.md",
+      "subject": "Storefront list names are capped at 25 characters: the New List dialog rejects longer names and the Add-to-list quick-create truncates them",
+      "question": "What is the maximum length of a list (wishlist) name on the storefront?",
+      "questions": [
+        "Why is my new list name cut off on /account/lists?",
+        "Why is Create list disabled for a long list name?",
+        "Does the add-to-list modal truncate new list names?"
+      ],
+      "anchors": [
+        "/account/lists",
+        "Mutation.createWishlist"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -12168,7 +12213,7 @@
       "status": "active",
       "trust": 2,
       "disputed": 1,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-3DCCDC7A",
@@ -24292,7 +24337,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0,
       "resolved": 2
     },
@@ -28155,7 +28200,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -47315,6 +47360,28 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-EB8C74EC",
+      "path": "entries/KB-EB8C74EC.md",
+      "subject": "List-page 'Add all to cart' with an out-of-stock item adds the in-stock lines and reports the OOS one as 'Not added' in the result dialog",
+      "question": "What happens when 'Add all to cart' runs on a list that contains an out-of-stock product?",
+      "questions": [
+        "Does Add all to cart skip out-of-stock list items?",
+        "Does an out-of-stock item block adding a whole list to the cart?",
+        "What does the Adding products to cart result dialog show for an OOS list item?"
+      ],
+      "anchors": [
+        "/account/lists/{id}",
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-EB991080",

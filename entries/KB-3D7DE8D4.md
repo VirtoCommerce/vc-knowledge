@@ -70,5 +70,16 @@ evidence:
     who: Aleksandra-Mitricheva
     contradicts: true
     note: Supersedes my own confirm queued a minute earlier in this session, which was filed in error (it was meant as a note, not agreement). On theme 2.61.0-pr-2458-3f0b (vc-frontend 3f0b728) sign-in-form.vue sends analytics('login','password',{success:false,...}) once on a failed attempt, and a successful login is deferred via pending-login.ts to the page the sign-in lands on, which sends one en=login success=true under the new identity. So the headline 'no GA4 login hit' does not hold on this build (matches the 2026-10-19 contest).
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: theme=2.63.0-alpha.2681; store=B2B-store
+    at: 2026-11-26T07:12:04.901Z
+    by: session:779b94fc
+    bodyHash: feff567e2d64
+    who: kutasinaelena
+    contradicts: true
+    contested: virtocommerce.fileexperienceapi 3.1010.0 vs 3.1006.0; virtocommerce.marketingexperienceapi 3.1006.0 vs 3.1004.0; virtocommerce.pages 3.1013.0 vs 3.1010.0; virtocommerce.profileexperienceapimodule 3.1028.0 vs 3.1020.0; virtocommerce.xapi 3.1033.0 vs 3.1026.0; …
+    note: On vcst (theme 2.63.0-alpha.2681) a successful /sign-in password sign-in of an 11-org buyer produced a GA4 collect hit en=login ep.method=password ep.success=true (_s=2) from the home page landed on after sign-in. The 'no GA4 login hit' headline does not hold on this build either (consistent with the 2026-10-19 contest).
 ---
 Signed in 5 different accounts (4 org members, 1 sales rep) through the /sign-in form on a vc-frontend 2.59 build carrying theme PR 2458 (GA user properties). Captured every GA4 collect request across the navigation: the sign-in page sent page_view, scroll, form_start (no up.* params), then the app navigated (openReturnUrl sets location.href) and the next page sent page_view carrying up.contact_id/organization_id/organization_name/is_sales_rep/session_kind. No en=login hit was sent in any of the 5 runs. In source, sign-in-form.vue calls analytics('login') only after signIn() has already triggered the location.href navigation, and user properties are still the anonymous set at that moment. Consequence: GA-derived login counts for an organization stay at 0 / are never attributed to its organization_id. Separately observed: gtag sends up.* only on the first hit (_s=1) of each page load; later hits on the same page (search, view_search_results, view_item batched in POST bodies) carry no up.* on the wire.
