@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T15:58:18.684Z",
-  "count": 2334,
+  "generated": "2026-11-26T16:33:05.518Z",
+  "count": 2335,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -43437,6 +43437,23 @@
       "trust": 2,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-D10B851F",
+      "path": "entries/KB-D10B851F.md",
+      "subject": "POST /api/site-builder/save refuses a theme path that is not a builder file with the allow-list message before it reaches the draft=false rule",
+      "question": "Which 400 message does the legacy POST /api/site-builder/save answer for draft=false and a theme path like default/templates/agent-test-x.json, and which for a builder path like default/templates/product.<key>.json?",
+      "anchors": [
+        "POST /api/site-builder/save"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D12432BD",
