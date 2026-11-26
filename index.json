@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T08:37:56.081Z",
-  "count": 2265,
+  "generated": "2026-11-26T08:43:44.457Z",
+  "count": 2266,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5238,7 +5238,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0,
       "resolved": 2
     },
@@ -7857,6 +7857,29 @@
       "scope": [
         "surface=storefront-ui",
         "theme=vc-frontend"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-276FC005",
+      "path": "entries/KB-276FC005.md",
+      "subject": "The sales-rep list-share notification is composed in the sender's storefront language, not the recipient's",
+      "question": "In which language is the notification sent when a sales rep shares a list from a non-English storefront locale?",
+      "questions": [
+        "Does Mutation.sendCustomerCommunication carry the sender's cultureName for a list share?",
+        "Does the recipient see the list-share push in their own language?"
+      ],
+      "anchors": [
+        "Mutation.sendCustomerCommunication",
+        "/account/lists"
+      ],
+      "scope": [
+        "feature=sales-rep-list-sharing",
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
