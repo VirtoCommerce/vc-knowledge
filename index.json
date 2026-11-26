@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T07:32:30.366Z",
-  "count": 2260,
+  "generated": "2026-11-26T07:37:44.286Z",
+  "count": 2262,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -13171,7 +13171,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -17451,7 +17451,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -32954,6 +32954,28 @@
       "resolved": 1
     },
     {
+      "id": "KB-A3A1750E",
+      "path": "entries/KB-A3A1750E.md",
+      "subject": "A contact with global status Rejected and no OrganizationMembership rows is refused every org-scoped password grant with invalid_grant / user_is_rejected_in_organization",
+      "question": "What does POST /connect/token return for an org-scoped password grant when the contact's global status is Rejected and it has no membership row?",
+      "questions": [
+        "Does a blocking global contact status deny organization access when there is no per-org membership override?",
+        "Which error code does the token endpoint return when a contact is Rejected for every associated organization?",
+        "Is a Rejected contact status a lockout?"
+      ],
+      "anchors": [
+        "POST /connect/token",
+        "PUT /api/contacts"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A3A2CBEF",
       "path": "entries/KB-A3A2CBEF.md",
       "subject": "Password sign-in as a sales rep with zero organizations intermittently fails with a 'Something went wrong' toast (GetMe errors on me.contact.organizationId) while GA still records a successful login; a repeat sign-in succeeds",
@@ -41499,6 +41521,31 @@
       "scope": [
         "payment-method=defaultmanualpaymentmethod",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-CDDB9E70",
+      "path": "entries/KB-CDDB9E70.md",
+      "subject": "A signed-in user outside a list's share scope opening /shared-list/<key> or /account/lists/<id> is redirected to /403 'Access denied'; the read returns errors[0].extensions.code=Forbidden with a null payload",
+      "question": "What does a signed-in non-member see when opening another organization's shared list by URL, and what does the GraphQL read return?",
+      "questions": [
+        "Can a user from another organization open a customer-scoped shared list link?",
+        "Does Query.sharedWishlist leak list items to a non-recipient?",
+        "What does /account/lists/<id> show for a list owned by another organization?"
+      ],
+      "anchors": [
+        "/shared-list",
+        "/account/lists",
+        "Query.sharedWishlist",
+        "Query.wishlist"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",

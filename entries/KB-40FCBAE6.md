@@ -33,5 +33,14 @@ evidence:
     who: Lenajava1
     build: e66f7e540eab47f4
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: theme=2.63.0-alpha.2681
+    at: 2026-11-26T07:32:42.795Z
+    by: session:779b94fc
+    bodyHash: d11d0b7873d2
+    who: kutasinaelena
+    note: "2026-11-26 theme 2.63.0-alpha.2681, adding a rep-only served org (NoRecipients): list saved (ChangeWishlist ok), toast now reads 'The list was saved, but the notification could not be sent. This organization has no contacts to notify.' (reason-specific suffix for NoRecipients)."
 ---
 On the vc-frontend#2476 dialog, when SendCustomerCommunication fails after ChangeWishlist succeeded, the list stays saved, the dialog closes and a warning toast reads 'The list was saved, but the notification could not be sent.'; on reopen there is no way to re-notify that recipient.
