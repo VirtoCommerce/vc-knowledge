@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T05:02:48.419Z",
-  "count": 2247,
+  "generated": "2026-11-26T05:09:58.964Z",
+  "count": 2248,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8159,6 +8159,27 @@
         "page=pdp",
         "store=b2b-store",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2A76DF9E",
+      "path": "entries/KB-2A76DF9E.md",
+      "subject": "On /cart a signed-in user saves a Skyflow card by ticking the inline form's 'Save card for future payments. It's safe.' checkbox before Place order; the card then appears on /account/saved-credit-cards as '•••• 0015, Expires 12/29'",
+      "question": "How does a Skyflow card get saved for a signed-in user, and where does it show up afterwards?",
+      "anchors": [
+        "/cart",
+        "/account/saved-credit-cards",
+        "/checkout/completed",
+        "Mutation.createOrderFromCart"
+      ],
+      "scope": [
+        "payment=skyflow",
+        "surface=storefront-ui",
+        "user=signed-in personal"
       ],
       "plane": "experiential",
       "status": "active",
