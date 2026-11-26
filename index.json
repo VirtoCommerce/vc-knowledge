@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T08:43:44.457Z",
-  "count": 2266,
+  "generated": "2026-11-26T09:32:43.365Z",
+  "count": 2267,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -556,6 +556,30 @@
       "scope": [
         "module=mcp",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-02ACDBF7",
+      "path": "entries/KB-02ACDBF7.md",
+      "subject": "Profile xAPI inviteUser and changeOrganizationContactRole refuse any role outside the store's MembershipRolesWhitelist with RoleNotAllowed; a whitelisted role succeeds",
+      "question": "Can an organization maintainer assign a back-office platform role (Store manager, Order manager) through inviteUser or changeOrganizationContactRole?",
+      "questions": [
+        "Does the storefront role allow-list block privilege escalation through Profile xAPI?",
+        "What does inviteUser return for a role not in Customer.MembershipRolesWhitelist?",
+        "Is VCST-7006 (any platform role via inviteUser) blocked on mainline Profile xAPI?"
+      ],
+      "anchors": [
+        "Mutation.inviteUser",
+        "Mutation.changeOrganizationContactRole",
+        "/company/members"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
