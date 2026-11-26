@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T11:46:26.174Z",
-  "count": 2282,
+  "generated": "2026-11-26T12:33:29.370Z",
+  "count": 2283,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1148,6 +1148,28 @@
       "disputed": 0,
       "resolved": 1,
       "contested": 1
+    },
+    {
+      "id": "KB-0593FB2E",
+      "path": "entries/KB-0593FB2E.md",
+      "subject": "Site Builder MCP dry runs of update_sections_bulk, edit_template_rules and edit_theme_draft (palette) return the full change without saving it, and find_content_gaps returns SEO findings with a fix per page",
+      "question": "What do the Site Builder MCP bulk, template-rule, palette and content-gap tools return in a dry run, and do they save anything?",
+      "questions": [
+        "Does update_sections_bulk with dryRun change any page?",
+        "What does edit_theme_draft part palette with primary_color and dryRun return?",
+        "Does edit_template_rules dryRun save a template rule?",
+        "What does find_content_gaps return for category seo?"
+      ],
+      "anchors": [
+        "/admin/mcp"
+      ],
+      "scope": [
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-0596D202",
