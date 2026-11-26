@@ -34,5 +34,15 @@ evidence:
     defect: VCST-6768
     who: Lenajava1
     note: "Independent re-observation on a second browser engine (firefox): PDP anonymous 234 -> three Backspaces -> empty and focused, nothing sent, 'in Cart' stays 234 -> blur -> field 2, UpdateShortCartItemQuantity 2, 'in Cart' 2, /cart 2. Signed-in /search card 345 -> blur -> 3, UpdateShortCartItemQuantity 3, 'in Cart' 3, /cart 3. On the /cart line the same clearing does not wait for blur: ChangeFullCartItemsQuantity 2 is sent about 1 s after the last Backspace while the field is still focused, and the empty field then shows 2 (seen twice). Select-all (double-click) + one Backspace + blur on /cart: back to 234, nothing sent, reload 234."
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681; store=B2B-store; browser=firefox; actor=anonymous
+    at: 2026-11-26T02:32:43.896Z
+    by: session:779b94fc
+    bodyHash: 12d35fca6d21
+    defect: VCST-6768
+    who: kutasinaelena
+    note: "Still reproduces on theme 2.63.0-alpha.2681 / platform 3.1101.0, Firefox, anonymous PDP ALCE0128: 234 -> three Backspaces issued as separate keystrokes (sub-second gaps) -> UpdateShortCartItemQuantity quantity 23 sent while field empty+focused, 'in Cart' 23 -> blur -> field 2, 'in Cart' 2, /cart line 2."
 ---
 On vcst_qa (B2B-store), with the stepper at 234 (anonymous on the PDP) or 345 (signed-in on the /search card), Backspace three times and a click outside leaves the field, the 'in Cart' indicator and the persisted cart quantity at the first digit (2, or 3 on the card), never 0 and never the pre-edit value, and sends UpdateShortCartItemQuantity (mutation updateCartQuantity) with that digit; /cart holds it after a reload. With the three presses issued back to back nothing is sent while the field is empty and focused, the commit happens on blur. With about 1.2 s between presses the partial values 23 and then 2 are each committed through UpdateShortCartItemQuantity before the blur (the PDP then also showed 'in Cart' 23 and 2 while editing). Selecting the whole content and pressing Backspace once, then blurring, instead put the old value back on /cart and sent nothing.
