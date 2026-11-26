@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T02:05:40.630Z",
-  "count": 2240,
+  "generated": "2026-11-26T02:12:40.672Z",
+  "count": 2241,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7980,7 +7980,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -46379,6 +46379,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E97AD0E1",
+      "path": "entries/KB-E97AD0E1.md",
+      "subject": "In the German storefront locale the account sidebar 'Saved credit cards' entry renders the raw key Skyflow.saved_credit_cards.menu_title",
+      "question": "Is the Saved credit cards account-menu entry translated when the storefront language is German?",
+      "questions": [
+        "Why does the account sidebar show Skyflow.saved_credit_cards.menu_title?",
+        "Does the Skyflow storefront plugin ship a de locale for its account menu item?"
+      ],
+      "anchors": [
+        "/de/account/orders",
+        "/de/account/saved-credit-cards"
+      ],
+      "scope": [
+        "locale=de-de",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
