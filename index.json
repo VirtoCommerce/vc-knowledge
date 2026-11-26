@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T14:22:58.093Z",
-  "count": 2324,
+  "generated": "2026-11-26T14:24:18.180Z",
+  "count": 2325,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -26244,6 +26244,27 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7F0B12BF",
+      "path": "entries/KB-7F0B12BF.md",
+      "subject": "POST /api/payment/search pages saved methods first, then the unsaved ones, with one totalCount (saved + unsaved) on every page; each code appears once across pages",
+      "question": "How does POST /api/payment/search page through saved and unsaved payment methods, and is totalCount the same on every page?",
+      "questions": [
+        "Does the payment method search return a saved method again as a new instance on a later page?",
+        "What totalCount does POST /api/payment/search return with take=0?",
+        "In what order are payment methods returned when paging the payment method search?"
+      ],
+      "anchors": [
+        "POST /api/payment/search"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
