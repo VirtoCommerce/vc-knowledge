@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T13:25:52.996Z",
-  "count": 2283,
+  "generated": "2026-11-26T13:27:01.115Z",
+  "count": 2284,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37367,6 +37367,29 @@
       "scope": [
         "module=background-jobs",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B6BCD705",
+      "path": "entries/KB-B6BCD705.md",
+      "subject": "Site Builder history restore refuses with 400 a theme: item outside the store's theme folder, before anything is written; the theme-folder path restores the version as a draft and records a new version",
+      "question": "What does POST /api/site-builder/history/{versionId}/restore answer for a theme item whose path is outside the store's theme folder?",
+      "questions": [
+        "Can a Site Builder history restore write a theme file outside the store's theme folder?",
+        "Does MCP restore_version check that a theme path is in the store's theme folder?",
+        "What happens when a restore names theme:custom-sections/<t>.json without the theme folder?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/history/{id}/restore",
+        "GET /api/site-builder/history"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
