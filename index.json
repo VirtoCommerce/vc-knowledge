@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T17:24:44.338Z",
-  "count": 2338,
+  "generated": "2026-11-26T17:35:31.517Z",
+  "count": 2342,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8994,6 +8994,24 @@
       "disputed": 0
     },
     {
+      "id": "KB-2C1FB889",
+      "path": "entries/KB-2C1FB889.md",
+      "subject": "Site Builder MCP restore_version for a non-builder theme path asks for confirmation before refusing, and discard_draft on such a path answers 'has no unpublished changes' instead of naming it as not a builder file",
+      "question": "How do restore_version and discard_draft on /admin/mcp answer for a theme path outside the builder allow-list?",
+      "anchors": [
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=rest",
+        "tool=restore_version"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-2C2B8B94",
       "path": "entries/KB-2C2B8B94.md",
       "subject": "A counter-only VcTextarea (wishlist Description, cart Order comment) carries aria-describedby to its details div holding the counter and no aria-invalid; native maxlength truncates input so no too-long error is reachable",
@@ -12715,6 +12733,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3DD26D0A",
+      "path": "entries/KB-3DD26D0A.md",
+      "subject": "Site Builder MCP edit_page_draft warns about a missing or draft-only custom section type only when the edit newly places that type on the page; adding another section of a type the page already places returns warnings []",
+      "question": "Does edit_page_draft on /admin/mcp warn about a missing or draft-only custom section type when the page already places that type?",
+      "questions": [
+        "When does edit_page_draft return custom section type warnings?",
+        "Why does edit_page_draft add_section of a missing custom type return no warning?"
+      ],
+      "anchors": [
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=rest",
+        "tool=edit_page_draft"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -33217,6 +33257,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-9F24D8EE",
+      "path": "entries/KB-9F24D8EE.md",
+      "subject": "Site Builder MCP page doors do not warn about a custom- section type with an invalid name (capital letter, trailing hyphen), while a valid-named missing type is warned on every door",
+      "question": "Do create_page, edit_page_draft, publish_page dry run and get_publish_readiness warn about a custom- section type whose name is invalid?",
+      "questions": [
+        "Is a custom-Agent-Test-x section type treated as a missing type by Site Builder MCP?"
+      ],
+      "anchors": [
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=rest",
+        "tool=create_page"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-9F43C810",
       "path": "entries/KB-9F43C810.md",
       "subject": "On vc-frontend-next 3.3.0-pr-23, print media hides the header, footer links and every VcButton on /cart and order details, but the footer copyright/version strip still prints",
@@ -47213,7 +47274,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-E3BEB939",
@@ -47617,6 +47679,24 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-E58CB6BE",
+      "path": "entries/KB-E58CB6BE.md",
+      "subject": "Site Builder MCP edit_template for a template key the theme does not hold, without copy_of or version_token, announces create_template from a seed with no error and no warning naming copy_of",
+      "question": "What does edit_template answer for a new template_key passed without copy_of or version_token?",
+      "anchors": [
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=rest",
+        "tool=edit_template"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-E5C03B24",
