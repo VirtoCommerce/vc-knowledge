@@ -24,5 +24,14 @@ evidence:
     at: 2026-11-26T13:27:00.468Z
     by: session:c8a6829d
     who: ivan-kalachikov
+  - method: observation
+    deployment: vcst_dev
+    build: 858d3d28d721a302
+    conditions: platform=3.1100.0; module:VirtoCommerce.SiteBuilder=3.1003.0-pr-5-01b3; store=Electronics; role=administrator; setting:history=enabled
+    at: 2026-11-26T15:52:59.262Z
+    by: session:c8a6829d
+    bodyHash: ce8beea58c8a
+    who: ivan-kalachikov
+    note: "Held on pr-5-01b3: theme:custom-sections/<t>.json and theme:sections/header-group.json restore -> 400 folder message; theme:default/custom-sections/<t>.json restore -> 200, draft equals the older version; MCP restore_version same."
 ---
 On Electronics (theme folder default, history enabled through the GitHub App) a custom section type was saved twice, giving two history versions. Restoring the older version with item theme:custom-sections/<t>.json, theme:Default/custom-sections/<t>.json or theme:no-such-theme/custom-sections/<t>.json each answered 400 {"error":"\"<path>\" is not in the store's theme folder \"default\"."}; the draft's content and eTag, the version count and every listing under the rejected paths stayed unchanged. The same restore with theme:default/custom-sections/<t>.json answered 200 {saveId}, brought the older content back as the draft byte for byte and added one version "Restored <id>". MCP restore_version behaves the same: a dry run and a real call with a path outside the folder return isError naming the folder; with the theme folder the dry run lists the field changes and the real call restores. The comparison is case-sensitive (Default/ is refused).

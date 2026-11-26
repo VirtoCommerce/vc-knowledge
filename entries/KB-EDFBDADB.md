@@ -30,5 +30,16 @@ evidence:
     by: session:c8a6829d
     who: ivan-kalachikov
     note: "distinct: KB-32BF9D08 is about a path WITHOUT the theme folder (now refused 400 on pr-5-6088) and KB-F9FA689C about discard of un-prefixed paths; this is a path WITH the store's theme folder that names no builder file, still saved 200 and then invisible to theme/status and un-discardable."
+  - method: observation
+    deployment: vcst_dev
+    build: 858d3d28d721a302
+    conditions: platform=3.1100.0; module:VirtoCommerce.SiteBuilder=3.1003.0-pr-5-01b3; module:VirtoCommerce.Content=3.1008.0; store=Electronics; role=administrator
+    at: 2026-11-26T15:52:46.251Z
+    by: session:c8a6829d
+    bodyHash: d03fb1b37100
+    who: ivan-kalachikov
+    contradicts: true
+    contested: module:VirtoCommerce.SiteBuilder 3.1003.0-pr-5-01b3 vs 3.1003.0-pr-5-6088
+    note: "On module VirtoCommerce.SiteBuilder 3.1003.0-pr-5-01b3 (later build than the entry's pr-5-6088) every theme-file door refuses a non-builder path inside the theme folder (default/agent-test-<r>.json, default/agent-test-<r>/bar.json, default/sections/agent-test-<r>.json, default/templates/Product.json, default/content/templates/product.json): GET designer/theme-file, POST designer/save, designer/discard, api/site-builder/save draft=true, discard-draft and history/{v}/restore each answer 400 {\"error\":\"\\\"<path>\\\" is not a theme file the builder saves (templates, custom section types, header and footer groups, settings, rules, brand, palettes).\"}; MCP restore_version returns isError with the same text. Nothing written: no Content API listing, no history version for the item, theme/status unchanged. Looks fixed on this build; the entry's observation was on pr-5-6088."
 ---
 As admin on store Electronics (theme folder default, site history enabled), with the catalog hash from default/catalogs/current.json and the eTag from GET designer/theme-file: POST /api/site-builder/designer/save with themeFiles [{path:"default/agent-test-<r>.json", ...}] answered 200 with warnings [], 5 of 5 paths (also a <script>/onclick body, default/agent-test-<r>/bar.json and default/sections/agent-test-<r>.json). The Content API listing showed /default/<path>-draft (published false) and GET /api/site-builder/history?item=theme:default/<path> showed the Save as a version. GET /api/site-builder/theme/status listed none of them in drafts or newDrafts (it lists only the fixed theme parts, templates/<key>.json and custom-sections/<type>.json). Removing them: POST /api/site-builder/discard-draft?type=themes answered 409 "Nothing is published: the draft is the only copy." and POST /api/site-builder/designer/discard answered 200 {saveId} but kept the draft (5/5); only DELETE /api/content/themes/Electronics?urls=/default/<path>-draft (204) removed it. Controls in the same run: default/config/settings_data.json is listed in theme/status drafts and removed by designer/discard; a new default/custom-sections/custom-<t>.json is listed in drafts and newDrafts and removed by designer/discard or discard-draft (204). Paths without the theme folder, or under snapshots/, catalogs/ or a non-builder config/ file, are refused 400. Both designer/save and designer/discard run the same path validator (a deny-list); the discard keeps the stray file because a never-published draft that is not a custom section type is its only copy.
