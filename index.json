@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T08:10:37.604Z",
-  "count": 2264,
+  "generated": "2026-11-26T08:19:31.866Z",
+  "count": 2265,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4265,6 +4265,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-141052FD",
+      "path": "entries/KB-141052FD.md",
+      "subject": "In the header Organizations panel, a locked membership's row is a native disabled button in both the search-filtered and the unfiltered list, so a click or keyboard pick cannot switch to it",
+      "question": "Can a buyer switch to a locked organization by clicking its row in the header Organizations panel while a search phrase is active?",
+      "questions": [
+        "Does the organizations-search filter bypass the locked-organization click guard?",
+        "Is the locked organization row disabled in the filtered Organizations list?",
+        "Does clicking a locked organization in the header Organizations panel issue a /connect/token request?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "POST /connect/token"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=desktop"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
