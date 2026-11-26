@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T19:24:43.837Z",
-  "count": 2347,
+  "generated": "2026-11-26T19:29:17.603Z",
+  "count": 2348,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -23934,6 +23934,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-7234B01B",
+      "path": "entries/KB-7234B01B.md",
+      "subject": "POST /api/content/themes/<store>?folderUrl=/default/custom-sections&draft=true with a file named <type>.json stores a theme draft (<type>.json-draft, listed in theme/status newDrafts); a file named <type>.json-draft is stored as the published <type>.json",
+      "question": "How do I write a theme file as a DRAFT through the Content API so Site Builder lists it in theme/status and the preview reads it?",
+      "anchors": [
+        "POST /api/content/themes/{id}",
+        "GET /api/site-builder/theme/status"
+      ],
+      "scope": [
+        "module=sitebuilder",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
