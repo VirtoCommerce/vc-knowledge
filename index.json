@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T05:33:30.428Z",
-  "count": 2251,
+  "generated": "2026-11-26T05:38:03.462Z",
+  "count": 2253,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12236,6 +12236,30 @@
       "disputed": 0
     },
     {
+      "id": "KB-3E008A53",
+      "path": "entries/KB-3E008A53.md",
+      "subject": "Storefront holds Mutation.updateCartQuantity in a 1 s client-side debounce; leaving the page inside that window raises a beforeunload prompt and the mutation is sent only on leave, then aborted",
+      "question": "Why does an add-to-cart (UpdateShortCartItemQuantity) on /search never return and the next navigation hang on a 'Some operations are still in progress' prompt?",
+      "questions": [
+        "Is updateCartQuantity sent immediately when the quantity stepper is clicked?",
+        "What causes the beforeunload 'Some operations are still in progress' prompt on the storefront?",
+        "Why is a quantity change lost when navigating away right after clicking the stepper?",
+        "Does the storefront batch cart quantity mutations?"
+      ],
+      "anchors": [
+        "Mutation.updateCartQuantity",
+        "/search",
+        "/cart"
+      ],
+      "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3E1ED222",
       "path": "entries/KB-3E1ED222.md",
       "subject": "The designer's top 'Pages' dropdown lists legacy Content pages, and choosing one does not load that page — the designer keeps the current page-builder page's sections",
@@ -18913,6 +18937,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 4,
+      "disputed": 0
+    },
+    {
+      "id": "KB-5AE61D65",
+      "path": "entries/KB-5AE61D65.md",
+      "subject": "createOrderFromCart keeps the cart: the same cart id stays the buyer's current cart after /checkout/completed, and cart mutations on it succeed",
+      "question": "After an order is placed and the storefront lands on /checkout/completed, does the next cart mutation (Mutation.updateCartQuantity) using the same cartId fail because the cart became the order?",
+      "questions": [
+        "Is the cart deleted when createOrderFromCart creates the order?",
+        "Does the storefront need a new cart id after checkout completes?",
+        "What does the backend answer to updateCartQuantity on the cart an order was just created from?",
+        "Why does GetShortCart return the same cart id after placing an order?"
+      ],
+      "anchors": [
+        "Mutation.createOrderFromCart",
+        "Mutation.updateCartQuantity",
+        "/checkout/completed"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
