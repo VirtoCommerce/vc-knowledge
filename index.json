@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T00:15:38.709Z",
-  "count": 2228,
+  "generated": "2026-11-26T00:15:48.868Z",
+  "count": 2230,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -31339,7 +31339,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -32808,6 +32808,27 @@
       ],
       "scope": [
         "feature=coupons-sidebar",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-A5347A19",
+      "path": "entries/KB-A5347A19.md",
+      "subject": "/checkout sends an anonymous visitor to /cart (no login gate), and a signed-in buyer's cart survives losing the browser session and signing in again",
+      "question": "Does the storefront force sign-in on /checkout or /cart when the session is lost, and is the cart still there after re-login?",
+      "questions": [
+        "Is checkout behind a login gate on B2B-store?",
+        "What does /cart show after the browser session is cleared mid-checkout?",
+        "Is a registered user's cart kept server-side across sign-out and sign-in?"
+      ],
+      "anchors": [
+        "/cart"
+      ],
+      "scope": [
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -43376,6 +43397,27 @@
       "scope": [
         "mode=dark",
         "preset=coffee",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-DA9E1344",
+      "path": "entries/KB-DA9E1344.md",
+      "subject": "/company/members shows an organization maintainer only their own organization's members, and its search does not find a member of another organization",
+      "question": "Can an organization maintainer see or find members of a different organization on /company/members?",
+      "questions": [
+        "Is the /company/members search scoped to the current organization?",
+        "Does the own row on /company/members have an actions menu?"
+      ],
+      "anchors": [
+        "/company/members"
+      ],
+      "scope": [
+        "role=organization-maintainer",
         "surface=storefront-ui"
       ],
       "plane": "experiential",

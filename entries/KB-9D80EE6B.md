@@ -24,5 +24,14 @@ evidence:
     who: Lenajava1
     build: e7c4faf10f640e7c
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: theme=2.63.0-alpha.2681; platform=3.1101.0
+    at: 2026-11-26T00:15:39.860Z
+    by: session:779b94fc
+    bodyHash: 614d3b7430a5
+    who: kutasinaelena
+    note: "2026-11-26, theme 2.63.0-alpha.2681: Remember me unchecked by default; with it checked the session survives closing the tab and opening a new one in the same context; with it unchecked a new browser context is signed out - consistent with storage-based persistence independent of the checkbox."
 ---
 The Remember me checkbox on the storefront /sign-in page is vestigial UI with no backend contract. With it on or off the token request is identical (scope offline_access always), the session is persisted the same way in local storage, and the same long-lived refresh token is issued. The feature was never implemented, per the product owner - treat it as a known gap or feature request, not a defect.
