@@ -22,5 +22,14 @@ evidence:
     at: 2026-10-27T16:17:52.052Z
     by: session:54733023
     who: kutasinaelena
+  - method: observation
+    deployment: vcptcore_qa
+    build: 1857bc5940dff4ff
+    conditions: platform=3.1101.0; module:VirtoCommerce.Payment=3.1014.0-pr-83-9661; store=B2B-store
+    at: 2026-11-26T14:22:57.741Z
+    by: session:ede6a633
+    bodyHash: 0bf749f4dad6
+    who: Lenajava1
+    note: POST /api/payment/search {storeId:B2B-store} returned 7 saved methods plus the unsaved OZTest2 (no id, storeId null, isActive false); for stores B2B-loyalty and Electronics all 8 registered methods came back unsaved with storeId null.
 ---
 On vcptcore_qa1, POST /api/shipping/search and POST /api/payment/search accept storeId, isActive and codes as filters. The payment search with storeId also returns registered-but-unsaved payment methods whose storeId is null, so a check of "is code X active in store S" must match result.storeId === S explicitly rather than trust the storeId filter. Used to verify that FixedRate and DefaultManualPaymentMethod are active in B2B-store and that AGENT-TEST-NoSuch* codes are absent.

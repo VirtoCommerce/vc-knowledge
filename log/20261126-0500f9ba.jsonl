@@ -1,1 +1,2 @@
 {"at":"2026-11-26T07:27:46.844Z","kind":"flush","ok":false,"attempts":3,"reason":"conflict","code":"conflict","who":"Lenajava1"}
+{"at":"2026-11-26T11:42:22.791Z","kind":"restart","why":"state-dropped","who":"Lenajava1"}
