@@ -55,5 +55,14 @@ evidence:
     note: "2026-10-06 theme 2.59.0-pr-2476-43b1: adding one org to an existing share -> SendCustomerCommunication organizationIds=[that org only], sendEmail+sendPush true; message-only edit (599 chars) sent ChangeWishlist only, toast 'List saved. Now shared with 2 customers.'"
     build: 7e1a0b2b78fac557
     buildFrom: deploy-history
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: theme=2.63.0-alpha.2681
+    at: 2026-11-26T07:32:29.889Z
+    by: session:779b94fc
+    bodyHash: 984e05b1ff27
+    who: kutasinaelena
+    note: "2026-11-26 theme 2.63.0-alpha.2681: list shared with 1 org, then a 2nd org added -> SendCustomerCommunication organizationIds=[new org only], sendEmail+sendPush true, title 'A new list from your sales representative', message = note + blank line + /shared-list/<key>."
 ---
 On save of a Specific-customers share the storefront sends one Mutation.sendCustomerCommunication whose organizationIds are only the orgs added in that save (existing recipients are not re-notified); a save that only changes the message sends no communication. Title is the fixed string 'A new list from your sales representative'; message is the note (or a default 'Hi! I've just shared the list ... with your organization.') plus the /shared-list/<key> link. Neither title nor body names the organization. The reader's push (pushMessages.shortMessage / header bell) is note + link only.
