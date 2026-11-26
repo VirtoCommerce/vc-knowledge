@@ -25,5 +25,12 @@ evidence:
     by: session:c8a6829d
     who: ivan-kalachikov
     note: "distinct: About edit_page_draft's warnings for re-placing a type the page already holds; the held entries are about get_publish_readiness language prefixes, publish_theme placed_sections and readiness for removed live types."
+  - method: source
+    deployment: VirtoCommerce.SiteBuilder@3.1003.0-pr-5-01b3
+    at: 2026-11-26T18:13:02.204Z
+    by: session:c8a6829d
+    bodyHash: fc66e3877030
+    who: ivan-kalachikov
+    note: "Source agrees: PublicationDryRuns.GetAddedSectionTypeFindingsAsync takes placed types after the edit minus placed types before it, so a repeat placement yields no finding."
 ---
 On B2B-store, a page (en-US version of a two-language page) already placing a missing type TM and a draft-only type TD: edit_page_draft add_section TM, then add_section TD, each answered warnings [] (not refused, saved). On the same page an add_section of a NEW missing type (never placed before) answered the usual warning "places custom section types the theme does not hold (...): it can still be published, but the storefront shows nothing in their place". create_page, language_version, multilanguage_page_copy and publish_page dry runs on the same page warn about TM and TD every time. So edit_page_draft's warning covers only types the edit introduces to the page.
