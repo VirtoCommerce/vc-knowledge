@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T18:31:37.844Z",
-  "count": 2346,
+  "generated": "2026-11-26T19:24:43.837Z",
+  "count": 2347,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5329,6 +5329,25 @@
       "scope": [
         "auth=admin",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-185951C9",
+      "path": "entries/KB-185951C9.md",
+      "subject": "A Content API upload of 'X.json-draft' into a theme's custom-sections folder is listed as 'X.json' (published:true), stays out of theme/status drafts, renders in the designer preview, and is removed by DELETE ?urls=.../X.json-draft",
+      "question": "What happens when a custom section type file is uploaded to the theme folder as X.json-draft through POST /api/content/themes/{storeId}?",
+      "anchors": [
+        "POST /api/content/themes/{id}",
+        "DELETE /api/content/themes/{id}",
+        "GET /api/content/themes/{id}/search"
+      ],
+      "scope": [
+        "module=content",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
