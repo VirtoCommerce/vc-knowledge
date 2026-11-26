@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T15:54:30.855Z",
-  "count": 2332,
+  "generated": "2026-11-26T15:58:18.684Z",
+  "count": 2334,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6817,6 +6817,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-20010B2D",
+      "path": "entries/KB-20010B2D.md",
+      "subject": "Site Builder MCP create_page kind multilanguage_page_copy returns the source page's name with the new page's id",
+      "question": "What object_name and object_id does site-builder MCP create_page multilanguage_page_copy return?",
+      "questions": [
+        "multilanguage_page_copy result object_name wrong",
+        "does create_page multilanguage copy return the copy's name"
+      ],
+      "anchors": [
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "module=virtocommerce.sitebuilder",
+        "surface=rest",
+        "tool=create_page"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -20790,6 +20812,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-62E6AE6D",
+      "path": "entries/KB-62E6AE6D.md",
+      "subject": "Site Builder MCP get_publish_readiness for a multilanguage page repeats the missing/draft-only custom-type findings per language without naming the language",
+      "question": "Does site-builder MCP get_publish_readiness name the language in its missing and draft-only custom section type findings for a multilanguage page?",
+      "questions": [
+        "get_publish_readiness multilanguage_page_id findings language prefix",
+        "why are readiness warnings duplicated for each language version of a site builder page"
+      ],
+      "anchors": [
+        "POST /admin/mcp"
+      ],
+      "scope": [
+        "module=virtocommerce.sitebuilder",
+        "surface=rest",
+        "tool=get_publish_readiness"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
