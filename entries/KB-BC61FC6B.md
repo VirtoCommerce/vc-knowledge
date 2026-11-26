@@ -46,5 +46,14 @@ evidence:
     bodyHash: 07eb82579c83
     who: Lenajava1
     note: "2026-11-09 Chromium 375x812: still an unnamed 44x44 icon button; no aria-label, no title, its 'Filters' span is display:none. Also the drawer it opens (div.vc-dialog.orders-mobile-filters inside .vc-popup-sidebar) carries no role=dialog / aria-modal on any ancestor."
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: platform=3.1101.0; theme=2.63.0-alpha.2681; browser=chromium; viewport=375x812
+    at: 2026-11-26T02:00:03.592Z
+    by: session:779b94fc
+    bodyHash: 07eb82579c83
+    who: kutasinaelena
+    note: "2026-11-26 Chromium 375x812, theme 2.63.0-alpha.2681: still an unnamed 44x44 button left of the search box; search button named 'Search orders'; desktop button named 'Filters'. Mobile Filters drawer also not exposed as role=dialog."
 ---
 At 375x812 (Firefox) the button left of the orders search box (44x44, filter icon, opens the Filters sidebar) appears in the accessibility snapshot as an unnamed button; its 'Filters' text span is in the DOM (a has-text match finds it) but not exposed as the accessible name. At 1920 the same control is named 'Filters'. Screen-reader users get an unlabelled button.
