@@ -32,5 +32,14 @@ evidence:
     bodyHash: 3a84a0b71b77
     who: Lenajava1
     note: "2026-11-23 en locale, 31-org buyer, current org Alpha: phrase Zeta (3 matches) gave 4 rows, current org first and selected; Clear gave 30 rows with focus kept in the search field; reopen gave an empty field and 30 rows."
+  - method: observation
+    deployment: vcst_qa
+    build: 6feb83b80e6f1f12
+    conditions: theme=2.63.0-alpha.2681; store=B2B-store
+    at: 2026-11-26T07:55:22.684Z
+    by: session:779b94fc
+    bodyHash: 3a84a0b71b77
+    who: kutasinaelena
+    note: "2026-11-26 regression: 31-org buyer current Alpha, phrase Zeta -> 4 rows (current pinned first, selected); Clear -> 30 rows, focus in field; reopen -> empty field, 30 rows. 11-org buyer, phrase Com -> current BMW-Group pinned + 3 matches; Enter changes nothing."
 ---
 On vcst (theme 2.63.0-pr-2667-0444-0444048a, de locale) a buyer with 11 organizations opened the header Organizations panel (data-test-id organizations-button, role=dialog) with Bence-and-Family current and typed 'Hillcrest' in the search combobox. The list showed Bence-and-Family (selected, first) plus Hillcrest-Holdings. Admin POST /api/members/search keyword 'Hillcrest' returns only Hillcrest-Holdings and the two orgs share the same description, so Bence-and-Family was not a description match: the current org is pinned by the UI. Typing 'zzqqxx' instead gave an empty listbox and the status 'Keine Ergebnisse gefunden' (No results found) without the current org. Clearing with the x button restored the full 11-org list with focus kept in the search field. The panel's GetOrganizations is sent with first:30, sort name:asc, statuses:[Approved].

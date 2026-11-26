@@ -33,5 +33,14 @@ evidence:
     by: session:9c36bcd2
     who: Aleksandra-Mitricheva
     note: "distinct: KB-78188952 covers sign-in and page rendering, not data scope. This entry records whether org-scoped DATA (organization orders, org details, org order by number) is readable in that state. It is not: Forbidden on the server, no All orders tab in the UI, and /company/* redirects."
+  - method: observation
+    deployment: vcst_qa
+    build: 6feb83b80e6f1f12
+    conditions: theme=2.63.0-alpha.2681; store=B2B-store
+    at: 2026-11-26T07:54:52.179Z
+    by: session:779b94fc
+    bodyHash: 9cab139bfdad
+    who: kutasinaelena
+    note: "UI half re-observed: /account/orders deep link renders without All/My tabs, 'There are no orders yet', no Corporate section, /company/info redirects to dashboard."
 ---
 Contact who is org-maintainer in one AGENT-TEST org and org-employee in another, with 0 own orders. Before the lock, xAPI organizationOrders returned 115 and 15 orders for the two orgs, organization(id) returned addresses and contacts, and /account/orders showed All orders / My orders tabs listing the org's orders. After both memberships were permanently locked through the REST lock endpoint, every freshly minted password-grant token (with or without organization_id naming a locked org) had me.contact.organizationId null. organizationOrders and organization(id) for both orgs returned GraphQL errors 'Access denied' with code Forbidden, and order(number) of an org order was Forbidden. orders without userId, with another buyer's userId, and with an organizationId filter all returned totalCount 0. In the storefront, /account/orders rendered without the All/My orders tabs and showed 'There are no orders yet' (GetOrders with the user's own userId returned 0). The dashboard widgets showed 0 orders and an empty My recent orders list, the Corporate sidebar section was absent, /account/quotes was empty, and /company/members and /company/info redirected to /account/dashboard. After unlock, the same reads returned 115/15 again. So the no-org state leaks no organization data: the server denies it and the UI does not request it.

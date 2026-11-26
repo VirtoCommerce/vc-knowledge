@@ -23,5 +23,14 @@ evidence:
     at: 2026-11-23T08:30:25.786Z
     by: session:7ce2b8e4
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 6feb83b80e6f1f12
+    conditions: theme=2.63.0-alpha.2681; browser=edge; store=B2B-store
+    at: 2026-11-26T07:55:23.026Z
+    by: session:779b94fc
+    bodyHash: 25e63b784571
+    who: kutasinaelena
+    note: "2026-11-26: two tabs, panel open in tab B; switch in tab A -> both tabs reloaded into the new org, tab B panel closed; switch back from tab B reloaded tab A as well."
 ---
 Buyer with two Approved memberships (org-maintainer in one org, org-employee in the other), classic design. Tab A on / and tab B on /cart, both in org X; in tab B the header Organizations panel was left open. In tab A the buyer picked org Y in the header Organizations panel (desktop) — tab A reloaded in Y within ~1 s, and tab B also reloaded on its own: its header name, the Organizations control label and the account-menu name all showed Y, and its panel was closed. The reverse switch made from the phone menu (Corporate > My organizations) in tab B reloaded tab A into the chosen org the same way. A switch fired while an SPA navigation to /account/orders had just completed landed tab A on /account/orders in the new org. No console errors.

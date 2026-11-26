@@ -38,5 +38,15 @@ evidence:
     defect: suspected
     who: Lenajava1
     note: Re-observed on the header Organizations panel (vc-frontend PR #2667), 4/4. After the failed switch, localStorage organization-id-<user> = the refused target (the locked org, or an unlocked org picked after the lock), and the auth tokens were null. A password sign-in while the target was still locked sent organization_id=target and landed in another org (server fallback). Once unlocked, the next sign-in landed in the refused target.
+  - method: observation
+    deployment: vcst_qa
+    build: 6feb83b80e6f1f12
+    conditions: theme=2.63.0-alpha.2681; store=B2B-store
+    at: 2026-11-26T07:55:23.390Z
+    by: session:779b94fc
+    bodyHash: 36f92d4433b6
+    defect: suspected
+    who: kutasinaelena
+    note: "2026-11-26 B2C-ORG-078: panel opened, admin locked org B membership, pick of the still-enabled B -> POST /connect/token 400 invalid_grant ID2018; page reloaded as a guest with no notice. localStorage not read (real-user rule)."
 ---
 On vcptcore_qa1 a buyer in orgs A and B was signed in to A with the account menu open. Org B's membership was then locked by REST, so the menu still listed B as enabled. Clicking B sent POST /connect/token grant_type=refresh_token organization_id=B, which returned 400 invalid_grant "The specified refresh token is no longer valid." (membership writes revoke tokens). The storefront signed the buyer out with no message. The next code sign-in carried organization_id=B, so B had been stored as last-used even though the switch failed. The same happened for a switch into an org removed from the contact mid-session: the next sign-in sent that org. In theme source, useUser.switchOrganization awaits useAuth.refresh(), which catches the error, resets tokens and emits unauthorized without rethrowing. switchOrganization then writes localStorage organization-id-<userName> = target unless authErrors is set. Server-side fallback (VCST-6132) makes the next sign-in land on an accessible org anyway.

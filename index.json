@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T07:45:44.089Z",
-  "count": 2262,
+  "generated": "2026-11-26T07:59:44.158Z",
+  "count": 2263,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8137,7 +8137,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 6,
+      "trust": 7,
       "disputed": 0,
       "resolved": 2
     },
@@ -11968,7 +11968,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 7,
+      "trust": 8,
       "disputed": 0
     },
     {
@@ -22827,6 +22827,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-708F9145",
+      "path": "entries/KB-708F9145.md",
+      "subject": "On desktop, a currently-locked organization membership renders as a disabled option with a padlock in the header Organizations panel; an unlock or an expired LockoutEnd re-enables it on the next page load with no re-login, and locking a sibling mid-session does not sign the user out",
+      "question": "How does the desktop header Organizations panel on /account/dashboard render a locked organization membership, and what happens on unlock, expiry or a lock landing mid-session?",
+      "questions": [
+        "Does unlocking an organization membership require the storefront user to sign in again?",
+        "Is an organization membership with IsLocked=true and a past LockoutEnd shown as locked in the storefront switcher?",
+        "Does locking a sibling organization membership sign out a live storefront session?",
+        "How many options does the Organizations listbox show when one of two memberships is locked?"
+      ],
+      "anchors": [
+        "/account/dashboard",
+        "Query.me.contact.organizations",
+        "POST /graphql"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "user=multi-organization-member",
+        "viewport=desktop"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-70FEDC01",
       "path": "entries/KB-70FEDC01.md",
       "subject": "On /cart the Pick points dialog's locations radiogroup has the raw i18n key 'pages.checkout.shipping.links.select_pickup_point' as its accessible name",
@@ -23931,7 +23957,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -24030,7 +24056,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -31817,7 +31843,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -41939,7 +41965,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -42709,7 +42735,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -43056,7 +43082,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -47397,7 +47423,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
