@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T15:09:25.740Z",
-  "count": 2328,
+  "generated": "2026-11-26T15:27:51.081Z",
+  "count": 2329,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -37339,6 +37339,30 @@
         "/sitemap.xml"
       ],
       "scope": [
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B329219A",
+      "path": "entries/KB-B329219A.md",
+      "subject": "Query.cartPickupLocations (first:50) reports hasNextPage=false exactly at the page boundary (50, 100) and true at 51/101, and every page after the first re-carries the cart's confirmed pickup location at items[0]; the /cart Pick points dialog de-duplicates it",
+      "question": "How does Query.cartPickupLocations paginate at exact page-size boundaries, and does a Load more page repeat the confirmed pickup location?",
+      "questions": [
+        "Does the /cart Pick points Load more button appear when the active pickup-location count equals exactly 50?",
+        "How many Load more clicks are needed to reach the 101st pickup location on /cart?",
+        "Why does the GetCartPickupLocations after:50 response hold one more item than expected?",
+        "What does the Pick points counter show when the confirmed location is the 51st of 51?"
+      ],
+      "anchors": [
+        "Query.cartPickupLocations",
+        "/cart"
+      ],
+      "scope": [
+        "feature=bopis",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
