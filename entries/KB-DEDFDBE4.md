@@ -39,5 +39,14 @@ evidence:
     bodyHash: a7c38ba0caf5
     who: kutasinaelena
     note: "Re-measured on a personal (non-B2B) customer with 2 lines: 671.2px (viewport 732) mobile 'Remove all' only; 672.8px (viewport 733, innerWidth 734) and 1038.4px (1920) desktop 'Remove selected' only. Under emulated print every .vc-button on /cart is display:none (0 of 25 at 1920, 0 of 23 at 732), both footer buttons included; note the container widens to 716.8px in print at viewport 732, so the desktop @container rule is active and still loses to print."
+  - method: observation
+    deployment: vcst_qa
+    build: 1fe74fdd17a1b14e
+    conditions: theme=2.63.0-alpha.2681; role=personal customer; browser=chromium
+    at: 2026-11-26T06:43:08.734Z
+    by: session:779b94fc
+    bodyHash: a7c38ba0caf5
+    who: kutasinaelena
+    note: "vcst_qa, 2 lines: .vc-line-items 671px (viewport 732) only 'Remove all'; 673px (733) and 1038px (1920) only 'Remove selected'. Served rule @container (width > 42rem), no root font-size override (T=672)."
 ---
 Served CSS (vc.kit): .vc-line-items is the container (container-type: inline-size); .vc-line-items__button--desktop is display:none by default and display:inline-block inside @container (width > 42rem); .vc-line-items__button--mobile is display:none inside that query. Measured on /cart (Chromium, signed-in B2B user, 4 lines): container 371px and 400.8px -> mobile 'Remove all' shown, desktop none; 671.2px (viewport 732) -> mobile shown; 672.8px (viewport 733-734) and 1038px (viewport 1920) -> desktop 'Remove selected' shown (computed display block as a flex item), mobile none. Exactly one at each width. Both carry margin-inline-end 4px. In print media both are display:none.
