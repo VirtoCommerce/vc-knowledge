@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T11:44:28.567Z",
-  "count": 2370,
+  "generated": "2026-11-27T12:07:08.663Z",
+  "count": 2371,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -51297,6 +51297,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 5,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F1605A45",
+      "path": "entries/KB-F1605A45.md",
+      "subject": "GET /api/white-labeling/organization/{id} returns the organization's most recently created white-labeling record regardless of isEnabled, so with two records it shows the newest one and hides the older",
+      "question": "Which record does GET /api/white-labeling/organization/{id} return when an organization has more than one white-labeling record?",
+      "questions": [
+        "Does GET /api/white-labeling/organization/{organizationId} filter by isEnabled?",
+        "After changeOrganizationLogo created a second record, which one does the REST read by organization show?",
+        "How can I see every white-labeling record of an organization?"
+      ],
+      "anchors": [
+        "GET /api/white-labeling/organization/{id}",
+        "Mutation.changeOrganizationLogo"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
