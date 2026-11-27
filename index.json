@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-26T23:43:50.805Z",
-  "count": 2353,
+  "generated": "2026-11-27T00:30:03.930Z",
+  "count": 2354,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -48964,6 +48964,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-EA798F1F",
+      "path": "entries/KB-EA798F1F.md",
+      "subject": "Site Builder theme publish also checks header sections' color pairs against the dark palette and refuses an announcement bar whose text is unreadable there",
+      "question": "Does POST theme/publish refuse an announcement bar whose background and text tokens fail WCAG AA in the dark palette?",
+      "questions": [
+        "Why does Publish theme fail after generating a new palette when the header has an announcement bar?",
+        "Are announcement bar colors validated for contrast in both light and dark palettes?",
+        "Which text token stays dark in both palettes for an orange announcement bar?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/theme/publish",
+        "POST /api/site-builder/designer/save"
+      ],
+      "scope": [
+        "surface=admin-designer",
+        "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
