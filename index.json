@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T00:30:03.930Z",
-  "count": 2354,
+  "generated": "2026-11-27T10:24:17.310Z",
+  "count": 2357,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19870,6 +19870,29 @@
       "disputed": 0
     },
     {
+      "id": "KB-5B5E0F30",
+      "path": "entries/KB-5B5E0F30.md",
+      "subject": "The Admin Shell site History widget opens only the history settings (repository, Test connection, Turn off history); it lists no versions and has no Restore — restoring happens only in the designer's Version history panel",
+      "question": "Can an earlier Site Builder version be restored from Admin Shell Sites -> a site -> History?",
+      "questions": [
+        "Where is the Restore button for Site Builder version history?",
+        "What does the History widget on a Site Builder site blade show?",
+        "Why can't I restore a previous version from the site's History panel?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/content/site-builder-git/{storeId}",
+        "/apps/admin-shell#/content/site-builder-designer/{pageId}"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5BC4EC37",
       "path": "entries/KB-5BC4EC37.md",
       "subject": "On /company/info, picking a non-JPG/PNG file in the Company logo picker shows \"File format is not allowed\", sends no upload, and throws a hidden TypeError (reading 'url')",
@@ -28178,6 +28201,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-86EA760E",
+      "path": "entries/KB-86EA760E.md",
+      "subject": "In the Site Builder designer's Version history, every Restore button is disabled while the editor has unsaved changes (only a hover title says to save or undo first); on a clean editor Restore of a page or a theme-file version answers 200 and adds a 'Restored <id>' version",
+      "question": "Why is Restore disabled in the Site Builder designer Version history, and does restoring a page or header version work?",
+      "questions": [
+        "Restore button greyed out in Site Builder version history",
+        "Does POST /api/site-builder/history/{versionId}/restore work from the designer for a page version?",
+        "Can I restore a header version while I have unsaved designer changes?"
+      ],
+      "anchors": [
+        "POST /api/site-builder/history/{id}/restore",
+        "/apps/admin-shell#/content/site-builder-designer/{pageId}"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -53331,6 +53377,30 @@
         "/apps/admin-shell#/inventory"
       ],
       "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FCBAAC8C",
+      "path": "entries/KB-FCBAAC8C.md",
+      "subject": "An Announcement bar added in the Site Builder designer starts with no blocks and renders nothing; its settings panel's 'Text' field is the text COLOUR picker, and the text input appears only after expanding the tree row and choosing Add block -> Announcement",
+      "question": "How do you enter the text of an announcement bar in the Site Builder designer?",
+      "questions": [
+        "Announcement bar text field missing in Site Builder designer",
+        "Why does the Text setting of the announcement bar show colours?",
+        "Why does a new announcement bar not show in the designer preview?",
+        "Where is Add block for the announcement-bar section?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/content/site-builder-designer/{pageId}",
+        "GET /api/site-builder/catalog"
+      ],
+      "scope": [
+        "module=site-builder",
         "surface=admin-ui"
       ],
       "plane": "experiential",
