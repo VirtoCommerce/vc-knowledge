@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T10:54:12.779Z",
-  "count": 2358,
+  "generated": "2026-11-27T10:55:21.532Z",
+  "count": 2359,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -4836,6 +4836,32 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-166C15CB",
+      "path": "entries/KB-166C15CB.md",
+      "subject": "In the Electronics designer on vcst_dev, any link list picked for Header Icons or a footer Menu block empties that part of the preview, because the preview is the B2B-store storefront and asks GetMenu for the name in B2B-store",
+      "question": "Why does picking a store menu for the header icons or a footer Menu block blank the Site Builder designer preview?",
+      "questions": [
+        "Why are the header icons gone after choosing an Icons menu in the designer?",
+        "Why does a footer Menu block show only its heading after choosing a link list?",
+        "Which store does the designer preview resolve theme menus against?"
+      ],
+      "anchors": [
+        "Query.menu",
+        "GET /api/site-builder/designer/storefront",
+        "GET /api/cms/{id}/menu",
+        "/apps/admin-shell#/content/site-builder-designer/{pageId}"
+      ],
+      "scope": [
+        "module=site-builder",
+        "store=electronics",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
