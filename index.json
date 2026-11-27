@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T11:14:05.505Z",
-  "count": 2363,
+  "generated": "2026-11-27T11:28:18.022Z",
+  "count": 2365,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12409,6 +12409,23 @@
       "contested": 1
     },
     {
+      "id": "KB-3BFAF6CC",
+      "path": "entries/KB-3BFAF6CC.md",
+      "subject": "whiteLabelingSettings.favicons sizes are a hard-coded list of five in the xAPI handler, independent of any ImageTools favicons task",
+      "question": "Where do the favicon sizes in whiteLabelingSettings.favicons come from, and what are they?",
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "module=whitelabeling",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3BFF73A3",
       "path": "entries/KB-3BFF73A3.md",
       "subject": "xAPI products filter: sku: is accepted as an alias of code, but mpn: is not an alias of manufacturerPartNumber and matches nothing",
@@ -20773,6 +20790,24 @@
         "aspect=layout-stability",
         "auth=signed-in",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6102AC5A",
+      "path": "entries/KB-6102AC5A.md",
+      "subject": "White labeling Logo sub-blade accepts PNG/GIF/SVG and Favicon sub-blade PNG/JPG/WEBP; each toolbar has Reset (revert unsaved) and Clear (empty that image)",
+      "question": "Which file types do the Admin White labeling Logo and Favicon widgets accept, and what toolbar actions do those sub-blades have?",
+      "anchors": [
+        "GET /modules/$(VirtoCommerce.WhiteLabeling)/Scripts/blades/white-labeling-logo.js",
+        "GET /modules/$(VirtoCommerce.WhiteLabeling)/Scripts/blades/white-labeling-favicon.js"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=admin-spa"
       ],
       "plane": "experiential",
       "status": "active",
@@ -47624,7 +47659,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-E3BEB939",
