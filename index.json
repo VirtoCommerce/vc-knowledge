@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T11:28:18.022Z",
-  "count": 2365,
+  "generated": "2026-11-27T11:29:28.188Z",
+  "count": 2367,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -6106,6 +6106,23 @@
       "status": "active",
       "trust": 2,
       "disputed": 1
+    },
+    {
+      "id": "KB-1C18DC2F",
+      "path": "entries/KB-1C18DC2F.md",
+      "subject": "Storefront falls back to the bundled settings_data current preset (not the store's white-labeling preset) when the merged themePresetName does not resolve; mercury and default are bundled presets",
+      "question": "What theme does the storefront apply when an organization's white-labeling themePresetName cannot be resolved?",
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-1C28E89D",
@@ -30031,6 +30048,23 @@
       ],
       "scope": [
         "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-8E100650",
+      "path": "entries/KB-8E100650.md",
+      "subject": "A white-labeling logoUrl that fails to load shows the storefront no-image placeholder in the header, not the theme logo or the organization name",
+      "question": "What does the storefront header show when the white-labeling logo URL is invalid or 404?",
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "feature=white-labeling",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
