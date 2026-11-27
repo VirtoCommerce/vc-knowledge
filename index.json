@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T12:23:14.707Z",
-  "count": 2374,
+  "generated": "2026-11-27T12:35:13.296Z",
+  "count": 2376,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -12120,6 +12120,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-3A51CEC3",
+      "path": "entries/KB-3A51CEC3.md",
+      "subject": "The Admin White labeling blade requests a _64x64 thumbnail of an SVG store logo, which returns 404",
+      "question": "Why does opening the White labeling blade in the Admin SPA log a 404 for logo_*_64x64.svg?",
+      "questions": [
+        "Are 64x64 thumbnails generated for SVG white-labeling logos?",
+        "What 404 appears in the console when opening store White labeling in the admin?"
+      ],
+      "anchors": [
+        "GET /cms-content/assets/customization/{id}",
+        "GET /api/white-labeling/store/{id}"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-3A7A11EB",
       "path": "entries/KB-3A7A11EB.md",
       "subject": "After sign-out and sign-in of a different user in the same Admin Shell tab, the previous user's section rail and Recent items stay rendered even though the new user's POST /api/admin-shell/menu returned 403",
@@ -15465,6 +15487,29 @@
       "trust": 2,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-496C7758",
+      "path": "entries/KB-496C7758.md",
+      "subject": "A disallowed file picked in the Admin White labeling Logo sub-blade opens a 'Filetype error' dialog and sends no upload; the store record is unchanged",
+      "question": "What happens when an admin picks a WEBP (or other non PNG/GIF/SVG) file for the White labeling logo in the Admin SPA?",
+      "questions": [
+        "Is a wrong-extension logo file uploaded before validation in the white labeling admin?",
+        "What error does the White labeling Logo blade show for a WEBP file?",
+        "Does a refused logo pick change logoUrl or modifiedDate of the store white-labeling record?"
+      ],
+      "anchors": [
+        "GET /api/white-labeling/store/{id}",
+        "GET /modules/$(VirtoCommerce.WhiteLabeling)/Scripts/blades/white-labeling-logo.js"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-4971F946",
