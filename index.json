@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T10:24:17.310Z",
-  "count": 2357,
+  "generated": "2026-11-27T10:54:12.779Z",
+  "count": 2358,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -30492,6 +30492,29 @@
         "surface=rest",
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-90B59058",
+      "path": "entries/KB-90B59058.md",
+      "subject": "Site Builder designer offers the Header 'Icons > Menu' link-list picker and the Footer 'Menu' block's Menu picker + Links list editor; inline links update the preview footer as you type",
+      "question": "Can an author edit the footer links and the header icons in the Site Builder designer?",
+      "questions": [
+        "Where is the header icons menu setting in the Site Builder designer?",
+        "How do you add a footer link in the Site Builder designer?",
+        "Does the designer render menu and list setting types for the header and footer?"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/content/site-builder-designer/{pageId}",
+        "GET /api/cms/{id}/menu"
+      ],
+      "scope": [
+        "module=site-builder",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
