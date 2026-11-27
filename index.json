@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T10:55:21.532Z",
-  "count": 2359,
+  "generated": "2026-11-27T11:09:49.562Z",
+  "count": 2360,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -10504,6 +10504,23 @@
       "scope": [
         "role=sales-rep",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-3239DE5F",
+      "path": "entries/KB-3239DE5F.md",
+      "subject": "Query.whiteLabelingSettings returns mainMenuLinks, footerLinks and childItems in descending priority order, not ascending; the priority field is what orders the menu",
+      "question": "Does xAPI whiteLabelingSettings return mainMenuLinks / footerLinks sorted by priority ascending?",
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
