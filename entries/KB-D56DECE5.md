@@ -24,5 +24,14 @@ evidence:
     at: 2026-11-27T13:36:34.061Z
     by: session:d2ee4088
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 56f07d69d90abb81
+    conditions: theme=2.63.0; platform=3.1101.0; store=B2B-store; browser=chromium
+    at: 2026-11-27T14:09:08.127Z
+    by: session:d2ee4088
+    bodyHash: c81573f9d884
+    who: Lenajava1
+    note: "Re-measured 2026-11-27: Warranty/Support 280x18, centres 26px apart; nearest other target (Help button) 16px from the Warranty centre - SC 2.5.8 spacing exception met."
 ---
 On vcst_qa (theme 2.63.0), 375x667 Chromium (clientWidth 360), signed in as an organization member with a two-level white-labeling footer list: the section headers render as accordion buttons 280x40; tapping one reveals its child links as block anchors 280x18 CSS px with an 8px gap (centres 26px apart). They meet the WCAG 2.2 2.5.8 24px spacing exception but are below a 44x44 target (2.5.5).

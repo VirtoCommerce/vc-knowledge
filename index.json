@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T13:41:16.065Z",
-  "count": 2384,
+  "generated": "2026-11-27T14:14:18.551Z",
+  "count": 2385,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -39245,6 +39245,31 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B80BC7C6",
+      "path": "entries/KB-B80BC7C6.md",
+      "subject": "After sign-in, an organization's own white-labeling themePresetName replaces the store preset on every page (home, /catalog, /cart): html data-preset, --color-primary-500 and solid-primary button backgrounds all follow the organization preset",
+      "question": "Does the organization's theme preset apply across storefront pages after a member signs in, or only on the home page?",
+      "questions": [
+        "Which preset does /catalog use for a signed-in member whose organization has its own white-labeling preset?",
+        "Does the solid primary button colour follow the organization preset after sign-in?",
+        "Is --color-primary-500 the same on home, catalog and cart for an organization member?"
+      ],
+      "anchors": [
+        "Query.pageContext",
+        "/catalog",
+        "/cart"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=storefront-ui",
+        "viewport=desktop"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
