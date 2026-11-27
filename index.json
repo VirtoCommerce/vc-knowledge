@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T14:14:18.551Z",
-  "count": 2385,
+  "generated": "2026-11-27T14:45:17.215Z",
+  "count": 2387,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17808,6 +17808,28 @@
       "scope": [
         "role=administrator",
         "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-516EED6F",
+      "path": "entries/KB-516EED6F.md",
+      "subject": "POST /api/white-labeling accepts an organization record with isEnabled true and every branding field null, and GET /organization/{id} returns it with all fields null",
+      "question": "Can an organization have an enabled white-labeling record with no logo, favicon, preset or link lists, and what does GET return for it?",
+      "questions": [
+        "Is an empty enabled white-labeling record accepted by the REST API?",
+        "Does the white-labeling validator require a logo or preset on an organization record?"
+      ],
+      "anchors": [
+        "POST /api/white-labeling",
+        "GET /api/white-labeling/organization/{id}"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
@@ -52667,6 +52689,27 @@
       "scope": [
         "module=salesrep",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F6BD88E7",
+      "path": "entries/KB-F6BD88E7.md",
+      "subject": "GET /api/white-labeling/store/{storeId} for a store with no white-labeling record answers 200 with the JSON body null, not 204 or 404",
+      "question": "What does GET /api/white-labeling/store/{storeId} return when the store has no white-labeling record?",
+      "questions": [
+        "How do I detect that a store has no white-labeling record over REST?",
+        "Does the white-labeling store endpoint 404 for a store without a record?"
+      ],
+      "anchors": [
+        "GET /api/white-labeling/store/{id}"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
