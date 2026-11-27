@@ -1,0 +1,2 @@
+{"at":"2026-11-27T14:05:22.986Z","kind":"restart","why":"state-dropped","who":"kutasinaelena"}
+{"at":"2026-11-27T14:05:30.615Z","kind":"flush","entries":0,"lines":10,"swept":["255e7721.jsonl","fa76db75.jsonl"],"retries":0,"ok":true,"convertedToConfirm":0,"who":"kutasinaelena"}
