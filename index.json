@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T13:19:18.620Z",
-  "count": 2380,
+  "generated": "2026-11-27T13:41:16.065Z",
+  "count": 2384,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -1227,6 +1227,28 @@
       "scope": [
         "module=salesrep",
         "role=sales-rep",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-05AA8E28",
+      "path": "entries/KB-05AA8E28.md",
+      "subject": "With a Coffee preset the storefront keyboard focus ring (#447d9c, color_accent_500) reaches only 2.97:1 against the header top bar and the footer background (#3d2b24)",
+      "question": "Does the storefront focus outline meet 3:1 contrast on the dark header top bar and footer under the Coffee preset?",
+      "questions": [
+        "What colour is the keyboard focus outline on the storefront and what does it contrast against?",
+        "Is the focus indicator visible on the language selector and footer links with the Coffee theme preset?",
+        "Do white-labeled organization presets keep focus indicators at WCAG 1.4.11 3:1?"
+      ],
+      "anchors": [
+        "client-app/assets/presets/coffee.json"
+      ],
+      "scope": [
+        "feature=white-labeling",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -27060,6 +27082,27 @@
       "disputed": 0
     },
     {
+      "id": "KB-7F61A942",
+      "path": "entries/KB-7F61A942.md",
+      "subject": "At 375px the storefront home page overflows by 1px: the static-content slider next-arrow icon (-mr-px) sticks out past the viewport",
+      "question": "Does the storefront home page scroll horizontally at a 375px mobile viewport?",
+      "questions": [
+        "Why is scrollWidth one pixel larger than clientWidth on the mobile home page?",
+        "Does the home slider arrow cause horizontal scroll on mobile?"
+      ],
+      "anchors": [
+        "client-app/shared/static-content/components/slider.vue"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-7F926BA1",
       "path": "entries/KB-7F926BA1.md",
       "subject": "Opening a return from the storefront Returns list at 375 px shifts the layout, but CLS scores it only when GetReturn lands more than 500 ms after the click",
@@ -27856,6 +27899,27 @@
       "scope": [
         "store=b2b-store",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-83AA266C",
+      "path": "entries/KB-83AA266C.md",
+      "subject": "The storefront home page scrolls horizontally at 1024x768: the builder Popular categories tile row runs ~96px past the viewport",
+      "question": "Does the storefront home page overflow horizontally at 1024x768?",
+      "questions": [
+        "Why does the home page get a horizontal scrollbar on a tablet in landscape?",
+        "Is there horizontal overflow on the home page at tablet widths?"
+      ],
+      "anchors": [
+        "client-app/pages/matcher/builderIo/builder-io.vue"
+      ],
+      "scope": [
+        "surface=storefront-ui",
+        "viewport=tablet"
       ],
       "plane": "experiential",
       "status": "active",
@@ -45084,6 +45148,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-D56DECE5",
+      "path": "entries/KB-D56DECE5.md",
+      "subject": "At 375px the expanded white-labeling footer accordion reveals child links only 18 CSS px tall (280x18, 8px apart)",
+      "question": "What tap-target size do the storefront footer child links have on mobile after expanding a footer section?",
+      "questions": [
+        "Are mobile footer links at least 44x44 px on the storefront?",
+        "How big are the footer accordion headers and links at 375px?"
+      ],
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-D59DDAAD",
       "path": "entries/KB-D59DDAAD.md",
       "subject": "A storefront organization switch that fails at /connect/token still stores the target org as last-used and signs the buyer out, so the next code sign-in sends the refused org",
@@ -48861,7 +48947,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
