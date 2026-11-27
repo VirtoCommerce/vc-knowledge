@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T12:56:15.868Z",
-  "count": 2379,
+  "generated": "2026-11-27T13:19:18.620Z",
+  "count": 2380,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -8611,7 +8611,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 8,
+      "trust": 9,
       "disputed": 0,
       "resolved": 2
     },
@@ -23132,6 +23132,29 @@
       "scope": [
         "role=guest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-6CAB0377",
+      "path": "entries/KB-6CAB0377.md",
+      "subject": "Switching organization in the storefront header switcher repaints logo, favicon links, preset, main menu and footer to the new organization's white-labeling, and switching back restores the first organization's branding",
+      "question": "Does the storefront branding (logo, favicons, theme preset, main menu, footer) follow the active organization when a multi-organization member switches organization?",
+      "questions": [
+        "What happens to the header logo and favicon after an organization switch?",
+        "Does data-preset change when a buyer switches organization?",
+        "Do main menu and footer links update after switching organization in the header?"
+      ],
+      "anchors": [
+        "Query.pageContext"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=storefront-ui",
+        "viewport=desktop"
       ],
       "plane": "experiential",
       "status": "active",
