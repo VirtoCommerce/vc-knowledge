@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T12:07:08.663Z",
-  "count": 2371,
+  "generated": "2026-11-27T12:23:14.707Z",
+  "count": 2374,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -17121,6 +17121,23 @@
       "disputed": 0
     },
     {
+      "id": "KB-4FC31FE9",
+      "path": "entries/KB-4FC31FE9.md",
+      "subject": "whiteLabelingSettings for an organization whose record sets no main-menu name returns the store record's main-menu links, not an empty array",
+      "question": "What does xAPI whiteLabelingSettings(organizationId, storeId).mainMenuLinks return for an organization whose record has no main menu link list name while the store record has one?",
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4FEABEDD",
       "path": "entries/KB-4FEABEDD.md",
       "subject": "Site Builder builder:read and builder:shared-components:read carry StoreSelectedScope; a role scoped to one store gets 403 on every Site Builder read and write of another store, while writes inside the store follow the global builder:theme/templates/publish permissions",
@@ -17144,6 +17161,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-4FFB6E0D",
+      "path": "entries/KB-4FFB6E0D.md",
+      "subject": "whiteLabelingSettings(domain) resolves the store only (organizationId null), and a call with neither storeId nor domain returns null",
+      "question": "What does Query.whiteLabelingSettings return when called with only the storefront domain, or with no storeId and no domain?",
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "argument=domain",
+        "feature=white-labeling",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -44563,6 +44598,23 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-D38A8A68",
+      "path": "entries/KB-D38A8A68.md",
+      "subject": "The storefront writes the applied preset file name to html data-preset and the preset's color_primary_500 to the --color-primary-500 CSS variable",
+      "question": "How can a test read which theme preset the storefront applied, without a literal colour?",
+      "anchors": [
+        "/assets/presets/mercury.json"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-D3B7A017",
