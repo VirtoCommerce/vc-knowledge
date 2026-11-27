@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T12:35:13.296Z",
-  "count": 2376,
+  "generated": "2026-11-27T12:56:15.868Z",
+  "count": 2379,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -27333,6 +27333,33 @@
       "disputed": 0
     },
     {
+      "id": "KB-80F489BF",
+      "path": "entries/KB-80F489BF.md",
+      "subject": "Query.whiteLabelingSettings(organizationId) returns any organization's branding (logoUrl, organizationId) to an anonymous caller with no token",
+      "question": "Can a caller who is not a member of an organization read that organization's white-labeling settings through xAPI?",
+      "questions": [
+        "Is whiteLabelingSettings with an organizationId restricted to that organization's members?",
+        "Does an anonymous GraphQL call get another organization's logoUrl from whiteLabelingSettings?"
+      ],
+      "concepts": [
+        "white-labeling",
+        "organization"
+      ],
+      "anchors": [
+        "Query.whiteLabelingSettings",
+        "POST /graphql"
+      ],
+      "scope": [
+        "auth=anonymous",
+        "feature=white-labeling",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-80F5209B",
       "path": "entries/KB-80F5209B.md",
       "subject": "After a Site Builder theme publication, Query.themeSnapshot carries the published custom section types under customSections in every culture's snapshot, each with its own translated name and setting defaults",
@@ -35448,6 +35475,28 @@
       "disputed": 0
     },
     {
+      "id": "KB-A7796221",
+      "path": "entries/KB-A7796221.md",
+      "subject": "On mobile the Main menu drawer lists the theme's fixed links at top level; white-labeling mainMenuLinks appear only after tapping Catalog, as a drill-down panel, and an entry with children opens its own panel",
+      "question": "Where does the mobile main-menu drawer show an organization's white-labeling main menu links?",
+      "questions": [
+        "Does the mobile hamburger drawer show white-labeling mainMenuLinks at top level?",
+        "How are main menu child items shown in the storefront mobile drawer?"
+      ],
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=storefront-ui",
+        "viewport=mobile"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-A788D882",
       "path": "entries/KB-A788D882.md",
       "subject": "On the vc-frontend-next theme the storefront root '/' always renders the built-in demo home component; Page Builder or Builder.io content published for '/' is never shown",
@@ -36343,6 +36392,29 @@
         "objecttype=store",
         "surface=rest",
         "valuetype=boolean"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-ABAEAFCD",
+      "path": "entries/KB-ABAEAFCD.md",
+      "subject": "On desktop the storefront header menubar renders white-labeling mainMenuLinks as top-level links only; an entry with childItems opens no dropdown on hover, click or Enter and navigates to its own url",
+      "question": "Does an organization main-menu entry with childItems open a dropdown in the desktop storefront header?",
+      "questions": [
+        "Where are white-labeling main menu child items shown on desktop?",
+        "Does hovering a main menu entry with children show a submenu in vc-frontend 2.63?",
+        "What happens when you click a main-menu parent entry in the storefront header?"
+      ],
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=storefront-ui",
+        "viewport=desktop"
       ],
       "plane": "experiential",
       "status": "active",
