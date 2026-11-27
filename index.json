@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T11:09:49.562Z",
-  "count": 2360,
+  "generated": "2026-11-27T11:14:05.505Z",
+  "count": 2363,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -9718,6 +9718,24 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-2EAD7A0F",
+      "path": "entries/KB-2EAD7A0F.md",
+      "subject": "After the 2026-11-26 reseed the seeded organization favicon and its five favicons[] thumbnails return 200 although the ImageTools thumbnail job is disabled",
+      "question": "Are favicons[] hrefs of the seeded WL_ELECTRONICS organization reachable when the thumbnail job is off?",
+      "anchors": [
+        "Query.whiteLabelingSettings",
+        "GET /cms-content/assets/customization/favicons/{id}"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -47592,6 +47610,23 @@
       "contested": 1
     },
     {
+      "id": "KB-E3A57C54",
+      "path": "entries/KB-E3A57C54.md",
+      "subject": "The store and organization White labeling blades have only a Save button; there is no Reset to defaults or Clear toolbar action",
+      "question": "Does the Admin White labeling blade have Reset to defaults or Clear buttons?",
+      "anchors": [
+        "GET /api/white-labeling/store/{id}"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=admin-spa"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-E3BEB939",
       "path": "entries/KB-E3BEB939.md",
       "subject": "/company/tasks?filter=<unknown token> for a sales rep with tasks falls back to the Today scope and cleans the URL to /company/tasks; a calendar day pick from a tab also drops ?filter",
@@ -52888,6 +52923,23 @@
       "scope": [
         "role=limited-back-office",
         "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F98BB191",
+      "path": "entries/KB-F98BB191.md",
+      "subject": "whiteLabelingSettings with an organizationId that matches no organization returns the store's branding with HTTP 200 and no errors, not null fields",
+      "question": "What does Query.whiteLabelingSettings return for an unknown organizationId such as a fixture key instead of the organization GUID?",
+      "anchors": [
+        "Query.whiteLabelingSettings"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",
