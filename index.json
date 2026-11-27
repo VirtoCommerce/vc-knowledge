@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T11:29:28.188Z",
-  "count": 2367,
+  "generated": "2026-11-27T11:44:28.567Z",
+  "count": 2370,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -19393,6 +19393,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-595C7FF0",
+      "path": "entries/KB-595C7FF0.md",
+      "subject": "Admin Shell has a single White labeling blade reached from the store blade's \"More widgets\", with Save and Reset only and no Clear, secondary logo inline and a URL box under each image",
+      "question": "Where is White labeling in the Admin Shell and how does its blade differ from the AngularJS admin?",
+      "questions": [
+        "Does the Admin Shell have a White labeling page?",
+        "Which toolbar actions does the Admin Shell white labeling blade have?",
+        "Is there a secondary logo field in the Admin Shell white labeling blade?"
+      ],
+      "concepts": [
+        "white-labeling"
+      ],
+      "anchors": [
+        "/apps/admin-shell#/stores/store/B2B-store",
+        "GET /api/white-labeling/store/{id}"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-5972040C",
       "path": "entries/KB-5972040C.md",
       "subject": "PUT /api/page-builder-pages/grouped with userGroups sent as a JSON array returns HTTP 500 NullReferenceException instead of a 400; userGroups is a string field",
@@ -20005,7 +20031,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -24705,6 +24731,29 @@
       ],
       "scope": [
         "store=b2b-store",
+        "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-753BEB16",
+      "path": "entries/KB-753BEB16.md",
+      "subject": "The storefront's GetPageContext asks whiteLabelingSettings for favicons but never for faviconUrl, and as a guest sends the domain and no organizationId, so a guest gets the store record's branding",
+      "question": "What does the storefront request for white labeling in GetPageContext, and what does a guest see?",
+      "questions": [
+        "Does white labeling apply before sign in?",
+        "Which fields does the storefront select from whiteLabelingSettings?",
+        "Why does a stored faviconUrl not appear on the storefront?"
+      ],
+      "anchors": [
+        "Query.pageContext"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "role=guest",
         "surface=storefront-ui"
       ],
       "plane": "experiential",
@@ -53523,6 +53572,28 @@
         "feature=organization-fallback",
         "persona=multi-org",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-FC2150C5",
+      "path": "entries/KB-FC2150C5.md",
+      "subject": "changeOrganizationLogo finds the organization's record with IsEnabled=true and otherwise creates a new enabled one without running the store-XOR-organization / duplicate validator",
+      "question": "Can the storefront company-logo mutation create a second white-labeling record for an organization whose record is disabled?",
+      "questions": [
+        "What does changeOrganizationLogo do when the organization has no enabled white labeling record?",
+        "Does deleting the company logo delete the uploaded file?"
+      ],
+      "anchors": [
+        "Mutation.changeOrganizationLogo",
+        "POST /api/white-labeling"
+      ],
+      "scope": [
+        "feature=white-labeling",
+        "surface=xapi"
       ],
       "plane": "experiential",
       "status": "active",

@@ -23,5 +23,14 @@ evidence:
     at: 2026-10-29T13:26:41.183Z
     by: session:0a5c9007
     who: Lenajava1
+  - method: observation
+    deployment: vcst_qa
+    build: 56f07d69d90abb81
+    conditions: theme=2.63.0; role=organization buyer
+    at: 2026-11-27T11:43:03.849Z
+    by: session:d2ee4088
+    bodyHash: a5e312334c49
+    who: Lenajava1
+    note: "2026-11-27, theme footer Ver. 2.63.0: /company/info Company logo block as an organization buyer reads \"The files available for upload are in JPG, PNG formats. Each file should not exceed 4.8MB. Maximum 1 files allowed.\" No file was picked; this confirms only the allowed-types text, not the defect."
 ---
 Signed in as an Organization maintainer, opened /company/info (no logo set), clicked "Browse your files" under Company logo and picked a 13-byte .txt file. The block showed the inline message "File format is not allowed"; no upload request and no GraphQL mutation was sent (only a read-only GetPushMessages query followed), and the page stayed unchanged. App Insights recorded a browser exception "TypeError: Cannot read properties of undefined (reading 'url')" at the moment of the pick; browser_console_messages showed 0 errors, because the App Insights Vue plugin's errorHandler swallows it (same mechanism as KB-2DD1A73B). fileUploadOptions for the scope returned allowedExtensions [.jpg,.png] and maxFileSize 5000000. A PR build of the theme (vc-frontend PR #2612) showed the same message with no exception.

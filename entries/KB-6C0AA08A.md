@@ -25,5 +25,12 @@ evidence:
     by: session:d2ee4088
     who: Lenajava1
     note: "distinct: KB-A23A4A41 is about the store white-labeling RECORD (xAPI merge); this is the separate store SETTING WhiteLabeling.WhiteLabelingEnabled, which the storefront honours as a master switch that suppresses org branding too."
+  - method: source
+    deployment: vc-frontend@a6ee5ce36
+    at: 2026-11-27T11:43:40.345Z
+    by: session:d2ee4088
+    bodyHash: 013376a93333
+    who: Lenajava1
+    note: "Source agrees (2026-11-27): useWhiteLabeling.ts reads module VirtoCommerce.WhiteLabeling setting WhiteLabeling.WhiteLabelingEnabled from the store's module settings; fetchWhiteLabelingSettings returns early and setWhiteLabelingSettings applies nothing when it is falsy. The per-record isEnabled is consulted only in the xAPI handler. Live toggle not repeated by this session."
 ---
 On vcst_qa 2026-11-26 (B2B-store, theme 2.63.0-alpha.2681), a buyer of an organization whose white-labeling record is enabled (own logo, favicon, Watermelon preset, own main-menu link list). With only the store's White labeling blade toggle OFF (store record isEnabled=false), the home page still showed the org preset, org main menu and requested the org logo/favicon. After setting the store setting WhiteLabeling.WhiteLabelingEnabled=false (full-body PUT /api/stores), reloading / showed the default Virto Commerce logo, the default palette, the default catalog main menu, and sent no request for any customization asset or preset. So the store SETTING is the storefront master switch; the blade's Enabled toggle only removes the store record's own contribution.
