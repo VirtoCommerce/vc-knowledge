@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T19:10:41.517Z",
-  "count": 2402,
+  "generated": "2026-11-28T19:12:43.064Z",
+  "count": 2404,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16638,7 +16638,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-4D26A022",
@@ -22770,6 +22771,31 @@
       "scope": [
         "role=guest",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-696E8EBE",
+      "path": "entries/KB-696E8EBE.md",
+      "subject": "Client-chosen API key values are trimmed of .NET whitespace (spaces, tab, CR/LF, NBSP, U+3000) and then must be 32–128 visible ASCII; zero-width space, BOM, look-alikes and inner spaces are refused 400",
+      "question": "How does POST/PUT /api/platform/security/users/apikeys validate and normalise a client-supplied apiKey value (trim, charset, length)?",
+      "questions": [
+        "Does the platform trim a client API key with leading or trailing whitespace?",
+        "Is a zero-width space or BOM around an API key stripped or refused?",
+        "What is the maximum length of a client-chosen API key?",
+        "Can an API key contain quotes, backslashes or angle brackets?",
+        "What does PUT users/apikeys do with apiKey set to an ellipsis character?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/users/apikeys",
+        "PUT /api/platform/security/users/apikeys"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -45885,6 +45911,30 @@
         "db=postgresql",
         "module=taskmanagement",
         "surface=platform-rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D8185F8B",
+      "path": "entries/KB-D8185F8B.md",
+      "subject": "A client API key value already held by any key gets 400 \"This API key cannot be used…\" (no 500), concurrent saves of one value leave exactly one row, and the answer is identical for own vs another user's key",
+      "question": "What happens when several POST/PUT /api/platform/security/users/apikeys requests save the same client-chosen value, and does the refusal reveal whose key it is?",
+      "questions": [
+        "Do concurrent API key saves with the same value cause a 500?",
+        "Is the duplicate API key error different for my key and another user's key?",
+        "Can a deleted API key value be reused?",
+        "Who can learn whether an API key value is in use?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/users/apikeys",
+        "PUT /api/platform/security/users/apikeys"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
