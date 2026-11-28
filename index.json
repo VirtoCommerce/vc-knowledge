@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T19:12:43.064Z",
-  "count": 2404,
+  "generated": "2026-11-28T19:18:43.854Z",
+  "count": 2405,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16639,7 +16639,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-4D26A022",
@@ -22014,7 +22014,7 @@
       "status": "active",
       "trust": 1,
       "disputed": 0,
-      "contested": 1
+      "contested": 2
     },
     {
       "id": "KB-66089074",
@@ -31375,7 +31375,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 2,
+      "trust": 3,
       "disputed": 0
     },
     {
@@ -38502,7 +38502,8 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 0,
+      "contested": 1
     },
     {
       "id": "KB-B329219A",
@@ -49373,6 +49374,30 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E804AA57",
+      "path": "entries/KB-E804AA57.md",
+      "subject": "With hashed API keys (vc-platform PR #3182 round 2), a client-supplied apiKey is trimmed and must match ^[!-~]{32,128}$; length and character errors are 400 bare-string messages",
+      "question": "Which client-supplied apiKey values does POST/PUT /api/platform/security/users/apikeys accept, and what does it answer for invalid ones?",
+      "questions": [
+        "What is the maximum length of a user API key?",
+        "Can a user API key contain spaces or non-ASCII characters?",
+        "Is a padded API key trimmed before it is stored?",
+        "What error message does the platform return for an API key that is too long?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/users/apikeys",
+        "PUT /api/platform/security/users/apikeys"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {

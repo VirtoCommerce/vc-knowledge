@@ -27,5 +27,14 @@ evidence:
     by: session:d73f2151
     who: kutasinaelena
     note: "distinct: KB-B323BA37 covers masked/empty/short handling on the earlier build (no trim, no upper bound, no charset rule); this entry is the new build's normalisation: which characters Trim removes, the 128 upper bound, the visible-ASCII charset refusal and its exact messages."
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 07060bece0224de7
+    conditions: platform=3.1107.0-pr-3182-2232; role=administrator
+    at: 2026-11-28T19:17:07.660Z
+    by: session:d73f2151
+    bodyHash: 386c39a1c414
+    who: kutasinaelena
+    note: Re-observed as administrator. 31 and 129 chars gave the 32-to-128 400; 32 and 128 gave 200 and worked by header and by query. A value padded with two spaces each side was stored trimmed and worked in the header; the padded form in the query got 401. Inner space, tab, NBSP, é and Cyrillic gave the visible-ASCII 400. A 36-char value with "…" and a 9-char hint-shaped value with "…" gave "looks masked". A GUID client value survived PUT with its own hint and with an empty value.
 ---
 On build 2232d606 a non-admin with platform:security:update saved client values by POST/PUT users/apikeys. Values wrapped in spaces, tab, CR/LF, NBSP (U+00A0) or ideographic space (U+3000) returned 200; the response echoed the trimmed value, the hint was derived from it, the trimmed value authenticated by api_key header and ?api_key=, and the untrimmed value sent by ?api_key= got 401. 128 chars + trailing spaces stored as 128 (200); 129 chars and a value trimming to 31 returned 400 "The API key must be 32 to 128 characters long. Send an empty value to have the platform generate one." Zero-width space U+200B and BOM U+FEFF at the edges are NOT trimmed and returned 400 "The API key may contain only visible ASCII characters, without spaces. …"; the same 400 for Cyrillic/fullwidth look-alikes, inner space, NUL, DEL and emoji. A value with " \ { } < > & ` ~ | ' is accepted and authenticates; hints such as "<b>X…</b>" and "{{7*…*7}}" render as escaped text in both the AngularJS blade and the Admin Shell list. PUT with apiKey "…" on a normal key returned 400 "The API key looks masked…"; "..." returned the length 400; the key's own hint plus a trailing space kept the key (200). A PUT carrying a new value together with isActive=false applied both (old value 401, new value 401 while inactive; re-activating with an empty value made the new value work). A 36-char GUID with hyphens is accepted as a client value. The 31-char length message of earlier builds ("must be at least 32 characters long") is now "must be 32 to 128 characters long".
