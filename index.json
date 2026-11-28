@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T12:07:59.617Z",
-  "count": 2399,
+  "generated": "2026-11-28T12:10:44.160Z",
+  "count": 2400,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -21122,6 +21122,28 @@
       "trust": 1,
       "disputed": 0,
       "resolved": 1
+    },
+    {
+      "id": "KB-61CABA8C",
+      "path": "entries/KB-61CABA8C.md",
+      "subject": "Deleting a platform user invalidates their API keys at once: the old key gets 401 and no key row survives the user",
+      "question": "What happens to a user's API key when the user is deleted — does the key still authenticate, and does a key row remain?",
+      "questions": [
+        "Does an API key of a deleted platform user still work?",
+        "Are a deleted user's API keys removed together with the user?"
+      ],
+      "anchors": [
+        "DELETE /api/platform/security/users",
+        "GET /api/platform/security/users/{id}/apikeys"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-61FCFB29",
