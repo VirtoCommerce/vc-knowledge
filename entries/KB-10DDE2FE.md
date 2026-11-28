@@ -38,5 +38,14 @@ evidence:
     bodyHash: d05ce3e537df
     who: kutasinaelena
     note: Still true with hashed keys. After locking the owner by id, its generated vc_ key got currentuser 200 {} and 401 with an empty body on /api/platform/modules and POST /api/order/customerOrders/search, in both the header and the query string. After unlock the same key authenticated again (200, owner).
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 07060bece0224de7
+    conditions: platform=3.1107.0-pr-3182-2232
+    at: 2026-11-28T19:25:57.194Z
+    by: session:d73f2151
+    bodyHash: d05ce3e537df
+    who: kutasinaelena
+    note: "Regression REG-2026-11-28-1918: client-supplied 36-char GUID key on a locked admin user -> 401 empty body on GET users/{userName}, currentuser 200 {}; locked user + inactive key also 401."
 ---
 On Stable 16 an AGENT-TEST admin-type user with an active API key got 200 JSON from /api/platform/security/currentuser?api_key=<key> while unlocked. After POST /api/platform/security/users/{id}/lock (lockoutEnd=9999-12-31), the same key returned 200 {} from currentuser (same as an invalid key = anonymous) and 401 with an empty body, no content-type, from /api/platform/security/users/{userName}. No 'account locked' text is ever returned for API-key auth; a bogus key gives the identical 401/empty and 200 {} pattern on Stable 15 and 16.
