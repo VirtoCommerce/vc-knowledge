@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T12:05:23.314Z",
-  "count": 2398,
+  "generated": "2026-11-28T12:07:59.617Z",
+  "count": 2399,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -11342,6 +11342,29 @@
       "scope": [
         "module=site-builder",
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-35CB4189",
+      "path": "entries/KB-35CB4189.md",
+      "subject": "Each platform-entry flag of POST /api/platform/export fills only its own PlatformEntries.json section; Settings is scoped to the selected modules, and exported UserApiKeys carry only ApiKeyHash and ApiKeyHint",
+      "question": "What does each handle* flag of a platform backup put into PlatformEntries.json, and are settings or API keys exported independently of the module selection?",
+      "questions": [
+        "Why does a settings-only platform backup contain an empty Settings array?",
+        "Does a platform backup with handleSecurity export API keys in plain text?",
+        "Where do module settings travel in a platform backup archive?"
+      ],
+      "anchors": [
+        "POST /api/platform/export",
+        "GET /api/platform/export/download/{id}"
+      ],
+      "scope": [
+        "module=virtocommerce.backuprestore",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
@@ -33732,7 +33755,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
