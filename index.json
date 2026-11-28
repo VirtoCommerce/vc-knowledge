@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-27T14:45:17.215Z",
-  "count": 2387,
+  "generated": "2026-11-28T11:04:59.319Z",
+  "count": 2388,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -48673,6 +48673,29 @@
       "plane": "experiential",
       "status": "active",
       "trust": 3,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E67B7866",
+      "path": "entries/KB-E67B7866.md",
+      "subject": "A user API key authenticates as its owner both in the api_key header and in the ?api_key= query string; a wrong key gets 401 on protected endpoints while currentuser answers 200 {}",
+      "question": "Does the platform accept a user API key in the api_key header and in the api_key query string, and which identity does the request run as?",
+      "questions": [
+        "Is ?api_key= in the URL still accepted by the platform after API keys are hashed?",
+        "What does GET /api/platform/security/currentuser return for a wrong or missing API key?",
+        "Do API keys created before the hashing migration keep working?"
+      ],
+      "anchors": [
+        "GET /api/platform/security/currentuser",
+        "GET /api/platform/modules"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
