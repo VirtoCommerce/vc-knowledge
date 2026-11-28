@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T11:37:06.671Z",
-  "count": 2388,
+  "generated": "2026-11-28T11:37:20.252Z",
+  "count": 2389,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -7378,6 +7378,30 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-21F133F7",
+      "path": "entries/KB-21F133F7.md",
+      "subject": "On Catalog 3.1055.0-alpha.2598 a cross-catalog category move keeps linked (non-owned) products in their owner catalog and moves their link rows to the destination catalog",
+      "question": "After the VCST-6376 fix, what does POST /api/catalog/listentries/move do to a product that is only linked into the moved category or its descendants?",
+      "questions": [
+        "Does moving a category to another catalog still rewrite catalogId of linked products?",
+        "Where does a product link point after its category is moved to another physical catalog?"
+      ],
+      "anchors": [
+        "POST /api/catalog/listentries/move",
+        "POST /api/catalog/listentrylinks",
+        "GET /api/catalog/products/{id}"
+      ],
+      "scope": [
+        "module=catalog",
+        "operation=category-move-cross-catalog",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-21F4F161",
