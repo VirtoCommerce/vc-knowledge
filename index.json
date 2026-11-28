@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T19:18:43.854Z",
-  "count": 2405,
+  "generated": "2026-11-28T19:30:56.900Z",
+  "count": 2406,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -24233,6 +24233,28 @@
         "surface=storefront-ui",
         "user=multi-organization-member",
         "viewport=desktop"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-70ED663D",
+      "path": "entries/KB-70ED663D.md",
+      "subject": "The AngularJS admin's shared .note text (#999 on #f9f9f9) has a contrast of about 2.7:1, below WCAG AA 4.5:1; the API key blade's \"The key is generated when you save.\" note inherits it",
+      "question": "Does the note text in the AngularJS admin API key blade meet WCAG colour contrast?",
+      "questions": [
+        "What colour contrast does the AngularJS admin .note class have?",
+        "Why does axe flag color-contrast on the 'The key is generated when you save.' note?"
+      ],
+      "anchors": [
+        "GET /api/platform/security/users/{id}/apikeys",
+        "VirtoCommerce.AdminAngularJs"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=admin-ui"
       ],
       "plane": "experiential",
       "status": "active",
