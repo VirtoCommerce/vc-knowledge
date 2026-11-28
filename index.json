@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T12:36:36.029Z",
-  "count": 2400,
+  "generated": "2026-11-28T12:37:27.456Z",
+  "count": 2401,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -42789,6 +42789,32 @@
       "scope": [
         "deployment=vcptcore_stable,vcptcore_regression,vcptcore_qa1",
         "surface=rest"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-C8F01D76",
+      "path": "entries/KB-C8F01D76.md",
+      "subject": "GET /api/catalog/products/{id} outlines come from a per-instance product cache that a same-catalog category move does not expire; the product keeps the old outline until POST /api/platform-cache/reset, a save of that product, or the 5-min sliding expiry",
+      "question": "Does GET /api/catalog/products/{id} return the new outline right after the product's category is re-parented with POST /api/catalog/listentries/move, and how is the cache reset?",
+      "questions": [
+        "Why does a product's outline still show the old parent category after a category move?",
+        "How do I reset the platform memory cache through REST?",
+        "Are catalog product outlines cached per responseGroup?",
+        "Why do product outlines differ between requests after a category move?"
+      ],
+      "anchors": [
+        "POST /api/catalog/listentries/move",
+        "GET /api/catalog/products/{id}",
+        "POST /api/platform-cache/reset"
+      ],
+      "scope": [
+        "module=catalog",
+        "operation=category-move-outline",
+        "surface=admin-api"
       ],
       "plane": "experiential",
       "status": "active",
