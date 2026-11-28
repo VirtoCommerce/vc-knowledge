@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T19:30:56.900Z",
-  "count": 2406,
+  "generated": "2026-11-28T20:20:28.820Z",
+  "count": 2407,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -52842,6 +52842,30 @@
       "scope": [
         "surface=storefront-ui",
         "surface=xapi"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-F4ACB4E5",
+      "path": "entries/KB-F4ACB4E5.md",
+      "subject": "PUT /api/platform/security/users persists accessFailedCount=0 (it is not one of the protected fields the PUT restores)",
+      "question": "Can PUT /api/platform/security/users clear a user's accessFailedCount?",
+      "questions": [
+        "How do I clear the failed sign-in counter of a platform user without a successful login?",
+        "Is accessFailedCount one of the protected user fields the user PUT ignores?"
+      ],
+      "concepts": [
+        "account-lockout",
+        "security-account"
+      ],
+      "anchors": [
+        "PUT /api/platform/security/users"
+      ],
+      "scope": [
+        "surface=rest"
       ],
       "plane": "experiential",
       "status": "active",
