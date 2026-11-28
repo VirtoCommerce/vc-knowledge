@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T11:50:31.477Z",
-  "count": 2397,
+  "generated": "2026-11-28T11:56:27.666Z",
+  "count": 2398,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5702,6 +5702,22 @@
       "trust": 1,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-19CD3A8D",
+      "path": "entries/KB-19CD3A8D.md",
+      "subject": "AngularJS admin API key Generate rotates the user's single key in place; Admin Shell Generate key adds a new row",
+      "question": "What does Generate on the AngularJS user API key widget do to an existing key, and how does it differ from Admin Shell Generate key?",
+      "anchors": [
+        "POST /api/platform/security/users/apikeys"
+      ],
+      "scope": [
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-19E3F96A",
