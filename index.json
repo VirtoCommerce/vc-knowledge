@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T12:37:27.456Z",
-  "count": 2401,
+  "generated": "2026-11-28T12:49:20.052Z",
+  "count": 2402,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -5305,6 +5305,33 @@
       "trust": 5,
       "disputed": 0,
       "contested": 1
+    },
+    {
+      "id": "KB-17EB4A63",
+      "path": "entries/KB-17EB4A63.md",
+      "subject": "A Security-only platform restore keeps API keys working from both backup shapes: hashed rows (ApiKeyHash/ApiKeyHint) and pre-hashing rows with plaintext ApiKey, which are hashed on import and never stored or re-exported in plaintext",
+      "question": "Do user API keys still authenticate after restoring a platform backup with Security, for backups taken before and after API key hashing?",
+      "questions": [
+        "Does POST api/platform/import with handleSecurity restore UserApiKeys from ApiKeyHash?",
+        "Is a plaintext ApiKey in an old backup's UserApiKeys accepted after the API key hashing change?",
+        "What hint does a restored API key shorter than 16 characters get?",
+        "Does a backup taken after restoring legacy keys contain plaintext API keys?",
+        "Does a platform Security restore delete users or keys that are not in the archive?"
+      ],
+      "anchors": [
+        "POST /api/platform/import",
+        "POST /api/platform/export",
+        "GET /api/platform/security/users/{id}/apikeys"
+      ],
+      "scope": [
+        "feature=backup-restore",
+        "module=platform-security",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
     },
     {
       "id": "KB-18212780",
