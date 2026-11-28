@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T11:48:34.724Z",
-  "count": 2396,
+  "generated": "2026-11-28T11:50:31.477Z",
+  "count": 2397,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -3666,7 +3666,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 1,
+      "trust": 2,
       "disputed": 0
     },
     {
@@ -9232,7 +9232,7 @@
       ],
       "plane": "experiential",
       "status": "active",
-      "trust": 4,
+      "trust": 5,
       "disputed": 0
     },
     {
@@ -38360,6 +38360,29 @@
       ],
       "scope": [
         "surface=storefront-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-B323BA37",
+      "path": "entries/KB-B323BA37.md",
+      "subject": "With hashed API keys, saving a key refuses another key's hint (400 \"looks masked\") and values under 32 chars (400), keeps the stored key for an empty value or its own hint, ignores apiKeyHash/apiKeyHint in the body, and echoes a client-supplied value back in the response",
+      "question": "What does PUT or POST /api/platform/security/users/apikeys do with an empty, masked, short or client-chosen apiKey on an existing key?",
+      "questions": [
+        "Which validation errors does saving a user API key return after the hashing change?",
+        "Can a client set apiKeyHash or apiKeyHint directly when saving an API key?",
+        "Does the save response return the full API key when the client supplies its own value?"
+      ],
+      "anchors": [
+        "PUT /api/platform/security/users/apikeys",
+        "POST /api/platform/security/users/apikeys"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
