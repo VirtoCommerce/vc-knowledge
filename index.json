@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T11:38:13.070Z",
-  "count": 2390,
+  "generated": "2026-11-28T11:40:24.069Z",
+  "count": 2395,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -16554,6 +16554,27 @@
       "disputed": 4
     },
     {
+      "id": "KB-4D140EFC",
+      "path": "entries/KB-4D140EFC.md",
+      "subject": "A client-chosen user API key with leading/trailing spaces is accepted and stored as-is; it then authenticates only via the URL-encoded query string, never via the api_key header",
+      "question": "Are user API key values trimmed or rejected when they have surrounding whitespace?",
+      "questions": [
+        "Why does an API key with spaces get 401 in the api_key header?",
+        "Does PUT users/apikeys validate whitespace in apiKey?"
+      ],
+      "anchors": [
+        "PUT /api/platform/security/users/apikeys"
+      ],
+      "scope": [
+        "auth=api_key",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-4D26A022",
       "path": "entries/KB-4D26A022.md",
       "subject": "order shipment item allocation",
@@ -21883,6 +21904,26 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-65F316E5",
+      "path": "entries/KB-65F316E5.md",
+      "subject": "POST users/apikeys with a value that is already another user's key answers 500 with the raw SQL unique-index error including the existing key's SHA-256 hash",
+      "question": "What does POST /api/platform/security/users/apikeys return when the client-chosen apiKey equals a key that already exists?",
+      "questions": [
+        "Are duplicate user API key values rejected with a validation error?",
+        "Can a security manager test whether a guessed value is an existing API key?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/users/apikeys"
+      ],
+      "scope": [
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
@@ -32726,6 +32767,32 @@
       "disputed": 0
     },
     {
+      "id": "KB-98307E42",
+      "path": "entries/KB-98307E42.md",
+      "subject": "With hashed API keys, POST /api/platform/security/users/apikeys without apiKey generates a vc_ key server-side and returns it once; every later read returns only a 4…4 hint",
+      "question": "Does the platform generate the API key on create, and where is the full key ever returned after the hashing change?",
+      "questions": [
+        "Admin Shell Generate key on a user's API keys blade: what is shown and what is sent?",
+        "Do GET users/{id}/apikeys and PUT users/apikeys return the full API key or a hint?",
+        "How does toggling an API key active state work when the client only holds the hint?",
+        "Does a deactivated API key still authenticate, and does the same key work after reactivation?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/users/apikeys",
+        "PUT /api/platform/security/users/apikeys",
+        "GET /api/platform/security/users/{id}/apikeys",
+        "/apps/admin-shell#/security/apikeys/{userId}"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=admin-shell"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-985D3EED",
       "path": "entries/KB-985D3EED.md",
       "subject": "The storefront MFA widgets register only when the platform lists VirtoCommerce.MFA with a version that has the mfa xAPI schema (3.1000.2+ on the 3.1000 line, 3.1002.0+); the organization widget also needs xapi:my_organization:mfa:manage, which no stock organization role carries",
@@ -40382,6 +40449,34 @@
       "disputed": 0
     },
     {
+      "id": "KB-BCE409F8",
+      "path": "entries/KB-BCE409F8.md",
+      "subject": "A non-admin with platform:security:update can set isAdministrator=true on another user, so a key it issued to that user beforehand becomes an administrator key it can no longer revoke",
+      "question": "Can a non-administrator with platform:security:update set isAdministrator=true on another user via PUT /api/platform/security/users?",
+      "questions": [
+        "Can a security manager promote a user to administrator?",
+        "Does the admin-key guard on user API keys stop a non-admin from getting an administrator API key?",
+        "What happens to an existing API key when its owner is made an administrator?"
+      ],
+      "concepts": [
+        "permission",
+        "security-account",
+        "platform-role"
+      ],
+      "anchors": [
+        "PUT /api/platform/security/users",
+        "POST /api/platform/security/users/apikeys"
+      ],
+      "scope": [
+        "actor=non-admin-security-manager",
+        "surface=rest-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
       "id": "KB-BCEAF343",
       "path": "entries/KB-BCEAF343.md",
       "subject": "Opening /company/my-customers/<id> of an organization the rep does not serve shows \"Customer not found or not in your customers.\" but the profile widgets still send their queries for that id (SalesRepMonthlyOrderStatistics, SalesRepOrders, SalesRepTopSellers…); the statistics answer is null",
@@ -47305,7 +47400,7 @@
       "plane": "experiential",
       "status": "active",
       "trust": 1,
-      "disputed": 0
+      "disputed": 1
     },
     {
       "id": "KB-DF8D085C",
@@ -49068,6 +49163,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E812983C",
+      "path": "entries/KB-E812983C.md",
+      "subject": "AngularJS admin API key widget on the hashed-key build: field read-only 'Generated on save', OK creates the key and shows it once under 'New API key'; the next OK and every toggle send only the hint",
+      "question": "How does the AngularJS admin user API key widget create, display and update a key after API keys are hashed?",
+      "questions": [
+        "Can an admin type their own API key value in the AngularJS user blade any more?",
+        "What does OK send on the AngularJS API key blade after the new key was shown?",
+        "Does the AngularJS API key blade show a copy confirmation?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/users/apikeys"
+      ],
+      "scope": [
+        "module=platform-security",
+        "surface=admin-ui"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
