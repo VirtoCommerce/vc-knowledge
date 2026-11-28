@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T11:40:24.069Z",
-  "count": 2395,
+  "generated": "2026-11-28T11:43:12.123Z",
+  "count": 2396,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -49067,6 +49067,28 @@
       "plane": "experiential",
       "status": "active",
       "trust": 2,
+      "disputed": 0
+    },
+    {
+      "id": "KB-E77AF0C3",
+      "path": "entries/KB-E77AF0C3.md",
+      "subject": "After a cross-catalog category move followed by an intra-catalog move, a product linked into a DESCENDANT of the moved category keeps a stale outline (missing the new parent) on both Catalog 3.1048.4 and 3.1055.0-alpha.2598",
+      "question": "Is the outline of a product linked into a child category refreshed when the parent category is moved twice (cross-catalog, then within the catalog)?",
+      "questions": [
+        "Why does GET /api/catalog/products/{id} show an outline without the new parent category after a category move?"
+      ],
+      "anchors": [
+        "POST /api/catalog/listentries/move",
+        "GET /api/catalog/products/{id}"
+      ],
+      "scope": [
+        "module=catalog",
+        "operation=category-move-outline",
+        "surface=admin-api"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
       "disputed": 0
     },
     {
