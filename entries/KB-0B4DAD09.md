@@ -32,5 +32,14 @@ evidence:
     bodyHash: 5e460d5d996c
     who: Aleksandra-Mitricheva
     note: Export with passwordProtect:false returned a notification only (no password), entries deflate-compressed and unencrypted; after a clean restore of an uploaded backup the blob was gone from backups/.
+  - method: observation
+    deployment: vcptcore_qa1
+    build: 78242a4a9ed03804
+    conditions: platform=3.1105.0-pr-3182-27bb
+    at: 2026-11-28T12:05:22.759Z
+    by: session:d73f2151
+    bodyHash: 5e460d5d996c
+    who: kutasinaelena
+    note: passwordProtect:false exports produced unencrypted zips (Manifest isEncrypted false); an Admin SPA backup with the default Encrypt row showed a one-time Backup password with a copy button on completion.
 ---
 POST /api/platform/export {modules, exportManifest} returns {notification, password}: by default (passwordProtect=true) the zip entries except Manifest.json are AES-encrypted (zip method 99) and the plaintext password is in that HTTP response only. Restoring it with POST /api/platform/import {fileUrl, exportManifest, modules} and no password finishes with errorCount 1 "Invalid backup password\nNo password available for AES encrypted stream" and imports nothing. Sending passwordProtect:false on export produces an unencrypted zip (manifest isEncrypted:false) that restores with 0 errors; the import body field for an encrypted backup is "password". A fully clean restore deletes the uploaded backup blob from backups/; a failed one keeps it.
