@@ -1,7 +1,7 @@
 {
   "schema": 2,
-  "generated": "2026-11-28T11:37:20.252Z",
-  "count": 2389,
+  "generated": "2026-11-28T11:38:13.070Z",
+  "count": 2390,
   "entries": [
     {
       "id": "KB-000A4C85",
@@ -44273,6 +44273,32 @@
         "engine=chromium",
         "surface=storefront-ui",
         "viewport=375"
+      ],
+      "plane": "experiential",
+      "status": "active",
+      "trust": 1,
+      "disputed": 0
+    },
+    {
+      "id": "KB-D0D03574",
+      "path": "entries/KB-D0D03574.md",
+      "subject": "With hashed user API keys, regenerate, deactivate and delete take effect on the very next request (no cache lag); a non-admin security manager gets 403 on every write to an administrator's key",
+      "question": "After POST users/apikeys/{keyId}/regenerate (or deactivating/deleting a key), does the old api_key keep authenticating for a while, and can a non-admin security manager change an administrator's key?",
+      "questions": [
+        "Is there a cache delay before a regenerated user API key stops working?",
+        "Does deactivating a user API key take effect immediately?",
+        "Can a user with platform:security:update but not administrator regenerate or delete an admin's API key?",
+        "Is a mixed DELETE users/apikeys batch with someone else's admin key all-or-nothing?"
+      ],
+      "anchors": [
+        "POST /api/platform/security/users/apikeys/{id}/regenerate",
+        "PUT /api/platform/security/users/apikeys",
+        "DELETE /api/platform/security/users/apikeys",
+        "GET /api/platform/security/currentuser"
+      ],
+      "scope": [
+        "auth=api_key",
+        "surface=rest-api"
       ],
       "plane": "experiential",
       "status": "active",
